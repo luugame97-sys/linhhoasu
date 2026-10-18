@@ -1,0 +1,468 @@
+{
+  "_table": "OldTrekBaseConfig",
+  "_rows": 63,
+  "_type": "object",
+  "_firstKeys": "(obj)[baseSpeed|equalDis|baseAccelerateCosts|dayAlternation|baseStable]",
+  "_sample": [
+    {
+      "baseSpeed": 200
+    },
+    {
+      "equalDis": 200
+    },
+    {
+      "baseAccelerateCosts": {
+        "id": 321,
+        "count": 10
+      }
+    }
+  ],
+  "data": {
+    "baseSpeed": 200,
+    "equalDis": 200,
+    "baseAccelerateCosts": {
+      "id": 321,
+      "count": 10
+    },
+    "dayAlternation": 14400,
+    "baseStable": 100,
+    "stableFixCosts": {
+      "id": 1,
+      "count": 20
+    },
+    "seaName": [
+      30109211,
+      30109212,
+      30109213,
+      30109214,
+      30109215
+    ],
+    "destinationName": [
+      30109500,
+      30109501,
+      30109502,
+      30109503,
+      30109504,
+      30109505,
+      30109506,
+      30109507,
+      301095008,
+      30109509
+    ],
+    "difEstimate": [
+      [
+        8000,
+        30109115
+      ],
+      [
+        11000,
+        30109116
+      ],
+      [
+        15000,
+        30109117
+      ],
+      [
+        20000,
+        30109118
+      ]
+    ],
+    "firstRankScore": 6000000,
+    "fixSettleDis": 100,
+    "fixSettleRewards": [
+      {
+        "id": 322,
+        "count": 100
+      },
+      {
+        "id": 331,
+        "count": 10
+      }
+    ],
+    "baseSafeGrid": 3,
+    "unStackNum": 100,
+    "transferCost": {
+      "id": 328,
+      "count": 1
+    },
+    "skillLimit": [
+      40
+    ],
+    "unlockThread": 1,
+    "techAds": 28,
+    "sailorRecruitDailyFree": 1,
+    "recruitRefreshCosts": {
+      "id": 329,
+      "count": 1
+    },
+    "recruitNum": 5,
+    "initialSailorNum": 20,
+    "sailorDimMax": 30,
+    "initialQueue": [
+      1,
+      1,
+      1
+    ],
+    "entryType": {
+      "1": 30109148,
+      "2": 30109149
+    },
+    "entryQuality": {
+      "4": 30070004,
+      "5": 30070005,
+      "6": 30070006,
+      "7": 30070007
+    },
+    "grooveNum": 3,
+    "moraleEffect": {
+      "1": 7001,
+      "2": 7002,
+      "3": 7003,
+      "4": 7004,
+      "5": 7005,
+      "6": 7006,
+      "7": 7007,
+      "8": 7008,
+      "9": 7009,
+      "10": 7010,
+      "11": 7011,
+      "12": 7012,
+      "13": 7013,
+      "14": 7014,
+      "15": 7015,
+      "16": 7016,
+      "17": 7017,
+      "18": 7018,
+      "19": 7019,
+      "20": 7020,
+      "21": 7021,
+      "22": 7022,
+      "23": 7023,
+      "24": 7024,
+      "25": 7025,
+      "26": 7026,
+      "27": 7027,
+      "28": 7028,
+      "29": 7029,
+      "30": 7030,
+      "31": 7031,
+      "32": 7032,
+      "33": 7033,
+      "34": 7034,
+      "35": 7035,
+      "36": 7036,
+      "37": 7037,
+      "38": 7038,
+      "39": 7039,
+      "40": 7040,
+      "41": 7041,
+      "42": 7042,
+      "43": 7043,
+      "44": 7044,
+      "45": 7045,
+      "46": 7046,
+      "47": 7047,
+      "48": 7048,
+      "49": 7049,
+      "50": 7050
+    },
+    "moraleMaxDiff": 20,
+    "queueMoraleDiff": [
+      10,
+      20,
+      30
+    ],
+    "exchangeCount": {
+      "360": {
+        "id": 370,
+        "count": 5
+      },
+      "361": {
+        "id": 371,
+        "count": 5
+      },
+      "362": {
+        "id": 372,
+        "count": 5
+      },
+      "363": {
+        "id": 373,
+        "count": 5
+      },
+      "364": {
+        "id": 374,
+        "count": 5
+      },
+      "365": {
+        "id": 375,
+        "count": 5
+      },
+      "366": {
+        "id": 376,
+        "count": 5
+      },
+      "367": {
+        "id": 377,
+        "count": 5
+      },
+      "368": {
+        "id": 378,
+        "count": 5
+      },
+      "369": {
+        "id": 379,
+        "count": 5
+      },
+      "370": {
+        "id": 380,
+        "count": 5
+      },
+      "371": {
+        "id": 381,
+        "count": 5
+      },
+      "372": {
+        "id": 382,
+        "count": 5
+      },
+      "373": {
+        "id": 383,
+        "count": 5
+      },
+      "374": {
+        "id": 384,
+        "count": 5
+      },
+      "375": {
+        "id": 385,
+        "count": 5
+      },
+      "376": {
+        "id": 386,
+        "count": 5
+      },
+      "377": {
+        "id": 387,
+        "count": 5
+      },
+      "378": {
+        "id": 388,
+        "count": 5
+      },
+      "379": {
+        "id": 389,
+        "count": 5
+      }
+    },
+    "levelRankName": [
+      30109219,
+      30109220,
+      30109221,
+      30109222,
+      30109223,
+      30109224,
+      30109225
+    ],
+    "npcRewardLim": 50,
+    "maxLevelDif": 20,
+    "qualityWeight": [
+      {
+        "weight": 7750,
+        "id": 4
+      },
+      {
+        "weight": 2000,
+        "id": 5
+      },
+      {
+        "weight": 250,
+        "id": 6
+      }
+    ],
+    "recallCost": {
+      "4": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 331,
+          "count": 20
+        }
+      ],
+      "5": [
+        {
+          "id": 1,
+          "count": 150
+        },
+        {
+          "id": 331,
+          "count": 150
+        }
+      ],
+      "6": [
+        {
+          "id": 1,
+          "count": 500
+        },
+        {
+          "id": 331,
+          "count": 600
+        }
+      ]
+    },
+    "autoRecruitLevel": 10,
+    "sailorSetNum": 3,
+    "arenaCost": {
+      "id": 326,
+      "count": 1
+    },
+    "arenaSearchCost": {
+      "id": 325,
+      "count": 1
+    },
+    "arenaReward": [
+      {
+        "id": 331,
+        "count": 100
+      }
+    ],
+    "arenaFailReward": [
+      {
+        "id": 331,
+        "count": 80
+      }
+    ],
+    "arenaRefreshTime": 3,
+    "arenaProtectTime": 30,
+    "fightMaxRound": 20,
+    "initEnergy": 0,
+    "maxEnergy": 8,
+    "roundEnergy": 1,
+    "normalAttack": {
+      "1": 101,
+      "2": 102,
+      "3": 103,
+      "4": 104,
+      "5": 105,
+      "6": 106,
+      "7": 107,
+      "8": 108,
+      "9": 109,
+      "10": 110
+    },
+    "advAtk3Rate": 5000,
+    "advAtk3WeatherRate": 8000,
+    "robotNameRandomRange": [
+      [
+        20076001,
+        20077248
+      ]
+    ],
+    "robotHeadRandomRange": [
+      [
+        11301,
+        11306
+      ],
+      [
+        11308,
+        11308
+      ],
+      [
+        11311,
+        11315
+      ],
+      [
+        11321,
+        11325
+      ],
+      [
+        11351,
+        11355
+      ],
+      [
+        11601,
+        11667
+      ],
+      [
+        11701,
+        11735
+      ],
+      [
+        11801,
+        11830
+      ]
+    ],
+    "skipBattleLevel": 10,
+    "blessGiftId": 11110,
+    "blessGiftRewards": [
+      {
+        "id": 337,
+        "count": 30
+      },
+      {
+        "id": 101340,
+        "count": 5
+      },
+      {
+        "id": 100803,
+        "count": 1
+      },
+      {
+        "id": 321,
+        "count": 100
+      }
+    ],
+    "multiPrivilege": {
+      "11105": 2,
+      "11106": 2,
+      "11107": 3,
+      "11108": 3
+    },
+    "fishGiftIds": [
+      11000208,
+      11000207,
+      11000206,
+      11000205,
+      11000204,
+      11000203,
+      11000202,
+      11000201,
+      11000107,
+      11000106,
+      11000102,
+      11000101
+    ],
+    "fishGiftCond": [
+      {
+        "type": 5,
+        "value": 57,
+        "cond": 4
+      }
+    ],
+    "firstTask": 180001,
+    "monumentRewards": {
+      "id": 1,
+      "count": 20
+    },
+    "monumentShowSize": [
+      [
+        3,
+        10000
+      ],
+      [
+        10,
+        9000
+      ],
+      [
+        30,
+        8000
+      ],
+      [
+        99,
+        6000
+      ]
+    ],
+    "monumentDefaultRank": 50
+  }
+}

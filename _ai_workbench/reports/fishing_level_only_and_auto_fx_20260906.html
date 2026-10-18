@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ngư trường chỉ yêu cầu cấp và kiểm hiệu ứng auto</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ng-tr-ng-ch-y-u-c-u-c-p-v-ki-m-hi-u-ng-auto-06-09-2026">Ngư trường chỉ yêu cầu cấp và kiểm hiệu ứng auto — 06/09/2026</h1>
+<p>Đã triển khai bỏ điều kiện ngày mở server ở ngư trường thường trên <strong>S2 rồi S1</strong>, hoàn tất12:07 UTC+7. Giữ yêu cầu cấp câu cá; đã sửa phần khóa/nút vào/dòng mô tả và nhận biết mở khu khi lên cấp trong client. <strong>Hiệu ứng auto chỉ kiểm tra, chưa sửa</strong> theo phạm vi yêu cầu hiện tại.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="1-1-i-u-ki-n-m-ng-tr-ng-m-i">1.1 Điều kiện mở ngư trường mới</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Ngư trường</th>
+<th>ID</th>
+<th>Cấp câu cá cần đạt</th>
+<th>Điều kiện ngày trước đây</th>
+<th>Sau triển khai</th>
+</tr></thead><tbody>
+<tr>
+<td>Ngư trường1</td>
+<td>1</td>
+<td>1</td>
+<td>1 ngày</td>
+<td>Chỉ cấp1</td>
+</tr>
+<tr>
+<td>Ngư trường2</td>
+<td>2</td>
+<td>2</td>
+<td>1 ngày</td>
+<td>Chỉ cấp2</td>
+</tr>
+<tr>
+<td>Ngư trường3</td>
+<td>3</td>
+<td>5</td>
+<td>1 ngày</td>
+<td>Chỉ cấp5</td>
+</tr>
+<tr>
+<td>Ngư trường4</td>
+<td>4</td>
+<td>10</td>
+<td>1 ngày</td>
+<td>Chỉ cấp10</td>
+</tr>
+<tr>
+<td>Ngư trường5</td>
+<td>5</td>
+<td>15</td>
+<td>1 ngày</td>
+<td>Chỉ cấp15</td>
+</tr>
+<tr>
+<td>Liên Tâm Tiên Cảnh</td>
+<td>6</td>
+<td>25</td>
+<td>43 ngày</td>
+<td>Chỉ cấp25</td>
+</tr>
+<tr>
+<td>Linh Hải Vô Biên</td>
+<td>7</td>
+<td>28</td>
+<td>71 ngày</td>
+<td>Chỉ cấp28</td>
+</tr>
+</tbody></table></div>
+<p>Đây là <strong>cấp câu cá</strong>, không phải cấp nhân vật. Không tự nâng cấp hoặc đổi map của người chơi. Các khu sự kiện101/201/301/401/501 và tính năng linh hồn/Hoang Cổ không thuộc yêu cầu bỏ ngày lần này; giữ gate hiện hữu.</p>
+<p>Server <code>FishingIntegrityService.canUseScene</code> không còn tra <code>GameServer.openTime</code> cho ngư trường thường. Các đường vào map, đổi map, câu cá và tập cá được mở dùng cùng điều kiện cấp. Giữ pool hiện hành là hợp các ngư trường đã mở; không đổi thành chỉ câu cá của riêng nền đang chọn, không sửa RNG.</p>
+<p>Client chỉ thay3 hàm:</p>
+<ol>
+<li><code>H_e.isSceneUnlock</code>: ngư trường thường bỏ so ngày; giữ kiểm cấp. Khu sự kiện giữ logic cũ.</li>
+<li><code>FishLevelPnael.UpdateContent</code>: không nối dòng số ngày cho khu thường; nút vào/trạng thái khóa lấy điều kiện mới.</li>
+<li><code>FishingModel.unlockNewSceneId</code>: nhận khu mới khi vượt mốc cấp mà không đợi tuổi server.</li>
+</ol>
+<p><code>FishSceneConfig.openDay</code> vẫn giữ trong bin gốc; các trường đó không còn chặn ngư trường thường. Không sửa bin hoặc lịch mở server để tránh ảnh hưởng tính năng khác. <code>checkSceneIdRed</code> vẫn dùng trường ngày gốc để phân nhóm khu cần dấu chấm đỏ chưa ghé, không dùng để từ chối vào khu; đây không phải gate mở map.</p>
+<h3 id="1-2-ki-m-hi-u-ng-t-b-n-trang-b">1.2 Kiểm hiệu ứng tự bán/trang bị</h3>
+<p><strong>Đã xác nhận nhánh auto-power thiếu lời gọi hai hiệu ứng bay có sẵn.</strong></p>
+<ul>
+<li><code>sendAutoPowerFish</code> gửi4008, nhận <code>state</code>, cập nhật slots/kết quả/atlas và phát sự kiện cập nhật. Không gọi <code>playSellIconFlyAnim</code> hoặc <code>playPutInIconFlyAnim</code>.</li>
+<li>Server auto-power vẫn xử lý trên clone, ghi save/receipt, trả item sync1202 và ACK4008. Lỗi thiếu hiệu ứng không đồng nghĩa chưa nhận tiền hoặc cá; chưa có bằng chứng mất vật phẩm ở giao dịch cụ thể của người dùng trong yêu cầu này.</li>
+<li><code>FISH_DEAL_UPDATE</code> cập nhật ô cá qua <code>updateEquipPool</code> và cập nhật đơn/tip. Nó không thay cho hai lời gọi hiệu ứng bay. Không khẳng định mọi hoạt ảnh nội bộ của ô cá đều không tồn tại.</li>
+<li>Luồng cũ <code>sendDealFishMutl</code> có gọi hiệu ứng bán và trang bị khi có view/nguồn bay. Bán cá có thể dùng nhân vật làm nguồn; trang bị thủ công lấy nhãn cá trong popup làm nguồn.</li>
+<li>Helper native <code>playSellIconFlyAnim</code> bay icon Ngư Tệ đến <code>powerCurrency1.animGr</code> rồi gọi <code>coinFlyBtnAnim</code>; helper trang bị bay icon cá đến ô theo type. Không cần tạo asset mới nếu sau này nối hiệu ứng vào nhánh auto.</li>
+</ul>
+<h4 id="b-ng-ch-ng-fixture-v-i-handler-v-callback-native-th-t">Bằng chứng fixture với handler và callback native thật</h4>
+<div class="table-wrap"><table><thead><tr>
+<th>Probe</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Auto xử lý cá mạnh/yếu cùng batch</td>
+<td>Trang bị1 cá mới, bán2 cá, +4 Ngư Tệ theo2 cá phẩm chất2</td>
+</tr>
+<tr>
+<td>Lưu trạng thái</td>
+<td>Durable slot mới đúng UID, pending rỗng</td>
+</tr>
+<tr>
+<td>Đồng bộ tồn kho</td>
+<td>Có1202 cho68 và ACK4008 thành công</td>
+</tr>
+<tr>
+<td>Callback auto</td>
+<td>Áp dụng slot mới, phát cập nhật dữ liệu,0 lần gọi bay Ngư Tệ và0 lần gọi bay cá</td>
+</tr>
+<tr>
+<td>Cùng mục tiêu UI, callback luồng cũ</td>
+<td>Gọi hiệu ứng bán1 lần hoặc trang bị1 lần tương ứng</td>
+</tr>
+<tr>
+<td>Helper native riêng</td>
+<td>Có icon flight tới Ngư Tệ/ô cá; có coin pulse</td>
+</tr>
+</tbody></table></div>
+<p>Đây là kiểm source và thực thi các hàm native trong VM, <strong>không phải đã quan sát hoạt ảnh trong trình duyệt/APK</strong>. Các con số trên thuộc nhân vật fixture trong bộ nhớ, không phải giao dịch của nicky. Chưa sửa hiệu ứng vì user yêu cầu kiểm tra phần này, không tự mở rộng phạm vi thay đổi client auto.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<ul>
+<li><code>linhhoasu/lhs/newServer/src/services/FishingIntegrityService.js</code>: chỉ sửa <code>canUseScene</code>.</li>
+<li><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code>:3 hàm client nêu trên, kiểm khôi phục ngược trả đúng baseline byte-for-byte.</li>
+<li><code>linhhoasu/webgame/game/index.html</code>: đổi cache token thành <code>20260906_fishing_level_only_v1</code>.</li>
+<li>Production tương ứng ở <code>/linhhoasu/lhs/newServer/</code> và <code>/linhhoasu/webgame/game/</code>.</li>
+<li>Không thay fish.js/map transition vừa sửa, commerce/Huyền Vũ, auto-power, gear/balance, WSServer/PlayerService, cấu hình bin, DB schema hoặc WebGM.</li>
+</ul>
+<h3 id="c-ng-c-h-tr">Công cụ hỗ trợ</h3>
+<ul>
+<li>Mới dưới <code>_ai_workbench/tools/</code>: <code>build_fishing_level_only_client_20260906.js</code>, <code>test_fishing_level_only_20260906.js</code>, <code>qa_fishing_level_only_live_20260906.js</code>, <code>release_fishing_level_only_20260906.py</code>.</li>
+<li>Sửa <code>test_fishing_map_fix_20260906.js</code>: khai báo policy <code>server-age</code> (mặc định cũ) hoặc <code>level-only</code>; vẫn kiểm negative/positive cụ thể, không bỏ gate assertion. Cho phép đúng3 hàm client thay qua manifest và inverse check.</li>
+<li>Dùng lại snapshot, auto/gear/balance/daily/core tests và renderer report.</li>
+</ul>
+<h3 id="evidence-v-backup">Evidence và backup</h3>
+<ul>
+<li>Baseline: <code>_ai_workbench/temp/fishing_audit_20260906T045902Z/</code>, snapshot11:59:03 UTC+7,153 artifact.</li>
+<li>Candidate: <code>_ai_workbench/temp/fishing_level_only_20260906/</code>.</li>
+<li>Evidence: <code>client-build.json</code>, <code>level-only-tests.json</code>, <code>map-test.json</code>, <code>stage.json</code>, <code>canary-progress.json</code>, <code>deploy.json</code>, <code>verify.json</code>.</li>
+<li>Backup local trước sửa: <code>_ai_workbench/backups/fishing_level_only_local_20260906/</code>.</li>
+<li>Backup báo cáo: <code>_ai_workbench/backups/fishing_level_only_reports_20260906/</code>.</li>
+<li>Staging: <code>/linhhoasu/_ai_workbench/temp/fishing_level_only_20260906_050505/</code>.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/fishing_level_only_20260906_050505/</code>:0.before=service,1.before=main,2.before=index.</li>
+<li>Báo cáo: file này và HTML tương ứng, cùng cập nhật <code>session_report.md/.html</code>.</li>
+</ul>
+<p>Không tạo file rác ở root. Không sửa các snapshot/client tham chiếu bất biến. File local index giữ line ending hiện có, nội dung chuẩn hóa newline khớp index production; không ghi đè cả file local chỉ để đổi CRLF/LF.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Hai khu khóa theo ngày</td>
+<td>Server kiểm openTime; client kiểm serverOpenDay và nối mô tả ngày</td>
+<td>Đổi policy khu thường thành chỉ cấp ở server và3 hàm client</td>
+<td>Test cấp dưới/đúng/trên, ngày0/1/42/43/70/71/999</td>
+</tr>
+<tr>
+<td>Auto cộng âm thầm</td>
+<td>Nhánh mới không gọi helper bay Ngư Tệ/trang bị có sẵn</td>
+<td>Audit xác nhận bằng handler/native callback; chưa sửa hiệu ứng</td>
+<td>Nếu nối sau này phải lấy kết quả ACK thật, guard view và replay</td>
+</tr>
+<tr>
+<td>Test đầu giả định cá chỉ thuộc khu đang chọn</td>
+<td>Runtime dùng pool hợp tất cả khu đã mở</td>
+<td>Đối chiếu source, kiểm chính xác tập pool truyền vào RNG; không đổi gameplay để làm test xanh</td>
+<td>Đọc contract pool trước đặt oracle</td>
+</tr>
+<tr>
+<td>Tên tool phỏng đoán không có</td>
+<td>Không có patch_fishing_auto_20260906.js</td>
+<td>Liệt kê đúng build_fishing_auto_client_20260906.js rồi đọc</td>
+<td>Khám phá tên file trước truy cập</td>
+</tr>
+<tr>
+<td>rg glob trong path không khớp trên Windows</td>
+<td>fish*.js đưa ở vị trí path</td>
+<td>Dùng thư mục thật với <code>-g</code></td>
+<td>Không dựa vào shell tự mở wildcard</td>
+</tr>
+<tr>
+<td>Trích mọi UpdateContent ra quá nhiều kết quả</td>
+<td>Method trùng tên trong bundle minify</td>
+<td>Neo theo class pmt/Ggt, trích AST đúng FunctionExpression</td>
+<td>Không dump toàn minified line hay mọi lớp</td>
+</tr>
+<tr>
+<td>Index local/production khác hash nhưng nội dung giống</td>
+<td>CRLF/LF khác nhau</td>
+<td>Kiểm normalized content khớp, chỉ sửa token local</td>
+<td>Tách khác newline khỏi source drift thực</td>
+</tr>
+</tbody></table></div>
+<p>Không có lỗi mojibake mới; source/client/report UTF-8. Giữ các bản sửa/tài sản lịch sử, không tự reroll/bù.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Bỏ điều kiện ngày cần sửa cả quyền server, trạng thái khóa của client và tự mở khu khi tăng cấp; chỉ giấu dòng mô tả sẽ không đủ.</li>
+<li>Trường ngày vẫn có thể phục vụ phân nhóm chấm đỏ; không xóa hàng loạt mọi <code>openDay</code> trong bundle vì còn nhiều hệ thống khác.</li>
+<li>Phân biệt handler ghi tiền/cá, callback cập nhật state và gọi hoạt ảnh. Số dư tăng mà thiếu flight là lỗi phản hồi hình ảnh, không mặc định là mất thưởng.</li>
+<li>Khi auto chạy không popup, nối hiệu ứng trang bị cần nguồn bay hợp lệ, không lấy nhãn popup null. Nên dùng dữ liệu <code>equipped/rewards</code> trong ACK, không tính lại kết quả bán/trang bị từ client.</li>
+<li>Test map/catch phải phản ánh pool hợp ngư trường đã mở; map nền không định nghĩa toàn bộ pool hiện hành.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="k-t-qu-ki-m-th">Kết quả kiểm thử</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Policy cấp mới</td>
+<td>19/19 PASS local và Linux staging</td>
+</tr>
+<tr>
+<td>Audit hiệu ứng</td>
+<td>4/4 probe hoàn tất; xác nhận thiếu hiệu ứng, không phải hiệu ứng đã sửa</td>
+</tr>
+<tr>
+<td>Đổi map</td>
+<td>26/26 PASS, có save fail/room/native lifecycle/pending</td>
+</tr>
+<tr>
+<td>Auto hiện hành</td>
+<td>21/21 PASS</td>
+</tr>
+<tr>
+<td>Gear</td>
+<td>38/38 PASS,1.800 matrix cases</td>
+</tr>
+<tr>
+<td>Balance/integrity</td>
+<td>70/70 PASS</td>
+</tr>
+<tr>
+<td>Huyền Vũ</td>
+<td>24/24 PASS</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>714 bảng PASS</td>
+</tr>
+<tr>
+<td>Live S2 và S1</td>
+<td>Cả hai PASS: cấp28 vào6/7; cấp24 từ chối cả hai; cấp25/27 vào6 nhưng từ chối7</td>
+</tr>
+</tbody></table></div>
+<p>Tổng198 nhóm test thay đổi/hồi quy và4 probe hiệu ứng. Live QA:11 lần đổi map ban đầu cùng kết nối, bắt cá→đổi khu gửi liền, giữ3 cá pending qua chuyển khu/relog, không trừ thêm vật phẩm. Sau đó chỉ chỉnh cấp của đúng QA offline để kiểm boundaries. Không thay tuổi server, không dùng tài khoản người thật.</p>
+<p>Bằng chứng bỏ ngày trên “server ngày1” nằm trong native VM và fixture với <code>GameServer.findOne</code> bị chặn để bắt mọi truy vấn tuổi server (0 lần đọc). Live test kiểm điều kiện cấp thật của S1/S2, <strong>không đổi ngày mở của production</strong>.</p>
+<h3 id="h-u-ki-m12-07-43-utc-7">Hậu kiểm12:07:43 UTC+7</h3>
+<p>-154 artifact đúng expected:3 file thay,151 giữ nguyên; bin/client config nguyên.</p>
+<ul>
+<li>Service SHA-256: <code>6bb46542b0100fb671572028e17b748c886f009df2ca999660d141fb34f122e1</code>.</li>
+<li>Main SHA-256: <code>2a91835de7b10da73a8299859e116c462861541b57d8f47aa1d5691b513a5091</code>.</li>
+<li>Index production SHA-256: <code>cb92a86175ab3a9ffb7ac836bcc20909c710f5ed0acc639ee533edf9990e92fc</code>.</li>
+<li>Main/index được phục vụ cổng81 đúng hash mới; local main/service khớp candidate, index normalized khớp.</li>
+<li>S1 PID29724/restart1376, S2 PID27996/restart42. HTTP ready8080/8083 đều200.</li>
+<li>Dist PID30824, admin30856, bot S1 PID1600 và bot S2 PID1576 giữ nguyên PID/restart. Không restart DB/Nginx.</li>
+<li>QA player và mail còn0 ở cả hai DB; đã xóa đúng dữ liệu test, không xóa dữ liệu người chơi.</li>
+<li>Không bù, không migration, không sửa hiệu ứng, không thay số lượt/tốc độ/kinh tế câu cá.</li>
+<li>Chưa nghiệm thu hình ảnh trực tiếp trình duyệt/APK, cold-start hay giữ fixture xuyên thêm một lần restart; không gọi các phần đó PASS.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng tải lại game <strong>một lần</strong> để nạp main có cache token mới; từ đó hai khu chỉ hiện yêu cầu cấp25/28, không còn43/71 ngày. Không cần reload mỗi lần đổi khu.</li>
+<li>Với nhân vật chưa đủ cấp câu cá, khu vẫn khóa là đúng; không nâng cấp hoặc bypass cấp.</li>
+<li>Nếu user yêu cầu sửa hiệu ứng: nối helper native vào ACK auto-power thành công, Ngư Tệ bay về ô68 và cá mới bay về đúng slot; không regrant/cộng tiền từ hiệu ứng.</li>
+<li>Phần hiệu ứng cần test bán-only, equip-only, mix, held/locked/tie, không view/popup, đổi map/đóng cảnh/reconnect và replay; không phát lại hiệu ứng từ ACK cũ hoặc giữ tham chiếu view đã đóng. Nghiệm thu hình ảnh trực tiếp riêng sau triển khai.</li>
+</ol></main></body></html>

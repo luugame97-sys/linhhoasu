@@ -1,0 +1,31 @@
+{
+  "_table": "GoldenMinerBaseConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "(obj)[hookRotateSpeed|hookDigSpeed|mouseSpeed|ropMaxLen|bombRange]",
+  "_sample": [
+    {
+      "hookRotateSpeed": 100
+    },
+    {
+      "hookDigSpeed": 350
+    },
+    {
+      "mouseSpeed": 120
+    }
+  ],
+  "data": {
+    "hookRotateSpeed": 100,
+    "hookDigSpeed": 350,
+    "mouseSpeed": 120,
+    "ropMaxLen": 800,
+    "bombRange": 200,
+    "goal": 375,
+    "goalAddFirstLevel": 275,
+    "goalAdd": 270,
+    "goalAddAfter": 15,
+    "levelGoalAdd": 9,
+    "loopStartLevel": 4,
+    "bombMaxCount": 5
+  }
+}

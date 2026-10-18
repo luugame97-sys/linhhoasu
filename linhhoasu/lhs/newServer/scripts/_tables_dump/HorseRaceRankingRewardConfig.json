@@ -1,0 +1,245 @@
+{
+  "_table": "HorseRaceRankingRewardConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,endRange,rankRangeShow,reward",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "endRange": 1,
+        "rankRangeShow": "1",
+        "reward": [
+          {
+            "id": 94402,
+            "count": 20
+          },
+          {
+            "id": 11280,
+            "count": 1
+          },
+          {
+            "id": 6,
+            "count": 100
+          },
+          {
+            "id": 2,
+            "count": 100000
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "endRange": 2,
+        "rankRangeShow": "2",
+        "reward": [
+          {
+            "id": 94402,
+            "count": 16
+          },
+          {
+            "id": 11280,
+            "count": 1
+          },
+          {
+            "id": 6,
+            "count": 80
+          },
+          {
+            "id": 2,
+            "count": 80000
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "endRange": 3,
+        "rankRangeShow": "3",
+        "reward": [
+          {
+            "id": 94402,
+            "count": 12
+          },
+          {
+            "id": 11280,
+            "count": 1
+          },
+          {
+            "id": 6,
+            "count": 60
+          },
+          {
+            "id": 2,
+            "count": 60000
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "endRange": 1,
+      "rankRangeShow": "1",
+      "reward": [
+        {
+          "id": 94402,
+          "count": 20
+        },
+        {
+          "id": 11280,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 100
+        },
+        {
+          "id": 2,
+          "count": 100000
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "endRange": 2,
+      "rankRangeShow": "2",
+      "reward": [
+        {
+          "id": 94402,
+          "count": 16
+        },
+        {
+          "id": 11280,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 80
+        },
+        {
+          "id": 2,
+          "count": 80000
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "endRange": 3,
+      "rankRangeShow": "3",
+      "reward": [
+        {
+          "id": 94402,
+          "count": 12
+        },
+        {
+          "id": 11280,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 60
+        },
+        {
+          "id": 2,
+          "count": 60000
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "endRange": 10,
+      "rankRangeShow": "4-10",
+      "reward": [
+        {
+          "id": 94402,
+          "count": 8
+        },
+        {
+          "id": 11280,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 50000
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "endRange": 20,
+      "rankRangeShow": "11-20",
+      "reward": [
+        {
+          "id": 94402,
+          "count": 5
+        },
+        {
+          "id": 11280,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 40
+        },
+        {
+          "id": 2,
+          "count": 40000
+        }
+      ]
+    },
+    "21": {
+      "id": 21,
+      "endRange": 50,
+      "rankRangeShow": "21-50",
+      "reward": [
+        {
+          "id": 6,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 35000
+        }
+      ]
+    },
+    "51": {
+      "id": 51,
+      "endRange": 100,
+      "rankRangeShow": "51-100",
+      "reward": [
+        {
+          "id": 6,
+          "count": 30
+        },
+        {
+          "id": 2,
+          "count": 30000
+        }
+      ]
+    },
+    "101": {
+      "id": 101,
+      "endRange": 999,
+      "rankRangeShow": "100+",
+      "reward": [
+        {
+          "id": 6,
+          "count": 20
+        },
+        {
+          "id": 2,
+          "count": 20000
+        }
+      ]
+    }
+  }
+}

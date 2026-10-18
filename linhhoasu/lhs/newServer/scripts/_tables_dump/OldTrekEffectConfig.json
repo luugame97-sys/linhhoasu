@@ -1,0 +1,5821 @@
+{
+  "_table": "OldTrekEffectConfig",
+  "_rows": 118,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4,5,6",
+  "_sample": [
+    {
+      "101": {
+        "1": {
+          "id": 101,
+          "key": 1,
+          "atkType": 3,
+          "isPersonal": 0,
+          "wuqiType": 2,
+          "atkAnim": "attack_1",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk_hgmh_daoguang"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_atk_hgmh_baodian_1"
+            ],
+            "wuqi": 1
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "",
+          "soundEff": "",
+          "onlyCrit": 0,
+          "critSoundEff": "",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "2": {
+          "id": 101,
+          "key": 2,
+          "atkType": 3,
+          "isPersonal": 0,
+          "wuqiType": 2,
+          "atkAnim": "attack_2",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk_hgmh_daoguang"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_atk_hgmh_baodian_1"
+            ],
+            "wuqi": 1
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "",
+          "soundEff": "",
+          "onlyCrit": 0,
+          "critSoundEff": "",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "3": {
+          "id": 101,
+          "key": 3,
+          "atkType": 3,
+          "isPersonal": 1,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_1"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_35201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_1",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "4": {
+          "id": 101,
+          "key": 4,
+          "atkType": 3,
+          "isPersonal": 2,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_2"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_35201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_2",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "5": {
+          "id": 101,
+          "key": 5,
+          "atkType": 3,
+          "isPersonal": 3,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_3"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_35201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_3",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "6": {
+          "id": 101,
+          "key": 6,
+          "atkType": 4,
+          "isPersonal": 4,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "",
+          "dashTime": 7,
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": [],
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_35201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_4",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        }
+      }
+    },
+    {
+      "102": {
+        "1": {
+          "id": 102,
+          "key": 1,
+          "atkType": 3,
+          "isPersonal": 0,
+          "wuqiType": 2,
+          "atkAnim": "attack_1",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk_hgmh_daoguang"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_atk_hgmh_baodian_2"
+            ],
+            "wuqi": 1
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "",
+          "soundEff": "",
+          "onlyCrit": 0,
+          "critSoundEff": "",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "2": {
+          "id": 102,
+          "key": 2,
+          "atkType": 3,
+          "isPersonal": 0,
+          "wuqiType": 2,
+          "atkAnim": "attack_2",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk_hgmh_daoguang"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_atk_hgmh_baodian_2"
+            ],
+            "wuqi": 1
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "",
+          "soundEff": "",
+          "onlyCrit": 0,
+          "critSoundEff": "",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "3": {
+          "id": 102,
+          "key": 3,
+          "atkType": 3,
+          "isPersonal": 1,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_1"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_hgmh_baodian_541"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_1",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "4": {
+          "id": 102,
+          "key": 4,
+          "atkType": 3,
+          "isPersonal": 2,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_2"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_hgmh_baodian_541"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_2",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "5": {
+          "id": 102,
+          "key": 5,
+          "atkType": 3,
+          "isPersonal": 3,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_3"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_hgmh_baodian_541"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_3",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "6": {
+          "id": 102,
+          "key": 6,
+          "atkType": 4,
+          "isPersonal": 4,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "",
+          "dashTime": 10,
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": [],
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_hgmh_baodian_541"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_4",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        }
+      }
+    },
+    {
+      "103": {
+        "1": {
+          "id": 103,
+          "key": 1,
+          "atkType": 3,
+          "isPersonal": 0,
+          "wuqiType": 2,
+          "atkAnim": "attack_1",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk_hgmh_daoguang"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_atk_hgmh_baodian_3"
+            ],
+            "wuqi": 1
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "",
+          "soundEff": "",
+          "onlyCrit": 0,
+          "critSoundEff": "",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "2": {
+          "id": 103,
+          "key": 2,
+          "atkType": 3,
+          "isPersonal": 0,
+          "wuqiType": 2,
+          "atkAnim": "attack_2",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk_hgmh_daoguang"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_atk_hgmh_baodian_3"
+            ],
+            "wuqi": 1
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "",
+          "soundEff": "",
+          "onlyCrit": 0,
+          "critSoundEff": "",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "3": {
+          "id": 103,
+          "key": 3,
+          "atkType": 3,
+          "isPersonal": 1,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_1"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_43201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_1",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "4": {
+          "id": 103,
+          "key": 4,
+          "atkType": 3,
+          "isPersonal": 2,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_2"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_43201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_2",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "5": {
+          "id": 103,
+          "key": 5,
+          "atkType": 3,
+          "isPersonal": 3,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "dash_1",
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": {
+            "files": [
+              "sp_atk3_hgmh_daoguang_3"
+            ]
+          },
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_43201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_3",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        },
+        "6": {
+          "id": 103,
+          "key": 6,
+          "atkType": 4,
+          "isPersonal": 4,
+          "wuqiType": 2,
+          "atkAnim": "attack_3",
+          "dashAnim": "",
+          "dashTime": 10,
+          "shotAnim": "",
+          "magicEff": [],
+          "atkEff": [],
+          "becastEff": {
+            "type": 7,
+            "files": [
+              "sp_skill_baodian_43201"
+            ]
+          },
+          "waitTime": 0,
+          "costCount": 1,
+          "strikeSound": "effect_sailor_cast_4",
+          "soundEff": "effect_attack_1_b_mp3",
+          "onlyCrit": 0,
+          "critSoundEff": "effect_attack_1_b_mp3",
+          "flyImg": [],
+          "atkSpec": []
+        }
+      }
+    }
+  ],
+  "data": {
+    "101": {
+      "1": {
+        "id": 101,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_1"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 101,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_1"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 101,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 101,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 101,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 101,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "dashTime": 7,
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "102": {
+      "1": {
+        "id": 102,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_2"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 102,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_2"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 102,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 102,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 102,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 102,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "dashTime": 10,
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "103": {
+      "1": {
+        "id": 103,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_3"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 103,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_3"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 103,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 103,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 103,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 103,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "dashTime": 10,
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "104": {
+      "1": {
+        "id": 104,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_4"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 104,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_4"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 104,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 104,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 104,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 104,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "105": {
+      "1": {
+        "id": 105,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_5"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 105,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_5"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 105,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_544"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 105,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_544"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 105,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_544"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 105,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_544"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "106": {
+      "1": {
+        "id": 106,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_6"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 106,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_6"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 106,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_545"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 106,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_545"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 106,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_545"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 106,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_545"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "107": {
+      "1": {
+        "id": 107,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_7"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 107,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_7"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 107,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 107,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 107,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 107,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "108": {
+      "1": {
+        "id": 108,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_8"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 108,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_8"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 108,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 108,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 108,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 108,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "109": {
+      "1": {
+        "id": 109,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_9"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 109,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_9"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 109,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_548"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 109,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_548"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 109,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_548"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 109,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_548"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "110": {
+      "1": {
+        "id": 110,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_10"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 110,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk_hgmh_daoguang"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_atk_hgmh_baodian_10"
+          ],
+          "wuqi": 1
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "",
+        "onlyCrit": 0,
+        "critSoundEff": "",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 110,
+        "key": 3,
+        "atkType": 3,
+        "isPersonal": 1,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_1"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "4": {
+        "id": 110,
+        "key": 4,
+        "atkType": 3,
+        "isPersonal": 2,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_2"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_2",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "5": {
+        "id": 110,
+        "key": 5,
+        "atkType": 3,
+        "isPersonal": 3,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_atk3_hgmh_daoguang_3"
+          ]
+        },
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_3",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "6": {
+        "id": 110,
+        "key": 6,
+        "atkType": 4,
+        "isPersonal": 4,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": [],
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "effect_sailor_cast_4",
+        "soundEff": "effect_attack_1_b_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_1_b_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4001": {
+      "1": {
+        "id": 4001,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4002": {
+      "1": {
+        "id": 4002,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4003": {
+      "1": {
+        "id": 4003,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4004": {
+      "1": {
+        "id": 4004,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4005": {
+      "1": {
+        "id": 4005,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4101": {
+      "1": {
+        "id": 4101,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4102": {
+      "1": {
+        "id": 4102,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4103": {
+      "1": {
+        "id": 4103,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4104": {
+      "1": {
+        "id": 4104,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4105": {
+      "1": {
+        "id": 4105,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4201": {
+      "1": {
+        "id": 4201,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4202": {
+      "1": {
+        "id": 4202,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4203": {
+      "1": {
+        "id": 4203,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4204": {
+      "1": {
+        "id": 4204,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4205": {
+      "1": {
+        "id": 4205,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4301": {
+      "1": {
+        "id": 4301,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4302": {
+      "1": {
+        "id": 4302,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4303": {
+      "1": {
+        "id": 4303,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4304": {
+      "1": {
+        "id": 4304,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "4305": {
+      "1": {
+        "id": 4305,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5001": {
+      "1": {
+        "id": 5001,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5002": {
+      "1": {
+        "id": 5002,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5003": {
+      "1": {
+        "id": 5003,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5004": {
+      "1": {
+        "id": 5004,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5005": {
+      "1": {
+        "id": 5005,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_35201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5101": {
+      "1": {
+        "id": 5101,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5102": {
+      "1": {
+        "id": 5102,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5103": {
+      "1": {
+        "id": 5103,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5104": {
+      "1": {
+        "id": 5104,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5105": {
+      "1": {
+        "id": 5105,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_541"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5201": {
+      "1": {
+        "id": 5201,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5202": {
+      "1": {
+        "id": 5202,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5203": {
+      "1": {
+        "id": 5203,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": {
+          "type": 3,
+          "flyTime": 0,
+          "file": "sp_skill_fly_350303",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      }
+    },
+    "5204": {
+      "1": {
+        "id": 5204,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5205": {
+      "1": {
+        "id": 5205,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_43201"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5301": {
+      "1": {
+        "id": 5301,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5302": {
+      "1": {
+        "id": 5302,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5303": {
+      "1": {
+        "id": 5303,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5304": {
+      "1": {
+        "id": 5304,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "5305": {
+      "1": {
+        "id": 5305,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_543"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6001": {
+      "1": {
+        "id": 6001,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_360101"
+          ],
+          "anim": "a_2"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "effect_sailor_cast_360101",
+        "soundEff": "effect_sailor_skill_360101",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_360101",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6002": {
+      "1": {
+        "id": 6002,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6003": {
+      "1": {
+        "id": 6003,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6004": {
+      "1": {
+        "id": 6004,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6005": {
+      "1": {
+        "id": 6005,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6006": {
+      "1": {
+        "id": 6006,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6007": {
+      "1": {
+        "id": 6007,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6008": {
+      "1": {
+        "id": 6008,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6009": {
+      "1": {
+        "id": 6009,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6010": {
+      "1": {
+        "id": 6010,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6011": {
+      "1": {
+        "id": 6011,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6012": {
+      "1": {
+        "id": 6012,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6013": {
+      "1": {
+        "id": 6013,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6014": {
+      "1": {
+        "id": 6014,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_60"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_1",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_1",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6101": {
+      "1": {
+        "id": 6101,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_360201"
+          ],
+          "anim": "a_2"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_360201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_360201",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6102": {
+      "1": {
+        "id": 6102,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6103": {
+      "1": {
+        "id": 6103,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6104": {
+      "1": {
+        "id": 6104,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6105": {
+      "1": {
+        "id": 6105,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6106": {
+      "1": {
+        "id": 6106,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6107": {
+      "1": {
+        "id": 6107,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6108": {
+      "1": {
+        "id": 6108,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6109": {
+      "1": {
+        "id": 6109,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6110": {
+      "1": {
+        "id": 6110,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6111": {
+      "1": {
+        "id": 6111,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6112": {
+      "1": {
+        "id": 6112,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6113": {
+      "1": {
+        "id": 6113,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6114": {
+      "1": {
+        "id": 6114,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_61"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_2",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_2",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6201": {
+      "1": {
+        "id": 6201,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360301"
+          ],
+          "anim": "a_2",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_360301",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_360301",
+        "flyImg": {
+          "tType": 8,
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360301",
+          "anim": "a_2"
+        },
+        "atkSpec": []
+      }
+    },
+    "6202": {
+      "1": {
+        "id": 6202,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6203": {
+      "1": {
+        "id": 6203,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6204": {
+      "1": {
+        "id": 6204,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6205": {
+      "1": {
+        "id": 6205,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6206": {
+      "1": {
+        "id": 6206,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6207": {
+      "1": {
+        "id": 6207,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6208": {
+      "1": {
+        "id": 6208,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_350303"
+          ],
+          "anim": "a_2"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": {
+          "type": 3,
+          "flyTime": 0,
+          "file": "sp_skill_fly_350303",
+          "anim": "a_2"
+        },
+        "atkSpec": []
+      }
+    },
+    "6209": {
+      "1": {
+        "id": 6209,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6210": {
+      "1": {
+        "id": 6210,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6211": {
+      "1": {
+        "id": 6211,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6212": {
+      "1": {
+        "id": 6212,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6213": {
+      "1": {
+        "id": 6213,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6214": {
+      "1": {
+        "id": 6214,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_62"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6301": {
+      "1": {
+        "id": 6301,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_360401"
+          ],
+          "anim": "a_2",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_tf_skillHit_157501",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_tf_skillHit_157501",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6302": {
+      "1": {
+        "id": 6302,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6303": {
+      "1": {
+        "id": 6303,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6304": {
+      "1": {
+        "id": 6304,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6305": {
+      "1": {
+        "id": 6305,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6306": {
+      "1": {
+        "id": 6306,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6307": {
+      "1": {
+        "id": 6307,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6308": {
+      "1": {
+        "id": 6308,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_360408"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": {
+          "type": 3,
+          "flyTime": 0,
+          "file": "sp_skill_fly_360408",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      }
+    },
+    "6309": {
+      "1": {
+        "id": 6309,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6310": {
+      "1": {
+        "id": 6310,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6311": {
+      "1": {
+        "id": 6311,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6312": {
+      "1": {
+        "id": 6312,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6313": {
+      "1": {
+        "id": 6313,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_4",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_4",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "6314": {
+      "1": {
+        "id": 6314,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_hgmh_baodian_63"
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_attack_crit_1_mp3",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_attack_crit_1_mp3",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "7001": {
+      "1": {
+        "id": 7001,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_370101"
+          ],
+          "anim": "a_2"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "attack_fashion_fahai_crit",
+        "onlyCrit": 0,
+        "critSoundEff": "attack_fashion_fahai_crit",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "7101": {
+      "1": {
+        "id": 7101,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_370201"
+          ],
+          "anim": "a_2",
+          "animDelay": [
+            24
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_370201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_370201",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "7201": {
+      "1": {
+        "id": 7201,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_370301"
+          ],
+          "anim": "a_2",
+          "animDelay": [
+            20
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_tf_skillHit_157201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_tf_skillHit_157201",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "7301": {
+      "1": {
+        "id": 7301,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_4",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 8,
+          "files": [
+            "sp_skill_baodian_370401"
+          ],
+          "anim": "a_2",
+          "animDelay": [
+            3
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_skill_370401",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_skill_370401",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "360101": {
+      "1": {
+        "id": 360101,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360101"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            3
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360101",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360101",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 4,
+          "file": "sp_skill_fly_360101"
+        },
+        "atkSpec": []
+      },
+      "2": {
+        "id": 360101,
+        "key": 2,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360101"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            3
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360101",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360101",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 4,
+          "file": "sp_skill_fly_360101"
+        },
+        "atkSpec": []
+      },
+      "3": {
+        "id": 360101,
+        "key": 3,
+        "atkType": 1,
+        "isPersonal": 99,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360101"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360101",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360101",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "360201": {
+      "1": {
+        "id": 360201,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_1",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360201"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360201",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360201"
+        },
+        "atkSpec": []
+      },
+      "2": {
+        "id": 360201,
+        "key": 2,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_2",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360201"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360201",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360201"
+        },
+        "atkSpec": []
+      },
+      "3": {
+        "id": 360201,
+        "key": 3,
+        "atkType": 1,
+        "isPersonal": 99,
+        "wuqiType": 1,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360201"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360201",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360201"
+        },
+        "atkSpec": []
+      }
+    },
+    "360301": {
+      "1": {
+        "id": 360301,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_1",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360301"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "pet_attack_huo",
+        "onlyCrit": 0,
+        "critSoundEff": "pet_attack_huo",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360301",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      },
+      "2": {
+        "id": 360301,
+        "key": 2,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_2",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360301"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "pet_attack_huo",
+        "onlyCrit": 0,
+        "critSoundEff": "pet_attack_huo",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360301",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      }
+    },
+    "360401": {
+      "1": {
+        "id": 360401,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_1",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360401"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360401",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360401",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360401",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      },
+      "2": {
+        "id": 360401,
+        "key": 2,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_2",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_360401"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_360401",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_360401",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_360401",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      }
+    },
+    "370101": {
+      "1": {
+        "id": 370101,
+        "key": 1,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_wuqi_eff_370101"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370101"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "attack_fashion_zhizunbao",
+        "onlyCrit": 0,
+        "critSoundEff": "attack_fashion_zhizunbao",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 370101,
+        "key": 2,
+        "atkType": 3,
+        "isPersonal": 0,
+        "wuqiType": 2,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_wuqi_eff_370101"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370101"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "attack_fashion_zhizunbao",
+        "onlyCrit": 0,
+        "critSoundEff": "attack_fashion_zhizunbao",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "3": {
+        "id": 370101,
+        "key": 3,
+        "atkType": 1,
+        "isPersonal": 99,
+        "wuqiType": 2,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_wuqi_eff_370101"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370101"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 1,
+        "strikeSound": "",
+        "soundEff": "attack_fashion_zhizunbao",
+        "onlyCrit": 0,
+        "critSoundEff": "attack_fashion_zhizunbao",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "370201": {
+      "1": {
+        "id": 370201,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_1",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370201"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_370201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_370201",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_370201"
+        },
+        "atkSpec": []
+      },
+      "2": {
+        "id": 370201,
+        "key": 2,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_2",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370201"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_370201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_370201",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 6,
+          "file": "sp_skill_fly_370201"
+        },
+        "atkSpec": []
+      },
+      "3": {
+        "id": 370201,
+        "key": 3,
+        "atkType": 1,
+        "isPersonal": 99,
+        "wuqiType": 1,
+        "atkAnim": "attack_3",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370201"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_370201",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_370201",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "370301": {
+      "1": {
+        "id": 370301,
+        "key": 1,
+        "atkType": 0,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_1",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_wuqi_eff_370301"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370301"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_370301",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_370301",
+        "flyImg": [],
+        "atkSpec": []
+      },
+      "2": {
+        "id": 370301,
+        "key": 2,
+        "atkType": 0,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_2",
+        "dashAnim": "dash_1",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": {
+          "files": [
+            "sp_wuqi_eff_370301"
+          ]
+        },
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370301"
+          ],
+          "anim": "a_1"
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "effect_sailor_atk_370301",
+        "onlyCrit": 0,
+        "critSoundEff": "effect_sailor_atk_370301",
+        "flyImg": [],
+        "atkSpec": []
+      }
+    },
+    "370401": {
+      "1": {
+        "id": 370401,
+        "key": 1,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_1",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370401"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "attack_fashion_niexiaoqian",
+        "onlyCrit": 0,
+        "critSoundEff": "attack_fashion_niexiaoqian",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 10,
+          "file": "sp_skill_fly_370401",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      },
+      "2": {
+        "id": 370401,
+        "key": 2,
+        "atkType": 1,
+        "isPersonal": 0,
+        "wuqiType": 1,
+        "atkAnim": "attack_2",
+        "dashAnim": "",
+        "shotAnim": "",
+        "magicEff": [],
+        "atkEff": [],
+        "becastEff": {
+          "type": 7,
+          "files": [
+            "sp_skill_baodian_370401"
+          ],
+          "anim": "a_1",
+          "animDelay": [
+            5
+          ]
+        },
+        "waitTime": 0,
+        "costCount": 0,
+        "strikeSound": "",
+        "soundEff": "attack_fashion_niexiaoqian",
+        "onlyCrit": 0,
+        "critSoundEff": "attack_fashion_niexiaoqian",
+        "flyImg": {
+          "type": 4,
+          "flyTime": 10,
+          "file": "sp_skill_fly_370401",
+          "anim": "a_1"
+        },
+        "atkSpec": []
+      }
+    }
+  }
+}

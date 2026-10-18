@@ -1,0 +1,12 @@
+const cp=require('child_process'),fs=require('fs'),crypto=require('crypto');
+const app='/linhhoasu/lhs/newServer';
+const procs=JSON.parse(cp.execFileSync('pm2',['jlist'],{maxBuffer:8e6}));
+const game=procs.find(p=>p.name==='lhs-s1001');
+const selected=Object.fromEntries(Object.entries(game.pm2_env).filter(([k])=>/^SERVER_PUBLIC_HOST$|^WS_PUBLIC_(PORT|PATH)(_|$)|^SERVER_ID$/.test(k)));
+for(const [k,v] of Object.entries(selected))process.env[k]=String(v);
+const log=require.resolve(app+'/src/logger');require.cache[log]={id:log,filename:log,loaded:true,exports:{info(){},warn(){},error(){},debug(){}}};
+const server=require(app+'/src/handlers/serverList');
+const out={env:selected,endpoints:[]};
+for(const host of ['linhhoasu.lol','103.116.105.154:81'])for(let sid=1001;sid<=1006;sid++)out.endpoints.push({host,sid,...server.buildWsEndpoint({hostname:host.split(':')[0],headers:{host,'x-forwarded-proto':host==='linhhoasu.lol'?'https':'http'}},sid)});
+out.sourceHash=crypto.createHash('sha256').update(fs.readFileSync(app+'/src/handlers/serverList.js')).digest('hex');
+console.log(JSON.stringify(out,null,2));

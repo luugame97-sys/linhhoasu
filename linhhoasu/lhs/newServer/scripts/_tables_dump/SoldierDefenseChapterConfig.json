@@ -1,0 +1,902 @@
+{
+  "_table": "SoldierDefenseChapterConfig",
+  "_rows": 52,
+  "_type": "object",
+  "_firstKeys": "id,victoryScore,rebornCost,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "victoryScore": 1000,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "victoryScore": 1200,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "victoryScore": 1400,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "victoryScore": 1000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "victoryScore": 1200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "victoryScore": 1400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "victoryScore": 1600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "victoryScore": 1800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "victoryScore": 2000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "victoryScore": 2200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "victoryScore": 2400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "victoryScore": 2600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "victoryScore": 2800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "victoryScore": 3000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "victoryScore": 3200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "victoryScore": 3400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "14": {
+      "id": 14,
+      "victoryScore": 3600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "15": {
+      "id": 15,
+      "victoryScore": 3800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "16": {
+      "id": 16,
+      "victoryScore": 4000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "17": {
+      "id": 17,
+      "victoryScore": 4200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "18": {
+      "id": 18,
+      "victoryScore": 4400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "19": {
+      "id": 19,
+      "victoryScore": 4600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "20": {
+      "id": 20,
+      "victoryScore": 4800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "21": {
+      "id": 21,
+      "victoryScore": 5000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "22": {
+      "id": 22,
+      "victoryScore": 5200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "23": {
+      "id": 23,
+      "victoryScore": 5400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "24": {
+      "id": 24,
+      "victoryScore": 5600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "25": {
+      "id": 25,
+      "victoryScore": 5800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "26": {
+      "id": 26,
+      "victoryScore": 6000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "27": {
+      "id": 27,
+      "victoryScore": 6200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "28": {
+      "id": 28,
+      "victoryScore": 6400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "29": {
+      "id": 29,
+      "victoryScore": 6600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "30": {
+      "id": 30,
+      "victoryScore": 6800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "31": {
+      "id": 31,
+      "victoryScore": 7000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "32": {
+      "id": 32,
+      "victoryScore": 7200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "33": {
+      "id": 33,
+      "victoryScore": 7400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "34": {
+      "id": 34,
+      "victoryScore": 7600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "35": {
+      "id": 35,
+      "victoryScore": 7800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "36": {
+      "id": 36,
+      "victoryScore": 8000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "37": {
+      "id": 37,
+      "victoryScore": 8200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "38": {
+      "id": 38,
+      "victoryScore": 8400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "39": {
+      "id": 39,
+      "victoryScore": 8600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "40": {
+      "id": 40,
+      "victoryScore": 8800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "41": {
+      "id": 41,
+      "victoryScore": 9000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "42": {
+      "id": 42,
+      "victoryScore": 9200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "43": {
+      "id": 43,
+      "victoryScore": 9400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "44": {
+      "id": 44,
+      "victoryScore": 9600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "45": {
+      "id": 45,
+      "victoryScore": 9800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "46": {
+      "id": 46,
+      "victoryScore": 10000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "47": {
+      "id": 47,
+      "victoryScore": 10200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "48": {
+      "id": 48,
+      "victoryScore": 10400,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "49": {
+      "id": 49,
+      "victoryScore": 10600,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "50": {
+      "id": 50,
+      "victoryScore": 10800,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "51": {
+      "id": 51,
+      "victoryScore": 11000,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "52": {
+      "id": 52,
+      "victoryScore": 11200,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "rewards": [
+      {
+        "id": 1,
+        "count": 1000
+      }
+    ]
+  }
+}

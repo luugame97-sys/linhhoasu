@@ -1,0 +1,55 @@
+{
+  "_table": "ActivityBaseConfig",
+  "_rows": 19,
+  "_type": "object",
+  "_firstKeys": "(obj)[activityExpiredMail|activity13Mail|activity14Mail|activity16Mess|activity15Time]",
+  "_sample": [
+    {
+      "activityExpiredMail": 7
+    },
+    {
+      "activity13Mail": 12
+    },
+    {
+      "activity14Mail": 13
+    }
+  ],
+  "data": {
+    "activityExpiredMail": 7,
+    "activity13Mail": 12,
+    "activity14Mail": 13,
+    "activity16Mess": 1004,
+    "activity15Time": 900,
+    "activity15GroupName": {
+      "1": 30033729,
+      "2": 30033730,
+      "3": 30033731
+    },
+    "activity15InitAttrs": {
+      "1": 2,
+      "2": 9,
+      "3": 14
+    },
+    "linkageStartTime": 1784044800000,
+    "linkageEndTime": 1788278400000,
+    "linkageEmojiStartTime": 1773763200000,
+    "linkageEmojiEndTime": 1777392000000,
+    "mapId": 990008,
+    "hotSpringMapId": 990007,
+    "hotSpringBossShow": 213,
+    "bossShow": 214,
+    "bossDropWeight": 2000,
+    "slapId": 5,
+    "activity56Max": 30,
+    "activity56New": [
+      {
+        "id": 30007,
+        "count": 1
+      },
+      {
+        "id": 11555,
+        "count": 1
+      }
+    ]
+  }
+}

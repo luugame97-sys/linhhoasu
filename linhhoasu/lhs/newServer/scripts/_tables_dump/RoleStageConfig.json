@@ -1,0 +1,1764 @@
+{
+  "_table": "RoleStageConfig",
+  "_rows": 45,
+  "_type": "object",
+  "_firstKeys": "id,name,taskGroup,attr,successRate,addSuccessRate,failDecreaseExp,itemIds,levelMax,rewards,show,alchemyId",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "name": 30030301,
+        "taskGroup": [
+          40001,
+          40101,
+          40201
+        ],
+        "attr": {
+          "1": 1500,
+          "2": 180,
+          "3": 30
+        },
+        "successRate": 10000,
+        "addSuccessRate": 0,
+        "failDecreaseExp": 10,
+        "itemIds": [
+          110102,
+          110103,
+          110104,
+          110106,
+          110107
+        ],
+        "levelMax": 5,
+        "rewards": [],
+        "show": 0,
+        "alchemyId": 120101
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "name": 30030302,
+        "taskGroup": [
+          40002,
+          40102,
+          40202
+        ],
+        "attr": {
+          "1": 2250,
+          "2": 270,
+          "3": 50
+        },
+        "successRate": 10000,
+        "addSuccessRate": 0,
+        "failDecreaseExp": 15,
+        "itemIds": [
+          110102,
+          110103,
+          110104,
+          110106,
+          110107
+        ],
+        "levelMax": 10,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          },
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "show": 0,
+        "alchemyId": 120101
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "name": 30030303,
+        "taskGroup": [
+          40003,
+          40103,
+          40203
+        ],
+        "attr": {
+          "1": 3000,
+          "2": 360,
+          "3": 60
+        },
+        "successRate": 8000,
+        "addSuccessRate": 400,
+        "failDecreaseExp": 20,
+        "itemIds": [
+          110112,
+          110113,
+          110114,
+          110116,
+          110117
+        ],
+        "levelMax": 15,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          },
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "show": 3,
+        "alchemyId": 120111
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "name": 30030301,
+      "taskGroup": [
+        40001,
+        40101,
+        40201
+      ],
+      "attr": {
+        "1": 1500,
+        "2": 180,
+        "3": 30
+      },
+      "successRate": 10000,
+      "addSuccessRate": 0,
+      "failDecreaseExp": 10,
+      "itemIds": [
+        110102,
+        110103,
+        110104,
+        110106,
+        110107
+      ],
+      "levelMax": 5,
+      "rewards": [],
+      "show": 0,
+      "alchemyId": 120101
+    },
+    "2": {
+      "id": 2,
+      "name": 30030302,
+      "taskGroup": [
+        40002,
+        40102,
+        40202
+      ],
+      "attr": {
+        "1": 2250,
+        "2": 270,
+        "3": 50
+      },
+      "successRate": 10000,
+      "addSuccessRate": 0,
+      "failDecreaseExp": 15,
+      "itemIds": [
+        110102,
+        110103,
+        110104,
+        110106,
+        110107
+      ],
+      "levelMax": 10,
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        },
+        {
+          "id": 4,
+          "count": 10
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120101
+    },
+    "3": {
+      "id": 3,
+      "name": 30030303,
+      "taskGroup": [
+        40003,
+        40103,
+        40203
+      ],
+      "attr": {
+        "1": 3000,
+        "2": 360,
+        "3": 60
+      },
+      "successRate": 8000,
+      "addSuccessRate": 400,
+      "failDecreaseExp": 20,
+      "itemIds": [
+        110112,
+        110113,
+        110114,
+        110116,
+        110117
+      ],
+      "levelMax": 15,
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        },
+        {
+          "id": 4,
+          "count": 10
+        }
+      ],
+      "show": 3,
+      "alchemyId": 120111
+    },
+    "4": {
+      "id": 4,
+      "name": 30030304,
+      "taskGroup": [
+        40004,
+        40104,
+        40204
+      ],
+      "attr": {
+        "1": 4110,
+        "2": 490,
+        "3": 80
+      },
+      "successRate": 9500,
+      "addSuccessRate": 300,
+      "failDecreaseExp": 30,
+      "itemIds": [
+        110202,
+        110203,
+        110204,
+        110206,
+        110207
+      ],
+      "levelMax": 25,
+      "rewards": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 4,
+          "count": 20
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120201
+    },
+    "5": {
+      "id": 5,
+      "name": 30030305,
+      "taskGroup": [
+        40005,
+        40105,
+        40205
+      ],
+      "attr": {
+        "1": 5610,
+        "2": 670,
+        "3": 110
+      },
+      "successRate": 9500,
+      "addSuccessRate": 300,
+      "failDecreaseExp": 40,
+      "itemIds": [
+        110202,
+        110203,
+        110204,
+        110206,
+        110207
+      ],
+      "levelMax": 35,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 10
+        },
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120201
+    },
+    "6": {
+      "id": 6,
+      "name": 30030306,
+      "taskGroup": [
+        40006,
+        40106,
+        40206
+      ],
+      "attr": {
+        "1": 7110,
+        "2": 850,
+        "3": 140
+      },
+      "successRate": 7500,
+      "addSuccessRate": 500,
+      "failDecreaseExp": 50,
+      "itemIds": [
+        110212,
+        110213,
+        110214,
+        110216,
+        110217
+      ],
+      "levelMax": 45,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 20
+        },
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "show": 4,
+      "alchemyId": 120211
+    },
+    "7": {
+      "id": 7,
+      "name": 30030307,
+      "taskGroup": [
+        40007,
+        40107,
+        40207
+      ],
+      "attr": {
+        "1": 9460,
+        "2": 1130,
+        "3": 190
+      },
+      "successRate": 8000,
+      "addSuccessRate": 400,
+      "failDecreaseExp": 65,
+      "itemIds": [
+        110302,
+        110303,
+        110304,
+        110306,
+        110307
+      ],
+      "levelMax": 55,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 20
+        },
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120301
+    },
+    "8": {
+      "id": 8,
+      "name": 30030308,
+      "taskGroup": [
+        40008,
+        40108,
+        40208
+      ],
+      "attr": {
+        "1": 10960,
+        "2": 1310,
+        "3": 220
+      },
+      "successRate": 8000,
+      "addSuccessRate": 400,
+      "failDecreaseExp": 80,
+      "itemIds": [
+        110302,
+        110303,
+        110304,
+        110306,
+        110307
+      ],
+      "levelMax": 65,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 20
+        },
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120301
+    },
+    "9": {
+      "id": 9,
+      "name": 30030309,
+      "taskGroup": [
+        40009,
+        40109,
+        40209
+      ],
+      "attr": {
+        "1": 12460,
+        "2": 1490,
+        "3": 250
+      },
+      "successRate": 6000,
+      "addSuccessRate": 800,
+      "failDecreaseExp": 95,
+      "itemIds": [
+        110312,
+        110313,
+        110314,
+        110316,
+        110317
+      ],
+      "levelMax": 75,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 30
+        },
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "show": 5,
+      "alchemyId": 120311
+    },
+    "10": {
+      "id": 10,
+      "name": 30030310,
+      "taskGroup": [
+        40010,
+        40110,
+        40210
+      ],
+      "attr": {
+        "1": 15340,
+        "2": 1840,
+        "3": 310
+      },
+      "successRate": 7500,
+      "addSuccessRate": 500,
+      "failDecreaseExp": 120,
+      "itemIds": [
+        110402,
+        110403,
+        110404,
+        110406,
+        110407
+      ],
+      "levelMax": 90,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 30
+        },
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120401
+    },
+    "11": {
+      "id": 11,
+      "name": 30030311,
+      "taskGroup": [
+        40011,
+        40111,
+        40211
+      ],
+      "attr": {
+        "1": 17590,
+        "2": 2110,
+        "3": 350
+      },
+      "successRate": 7500,
+      "addSuccessRate": 500,
+      "failDecreaseExp": 140,
+      "itemIds": [
+        110402,
+        110403,
+        110404,
+        110406,
+        110407
+      ],
+      "levelMax": 105,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 30
+        },
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120401
+    },
+    "12": {
+      "id": 12,
+      "name": 30030312,
+      "taskGroup": [
+        40012,
+        40112,
+        40212
+      ],
+      "attr": {
+        "1": 19840,
+        "2": 2380,
+        "3": 400
+      },
+      "successRate": 5500,
+      "addSuccessRate": 900,
+      "failDecreaseExp": 165,
+      "itemIds": [
+        110412,
+        110413,
+        110414,
+        110416,
+        110417
+      ],
+      "levelMax": 120,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 400
+        }
+      ],
+      "show": 6,
+      "alchemyId": 120411
+    },
+    "13": {
+      "id": 13,
+      "name": 30030313,
+      "taskGroup": [
+        40013,
+        40113,
+        40213
+      ],
+      "attr": {
+        "1": 24280,
+        "2": 2910,
+        "3": 490
+      },
+      "successRate": 7000,
+      "addSuccessRate": 600,
+      "failDecreaseExp": 195,
+      "itemIds": [
+        110502,
+        110503,
+        110504,
+        110506,
+        110507
+      ],
+      "levelMax": 135,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 400
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120501
+    },
+    "14": {
+      "id": 14,
+      "name": 30030314,
+      "taskGroup": [
+        40014,
+        40114,
+        40214
+      ],
+      "attr": {
+        "1": 26530,
+        "2": 3180,
+        "3": 530
+      },
+      "successRate": 7000,
+      "addSuccessRate": 600,
+      "failDecreaseExp": 225,
+      "itemIds": [
+        110502,
+        110503,
+        110504,
+        110506,
+        110507
+      ],
+      "levelMax": 150,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 400
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120501
+    },
+    "15": {
+      "id": 15,
+      "name": 30030315,
+      "taskGroup": [
+        40015,
+        40115,
+        40215
+      ],
+      "attr": {
+        "1": 28780,
+        "2": 3450,
+        "3": 580
+      },
+      "successRate": 5000,
+      "addSuccessRate": 1000,
+      "failDecreaseExp": 250,
+      "itemIds": [
+        110512,
+        110513,
+        110514,
+        110516,
+        110517
+      ],
+      "levelMax": 165,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 50
+        },
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "show": 7,
+      "alchemyId": 120511
+    },
+    "16": {
+      "id": 16,
+      "name": 30030316,
+      "taskGroup": [
+        40016,
+        40116,
+        40216
+      ],
+      "attr": {
+        "1": 34120,
+        "2": 4100,
+        "3": 680
+      },
+      "successRate": 6500,
+      "addSuccessRate": 700,
+      "failDecreaseExp": 275,
+      "itemIds": [
+        110602,
+        110603,
+        110604,
+        110606,
+        110607
+      ],
+      "levelMax": 185,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 50
+        },
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120601
+    },
+    "17": {
+      "id": 17,
+      "name": 30030317,
+      "taskGroup": [
+        40017,
+        40117,
+        40217
+      ],
+      "attr": {
+        "1": 37120,
+        "2": 4460,
+        "3": 740
+      },
+      "successRate": 6500,
+      "addSuccessRate": 700,
+      "failDecreaseExp": 300,
+      "itemIds": [
+        110602,
+        110603,
+        110604,
+        110606,
+        110607
+      ],
+      "levelMax": 205,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 50
+        },
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120601
+    },
+    "18": {
+      "id": 18,
+      "name": 30030318,
+      "taskGroup": [
+        40018,
+        40118,
+        40218
+      ],
+      "attr": {
+        "1": 40120,
+        "2": 4820,
+        "3": 800
+      },
+      "successRate": 4500,
+      "addSuccessRate": 1100,
+      "failDecreaseExp": 325,
+      "itemIds": [
+        110612,
+        110613,
+        110614,
+        110616,
+        110617
+      ],
+      "levelMax": 225,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 60
+        },
+        {
+          "id": 1,
+          "count": 600
+        }
+      ],
+      "show": 8,
+      "alchemyId": 120611
+    },
+    "19": {
+      "id": 19,
+      "name": 30030319,
+      "taskGroup": [
+        40019,
+        40119,
+        40219
+      ],
+      "attr": {
+        "1": 47410,
+        "2": 5690,
+        "3": 950
+      },
+      "successRate": 6000,
+      "addSuccessRate": 800,
+      "failDecreaseExp": 350,
+      "itemIds": [
+        110702,
+        110703,
+        110704,
+        110706,
+        110707
+      ],
+      "levelMax": 245,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 60
+        },
+        {
+          "id": 1,
+          "count": 600
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120701
+    },
+    "20": {
+      "id": 20,
+      "name": 30030320,
+      "taskGroup": [
+        40020,
+        40120,
+        40220
+      ],
+      "attr": {
+        "1": 50410,
+        "2": 6050,
+        "3": 1010
+      },
+      "successRate": 6000,
+      "addSuccessRate": 800,
+      "failDecreaseExp": 375,
+      "itemIds": [
+        110702,
+        110703,
+        110704,
+        110706,
+        110707
+      ],
+      "levelMax": 265,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 60
+        },
+        {
+          "id": 1,
+          "count": 600
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120701
+    },
+    "21": {
+      "id": 21,
+      "name": 30030321,
+      "taskGroup": [
+        40021,
+        40121,
+        40221
+      ],
+      "attr": {
+        "1": 53410,
+        "2": 6410,
+        "3": 1070
+      },
+      "successRate": 4000,
+      "addSuccessRate": 1200,
+      "failDecreaseExp": 400,
+      "itemIds": [
+        110712,
+        110713,
+        110714,
+        110716,
+        110717
+      ],
+      "levelMax": 285,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 70
+        },
+        {
+          "id": 1,
+          "count": 700
+        }
+      ],
+      "show": 9,
+      "alchemyId": 120711
+    },
+    "22": {
+      "id": 22,
+      "name": 30030322,
+      "taskGroup": [
+        40022,
+        40122,
+        40222
+      ],
+      "attr": {
+        "1": 62040,
+        "2": 7450,
+        "3": 1250
+      },
+      "successRate": 5500,
+      "addSuccessRate": 900,
+      "failDecreaseExp": 425,
+      "itemIds": [
+        110802,
+        110803,
+        110804,
+        110806,
+        110807
+      ],
+      "levelMax": 310,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 70
+        },
+        {
+          "id": 1,
+          "count": 700
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120801
+    },
+    "23": {
+      "id": 23,
+      "name": 30030323,
+      "taskGroup": [
+        40023,
+        40123,
+        40223
+      ],
+      "attr": {
+        "1": 65790,
+        "2": 7900,
+        "3": 1320
+      },
+      "successRate": 5500,
+      "addSuccessRate": 900,
+      "failDecreaseExp": 450,
+      "itemIds": [
+        110802,
+        110803,
+        110804,
+        110806,
+        110807
+      ],
+      "levelMax": 335,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 70
+        },
+        {
+          "id": 1,
+          "count": 700
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120801
+    },
+    "24": {
+      "id": 24,
+      "name": 30030324,
+      "taskGroup": [
+        40024,
+        40124,
+        40224
+      ],
+      "attr": {
+        "1": 69540,
+        "2": 8350,
+        "3": 1400
+      },
+      "successRate": 3500,
+      "addSuccessRate": 1300,
+      "failDecreaseExp": 475,
+      "itemIds": [
+        110812,
+        110813,
+        110814,
+        110816,
+        110817
+      ],
+      "levelMax": 360,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 80
+        },
+        {
+          "id": 1,
+          "count": 800
+        }
+      ],
+      "show": 9,
+      "alchemyId": 120811
+    },
+    "25": {
+      "id": 25,
+      "name": 30030325,
+      "taskGroup": [
+        40025,
+        40125,
+        40225
+      ],
+      "attr": {
+        "1": 80600,
+        "2": 9680,
+        "3": 1620
+      },
+      "successRate": 5000,
+      "addSuccessRate": 1000,
+      "failDecreaseExp": 500,
+      "itemIds": [
+        110902,
+        110903,
+        110904,
+        110906,
+        110907
+      ],
+      "levelMax": 390,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 80
+        },
+        {
+          "id": 1,
+          "count": 800
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120901
+    },
+    "26": {
+      "id": 26,
+      "name": 30030326,
+      "taskGroup": [
+        40026,
+        40126,
+        40226
+      ],
+      "attr": {
+        "1": 85100,
+        "2": 10220,
+        "3": 1710
+      },
+      "successRate": 5000,
+      "addSuccessRate": 1000,
+      "failDecreaseExp": 600,
+      "itemIds": [
+        110902,
+        110903,
+        110904,
+        110906,
+        110907
+      ],
+      "levelMax": 420,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 80
+        },
+        {
+          "id": 1,
+          "count": 800
+        }
+      ],
+      "show": 0,
+      "alchemyId": 120901
+    },
+    "27": {
+      "id": 27,
+      "name": 30030327,
+      "taskGroup": [
+        40027,
+        40127,
+        40227
+      ],
+      "attr": {
+        "1": 89600,
+        "2": 10760,
+        "3": 1800
+      },
+      "successRate": 3000,
+      "addSuccessRate": 1400,
+      "failDecreaseExp": 700,
+      "itemIds": [
+        110912,
+        110913,
+        110914,
+        110916,
+        110917
+      ],
+      "levelMax": 450,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 90
+        },
+        {
+          "id": 1,
+          "count": 900
+        }
+      ],
+      "show": 9,
+      "alchemyId": 120911
+    },
+    "28": {
+      "id": 28,
+      "name": 30030328,
+      "taskGroup": [
+        40028,
+        40128,
+        40228
+      ],
+      "attr": {
+        "1": 103500,
+        "2": 12420,
+        "3": 2080
+      },
+      "successRate": 4500,
+      "addSuccessRate": 1100,
+      "failDecreaseExp": 800,
+      "itemIds": [
+        111002,
+        111003,
+        111004,
+        111006,
+        111007
+      ],
+      "levelMax": 485,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 90
+        },
+        {
+          "id": 1,
+          "count": 900
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121001
+    },
+    "29": {
+      "id": 29,
+      "name": 30030329,
+      "taskGroup": [
+        40029,
+        40129,
+        40229
+      ],
+      "attr": {
+        "1": 108750,
+        "2": 13050,
+        "3": 2180
+      },
+      "successRate": 4500,
+      "addSuccessRate": 1100,
+      "failDecreaseExp": 900,
+      "itemIds": [
+        111002,
+        111003,
+        111004,
+        111006,
+        111007
+      ],
+      "levelMax": 520,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 90
+        },
+        {
+          "id": 1,
+          "count": 900
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121001
+    },
+    "30": {
+      "id": 30,
+      "name": 30030330,
+      "taskGroup": [
+        40030,
+        40130,
+        40230
+      ],
+      "attr": {
+        "1": 114000,
+        "2": 13680,
+        "3": 2290
+      },
+      "successRate": 2500,
+      "addSuccessRate": 1500,
+      "failDecreaseExp": 1000,
+      "itemIds": [
+        111012,
+        111013,
+        111014,
+        111016,
+        111017
+      ],
+      "levelMax": 555,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 100
+        },
+        {
+          "id": 1,
+          "count": 1000
+        }
+      ],
+      "show": 9,
+      "alchemyId": 121011
+    },
+    "31": {
+      "id": 31,
+      "name": 30030331,
+      "taskGroup": [
+        40031,
+        40131,
+        40231
+      ],
+      "attr": {
+        "1": 131160,
+        "2": 15740,
+        "3": 2630
+      },
+      "successRate": 4000,
+      "addSuccessRate": 1200,
+      "failDecreaseExp": 1100,
+      "itemIds": [
+        111102,
+        111103,
+        111104,
+        111106,
+        111107
+      ],
+      "levelMax": 595,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 100
+        },
+        {
+          "id": 1,
+          "count": 1000
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121101
+    },
+    "32": {
+      "id": 32,
+      "name": 30030332,
+      "taskGroup": [
+        40032,
+        40132,
+        40232
+      ],
+      "attr": {
+        "1": 137160,
+        "2": 16460,
+        "3": 2750
+      },
+      "successRate": 4000,
+      "addSuccessRate": 1200,
+      "failDecreaseExp": 1200,
+      "itemIds": [
+        111102,
+        111103,
+        111104,
+        111106,
+        111107
+      ],
+      "levelMax": 635,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 100
+        },
+        {
+          "id": 1,
+          "count": 1000
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121101
+    },
+    "33": {
+      "id": 33,
+      "name": 30030333,
+      "taskGroup": [
+        40033,
+        40133,
+        40233
+      ],
+      "attr": {
+        "1": 143160,
+        "2": 17180,
+        "3": 2870
+      },
+      "successRate": 2000,
+      "addSuccessRate": 1600,
+      "failDecreaseExp": 1300,
+      "itemIds": [
+        111112,
+        111113,
+        111114,
+        111116,
+        111117
+      ],
+      "levelMax": 675,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 110
+        },
+        {
+          "id": 1,
+          "count": 1100
+        }
+      ],
+      "show": 9,
+      "alchemyId": 121111
+    },
+    "34": {
+      "id": 34,
+      "name": 30030334,
+      "taskGroup": [
+        40034,
+        40134,
+        40234
+      ],
+      "attr": {
+        "1": 164060,
+        "2": 19690,
+        "3": 3290
+      },
+      "successRate": 3500,
+      "addSuccessRate": 1300,
+      "failDecreaseExp": 1400,
+      "itemIds": [
+        111202,
+        111203,
+        111204,
+        111206,
+        111207
+      ],
+      "levelMax": 720,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 110
+        },
+        {
+          "id": 1,
+          "count": 1100
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121201
+    },
+    "35": {
+      "id": 35,
+      "name": 30030335,
+      "taskGroup": [
+        40035,
+        40135,
+        40235
+      ],
+      "attr": {
+        "1": 170810,
+        "2": 20500,
+        "3": 3430
+      },
+      "successRate": 3500,
+      "addSuccessRate": 1300,
+      "failDecreaseExp": 1500,
+      "itemIds": [
+        111202,
+        111203,
+        111204,
+        111206,
+        111207
+      ],
+      "levelMax": 765,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 110
+        },
+        {
+          "id": 1,
+          "count": 1100
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121201
+    },
+    "36": {
+      "id": 36,
+      "name": 30030336,
+      "taskGroup": [
+        40036,
+        40136,
+        40236
+      ],
+      "attr": {
+        "1": 177560,
+        "2": 21310,
+        "3": 3560
+      },
+      "successRate": 1500,
+      "addSuccessRate": 1700,
+      "failDecreaseExp": 1600,
+      "itemIds": [
+        111212,
+        111213,
+        111214,
+        111216,
+        111217
+      ],
+      "levelMax": 810,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 120
+        },
+        {
+          "id": 1,
+          "count": 1200
+        }
+      ],
+      "show": 9,
+      "alchemyId": 121211
+    },
+    "37": {
+      "id": 37,
+      "name": 30030337,
+      "taskGroup": [
+        40037,
+        40137,
+        40237
+      ],
+      "attr": {
+        "1": 202730,
+        "2": 24330,
+        "3": 4070
+      },
+      "successRate": 3000,
+      "addSuccessRate": 1400,
+      "failDecreaseExp": 1700,
+      "itemIds": [
+        111302,
+        111303,
+        111304,
+        111306,
+        111307
+      ],
+      "levelMax": 860,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 120
+        },
+        {
+          "id": 1,
+          "count": 1200
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121301
+    },
+    "38": {
+      "id": 38,
+      "name": 30030338,
+      "taskGroup": [
+        40038,
+        40138,
+        40238
+      ],
+      "attr": {
+        "1": 210230,
+        "2": 25230,
+        "3": 4220
+      },
+      "successRate": 3000,
+      "addSuccessRate": 1400,
+      "failDecreaseExp": 1800,
+      "itemIds": [
+        111302,
+        111303,
+        111304,
+        111306,
+        111307
+      ],
+      "levelMax": 910,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 120
+        },
+        {
+          "id": 1,
+          "count": 1200
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121301
+    },
+    "39": {
+      "id": 39,
+      "name": 30030339,
+      "taskGroup": [
+        40039,
+        40139,
+        40239
+      ],
+      "attr": {
+        "1": 217730,
+        "2": 26130,
+        "3": 4370
+      },
+      "successRate": 1000,
+      "addSuccessRate": 1800,
+      "failDecreaseExp": 1900,
+      "itemIds": [
+        111312,
+        111313,
+        111314,
+        111316,
+        111317
+      ],
+      "levelMax": 960,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 130
+        },
+        {
+          "id": 1,
+          "count": 1300
+        }
+      ],
+      "show": 9,
+      "alchemyId": 121311
+    },
+    "40": {
+      "id": 40,
+      "name": 30030340,
+      "taskGroup": [
+        40040,
+        40140,
+        40240
+      ],
+      "attr": {
+        "1": 247730,
+        "2": 29740,
+        "3": 4970
+      },
+      "successRate": 2500,
+      "addSuccessRate": 1500,
+      "failDecreaseExp": 2000,
+      "itemIds": [
+        111402,
+        111403,
+        111404,
+        111406,
+        111407
+      ],
+      "levelMax": 1015,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 130
+        },
+        {
+          "id": 1,
+          "count": 1300
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121401
+    },
+    "41": {
+      "id": 41,
+      "name": 30030341,
+      "taskGroup": [
+        40041,
+        40141,
+        40241
+      ],
+      "attr": {
+        "1": 255980,
+        "2": 30730,
+        "3": 5130
+      },
+      "successRate": 2500,
+      "addSuccessRate": 1500,
+      "failDecreaseExp": 2100,
+      "itemIds": [
+        111402,
+        111403,
+        111404,
+        111406,
+        111407
+      ],
+      "levelMax": 1070,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 130
+        },
+        {
+          "id": 1,
+          "count": 1300
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121401
+    },
+    "42": {
+      "id": 42,
+      "name": 30030342,
+      "taskGroup": [
+        40042,
+        40142,
+        40242
+      ],
+      "attr": {
+        "1": 264230,
+        "2": 31720,
+        "3": 5300
+      },
+      "successRate": 500,
+      "addSuccessRate": 1900,
+      "failDecreaseExp": 2200,
+      "itemIds": [
+        111412,
+        111413,
+        111414,
+        111416,
+        111417
+      ],
+      "levelMax": 1125,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 140
+        },
+        {
+          "id": 1,
+          "count": 1400
+        }
+      ],
+      "show": 9,
+      "alchemyId": 121411
+    },
+    "43": {
+      "id": 43,
+      "name": 30030343,
+      "taskGroup": [
+        40043,
+        40143,
+        40243
+      ],
+      "attr": {
+        "1": 299720,
+        "2": 35980,
+        "3": 6010
+      },
+      "successRate": 2000,
+      "addSuccessRate": 1600,
+      "failDecreaseExp": 2300,
+      "itemIds": [
+        111502,
+        111503,
+        111504,
+        111506,
+        111507
+      ],
+      "levelMax": 1185,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 140
+        },
+        {
+          "id": 1,
+          "count": 1400
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121501
+    },
+    "44": {
+      "id": 44,
+      "name": 30030344,
+      "taskGroup": [
+        40044,
+        40144,
+        40244
+      ],
+      "attr": {
+        "1": 308720,
+        "2": 37060,
+        "3": 6190
+      },
+      "successRate": 2000,
+      "addSuccessRate": 1600,
+      "failDecreaseExp": 2400,
+      "itemIds": [
+        111502,
+        111503,
+        111504,
+        111506,
+        111507
+      ],
+      "levelMax": 1245,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 140
+        },
+        {
+          "id": 1,
+          "count": 1400
+        }
+      ],
+      "show": 0,
+      "alchemyId": 121501
+    },
+    "45": {
+      "id": 45,
+      "name": 30030345,
+      "taskGroup": [],
+      "attr": {
+        "1": 317720,
+        "2": 38140,
+        "3": 6370
+      },
+      "successRate": 0,
+      "addSuccessRate": 0,
+      "failDecreaseExp": 0,
+      "itemIds": [],
+      "levelMax": 1305,
+      "rewards": [
+        {
+          "id": 21,
+          "count": 150
+        },
+        {
+          "id": 1,
+          "count": 1500
+        }
+      ],
+      "show": 9,
+      "alchemyId": 121511
+    }
+  }
+}

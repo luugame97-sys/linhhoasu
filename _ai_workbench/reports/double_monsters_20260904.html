@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tăng gấp đôi quái map thường — 04/09/2026</title>
+<style>
+:root{color-scheme:light;--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#5c667a;--line:#dfe6ef;--ok:#137a4a;--blue:#2457c5}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}main{max-width:1080px;margin:32px auto;padding:0 20px 48px}.hero,.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(30,48,78,.06)}.hero{padding:28px 32px;margin-bottom:18px;background:linear-gradient(135deg,#fff,#edf4ff)}.hero h1{margin:0 0 8px;font-size:28px}.hero p{margin:0;color:var(--muted)}.badge{display:inline-block;margin-top:14px;padding:5px 12px;border-radius:999px;background:#e4f7ed;color:var(--ok);font-weight:700}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.metric{padding:16px;text-align:center}.metric strong{display:block;font-size:23px;color:var(--blue)}.metric span{color:var(--muted);font-size:13px}.card{padding:22px 26px;margin:14px 0}h2{font-size:20px;margin:0 0 12px}h3{font-size:16px;margin:16px 0 8px}ul,ol{margin:8px 0;padding-left:22px}code{background:#eef2f7;padding:2px 5px;border-radius:5px;overflow-wrap:anywhere}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}th{background:#edf3fb}.ok{color:var(--ok);font-weight:700}.note{border-left:4px solid #f0a332;padding:10px 14px;background:#fff8e7}@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:22px}.card{padding:18px}}
+</style>
+</head>
+<body><main>
+<section class="hero"><h1>Tăng gấp đôi quái map thường</h1><p>Triển khai production cho S1 và S2 — 04/09/2026</p><span class="badge">PASS — đang hoạt động</span></section>
+<section class="grid">
+<div class="card metric"><strong>58</strong><span>map thường</span></div>
+<div class="card metric"><strong>2.466</strong><span>slot quái</span></div>
+<div class="card metric"><strong>580/580</strong><span>bot mỗi server</span></div>
+<div class="card metric"><strong>0</strong><span>invalid target</span></div>
+</section>
+<section class="card"><h2>1. Tóm tắt công việc</h2><ul>
+<li>Tăng mật độ quái authoritative từ <code>1.233</code> lên <code>2.466</code>, đúng hệ số <code>2×</code>.</li>
+<li>Server nhân đôi slot trong <code>MapMonsterService</code>; client chỉ dựng thêm quái tại <code>CommonMapRaid.initMapCreeps</code>.</li>
+<li>Không sửa parser map dùng chung nên dungeon/event không bị nhân đôi.</li>
+<li>Index cũ được giữ nguyên; clone nối ở nửa sau, lệch 64 px và clamp trong biên map. Marker <code>_lhsDensity2</code> chống nhân tiếp thành 4×.</li>
+</ul></section>
+<section class="card"><h2>2. File/thư mục đã thay đổi</h2><h3>Source chính</h3><ul>
+<li><code>linhhoasu/lhs/newServer/src/services/MapMonsterService.js</code></li>
+<li><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></li>
+<li><code>linhhoasu/webgame/game/index.html</code></li>
+<li><code>EquipService.js</code> và <code>item.js</code> chỉ được đồng bộ source local với đúng hash auto-equip production.</li>
+</ul><h3>Tool, evidence và backup</h3><ul>
+<li>Deploy: <code>_ai_workbench/tools/deploy_double_monsters_20260904.py</code></li>
+<li>Audit read-only: <code>_ai_workbench/tools/audit_double_monsters_postdeploy_20260904.py</code></li>
+<li>Evidence: <code>double_monsters_deploy_20260904_055038.json</code> và <code>double_monsters_postdeploy_20260904.json</code></li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/double_monsters_20260904_055038/</code></li>
+<li>Backup local: <code>_ai_workbench/backups/double_monsters_local_pre_20260904_125928/</code></li>
+</ul></section>
+<section class="card"><h2>3. Lỗi đã gặp &amp; giải pháp</h2><div class="table-wrap"><table><thead><tr><th>Lỗi</th><th>Nguyên nhân</th><th>Cách xử lý</th><th>Cách tránh lặp lại</th></tr></thead><tbody>
+<tr><td>Deploy đầu hậu kiểm clone log thất bại</td><td>Output có dòng <code>[Config]</code> trước JSON</td><td>Fail-closed, rollback đủ ba file; parse lại theo marker <code>CLONE_HITS=</code></td><td>Probe sinh log phải dùng marker riêng</td></tr>
+<tr><td>Test auto-equip local ban đầu FAIL</td><td>Hai file server local còn bản cũ</td><td>Đối chiếu hash production, backup, đồng bộ snapshot rồi test lại PASS</td><td>Đối chiếu source local sau mỗi deploy</td></tr>
+<tr><td><code>_ai_workbench/logs</code> là file cũ</td><td>PM2 log cũ đặt sai loại path</td><td>Backup, tạo thư mục đúng và giữ lại log dưới tên <code>legacy_pm2_20260827.log</code></td><td>Giữ cấu trúc workbench chuẩn</td></tr>
+<tr><td><code>New-Item -LiteralPath</code> lỗi</td><td>Cmdlet không hỗ trợ tham số này</td><td>Dùng path đã resolve với <code>-Path</code>, xác minh hash bản backup</td><td>Chỉ dùng tham số được cmdlet hỗ trợ</td></tr>
+</tbody></table></div></section>
+<section class="card"><h2>4. Kỹ năng / kinh nghiệm mới</h2><ul>
+<li>Server và client phải dùng cùng danh sách/index; chỉ sửa client sẽ tạo target không hợp lệ.</li>
+<li>Giữ slot cũ ở đầu mảng và nối clone phía sau giúp tương thích handle cũ.</li>
+<li>Bot online chưa đủ làm bằng chứng; cần log claim thành công index nằm trong nửa clone.</li>
+</ul></section>
+<section class="card"><h2>5. Trạng thái hiện tại</h2><ul>
+<li class="ok">Production PASS; S1/S2 đều 580/580 bot, 2.466 slot, multiplier 2, invalid 0.</li>
+<li>S1 hậu kiểm: 3.209 claims / 3.199 completed; S2: 314 / 313.</li>
+<li>Ghi nhận 20 mẫu bot đánh quái clone; ví dụ map 10032 index 27, trong khi map có 22 slot gốc.</li>
+<li><code>/ready</code> S1/S2 đều 200; sáu process liên quan online.</li>
+<li><code>lhs-dist</code> và <code>lhs-admin</code> không restart.</li>
+<li>Served bundle cổng 81 khớp hash/marker; error scan gần nhất rỗng.</li>
+<li>PASS syntax, 16 contract tăng quái, map/bot combat, 10 client auto-equip, 10 handler auto-equip và core gameplay 714 bảng.</li>
+</ul><p class="note">Chưa QA trực quan bằng nhân vật người chơi thật; live bot đã chứng minh target clone và reward flow hoạt động.</p></section>
+<section class="card"><h2>6. Bước tiếp theo</h2><ol>
+<li>Người chơi đang mở game nên Ctrl+F5 hoặc mở lại game để nhận bundle mới.</li>
+<li>Theo dõi metric <code>runtime.mapMonsters.invalid</code>; kỳ vọng tiếp tục bằng 0.</li>
+<li>Không cần thao tác thêm để duy trì 2×.</li>
+</ol></section>
+</main></body></html>

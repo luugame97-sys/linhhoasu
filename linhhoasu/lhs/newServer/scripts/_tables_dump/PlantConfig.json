@@ -1,0 +1,236 @@
+{
+  "_table": "PlantConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "id,growTime,count,rewards,rewardExp,stealTime,resources,mouseMax",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "growTime": 9000,
+        "count": 20,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1
+          }
+        ],
+        "rewardExp": {
+          "id": 35,
+          "count": 5
+        },
+        "stealTime": 600,
+        "resources": [
+          "icon_100",
+          "ltzz_bm_jxianyu2",
+          "ltzz_bm_jxianyu3"
+        ],
+        "mouseMax": 3
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "growTime": 9000,
+        "count": 2000,
+        "rewards": [
+          {
+            "id": 2,
+            "count": 1
+          }
+        ],
+        "rewardExp": {
+          "id": 35,
+          "count": 5
+        },
+        "stealTime": 600,
+        "resources": [
+          "icon_100",
+          "ltzz_bm_jtongqian2",
+          "ltzz_bm_jtongqian3"
+        ],
+        "mouseMax": 3
+      }
+    },
+    {
+      "4": {
+        "id": 4,
+        "growTime": 9000,
+        "count": 30,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 1
+          }
+        ],
+        "rewardExp": {
+          "id": 35,
+          "count": 5
+        },
+        "stealTime": 600,
+        "resources": [
+          "icon_100",
+          "ltzz_bm_jbaozi2",
+          "ltzz_bm_jbaozi3"
+        ],
+        "mouseMax": 3
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "growTime": 9000,
+      "count": 20,
+      "rewards": [
+        {
+          "id": 1,
+          "count": 1
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 5
+      },
+      "stealTime": 600,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jxianyu2",
+        "ltzz_bm_jxianyu3"
+      ],
+      "mouseMax": 3
+    },
+    "2": {
+      "id": 2,
+      "growTime": 9000,
+      "count": 2000,
+      "rewards": [
+        {
+          "id": 2,
+          "count": 1
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 5
+      },
+      "stealTime": 600,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jtongqian2",
+        "ltzz_bm_jtongqian3"
+      ],
+      "mouseMax": 3
+    },
+    "4": {
+      "id": 4,
+      "growTime": 9000,
+      "count": 30,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 1
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 5
+      },
+      "stealTime": 600,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jbaozi2",
+        "ltzz_bm_jbaozi3"
+      ],
+      "mouseMax": 3
+    },
+    "38": {
+      "id": 38,
+      "growTime": 7200,
+      "count": 40,
+      "rewards": [
+        {
+          "id": 34,
+          "count": 1
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 5
+      },
+      "stealTime": 300,
+      "resources": [
+        "icon_29",
+        "ltzz_bm_dishen2",
+        "ltzz_bm_dishen3"
+      ],
+      "mouseMax": 2
+    },
+    "39": {
+      "id": 39,
+      "growTime": 14400,
+      "count": 50,
+      "rewards": [
+        {
+          "id": 34,
+          "count": 3
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 8
+      },
+      "stealTime": 600,
+      "resources": [
+        "icon_30",
+        "ltzz_bm_lingzhi2",
+        "ltzz_bm_lingzhi3"
+      ],
+      "mouseMax": 3
+    },
+    "40": {
+      "id": 40,
+      "growTime": 28800,
+      "count": 50,
+      "rewards": [
+        {
+          "id": 34,
+          "count": 10
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 10
+      },
+      "stealTime": 900,
+      "resources": [
+        "icon_31",
+        "ltzz_bm_longlingguo2",
+        "ltzz_bm_longlingguo3"
+      ],
+      "mouseMax": 4
+    },
+    "101": {
+      "id": 101,
+      "growTime": 9000,
+      "count": 3,
+      "rewards": [
+        {
+          "id": 101,
+          "count": 1
+        }
+      ],
+      "rewardExp": {
+        "id": 35,
+        "count": 5
+      },
+      "stealTime": 600,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jyumi2",
+        "ltzz_bm_jyumi3"
+      ],
+      "mouseMax": 3
+    }
+  }
+}

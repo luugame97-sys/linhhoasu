@@ -1,0 +1,104 @@
+{
+  "_table": "OldTrekShipDressConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,name,desc,res,flagRes,priority",
+  "_sample": [
+    {
+      "300001": {
+        "id": 300001,
+        "name": 300001,
+        "desc": 10300001,
+        "res": "sp_ui_oldTrekShip_300001",
+        "flagRes": "sp_ui_oldTrekShipFlag_300001",
+        "priority": 1
+      }
+    },
+    {
+      "300002": {
+        "id": 300002,
+        "name": 300002,
+        "desc": 10300002,
+        "unlock": 13000201,
+        "source": 30109366,
+        "soundEff": "effect_oldTrek_ship_300002",
+        "res": "sp_ui_oldTrekShip_300002",
+        "flagRes": "sp_ui_oldTrekShipFlag_300001",
+        "attrs": {
+          "32": 500,
+          "34": 500
+        },
+        "attrsExternal": {
+          "227": 500
+        },
+        "priority": 2
+      }
+    },
+    {
+      "300003": {
+        "id": 300003,
+        "name": 300003,
+        "desc": 10300003,
+        "unlock": 13000202,
+        "source": 30109366,
+        "soundEff": "effect_oldTrek_ship_300003",
+        "res": "sp_ui_oldTrekShip_300003",
+        "flagRes": "sp_ui_oldTrekShipFlag_300001",
+        "attrs": {
+          "31": 500,
+          "33": 500
+        },
+        "attrsExternal": {
+          "227": 500
+        },
+        "priority": 3
+      }
+    }
+  ],
+  "data": {
+    "300001": {
+      "id": 300001,
+      "name": 300001,
+      "desc": 10300001,
+      "res": "sp_ui_oldTrekShip_300001",
+      "flagRes": "sp_ui_oldTrekShipFlag_300001",
+      "priority": 1
+    },
+    "300002": {
+      "id": 300002,
+      "name": 300002,
+      "desc": 10300002,
+      "unlock": 13000201,
+      "source": 30109366,
+      "soundEff": "effect_oldTrek_ship_300002",
+      "res": "sp_ui_oldTrekShip_300002",
+      "flagRes": "sp_ui_oldTrekShipFlag_300001",
+      "attrs": {
+        "32": 500,
+        "34": 500
+      },
+      "attrsExternal": {
+        "227": 500
+      },
+      "priority": 2
+    },
+    "300003": {
+      "id": 300003,
+      "name": 300003,
+      "desc": 10300003,
+      "unlock": 13000202,
+      "source": 30109366,
+      "soundEff": "effect_oldTrek_ship_300003",
+      "res": "sp_ui_oldTrekShip_300003",
+      "flagRes": "sp_ui_oldTrekShipFlag_300001",
+      "attrs": {
+        "31": 500,
+        "33": 500
+      },
+      "attrsExternal": {
+        "227": 500
+      },
+      "priority": 3
+    }
+  }
+}

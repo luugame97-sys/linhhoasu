@@ -1,0 +1,1410 @@
+{
+  "_table": "TeamFightEquipConfig",
+  "_rows": 25,
+  "_type": "object",
+  "_firstKeys": "1,2,3",
+  "_sample": [
+    {
+      "150001": {
+        "1": {
+          "id": 150001,
+          "level": 1,
+          "race": [],
+          "job": [
+            1
+          ],
+          "cost": 2,
+          "sell": 2,
+          "quality": 4,
+          "skill": [
+            10011
+          ],
+          "name": 150001,
+          "iconRes": "icon_150001",
+          "weight": 1000
+        },
+        "2": {
+          "id": 150001,
+          "level": 2,
+          "race": [],
+          "job": [
+            1
+          ],
+          "cost": 2,
+          "sell": 4,
+          "quality": 4,
+          "skill": [
+            10012
+          ],
+          "name": 150001,
+          "iconRes": "icon_150001",
+          "weight": 1000
+        },
+        "3": {
+          "id": 150001,
+          "level": 3,
+          "race": [],
+          "job": [
+            1
+          ],
+          "cost": 2,
+          "sell": 8,
+          "quality": 4,
+          "skill": [
+            10013
+          ],
+          "name": 150001,
+          "iconRes": "icon_150001",
+          "weight": 1000
+        }
+      }
+    },
+    {
+      "150002": {
+        "1": {
+          "id": 150002,
+          "level": 1,
+          "race": [],
+          "job": [
+            2
+          ],
+          "cost": 2,
+          "sell": 2,
+          "quality": 4,
+          "skill": [
+            10021
+          ],
+          "name": 150002,
+          "iconRes": "icon_150002",
+          "weight": 1000
+        },
+        "2": {
+          "id": 150002,
+          "level": 2,
+          "race": [],
+          "job": [
+            2
+          ],
+          "cost": 2,
+          "sell": 4,
+          "quality": 4,
+          "skill": [
+            10022
+          ],
+          "name": 150002,
+          "iconRes": "icon_150002",
+          "weight": 1000
+        },
+        "3": {
+          "id": 150002,
+          "level": 3,
+          "race": [],
+          "job": [
+            2
+          ],
+          "cost": 2,
+          "sell": 8,
+          "quality": 4,
+          "skill": [
+            10023
+          ],
+          "name": 150002,
+          "iconRes": "icon_150002",
+          "weight": 1000
+        }
+      }
+    },
+    {
+      "150003": {
+        "1": {
+          "id": 150003,
+          "level": 1,
+          "race": [],
+          "job": [
+            3
+          ],
+          "cost": 2,
+          "sell": 2,
+          "quality": 4,
+          "skill": [
+            10031
+          ],
+          "name": 150003,
+          "iconRes": "icon_150003",
+          "weight": 1000
+        },
+        "2": {
+          "id": 150003,
+          "level": 2,
+          "race": [],
+          "job": [
+            3
+          ],
+          "cost": 2,
+          "sell": 4,
+          "quality": 4,
+          "skill": [
+            10032
+          ],
+          "name": 150003,
+          "iconRes": "icon_150003",
+          "weight": 1000
+        },
+        "3": {
+          "id": 150003,
+          "level": 3,
+          "race": [],
+          "job": [
+            3
+          ],
+          "cost": 2,
+          "sell": 8,
+          "quality": 4,
+          "skill": [
+            10033
+          ],
+          "name": 150003,
+          "iconRes": "icon_150003",
+          "weight": 1000
+        }
+      }
+    }
+  ],
+  "data": {
+    "150001": {
+      "1": {
+        "id": 150001,
+        "level": 1,
+        "race": [],
+        "job": [
+          1
+        ],
+        "cost": 2,
+        "sell": 2,
+        "quality": 4,
+        "skill": [
+          10011
+        ],
+        "name": 150001,
+        "iconRes": "icon_150001",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150001,
+        "level": 2,
+        "race": [],
+        "job": [
+          1
+        ],
+        "cost": 2,
+        "sell": 4,
+        "quality": 4,
+        "skill": [
+          10012
+        ],
+        "name": 150001,
+        "iconRes": "icon_150001",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150001,
+        "level": 3,
+        "race": [],
+        "job": [
+          1
+        ],
+        "cost": 2,
+        "sell": 8,
+        "quality": 4,
+        "skill": [
+          10013
+        ],
+        "name": 150001,
+        "iconRes": "icon_150001",
+        "weight": 1000
+      }
+    },
+    "150002": {
+      "1": {
+        "id": 150002,
+        "level": 1,
+        "race": [],
+        "job": [
+          2
+        ],
+        "cost": 2,
+        "sell": 2,
+        "quality": 4,
+        "skill": [
+          10021
+        ],
+        "name": 150002,
+        "iconRes": "icon_150002",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150002,
+        "level": 2,
+        "race": [],
+        "job": [
+          2
+        ],
+        "cost": 2,
+        "sell": 4,
+        "quality": 4,
+        "skill": [
+          10022
+        ],
+        "name": 150002,
+        "iconRes": "icon_150002",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150002,
+        "level": 3,
+        "race": [],
+        "job": [
+          2
+        ],
+        "cost": 2,
+        "sell": 8,
+        "quality": 4,
+        "skill": [
+          10023
+        ],
+        "name": 150002,
+        "iconRes": "icon_150002",
+        "weight": 1000
+      }
+    },
+    "150003": {
+      "1": {
+        "id": 150003,
+        "level": 1,
+        "race": [],
+        "job": [
+          3
+        ],
+        "cost": 2,
+        "sell": 2,
+        "quality": 4,
+        "skill": [
+          10031
+        ],
+        "name": 150003,
+        "iconRes": "icon_150003",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150003,
+        "level": 2,
+        "race": [],
+        "job": [
+          3
+        ],
+        "cost": 2,
+        "sell": 4,
+        "quality": 4,
+        "skill": [
+          10032
+        ],
+        "name": 150003,
+        "iconRes": "icon_150003",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150003,
+        "level": 3,
+        "race": [],
+        "job": [
+          3
+        ],
+        "cost": 2,
+        "sell": 8,
+        "quality": 4,
+        "skill": [
+          10033
+        ],
+        "name": 150003,
+        "iconRes": "icon_150003",
+        "weight": 1000
+      }
+    },
+    "150004": {
+      "1": {
+        "id": 150004,
+        "level": 1,
+        "race": [],
+        "job": [
+          4
+        ],
+        "cost": 2,
+        "sell": 2,
+        "quality": 4,
+        "skill": [
+          10041
+        ],
+        "name": 150004,
+        "iconRes": "icon_150004",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150004,
+        "level": 2,
+        "race": [],
+        "job": [
+          4
+        ],
+        "cost": 2,
+        "sell": 4,
+        "quality": 4,
+        "skill": [
+          10042
+        ],
+        "name": 150004,
+        "iconRes": "icon_150004",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150004,
+        "level": 3,
+        "race": [],
+        "job": [
+          4
+        ],
+        "cost": 2,
+        "sell": 8,
+        "quality": 4,
+        "skill": [
+          10043
+        ],
+        "name": 150004,
+        "iconRes": "icon_150004",
+        "weight": 1000
+      }
+    },
+    "150005": {
+      "1": {
+        "id": 150005,
+        "level": 1,
+        "race": [],
+        "job": [
+          5
+        ],
+        "cost": 2,
+        "sell": 2,
+        "quality": 4,
+        "skill": [
+          10051
+        ],
+        "name": 150005,
+        "iconRes": "icon_150005",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150005,
+        "level": 2,
+        "race": [],
+        "job": [
+          5
+        ],
+        "cost": 2,
+        "sell": 4,
+        "quality": 4,
+        "skill": [
+          10052
+        ],
+        "name": 150005,
+        "iconRes": "icon_150005",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150005,
+        "level": 3,
+        "race": [],
+        "job": [
+          5
+        ],
+        "cost": 2,
+        "sell": 8,
+        "quality": 4,
+        "skill": [
+          10053
+        ],
+        "name": 150005,
+        "iconRes": "icon_150005",
+        "weight": 1000
+      }
+    },
+    "150011": {
+      "1": {
+        "id": 150011,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10111
+        ],
+        "name": 150011,
+        "iconRes": "icon_150011",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150011,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10112
+        ],
+        "name": 150011,
+        "iconRes": "icon_150011",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150011,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10113
+        ],
+        "name": 150011,
+        "iconRes": "icon_150011",
+        "weight": 1000
+      }
+    },
+    "150012": {
+      "1": {
+        "id": 150012,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10121
+        ],
+        "name": 150012,
+        "iconRes": "icon_150012",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150012,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10122
+        ],
+        "name": 150012,
+        "iconRes": "icon_150012",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150012,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10123
+        ],
+        "name": 150012,
+        "iconRes": "icon_150012",
+        "weight": 1000
+      }
+    },
+    "150013": {
+      "1": {
+        "id": 150013,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10131
+        ],
+        "name": 150013,
+        "iconRes": "icon_150013",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150013,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10132
+        ],
+        "name": 150013,
+        "iconRes": "icon_150013",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150013,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10133
+        ],
+        "name": 150013,
+        "iconRes": "icon_150013",
+        "weight": 1000
+      }
+    },
+    "150014": {
+      "1": {
+        "id": 150014,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10141
+        ],
+        "name": 150014,
+        "iconRes": "icon_150014",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150014,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10142
+        ],
+        "name": 150014,
+        "iconRes": "icon_150014",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150014,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10143
+        ],
+        "name": 150014,
+        "iconRes": "icon_150014",
+        "weight": 1000
+      }
+    },
+    "150015": {
+      "1": {
+        "id": 150015,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10151
+        ],
+        "name": 150015,
+        "iconRes": "icon_150015",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150015,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10152
+        ],
+        "name": 150015,
+        "iconRes": "icon_150015",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150015,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10153
+        ],
+        "name": 150015,
+        "iconRes": "icon_150015",
+        "weight": 1000
+      }
+    },
+    "150021": {
+      "1": {
+        "id": 150021,
+        "level": 1,
+        "race": [],
+        "job": [
+          1
+        ],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10211
+        ],
+        "name": 150021,
+        "iconRes": "icon_150021",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150021,
+        "level": 2,
+        "race": [],
+        "job": [
+          1
+        ],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10212
+        ],
+        "name": 150021,
+        "iconRes": "icon_150021",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150021,
+        "level": 3,
+        "race": [],
+        "job": [
+          1
+        ],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10213
+        ],
+        "name": 150021,
+        "iconRes": "icon_150021",
+        "weight": 1000
+      }
+    },
+    "150022": {
+      "1": {
+        "id": 150022,
+        "level": 1,
+        "race": [],
+        "job": [
+          2
+        ],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10221
+        ],
+        "name": 150022,
+        "iconRes": "icon_150022",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150022,
+        "level": 2,
+        "race": [],
+        "job": [
+          2
+        ],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10222
+        ],
+        "name": 150022,
+        "iconRes": "icon_150022",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150022,
+        "level": 3,
+        "race": [],
+        "job": [
+          2
+        ],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10223
+        ],
+        "name": 150022,
+        "iconRes": "icon_150022",
+        "weight": 1000
+      }
+    },
+    "150023": {
+      "1": {
+        "id": 150023,
+        "level": 1,
+        "race": [],
+        "job": [
+          3
+        ],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10231
+        ],
+        "name": 150023,
+        "iconRes": "icon_150023",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150023,
+        "level": 2,
+        "race": [],
+        "job": [
+          3
+        ],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10232
+        ],
+        "name": 150023,
+        "iconRes": "icon_150023",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150023,
+        "level": 3,
+        "race": [],
+        "job": [
+          3
+        ],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10233
+        ],
+        "name": 150023,
+        "iconRes": "icon_150023",
+        "weight": 1000
+      }
+    },
+    "150024": {
+      "1": {
+        "id": 150024,
+        "level": 1,
+        "race": [],
+        "job": [
+          4
+        ],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10241
+        ],
+        "name": 150024,
+        "iconRes": "icon_150024",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150024,
+        "level": 2,
+        "race": [],
+        "job": [
+          4
+        ],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10242
+        ],
+        "name": 150024,
+        "iconRes": "icon_150024",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150024,
+        "level": 3,
+        "race": [],
+        "job": [
+          4
+        ],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10243
+        ],
+        "name": 150024,
+        "iconRes": "icon_150024",
+        "weight": 1000
+      }
+    },
+    "150025": {
+      "1": {
+        "id": 150025,
+        "level": 1,
+        "race": [],
+        "job": [
+          5
+        ],
+        "cost": 3,
+        "sell": 3,
+        "quality": 6,
+        "skill": [
+          10251
+        ],
+        "name": 150025,
+        "iconRes": "icon_150025",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150025,
+        "level": 2,
+        "race": [],
+        "job": [
+          5
+        ],
+        "cost": 3,
+        "sell": 6,
+        "quality": 6,
+        "skill": [
+          10252
+        ],
+        "name": 150025,
+        "iconRes": "icon_150025",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150025,
+        "level": 3,
+        "race": [],
+        "job": [
+          5
+        ],
+        "cost": 3,
+        "sell": 12,
+        "quality": 6,
+        "skill": [
+          10253
+        ],
+        "name": 150025,
+        "iconRes": "icon_150025",
+        "weight": 1000
+      }
+    },
+    "150031": {
+      "1": {
+        "id": 150031,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10311
+        ],
+        "name": 150031,
+        "iconRes": "icon_150031",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150031,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10312
+        ],
+        "name": 150031,
+        "iconRes": "icon_150031",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150031,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10313
+        ],
+        "name": 150031,
+        "iconRes": "icon_150031",
+        "weight": 1000
+      }
+    },
+    "150032": {
+      "1": {
+        "id": 150032,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10321
+        ],
+        "name": 150032,
+        "iconRes": "icon_150032",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150032,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10322
+        ],
+        "name": 150032,
+        "iconRes": "icon_150032",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150032,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10323
+        ],
+        "name": 150032,
+        "iconRes": "icon_150032",
+        "weight": 1000
+      }
+    },
+    "150033": {
+      "1": {
+        "id": 150033,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10331
+        ],
+        "name": 150033,
+        "iconRes": "icon_150033",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150033,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10332
+        ],
+        "name": 150033,
+        "iconRes": "icon_150033",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150033,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10333
+        ],
+        "name": 150033,
+        "iconRes": "icon_150033",
+        "weight": 1000
+      }
+    },
+    "150034": {
+      "1": {
+        "id": 150034,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10341
+        ],
+        "name": 150034,
+        "iconRes": "icon_150034",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150034,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10342
+        ],
+        "name": 150034,
+        "iconRes": "icon_150034",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150034,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10343
+        ],
+        "name": 150034,
+        "iconRes": "icon_150034",
+        "weight": 1000
+      }
+    },
+    "150035": {
+      "1": {
+        "id": 150035,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10351
+        ],
+        "name": 150035,
+        "iconRes": "icon_150035",
+        "weight": 1000
+      },
+      "2": {
+        "id": 150035,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10352
+        ],
+        "name": 150035,
+        "iconRes": "icon_150035",
+        "weight": 1000
+      },
+      "3": {
+        "id": 150035,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10353
+        ],
+        "name": 150035,
+        "iconRes": "icon_150035",
+        "weight": 1000
+      }
+    },
+    "150041": {
+      "1": {
+        "id": 150041,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10411
+        ],
+        "name": 150041,
+        "iconRes": "icon_150041",
+        "weight": 0
+      },
+      "2": {
+        "id": 150041,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10412
+        ],
+        "name": 150041,
+        "iconRes": "icon_150041",
+        "weight": 0
+      },
+      "3": {
+        "id": 150041,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10413
+        ],
+        "name": 150041,
+        "iconRes": "icon_150041",
+        "weight": 0
+      }
+    },
+    "150042": {
+      "1": {
+        "id": 150042,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10421
+        ],
+        "name": 150042,
+        "iconRes": "icon_150042",
+        "weight": 0
+      },
+      "2": {
+        "id": 150042,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10422
+        ],
+        "name": 150042,
+        "iconRes": "icon_150042",
+        "weight": 0
+      },
+      "3": {
+        "id": 150042,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10423
+        ],
+        "name": 150042,
+        "iconRes": "icon_150042",
+        "weight": 0
+      }
+    },
+    "150043": {
+      "1": {
+        "id": 150043,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10431
+        ],
+        "name": 150043,
+        "iconRes": "icon_150043",
+        "weight": 0
+      },
+      "2": {
+        "id": 150043,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10432
+        ],
+        "name": 150043,
+        "iconRes": "icon_150043",
+        "weight": 0
+      },
+      "3": {
+        "id": 150043,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10433
+        ],
+        "name": 150043,
+        "iconRes": "icon_150043",
+        "weight": 0
+      }
+    },
+    "150044": {
+      "1": {
+        "id": 150044,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10441
+        ],
+        "name": 150044,
+        "iconRes": "icon_150044",
+        "weight": 0
+      },
+      "2": {
+        "id": 150044,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10442
+        ],
+        "name": 150044,
+        "iconRes": "icon_150044",
+        "weight": 0
+      },
+      "3": {
+        "id": 150044,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10443
+        ],
+        "name": 150044,
+        "iconRes": "icon_150044",
+        "weight": 0
+      }
+    },
+    "150045": {
+      "1": {
+        "id": 150045,
+        "level": 1,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 4,
+        "quality": 7,
+        "skill": [
+          10451
+        ],
+        "name": 150045,
+        "iconRes": "icon_150045",
+        "weight": 0
+      },
+      "2": {
+        "id": 150045,
+        "level": 2,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 8,
+        "quality": 7,
+        "skill": [
+          10452
+        ],
+        "name": 150045,
+        "iconRes": "icon_150045",
+        "weight": 0
+      },
+      "3": {
+        "id": 150045,
+        "level": 3,
+        "race": [],
+        "job": [],
+        "cost": 4,
+        "sell": 16,
+        "quality": 7,
+        "skill": [
+          10453
+        ],
+        "name": 150045,
+        "iconRes": "icon_150045",
+        "weight": 0
+      }
+    }
+  }
+}

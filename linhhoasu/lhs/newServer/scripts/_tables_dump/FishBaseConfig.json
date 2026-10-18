@@ -1,0 +1,190 @@
+{
+  "_table": "FishBaseConfig",
+  "_rows": 14,
+  "_type": "object",
+  "_firstKeys": "(obj)[fishTideCd|fishTideTime|initFishRodId|initFishBaitId|initFishRaftId]",
+  "_sample": [
+    {
+      "fishTideCd": 1800
+    },
+    {
+      "fishTideTime": 300
+    },
+    {
+      "initFishRodId": 5901
+    }
+  ],
+  "data": {
+    "fishTideCd": 1800,
+    "fishTideTime": 300,
+    "initFishRodId": 5901,
+    "initFishBaitId": 5501,
+    "initFishRaftId": 6201,
+    "actUp": 500,
+    "privilegeAttr": 500,
+    "autoFish": 10,
+    "fishAttrName": {
+      "1": {
+        "name": 30010030,
+        "type": 1
+      },
+      "2": {
+        "name": 30010031,
+        "type": 1
+      },
+      "3": {
+        "name": 30010032,
+        "type": 2
+      },
+      "9": {
+        "name": 30013003,
+        "type": 2
+      },
+      "101": {
+        "name": 30013001,
+        "type": 2
+      },
+      "104": {
+        "name": 30013004,
+        "type": 2
+      },
+      "105": {
+        "name": 30013005,
+        "type": 2
+      },
+      "106": {
+        "name": 30013006,
+        "type": 2
+      },
+      "107": {
+        "name": 30013007,
+        "type": 2
+      },
+      "108": {
+        "name": 30013008,
+        "type": 2
+      },
+      "109": {
+        "name": 30013009,
+        "type": 2
+      },
+      "201": {
+        "name": 30013010,
+        "type": 2
+      },
+      "202": {
+        "name": 30013011,
+        "type": 2
+      },
+      "203": {
+        "name": 30013012,
+        "type": 2
+      },
+      "204": {
+        "name": 30013013,
+        "type": 2
+      },
+      "205": {
+        "name": 30013014,
+        "type": 2
+      },
+      "206": {
+        "name": 30013015,
+        "type": 2
+      },
+      "207": {
+        "name": 30013016,
+        "type": 2
+      },
+      "208": {
+        "name": 30013017,
+        "type": 2
+      },
+      "209": {
+        "name": 30013018,
+        "type": 2
+      },
+      "210": {
+        "name": 30013019,
+        "type": 2
+      },
+      "211": {
+        "name": 30013020,
+        "type": 2
+      },
+      "212": {
+        "name": 30013021,
+        "type": 2
+      },
+      "213": {
+        "name": 30013002,
+        "type": 2
+      },
+      "301": {
+        "name": 30013022,
+        "type": 2
+      },
+      "302": {
+        "name": 30013023,
+        "type": 2
+      },
+      "303": {
+        "name": 30013024,
+        "type": 2
+      },
+      "304": {
+        "name": 30013025,
+        "type": 2
+      },
+      "305": {
+        "name": 30013026,
+        "type": 2
+      },
+      "306": {
+        "name": 30013027,
+        "type": 2
+      },
+      "307": {
+        "name": 30013028,
+        "type": 2
+      },
+      "308": {
+        "name": 30013029,
+        "type": 2
+      },
+      "309": {
+        "name": 30013030,
+        "type": 2
+      },
+      "310": {
+        "name": 30013031,
+        "type": 2
+      }
+    },
+    "priceAttr": [
+      5904,
+      1000
+    ],
+    "washCost": {
+      "id": 135,
+      "count": 10
+    },
+    "fishBaitTypeName": {
+      "1": 30000213,
+      "2": 30000214,
+      "3": 30000215
+    },
+    "qualityCompare": {
+      "2": 1,
+      "3": 2,
+      "4": 3,
+      "6": 4,
+      "7": 5,
+      "9": 6
+    },
+    "skillWashCost": {
+      "id": 338,
+      "count": 1
+    }
+  }
+}

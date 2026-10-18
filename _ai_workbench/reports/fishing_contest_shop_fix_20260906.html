@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hotfix gói Đại hội câu cá - 06/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="kh-a-nh-n-l-p-g-i-mi-n-ph-v-t-ng-l-t-g-i-i-h-i-c-u-c-06-09-2026">Khóa nhận lặp gói miễn phí và tăng lượt gói Đại hội câu cá — 06/09/2026</h1>
+<p><strong>Đã triển khai trên S2 rồi S1, hoàn tất 21:23:59 UTC+7. Hậu kiểm hash/HTTP lúc 21:24:33 và kiểm mẫu log/QA lúc 21:33:03 đạt.</strong> Reload game một lần để nhận client <code>20260906_fishing_shop_v1</code>.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="ph-m-vi-user-y-u-c-u">Phạm vi user yêu cầu</h3>
+<p>Sửa gấp lỗi gói miễn phí trong Đại hội câu cá nhận được liên tục. Các gói còn lại trong cùng tab gói tiếp tế tăng giới hạn mua lên x10, không tăng giá hoặc quà mỗi lần mua. Không mở rộng x10 sang toàn bộ shop/game, gói cần thần thú hoặc các sự kiện khác.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Gói</th>
+<th>Shop/Pay ID</th>
+<th>Giới hạn cũ trên UI</th>
+<th>Giới hạn sau sửa</th>
+</tr></thead><tbody>
+<tr>
+<td>Miễn phí</td>
+<td>11001400</td>
+<td>1/ngày nhưng server không chặn</td>
+<td>1/ngày, giữ thưởng 10 Bánh Bao item4</td>
+</tr>
+<tr>
+<td>Tiếp tế câu cá I</td>
+<td>11001401</td>
+<td>5/kỳ</td>
+<td>50/kỳ</td>
+</tr>
+<tr>
+<td>Tiếp tế câu cá II</td>
+<td>11001402</td>
+<td>5/kỳ</td>
+<td>50/kỳ</td>
+</tr>
+<tr>
+<td>Tiếp tế câu cá III</td>
+<td>11001403</td>
+<td>10/kỳ</td>
+<td>100/kỳ</td>
+</tr>
+<tr>
+<td>Tiếp tế câu cá IV</td>
+<td>11001404</td>
+<td>10/kỳ</td>
+<td>100/kỳ</td>
+</tr>
+<tr>
+<td>Tiếp tế câu cá V</td>
+<td>11001405</td>
+<td>10/kỳ</td>
+<td>100/kỳ</td>
+</tr>
+</tbody></table></div>
+<p>Kỳ mua trả phí bám instance Đại hội đang chạy, thông thường 7 ngày; kỳ cuối của lịch 90 ngày có thể ngắn hơn. Miễn phí dùng ngày GMT+8 hiện hữu của game (đổi ngày lúc 23:00 giờ Việt Nam), không đổi lịch reset toàn hệ.</p>
+<h3 id="nguy-n-nh-n-x-c-minh">Nguyên nhân đã xác minh</h3>
+<p>Đây là <strong>lỗi server, không chỉ lỗi hiển thị</strong>. <code>ShopConfig[11001400]</code> có limit=0/limitType=0; giới hạn thực 1/ngày nằm ở <code>ActivityShopConfig[6006]</code>. Hàm <code>getActiveActivityShopPolicy</code> cũ chỉ đọc event type43, nên đường item1202 không áp policy Đại hội type6. Bên client đọc ActivityShopConfig nên vẫn ghi 1/ngày. Bộ đếm <code>activityInfo</code> cũng không được đồng bộ bền vững với sự kiện câu cá khi scheduler dựng lại rows. Các ca kiểm trước của bản mở event chưa phủ việc mua gói này; 35 ca shop mới được thêm trong phiên này.</p>
+<h3 id="c-ch-s-a">Cách đã sửa</h3>
+<ul>
+<li>Tạo <code>FishingEventShopService</code>: xác thực sự kiện đang active, cấp/disabled/xung đột type6, một gói miễn phí mỗi request và một lần mỗi ngày. Chặn cả 1202 trực tiếp, 1210 tương thích, request trộn miễn phí/trả phí, số lượng âm/lẻ/chuỗi hoặc bấm đồng thời.</li>
+<li>Ghi sổ nhận vào <code>rechargeInfo.fishingEventShopClaims</code>, cùng lần lưu với quà. Lưu trả null/lỗi/timeout sau commit không trả thành công và không để session cũ ghi đè. Dùng khóa mutation theo nhân vật, không mở khóa trước khi save kết thúc.</li>
+<li>Gói trả phí qua token1230 và cash callback cùng dùng resolver/policy/bộ đếm kỳ; mua bằng hai đường không tạo hai hạn mức. Kiểm trước khi trừ token/phát quà. Không cho gói trả phí đi đường nhận vật phẩm miễn phí.</li>
+<li>Đẩy counter qua packet1701 ngay khi mua/nhận, giữ khi heartbeat, relog và restart. Native cập nhật cả số lượt lẫn điều kiện <code>canBought</code>, không chỉ đổi nhãn hiển thị.</li>
+<li>Bảo toàn lịch sử: ai đã nhận miễn phí trong ngày mở bản sửa được tính đã nhận, không cấp thêm khi cài fix. Tổng lượt mua cũ trong kỳ đầu được tính vào hạn mức mới: đã mua 5 lần thì còn 45/50, không reset. Không thu hồi quà đã nhận, không bù, không sửa túi/điểm người chơi thật bằng script.</li>
+<li>Chỉ x10 năm ID trả phí nêu trên. Giữ toàn bộ PayConfig, reward rows, token price, lịch event và giới hạn của những gói ngoài phạm vi.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<p>Gốc local <code>linhhoasu/lhs/newServer/</code>, production <code>/linhhoasu/lhs/newServer/</code>:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Thay đổi</th>
+</tr></thead><tbody>
+<tr>
+<td><code>src/services/FishingEventShopService.js</code></td>
+<td>Service mới, policy/counter ngày/kỳ, migration lịch sử theo mốc mở, grant/save gói miễn phí</td>
+</tr>
+<tr>
+<td><code>src/services/FishingEventSchedule.js</code></td>
+<td>Row Đại hội lấy buyRecords từ ledger bền vững, không mất trạng thái khi sync</td>
+</tr>
+<tr>
+<td><code>src/handlers/item.js</code></td>
+<td>Route đúng nhóm gói vào service, chặn bypass qua đường item</td>
+</tr>
+<tr>
+<td><code>src/services/RechargeRewardResolver.js</code></td>
+<td>Áp policy x10 và commit bộ đếm dùng chung cho token/cash</td>
+</tr>
+<tr>
+<td><code>src/handlers/compat.js</code></td>
+<td>Token route có khóa, clone/save xác nhận, push trạng thái Đại hội</td>
+</tr>
+<tr>
+<td><code>src/handlers/recharge.js</code></td>
+<td>Push trạng thái Đại hội sau cash fulfillment; dùng sổ purchase resolver đã ghi cùng lần save</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></td>
+<td>Sửa một hàm native của tab gói type6: limit và canBought x10 chỉ 11001401–05 của 6006/6056</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/index.html</code></td>
+<td>Token cache <code>20260906_fishing_shop_v1</code></td>
+</tr>
+</tbody></table></div>
+<p>Không sửa config bin, thời trang, chỉ số cá, RNG, quà Huyền Vũ, input-freeze đang pause, WebGM hay bảng giá nạp.</p>
+<h3 id="tool-v-evidence">Tool và evidence</h3>
+<ul>
+<li><code>_ai_workbench/tools/snapshot_fishing_contest_shop_20260906.py</code>: snapshot/hash read-only, không dữ liệu cá nhân.</li>
+<li><code>test_fishing_contest_free_20260906.js</code>, <code>test_fishing_contest_paid_20260906.js</code>: 19 + 16 ca mới; dùng lại 30 ca <code>test_fishing_gameplay_events_20260906.js</code>.</li>
+<li><code>build_fishing_contest_shop_client_20260906.js</code>: đúng một hàm native, validate AST; kiểm cả số lượt và khả năng mua.</li>
+<li><code>qa_fishing_contest_shop_live_20260906.js</code>: nhân vật QA riêng, xác thực identity/state, claim/replay/50/100/relog; cleanup trong finally. Không gọi cash callback hoặc thanh toán thật trên production.</li>
+<li><code>release_fishing_contest_shop_20260906.py</code>: staging/deploy/verify, hash/process guard, rollback. <code>accept-verified-canary-rollback</code> chỉ chấp nhận đúng lỗi QA đầu đã biết và S2 tăng đúng 2 restart, không bỏ kiểm drift chung.</li>
+<li><code>sync_fishing_contest_shop_local_20260906.py</code>, <code>sync_fishing_contest_shop_client_20260906.js</code>: sync bằng hunks và transform chính xác, giữ thay đổi không liên quan.</li>
+<li><code>finalize_fishing_contest_shop_20260906.js</code>, <code>verify_fishing_contest_shop_residue_20260906.py</code>: kiểm local và residue/log read-only.</li>
+<li>Evidence/checkpoint/manifest ở <code>_ai_workbench/temp/fishing_contest_shop_20260906/</code>.</li>
+<li>Backup local/report: <code>_ai_workbench/backups/fishing_contest_shop_20260906/</code>, gồm <code>local/</code> và <code>canary1-*</code>.</li>
+<li>Backup VPS bản cuối: <code>/linhhoasu/_ai_workbench/backups/fishing_shop_20260906_142147</code>. Canary đầu đã hoàn nguyên: backup <code>/linhhoasu/_ai_workbench/backups/fishing_shop_20260906_141455</code>.</li>
+<li>Báo cáo MD/HTML này và session MD/HTML; mọi tool hỗ trợ trong workbench, không ghi file rác ở root hoặc global memory.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Miễn phí nhận vô hạn dù UI 1/ngày</td>
+<td>Policy chỉ hỗ trợ type43; ShopConfig gói không có limit</td>
+<td>Policy Đại hội riêng trên server + ledger ngày + khóa + save xác nhận</td>
+<td>Test bấm dồn, alternate RPC, relog và đổi ngày</td>
+</tr>
+<tr>
+<td>Counter mất khi refresh event</td>
+<td>Scheduler dựng buyRecords từ state khác</td>
+<td>Dùng ledger rechargeInfo ổn định để dựng row1701</td>
+<td>Heartbeat/relog không reset</td>
+</tr>
+<tr>
+<td>Hai đường mua có thể lệch hạn mức</td>
+<td>Token/cash chưa cùng đọc limit sự kiện</td>
+<td>Cùng resolver và ledger theo instance</td>
+<td>Token49 + cash1 phải đầy50; callback lặp không cấp lại</td>
+</tr>
+<tr>
+<td>Chỉ đổi nhãn x10 nhưng canBought vẫn giới hạn cũ</td>
+<td>Hai biểu thức riêng trong native list</td>
+<td>Đổi đồng thời limit và canBought có scope ID</td>
+<td>Thực thi hàm native: mua6 vẫn mua được gói có trần50</td>
+</tr>
+<tr>
+<td>Test canary báo 1010 khác10</td>
+<td>QA bắt đầu item4=0; account.ensureLoginBaozi tự đưa lên tối thiểu1000</td>
+<td>Rollback S2, sửa QA baseline5000 và assert trước test, sau claim5010</td>
+<td>Luôn kiểm baseline sau login, không nới kỳ vọng quà để che lỗi</td>
+</tr>
+<tr>
+<td>Đường dẫn glob PowerShell không mở rộng cho rg</td>
+<td>Wildcard được truyền nguyên trong argument path</td>
+<td>Dùng thư mục thật và <code>-g</code></td>
+<td>Không suy lỗi gameplay từ lỗi tìm file</td>
+</tr>
+</tbody></table></div>
+<p>Canary đầu chưa thay client hoặc restart S1. Đã xác minh source quay về baseline và ready trước staging lại. Không sửa logic gameplay để làm xanh test QA. Source/report UTF-8, không thấy mojibake mới; warning model <code>isNew</code> cũ không bị sửa ngoài phạm vi.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Giá/limit toàn cục của một item không nhất thiết là policy thật của gói sự kiện. Phải kiểm bảng ActivityShopConfig và những đường cấp quà thực tế.</li>
+<li>Counter nhận quà không thể chỉ nằm trong row trình bày vì scheduler có thể dựng lại row; ledger phải được lưu cùng vật phẩm/chi phí.</li>
+<li>Chỉnh giới hạn UI cần kiểm cả nhãn, trạng thái nút, sắp xếp và counter sau ACK; đổi nhãn đơn thuần không đủ.</li>
+<li>Kiểm thử nạp bằng callback trong bộ nhớ không tương đương thanh toán bên ngoài. Ca QA production chỉ dùng token của nhân vật do phiên tạo.</li>
+<li>Test nhân vật clone phải nắm normalization sau login. Mức Bánh Bao tối thiểu hiện hữu không phải quà miễn phí bị cấp lặp; không đụng normalization ngoài yêu cầu.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="ki-m-th-v-runtime">Kiểm thử và runtime</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Kiểm chứng</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Gói miễn phí</td>
+<td>19 ca PASS: 20 request đồng thời chỉ cấp1, relog/heartbeat, history, rollover GMT+8, invalid/mixed,1210,gate,save-null/throw/commit-timeout</td>
+</tr>
+<tr>
+<td>Gói trả phí/native list</td>
+<td>16 ca PASS: đủ năm cap x10, token/cash cùng counter, giá/quà, boundary, concurrency, history,save,canBought,giữ gói khác</td>
+</tr>
+<tr>
+<td>Regression gameplay/event</td>
+<td>30 ca PASS trên Linux staging</td>
+</tr>
+<tr>
+<td>Core contract</td>
+<td>PASS Linux và local, 714 bảng cấu hình; 714 không phải số test</td>
+</tr>
+<tr>
+<td>Live QA S2/S1 bản cuối</td>
+<td>PASS: miễn phí đúng1, spam8 bị từ chối,1210/bypass bị chặn, token cap50/cap100 đúng, relog/counter đúng</td>
+</tr>
+<tr>
+<td>Source local</td>
+<td>8/8 tương đương nội dung,7/8 khớp byte; index chỉ khác CRLF/LF. 7 file JS syntax PASS</td>
+</tr>
+<tr>
+<td>Hash/HTTP/ready</td>
+<td>164 artifact đúng expected; main/index HTTP đúng hash; ready8080/8083=200</td>
+</tr>
+<tr>
+<td>QA cleanup</td>
+<td>Player/mail/bottle prefix qafshop_ đều0 trên hai DB; Redis QA session0; harness process0</td>
+</tr>
+<tr>
+<td>Mẫu log sau release</td>
+<td>Tối đa256KiB/file; stdout mới có1813/1808 dòng trong mẫu S1/S2, không thấy dòng error/eventStats mới; không suy toàn bộ log sạch lỗi</td>
+</tr>
+</tbody></table></div>
+<p>Tổng 65 nhóm staging gồm 35 ca shop mới và 30 regression. Chưa thanh toán tiền thật qua upstream; cash callback đã kiểm bằng fixture. Native list được thực thi hàm trích đúng bundle, chưa chụp màn hình sản phẩm mới trên thiết bị thật.</p>
+<p>PM2 cuối: S1 PID22947/restart1381; S2 PID21079/restart51. So với đầu phiên, S1 tăng1 restart, S2 tăng3 (canary, rollback, phát hành cuối). Bốn tiến trình khác giữ nguyên: dist30824/admin30856/botS1 1600/botS2 1576. Không restart Mongo/Nginx hoặc tác động dịch vụ khác.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Artifact</th>
+<th>SHA-256</th>
+</tr></thead><tbody>
+<tr>
+<td>Main đang phục vụ</td>
+<td><code>6e72a81a91a368b8dd9daee4f4f41772304683c96cac9532c94f71642792ccd4</code></td>
+</tr>
+<tr>
+<td>Index đang phục vụ</td>
+<td><code>50b6e982257ea45fc6fce20f77bbcb8dbddad850dc216a1f1526f9aaf03553b1</code></td>
+</tr>
+</tbody></table></div>
+<p>Evidence: <a href="../temp/fishing_contest_shop_20260906/stage.json">stage</a>, <a href="../temp/fishing_contest_shop_20260906/deploy.json">deploy</a>, <a href="../temp/fishing_contest_shop_20260906/verify.json">verify</a>, <a href="../temp/fishing_contest_shop_20260906/qa-residue-final.json">QA residue/log</a>, <a href="../temp/fishing_contest_shop_20260906/changed-files.json">manifest file</a>, <a href="../temp/fishing_contest_shop_20260906/checkpoint.json">checkpoint</a>.</p>
+<p>Không đền bù/reset hay thu hồi quà người thật. Chỉ dữ liệu QA do phiên tạo đã được dọn. Không kiểm đủ chứng cứ để suy ai đã khai thác hoặc bao nhiêu quà đã nhận dư; không tự xử phạt hoặc sửa lịch sử.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Reload một lần, mở Đại hội câu cá → Gói quà. Gói miễn phí đã nhận hôm nay phải hết lượt; gói I/II hiển thị trần50, III–V trần100, trừ số lần đã mua.</li>
+<li>Kiểm lại trên thiết bị người dùng đang chơi; nếu nút còn hiện cũ, xác nhận client cache <code>20260906_fishing_shop_v1</code>, không reset counter server để sửa UI.</li>
+<li>Hậu kiểm các phiên tiếp dùng <code>release_fishing_contest_shop_20260906.py verify</code>. Expected của bản fishing_full trước đây là lịch sử, không dùng nó để kết luận production drift sau bản shop này.</li>
+<li>Nếu user muốn mở x10 thêm nhóm gói khác hoặc audit số quà nhận dư, đó là phạm vi tiếp theo cần xác định riêng; không tự động làm trong hotfix này.</li>
+</ol></main></body></html>

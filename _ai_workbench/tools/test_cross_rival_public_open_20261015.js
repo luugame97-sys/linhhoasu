@@ -1,0 +1,14 @@
+'use strict';
+const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('assert/strict');
+const root=path.resolve(__dirname,'../temp/cross_rival_20261015/next');
+const release=JSON.parse(fs.readFileSync(path.join(root,'src/config/crossRivalRelease.json')));
+const rules=require(path.join(root,'src/services/CrossRivalRules.js'));
+assert.equal(release.enabled,true);assert.equal(release.qaActors.length,0);assert(release.activationAt<=Date.now());
+for(let sid=1001;sid<=1008;sid++)assert.equal(rules.allowed(sid,'ordinary_public_user',Date.now()),true);
+assert.equal(rules.publicOpen(),true);assert.equal(rules.MAINTENANCE,false);
+assert.equal(rules.collection('worlds'),'cross_rival_worlds_v2');
+const source=fs.readFileSync(path.join(root,'src/handlers/item.js'),'utf8');
+const start=source.indexOf('function crossRivalShopGuard('),end=source.indexOf('\n}\n',start)+2;
+const guard=vm.runInNewContext('('+source.slice(start,end)+')',{require:()=>rules,config:{get:()=>({21:{tab:21},22:{tab:22}})}});
+assert.equal(guard({require:{21:1}},7,{serverId:1001,userId:'ordinary_public_user'}),null);
+console.log(JSON.stringify({result:'PASS',servers:8,publicOpen:true,maintenance:false,qaActors:0,productionWrites:0}));

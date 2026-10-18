@@ -1,0 +1,3732 @@
+{
+  "_table": "OldTrekDestinationConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "id": 1,
+          "difficulty": 1,
+          "area": 1,
+          "recommendPower": 49680,
+          "recommendPoint": 6,
+          "name": 30109500,
+          "desc": 30109520,
+          "sweepCost": 110,
+          "sailRes": "hgmh_map_1",
+          "desRes": "hgmh_sjsc_bm_banner_101",
+          "desSmallRes": "mhjj_btn_yeqian_101",
+          "bgm": "bgm_oldTrek_sea_1",
+          "icon": "hgmh_xzmdd_bm_tx_101",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+          "costs": [],
+          "firstRewards": [
+            {
+              "id": 300212,
+              "count": 5
+            },
+            {
+              "id": 101906,
+              "count": 5
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 1
+            },
+            {
+              "id": 101353,
+              "count": 10
+            },
+            {
+              "id": 101352,
+              "count": 10
+            },
+            {
+              "id": 339,
+              "count": 50000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301701,
+              "count": 1
+            },
+            {
+              "id": 301702,
+              "count": 1
+            },
+            {
+              "id": 301601,
+              "count": 1
+            },
+            {
+              "id": 301602,
+              "count": 1
+            },
+            {
+              "id": 301603,
+              "count": 1
+            },
+            {
+              "id": 301501,
+              "count": 1
+            },
+            {
+              "id": 301502,
+              "count": 1
+            },
+            {
+              "id": 301401,
+              "count": 1
+            },
+            {
+              "id": 301402,
+              "count": 1
+            },
+            {
+              "id": 301403,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 2400,
+          "isSeal": 0,
+          "baseSettleScore": 72000
+        },
+        "2": {
+          "id": 1,
+          "difficulty": 2,
+          "area": 1,
+          "recommendPower": 102900,
+          "recommendPoint": 9,
+          "name": 30109500,
+          "desc": 30109520,
+          "sweepCost": 220,
+          "sailRes": "hgmh_map_1",
+          "desRes": "hgmh_sjsc_bm_banner_101",
+          "desSmallRes": "mhjj_btn_yeqian_101",
+          "bgm": "bgm_oldTrek_sea_1",
+          "icon": "hgmh_xzmdd_bm_tx_101",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+          "costs": [
+            {
+              "id": 1,
+              "count": 50
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300212,
+              "count": 10
+            },
+            {
+              "id": 101906,
+              "count": 5
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 2
+            },
+            {
+              "id": 101354,
+              "count": 5
+            },
+            {
+              "id": 101353,
+              "count": 10
+            },
+            {
+              "id": 339,
+              "count": 100000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301701,
+              "count": 1
+            },
+            {
+              "id": 301702,
+              "count": 1
+            },
+            {
+              "id": 301601,
+              "count": 1
+            },
+            {
+              "id": 301602,
+              "count": 1
+            },
+            {
+              "id": 301603,
+              "count": 1
+            },
+            {
+              "id": 301501,
+              "count": 1
+            },
+            {
+              "id": 301502,
+              "count": 1
+            },
+            {
+              "id": 301401,
+              "count": 1
+            },
+            {
+              "id": 301402,
+              "count": 1
+            },
+            {
+              "id": 301403,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 4800,
+          "isSeal": 0,
+          "unlockConds": 50000,
+          "baseSettleScore": 144000
+        },
+        "3": {
+          "id": 1,
+          "difficulty": 3,
+          "area": 1,
+          "recommendPower": 157000,
+          "recommendPoint": 12,
+          "name": 30109500,
+          "desc": 30109520,
+          "sweepCost": 330,
+          "sailRes": "hgmh_map_1",
+          "desRes": "hgmh_sjsc_bm_banner_101",
+          "desSmallRes": "mhjj_btn_yeqian_101",
+          "bgm": "bgm_oldTrek_sea_1",
+          "icon": "hgmh_xzmdd_bm_tx_101",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+          "costs": [
+            {
+              "id": 1,
+              "count": 100
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300212,
+              "count": 15
+            },
+            {
+              "id": 101906,
+              "count": 10
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 4
+            },
+            {
+              "id": 101356,
+              "count": 5
+            },
+            {
+              "id": 101354,
+              "count": 5
+            },
+            {
+              "id": 339,
+              "count": 150000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301701,
+              "count": 1
+            },
+            {
+              "id": 301702,
+              "count": 1
+            },
+            {
+              "id": 301601,
+              "count": 1
+            },
+            {
+              "id": 301602,
+              "count": 1
+            },
+            {
+              "id": 301603,
+              "count": 1
+            },
+            {
+              "id": 301501,
+              "count": 1
+            },
+            {
+              "id": 301502,
+              "count": 1
+            },
+            {
+              "id": 301401,
+              "count": 1
+            },
+            {
+              "id": 301402,
+              "count": 1
+            },
+            {
+              "id": 301403,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 7200,
+          "isSeal": 0,
+          "unlockConds": 100000,
+          "baseSettleScore": 216000
+        },
+        "4": {
+          "id": 1,
+          "difficulty": 4,
+          "area": 1,
+          "recommendPower": 330000,
+          "recommendPoint": 15,
+          "name": 30109500,
+          "desc": 30109520,
+          "sweepCost": 660,
+          "sailRes": "hgmh_map_1",
+          "desRes": "hgmh_sjsc_bm_banner_101",
+          "desSmallRes": "mhjj_btn_yeqian_101",
+          "bgm": "bgm_oldTrek_sea_1",
+          "icon": "hgmh_xzmdd_bm_tx_101",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+          "costs": [
+            {
+              "id": 1,
+              "count": 200
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300212,
+              "count": 20
+            },
+            {
+              "id": 101906,
+              "count": 20
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 8
+            },
+            {
+              "id": 101357,
+              "count": 5
+            },
+            {
+              "id": 101356,
+              "count": 5
+            },
+            {
+              "id": 339,
+              "count": 300000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301701,
+              "count": 1
+            },
+            {
+              "id": 301702,
+              "count": 1
+            },
+            {
+              "id": 301601,
+              "count": 1
+            },
+            {
+              "id": 301602,
+              "count": 1
+            },
+            {
+              "id": 301603,
+              "count": 1
+            },
+            {
+              "id": 301501,
+              "count": 1
+            },
+            {
+              "id": 301502,
+              "count": 1
+            },
+            {
+              "id": 301401,
+              "count": 1
+            },
+            {
+              "id": 301402,
+              "count": 1
+            },
+            {
+              "id": 301403,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 14400,
+          "isSeal": 0,
+          "unlockConds": 200000,
+          "baseSettleScore": 432000
+        }
+      }
+    },
+    {
+      "2": {
+        "1": {
+          "id": 2,
+          "difficulty": 1,
+          "area": 1,
+          "recommendPower": 266000,
+          "recommendPoint": 6,
+          "name": 30109501,
+          "desc": 30109521,
+          "sweepCost": 110,
+          "sailRes": "hgmh_map_2",
+          "desRes": "hgmh_sjsc_bm_banner_102",
+          "desSmallRes": "mhjj_btn_yeqian_102",
+          "bgm": "bgm_oldTrek_sea_2",
+          "icon": "hgmh_xzmdd_bm_tx_102",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+          "costs": [],
+          "firstRewards": [
+            {
+              "id": 300221,
+              "count": 5
+            },
+            {
+              "id": 101916,
+              "count": 5
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 1
+            },
+            {
+              "id": 101363,
+              "count": 10
+            },
+            {
+              "id": 101362,
+              "count": 10
+            },
+            {
+              "id": 339,
+              "count": 50000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301703,
+              "count": 1
+            },
+            {
+              "id": 301704,
+              "count": 1
+            },
+            {
+              "id": 301604,
+              "count": 1
+            },
+            {
+              "id": 301605,
+              "count": 1
+            },
+            {
+              "id": 301606,
+              "count": 1
+            },
+            {
+              "id": 301503,
+              "count": 1
+            },
+            {
+              "id": 301504,
+              "count": 1
+            },
+            {
+              "id": 301404,
+              "count": 1
+            },
+            {
+              "id": 301405,
+              "count": 1
+            },
+            {
+              "id": 301406,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 2400,
+          "isSeal": 0,
+          "unlockItem": {
+            "id": 300212,
+            "count": 50
+          },
+          "baseSettleScore": 72000
+        },
+        "2": {
+          "id": 2,
+          "difficulty": 2,
+          "area": 1,
+          "recommendPower": 403000,
+          "recommendPoint": 9,
+          "name": 30109501,
+          "desc": 30109521,
+          "sweepCost": 220,
+          "sailRes": "hgmh_map_2",
+          "desRes": "hgmh_sjsc_bm_banner_102",
+          "desSmallRes": "mhjj_btn_yeqian_102",
+          "bgm": "bgm_oldTrek_sea_2",
+          "icon": "hgmh_xzmdd_bm_tx_102",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+          "costs": [
+            {
+              "id": 1,
+              "count": 50
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300221,
+              "count": 10
+            },
+            {
+              "id": 101916,
+              "count": 5
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 2
+            },
+            {
+              "id": 101364,
+              "count": 5
+            },
+            {
+              "id": 101363,
+              "count": 10
+            },
+            {
+              "id": 339,
+              "count": 100000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301703,
+              "count": 1
+            },
+            {
+              "id": 301704,
+              "count": 1
+            },
+            {
+              "id": 301604,
+              "count": 1
+            },
+            {
+              "id": 301605,
+              "count": 1
+            },
+            {
+              "id": 301606,
+              "count": 1
+            },
+            {
+              "id": 301503,
+              "count": 1
+            },
+            {
+              "id": 301504,
+              "count": 1
+            },
+            {
+              "id": 301404,
+              "count": 1
+            },
+            {
+              "id": 301405,
+              "count": 1
+            },
+            {
+              "id": 301406,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 4800,
+          "isSeal": 0,
+          "unlockConds": 50000,
+          "baseSettleScore": 144000
+        },
+        "3": {
+          "id": 2,
+          "difficulty": 3,
+          "area": 1,
+          "recommendPower": 682000,
+          "recommendPoint": 12,
+          "name": 30109501,
+          "desc": 30109521,
+          "sweepCost": 330,
+          "sailRes": "hgmh_map_2",
+          "desRes": "hgmh_sjsc_bm_banner_102",
+          "desSmallRes": "mhjj_btn_yeqian_102",
+          "bgm": "bgm_oldTrek_sea_2",
+          "icon": "hgmh_xzmdd_bm_tx_102",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+          "costs": [
+            {
+              "id": 1,
+              "count": 100
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300221,
+              "count": 15
+            },
+            {
+              "id": 101916,
+              "count": 10
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 4
+            },
+            {
+              "id": 101366,
+              "count": 5
+            },
+            {
+              "id": 101364,
+              "count": 5
+            },
+            {
+              "id": 339,
+              "count": 150000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301703,
+              "count": 1
+            },
+            {
+              "id": 301704,
+              "count": 1
+            },
+            {
+              "id": 301604,
+              "count": 1
+            },
+            {
+              "id": 301605,
+              "count": 1
+            },
+            {
+              "id": 301606,
+              "count": 1
+            },
+            {
+              "id": 301503,
+              "count": 1
+            },
+            {
+              "id": 301504,
+              "count": 1
+            },
+            {
+              "id": 301404,
+              "count": 1
+            },
+            {
+              "id": 301405,
+              "count": 1
+            },
+            {
+              "id": 301406,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 7200,
+          "isSeal": 0,
+          "unlockConds": 100000,
+          "baseSettleScore": 216000
+        },
+        "4": {
+          "id": 2,
+          "difficulty": 4,
+          "area": 1,
+          "recommendPower": 796000,
+          "recommendPoint": 15,
+          "name": 30109501,
+          "desc": 30109521,
+          "sweepCost": 660,
+          "sailRes": "hgmh_map_2",
+          "desRes": "hgmh_sjsc_bm_banner_102",
+          "desSmallRes": "mhjj_btn_yeqian_102",
+          "bgm": "bgm_oldTrek_sea_2",
+          "icon": "hgmh_xzmdd_bm_tx_102",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+          "costs": [
+            {
+              "id": 1,
+              "count": 200
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300221,
+              "count": 20
+            },
+            {
+              "id": 101916,
+              "count": 20
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 8
+            },
+            {
+              "id": 101367,
+              "count": 5
+            },
+            {
+              "id": 101366,
+              "count": 5
+            },
+            {
+              "id": 339,
+              "count": 300000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301703,
+              "count": 1
+            },
+            {
+              "id": 301704,
+              "count": 1
+            },
+            {
+              "id": 301604,
+              "count": 1
+            },
+            {
+              "id": 301605,
+              "count": 1
+            },
+            {
+              "id": 301606,
+              "count": 1
+            },
+            {
+              "id": 301503,
+              "count": 1
+            },
+            {
+              "id": 301504,
+              "count": 1
+            },
+            {
+              "id": 301404,
+              "count": 1
+            },
+            {
+              "id": 301405,
+              "count": 1
+            },
+            {
+              "id": 301406,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7016,
+            7017,
+            7018,
+            7026,
+            7027,
+            7028
+          ],
+          "distance": 14400,
+          "isSeal": 0,
+          "unlockConds": 200000,
+          "baseSettleScore": 432000
+        }
+      }
+    },
+    {
+      "3": {
+        "1": {
+          "id": 3,
+          "difficulty": 1,
+          "area": 2,
+          "recommendPower": 407000,
+          "name": 30109502,
+          "desc": 30109522,
+          "sweepCost": 110,
+          "sailRes": "hgmh_map_3",
+          "desRes": "hgmh_sjsc_bm_banner_201",
+          "desSmallRes": "mhjj_btn_yeqian_201",
+          "bgm": "bgm_oldTrek_sea_3",
+          "icon": "hgmh_xzmdd_bm_tx_201",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+          "costs": [],
+          "firstRewards": [
+            {
+              "id": 300222,
+              "count": 5
+            },
+            {
+              "id": 101926,
+              "count": 5
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 1
+            },
+            {
+              "id": 101373,
+              "count": 10
+            },
+            {
+              "id": 101372,
+              "count": 10
+            },
+            {
+              "id": 339,
+              "count": 50000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301705,
+              "count": 1
+            },
+            {
+              "id": 301706,
+              "count": 1
+            },
+            {
+              "id": 301607,
+              "count": 1
+            },
+            {
+              "id": 301608,
+              "count": 1
+            },
+            {
+              "id": 301609,
+              "count": 1
+            },
+            {
+              "id": 301505,
+              "count": 1
+            },
+            {
+              "id": 301506,
+              "count": 1
+            },
+            {
+              "id": 301407,
+              "count": 1
+            },
+            {
+              "id": 301408,
+              "count": 1
+            },
+            {
+              "id": 301409,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7036,
+            7037,
+            7038,
+            7046,
+            7047,
+            7048
+          ],
+          "distance": 2400,
+          "isSeal": 0,
+          "unlockItem": {
+            "id": 300221,
+            "count": 50
+          },
+          "baseSettleScore": 72000
+        },
+        "2": {
+          "id": 3,
+          "difficulty": 2,
+          "area": 2,
+          "recommendPower": 738000,
+          "name": 30109502,
+          "desc": 30109522,
+          "sweepCost": 220,
+          "sailRes": "hgmh_map_3",
+          "desRes": "hgmh_sjsc_bm_banner_201",
+          "desSmallRes": "mhjj_btn_yeqian_201",
+          "bgm": "bgm_oldTrek_sea_3",
+          "icon": "hgmh_xzmdd_bm_tx_201",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+          "costs": [
+            {
+              "id": 1,
+              "count": 50
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300222,
+              "count": 10
+            },
+            {
+              "id": 101926,
+              "count": 5
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 2
+            },
+            {
+              "id": 101374,
+              "count": 5
+            },
+            {
+              "id": 101373,
+              "count": 10
+            },
+            {
+              "id": 339,
+              "count": 100000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301705,
+              "count": 1
+            },
+            {
+              "id": 301706,
+              "count": 1
+            },
+            {
+              "id": 301607,
+              "count": 1
+            },
+            {
+              "id": 301608,
+              "count": 1
+            },
+            {
+              "id": 301609,
+              "count": 1
+            },
+            {
+              "id": 301505,
+              "count": 1
+            },
+            {
+              "id": 301506,
+              "count": 1
+            },
+            {
+              "id": 301407,
+              "count": 1
+            },
+            {
+              "id": 301408,
+              "count": 1
+            },
+            {
+              "id": 301409,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7036,
+            7037,
+            7038,
+            7046,
+            7047,
+            7048
+          ],
+          "distance": 4800,
+          "isSeal": 0,
+          "unlockConds": 50000,
+          "baseSettleScore": 144000
+        },
+        "3": {
+          "id": 3,
+          "difficulty": 3,
+          "area": 2,
+          "recommendPower": 945000,
+          "name": 30109502,
+          "desc": 30109522,
+          "sweepCost": 330,
+          "sailRes": "hgmh_map_3",
+          "desRes": "hgmh_sjsc_bm_banner_201",
+          "desSmallRes": "mhjj_btn_yeqian_201",
+          "bgm": "bgm_oldTrek_sea_3",
+          "icon": "hgmh_xzmdd_bm_tx_201",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+          "costs": [
+            {
+              "id": 1,
+              "count": 100
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300222,
+              "count": 15
+            },
+            {
+              "id": 101926,
+              "count": 10
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 4
+            },
+            {
+              "id": 101376,
+              "count": 5
+            },
+            {
+              "id": 101374,
+              "count": 5
+            },
+            {
+              "id": 339,
+              "count": 150000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301705,
+              "count": 1
+            },
+            {
+              "id": 301706,
+              "count": 1
+            },
+            {
+              "id": 301607,
+              "count": 1
+            },
+            {
+              "id": 301608,
+              "count": 1
+            },
+            {
+              "id": 301609,
+              "count": 1
+            },
+            {
+              "id": 301505,
+              "count": 1
+            },
+            {
+              "id": 301506,
+              "count": 1
+            },
+            {
+              "id": 301407,
+              "count": 1
+            },
+            {
+              "id": 301408,
+              "count": 1
+            },
+            {
+              "id": 301409,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7036,
+            7037,
+            7038,
+            7046,
+            7047,
+            7048
+          ],
+          "distance": 7200,
+          "isSeal": 0,
+          "unlockConds": 100000,
+          "baseSettleScore": 216000
+        },
+        "4": {
+          "id": 3,
+          "difficulty": 4,
+          "area": 2,
+          "recommendPower": 1134000,
+          "name": 30109502,
+          "desc": 30109522,
+          "sweepCost": 660,
+          "sailRes": "hgmh_map_3",
+          "desRes": "hgmh_sjsc_bm_banner_201",
+          "desSmallRes": "mhjj_btn_yeqian_201",
+          "bgm": "bgm_oldTrek_sea_3",
+          "icon": "hgmh_xzmdd_bm_tx_201",
+          "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+          "costs": [
+            {
+              "id": 1,
+              "count": 200
+            }
+          ],
+          "firstRewards": [
+            {
+              "id": 300222,
+              "count": 20
+            },
+            {
+              "id": 101926,
+              "count": 20
+            }
+          ],
+          "fixRewards": [
+            {
+              "id": 332,
+              "count": 8
+            },
+            {
+              "id": 101377,
+              "count": 5
+            },
+            {
+              "id": 101376,
+              "count": 5
+            },
+            {
+              "id": 339,
+              "count": 300000
+            }
+          ],
+          "floatRewards": [
+            {
+              "id": 301705,
+              "count": 1
+            },
+            {
+              "id": 301706,
+              "count": 1
+            },
+            {
+              "id": 301607,
+              "count": 1
+            },
+            {
+              "id": 301608,
+              "count": 1
+            },
+            {
+              "id": 301609,
+              "count": 1
+            },
+            {
+              "id": 301505,
+              "count": 1
+            },
+            {
+              "id": 301506,
+              "count": 1
+            },
+            {
+              "id": 301407,
+              "count": 1
+            },
+            {
+              "id": 301408,
+              "count": 1
+            },
+            {
+              "id": 301409,
+              "count": 1
+            }
+          ],
+          "fishRewards": [
+            7036,
+            7037,
+            7038,
+            7046,
+            7047,
+            7048
+          ],
+          "distance": 14400,
+          "isSeal": 0,
+          "unlockConds": 200000,
+          "baseSettleScore": 432000
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "id": 1,
+        "difficulty": 1,
+        "area": 1,
+        "recommendPower": 49680,
+        "recommendPoint": 6,
+        "name": 30109500,
+        "desc": 30109520,
+        "sweepCost": 110,
+        "sailRes": "hgmh_map_1",
+        "desRes": "hgmh_sjsc_bm_banner_101",
+        "desSmallRes": "mhjj_btn_yeqian_101",
+        "bgm": "bgm_oldTrek_sea_1",
+        "icon": "hgmh_xzmdd_bm_tx_101",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+        "costs": [],
+        "firstRewards": [
+          {
+            "id": 300212,
+            "count": 5
+          },
+          {
+            "id": 101906,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 1
+          },
+          {
+            "id": 101353,
+            "count": 10
+          },
+          {
+            "id": 101352,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 50000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301701,
+            "count": 1
+          },
+          {
+            "id": 301702,
+            "count": 1
+          },
+          {
+            "id": 301601,
+            "count": 1
+          },
+          {
+            "id": 301602,
+            "count": 1
+          },
+          {
+            "id": 301603,
+            "count": 1
+          },
+          {
+            "id": 301501,
+            "count": 1
+          },
+          {
+            "id": 301502,
+            "count": 1
+          },
+          {
+            "id": 301401,
+            "count": 1
+          },
+          {
+            "id": 301402,
+            "count": 1
+          },
+          {
+            "id": 301403,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 2400,
+        "isSeal": 0,
+        "baseSettleScore": 72000
+      },
+      "2": {
+        "id": 1,
+        "difficulty": 2,
+        "area": 1,
+        "recommendPower": 102900,
+        "recommendPoint": 9,
+        "name": 30109500,
+        "desc": 30109520,
+        "sweepCost": 220,
+        "sailRes": "hgmh_map_1",
+        "desRes": "hgmh_sjsc_bm_banner_101",
+        "desSmallRes": "mhjj_btn_yeqian_101",
+        "bgm": "bgm_oldTrek_sea_1",
+        "icon": "hgmh_xzmdd_bm_tx_101",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+        "costs": [
+          {
+            "id": 1,
+            "count": 50
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300212,
+            "count": 10
+          },
+          {
+            "id": 101906,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 2
+          },
+          {
+            "id": 101354,
+            "count": 5
+          },
+          {
+            "id": 101353,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 100000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301701,
+            "count": 1
+          },
+          {
+            "id": 301702,
+            "count": 1
+          },
+          {
+            "id": 301601,
+            "count": 1
+          },
+          {
+            "id": 301602,
+            "count": 1
+          },
+          {
+            "id": 301603,
+            "count": 1
+          },
+          {
+            "id": 301501,
+            "count": 1
+          },
+          {
+            "id": 301502,
+            "count": 1
+          },
+          {
+            "id": 301401,
+            "count": 1
+          },
+          {
+            "id": 301402,
+            "count": 1
+          },
+          {
+            "id": 301403,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 4800,
+        "isSeal": 0,
+        "unlockConds": 50000,
+        "baseSettleScore": 144000
+      },
+      "3": {
+        "id": 1,
+        "difficulty": 3,
+        "area": 1,
+        "recommendPower": 157000,
+        "recommendPoint": 12,
+        "name": 30109500,
+        "desc": 30109520,
+        "sweepCost": 330,
+        "sailRes": "hgmh_map_1",
+        "desRes": "hgmh_sjsc_bm_banner_101",
+        "desSmallRes": "mhjj_btn_yeqian_101",
+        "bgm": "bgm_oldTrek_sea_1",
+        "icon": "hgmh_xzmdd_bm_tx_101",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+        "costs": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300212,
+            "count": 15
+          },
+          {
+            "id": 101906,
+            "count": 10
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 4
+          },
+          {
+            "id": 101356,
+            "count": 5
+          },
+          {
+            "id": 101354,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 150000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301701,
+            "count": 1
+          },
+          {
+            "id": 301702,
+            "count": 1
+          },
+          {
+            "id": 301601,
+            "count": 1
+          },
+          {
+            "id": 301602,
+            "count": 1
+          },
+          {
+            "id": 301603,
+            "count": 1
+          },
+          {
+            "id": 301501,
+            "count": 1
+          },
+          {
+            "id": 301502,
+            "count": 1
+          },
+          {
+            "id": 301401,
+            "count": 1
+          },
+          {
+            "id": 301402,
+            "count": 1
+          },
+          {
+            "id": 301403,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 7200,
+        "isSeal": 0,
+        "unlockConds": 100000,
+        "baseSettleScore": 216000
+      },
+      "4": {
+        "id": 1,
+        "difficulty": 4,
+        "area": 1,
+        "recommendPower": 330000,
+        "recommendPoint": 15,
+        "name": 30109500,
+        "desc": 30109520,
+        "sweepCost": 660,
+        "sailRes": "hgmh_map_1",
+        "desRes": "hgmh_sjsc_bm_banner_101",
+        "desSmallRes": "mhjj_btn_yeqian_101",
+        "bgm": "bgm_oldTrek_sea_1",
+        "icon": "hgmh_xzmdd_bm_tx_101",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+        "costs": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300212,
+            "count": 20
+          },
+          {
+            "id": 101906,
+            "count": 20
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 8
+          },
+          {
+            "id": 101357,
+            "count": 5
+          },
+          {
+            "id": 101356,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 300000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301701,
+            "count": 1
+          },
+          {
+            "id": 301702,
+            "count": 1
+          },
+          {
+            "id": 301601,
+            "count": 1
+          },
+          {
+            "id": 301602,
+            "count": 1
+          },
+          {
+            "id": 301603,
+            "count": 1
+          },
+          {
+            "id": 301501,
+            "count": 1
+          },
+          {
+            "id": 301502,
+            "count": 1
+          },
+          {
+            "id": 301401,
+            "count": 1
+          },
+          {
+            "id": 301402,
+            "count": 1
+          },
+          {
+            "id": 301403,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 14400,
+        "isSeal": 0,
+        "unlockConds": 200000,
+        "baseSettleScore": 432000
+      }
+    },
+    "2": {
+      "1": {
+        "id": 2,
+        "difficulty": 1,
+        "area": 1,
+        "recommendPower": 266000,
+        "recommendPoint": 6,
+        "name": 30109501,
+        "desc": 30109521,
+        "sweepCost": 110,
+        "sailRes": "hgmh_map_2",
+        "desRes": "hgmh_sjsc_bm_banner_102",
+        "desSmallRes": "mhjj_btn_yeqian_102",
+        "bgm": "bgm_oldTrek_sea_2",
+        "icon": "hgmh_xzmdd_bm_tx_102",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+        "costs": [],
+        "firstRewards": [
+          {
+            "id": 300221,
+            "count": 5
+          },
+          {
+            "id": 101916,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 1
+          },
+          {
+            "id": 101363,
+            "count": 10
+          },
+          {
+            "id": 101362,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 50000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301703,
+            "count": 1
+          },
+          {
+            "id": 301704,
+            "count": 1
+          },
+          {
+            "id": 301604,
+            "count": 1
+          },
+          {
+            "id": 301605,
+            "count": 1
+          },
+          {
+            "id": 301606,
+            "count": 1
+          },
+          {
+            "id": 301503,
+            "count": 1
+          },
+          {
+            "id": 301504,
+            "count": 1
+          },
+          {
+            "id": 301404,
+            "count": 1
+          },
+          {
+            "id": 301405,
+            "count": 1
+          },
+          {
+            "id": 301406,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 2400,
+        "isSeal": 0,
+        "unlockItem": {
+          "id": 300212,
+          "count": 50
+        },
+        "baseSettleScore": 72000
+      },
+      "2": {
+        "id": 2,
+        "difficulty": 2,
+        "area": 1,
+        "recommendPower": 403000,
+        "recommendPoint": 9,
+        "name": 30109501,
+        "desc": 30109521,
+        "sweepCost": 220,
+        "sailRes": "hgmh_map_2",
+        "desRes": "hgmh_sjsc_bm_banner_102",
+        "desSmallRes": "mhjj_btn_yeqian_102",
+        "bgm": "bgm_oldTrek_sea_2",
+        "icon": "hgmh_xzmdd_bm_tx_102",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+        "costs": [
+          {
+            "id": 1,
+            "count": 50
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300221,
+            "count": 10
+          },
+          {
+            "id": 101916,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 2
+          },
+          {
+            "id": 101364,
+            "count": 5
+          },
+          {
+            "id": 101363,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 100000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301703,
+            "count": 1
+          },
+          {
+            "id": 301704,
+            "count": 1
+          },
+          {
+            "id": 301604,
+            "count": 1
+          },
+          {
+            "id": 301605,
+            "count": 1
+          },
+          {
+            "id": 301606,
+            "count": 1
+          },
+          {
+            "id": 301503,
+            "count": 1
+          },
+          {
+            "id": 301504,
+            "count": 1
+          },
+          {
+            "id": 301404,
+            "count": 1
+          },
+          {
+            "id": 301405,
+            "count": 1
+          },
+          {
+            "id": 301406,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 4800,
+        "isSeal": 0,
+        "unlockConds": 50000,
+        "baseSettleScore": 144000
+      },
+      "3": {
+        "id": 2,
+        "difficulty": 3,
+        "area": 1,
+        "recommendPower": 682000,
+        "recommendPoint": 12,
+        "name": 30109501,
+        "desc": 30109521,
+        "sweepCost": 330,
+        "sailRes": "hgmh_map_2",
+        "desRes": "hgmh_sjsc_bm_banner_102",
+        "desSmallRes": "mhjj_btn_yeqian_102",
+        "bgm": "bgm_oldTrek_sea_2",
+        "icon": "hgmh_xzmdd_bm_tx_102",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+        "costs": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300221,
+            "count": 15
+          },
+          {
+            "id": 101916,
+            "count": 10
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 4
+          },
+          {
+            "id": 101366,
+            "count": 5
+          },
+          {
+            "id": 101364,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 150000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301703,
+            "count": 1
+          },
+          {
+            "id": 301704,
+            "count": 1
+          },
+          {
+            "id": 301604,
+            "count": 1
+          },
+          {
+            "id": 301605,
+            "count": 1
+          },
+          {
+            "id": 301606,
+            "count": 1
+          },
+          {
+            "id": 301503,
+            "count": 1
+          },
+          {
+            "id": 301504,
+            "count": 1
+          },
+          {
+            "id": 301404,
+            "count": 1
+          },
+          {
+            "id": 301405,
+            "count": 1
+          },
+          {
+            "id": 301406,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 7200,
+        "isSeal": 0,
+        "unlockConds": 100000,
+        "baseSettleScore": 216000
+      },
+      "4": {
+        "id": 2,
+        "difficulty": 4,
+        "area": 1,
+        "recommendPower": 796000,
+        "recommendPoint": 15,
+        "name": 30109501,
+        "desc": 30109521,
+        "sweepCost": 660,
+        "sailRes": "hgmh_map_2",
+        "desRes": "hgmh_sjsc_bm_banner_102",
+        "desSmallRes": "mhjj_btn_yeqian_102",
+        "bgm": "bgm_oldTrek_sea_2",
+        "icon": "hgmh_xzmdd_bm_tx_102",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+        "costs": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300221,
+            "count": 20
+          },
+          {
+            "id": 101916,
+            "count": 20
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 8
+          },
+          {
+            "id": 101367,
+            "count": 5
+          },
+          {
+            "id": 101366,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 300000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301703,
+            "count": 1
+          },
+          {
+            "id": 301704,
+            "count": 1
+          },
+          {
+            "id": 301604,
+            "count": 1
+          },
+          {
+            "id": 301605,
+            "count": 1
+          },
+          {
+            "id": 301606,
+            "count": 1
+          },
+          {
+            "id": 301503,
+            "count": 1
+          },
+          {
+            "id": 301504,
+            "count": 1
+          },
+          {
+            "id": 301404,
+            "count": 1
+          },
+          {
+            "id": 301405,
+            "count": 1
+          },
+          {
+            "id": 301406,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7016,
+          7017,
+          7018,
+          7026,
+          7027,
+          7028
+        ],
+        "distance": 14400,
+        "isSeal": 0,
+        "unlockConds": 200000,
+        "baseSettleScore": 432000
+      }
+    },
+    "3": {
+      "1": {
+        "id": 3,
+        "difficulty": 1,
+        "area": 2,
+        "recommendPower": 407000,
+        "name": 30109502,
+        "desc": 30109522,
+        "sweepCost": 110,
+        "sailRes": "hgmh_map_3",
+        "desRes": "hgmh_sjsc_bm_banner_201",
+        "desSmallRes": "mhjj_btn_yeqian_201",
+        "bgm": "bgm_oldTrek_sea_3",
+        "icon": "hgmh_xzmdd_bm_tx_201",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+        "costs": [],
+        "firstRewards": [
+          {
+            "id": 300222,
+            "count": 5
+          },
+          {
+            "id": 101926,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 1
+          },
+          {
+            "id": 101373,
+            "count": 10
+          },
+          {
+            "id": 101372,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 50000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301705,
+            "count": 1
+          },
+          {
+            "id": 301706,
+            "count": 1
+          },
+          {
+            "id": 301607,
+            "count": 1
+          },
+          {
+            "id": 301608,
+            "count": 1
+          },
+          {
+            "id": 301609,
+            "count": 1
+          },
+          {
+            "id": 301505,
+            "count": 1
+          },
+          {
+            "id": 301506,
+            "count": 1
+          },
+          {
+            "id": 301407,
+            "count": 1
+          },
+          {
+            "id": 301408,
+            "count": 1
+          },
+          {
+            "id": 301409,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 2400,
+        "isSeal": 0,
+        "unlockItem": {
+          "id": 300221,
+          "count": 50
+        },
+        "baseSettleScore": 72000
+      },
+      "2": {
+        "id": 3,
+        "difficulty": 2,
+        "area": 2,
+        "recommendPower": 738000,
+        "name": 30109502,
+        "desc": 30109522,
+        "sweepCost": 220,
+        "sailRes": "hgmh_map_3",
+        "desRes": "hgmh_sjsc_bm_banner_201",
+        "desSmallRes": "mhjj_btn_yeqian_201",
+        "bgm": "bgm_oldTrek_sea_3",
+        "icon": "hgmh_xzmdd_bm_tx_201",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+        "costs": [
+          {
+            "id": 1,
+            "count": 50
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300222,
+            "count": 10
+          },
+          {
+            "id": 101926,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 2
+          },
+          {
+            "id": 101374,
+            "count": 5
+          },
+          {
+            "id": 101373,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 100000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301705,
+            "count": 1
+          },
+          {
+            "id": 301706,
+            "count": 1
+          },
+          {
+            "id": 301607,
+            "count": 1
+          },
+          {
+            "id": 301608,
+            "count": 1
+          },
+          {
+            "id": 301609,
+            "count": 1
+          },
+          {
+            "id": 301505,
+            "count": 1
+          },
+          {
+            "id": 301506,
+            "count": 1
+          },
+          {
+            "id": 301407,
+            "count": 1
+          },
+          {
+            "id": 301408,
+            "count": 1
+          },
+          {
+            "id": 301409,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 4800,
+        "isSeal": 0,
+        "unlockConds": 50000,
+        "baseSettleScore": 144000
+      },
+      "3": {
+        "id": 3,
+        "difficulty": 3,
+        "area": 2,
+        "recommendPower": 945000,
+        "name": 30109502,
+        "desc": 30109522,
+        "sweepCost": 330,
+        "sailRes": "hgmh_map_3",
+        "desRes": "hgmh_sjsc_bm_banner_201",
+        "desSmallRes": "mhjj_btn_yeqian_201",
+        "bgm": "bgm_oldTrek_sea_3",
+        "icon": "hgmh_xzmdd_bm_tx_201",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+        "costs": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300222,
+            "count": 15
+          },
+          {
+            "id": 101926,
+            "count": 10
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 4
+          },
+          {
+            "id": 101376,
+            "count": 5
+          },
+          {
+            "id": 101374,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 150000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301705,
+            "count": 1
+          },
+          {
+            "id": 301706,
+            "count": 1
+          },
+          {
+            "id": 301607,
+            "count": 1
+          },
+          {
+            "id": 301608,
+            "count": 1
+          },
+          {
+            "id": 301609,
+            "count": 1
+          },
+          {
+            "id": 301505,
+            "count": 1
+          },
+          {
+            "id": 301506,
+            "count": 1
+          },
+          {
+            "id": 301407,
+            "count": 1
+          },
+          {
+            "id": 301408,
+            "count": 1
+          },
+          {
+            "id": 301409,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 7200,
+        "isSeal": 0,
+        "unlockConds": 100000,
+        "baseSettleScore": 216000
+      },
+      "4": {
+        "id": 3,
+        "difficulty": 4,
+        "area": 2,
+        "recommendPower": 1134000,
+        "name": 30109502,
+        "desc": 30109522,
+        "sweepCost": 660,
+        "sailRes": "hgmh_map_3",
+        "desRes": "hgmh_sjsc_bm_banner_201",
+        "desSmallRes": "mhjj_btn_yeqian_201",
+        "bgm": "bgm_oldTrek_sea_3",
+        "icon": "hgmh_xzmdd_bm_tx_201",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+        "costs": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300222,
+            "count": 20
+          },
+          {
+            "id": 101926,
+            "count": 20
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 8
+          },
+          {
+            "id": 101377,
+            "count": 5
+          },
+          {
+            "id": 101376,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 300000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301705,
+            "count": 1
+          },
+          {
+            "id": 301706,
+            "count": 1
+          },
+          {
+            "id": 301607,
+            "count": 1
+          },
+          {
+            "id": 301608,
+            "count": 1
+          },
+          {
+            "id": 301609,
+            "count": 1
+          },
+          {
+            "id": 301505,
+            "count": 1
+          },
+          {
+            "id": 301506,
+            "count": 1
+          },
+          {
+            "id": 301407,
+            "count": 1
+          },
+          {
+            "id": 301408,
+            "count": 1
+          },
+          {
+            "id": 301409,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 14400,
+        "isSeal": 0,
+        "unlockConds": 200000,
+        "baseSettleScore": 432000
+      }
+    },
+    "4": {
+      "1": {
+        "id": 4,
+        "difficulty": 1,
+        "area": 2,
+        "recommendPower": 721000,
+        "name": 30109503,
+        "desc": 30109523,
+        "sweepCost": 110,
+        "sailRes": "hgmh_map_4",
+        "desRes": "hgmh_sjsc_bm_banner_202",
+        "desSmallRes": "mhjj_btn_yeqian_202",
+        "bgm": "bgm_oldTrek_sea_4",
+        "icon": "hgmh_xzmdd_bm_tx_202",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+        "costs": [],
+        "firstRewards": [
+          {
+            "id": 300231,
+            "count": 5
+          },
+          {
+            "id": 101936,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 1
+          },
+          {
+            "id": 101403,
+            "count": 10
+          },
+          {
+            "id": 101402,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 50000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301707,
+            "count": 1
+          },
+          {
+            "id": 301708,
+            "count": 1
+          },
+          {
+            "id": 301610,
+            "count": 1
+          },
+          {
+            "id": 301611,
+            "count": 1
+          },
+          {
+            "id": 301612,
+            "count": 1
+          },
+          {
+            "id": 301507,
+            "count": 1
+          },
+          {
+            "id": 301508,
+            "count": 1
+          },
+          {
+            "id": 301410,
+            "count": 1
+          },
+          {
+            "id": 301411,
+            "count": 1
+          },
+          {
+            "id": 301412,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 2400,
+        "isSeal": 0,
+        "unlockItem": {
+          "id": 300222,
+          "count": 50
+        },
+        "baseSettleScore": 72000
+      },
+      "2": {
+        "id": 4,
+        "difficulty": 2,
+        "area": 2,
+        "recommendPower": 970000,
+        "name": 30109503,
+        "desc": 30109523,
+        "sweepCost": 220,
+        "sailRes": "hgmh_map_4",
+        "desRes": "hgmh_sjsc_bm_banner_202",
+        "desSmallRes": "mhjj_btn_yeqian_202",
+        "bgm": "bgm_oldTrek_sea_4",
+        "icon": "hgmh_xzmdd_bm_tx_202",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+        "costs": [
+          {
+            "id": 1,
+            "count": 50
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300231,
+            "count": 10
+          },
+          {
+            "id": 101936,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 2
+          },
+          {
+            "id": 101404,
+            "count": 5
+          },
+          {
+            "id": 101403,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 100000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301707,
+            "count": 1
+          },
+          {
+            "id": 301708,
+            "count": 1
+          },
+          {
+            "id": 301610,
+            "count": 1
+          },
+          {
+            "id": 301611,
+            "count": 1
+          },
+          {
+            "id": 301612,
+            "count": 1
+          },
+          {
+            "id": 301507,
+            "count": 1
+          },
+          {
+            "id": 301508,
+            "count": 1
+          },
+          {
+            "id": 301410,
+            "count": 1
+          },
+          {
+            "id": 301411,
+            "count": 1
+          },
+          {
+            "id": 301412,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 4800,
+        "isSeal": 0,
+        "unlockConds": 50000,
+        "baseSettleScore": 144000
+      },
+      "3": {
+        "id": 4,
+        "difficulty": 3,
+        "area": 2,
+        "recommendPower": 1272000,
+        "name": 30109503,
+        "desc": 30109523,
+        "sweepCost": 330,
+        "sailRes": "hgmh_map_4",
+        "desRes": "hgmh_sjsc_bm_banner_202",
+        "desSmallRes": "mhjj_btn_yeqian_202",
+        "bgm": "bgm_oldTrek_sea_4",
+        "icon": "hgmh_xzmdd_bm_tx_202",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+        "costs": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300231,
+            "count": 15
+          },
+          {
+            "id": 101936,
+            "count": 10
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 4
+          },
+          {
+            "id": 101406,
+            "count": 5
+          },
+          {
+            "id": 101404,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 150000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301707,
+            "count": 1
+          },
+          {
+            "id": 301708,
+            "count": 1
+          },
+          {
+            "id": 301610,
+            "count": 1
+          },
+          {
+            "id": 301611,
+            "count": 1
+          },
+          {
+            "id": 301612,
+            "count": 1
+          },
+          {
+            "id": 301507,
+            "count": 1
+          },
+          {
+            "id": 301508,
+            "count": 1
+          },
+          {
+            "id": 301410,
+            "count": 1
+          },
+          {
+            "id": 301411,
+            "count": 1
+          },
+          {
+            "id": 301412,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 7200,
+        "isSeal": 0,
+        "unlockConds": 100000,
+        "baseSettleScore": 216000
+      },
+      "4": {
+        "id": 4,
+        "difficulty": 4,
+        "area": 2,
+        "recommendPower": 1407000,
+        "name": 30109503,
+        "desc": 30109523,
+        "sweepCost": 660,
+        "sailRes": "hgmh_map_4",
+        "desRes": "hgmh_sjsc_bm_banner_202",
+        "desSmallRes": "mhjj_btn_yeqian_202",
+        "bgm": "bgm_oldTrek_sea_4",
+        "icon": "hgmh_xzmdd_bm_tx_202",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+        "costs": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300231,
+            "count": 20
+          },
+          {
+            "id": 101936,
+            "count": 20
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 8
+          },
+          {
+            "id": 101407,
+            "count": 5
+          },
+          {
+            "id": 101406,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 300000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301707,
+            "count": 1
+          },
+          {
+            "id": 301708,
+            "count": 1
+          },
+          {
+            "id": 301610,
+            "count": 1
+          },
+          {
+            "id": 301611,
+            "count": 1
+          },
+          {
+            "id": 301612,
+            "count": 1
+          },
+          {
+            "id": 301507,
+            "count": 1
+          },
+          {
+            "id": 301508,
+            "count": 1
+          },
+          {
+            "id": 301410,
+            "count": 1
+          },
+          {
+            "id": 301411,
+            "count": 1
+          },
+          {
+            "id": 301412,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7036,
+          7037,
+          7038,
+          7046,
+          7047,
+          7048
+        ],
+        "distance": 14400,
+        "isSeal": 0,
+        "unlockConds": 200000,
+        "baseSettleScore": 432000
+      }
+    },
+    "5": {
+      "1": {
+        "id": 5,
+        "difficulty": 1,
+        "area": 3,
+        "recommendPower": 962000,
+        "name": 30109504,
+        "desc": 30109524,
+        "sweepCost": 110,
+        "sailRes": "hgmh_map_5",
+        "desRes": "hgmh_sjsc_bm_banner_301",
+        "desSmallRes": "mhjj_btn_yeqian_301",
+        "bgm": "bgm_oldTrek_sea_5",
+        "icon": "hgmh_xzmdd_bm_tx_301",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+        "costs": [],
+        "firstRewards": [
+          {
+            "id": 300232,
+            "count": 5
+          },
+          {
+            "id": 101946,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 1
+          },
+          {
+            "id": 101413,
+            "count": 10
+          },
+          {
+            "id": 101412,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 50000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301709,
+            "count": 1
+          },
+          {
+            "id": 301710,
+            "count": 1
+          },
+          {
+            "id": 301613,
+            "count": 1
+          },
+          {
+            "id": 301614,
+            "count": 1
+          },
+          {
+            "id": 301615,
+            "count": 1
+          },
+          {
+            "id": 301509,
+            "count": 1
+          },
+          {
+            "id": 301510,
+            "count": 1
+          },
+          {
+            "id": 301413,
+            "count": 1
+          },
+          {
+            "id": 301414,
+            "count": 1
+          },
+          {
+            "id": 301415,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 2400,
+        "isSeal": 1,
+        "unlockItem": {
+          "id": 300231,
+          "count": 50
+        },
+        "baseSettleScore": 72000
+      },
+      "2": {
+        "id": 5,
+        "difficulty": 2,
+        "area": 3,
+        "recommendPower": 1420000,
+        "name": 30109504,
+        "desc": 30109524,
+        "sweepCost": 220,
+        "sailRes": "hgmh_map_5",
+        "desRes": "hgmh_sjsc_bm_banner_301",
+        "desSmallRes": "mhjj_btn_yeqian_301",
+        "bgm": "bgm_oldTrek_sea_5",
+        "icon": "hgmh_xzmdd_bm_tx_301",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+        "costs": [
+          {
+            "id": 1,
+            "count": 50
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300232,
+            "count": 10
+          },
+          {
+            "id": 101946,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 2
+          },
+          {
+            "id": 101414,
+            "count": 5
+          },
+          {
+            "id": 101413,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 100000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301709,
+            "count": 1
+          },
+          {
+            "id": 301710,
+            "count": 1
+          },
+          {
+            "id": 301613,
+            "count": 1
+          },
+          {
+            "id": 301614,
+            "count": 1
+          },
+          {
+            "id": 301615,
+            "count": 1
+          },
+          {
+            "id": 301509,
+            "count": 1
+          },
+          {
+            "id": 301510,
+            "count": 1
+          },
+          {
+            "id": 301413,
+            "count": 1
+          },
+          {
+            "id": 301414,
+            "count": 1
+          },
+          {
+            "id": 301415,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 4800,
+        "isSeal": 1,
+        "unlockConds": 50000,
+        "baseSettleScore": 144000
+      },
+      "3": {
+        "id": 5,
+        "difficulty": 3,
+        "area": 3,
+        "recommendPower": 1613000,
+        "name": 30109504,
+        "desc": 30109524,
+        "sweepCost": 330,
+        "sailRes": "hgmh_map_5",
+        "desRes": "hgmh_sjsc_bm_banner_301",
+        "desSmallRes": "mhjj_btn_yeqian_301",
+        "bgm": "bgm_oldTrek_sea_5",
+        "icon": "hgmh_xzmdd_bm_tx_301",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+        "costs": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300232,
+            "count": 15
+          },
+          {
+            "id": 101946,
+            "count": 10
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 4
+          },
+          {
+            "id": 101416,
+            "count": 5
+          },
+          {
+            "id": 101414,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 150000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301709,
+            "count": 1
+          },
+          {
+            "id": 301710,
+            "count": 1
+          },
+          {
+            "id": 301613,
+            "count": 1
+          },
+          {
+            "id": 301614,
+            "count": 1
+          },
+          {
+            "id": 301615,
+            "count": 1
+          },
+          {
+            "id": 301509,
+            "count": 1
+          },
+          {
+            "id": 301510,
+            "count": 1
+          },
+          {
+            "id": 301413,
+            "count": 1
+          },
+          {
+            "id": 301414,
+            "count": 1
+          },
+          {
+            "id": 301415,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 7200,
+        "isSeal": 1,
+        "unlockConds": 100000,
+        "baseSettleScore": 216000
+      },
+      "4": {
+        "id": 5,
+        "difficulty": 4,
+        "area": 3,
+        "recommendPower": 1728000,
+        "name": 30109504,
+        "desc": 30109524,
+        "sweepCost": 660,
+        "sailRes": "hgmh_map_5",
+        "desRes": "hgmh_sjsc_bm_banner_301",
+        "desSmallRes": "mhjj_btn_yeqian_301",
+        "bgm": "bgm_oldTrek_sea_5",
+        "icon": "hgmh_xzmdd_bm_tx_301",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+        "costs": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300232,
+            "count": 20
+          },
+          {
+            "id": 101946,
+            "count": 20
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 8
+          },
+          {
+            "id": 101417,
+            "count": 5
+          },
+          {
+            "id": 101416,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 300000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301709,
+            "count": 1
+          },
+          {
+            "id": 301710,
+            "count": 1
+          },
+          {
+            "id": 301613,
+            "count": 1
+          },
+          {
+            "id": 301614,
+            "count": 1
+          },
+          {
+            "id": 301615,
+            "count": 1
+          },
+          {
+            "id": 301509,
+            "count": 1
+          },
+          {
+            "id": 301510,
+            "count": 1
+          },
+          {
+            "id": 301413,
+            "count": 1
+          },
+          {
+            "id": 301414,
+            "count": 1
+          },
+          {
+            "id": 301415,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 14400,
+        "isSeal": 1,
+        "unlockConds": 200000,
+        "baseSettleScore": 432000
+      }
+    },
+    "6": {
+      "1": {
+        "id": 6,
+        "difficulty": 1,
+        "area": 3,
+        "recommendPower": 1358000,
+        "name": 30109505,
+        "desc": 30109525,
+        "sweepCost": 110,
+        "sailRes": "hgmh_map_6",
+        "desRes": "hgmh_sjsc_bm_banner_302",
+        "desSmallRes": "mhjj_btn_yeqian_302",
+        "bgm": "bgm_oldTrek_sea_6",
+        "icon": "hgmh_xzmdd_bm_tx_302",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner1",
+        "costs": [],
+        "firstRewards": [
+          {
+            "id": 300241,
+            "count": 5
+          },
+          {
+            "id": 101956,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 1
+          },
+          {
+            "id": 101423,
+            "count": 10
+          },
+          {
+            "id": 101422,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 50000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301711,
+            "count": 1
+          },
+          {
+            "id": 301712,
+            "count": 1
+          },
+          {
+            "id": 301616,
+            "count": 1
+          },
+          {
+            "id": 301617,
+            "count": 1
+          },
+          {
+            "id": 301618,
+            "count": 1
+          },
+          {
+            "id": 301511,
+            "count": 1
+          },
+          {
+            "id": 301512,
+            "count": 1
+          },
+          {
+            "id": 301416,
+            "count": 1
+          },
+          {
+            "id": 301417,
+            "count": 1
+          },
+          {
+            "id": 301418,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 2400,
+        "isSeal": 1,
+        "unlockItem": {
+          "id": 300232,
+          "count": 50
+        },
+        "baseSettleScore": 72000
+      },
+      "2": {
+        "id": 6,
+        "difficulty": 2,
+        "area": 3,
+        "recommendPower": 1918000,
+        "name": 30109505,
+        "desc": 30109525,
+        "sweepCost": 220,
+        "sailRes": "hgmh_map_6",
+        "desRes": "hgmh_sjsc_bm_banner_302",
+        "desSmallRes": "mhjj_btn_yeqian_302",
+        "bgm": "bgm_oldTrek_sea_6",
+        "icon": "hgmh_xzmdd_bm_tx_302",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner2",
+        "costs": [
+          {
+            "id": 1,
+            "count": 50
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300241,
+            "count": 10
+          },
+          {
+            "id": 101956,
+            "count": 5
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 2
+          },
+          {
+            "id": 101424,
+            "count": 5
+          },
+          {
+            "id": 101423,
+            "count": 10
+          },
+          {
+            "id": 339,
+            "count": 100000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301711,
+            "count": 1
+          },
+          {
+            "id": 301712,
+            "count": 1
+          },
+          {
+            "id": 301616,
+            "count": 1
+          },
+          {
+            "id": 301617,
+            "count": 1
+          },
+          {
+            "id": 301618,
+            "count": 1
+          },
+          {
+            "id": 301511,
+            "count": 1
+          },
+          {
+            "id": 301512,
+            "count": 1
+          },
+          {
+            "id": 301416,
+            "count": 1
+          },
+          {
+            "id": 301417,
+            "count": 1
+          },
+          {
+            "id": 301418,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 4800,
+        "isSeal": 1,
+        "unlockConds": 50000,
+        "baseSettleScore": 144000
+      },
+      "3": {
+        "id": 6,
+        "difficulty": 3,
+        "area": 3,
+        "recommendPower": 2192000,
+        "name": 30109505,
+        "desc": 30109525,
+        "sweepCost": 330,
+        "sailRes": "hgmh_map_6",
+        "desRes": "hgmh_sjsc_bm_banner_302",
+        "desSmallRes": "mhjj_btn_yeqian_302",
+        "bgm": "bgm_oldTrek_sea_6",
+        "icon": "hgmh_xzmdd_bm_tx_302",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner3",
+        "costs": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300241,
+            "count": 15
+          },
+          {
+            "id": 101956,
+            "count": 10
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 4
+          },
+          {
+            "id": 101426,
+            "count": 5
+          },
+          {
+            "id": 101424,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 150000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301711,
+            "count": 1
+          },
+          {
+            "id": 301712,
+            "count": 1
+          },
+          {
+            "id": 301616,
+            "count": 1
+          },
+          {
+            "id": 301617,
+            "count": 1
+          },
+          {
+            "id": 301618,
+            "count": 1
+          },
+          {
+            "id": 301511,
+            "count": 1
+          },
+          {
+            "id": 301512,
+            "count": 1
+          },
+          {
+            "id": 301416,
+            "count": 1
+          },
+          {
+            "id": 301417,
+            "count": 1
+          },
+          {
+            "id": 301418,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 7200,
+        "isSeal": 1,
+        "unlockConds": 100000,
+        "baseSettleScore": 216000
+      },
+      "4": {
+        "id": 6,
+        "difficulty": 4,
+        "area": 3,
+        "recommendPower": 2414000,
+        "name": 30109505,
+        "desc": 30109525,
+        "sweepCost": 660,
+        "sailRes": "hgmh_map_6",
+        "desRes": "hgmh_sjsc_bm_banner_302",
+        "desSmallRes": "mhjj_btn_yeqian_302",
+        "bgm": "bgm_oldTrek_sea_6",
+        "icon": "hgmh_xzmdd_bm_tx_302",
+        "difficultyRes": "hgmh_mddxx_bm_ndbanner4",
+        "costs": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "firstRewards": [
+          {
+            "id": 300241,
+            "count": 20
+          },
+          {
+            "id": 101956,
+            "count": 20
+          }
+        ],
+        "fixRewards": [
+          {
+            "id": 332,
+            "count": 8
+          },
+          {
+            "id": 101427,
+            "count": 5
+          },
+          {
+            "id": 101426,
+            "count": 5
+          },
+          {
+            "id": 339,
+            "count": 300000
+          }
+        ],
+        "floatRewards": [
+          {
+            "id": 301711,
+            "count": 1
+          },
+          {
+            "id": 301712,
+            "count": 1
+          },
+          {
+            "id": 301616,
+            "count": 1
+          },
+          {
+            "id": 301617,
+            "count": 1
+          },
+          {
+            "id": 301618,
+            "count": 1
+          },
+          {
+            "id": 301511,
+            "count": 1
+          },
+          {
+            "id": 301512,
+            "count": 1
+          },
+          {
+            "id": 301416,
+            "count": 1
+          },
+          {
+            "id": 301417,
+            "count": 1
+          },
+          {
+            "id": 301418,
+            "count": 1
+          }
+        ],
+        "fishRewards": [
+          7056,
+          7057,
+          7058,
+          7066,
+          7067,
+          7068
+        ],
+        "distance": 14400,
+        "isSeal": 1,
+        "unlockConds": 200000,
+        "baseSettleScore": 432000
+      }
+    }
+  }
+}

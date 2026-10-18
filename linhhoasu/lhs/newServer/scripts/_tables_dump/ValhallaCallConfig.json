@@ -1,0 +1,178 @@
+{
+  "_table": "ValhallaCallConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,cost,diamondCost,rateAdjust,qualityId,callRateShow2,callRateShow1",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "cost": {
+          "id": 80,
+          "count": 1
+        },
+        "diamondCost": {
+          "id": 1,
+          "count": 150
+        },
+        "rateAdjust": [
+          5
+        ],
+        "qualityId": [
+          5
+        ],
+        "callRateShow2": {
+          "3": 3131,
+          "4": 1571,
+          "5": 206
+        },
+        "callRateShow1": {
+          "3": 3396,
+          "4": 1365,
+          "5": 331
+        }
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "cost": {
+          "id": 81,
+          "count": 1
+        },
+        "diamondCost": {
+          "id": 1,
+          "count": 350
+        },
+        "rateAdjust": [
+          6
+        ],
+        "qualityId": [],
+        "callRateShow2": {
+          "3": 3698,
+          "4": 846,
+          "5": 295,
+          "6": 79
+        },
+        "callRateShow1": {
+          "3": 3983,
+          "4": 590,
+          "5": 285,
+          "6": 224
+        }
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "cost": {
+          "id": 82,
+          "count": 1
+        },
+        "diamondCost": {
+          "id": 1,
+          "count": 1000
+        },
+        "rateAdjust": [
+          7
+        ],
+        "qualityId": [],
+        "callRateShow2": {
+          "4": 3780,
+          "5": 829,
+          "6": 247,
+          "7": 79
+        },
+        "callRateShow1": {
+          "4": 4141,
+          "5": 553,
+          "6": 202,
+          "7": 169
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "cost": {
+        "id": 80,
+        "count": 1
+      },
+      "diamondCost": {
+        "id": 1,
+        "count": 150
+      },
+      "rateAdjust": [
+        5
+      ],
+      "qualityId": [
+        5
+      ],
+      "callRateShow2": {
+        "3": 3131,
+        "4": 1571,
+        "5": 206
+      },
+      "callRateShow1": {
+        "3": 3396,
+        "4": 1365,
+        "5": 331
+      }
+    },
+    "2": {
+      "id": 2,
+      "cost": {
+        "id": 81,
+        "count": 1
+      },
+      "diamondCost": {
+        "id": 1,
+        "count": 350
+      },
+      "rateAdjust": [
+        6
+      ],
+      "qualityId": [],
+      "callRateShow2": {
+        "3": 3698,
+        "4": 846,
+        "5": 295,
+        "6": 79
+      },
+      "callRateShow1": {
+        "3": 3983,
+        "4": 590,
+        "5": 285,
+        "6": 224
+      }
+    },
+    "3": {
+      "id": 3,
+      "cost": {
+        "id": 82,
+        "count": 1
+      },
+      "diamondCost": {
+        "id": 1,
+        "count": 1000
+      },
+      "rateAdjust": [
+        7
+      ],
+      "qualityId": [],
+      "callRateShow2": {
+        "4": 3780,
+        "5": 829,
+        "6": 247,
+        "7": 79
+      },
+      "callRateShow1": {
+        "4": 4141,
+        "5": 553,
+        "6": 202,
+        "7": 169
+      }
+    }
+  }
+}

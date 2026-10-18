@@ -1,0 +1,63 @@
+=== lhs-s1001 ===
+[TAILING] Tailing last 15 lines for [lhs-s1001] process (change the value with --lines option)
+/root/.pm2/logs/lhs-s1001-error.log last 15 lines:
+0|lhs-s100 | (node:22891) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:22929) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:22969) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:23020) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:23094) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:23149) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:23213) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:23213) [MONGOOSE] Warning: mongoose: the `new` option for `findOneAndUpdate()` and `findOneAndReplace()` is deprecated. Use `returnDocument: 'after'` instead.
+
+/root/.pm2/logs/lhs-s1001-out.log last 15 lines:
+0|lhs-s100 | [2026-08-27 08:49:23] [ERROR] [ServerList] handleSDKAuth failed: ReplyError: NOAUTH Authentication required.
+0|lhs-s100 |     at parseError (/linhhoasu/lhs/newServer/node_modules/redis-parser/lib/parser.js:179:12)
+0|lhs-s100 |     at parseType (/linhhoasu/lhs/newServer/node_modules/redis-parser/lib/parser.js:302:14)
+0|lhs-s100 | [2026-08-27 08:49:27] [INFO] [Redis] 已连接: 127.0.0.1:6379
+0|lhs-s100 | [2026-08-27 08:49:27] [ERROR] [Redis] 错误: NOAUTH Authentication required.
+0|lhs-s100 | [2026-08-27 08:49:31] [INFO] [Redis] 已连接: 127.0.0.1:6379
+0|lhs-s100 | [2026-08-27 08:49:31] [ERROR] [Redis] 错误: NOAUTH Authentication required.
+0|lhs-s100 | [2026-08-27 08:49:35] [INFO] [Redis] 已连接: 127.0.0.1:6379
+0|lhs-s100 | [2026-08-27 08:49:35] [ERROR] [Redis] 错误: NOAUTH Authentication required.
+0|lhs-s100 | [2026-08-27 08:49:39] [INFO] [Redis] 已连接: 127.0.0.1:6379
+0|lhs-s100 | [2026-08-27 08:49:39] [ERROR] [Redis] 错误: NOAUTH Authentication required.
+0|lhs-s100 | [2026-08-27 08:49:43] [INFO] [Redis] 已连接: 127.0.0.1:6379
+0|lhs-s100 | [2026-08-27 08:49:43] [ERROR] [Redis] 错误: NOAUTH Authentication required.
+0|lhs-s100 | [2026-08-27 08:49:48] [INFO] [Redis] 已连接: 127.0.0.1:6379
+0|lhs-s100 | [2026-08-27 08:49:48] [ERROR] [Redis] 错误: NOAUTH Authentication required.
+
+
+=== lhs-dist ===
+[TAILING] Tailing last 15 lines for [lhs-dist] process (change the value with --lines option)
+/root/.pm2/logs/lhs-dist-error.log last 15 lines:
+1|lhs-dist | (Use `node --trace-warnings ...` to show where the warning was created)
+1|lhs-dist | (node:22878) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:22878) [MONGOOSE] Warning: Duplicate schema index on {"inviteCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:22878) [MONGOOSE] Warning: Duplicate schema index on {"playerId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | MongoDB 连接失败: Server at 127.0.0.1:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+1|lhs-dist | (node:23124) [MONGOOSE] Warning: Duplicate schema index on {"username":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (Use `node --trace-warnings ...` to show where the warning was created)
+1|lhs-dist | (node:23124) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:23124) [MONGOOSE] Warning: Duplicate schema index on {"inviteCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:23124) [MONGOOSE] Warning: Duplicate schema index on {"playerId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:23246) [MONGOOSE] Warning: Duplicate schema index on {"username":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (Use `node --trace-warnings ...` to show where the warning was created)
+1|lhs-dist | (node:23246) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:23246) [MONGOOSE] Warning: Duplicate schema index on {"inviteCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:23246) [MONGOOSE] Warning: Duplicate schema index on {"playerId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+
+/root/.pm2/logs/lhs-dist-out.log last 15 lines:
+1|lhs-dist | MongoDB 连接成功
+1|lhs-dist | Default admin ready: lhsmanager (FIFDCJ)
+1|lhs-dist | Server listening on 3001
+1|lhs-dist | MongoDB 连接成功
+1|lhs-dist | Server listening on 3001
+

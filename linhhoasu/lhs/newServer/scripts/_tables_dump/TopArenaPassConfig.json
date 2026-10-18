@@ -1,0 +1,382 @@
+{
+  "_table": "TopArenaPassConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4",
+  "_sample": [
+    {
+      "64": {
+        "1": {
+          "id": 64,
+          "day": 1,
+          "rewards": [
+            {
+              "id": 180,
+              "count": 2
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 180,
+              "count": 5
+            },
+            {
+              "id": 1,
+              "count": 300
+            }
+          ]
+        },
+        "2": {
+          "id": 64,
+          "day": 2,
+          "rewards": [
+            {
+              "id": 181,
+              "count": 1000
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 181,
+              "count": 1000
+            },
+            {
+              "id": 6,
+              "count": 10
+            }
+          ]
+        },
+        "3": {
+          "id": 64,
+          "day": 3,
+          "rewards": [
+            {
+              "id": 181,
+              "count": 1000
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 181,
+              "count": 1000
+            },
+            {
+              "id": 4,
+              "count": 120
+            }
+          ]
+        },
+        "4": {
+          "id": 64,
+          "day": 4,
+          "rewards": [
+            {
+              "id": 182,
+              "count": 1000
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 182,
+              "count": 1000
+            },
+            {
+              "id": 6,
+              "count": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "512": {
+        "1": {
+          "id": 512,
+          "day": 1,
+          "rewards": [
+            {
+              "id": 180,
+              "count": 2
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 180,
+              "count": 5
+            },
+            {
+              "id": 1,
+              "count": 300
+            }
+          ]
+        },
+        "2": {
+          "id": 512,
+          "day": 2,
+          "rewards": [
+            {
+              "id": 182,
+              "count": 500
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 182,
+              "count": 500
+            },
+            {
+              "id": 4,
+              "count": 60
+            }
+          ]
+        },
+        "3": {
+          "id": 512,
+          "day": 3,
+          "rewards": [
+            {
+              "id": 181,
+              "count": 1000
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 181,
+              "count": 1000
+            },
+            {
+              "id": 6,
+              "count": 10
+            }
+          ]
+        },
+        "4": {
+          "id": 512,
+          "day": 4,
+          "rewards": [
+            {
+              "id": 181,
+              "count": 1000
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 181,
+              "count": 1000
+            },
+            {
+              "id": 4,
+              "count": 60
+            }
+          ]
+        },
+        "5": {
+          "id": 512,
+          "day": 5,
+          "rewards": [
+            {
+              "id": 182,
+              "count": 500
+            }
+          ],
+          "eRewards": [
+            {
+              "id": 182,
+              "count": 500
+            },
+            {
+              "id": 6,
+              "count": 10
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "64": {
+      "1": {
+        "id": 64,
+        "day": 1,
+        "rewards": [
+          {
+            "id": 180,
+            "count": 2
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 180,
+            "count": 5
+          },
+          {
+            "id": 1,
+            "count": 300
+          }
+        ]
+      },
+      "2": {
+        "id": 64,
+        "day": 2,
+        "rewards": [
+          {
+            "id": 181,
+            "count": 1000
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 181,
+            "count": 1000
+          },
+          {
+            "id": 6,
+            "count": 10
+          }
+        ]
+      },
+      "3": {
+        "id": 64,
+        "day": 3,
+        "rewards": [
+          {
+            "id": 181,
+            "count": 1000
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 181,
+            "count": 1000
+          },
+          {
+            "id": 4,
+            "count": 120
+          }
+        ]
+      },
+      "4": {
+        "id": 64,
+        "day": 4,
+        "rewards": [
+          {
+            "id": 182,
+            "count": 1000
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 182,
+            "count": 1000
+          },
+          {
+            "id": 6,
+            "count": 10
+          }
+        ]
+      }
+    },
+    "512": {
+      "1": {
+        "id": 512,
+        "day": 1,
+        "rewards": [
+          {
+            "id": 180,
+            "count": 2
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 180,
+            "count": 5
+          },
+          {
+            "id": 1,
+            "count": 300
+          }
+        ]
+      },
+      "2": {
+        "id": 512,
+        "day": 2,
+        "rewards": [
+          {
+            "id": 182,
+            "count": 500
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 182,
+            "count": 500
+          },
+          {
+            "id": 4,
+            "count": 60
+          }
+        ]
+      },
+      "3": {
+        "id": 512,
+        "day": 3,
+        "rewards": [
+          {
+            "id": 181,
+            "count": 1000
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 181,
+            "count": 1000
+          },
+          {
+            "id": 6,
+            "count": 10
+          }
+        ]
+      },
+      "4": {
+        "id": 512,
+        "day": 4,
+        "rewards": [
+          {
+            "id": 181,
+            "count": 1000
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 181,
+            "count": 1000
+          },
+          {
+            "id": 4,
+            "count": 60
+          }
+        ]
+      },
+      "5": {
+        "id": 512,
+        "day": 5,
+        "rewards": [
+          {
+            "id": 182,
+            "count": 500
+          }
+        ],
+        "eRewards": [
+          {
+            "id": 182,
+            "count": 500
+          },
+          {
+            "id": 6,
+            "count": 10
+          }
+        ]
+      }
+    }
+  }
+}

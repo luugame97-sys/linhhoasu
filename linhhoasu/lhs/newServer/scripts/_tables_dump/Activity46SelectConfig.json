@@ -1,0 +1,956 @@
+{
+  "_table": "Activity46SelectConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4",
+  "_sample": [
+    {
+      "46001": {
+        "1": {
+          "1": {
+            "activityId": 46001,
+            "quality": 1,
+            "rewardNumber": 1,
+            "rewardIds": [
+              11
+            ]
+          },
+          "2": {
+            "activityId": 46001,
+            "quality": 1,
+            "rewardNumber": 2,
+            "rewardIds": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        },
+        "2": {
+          "1": {
+            "activityId": 46001,
+            "quality": 2,
+            "rewardNumber": 1,
+            "rewardIds": [
+              21
+            ]
+          },
+          "2": {
+            "activityId": 46001,
+            "quality": 2,
+            "rewardNumber": 2,
+            "rewardIds": [
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ]
+          }
+        },
+        "3": {
+          "1": {
+            "activityId": 46001,
+            "quality": 3,
+            "rewardNumber": 1,
+            "rewardIds": [
+              31
+            ]
+          },
+          "2": {
+            "activityId": 46001,
+            "quality": 3,
+            "rewardNumber": 2,
+            "rewardIds": [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          }
+        },
+        "4": {
+          "1": {
+            "activityId": 46001,
+            "quality": 4,
+            "rewardNumber": 1,
+            "rewardIds": [
+              41
+            ]
+          },
+          "2": {
+            "activityId": 46001,
+            "quality": 4,
+            "rewardNumber": 2,
+            "rewardIds": [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ]
+          }
+        }
+      }
+    },
+    {
+      "46002": {
+        "1": {
+          "1": {
+            "activityId": 46002,
+            "quality": 1,
+            "rewardNumber": 1,
+            "rewardIds": [
+              11
+            ]
+          },
+          "2": {
+            "activityId": 46002,
+            "quality": 1,
+            "rewardNumber": 2,
+            "rewardIds": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        },
+        "2": {
+          "1": {
+            "activityId": 46002,
+            "quality": 2,
+            "rewardNumber": 1,
+            "rewardIds": [
+              21
+            ]
+          },
+          "2": {
+            "activityId": 46002,
+            "quality": 2,
+            "rewardNumber": 2,
+            "rewardIds": [
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ]
+          }
+        },
+        "3": {
+          "1": {
+            "activityId": 46002,
+            "quality": 3,
+            "rewardNumber": 1,
+            "rewardIds": [
+              31
+            ]
+          },
+          "2": {
+            "activityId": 46002,
+            "quality": 3,
+            "rewardNumber": 2,
+            "rewardIds": [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          }
+        },
+        "4": {
+          "1": {
+            "activityId": 46002,
+            "quality": 4,
+            "rewardNumber": 1,
+            "rewardIds": [
+              41
+            ]
+          },
+          "2": {
+            "activityId": 46002,
+            "quality": 4,
+            "rewardNumber": 2,
+            "rewardIds": [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ]
+          }
+        }
+      }
+    },
+    {
+      "46003": {
+        "1": {
+          "1": {
+            "activityId": 46003,
+            "quality": 1,
+            "rewardNumber": 1,
+            "rewardIds": [
+              11
+            ]
+          },
+          "2": {
+            "activityId": 46003,
+            "quality": 1,
+            "rewardNumber": 2,
+            "rewardIds": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        },
+        "2": {
+          "1": {
+            "activityId": 46003,
+            "quality": 2,
+            "rewardNumber": 1,
+            "rewardIds": [
+              21
+            ]
+          },
+          "2": {
+            "activityId": 46003,
+            "quality": 2,
+            "rewardNumber": 2,
+            "rewardIds": [
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ]
+          }
+        },
+        "3": {
+          "1": {
+            "activityId": 46003,
+            "quality": 3,
+            "rewardNumber": 1,
+            "rewardIds": [
+              31
+            ]
+          },
+          "2": {
+            "activityId": 46003,
+            "quality": 3,
+            "rewardNumber": 2,
+            "rewardIds": [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          }
+        },
+        "4": {
+          "1": {
+            "activityId": 46003,
+            "quality": 4,
+            "rewardNumber": 1,
+            "rewardIds": [
+              41
+            ]
+          },
+          "2": {
+            "activityId": 46003,
+            "quality": 4,
+            "rewardNumber": 2,
+            "rewardIds": [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "data": {
+    "46001": {
+      "1": {
+        "1": {
+          "activityId": 46001,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46001,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46001,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46001,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46001,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46001,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46001,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46001,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    },
+    "46002": {
+      "1": {
+        "1": {
+          "activityId": 46002,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46002,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46002,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46002,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46002,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46002,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46002,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46002,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    },
+    "46003": {
+      "1": {
+        "1": {
+          "activityId": 46003,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46003,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46003,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46003,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46003,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46003,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46003,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46003,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    },
+    "46051": {
+      "1": {
+        "1": {
+          "activityId": 46051,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46051,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46051,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46051,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46051,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46051,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46051,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46051,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    },
+    "46052": {
+      "1": {
+        "1": {
+          "activityId": 46052,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46052,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46052,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46052,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46052,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46052,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46052,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46052,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    },
+    "46053": {
+      "1": {
+        "1": {
+          "activityId": 46053,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46053,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46053,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46053,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46053,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46053,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46053,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46053,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    },
+    "46951": {
+      "1": {
+        "1": {
+          "activityId": 46951,
+          "quality": 1,
+          "rewardNumber": 1,
+          "rewardIds": [
+            11
+          ]
+        },
+        "2": {
+          "activityId": 46951,
+          "quality": 1,
+          "rewardNumber": 2,
+          "rewardIds": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ]
+        }
+      },
+      "2": {
+        "1": {
+          "activityId": 46951,
+          "quality": 2,
+          "rewardNumber": 1,
+          "rewardIds": [
+            21
+          ]
+        },
+        "2": {
+          "activityId": 46951,
+          "quality": 2,
+          "rewardNumber": 2,
+          "rewardIds": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "3": {
+        "1": {
+          "activityId": 46951,
+          "quality": 3,
+          "rewardNumber": 1,
+          "rewardIds": [
+            31
+          ]
+        },
+        "2": {
+          "activityId": 46951,
+          "quality": 3,
+          "rewardNumber": 2,
+          "rewardIds": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ]
+        }
+      },
+      "4": {
+        "1": {
+          "activityId": 46951,
+          "quality": 4,
+          "rewardNumber": 1,
+          "rewardIds": [
+            41
+          ]
+        },
+        "2": {
+          "activityId": 46951,
+          "quality": 4,
+          "rewardNumber": 2,
+          "rewardIds": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      }
+    }
+  }
+}

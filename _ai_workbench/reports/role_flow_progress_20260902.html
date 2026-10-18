@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Role flow progress - 02/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ti-n-s-a-ng-k-v-t-o-nh-n-v-t-02-09-2026">Tiến độ sửa đăng ký và tạo nhân vật (02/09/2026)</h1>
+<h2 id="ho-n-th-nh-v-ang-ch-y-production">Đã hoàn thành và đang chạy production</h2>
+<ul>
+<li>Đăng ký protocol <code>2818</code> và Web <code>/api/user/register</code> chỉ tạo account, không tạo nhân vật hoàn chỉnh.</li>
+<li>Response trả <code>needCreateRole=1/true</code>, <code>roles=[]</code>.</li>
+<li>Khi đăng nhập/chọn S1 bằng <code>2820</code>, server tạo role nháp <code>kungfuId=0</code> để cấp session.</li>
+<li>Client native phát hiện role chưa chọn hệ, mở <code>RoleCreateView</code>; xác nhận lựa chọn gửi tag <code>3100</code> rồi mới vào game.</li>
+<li>E2E production <code>2818 → 2820 → WebSocket tag 1 → 3100</code>: PASS.</li>
+<li>Web registration account-only: HTTP 201, role count 0, <code>needCreateRole=true</code>.</li>
+<li>Account QA đã được dọn sạch sau kiểm thử.</li>
+</ul>
+<h2 id="ch-a-ho-n-th-nh">Chưa hoàn thành</h2>
+<ul>
+<li>Chưa có tên dự phòng tuần tự dạng <code>MG365_xxxxxxx</code>.</li>
+<li>Fallback hiện tại khi pool tên chuẩn bị trùng/hết tên là <code>HanhGia_&lt;server&gt;_&lt;chuỗi ngẫu nhiên&gt;</code>.</li>
+<li>Vì vậy chưa đáp ứng yêu cầu “tài khoản sau tăng đúng một số và dùng chung toàn server”.</li>
+</ul>
+<h2 id="tr-ng-th-i-production-hi-n-t-i">Trạng thái production hiện tại</h2>
+<ul>
+<li><code>lhs-s1001</code>: online, PID <code>23294</code>, restart count <code>1332</code>.</li>
+<li><code>/ready</code>: HTTP 200; MongoDB và Redis healthy.</li>
+<li><code>lhs-dist</code>, <code>lhs-admin</code>, <code>lhs-real-bots</code> đều online.</li>
+<li>Không có lỗi auth/role mới trong log hậu kiểm.</li>
+<li>Hash live 5 file role-flow đã được đọc lại; syntax PASS.</li>
+</ul>
+<h2 id="b-c-ti-p-theo-xu-t">Bước tiếp theo đề xuất</h2>
+<ol>
+<li>Giữ luồng native hiện tại.</li>
+<li>Thêm bộ đếm atomic trong MongoDB dùng chung cho toàn bộ server, ví dụ sequence <code>mg365_role_name</code>.</li>
+<li>Chỉ cấp <code>MG365_0000001</code>, <code>MG365_0000002</code>... khi client không gửi tên hợp lệ hoặc fallback pool thất bại.</li>
+<li>Giữ unique index <code>Player.name</code>, dùng transaction/findOneAndUpdate <code>$inc</code> để không trùng khi nhiều account tạo cùng lúc.</li>
+<li>QA concurrency, relog, restart và multi-server trước khi deploy.</li>
+</ol>
+<p>Không triển khai sequence <code>MG365</code> trong lần kiểm tra tiến độ này.</p></main></body></html>

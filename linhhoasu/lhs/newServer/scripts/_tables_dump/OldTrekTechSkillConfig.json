@@ -1,0 +1,1339 @@
+{
+  "_table": "OldTrekTechSkillConfig",
+  "_rows": 58,
+  "_type": "object",
+  "_firstKeys": "id,type,levelLock,row,pre,position,pointCost,skillType,jobId,privilege,effect,icon,title,desc,descDetail",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "type": 1,
+        "levelLock": 1,
+        "row": 1,
+        "pre": [],
+        "position": 4,
+        "pointCost": 1,
+        "skillType": 1,
+        "jobId": 0,
+        "privilege": [],
+        "effect": [],
+        "icon": "hgmh_kj_skill_initialQueue",
+        "title": 30109600,
+        "desc": 30109700,
+        "descDetail": 30109741
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "type": 1,
+        "levelLock": 2,
+        "row": 2,
+        "pre": [
+          1,
+          51
+        ],
+        "position": 3,
+        "unlockTime": 5,
+        "pointCost": 1,
+        "skillType": 3,
+        "jobId": 0,
+        "privilege": {
+          "102": 1
+        },
+        "effect": [],
+        "icon": "hgmh_kj_skill_deckExp",
+        "title": 30109601,
+        "desc": 30109701,
+        "descDetail": 30109742
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "type": 1,
+        "levelLock": 2,
+        "row": 2,
+        "pre": [
+          1,
+          101
+        ],
+        "position": 5,
+        "unlockTime": 5,
+        "pointCost": 1,
+        "skillType": 3,
+        "jobId": 0,
+        "privilege": {
+          "103": 1
+        },
+        "effect": [],
+        "icon": "hgmh_kj_skill_cabinExp",
+        "title": 30109602,
+        "desc": 30109702,
+        "descDetail": 30109742
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "type": 1,
+      "levelLock": 1,
+      "row": 1,
+      "pre": [],
+      "position": 4,
+      "pointCost": 1,
+      "skillType": 1,
+      "jobId": 0,
+      "privilege": [],
+      "effect": [],
+      "icon": "hgmh_kj_skill_initialQueue",
+      "title": 30109600,
+      "desc": 30109700,
+      "descDetail": 30109741
+    },
+    "2": {
+      "id": 2,
+      "type": 1,
+      "levelLock": 2,
+      "row": 2,
+      "pre": [
+        1,
+        51
+      ],
+      "position": 3,
+      "unlockTime": 5,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "102": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_deckExp",
+      "title": 30109601,
+      "desc": 30109701,
+      "descDetail": 30109742
+    },
+    "3": {
+      "id": 3,
+      "type": 1,
+      "levelLock": 2,
+      "row": 2,
+      "pre": [
+        1,
+        101
+      ],
+      "position": 5,
+      "unlockTime": 5,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "103": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_cabinExp",
+      "title": 30109602,
+      "desc": 30109702,
+      "descDetail": 30109742
+    },
+    "4": {
+      "id": 4,
+      "type": 1,
+      "levelLock": 6,
+      "row": 4,
+      "pre": [
+        52
+      ],
+      "position": 5,
+      "unlockTime": 1200,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "101": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_mastExp",
+      "title": 30109603,
+      "desc": 30109703,
+      "descDetail": 30109742
+    },
+    "5": {
+      "id": 5,
+      "type": 1,
+      "levelLock": 8,
+      "row": 5,
+      "pre": [
+        4
+      ],
+      "position": 6,
+      "unlockTime": 1800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "102": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_deckExp",
+      "title": 30109604,
+      "desc": 30109704,
+      "descDetail": 30109743
+    },
+    "6": {
+      "id": 6,
+      "type": 1,
+      "levelLock": 12,
+      "row": 7,
+      "pre": [
+        53
+      ],
+      "position": 5,
+      "unlockTime": 3600,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "103": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_cabinExp",
+      "title": 30109605,
+      "desc": 30109705,
+      "descDetail": 30109743
+    },
+    "7": {
+      "id": 7,
+      "type": 1,
+      "levelLock": 14,
+      "row": 8,
+      "pre": [
+        6
+      ],
+      "position": 6,
+      "unlockTime": 5400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "101": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_mastExp",
+      "title": 30109606,
+      "desc": 30109706,
+      "descDetail": 30109743
+    },
+    "8": {
+      "id": 8,
+      "type": 1,
+      "levelLock": 18,
+      "row": 10,
+      "pre": [
+        54
+      ],
+      "position": 5,
+      "unlockTime": 10800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "102": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_deckExp",
+      "title": 30109607,
+      "desc": 30109707,
+      "descDetail": 30109744
+    },
+    "9": {
+      "id": 9,
+      "type": 1,
+      "levelLock": 20,
+      "row": 11,
+      "pre": [
+        8
+      ],
+      "position": 6,
+      "unlockTime": 14400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "103": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_cabinExp",
+      "title": 30109608,
+      "desc": 30109708,
+      "descDetail": 30109744
+    },
+    "10": {
+      "id": 10,
+      "type": 1,
+      "levelLock": 24,
+      "row": 13,
+      "pre": [
+        55
+      ],
+      "position": 5,
+      "unlockTime": 21600,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "101": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_mastExp",
+      "title": 30109609,
+      "desc": 30109709,
+      "descDetail": 30109744
+    },
+    "51": {
+      "id": 51,
+      "type": 1,
+      "levelLock": 1,
+      "row": 1,
+      "pre": [],
+      "position": 2,
+      "pointCost": 1,
+      "skillType": 1,
+      "jobId": 0,
+      "privilege": [],
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109610,
+      "desc": 30109710,
+      "descDetail": 30109745
+    },
+    "52": {
+      "id": 52,
+      "type": 1,
+      "levelLock": 4,
+      "row": 3,
+      "pre": [
+        2,
+        3
+      ],
+      "position": 4,
+      "unlockTime": 600,
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109611,
+      "desc": 30109711,
+      "descDetail": 30109745
+    },
+    "53": {
+      "id": 53,
+      "type": 1,
+      "levelLock": 10,
+      "row": 6,
+      "pre": [
+        151,
+        201,
+        5
+      ],
+      "position": 4,
+      "unlockTime": 2700,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109612,
+      "desc": 30109712,
+      "descDetail": 30109745
+    },
+    "54": {
+      "id": 54,
+      "type": 1,
+      "levelLock": 16,
+      "row": 9,
+      "pre": [
+        152,
+        202,
+        7
+      ],
+      "position": 4,
+      "unlockTime": 7200,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109613,
+      "desc": 30109713,
+      "descDetail": 30109745
+    },
+    "55": {
+      "id": 55,
+      "type": 1,
+      "levelLock": 22,
+      "row": 12,
+      "pre": [
+        153,
+        203,
+        9
+      ],
+      "position": 4,
+      "unlockTime": 18000,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109614,
+      "desc": 30109714,
+      "descDetail": 30109745
+    },
+    "56": {
+      "id": 56,
+      "type": 1,
+      "levelLock": 28,
+      "row": 15,
+      "pre": [
+        154,
+        204,
+        251
+      ],
+      "position": 4,
+      "unlockTime": 36000,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109615,
+      "desc": 30109715,
+      "descDetail": 30109745
+    },
+    "57": {
+      "id": 57,
+      "type": 1,
+      "levelLock": 34,
+      "row": 18,
+      "pre": [
+        155,
+        205,
+        252
+      ],
+      "position": 4,
+      "unlockTime": 57600,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109616,
+      "desc": 30109716,
+      "descDetail": 30109745
+    },
+    "58": {
+      "id": 58,
+      "type": 1,
+      "levelLock": 40,
+      "row": 21,
+      "pre": [
+        206,
+        253
+      ],
+      "position": 4,
+      "unlockTime": 86400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "1": 5
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_sailorExp",
+      "title": 30109617,
+      "desc": 30109717,
+      "descDetail": 30109745
+    },
+    "101": {
+      "id": 101,
+      "type": 1,
+      "levelLock": 1,
+      "row": 1,
+      "pre": [],
+      "position": 6,
+      "pointCost": 1,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "hgmh_kj_skill_fish1",
+      "title": 30109618,
+      "desc": 30109718,
+      "descDetail": 30109746
+    },
+    "102": {
+      "id": 102,
+      "type": 1,
+      "levelLock": 6,
+      "row": 4,
+      "pre": [
+        52
+      ],
+      "position": 3,
+      "unlockTime": 1200,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "9": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fish2",
+      "title": 30109619,
+      "desc": 30109719,
+      "descDetail": 30109747
+    },
+    "103": {
+      "id": 103,
+      "type": 1,
+      "levelLock": 18,
+      "row": 10,
+      "pre": [
+        54
+      ],
+      "position": 3,
+      "unlockTime": 10800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "9": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fish3",
+      "title": 30109620,
+      "desc": 30109720,
+      "descDetail": 30109748
+    },
+    "104": {
+      "id": 104,
+      "type": 1,
+      "levelLock": 24,
+      "row": 13,
+      "pre": [
+        55
+      ],
+      "position": 3,
+      "unlockTime": 21600,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "9": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fish4",
+      "title": 30109621,
+      "desc": 30109721,
+      "descDetail": 30109749
+    },
+    "105": {
+      "id": 105,
+      "type": 1,
+      "levelLock": 30,
+      "row": 16,
+      "pre": [
+        56
+      ],
+      "position": 3,
+      "unlockTime": 43200,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "9": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fish5",
+      "title": 30109622,
+      "desc": 30109722,
+      "descDetail": 30109749
+    },
+    "151": {
+      "id": 151,
+      "type": 1,
+      "levelLock": 8,
+      "row": 5,
+      "pre": [
+        102
+      ],
+      "position": 2,
+      "unlockTime": 1800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "11": 500
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishBig",
+      "title": 30109623,
+      "desc": 30109723,
+      "descDetail": 30109750
+    },
+    "152": {
+      "id": 152,
+      "type": 1,
+      "levelLock": 14,
+      "row": 8,
+      "pre": [
+        301
+      ],
+      "position": 2,
+      "unlockTime": 5400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "11": 500
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishBig",
+      "title": 30109624,
+      "desc": 30109724,
+      "descDetail": 30109750
+    },
+    "153": {
+      "id": 153,
+      "type": 1,
+      "levelLock": 20,
+      "row": 11,
+      "pre": [
+        103
+      ],
+      "position": 2,
+      "unlockTime": 14400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "11": 500
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishBig",
+      "title": 30109625,
+      "desc": 30109725,
+      "descDetail": 30109750
+    },
+    "154": {
+      "id": 154,
+      "type": 1,
+      "levelLock": 26,
+      "row": 14,
+      "pre": [
+        104
+      ],
+      "position": 2,
+      "unlockTime": 28800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "11": 500
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishBig",
+      "title": 30109626,
+      "desc": 30109726,
+      "descDetail": 30109750
+    },
+    "155": {
+      "id": 155,
+      "type": 1,
+      "levelLock": 32,
+      "row": 17,
+      "pre": [
+        105
+      ],
+      "position": 2,
+      "unlockTime": 50400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "11": 500
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishBig",
+      "title": 30109627,
+      "desc": 30109727,
+      "descDetail": 30109750
+    },
+    "156": {
+      "id": 156,
+      "type": 1,
+      "levelLock": 36,
+      "row": 19,
+      "pre": [
+        57
+      ],
+      "position": 3,
+      "unlockTime": 64800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "11": 500
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishBig",
+      "title": 30109628,
+      "desc": 30109728,
+      "descDetail": 30109750
+    },
+    "201": {
+      "id": 201,
+      "type": 1,
+      "levelLock": 8,
+      "row": 5,
+      "pre": [
+        102
+      ],
+      "position": 4,
+      "unlockTime": 1800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "12": 1000
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishHit",
+      "title": 30109629,
+      "desc": 30109729,
+      "descDetail": 30109751
+    },
+    "202": {
+      "id": 202,
+      "type": 1,
+      "levelLock": 14,
+      "row": 8,
+      "pre": [
+        301
+      ],
+      "position": 4,
+      "unlockTime": 5400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "12": 1000
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishHit",
+      "title": 30109630,
+      "desc": 30109730,
+      "descDetail": 30109751
+    },
+    "203": {
+      "id": 203,
+      "type": 1,
+      "levelLock": 20,
+      "row": 11,
+      "pre": [
+        103
+      ],
+      "position": 4,
+      "unlockTime": 14400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "12": 1000
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishHit",
+      "title": 30109631,
+      "desc": 30109731,
+      "descDetail": 30109751
+    },
+    "204": {
+      "id": 204,
+      "type": 1,
+      "levelLock": 26,
+      "row": 14,
+      "pre": [
+        104
+      ],
+      "position": 4,
+      "unlockTime": 28800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "12": 1000
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishHit",
+      "title": 30109632,
+      "desc": 30109732,
+      "descDetail": 30109751
+    },
+    "205": {
+      "id": 205,
+      "type": 1,
+      "levelLock": 32,
+      "row": 17,
+      "pre": [
+        105
+      ],
+      "position": 4,
+      "unlockTime": 50400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "12": 1000
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishHit",
+      "title": 30109633,
+      "desc": 30109733,
+      "descDetail": 30109751
+    },
+    "206": {
+      "id": 206,
+      "type": 1,
+      "levelLock": 38,
+      "row": 20,
+      "pre": [
+        156
+      ],
+      "position": 3,
+      "unlockTime": 72000,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "12": 1000
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_fishHit",
+      "title": 30109634,
+      "desc": 30109734,
+      "descDetail": 30109751
+    },
+    "251": {
+      "id": 251,
+      "type": 1,
+      "levelLock": 26,
+      "row": 14,
+      "pre": [
+        10
+      ],
+      "position": 6,
+      "unlockTime": 28800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "effect": [
+        1
+      ],
+      "icon": "hgmh_kj_skill_shipEnhance",
+      "title": 30109635,
+      "desc": 30109735,
+      "descDetail": 30109752
+    },
+    "252": {
+      "id": 252,
+      "type": 1,
+      "levelLock": 32,
+      "row": 17,
+      "pre": [
+        302
+      ],
+      "position": 6,
+      "unlockTime": 50400,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "effect": [
+        2
+      ],
+      "icon": "hgmh_kj_skill_shipEnhance",
+      "title": 30109636,
+      "desc": 30109736,
+      "descDetail": 30109752
+    },
+    "253": {
+      "id": 253,
+      "type": 1,
+      "levelLock": 38,
+      "row": 20,
+      "pre": [
+        303
+      ],
+      "position": 5,
+      "unlockTime": 72000,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "effect": [
+        3
+      ],
+      "icon": "hgmh_kj_skill_shipEnhance",
+      "title": 30109637,
+      "desc": 30109737,
+      "descDetail": 30109752
+    },
+    "301": {
+      "id": 301,
+      "type": 1,
+      "levelLock": 12,
+      "row": 7,
+      "pre": [
+        53
+      ],
+      "position": 3,
+      "unlockTime": 3600,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "2": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_protectExp",
+      "title": 30109638,
+      "desc": 30109738,
+      "descDetail": 30109753
+    },
+    "302": {
+      "id": 302,
+      "type": 1,
+      "levelLock": 30,
+      "row": 16,
+      "pre": [
+        56
+      ],
+      "position": 5,
+      "unlockTime": 43200,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "2": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_protectExp",
+      "title": 30109639,
+      "desc": 30109739,
+      "descDetail": 30109753
+    },
+    "303": {
+      "id": 303,
+      "type": 1,
+      "levelLock": 36,
+      "row": 19,
+      "pre": [
+        57
+      ],
+      "position": 5,
+      "unlockTime": 64800,
+      "pointCost": 1,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "2": 1
+      },
+      "effect": [],
+      "icon": "hgmh_kj_skill_protectExp",
+      "title": 30109640,
+      "desc": 30109740,
+      "descDetail": 30109753
+    },
+    "501": {
+      "id": 501,
+      "type": 2,
+      "levelLock": 1,
+      "row": 1,
+      "pre": [],
+      "position": 1,
+      "unlockTime": 20,
+      "cost": {
+        "id": 1,
+        "count": 10
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 0,
+      "effect": [],
+      "icon": "icon_skill_1561022"
+    },
+    "502": {
+      "id": 502,
+      "type": 2,
+      "levelLock": 20,
+      "row": 3,
+      "pre": [
+        10001
+      ],
+      "position": 1,
+      "unlockTime": 40,
+      "cost": {
+        "id": 1,
+        "count": 20
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "2": 1
+      },
+      "effect": [],
+      "icon": "icon_skill_1561022"
+    },
+    "503": {
+      "id": 503,
+      "type": 2,
+      "levelLock": 70,
+      "row": 5,
+      "pre": [
+        10002
+      ],
+      "position": 1,
+      "unlockTime": 60,
+      "cost": {
+        "id": 1,
+        "count": 30
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "2": 1
+      },
+      "effect": [],
+      "icon": "icon_skill_1561022",
+      "title": 10004,
+      "desc": 30035753
+    },
+    "10001": {
+      "id": 10001,
+      "type": 2,
+      "levelLock": 10,
+      "row": 2,
+      "pre": [
+        501
+      ],
+      "position": 1,
+      "unlockTime": 80,
+      "cost": {
+        "id": 1,
+        "count": 40
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 1,
+      "effect": [],
+      "title": 10201,
+      "desc": 30035758
+    },
+    "10002": {
+      "id": 10002,
+      "type": 2,
+      "levelLock": 50,
+      "row": 4,
+      "pre": [
+        502
+      ],
+      "position": 1,
+      "unlockTime": 100,
+      "cost": {
+        "id": 1,
+        "count": 50
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 1,
+      "effect": [],
+      "title": 10221,
+      "desc": 30035759
+    },
+    "10003": {
+      "id": 10003,
+      "type": 2,
+      "levelLock": 90,
+      "row": 6,
+      "pre": [
+        503
+      ],
+      "position": 1,
+      "unlockTime": 120,
+      "cost": {
+        "id": 1,
+        "count": 60
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 1,
+      "effect": [],
+      "title": 10243,
+      "desc": 30035754
+    },
+    "10101": {
+      "id": 10101,
+      "type": 2,
+      "levelLock": 10,
+      "row": 2,
+      "pre": [
+        10001
+      ],
+      "position": 3,
+      "unlockTime": 140,
+      "cost": {
+        "id": 1,
+        "count": 70
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26241",
+      "title": 10245,
+      "desc": 30035756
+    },
+    "10102": {
+      "id": 10102,
+      "type": 2,
+      "levelLock": 50,
+      "row": 4,
+      "pre": [
+        10002
+      ],
+      "position": 3,
+      "unlockTime": 160,
+      "cost": {
+        "id": 1,
+        "count": 80
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26241"
+    },
+    "10103": {
+      "id": 10103,
+      "type": 2,
+      "levelLock": 90,
+      "row": 6,
+      "pre": [
+        10003
+      ],
+      "position": 3,
+      "unlockTime": 180,
+      "cost": {
+        "id": 1,
+        "count": 90
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26241",
+      "title": 10244,
+      "desc": 30035755
+    },
+    "10201": {
+      "id": 10201,
+      "type": 2,
+      "levelLock": 10,
+      "row": 2,
+      "pre": [
+        10301
+      ],
+      "position": 5,
+      "unlockTime": 200,
+      "cost": {
+        "id": 1,
+        "count": 100
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26132",
+      "title": 10246,
+      "desc": 30035757
+    },
+    "10202": {
+      "id": 10202,
+      "type": 2,
+      "levelLock": 50,
+      "row": 4,
+      "pre": [
+        10302
+      ],
+      "position": 5,
+      "unlockTime": 220,
+      "cost": {
+        "id": 1,
+        "count": 110
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26132",
+      "title": 10001,
+      "desc": 30035750
+    },
+    "10203": {
+      "id": 10203,
+      "type": 2,
+      "levelLock": 90,
+      "row": 6,
+      "pre": [
+        10303
+      ],
+      "position": 5,
+      "unlockTime": 240,
+      "cost": {
+        "id": 1,
+        "count": 120
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26132",
+      "title": 10002,
+      "desc": 30035751
+    },
+    "10301": {
+      "id": 10301,
+      "type": 2,
+      "levelLock": 10,
+      "row": 2,
+      "pre": [
+        10101
+      ],
+      "position": 7,
+      "unlockTime": 260,
+      "cost": {
+        "id": 1,
+        "count": 130
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26531",
+      "title": 10003,
+      "desc": 30035752
+    },
+    "10302": {
+      "id": 10302,
+      "type": 2,
+      "levelLock": 50,
+      "row": 4,
+      "pre": [
+        10102
+      ],
+      "position": 7,
+      "unlockTime": 280,
+      "cost": {
+        "id": 1,
+        "count": 140
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26531"
+    },
+    "10303": {
+      "id": 10303,
+      "type": 2,
+      "levelLock": 90,
+      "row": 6,
+      "pre": [
+        10103
+      ],
+      "position": 7,
+      "unlockTime": 300,
+      "cost": {
+        "id": 1,
+        "count": 150
+      },
+      "pointCost": 2,
+      "skillType": 1,
+      "jobId": 0,
+      "effect": [],
+      "icon": "valhalla_skill_26531"
+    },
+    "20001": {
+      "id": 20001,
+      "type": 2,
+      "levelLock": 20,
+      "row": 3,
+      "pre": [],
+      "position": 5,
+      "unlockTime": 320,
+      "cost": {
+        "id": 1,
+        "count": 160
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "6": 500
+      },
+      "effect": [],
+      "icon": "whlz_skill_mid_51"
+    },
+    "20002": {
+      "id": 20002,
+      "type": 2,
+      "levelLock": 70,
+      "row": 5,
+      "pre": [],
+      "position": 5,
+      "unlockTime": 340,
+      "cost": {
+        "id": 1,
+        "count": 170
+      },
+      "pointCost": 2,
+      "skillType": 3,
+      "jobId": 0,
+      "privilege": {
+        "6": 500
+      },
+      "effect": [],
+      "icon": "whlz_skill_mid_51"
+    }
+  }
+}

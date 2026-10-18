@@ -1,0 +1,2519 @@
+{
+  "_table": "OldTrekSkillConfig",
+  "_rows": 329,
+  "_type": "object",
+  "_firstKeys": "id,energy,chargingRound,hitType,effectId,skillName,desc",
+  "_sample": [
+    {
+      "101": {
+        "id": 101,
+        "energy": 0,
+        "chargingRound": 0,
+        "hitType": 1,
+        "effectId": 101,
+        "skillName": 30120101,
+        "desc": 30130101
+      }
+    },
+    {
+      "102": {
+        "id": 102,
+        "energy": 0,
+        "chargingRound": 0,
+        "hitType": 2,
+        "effectId": 102,
+        "skillName": 30120102,
+        "desc": 30130102
+      }
+    },
+    {
+      "103": {
+        "id": 103,
+        "energy": 0,
+        "chargingRound": 0,
+        "hitType": 3,
+        "effectId": 103,
+        "skillName": 30120103,
+        "desc": 30130103
+      }
+    }
+  ],
+  "data": {
+    "101": {
+      "id": 101,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 101,
+      "skillName": 30120101,
+      "desc": 30130101
+    },
+    "102": {
+      "id": 102,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 102,
+      "skillName": 30120102,
+      "desc": 30130102
+    },
+    "103": {
+      "id": 103,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 103,
+      "skillName": 30120103,
+      "desc": 30130103
+    },
+    "104": {
+      "id": 104,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 104,
+      "skillName": 30120104,
+      "desc": 30130104
+    },
+    "105": {
+      "id": 105,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 105,
+      "skillName": 30120105,
+      "desc": 30130105
+    },
+    "106": {
+      "id": 106,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 106,
+      "skillName": 30120106,
+      "desc": 30130106
+    },
+    "107": {
+      "id": 107,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 7,
+      "effectId": 107,
+      "skillName": 30120107,
+      "desc": 30130107
+    },
+    "108": {
+      "id": 108,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 8,
+      "effectId": 108,
+      "skillName": 30120108,
+      "desc": 30130108
+    },
+    "109": {
+      "id": 109,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 9,
+      "effectId": 109,
+      "skillName": 30120109,
+      "desc": 30130109
+    },
+    "110": {
+      "id": 110,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 10,
+      "effectId": 110,
+      "skillName": 30120110,
+      "desc": 30130110
+    },
+    "201": {
+      "id": 201,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120201,
+      "desc": 30130201
+    },
+    "202": {
+      "id": 202,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120202,
+      "desc": 30130202
+    },
+    "203": {
+      "id": 203,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120203,
+      "desc": 30130203
+    },
+    "204": {
+      "id": 204,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120204,
+      "desc": 30130204
+    },
+    "205": {
+      "id": 205,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120205,
+      "desc": 30130205
+    },
+    "206": {
+      "id": 206,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120206,
+      "desc": 30130206
+    },
+    "301": {
+      "id": 301,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "302": {
+      "id": 302,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "303": {
+      "id": 303,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "304": {
+      "id": 304,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "305": {
+      "id": 305,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "306": {
+      "id": 306,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "311": {
+      "id": 311,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "312": {
+      "id": 312,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "313": {
+      "id": 313,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "401": {
+      "id": 401,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "402": {
+      "id": 402,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "403": {
+      "id": 403,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "411": {
+      "id": 411,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "412": {
+      "id": 412,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "413": {
+      "id": 413,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "421": {
+      "id": 421,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "422": {
+      "id": 422,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "423": {
+      "id": 423,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "431": {
+      "id": 431,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "432": {
+      "id": 432,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "433": {
+      "id": 433,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "501": {
+      "id": 501,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120501,
+      "desc": 30130501
+    },
+    "502": {
+      "id": 502,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120502,
+      "desc": 30130502
+    },
+    "503": {
+      "id": 503,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120503,
+      "desc": 30130503
+    },
+    "504": {
+      "id": 504,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120504,
+      "desc": 30130504
+    },
+    "505": {
+      "id": 505,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0,
+      "skillName": 30120505,
+      "desc": 30130505
+    },
+    "601": {
+      "id": 601,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "602": {
+      "id": 602,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "603": {
+      "id": 603,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "604": {
+      "id": 604,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "605": {
+      "id": 605,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "606": {
+      "id": 606,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "701": {
+      "id": 701,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "702": {
+      "id": 702,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "703": {
+      "id": 703,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "704": {
+      "id": 704,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "705": {
+      "id": 705,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "706": {
+      "id": 706,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "707": {
+      "id": 707,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "708": {
+      "id": 708,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "709": {
+      "id": 709,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "710": {
+      "id": 710,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "4001": {
+      "id": 4001,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 4001,
+      "skillName": 30124001,
+      "desc": 30134001
+    },
+    "4002": {
+      "id": 4002,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 4002,
+      "skillName": 30124002,
+      "desc": 30134002
+    },
+    "4003": {
+      "id": 4003,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 4003,
+      "skillName": 30124003,
+      "desc": 30134003
+    },
+    "4004": {
+      "id": 4004,
+      "energy": 3,
+      "chargingRound": 1,
+      "hitType": 1,
+      "effectId": 4004,
+      "skillName": 30124004,
+      "desc": 30134004
+    },
+    "4005": {
+      "id": 4005,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 4005,
+      "skillName": 30124005,
+      "desc": 30134005
+    },
+    "4101": {
+      "id": 4101,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 4101,
+      "skillName": 30124101,
+      "desc": 30134101
+    },
+    "4102": {
+      "id": 4102,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 4102,
+      "skillName": 30124102,
+      "desc": 30134102
+    },
+    "4103": {
+      "id": 4103,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 4103,
+      "skillName": 30124103,
+      "desc": 30134103
+    },
+    "4104": {
+      "id": 4104,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 4104,
+      "skillName": 30124104,
+      "desc": 30134104
+    },
+    "4105": {
+      "id": 4105,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 4105,
+      "skillName": 30124105,
+      "desc": 30134105
+    },
+    "4201": {
+      "id": 4201,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 4201,
+      "skillName": 30124201,
+      "desc": 30134201
+    },
+    "4202": {
+      "id": 4202,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 4202,
+      "skillName": 30124202,
+      "desc": 30134202
+    },
+    "4203": {
+      "id": 4203,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 4203,
+      "skillName": 30124203,
+      "desc": 30134203
+    },
+    "4204": {
+      "id": 4204,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 4204,
+      "skillName": 30124204,
+      "desc": 30134204
+    },
+    "4205": {
+      "id": 4205,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 4205,
+      "skillName": 30124205,
+      "desc": 30134205
+    },
+    "4301": {
+      "id": 4301,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 4301,
+      "skillName": 30124301,
+      "desc": 30134301
+    },
+    "4302": {
+      "id": 4302,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 4302,
+      "skillName": 30124302,
+      "desc": 30134302
+    },
+    "4303": {
+      "id": 4303,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 4303,
+      "skillName": 30124303,
+      "desc": 30134303
+    },
+    "4304": {
+      "id": 4304,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 4304,
+      "skillName": 30124304,
+      "desc": 30134304
+    },
+    "4305": {
+      "id": 4305,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 4305,
+      "skillName": 30124305,
+      "desc": 30134305
+    },
+    "4401": {
+      "id": 4401,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 4401,
+      "skillName": 30124401,
+      "desc": 30134401
+    },
+    "4402": {
+      "id": 4402,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 4402,
+      "skillName": 30124402,
+      "desc": 30134402
+    },
+    "4403": {
+      "id": 4403,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 4403,
+      "skillName": 30124403,
+      "desc": 30134403
+    },
+    "4404": {
+      "id": 4404,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 4404,
+      "skillName": 30124404,
+      "desc": 30134404
+    },
+    "4405": {
+      "id": 4405,
+      "energy": 3,
+      "chargingRound": 1,
+      "hitType": 5,
+      "effectId": 4405,
+      "skillName": 30124405,
+      "desc": 30134405
+    },
+    "4501": {
+      "id": 4501,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 4501,
+      "skillName": 30124501,
+      "desc": 30134501
+    },
+    "4502": {
+      "id": 4502,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 4502,
+      "skillName": 30124502,
+      "desc": 30134502
+    },
+    "4503": {
+      "id": 4503,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 4503,
+      "skillName": 30124503,
+      "desc": 30134503
+    },
+    "4504": {
+      "id": 4504,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 4504,
+      "skillName": 30124504,
+      "desc": 30134504
+    },
+    "4505": {
+      "id": 4505,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 4505,
+      "skillName": 30124505,
+      "desc": 30134505
+    },
+    "5001": {
+      "id": 5001,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 5001,
+      "skillName": 30125001,
+      "desc": 30135001
+    },
+    "5002": {
+      "id": 5002,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 5002,
+      "skillName": 30125002,
+      "desc": 30135002
+    },
+    "5003": {
+      "id": 5003,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 5003,
+      "skillName": 30125003,
+      "desc": 30135003
+    },
+    "5004": {
+      "id": 5004,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 5004,
+      "skillName": 30125004,
+      "desc": 30135004
+    },
+    "5005": {
+      "id": 5005,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 5005,
+      "skillName": 30125005,
+      "desc": 30135005
+    },
+    "5101": {
+      "id": 5101,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 5101,
+      "skillName": 30125101,
+      "desc": 30135101
+    },
+    "5102": {
+      "id": 5102,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 5102,
+      "skillName": 30125102,
+      "desc": 30135102
+    },
+    "5103": {
+      "id": 5103,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 5103,
+      "skillName": 30125103,
+      "desc": 30135103
+    },
+    "5104": {
+      "id": 5104,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 5104,
+      "skillName": 30125104,
+      "desc": 30135104
+    },
+    "5105": {
+      "id": 5105,
+      "energy": 4,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 5105,
+      "skillName": 30125105,
+      "desc": 30135105
+    },
+    "5201": {
+      "id": 5201,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 5201,
+      "skillName": 30125201,
+      "desc": 30135201
+    },
+    "5202": {
+      "id": 5202,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 5202,
+      "skillName": 30125202,
+      "desc": 30135202
+    },
+    "5203": {
+      "id": 5203,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 5203,
+      "skillName": 30125203,
+      "desc": 30135203
+    },
+    "5204": {
+      "id": 5204,
+      "energy": 3,
+      "chargingRound": 1,
+      "hitType": 3,
+      "effectId": 5204,
+      "skillName": 30125204,
+      "desc": 30135204
+    },
+    "5205": {
+      "id": 5205,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 5205,
+      "skillName": 30125205,
+      "desc": 30135205
+    },
+    "5301": {
+      "id": 5301,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 5301,
+      "skillName": 30125301,
+      "desc": 30135301
+    },
+    "5302": {
+      "id": 5302,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 5302,
+      "skillName": 30125302,
+      "desc": 30135302
+    },
+    "5303": {
+      "id": 5303,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 5303,
+      "skillName": 30125303,
+      "desc": 30135303
+    },
+    "5304": {
+      "id": 5304,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 5304,
+      "skillName": 30125304,
+      "desc": 30135304
+    },
+    "5305": {
+      "id": 5305,
+      "energy": 2,
+      "chargingRound": 1,
+      "hitType": 4,
+      "effectId": 5305,
+      "skillName": 30125305,
+      "desc": 30135305
+    },
+    "5401": {
+      "id": 5401,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 5401,
+      "skillName": 30125401,
+      "desc": 30135401
+    },
+    "5402": {
+      "id": 5402,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 5402,
+      "skillName": 30125402,
+      "desc": 30135402
+    },
+    "5403": {
+      "id": 5403,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 5403,
+      "skillName": 30125403,
+      "desc": 30135403
+    },
+    "5404": {
+      "id": 5404,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 5404,
+      "skillName": 30125404,
+      "desc": 30135404
+    },
+    "5405": {
+      "id": 5405,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 5405,
+      "skillName": 30125405,
+      "desc": 30135405
+    },
+    "5501": {
+      "id": 5501,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 5501,
+      "skillName": 30125501,
+      "desc": 30135501
+    },
+    "5502": {
+      "id": 5502,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 5502,
+      "skillName": 30125502,
+      "desc": 30135502
+    },
+    "5503": {
+      "id": 5503,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 5503,
+      "skillName": 30125503,
+      "desc": 30135503
+    },
+    "5504": {
+      "id": 5504,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 5504,
+      "skillName": 30125504,
+      "desc": 30135504
+    },
+    "5505": {
+      "id": 5505,
+      "energy": 3,
+      "chargingRound": 1,
+      "hitType": 6,
+      "effectId": 5505,
+      "skillName": 30125505,
+      "desc": 30135505
+    },
+    "6001": {
+      "id": 6001,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6001,
+      "skillName": 30126001,
+      "desc": 30136001
+    },
+    "6002": {
+      "id": 6002,
+      "energy": 3,
+      "chargingRound": 1,
+      "hitType": 1,
+      "effectId": 6002,
+      "skillName": 30126002,
+      "desc": 30136002
+    },
+    "6003": {
+      "id": 6003,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6003,
+      "skillName": 30126003,
+      "desc": 30136003
+    },
+    "6004": {
+      "id": 6004,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6004,
+      "skillName": 30126004,
+      "desc": 30136004
+    },
+    "6005": {
+      "id": 6005,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6005,
+      "skillName": 30126005,
+      "desc": 30136005
+    },
+    "6006": {
+      "id": 6006,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6006,
+      "skillName": 30126006,
+      "desc": 30136006
+    },
+    "6007": {
+      "id": 6007,
+      "energy": 4,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6007,
+      "skillName": 30126007,
+      "desc": 30136007
+    },
+    "6008": {
+      "id": 6008,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6008,
+      "skillName": 30126008,
+      "desc": 30136008
+    },
+    "6009": {
+      "id": 6009,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6009,
+      "skillName": 30126009,
+      "desc": 30136009
+    },
+    "6010": {
+      "id": 6010,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6010,
+      "skillName": 30126010,
+      "desc": 30136010
+    },
+    "6011": {
+      "id": 6011,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6011,
+      "skillName": 30126011,
+      "desc": 30136011
+    },
+    "6012": {
+      "id": 6012,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6012,
+      "skillName": 30126012,
+      "desc": 30136012
+    },
+    "6013": {
+      "id": 6013,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6013,
+      "skillName": 30126013,
+      "desc": 30136013
+    },
+    "6014": {
+      "id": 6014,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 1,
+      "effectId": 6014,
+      "skillName": 30126014,
+      "desc": 30136014
+    },
+    "6101": {
+      "id": 6101,
+      "energy": 4,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6101,
+      "skillName": 30126101,
+      "desc": 30136101
+    },
+    "6102": {
+      "id": 6102,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6102,
+      "skillName": 30126102,
+      "desc": 30136102
+    },
+    "6103": {
+      "id": 6103,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6103,
+      "skillName": 30126103,
+      "desc": 30136103
+    },
+    "6104": {
+      "id": 6104,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6104,
+      "skillName": 30126104,
+      "desc": 30136104
+    },
+    "6105": {
+      "id": 6105,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6105,
+      "skillName": 30126105,
+      "desc": 30136105
+    },
+    "6106": {
+      "id": 6106,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6106,
+      "skillName": 30126106,
+      "desc": 30136106
+    },
+    "6107": {
+      "id": 6107,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6107,
+      "skillName": 30126107,
+      "desc": 30136107
+    },
+    "6108": {
+      "id": 6108,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6108,
+      "skillName": 30126108,
+      "desc": 30136108
+    },
+    "6109": {
+      "id": 6109,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6109,
+      "skillName": 30126109,
+      "desc": 30136109
+    },
+    "6110": {
+      "id": 6110,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6110,
+      "skillName": 30126110,
+      "desc": 30136110
+    },
+    "6111": {
+      "id": 6111,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6111,
+      "skillName": 30126111,
+      "desc": 30136111
+    },
+    "6112": {
+      "id": 6112,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6112,
+      "skillName": 30126112,
+      "desc": 30136112
+    },
+    "6113": {
+      "id": 6113,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6113,
+      "skillName": 30126113,
+      "desc": 30136113
+    },
+    "6114": {
+      "id": 6114,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 6114,
+      "skillName": 30126114,
+      "desc": 30136114
+    },
+    "6201": {
+      "id": 6201,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6201,
+      "skillName": 30126201,
+      "desc": 30136201
+    },
+    "6202": {
+      "id": 6202,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6202,
+      "skillName": 30126202,
+      "desc": 30136202
+    },
+    "6203": {
+      "id": 6203,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6203,
+      "skillName": 30126203,
+      "desc": 30136203
+    },
+    "6204": {
+      "id": 6204,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6204,
+      "skillName": 30126204,
+      "desc": 30136204
+    },
+    "6205": {
+      "id": 6205,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6205,
+      "skillName": 30126205,
+      "desc": 30136205
+    },
+    "6206": {
+      "id": 6206,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6206,
+      "skillName": 30126206,
+      "desc": 30136206
+    },
+    "6207": {
+      "id": 6207,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6207,
+      "skillName": 30126207,
+      "desc": 30136207
+    },
+    "6208": {
+      "id": 6208,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6208,
+      "skillName": 30126208,
+      "desc": 30136208
+    },
+    "6209": {
+      "id": 6209,
+      "energy": 4,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6209,
+      "skillName": 30126209,
+      "desc": 30136209
+    },
+    "6210": {
+      "id": 6210,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6210,
+      "skillName": 30126210,
+      "desc": 30136210
+    },
+    "6211": {
+      "id": 6211,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6211,
+      "skillName": 30126211,
+      "desc": 30136211
+    },
+    "6212": {
+      "id": 6212,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6212,
+      "skillName": 30126212,
+      "desc": 30136212
+    },
+    "6213": {
+      "id": 6213,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6213,
+      "skillName": 30126213,
+      "desc": 30136213
+    },
+    "6214": {
+      "id": 6214,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 6214,
+      "skillName": 30126214,
+      "desc": 30136214
+    },
+    "6301": {
+      "id": 6301,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6301,
+      "skillName": 30126301,
+      "desc": 30136301
+    },
+    "6302": {
+      "id": 6302,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6302,
+      "skillName": 30126302,
+      "desc": 30136302
+    },
+    "6303": {
+      "id": 6303,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6303,
+      "skillName": 30126303,
+      "desc": 30136303
+    },
+    "6304": {
+      "id": 6304,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6304,
+      "skillName": 30126304,
+      "desc": 30136304
+    },
+    "6305": {
+      "id": 6305,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6305,
+      "skillName": 30126305,
+      "desc": 30136305
+    },
+    "6306": {
+      "id": 6306,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6306,
+      "skillName": 30126306,
+      "desc": 30136306
+    },
+    "6307": {
+      "id": 6307,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6307,
+      "skillName": 30126307,
+      "desc": 30136307
+    },
+    "6308": {
+      "id": 6308,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6308,
+      "skillName": 30126308,
+      "desc": 30136308
+    },
+    "6309": {
+      "id": 6309,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6309,
+      "skillName": 30126309,
+      "desc": 30136309
+    },
+    "6310": {
+      "id": 6310,
+      "energy": 2,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6310,
+      "skillName": 30126310,
+      "desc": 30136310
+    },
+    "6311": {
+      "id": 6311,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6311,
+      "skillName": 30126311,
+      "desc": 30136311
+    },
+    "6312": {
+      "id": 6312,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6312,
+      "skillName": 30126312,
+      "desc": 30136312
+    },
+    "6313": {
+      "id": 6313,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6313,
+      "skillName": 30126313,
+      "desc": 30136313
+    },
+    "6314": {
+      "id": 6314,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 6314,
+      "skillName": 30126314,
+      "desc": 30136314
+    },
+    "6401": {
+      "id": 6401,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6401,
+      "skillName": 30126401,
+      "desc": 30136401
+    },
+    "6402": {
+      "id": 6402,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6402,
+      "skillName": 30126402,
+      "desc": 30136402
+    },
+    "6403": {
+      "id": 6403,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6403,
+      "skillName": 30126403,
+      "desc": 30136403
+    },
+    "6404": {
+      "id": 6404,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6404,
+      "skillName": 30126404,
+      "desc": 30136404
+    },
+    "6405": {
+      "id": 6405,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6405,
+      "skillName": 30126405,
+      "desc": 30136405
+    },
+    "6406": {
+      "id": 6406,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6406,
+      "skillName": 30126406,
+      "desc": 30136406
+    },
+    "6407": {
+      "id": 6407,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6407,
+      "skillName": 30126407,
+      "desc": 30136407
+    },
+    "6408": {
+      "id": 6408,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6408,
+      "skillName": 30126408,
+      "desc": 30136408
+    },
+    "6409": {
+      "id": 6409,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6409,
+      "skillName": 30126409,
+      "desc": 30136409
+    },
+    "6410": {
+      "id": 6410,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6410,
+      "skillName": 30126410,
+      "desc": 30136410
+    },
+    "6411": {
+      "id": 6411,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6411,
+      "skillName": 30126411,
+      "desc": 30136411
+    },
+    "6412": {
+      "id": 6412,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6412,
+      "skillName": 30126412,
+      "desc": 30136412
+    },
+    "6413": {
+      "id": 6413,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6413,
+      "skillName": 30126413,
+      "desc": 30136413
+    },
+    "6414": {
+      "id": 6414,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 6414,
+      "skillName": 30126414,
+      "desc": 30136414
+    },
+    "6501": {
+      "id": 6501,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6501,
+      "skillName": 30126501,
+      "desc": 30136501
+    },
+    "6502": {
+      "id": 6502,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6502,
+      "skillName": 30126502,
+      "desc": 30136502
+    },
+    "6503": {
+      "id": 6503,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6503,
+      "skillName": 30126503,
+      "desc": 30136503
+    },
+    "6504": {
+      "id": 6504,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6504,
+      "skillName": 30126504,
+      "desc": 30136504
+    },
+    "6505": {
+      "id": 6505,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6505,
+      "skillName": 30126505,
+      "desc": 30136505
+    },
+    "6506": {
+      "id": 6506,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6506,
+      "skillName": 30126506,
+      "desc": 30136506
+    },
+    "6507": {
+      "id": 6507,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6507,
+      "skillName": 30126507,
+      "desc": 30136507
+    },
+    "6508": {
+      "id": 6508,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6508,
+      "skillName": 30126508,
+      "desc": 30136508
+    },
+    "6509": {
+      "id": 6509,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6509,
+      "skillName": 30126509,
+      "desc": 30136509
+    },
+    "6510": {
+      "id": 6510,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6510,
+      "skillName": 30126510,
+      "desc": 30136510
+    },
+    "6511": {
+      "id": 6511,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6511,
+      "skillName": 30126511,
+      "desc": 30136511
+    },
+    "6512": {
+      "id": 6512,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6512,
+      "skillName": 30126512,
+      "desc": 30136512
+    },
+    "6513": {
+      "id": 6513,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6513,
+      "skillName": 30126513,
+      "desc": 30136513
+    },
+    "6514": {
+      "id": 6514,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 6514,
+      "skillName": 30126514,
+      "desc": 30136514
+    },
+    "7001": {
+      "id": 7001,
+      "energy": 4,
+      "chargingRound": 1,
+      "hitType": 1,
+      "effectId": 7001,
+      "skillName": 30127001,
+      "desc": 30137001
+    },
+    "7101": {
+      "id": 7101,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 2,
+      "effectId": 7101,
+      "skillName": 30127101,
+      "desc": 30137101
+    },
+    "7201": {
+      "id": 7201,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 3,
+      "effectId": 7201,
+      "skillName": 30127201,
+      "desc": 30137201
+    },
+    "7301": {
+      "id": 7301,
+      "energy": 4,
+      "chargingRound": 0,
+      "hitType": 4,
+      "effectId": 7301,
+      "skillName": 30127301,
+      "desc": 30137301
+    },
+    "7401": {
+      "id": 7401,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 5,
+      "effectId": 7401,
+      "skillName": 30127401,
+      "desc": 30137401
+    },
+    "7501": {
+      "id": 7501,
+      "energy": 3,
+      "chargingRound": 0,
+      "hitType": 6,
+      "effectId": 7501,
+      "skillName": 30127501,
+      "desc": 30137501
+    },
+    "10001": {
+      "id": 10001,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10002": {
+      "id": 10002,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10003": {
+      "id": 10003,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10004": {
+      "id": 10004,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10005": {
+      "id": 10005,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10011": {
+      "id": 10011,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10012": {
+      "id": 10012,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10013": {
+      "id": 10013,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10014": {
+      "id": 10014,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10015": {
+      "id": 10015,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10021": {
+      "id": 10021,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10022": {
+      "id": 10022,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10023": {
+      "id": 10023,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10024": {
+      "id": 10024,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10025": {
+      "id": 10025,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10031": {
+      "id": 10031,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10032": {
+      "id": 10032,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10033": {
+      "id": 10033,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10034": {
+      "id": 10034,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10035": {
+      "id": 10035,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10041": {
+      "id": 10041,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10042": {
+      "id": 10042,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10043": {
+      "id": 10043,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10044": {
+      "id": 10044,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10045": {
+      "id": 10045,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10051": {
+      "id": 10051,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10052": {
+      "id": 10052,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10053": {
+      "id": 10053,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10054": {
+      "id": 10054,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10055": {
+      "id": 10055,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10061": {
+      "id": 10061,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10062": {
+      "id": 10062,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10063": {
+      "id": 10063,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10064": {
+      "id": 10064,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10065": {
+      "id": 10065,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10071": {
+      "id": 10071,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10072": {
+      "id": 10072,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10073": {
+      "id": 10073,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10074": {
+      "id": 10074,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10075": {
+      "id": 10075,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10081": {
+      "id": 10081,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10082": {
+      "id": 10082,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10083": {
+      "id": 10083,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10084": {
+      "id": 10084,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10085": {
+      "id": 10085,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10091": {
+      "id": 10091,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10092": {
+      "id": 10092,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10093": {
+      "id": 10093,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10094": {
+      "id": 10094,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10095": {
+      "id": 10095,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10101": {
+      "id": 10101,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10102": {
+      "id": 10102,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10103": {
+      "id": 10103,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10104": {
+      "id": 10104,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10105": {
+      "id": 10105,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10111": {
+      "id": 10111,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10112": {
+      "id": 10112,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10113": {
+      "id": 10113,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10114": {
+      "id": 10114,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10115": {
+      "id": 10115,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10121": {
+      "id": 10121,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10122": {
+      "id": 10122,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10123": {
+      "id": 10123,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10124": {
+      "id": 10124,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10125": {
+      "id": 10125,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10131": {
+      "id": 10131,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10132": {
+      "id": 10132,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10133": {
+      "id": 10133,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10134": {
+      "id": 10134,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10135": {
+      "id": 10135,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10141": {
+      "id": 10141,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10142": {
+      "id": 10142,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10143": {
+      "id": 10143,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10144": {
+      "id": 10144,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10145": {
+      "id": 10145,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10151": {
+      "id": 10151,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10152": {
+      "id": 10152,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10153": {
+      "id": 10153,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10154": {
+      "id": 10154,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10155": {
+      "id": 10155,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10161": {
+      "id": 10161,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10162": {
+      "id": 10162,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10163": {
+      "id": 10163,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10164": {
+      "id": 10164,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "10165": {
+      "id": 10165,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11001": {
+      "id": 11001,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11002": {
+      "id": 11002,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11003": {
+      "id": 11003,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11004": {
+      "id": 11004,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11005": {
+      "id": 11005,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11006": {
+      "id": 11006,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11007": {
+      "id": 11007,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11008": {
+      "id": 11008,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11009": {
+      "id": 11009,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11010": {
+      "id": 11010,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11011": {
+      "id": 11011,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11012": {
+      "id": 11012,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11013": {
+      "id": 11013,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11014": {
+      "id": 11014,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11015": {
+      "id": 11015,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11016": {
+      "id": 11016,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11017": {
+      "id": 11017,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11018": {
+      "id": 11018,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11019": {
+      "id": 11019,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11020": {
+      "id": 11020,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11021": {
+      "id": 11021,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11022": {
+      "id": 11022,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11023": {
+      "id": 11023,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11024": {
+      "id": 11024,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11025": {
+      "id": 11025,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11026": {
+      "id": 11026,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11027": {
+      "id": 11027,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11028": {
+      "id": 11028,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11029": {
+      "id": 11029,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11030": {
+      "id": 11030,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11031": {
+      "id": 11031,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11032": {
+      "id": 11032,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11033": {
+      "id": 11033,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11034": {
+      "id": 11034,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11035": {
+      "id": 11035,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    },
+    "11036": {
+      "id": 11036,
+      "energy": 0,
+      "chargingRound": 0,
+      "hitType": 0
+    }
+  }
+}

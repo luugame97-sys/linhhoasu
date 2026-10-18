@@ -1,0 +1,147 @@
+{
+  "_table": "AuctionOpenConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,timeType,startTime,endTime,area,isPlayer,isRoyal,showLimit",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "timeType": 3,
+        "startTime": 43,
+        "endTime": 50,
+        "area": 2,
+        "isPlayer": 0,
+        "isRoyal": 1,
+        "showLimit": []
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "timeType": 2,
+        "startTime": 1728057600000,
+        "endTime": 1728662400000,
+        "limitStartTime": 1706630400000,
+        "limitEndTime": 1723824000000,
+        "area": 2,
+        "isPlayer": 0,
+        "isRoyal": 1,
+        "showLimit": [
+          {
+            "type": 5,
+            "value": 57,
+            "cond": 4
+          }
+        ],
+        "limitServerId": [
+          [
+            1001,
+            1088
+          ],
+          [
+            99999,
+            99999
+          ]
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "timeType": 3,
+        "startTime": 43,
+        "endTime": 50,
+        "area": 1,
+        "isPlayer": 0,
+        "isRoyal": 1,
+        "showLimit": []
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "timeType": 3,
+      "startTime": 43,
+      "endTime": 50,
+      "area": 2,
+      "isPlayer": 0,
+      "isRoyal": 1,
+      "showLimit": []
+    },
+    "2": {
+      "id": 2,
+      "timeType": 2,
+      "startTime": 1728057600000,
+      "endTime": 1728662400000,
+      "limitStartTime": 1706630400000,
+      "limitEndTime": 1723824000000,
+      "area": 2,
+      "isPlayer": 0,
+      "isRoyal": 1,
+      "showLimit": [
+        {
+          "type": 5,
+          "value": 57,
+          "cond": 4
+        }
+      ],
+      "limitServerId": [
+        [
+          1001,
+          1088
+        ],
+        [
+          99999,
+          99999
+        ]
+      ]
+    },
+    "3": {
+      "id": 3,
+      "timeType": 3,
+      "startTime": 43,
+      "endTime": 50,
+      "area": 1,
+      "isPlayer": 0,
+      "isRoyal": 1,
+      "showLimit": []
+    },
+    "4": {
+      "id": 4,
+      "timeType": 2,
+      "startTime": 1728057600000,
+      "endTime": 1728662400000,
+      "limitStartTime": 1706630400000,
+      "area": 2,
+      "isPlayer": 0,
+      "isRoyal": 1,
+      "showLimit": [
+        {
+          "type": 5,
+          "value": 57,
+          "cond": 4
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "timeType": 2,
+      "startTime": 1784736000000,
+      "endTime": 1784822400000,
+      "limitStartTime": 1706630400000,
+      "limitEndTime": 1777996800000,
+      "area": 1,
+      "isPlayer": 0,
+      "isRoyal": 1,
+      "showLimit": [
+        {
+          "type": 5,
+          "value": 57,
+          "cond": 4
+        }
+      ]
+    }
+  }
+}

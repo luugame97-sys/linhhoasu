@@ -1,0 +1,10356 @@
+{
+  "_table": "ValhallaFormationTaskConfig",
+  "_rows": 294,
+  "_type": "object",
+  "_firstKeys": "id,weight,successRewards,failRewards,star,heroNum,conditions,baseSuccess,time,name",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "weight": 10000,
+        "successRewards": [
+          {
+            "id": 100721,
+            "count": 1
+          }
+        ],
+        "failRewards": [
+          {
+            "id": 229,
+            "count": 3
+          }
+        ],
+        "star": 1,
+        "heroNum": 1,
+        "conditions": {
+          "type": [
+            1
+          ]
+        },
+        "baseSuccess": 4500,
+        "time": 3600,
+        "name": 30104660
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "weight": 10000,
+        "successRewards": [
+          {
+            "id": 100721,
+            "count": 1
+          }
+        ],
+        "failRewards": [
+          {
+            "id": 229,
+            "count": 3
+          }
+        ],
+        "star": 1,
+        "heroNum": 1,
+        "conditions": {
+          "type": [
+            2
+          ]
+        },
+        "baseSuccess": 4500,
+        "time": 3600,
+        "name": 30104660
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "weight": 10000,
+        "successRewards": [
+          {
+            "id": 100721,
+            "count": 1
+          }
+        ],
+        "failRewards": [
+          {
+            "id": 229,
+            "count": 3
+          }
+        ],
+        "star": 1,
+        "heroNum": 1,
+        "conditions": {
+          "type": [
+            3
+          ]
+        },
+        "baseSuccess": 4500,
+        "time": 3600,
+        "name": 30104660
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          1
+        ]
+      },
+      "baseSuccess": 4500,
+      "time": 3600,
+      "name": 30104660
+    },
+    "2": {
+      "id": 2,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          2
+        ]
+      },
+      "baseSuccess": 4500,
+      "time": 3600,
+      "name": 30104660
+    },
+    "3": {
+      "id": 3,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          3
+        ]
+      },
+      "baseSuccess": 4500,
+      "time": 3600,
+      "name": 30104660
+    },
+    "4": {
+      "id": 4,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          4
+        ]
+      },
+      "baseSuccess": 4500,
+      "time": 3600,
+      "name": 30104660
+    },
+    "5": {
+      "id": 5,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          5
+        ]
+      },
+      "baseSuccess": 4500,
+      "time": 3600,
+      "name": 30104660
+    },
+    "6": {
+      "id": 6,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          0
+        ],
+        "level": 5
+      },
+      "baseSuccess": 4500,
+      "time": 3600,
+      "name": 30104660
+    },
+    "7": {
+      "id": 7,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 3
+        }
+      ],
+      "star": 1,
+      "heroNum": 1,
+      "conditions": {
+        "type": [
+          0
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 4000,
+      "time": 3600,
+      "name": 30104660
+    },
+    "201": {
+      "id": 201,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 5
+      },
+      "baseSuccess": 4500,
+      "time": 5400,
+      "name": 30104662
+    },
+    "202": {
+      "id": 202,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 5
+      },
+      "baseSuccess": 4500,
+      "time": 5400,
+      "name": 30104662
+    },
+    "203": {
+      "id": 203,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 5
+      },
+      "baseSuccess": 4500,
+      "time": 5400,
+      "name": 30104662
+    },
+    "204": {
+      "id": 204,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 5
+      },
+      "baseSuccess": 4500,
+      "time": 5400,
+      "name": 30104662
+    },
+    "205": {
+      "id": 205,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 5
+      },
+      "baseSuccess": 4500,
+      "time": 5400,
+      "name": 30104662
+    },
+    "206": {
+      "id": 206,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          0
+        ],
+        "level": 5,
+        "quality": 4
+      },
+      "baseSuccess": 3900,
+      "time": 5400,
+      "name": 30104662
+    },
+    "207": {
+      "id": 207,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 4000,
+      "time": 5400,
+      "name": 30104662
+    },
+    "208": {
+      "id": 208,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 4000,
+      "time": 5400,
+      "name": 30104662
+    },
+    "209": {
+      "id": 209,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 4000,
+      "time": 5400,
+      "name": 30104662
+    },
+    "210": {
+      "id": 210,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 4000,
+      "time": 5400,
+      "name": 30104662
+    },
+    "211": {
+      "id": 211,
+      "weight": 10000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 5
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        }
+      ],
+      "star": 2,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 4000,
+      "time": 5400,
+      "name": 30104662
+    },
+    "301": {
+      "id": 301,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104664
+    },
+    "302": {
+      "id": 302,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104664
+    },
+    "303": {
+      "id": 303,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104664
+    },
+    "304": {
+      "id": 304,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104664
+    },
+    "305": {
+      "id": 305,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104664
+    },
+    "306": {
+      "id": 306,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "307": {
+      "id": 307,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "308": {
+      "id": 308,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "309": {
+      "id": 309,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "310": {
+      "id": 310,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "311": {
+      "id": 311,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "312": {
+      "id": 312,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "313": {
+      "id": 313,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "314": {
+      "id": 314,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "315": {
+      "id": 315,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104664
+    },
+    "316": {
+      "id": 316,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "317": {
+      "id": 317,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "318": {
+      "id": 318,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "319": {
+      "id": 319,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "320": {
+      "id": 320,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "321": {
+      "id": 321,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "322": {
+      "id": 322,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "323": {
+      "id": 323,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "324": {
+      "id": 324,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "325": {
+      "id": 325,
+      "weight": 6000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104664
+    },
+    "326": {
+      "id": 326,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104665
+    },
+    "327": {
+      "id": 327,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104665
+    },
+    "328": {
+      "id": 328,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104665
+    },
+    "329": {
+      "id": 329,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104665
+    },
+    "330": {
+      "id": 330,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 10,
+        "quality": 4
+      },
+      "baseSuccess": 3200,
+      "time": 7200,
+      "name": 30104665
+    },
+    "331": {
+      "id": 331,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "332": {
+      "id": 332,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "333": {
+      "id": 333,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "334": {
+      "id": 334,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "335": {
+      "id": 335,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "336": {
+      "id": 336,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "337": {
+      "id": 337,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "338": {
+      "id": 338,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "339": {
+      "id": 339,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "340": {
+      "id": 340,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 10
+      },
+      "baseSuccess": 3400,
+      "time": 7200,
+      "name": 30104665
+    },
+    "341": {
+      "id": 341,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "342": {
+      "id": 342,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "343": {
+      "id": 343,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "344": {
+      "id": 344,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "345": {
+      "id": 345,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "346": {
+      "id": 346,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "347": {
+      "id": 347,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "348": {
+      "id": 348,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "349": {
+      "id": 349,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "350": {
+      "id": 350,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 3,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 4
+      },
+      "baseSuccess": 3000,
+      "time": 7200,
+      "name": 30104665
+    },
+    "401": {
+      "id": 401,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104666
+    },
+    "402": {
+      "id": 402,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104666
+    },
+    "403": {
+      "id": 403,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104666
+    },
+    "404": {
+      "id": 404,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104666
+    },
+    "405": {
+      "id": 405,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104666
+    },
+    "406": {
+      "id": 406,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "407": {
+      "id": 407,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "408": {
+      "id": 408,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "409": {
+      "id": 409,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "410": {
+      "id": 410,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "411": {
+      "id": 411,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "412": {
+      "id": 412,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "413": {
+      "id": 413,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "414": {
+      "id": 414,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "415": {
+      "id": 415,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "416": {
+      "id": 416,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "417": {
+      "id": 417,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "418": {
+      "id": 418,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "419": {
+      "id": 419,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "420": {
+      "id": 420,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "421": {
+      "id": 421,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "422": {
+      "id": 422,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "423": {
+      "id": 423,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "424": {
+      "id": 424,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "425": {
+      "id": 425,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104666
+    },
+    "426": {
+      "id": 426,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104667
+    },
+    "427": {
+      "id": 427,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104667
+    },
+    "428": {
+      "id": 428,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104667
+    },
+    "429": {
+      "id": 429,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104667
+    },
+    "430": {
+      "id": 430,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104667
+    },
+    "431": {
+      "id": 431,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "432": {
+      "id": 432,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "433": {
+      "id": 433,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "434": {
+      "id": 434,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "435": {
+      "id": 435,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "436": {
+      "id": 436,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "437": {
+      "id": 437,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "438": {
+      "id": 438,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "439": {
+      "id": 439,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "440": {
+      "id": 440,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "441": {
+      "id": 441,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "442": {
+      "id": 442,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "443": {
+      "id": 443,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "444": {
+      "id": 444,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "445": {
+      "id": 445,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "446": {
+      "id": 446,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "447": {
+      "id": 447,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "448": {
+      "id": 448,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "449": {
+      "id": 449,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "450": {
+      "id": 450,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104667
+    },
+    "451": {
+      "id": 451,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104668
+    },
+    "452": {
+      "id": 452,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104668
+    },
+    "453": {
+      "id": 453,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104668
+    },
+    "454": {
+      "id": 454,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104668
+    },
+    "455": {
+      "id": 455,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 15,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 10800,
+      "name": 30104668
+    },
+    "456": {
+      "id": 456,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "457": {
+      "id": 457,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "458": {
+      "id": 458,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "459": {
+      "id": 459,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "460": {
+      "id": 460,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "461": {
+      "id": 461,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "462": {
+      "id": 462,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "463": {
+      "id": 463,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "464": {
+      "id": 464,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "465": {
+      "id": 465,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 15
+      },
+      "baseSuccess": 2500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "466": {
+      "id": 466,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "467": {
+      "id": 467,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "468": {
+      "id": 468,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "469": {
+      "id": 469,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "470": {
+      "id": 470,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "471": {
+      "id": 471,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "472": {
+      "id": 472,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "473": {
+      "id": 473,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "474": {
+      "id": 474,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "475": {
+      "id": 475,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 1
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 4,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 10800,
+      "name": 30104668
+    },
+    "501": {
+      "id": 501,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104669
+    },
+    "502": {
+      "id": 502,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104669
+    },
+    "503": {
+      "id": 503,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104669
+    },
+    "504": {
+      "id": 504,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104669
+    },
+    "505": {
+      "id": 505,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104669
+    },
+    "506": {
+      "id": 506,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "507": {
+      "id": 507,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "508": {
+      "id": 508,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "509": {
+      "id": 509,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "510": {
+      "id": 510,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "511": {
+      "id": 511,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "512": {
+      "id": 512,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "513": {
+      "id": 513,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "514": {
+      "id": 514,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "515": {
+      "id": 515,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "516": {
+      "id": 516,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "517": {
+      "id": 517,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "518": {
+      "id": 518,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "519": {
+      "id": 519,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "520": {
+      "id": 520,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "521": {
+      "id": 521,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "522": {
+      "id": 522,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "523": {
+      "id": 523,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "524": {
+      "id": 524,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "525": {
+      "id": 525,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "526": {
+      "id": 526,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "527": {
+      "id": 527,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "528": {
+      "id": 528,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "529": {
+      "id": 529,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "530": {
+      "id": 530,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "531": {
+      "id": 531,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "532": {
+      "id": 532,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "533": {
+      "id": 533,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "534": {
+      "id": 534,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "535": {
+      "id": 535,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "536": {
+      "id": 536,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "537": {
+      "id": 537,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "538": {
+      "id": 538,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "539": {
+      "id": 539,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "540": {
+      "id": 540,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104669
+    },
+    "541": {
+      "id": 541,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "542": {
+      "id": 542,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "543": {
+      "id": 543,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "544": {
+      "id": 544,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "545": {
+      "id": 545,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "546": {
+      "id": 546,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "547": {
+      "id": 547,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "548": {
+      "id": 548,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "549": {
+      "id": 549,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "550": {
+      "id": 550,
+      "weight": 4000,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104669
+    },
+    "551": {
+      "id": 551,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104669
+    },
+    "552": {
+      "id": 552,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104670
+    },
+    "553": {
+      "id": 553,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104670
+    },
+    "554": {
+      "id": 554,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104670
+    },
+    "555": {
+      "id": 555,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104670
+    },
+    "556": {
+      "id": 556,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "557": {
+      "id": 557,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "558": {
+      "id": 558,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "559": {
+      "id": 559,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "560": {
+      "id": 560,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "561": {
+      "id": 561,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "562": {
+      "id": 562,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "563": {
+      "id": 563,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "564": {
+      "id": 564,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "565": {
+      "id": 565,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "566": {
+      "id": 566,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "567": {
+      "id": 567,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "568": {
+      "id": 568,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "569": {
+      "id": 569,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "570": {
+      "id": 570,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "571": {
+      "id": 571,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "572": {
+      "id": 572,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "573": {
+      "id": 573,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "574": {
+      "id": 574,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "575": {
+      "id": 575,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "576": {
+      "id": 576,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "577": {
+      "id": 577,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "578": {
+      "id": 578,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "579": {
+      "id": 579,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "580": {
+      "id": 580,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "581": {
+      "id": 581,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "582": {
+      "id": 582,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "583": {
+      "id": 583,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "584": {
+      "id": 584,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "585": {
+      "id": 585,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "586": {
+      "id": 586,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "587": {
+      "id": 587,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "588": {
+      "id": 588,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "589": {
+      "id": 589,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "590": {
+      "id": 590,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104670
+    },
+    "591": {
+      "id": 591,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "592": {
+      "id": 592,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "593": {
+      "id": 593,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "594": {
+      "id": 594,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "595": {
+      "id": 595,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "596": {
+      "id": 596,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "597": {
+      "id": 597,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "598": {
+      "id": 598,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "599": {
+      "id": 599,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "600": {
+      "id": 600,
+      "weight": 1150,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104670
+    },
+    "601": {
+      "id": 601,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104671
+    },
+    "602": {
+      "id": 602,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104671
+    },
+    "603": {
+      "id": 603,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104671
+    },
+    "604": {
+      "id": 604,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104671
+    },
+    "605": {
+      "id": 605,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 20,
+        "quality": 6
+      },
+      "baseSuccess": 1300,
+      "time": 14400,
+      "name": 30104671
+    },
+    "606": {
+      "id": 606,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "607": {
+      "id": 607,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "608": {
+      "id": 608,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "609": {
+      "id": 609,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "610": {
+      "id": 610,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "611": {
+      "id": 611,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "612": {
+      "id": 612,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "613": {
+      "id": 613,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "614": {
+      "id": 614,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "615": {
+      "id": 615,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "616": {
+      "id": 616,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "617": {
+      "id": 617,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "618": {
+      "id": 618,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "619": {
+      "id": 619,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "620": {
+      "id": 620,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "621": {
+      "id": 621,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "622": {
+      "id": 622,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "623": {
+      "id": 623,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "624": {
+      "id": 624,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "625": {
+      "id": 625,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 6
+      },
+      "baseSuccess": 1500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "626": {
+      "id": 626,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "627": {
+      "id": 627,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "628": {
+      "id": 628,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "629": {
+      "id": 629,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "630": {
+      "id": 630,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          5
+        ],
+        "level": 20,
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "631": {
+      "id": 631,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "632": {
+      "id": 632,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "633": {
+      "id": 633,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "634": {
+      "id": 634,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "635": {
+      "id": 635,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "636": {
+      "id": 636,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "637": {
+      "id": 637,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "638": {
+      "id": 638,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "639": {
+      "id": 639,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "640": {
+      "id": 640,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "level": 20
+      },
+      "baseSuccess": 2500,
+      "time": 14400,
+      "name": 30104671
+    },
+    "641": {
+      "id": 641,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          2
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "642": {
+      "id": 642,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          3
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "643": {
+      "id": 643,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "644": {
+      "id": 644,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          1,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "645": {
+      "id": 645,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          3
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "646": {
+      "id": 646,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "647": {
+      "id": 647,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          2,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "648": {
+      "id": 648,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          4
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "649": {
+      "id": 649,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          3,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "650": {
+      "id": 650,
+      "weight": 4850,
+      "successRewards": [
+        {
+          "id": 228,
+          "count": 3
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 228,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 2,
+      "conditions": {
+        "type": [
+          4,
+          5
+        ],
+        "quality": 7
+      },
+      "baseSuccess": 1000,
+      "time": 14400,
+      "name": 30104671
+    },
+    "-1": {
+      "id": -1,
+      "weight": 0,
+      "successRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 15
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 100721,
+          "count": 2
+        },
+        {
+          "id": 229,
+          "count": 10
+        }
+      ],
+      "star": 5,
+      "heroNum": 3,
+      "conditions": {
+        "type": [
+          0
+        ],
+        "level": 1,
+        "quality": 3
+      },
+      "baseSuccess": 5500,
+      "time": 10,
+      "name": 30104669
+    }
+  }
+}

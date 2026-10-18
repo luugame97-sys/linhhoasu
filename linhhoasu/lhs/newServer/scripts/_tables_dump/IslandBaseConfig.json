@@ -1,0 +1,103 @@
+{
+  "_table": "IslandBaseConfig",
+  "_rows": 22,
+  "_type": "object",
+  "_firstKeys": "(obj)[baseArmyPowerRecover|extraArmyPowerRecover|baseArmyPowerPool|transArmyPowerScale|transArmyPowerValue]",
+  "_sample": [
+    {
+      "baseArmyPowerRecover": 200
+    },
+    {
+      "extraArmyPowerRecover": 0.01
+    },
+    {
+      "baseArmyPowerPool": 0
+    }
+  ],
+  "data": {
+    "baseArmyPowerRecover": 200,
+    "extraArmyPowerRecover": 0.01,
+    "baseArmyPowerPool": 0,
+    "transArmyPowerScale": [
+      0,
+      10000000,
+      20000000,
+      50000000,
+      100000000,
+      200000000,
+      500000000,
+      1000000000,
+      2000000000,
+      5000000000,
+      6000000000,
+      8000000000,
+      10000000000,
+      20000000000
+    ],
+    "transArmyPowerValue": [
+      16,
+      12,
+      8,
+      4,
+      3.5,
+      3,
+      2.5,
+      2,
+      1.5,
+      1,
+      0.5,
+      0.4,
+      0.3,
+      0.1
+    ],
+    "speedUpCost": {
+      "id": 1,
+      "count": 20
+    },
+    "moveBaseTime": 20,
+    "moveDistanceTime": 10,
+    "woodAddExp": {
+      "187": 5,
+      "188": 10,
+      "189": 15,
+      "190": 20
+    },
+    "fightShowTime": 5,
+    "shipShowLevel": [
+      0,
+      5,
+      10,
+      15,
+      25
+    ],
+    "islandBoxPack": [
+      11001,
+      11002,
+      11003,
+      11004,
+      11005,
+      11006,
+      11007
+    ],
+    "trainingPowerMultiple": 5,
+    "packBoxItem": 184,
+    "speedLeastTime": 10,
+    "teamFollowLimit": 3,
+    "shipFollowLimit": 10,
+    "rewardPointPara": 2500,
+    "minAtkArmy": 2000,
+    "baseArmyLimit": [
+      0.25,
+      0.75
+    ],
+    "baseArmyLimitIcon": [
+      "wdbh_zjm_bm_xiaobin",
+      "wdbh_zjm_bm_xiaobin2",
+      "wdbh_zjm_bm_xiaobi3"
+    ],
+    "guideReward": {
+      "id": 1,
+      "count": 100
+    }
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "_table": "FateKungfuSkillConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "1,3,4,5,6,8",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "id": 1,
+          "kungfu": 1,
+          "skillAttrs": {
+            "263": 250
+          },
+          "icon": "ui_mg_bm_1",
+          "title": 1101021,
+          "desc": 1101031,
+          "bookShow": 1,
+          "bookname": 1101022
+        },
+        "3": {
+          "id": 1,
+          "kungfu": 3,
+          "skillAttrs": {
+            "268": 250
+          },
+          "icon": "ui_mg_bm_3",
+          "title": 1103021,
+          "desc": 1103031,
+          "bookShow": 1,
+          "bookname": 1103022
+        },
+        "4": {
+          "id": 1,
+          "kungfu": 4,
+          "skillAttrs": {
+            "261": 250
+          },
+          "icon": "ui_mg_bm_4",
+          "title": 1104021,
+          "desc": 1104031,
+          "bookShow": 1,
+          "bookname": 1104022
+        },
+        "5": {
+          "id": 1,
+          "kungfu": 5,
+          "skillAttrs": {
+            "266": 250
+          },
+          "icon": "ui_mg_bm_5",
+          "title": 1105021,
+          "desc": 1105031,
+          "bookShow": 1,
+          "bookname": 1105022
+        },
+        "6": {
+          "id": 1,
+          "kungfu": 6,
+          "skillAttrs": {
+            "264": 250
+          },
+          "icon": "ui_mg_bm_6",
+          "title": 1106021,
+          "desc": 1106031,
+          "bookShow": 1,
+          "bookname": 1106022
+        },
+        "8": {
+          "id": 1,
+          "kungfu": 8,
+          "skillAttrs": {
+            "265": 250
+          },
+          "icon": "ui_mg_bm_8",
+          "title": 1108021,
+          "desc": 1108031,
+          "bookShow": 1,
+          "bookname": 1108022
+        }
+      }
+    },
+    {
+      "13": {
+        "1": {
+          "id": 13,
+          "kungfu": 1,
+          "skillId": 103003,
+          "icon": "ti_subFate_3",
+          "bigIcon": "ti_subFate_3_l",
+          "bookShow": 1,
+          "bookname": 1103003
+        },
+        "3": {
+          "id": 13,
+          "kungfu": 3,
+          "skillId": 105003,
+          "icon": "dao_subFate_3",
+          "bigIcon": "dao_subFate_3_l",
+          "bookShow": 1,
+          "bookname": 1105003
+        },
+        "4": {
+          "id": 13,
+          "kungfu": 4,
+          "skillId": 101003,
+          "icon": "fa_subFate_3",
+          "bigIcon": "fa_subFate_3_l",
+          "bookShow": 1,
+          "bookname": 1101003
+        },
+        "5": {
+          "id": 13,
+          "kungfu": 5,
+          "skillId": 104003,
+          "icon": "yao_subFate_3",
+          "bigIcon": "yao_subFate_3_l",
+          "bookShow": 1,
+          "bookname": 1104003
+        },
+        "6": {
+          "id": 13,
+          "kungfu": 6,
+          "skillId": 106003,
+          "icon": "qi_subFate_3",
+          "bigIcon": "qi_subFate_3_l",
+          "bookShow": 1,
+          "bookname": 1106003
+        },
+        "8": {
+          "id": 13,
+          "kungfu": 8,
+          "skillId": 108003,
+          "icon": "chan_subFate_3",
+          "bigIcon": "chan_subFate_3_l",
+          "bookShow": 1,
+          "bookname": 1108003
+        }
+      }
+    },
+    {
+      "14": {
+        "1": {
+          "id": 14,
+          "kungfu": 1,
+          "skillAttrs": {
+            "263": 250
+          },
+          "icon": "ui_mg_bm_1",
+          "title": 1101021,
+          "desc": 1101031,
+          "bookShow": 0
+        },
+        "3": {
+          "id": 14,
+          "kungfu": 3,
+          "skillAttrs": {
+            "268": 250
+          },
+          "icon": "ui_mg_bm_3",
+          "title": 1103021,
+          "desc": 1103031,
+          "bookShow": 0
+        },
+        "4": {
+          "id": 14,
+          "kungfu": 4,
+          "skillAttrs": {
+            "261": 250
+          },
+          "icon": "ui_mg_bm_4",
+          "title": 1104021,
+          "desc": 1104031,
+          "bookShow": 0
+        },
+        "5": {
+          "id": 14,
+          "kungfu": 5,
+          "skillAttrs": {
+            "266": 250
+          },
+          "icon": "ui_mg_bm_5",
+          "title": 1105021,
+          "desc": 1105031,
+          "bookShow": 0
+        },
+        "6": {
+          "id": 14,
+          "kungfu": 6,
+          "skillAttrs": {
+            "264": 250
+          },
+          "icon": "ui_mg_bm_6",
+          "title": 1106021,
+          "desc": 1106031,
+          "bookShow": 0
+        },
+        "8": {
+          "id": 14,
+          "kungfu": 8,
+          "skillAttrs": {
+            "265": 250
+          },
+          "icon": "ui_mg_bm_8",
+          "title": 1108021,
+          "desc": 1108031,
+          "bookShow": 0
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "id": 1,
+        "kungfu": 1,
+        "skillAttrs": {
+          "263": 250
+        },
+        "icon": "ui_mg_bm_1",
+        "title": 1101021,
+        "desc": 1101031,
+        "bookShow": 1,
+        "bookname": 1101022
+      },
+      "3": {
+        "id": 1,
+        "kungfu": 3,
+        "skillAttrs": {
+          "268": 250
+        },
+        "icon": "ui_mg_bm_3",
+        "title": 1103021,
+        "desc": 1103031,
+        "bookShow": 1,
+        "bookname": 1103022
+      },
+      "4": {
+        "id": 1,
+        "kungfu": 4,
+        "skillAttrs": {
+          "261": 250
+        },
+        "icon": "ui_mg_bm_4",
+        "title": 1104021,
+        "desc": 1104031,
+        "bookShow": 1,
+        "bookname": 1104022
+      },
+      "5": {
+        "id": 1,
+        "kungfu": 5,
+        "skillAttrs": {
+          "266": 250
+        },
+        "icon": "ui_mg_bm_5",
+        "title": 1105021,
+        "desc": 1105031,
+        "bookShow": 1,
+        "bookname": 1105022
+      },
+      "6": {
+        "id": 1,
+        "kungfu": 6,
+        "skillAttrs": {
+          "264": 250
+        },
+        "icon": "ui_mg_bm_6",
+        "title": 1106021,
+        "desc": 1106031,
+        "bookShow": 1,
+        "bookname": 1106022
+      },
+      "8": {
+        "id": 1,
+        "kungfu": 8,
+        "skillAttrs": {
+          "265": 250
+        },
+        "icon": "ui_mg_bm_8",
+        "title": 1108021,
+        "desc": 1108031,
+        "bookShow": 1,
+        "bookname": 1108022
+      }
+    },
+    "13": {
+      "1": {
+        "id": 13,
+        "kungfu": 1,
+        "skillId": 103003,
+        "icon": "ti_subFate_3",
+        "bigIcon": "ti_subFate_3_l",
+        "bookShow": 1,
+        "bookname": 1103003
+      },
+      "3": {
+        "id": 13,
+        "kungfu": 3,
+        "skillId": 105003,
+        "icon": "dao_subFate_3",
+        "bigIcon": "dao_subFate_3_l",
+        "bookShow": 1,
+        "bookname": 1105003
+      },
+      "4": {
+        "id": 13,
+        "kungfu": 4,
+        "skillId": 101003,
+        "icon": "fa_subFate_3",
+        "bigIcon": "fa_subFate_3_l",
+        "bookShow": 1,
+        "bookname": 1101003
+      },
+      "5": {
+        "id": 13,
+        "kungfu": 5,
+        "skillId": 104003,
+        "icon": "yao_subFate_3",
+        "bigIcon": "yao_subFate_3_l",
+        "bookShow": 1,
+        "bookname": 1104003
+      },
+      "6": {
+        "id": 13,
+        "kungfu": 6,
+        "skillId": 106003,
+        "icon": "qi_subFate_3",
+        "bigIcon": "qi_subFate_3_l",
+        "bookShow": 1,
+        "bookname": 1106003
+      },
+      "8": {
+        "id": 13,
+        "kungfu": 8,
+        "skillId": 108003,
+        "icon": "chan_subFate_3",
+        "bigIcon": "chan_subFate_3_l",
+        "bookShow": 1,
+        "bookname": 1108003
+      }
+    },
+    "14": {
+      "1": {
+        "id": 14,
+        "kungfu": 1,
+        "skillAttrs": {
+          "263": 250
+        },
+        "icon": "ui_mg_bm_1",
+        "title": 1101021,
+        "desc": 1101031,
+        "bookShow": 0
+      },
+      "3": {
+        "id": 14,
+        "kungfu": 3,
+        "skillAttrs": {
+          "268": 250
+        },
+        "icon": "ui_mg_bm_3",
+        "title": 1103021,
+        "desc": 1103031,
+        "bookShow": 0
+      },
+      "4": {
+        "id": 14,
+        "kungfu": 4,
+        "skillAttrs": {
+          "261": 250
+        },
+        "icon": "ui_mg_bm_4",
+        "title": 1104021,
+        "desc": 1104031,
+        "bookShow": 0
+      },
+      "5": {
+        "id": 14,
+        "kungfu": 5,
+        "skillAttrs": {
+          "266": 250
+        },
+        "icon": "ui_mg_bm_5",
+        "title": 1105021,
+        "desc": 1105031,
+        "bookShow": 0
+      },
+      "6": {
+        "id": 14,
+        "kungfu": 6,
+        "skillAttrs": {
+          "264": 250
+        },
+        "icon": "ui_mg_bm_6",
+        "title": 1106021,
+        "desc": 1106031,
+        "bookShow": 0
+      },
+      "8": {
+        "id": 14,
+        "kungfu": 8,
+        "skillAttrs": {
+          "265": 250
+        },
+        "icon": "ui_mg_bm_8",
+        "title": 1108021,
+        "desc": 1108031,
+        "bookShow": 0
+      }
+    },
+    "28": {
+      "1": {
+        "id": 28,
+        "kungfu": 1,
+        "skillAttrs": {
+          "263": 250
+        },
+        "icon": "ui_mg_bm_1",
+        "title": 1101021,
+        "desc": 1101031,
+        "bookShow": 0
+      },
+      "3": {
+        "id": 28,
+        "kungfu": 3,
+        "skillAttrs": {
+          "268": 250
+        },
+        "icon": "ui_mg_bm_3",
+        "title": 1103021,
+        "desc": 1103031,
+        "bookShow": 0
+      },
+      "4": {
+        "id": 28,
+        "kungfu": 4,
+        "skillAttrs": {
+          "261": 250
+        },
+        "icon": "ui_mg_bm_4",
+        "title": 1104021,
+        "desc": 1104031,
+        "bookShow": 0
+      },
+      "5": {
+        "id": 28,
+        "kungfu": 5,
+        "skillAttrs": {
+          "266": 250
+        },
+        "icon": "ui_mg_bm_5",
+        "title": 1105021,
+        "desc": 1105031,
+        "bookShow": 0
+      },
+      "6": {
+        "id": 28,
+        "kungfu": 6,
+        "skillAttrs": {
+          "264": 250
+        },
+        "icon": "ui_mg_bm_6",
+        "title": 1106021,
+        "desc": 1106031,
+        "bookShow": 0
+      },
+      "8": {
+        "id": 28,
+        "kungfu": 8,
+        "skillAttrs": {
+          "265": 250
+        },
+        "icon": "ui_mg_bm_8",
+        "title": 1108021,
+        "desc": 1108031,
+        "bookShow": 0
+      }
+    },
+    "47": {
+      "1": {
+        "id": 47,
+        "kungfu": 1,
+        "skillId": 103004,
+        "icon": "ti_subFate_4",
+        "bigIcon": "ti_subFate_4_l",
+        "bookShow": 1,
+        "bookname": 1103004
+      },
+      "3": {
+        "id": 47,
+        "kungfu": 3,
+        "skillId": 105004,
+        "icon": "dao_subFate_4",
+        "bigIcon": "dao_subFate_4_l",
+        "bookShow": 1,
+        "bookname": 1105004
+      },
+      "4": {
+        "id": 47,
+        "kungfu": 4,
+        "skillId": 101004,
+        "icon": "fa_subFate_4",
+        "bigIcon": "fa_subFate_4_l",
+        "bookShow": 1,
+        "bookname": 1101004
+      },
+      "5": {
+        "id": 47,
+        "kungfu": 5,
+        "skillId": 104004,
+        "icon": "yao_subFate_4",
+        "bigIcon": "yao_subFate_4_l",
+        "bookShow": 1,
+        "bookname": 1104004
+      },
+      "6": {
+        "id": 47,
+        "kungfu": 6,
+        "skillId": 106004,
+        "icon": "qi_subFate_4",
+        "bigIcon": "qi_subFate_4_l",
+        "bookShow": 1,
+        "bookname": 1106004
+      },
+      "8": {
+        "id": 47,
+        "kungfu": 8,
+        "skillId": 108004,
+        "icon": "chan_subFate_4",
+        "bigIcon": "chan_subFate_4_l",
+        "bookShow": 1,
+        "bookname": 1108004
+      }
+    }
+  }
+}

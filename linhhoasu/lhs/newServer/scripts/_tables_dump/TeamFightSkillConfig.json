@@ -1,0 +1,3474 @@
+{
+  "_table": "TeamFightSkillConfig",
+  "_rows": 176,
+  "_type": "object",
+  "_firstKeys": "id,buff",
+  "_sample": [
+    {
+      "11": {
+        "id": 11,
+        "buff": [
+          {
+            "id": [
+              1101
+            ],
+            "getTarget": 14,
+            "active": 1,
+            "targetParam": [
+              0,
+              1
+            ]
+          },
+          {
+            "id": [
+              1102
+            ],
+            "getTarget": 14,
+            "active": 1,
+            "targetParam": [
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "12": {
+        "id": 12,
+        "buff": [
+          {
+            "id": [
+              1201
+            ],
+            "getTarget": 14,
+            "active": 1,
+            "targetParam": [
+              0,
+              1
+            ]
+          },
+          {
+            "id": [
+              1202
+            ],
+            "getTarget": 14,
+            "active": 1,
+            "targetParam": [
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "13": {
+        "id": 13,
+        "buff": [
+          {
+            "id": [
+              1301
+            ],
+            "getTarget": 14,
+            "active": 1,
+            "targetParam": [
+              0,
+              1
+            ]
+          },
+          {
+            "id": [
+              1302
+            ],
+            "getTarget": 14,
+            "active": 1,
+            "targetParam": [
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "11": {
+      "id": 11,
+      "buff": [
+        {
+          "id": [
+            1101
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": [
+            1102
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "buff": [
+        {
+          "id": [
+            1201
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": [
+            1202
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "buff": [
+        {
+          "id": [
+            1301
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": [
+            1302
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "21": {
+      "id": 21,
+      "buff": [
+        {
+          "id": [
+            2101
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": [
+            2102
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "22": {
+      "id": 22,
+      "buff": [
+        {
+          "id": [
+            2201
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": [
+            2202
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "23": {
+      "id": 23,
+      "buff": [
+        {
+          "id": [
+            2301
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": [
+            2302
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "31": {
+      "id": 31,
+      "buff": [
+        {
+          "id": [
+            3101
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": [
+            3102
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "32": {
+      "id": 32,
+      "buff": [
+        {
+          "id": [
+            3201
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": [
+            3202
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "33": {
+      "id": 33,
+      "buff": [
+        {
+          "id": [
+            3301
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        },
+        {
+          "id": [
+            3302
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "41": {
+      "id": 41,
+      "buff": [
+        {
+          "id": [
+            4101
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    "42": {
+      "id": 42,
+      "buff": [
+        {
+          "id": [
+            4201
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    "43": {
+      "id": 43,
+      "buff": [
+        {
+          "id": [
+            4301
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": [
+            4302
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    "51": {
+      "id": 51,
+      "buff": [
+        {
+          "id": [
+            5101
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        },
+        {
+          "id": [
+            5102
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "52": {
+      "id": 52,
+      "buff": [
+        {
+          "id": [
+            5201
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        },
+        {
+          "id": [
+            5202
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "53": {
+      "id": 53,
+      "buff": [
+        {
+          "id": [
+            5301
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        },
+        {
+          "id": [
+            5302
+          ],
+          "getTarget": 14,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "10011": {
+      "id": 10011,
+      "buff": [
+        {
+          "id": [
+            1001101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1001102
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "10012": {
+      "id": 10012,
+      "buff": [
+        {
+          "id": [
+            1001201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1001202
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "10013": {
+      "id": 10013,
+      "buff": [
+        {
+          "id": [
+            1001301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1001302
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "10021": {
+      "id": 10021,
+      "buff": [
+        {
+          "id": [
+            1002101
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": [
+            1002102
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "10022": {
+      "id": 10022,
+      "buff": [
+        {
+          "id": [
+            1002201
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": [
+            1002202
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "10023": {
+      "id": 10023,
+      "buff": [
+        {
+          "id": [
+            1002301
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": [
+            1002302
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "10031": {
+      "id": 10031,
+      "buff": [
+        {
+          "id": [
+            1003101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1003102
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "10032": {
+      "id": 10032,
+      "buff": [
+        {
+          "id": [
+            1003201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1003202
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "10033": {
+      "id": 10033,
+      "buff": [
+        {
+          "id": [
+            1003301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1003302
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    "10041": {
+      "id": 10041,
+      "buff": [
+        {
+          "id": [
+            1004101
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": [
+            1004102
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    "10042": {
+      "id": 10042,
+      "buff": [
+        {
+          "id": [
+            1004201
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": [
+            1004202
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    "10043": {
+      "id": 10043,
+      "buff": [
+        {
+          "id": [
+            1004301
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        },
+        {
+          "id": [
+            1004302
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    "10051": {
+      "id": 10051,
+      "buff": [
+        {
+          "id": [
+            1005101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1005102
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "10052": {
+      "id": 10052,
+      "buff": [
+        {
+          "id": [
+            1005201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1005202
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "10053": {
+      "id": 10053,
+      "buff": [
+        {
+          "id": [
+            1005301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1005302
+          ],
+          "getTarget": 15,
+          "active": 1,
+          "targetParam": [
+            0,
+            5
+          ]
+        }
+      ]
+    },
+    "10111": {
+      "id": 10111,
+      "buff": [
+        {
+          "id": [
+            1011101
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "10112": {
+      "id": 10112,
+      "buff": [
+        {
+          "id": [
+            1011201
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    "10113": {
+      "id": 10113,
+      "buff": [
+        {
+          "id": [
+            1011301
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    "10121": {
+      "id": 10121,
+      "buff": [
+        {
+          "id": [
+            1012101
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "10122": {
+      "id": 10122,
+      "buff": [
+        {
+          "id": [
+            1012201
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    "10123": {
+      "id": 10123,
+      "buff": [
+        {
+          "id": [
+            1012301
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    "10131": {
+      "id": 10131,
+      "buff": [
+        {
+          "id": [
+            1013101
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "10132": {
+      "id": 10132,
+      "buff": [
+        {
+          "id": [
+            1013201
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "10133": {
+      "id": 10133,
+      "buff": [
+        {
+          "id": [
+            1013301
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    "10141": {
+      "id": 10141,
+      "buff": [
+        {
+          "id": [
+            1014101
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    "10142": {
+      "id": 10142,
+      "buff": [
+        {
+          "id": [
+            1014201
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    "10143": {
+      "id": 10143,
+      "buff": [
+        {
+          "id": [
+            1014301
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "10151": {
+      "id": 10151,
+      "buff": [
+        {
+          "id": [
+            1015101
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "10152": {
+      "id": 10152,
+      "buff": [
+        {
+          "id": [
+            1015201
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    "10153": {
+      "id": 10153,
+      "buff": [
+        {
+          "id": [
+            1015301
+          ],
+          "getTarget": 105,
+          "active": 101,
+          "targetParam": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    "10211": {
+      "id": 10211,
+      "buff": [
+        {
+          "id": [
+            1021101
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "10212": {
+      "id": 10212,
+      "buff": [
+        {
+          "id": [
+            1021201
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    "10213": {
+      "id": 10213,
+      "buff": [
+        {
+          "id": [
+            1021301
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    "10221": {
+      "id": 10221,
+      "buff": [
+        {
+          "id": [
+            1022101
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "10222": {
+      "id": 10222,
+      "buff": [
+        {
+          "id": [
+            1022201
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    "10223": {
+      "id": 10223,
+      "buff": [
+        {
+          "id": [
+            1022301
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    "10231": {
+      "id": 10231,
+      "buff": [
+        {
+          "id": [
+            1023101
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "10232": {
+      "id": 10232,
+      "buff": [
+        {
+          "id": [
+            1023201
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "10233": {
+      "id": 10233,
+      "buff": [
+        {
+          "id": [
+            1023301
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    "10241": {
+      "id": 10241,
+      "buff": [
+        {
+          "id": [
+            1024101
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    "10242": {
+      "id": 10242,
+      "buff": [
+        {
+          "id": [
+            1024201
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    "10243": {
+      "id": 10243,
+      "buff": [
+        {
+          "id": [
+            1024301
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    "10251": {
+      "id": 10251,
+      "buff": [
+        {
+          "id": [
+            1025101
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    "10252": {
+      "id": 10252,
+      "buff": [
+        {
+          "id": [
+            1025201
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    "10253": {
+      "id": 10253,
+      "buff": [
+        {
+          "id": [
+            1025301
+          ],
+          "getTarget": 106,
+          "active": 101,
+          "targetParam": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    "10311": {
+      "id": 10311,
+      "buff": [
+        {
+          "id": [
+            1031101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1031102
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10312": {
+      "id": 10312,
+      "buff": [
+        {
+          "id": [
+            1031201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1031202
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10313": {
+      "id": 10313,
+      "buff": [
+        {
+          "id": [
+            1031301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1031302
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10321": {
+      "id": 10321,
+      "buff": [
+        {
+          "id": [
+            1032101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1032102
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10322": {
+      "id": 10322,
+      "buff": [
+        {
+          "id": [
+            1032201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1032202
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10323": {
+      "id": 10323,
+      "buff": [
+        {
+          "id": [
+            1032301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1032302
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10331": {
+      "id": 10331,
+      "buff": [
+        {
+          "id": [
+            1033101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1033102
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10332": {
+      "id": 10332,
+      "buff": [
+        {
+          "id": [
+            1033201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1033202
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10333": {
+      "id": 10333,
+      "buff": [
+        {
+          "id": [
+            1033301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1033302
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10341": {
+      "id": 10341,
+      "buff": [
+        {
+          "id": [
+            1034101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1034102
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10342": {
+      "id": 10342,
+      "buff": [
+        {
+          "id": [
+            1034201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1034202
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10343": {
+      "id": 10343,
+      "buff": [
+        {
+          "id": [
+            1034301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1034302
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10351": {
+      "id": 10351,
+      "buff": [
+        {
+          "id": [
+            1035101
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1035102
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10352": {
+      "id": 10352,
+      "buff": [
+        {
+          "id": [
+            1035201
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1035202
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10353": {
+      "id": 10353,
+      "buff": [
+        {
+          "id": [
+            1035301
+          ],
+          "getTarget": 13,
+          "active": 1
+        },
+        {
+          "id": [
+            1035302
+          ],
+          "getTarget": 13,
+          "active": 1
+        }
+      ]
+    },
+    "10411": {
+      "id": 10411,
+      "buff": [
+        {
+          "id": [
+            1041101,
+            1041102,
+            1041103
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "10412": {
+      "id": 10412,
+      "buff": [
+        {
+          "id": [
+            1041201,
+            1041202,
+            1041203
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "10413": {
+      "id": 10413,
+      "buff": [
+        {
+          "id": [
+            1041301,
+            1041302,
+            1041303
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "10421": {
+      "id": 10421,
+      "buff": [
+        {
+          "id": [
+            1042101,
+            1042102,
+            1042103
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    "10422": {
+      "id": 10422,
+      "buff": [
+        {
+          "id": [
+            1042201,
+            1042202,
+            1042203
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    "10423": {
+      "id": 10423,
+      "buff": [
+        {
+          "id": [
+            1042301,
+            1042302,
+            1042303
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            6
+          ]
+        }
+      ]
+    },
+    "10431": {
+      "id": 10431,
+      "buff": [
+        {
+          "id": [
+            1043101,
+            1043102
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "10432": {
+      "id": 10432,
+      "buff": [
+        {
+          "id": [
+            1043201,
+            1043202
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "10433": {
+      "id": 10433,
+      "buff": [
+        {
+          "id": [
+            1043301,
+            1043302
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "10441": {
+      "id": 10441,
+      "buff": [
+        {
+          "id": [
+            1044101,
+            1044102
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "10442": {
+      "id": 10442,
+      "buff": [
+        {
+          "id": [
+            1044201,
+            1044202
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "10443": {
+      "id": 10443,
+      "buff": [
+        {
+          "id": [
+            1044301,
+            1044302
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "10451": {
+      "id": 10451,
+      "buff": [
+        {
+          "id": [
+            1045101,
+            1045102
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    "10452": {
+      "id": 10452,
+      "buff": [
+        {
+          "id": [
+            1045201,
+            1045202
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    "10453": {
+      "id": 10453,
+      "buff": [
+        {
+          "id": [
+            1045301,
+            1045302
+          ],
+          "getTarget": 17,
+          "active": 1,
+          "targetParam": [
+            1,
+            11
+          ]
+        }
+      ]
+    },
+    "41011": {
+      "id": 41011,
+      "buff": [
+        {
+          "id": [
+            4101101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4101102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "41012": {
+      "id": 41012,
+      "buff": [
+        {
+          "id": [
+            4101201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4101202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "41013": {
+      "id": 41013,
+      "buff": [
+        {
+          "id": [
+            4101301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4101302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "41021": {
+      "id": 41021,
+      "buff": [
+        {
+          "id": [
+            4102101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4102102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "41022": {
+      "id": 41022,
+      "buff": [
+        {
+          "id": [
+            4102201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4102202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "41023": {
+      "id": 41023,
+      "buff": [
+        {
+          "id": [
+            4102301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4102302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "42011": {
+      "id": 42011,
+      "buff": [
+        {
+          "id": [
+            4201101
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "42012": {
+      "id": 42012,
+      "buff": [
+        {
+          "id": [
+            4201201
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "42013": {
+      "id": 42013,
+      "buff": [
+        {
+          "id": [
+            4201301
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "42021": {
+      "id": 42021,
+      "buff": [
+        {
+          "id": [
+            4202101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4202102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "42022": {
+      "id": 42022,
+      "buff": [
+        {
+          "id": [
+            4202201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4202202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "42023": {
+      "id": 42023,
+      "buff": [
+        {
+          "id": [
+            4202301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4202302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "43011": {
+      "id": 43011,
+      "buff": [
+        {
+          "id": [
+            4301101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4301102
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4301103
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "43012": {
+      "id": 43012,
+      "buff": [
+        {
+          "id": [
+            4301201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4301202
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4301203
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "43013": {
+      "id": 43013,
+      "buff": [
+        {
+          "id": [
+            4301301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4301302
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4301303
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "43021": {
+      "id": 43021,
+      "buff": [
+        {
+          "id": [
+            4302101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4302102
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4302103
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "43022": {
+      "id": 43022,
+      "buff": [
+        {
+          "id": [
+            4302201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4302202
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4302203
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "43023": {
+      "id": 43023,
+      "buff": [
+        {
+          "id": [
+            4302301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4302302
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4302303
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44011": {
+      "id": 44011,
+      "buff": [
+        {
+          "id": [
+            4401101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4401102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44012": {
+      "id": 44012,
+      "buff": [
+        {
+          "id": [
+            4401201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4401202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44013": {
+      "id": 44013,
+      "buff": [
+        {
+          "id": [
+            4401301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4401302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44014": {
+      "id": 44014,
+      "buff": [
+        {
+          "id": [
+            4401401
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44021": {
+      "id": 44021,
+      "buff": [
+        {
+          "id": [
+            4402101
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44022": {
+      "id": 44022,
+      "buff": [
+        {
+          "id": [
+            4402201
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "44023": {
+      "id": 44023,
+      "buff": [
+        {
+          "id": [
+            4402301
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "45011": {
+      "id": 45011,
+      "buff": [
+        {
+          "id": [
+            4501101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4501102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "45012": {
+      "id": 45012,
+      "buff": [
+        {
+          "id": [
+            4501201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4501202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "45013": {
+      "id": 45013,
+      "buff": [
+        {
+          "id": [
+            4501301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4501302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "45021": {
+      "id": 45021,
+      "buff": [
+        {
+          "id": [
+            4502101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4502104
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "45022": {
+      "id": 45022,
+      "buff": [
+        {
+          "id": [
+            4502201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4502204
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "45023": {
+      "id": 45023,
+      "buff": [
+        {
+          "id": [
+            4502301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            4502304
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "61011": {
+      "id": 61011,
+      "buff": [
+        {
+          "id": [
+            6101101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6101102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "61012": {
+      "id": 61012,
+      "buff": [
+        {
+          "id": [
+            6101201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6101102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "61013": {
+      "id": 61013,
+      "buff": [
+        {
+          "id": [
+            6101301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6101102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "61021": {
+      "id": 61021,
+      "buff": [
+        {
+          "id": [
+            6102101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6102102
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6102103
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "61022": {
+      "id": 61022,
+      "buff": [
+        {
+          "id": [
+            6102201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6102202
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6102203
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "61023": {
+      "id": 61023,
+      "buff": [
+        {
+          "id": [
+            6102301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6102302
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6102303
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "62011": {
+      "id": 62011,
+      "buff": [
+        {
+          "id": [
+            6201101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6201102
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6201103
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "62012": {
+      "id": 62012,
+      "buff": [
+        {
+          "id": [
+            6201201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6201202
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6201203
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "62013": {
+      "id": 62013,
+      "buff": [
+        {
+          "id": [
+            6201301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6201302
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6201303
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "62021": {
+      "id": 62021,
+      "buff": [
+        {
+          "id": [
+            6202101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6202102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "62022": {
+      "id": 62022,
+      "buff": [
+        {
+          "id": [
+            6202201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6202202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "62023": {
+      "id": 62023,
+      "buff": [
+        {
+          "id": [
+            6202301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6202302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63011": {
+      "id": 63011,
+      "buff": [
+        {
+          "id": [
+            6301101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6301102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63012": {
+      "id": 63012,
+      "buff": [
+        {
+          "id": [
+            6301201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6301202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63013": {
+      "id": 63013,
+      "buff": [
+        {
+          "id": [
+            6301301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6301302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63021": {
+      "id": 63021,
+      "buff": [
+        {
+          "id": [
+            6302101
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63022": {
+      "id": 63022,
+      "buff": [
+        {
+          "id": [
+            6302201
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63023": {
+      "id": 63023,
+      "buff": [
+        {
+          "id": [
+            6302301
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63024": {
+      "id": 63024,
+      "buff": [
+        {
+          "id": [
+            6302401
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63025": {
+      "id": 63025,
+      "buff": [
+        {
+          "id": [
+            6302501
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "63026": {
+      "id": 63026,
+      "buff": [
+        {
+          "id": [
+            6302601
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "64011": {
+      "id": 64011,
+      "buff": [
+        {
+          "id": [
+            6401101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6401102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "64012": {
+      "id": 64012,
+      "buff": [
+        {
+          "id": [
+            6401201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6401202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "64013": {
+      "id": 64013,
+      "buff": [
+        {
+          "id": [
+            6401301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6401302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "64021": {
+      "id": 64021,
+      "buff": [
+        {
+          "id": [
+            6402101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6402102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "64022": {
+      "id": 64022,
+      "buff": [
+        {
+          "id": [
+            6402201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6402202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "64023": {
+      "id": 64023,
+      "buff": [
+        {
+          "id": [
+            6402301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6402302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "65011": {
+      "id": 65011,
+      "buff": [
+        {
+          "id": [
+            6501101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6501104
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "65012": {
+      "id": 65012,
+      "buff": [
+        {
+          "id": [
+            6501201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6501204
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "65013": {
+      "id": 65013,
+      "buff": [
+        {
+          "id": [
+            6501301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6501304
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "65021": {
+      "id": 65021,
+      "buff": [
+        {
+          "id": [
+            6502101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6502102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "65022": {
+      "id": 65022,
+      "buff": [
+        {
+          "id": [
+            6502201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6502202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "65023": {
+      "id": 65023,
+      "buff": [
+        {
+          "id": [
+            6502301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            6502302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "71011": {
+      "id": 71011,
+      "buff": [
+        {
+          "id": [
+            7101101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101102
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101103
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101104
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101105
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "71012": {
+      "id": 71012,
+      "buff": [
+        {
+          "id": [
+            7101201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101202
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101203
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101204
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101205
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "71013": {
+      "id": 71013,
+      "buff": [
+        {
+          "id": [
+            7101301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101302
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101303
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101304
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7101305
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "72011": {
+      "id": 72011,
+      "buff": [
+        {
+          "id": [
+            7201101
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "72012": {
+      "id": 72012,
+      "buff": [
+        {
+          "id": [
+            7201201
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "72013": {
+      "id": 72013,
+      "buff": [
+        {
+          "id": [
+            7201301
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "72014": {
+      "id": 72014,
+      "buff": [
+        {
+          "id": [
+            7201401
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "73011": {
+      "id": 73011,
+      "buff": [
+        {
+          "id": [
+            7301101
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7301102
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "73012": {
+      "id": 73012,
+      "buff": [
+        {
+          "id": [
+            7301201
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7301202
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "73013": {
+      "id": 73013,
+      "buff": [
+        {
+          "id": [
+            7301301
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7301302
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "73014": {
+      "id": 73014,
+      "buff": [
+        {
+          "id": [
+            7301401
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "73015": {
+      "id": 73015,
+      "buff": [
+        {
+          "id": [
+            7301501
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "73016": {
+      "id": 73016,
+      "buff": [
+        {
+          "id": [
+            7301601
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "74011": {
+      "id": 74011,
+      "buff": [
+        {
+          "id": [
+            7401101
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "74012": {
+      "id": 74012,
+      "buff": [
+        {
+          "id": [
+            7401201
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "74013": {
+      "id": 74013,
+      "buff": [
+        {
+          "id": [
+            7401301
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "75011": {
+      "id": 75011,
+      "buff": [
+        {
+          "id": [
+            7501101
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "75012": {
+      "id": 75012,
+      "buff": [
+        {
+          "id": [
+            7501201
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "75013": {
+      "id": 75013,
+      "buff": [
+        {
+          "id": [
+            7501301
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "75014": {
+      "id": 75014,
+      "buff": [
+        {
+          "id": [
+            7501401
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7501402
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "75015": {
+      "id": 75015,
+      "buff": [
+        {
+          "id": [
+            7501501
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7501502
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    },
+    "75016": {
+      "id": 75016,
+      "buff": [
+        {
+          "id": [
+            7501601
+          ],
+          "getTarget": 1,
+          "active": 1
+        },
+        {
+          "id": [
+            7501602
+          ],
+          "getTarget": 1,
+          "active": 1
+        }
+      ]
+    }
+  }
+}

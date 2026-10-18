@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sửa hiệu ứng tự bán và trang bị cá</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="s-a-hi-u-ng-t-b-n-v-trang-b-c-06-09-2026">Sửa hiệu ứng tự bán và trang bị cá — 06/09/2026</h1>
+<p>Đã triển khai client mới lúc <strong>12:17 UTC+7</strong>, dùng cho S1/S2 tại cổng81. Nhánh “Tự trang bị cá mạnh, bán cá yếu” đã nối vào hiệu ứng native: cá mới bay về đúng ô, Ngư Tệ bay về ô tiền và phát coin pulse. Không sửa server hoặc restart tiến trình.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>User yêu cầu sửa tiếp ngay sau khi audit xác nhận auto-power chỉ cập nhật dữ liệu mà chưa gọi hiệu ứng. Phần bỏ ngày mở map đã hoàn tất trước đó; bản client này giữ nguyên yêu cầu chỉ cấp25/28 và sửa đổi map đang hoạt động.</p>
+<h3 id="lu-ng-hi-u-ng-m-i">Luồng hiệu ứng mới</h3>
+<ol>
+<li><code>sendAutoPowerFish</code> ghi nhận raid/view hiện tại khi gửi yêu cầu xử lý cá4008; chỉ cho một yêu cầu đang chờ như cũ.</li>
+<li>Khi có ACK, kiểm generation reconnect và cờ callback đã xử lý. Áp dụng state authoritative/receipt revision, phát sự kiện cập nhật ô cá như trước.</li>
+<li>Chỉ ACK thành công mới gọi <code>playAutoPowerFishEffects</code>.</li>
+<li>Với mỗi cá trong <code>r.equipped</code>, đối chiếu UID/ID/type với slot server trả về; dùng <code>playPutInIconFlyAnim</code> bay icon từ nhân vật đang câu đến đúng ô. Tối đa một hiệu ứng cho mỗi type trong response.</li>
+<li>Với kết quả có <code>soldUids</code> và Ngư Tệ68 trong <code>r.rewards</code>, gọi <code>playSellIconFlyAnim</code> một lần cho batch; native helper bay icon về ô68 rồi gọi <code>coinFlyBtnAnim</code>. Không nhân hiệu ứng bán theo từng cá với tổng reward lặp lại.</li>
+</ol>
+<p>Hiệu ứng dùng asset/helper gốc, không tạo ảnh hoặc DOM overlay mới. Coin pulse/đường bay chỉ là hình ảnh; không cộng tiền, grant item, gửi RPC hoặc ghi DB từ hiệu ứng.</p>
+<h3 id="b-o-v-lifecycle">Bảo vệ lifecycle</h3>
+<ul>
+<li>Phản hồi trùng của cùng request chỉ được xử lý một lần, tránh lặp cả hiệu ứng lẫn khởi động lượt câu kế tiếp.</li>
+<li>Response replay từ receipt server cập nhật state nhưng không phát lại hiệu ứng thưởng cũ.</li>
+<li>Sau reconnect, generation cũ bị bỏ qua hoàn toàn.</li>
+<li>Nếu raid/view đã đổi, scene không khớp, view không còn stage/parent hoặc không có nhân vật, bỏ hiệu ứng; vẫn nhận state đã lưu.</li>
+<li>Nếu đang câu nền và không có view lúc gửi request, không phát hiệu ứng vào view vừa mở sau đó.</li>
+<li>Ô cá chưa tồn tại/bị tháo khỏi stage thì bỏ riêng hiệu ứng trang bị đó; ô tiền không có thì bỏ riêng hiệu ứng tiền.</li>
+<li>Lỗi native renderer khi gọi flight không ngăn áp dụng state hoặc làm kẹt auto.</li>
+<li>Bấm dừng auto khi đang chờ ACK: kết quả đã xác nhận vẫn có thể hiện hiệu ứng trên cảnh còn mở, nhưng không phát lượt câu mới.</li>
+<li>Cá khóa/có kỹ năng/ngang lực chiến được giữ theo server; không vẽ trang bị/bán cho cá không có trong kết quả thành công.</li>
+</ul>
+<p>Không đổi tốc độ1,11×, thời gian bắt cá, lịch <code>doNext</code> của lượt tiếp theo, quyền Huyền Vũ, quy tắc bán hoặc lựa chọn cá mạnh. Không thêm độ trễ chờ hiệu ứng.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<ul>
+<li>Local <code>linhhoasu/webgame/game/js/main.min_a6195824.js</code>: sửa <code>u.sendAutoPowerFish</code>, thêm <code>u.playAutoPowerFishEffects</code>.</li>
+<li>Local <code>linhhoasu/webgame/game/index.html</code>: token <code>20260906_fishing_auto_fx_v1</code>.</li>
+<li>Production tương ứng <code>/linhhoasu/webgame/game/js/main.min_a6195824.js</code> và <code>/linhhoasu/webgame/game/index.html</code>.</li>
+<li>Tất cả server source, config bin, map/level gates, auto-power service, balance/gear/commerce, API và DB schema giữ nguyên.</li>
+<li>Kiểm phép biến đổi ngược: xóa helper mới và phục hồi callback trả lại đúng toàn bộ bundle baseline; mọi hàm ngoài hai thay đổi này giữ byte-identical.</li>
+</ul>
+<h3 id="tool-h-tr-v-b-o-c-o">Tool hỗ trợ và báo cáo</h3>
+<ul>
+<li>Mới trong <code>_ai_workbench/tools/</code>: <code>build_fishing_auto_fx_client_20260906.js</code>, <code>test_fishing_auto_fx_20260906.js</code>, <code>qa_fishing_auto_fx_live_20260906.js</code>, <code>release_fishing_auto_fx_20260906.py</code>.</li>
+<li>Sửa <code>test_fishing_auto_20260906.js</code>:3 fixture callback bổ sung dependency Y.RaidMgr/helper FX stub để giữ các bài test state/generation; hiệu ứng thật được kiểm ở suite riêng26 case.</li>
+<li>Baseline snapshot: <code>_ai_workbench/temp/fishing_audit_20260906T051014Z/</code>, lấy12:10:15 UTC+7,153 artifact.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_auto_fx_20260906/</code>: <code>client-build.json</code>, <code>auto-fx-tests.json</code>, <code>stage.json</code>, <code>deploy.json</code>, <code>verify.json</code> và kết quả regression.</li>
+<li>Backup local: <code>_ai_workbench/backups/fishing_auto_fx_local_20260906/</code>.</li>
+<li>Backup báo cáo: <code>_ai_workbench/backups/fishing_auto_fx_reports_20260906/</code>.</li>
+<li>Staging <code>/linhhoasu/_ai_workbench/temp/fishing_auto_fx_20260906_051546/</code>.</li>
+<li>Backup production <code>/linhhoasu/_ai_workbench/backups/fishing_auto_fx_20260906_051546/</code>:0.before là main,1.before là index.</li>
+<li>Cập nhật báo cáo này MD/HTML và session_report.md/.html đầy đủ6 mục.</li>
+</ul>
+<p>Triển khai bằng thay thế file nguyên tử cùng filesystem, main trước index; không phục vụ bundle đang ghi dở. Có hash guard trước install và rollback chỉ hai file client, không rollback DB. Không restart Nginx/game/DB hoặc bù thưởng.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/rủi ro</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Auto bán/trang bị âm thầm</td>
+<td>Callback mới thiếu lời gọi helper native</td>
+<td>Nối helper từ ACK đã lưu, đúng reward/equipped</td>
+<td>Test cả state và hiệu ứng đích</td>
+</tr>
+<tr>
+<td>Auto không có popup để lấy vị trí icon</td>
+<td>Luồng trang bị thủ công dùng nhãn cá popup</td>
+<td>Dùng nhân vật câu đang hiển thị làm nguồn bay</td>
+<td>Kiểm stage/parent/slot trước gọi helper</td>
+</tr>
+<tr>
+<td>Callback trùng có thể lặp hiệu ứng/lượt kế</td>
+<td>Chỉ có generation reconnect, chưa có guard từng callback</td>
+<td>Cờ answered trong closure request</td>
+<td>Gọi lại cùng callback trong fixture</td>
+</tr>
+<tr>
+<td>ACK cũ phát hiệu ứng lên map mới</td>
+<td>Không kiểm identity raid/view lúc gửi/nhận</td>
+<td>Capture raid/view và so sánh trước vẽ</td>
+<td>Đổi raid, view, scene, close/reopen tests</td>
+</tr>
+<tr>
+<td>Background/slot chưa tạo có thể gây lỗi renderer</td>
+<td>Không có display node hợp lệ</td>
+<td>Bỏ hiệu ứng tương ứng, giữ state và auto</td>
+<td>No-view/no-target tests</td>
+</tr>
+<tr>
+<td>Lỗi hoạt ảnh làm dừng auto</td>
+<td>Ngoại lệ từ helper graphic</td>
+<td>Cô lập lời gọi flight, không ảnh hưởng logic</td>
+<td>Inject render error và xác nhận lượt tiếp</td>
+</tr>
+<tr>
+<td>Tìm helper theo alias không thấy</td>
+<td>Bundle dùng FPt.onePosToOtherPos rồi alias sc</td>
+<td>Đọc definition và getNodePos/CreateRole</td>
+<td>Không suy getMyEntity là Point: thực tế được addChild lên display</td>
+</tr>
+<tr>
+<td>Mongoose cảnh báo field isNew</td>
+<td>Schema hiện hành dùng tên reserved</td>
+<td>Ghi nhận, không sửa model ngoài scope</td>
+<td>Tách warning khỏi kết quả test</td>
+</tr>
+</tbody></table></div>
+<p>Không có lỗi production ở lần staging/deploy này, không rollback. UTF-8 được giữ; không phát sinh mojibake trong helper tiếng Việt hoặc báo cáo.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Hiệu ứng phải bám kết quả giao dịch đã xác nhận, không dự đoán chiến lực hoặc tự bán lần nữa trên client.</li>
+<li>Replay ledger và callback bị gọi lại là hai trường hợp khác nhau; cần chặn cả hai.</li>
+<li>Kiểm view tại thời điểm nhận ACK chưa đủ; cần biết request xuất phát từ view nào để không vẽ lên một phiên cảnh mới.</li>
+<li>Native getMyEntity trả display object có trong lootNode. Helper getNodePos hỗ trợ DisplayObject; không cần tạo điểm màn hình hoặc overlay mới.</li>
+<li>FX không nên trì hoãn lượt câu tiếp theo hoặc hỏng đường auto khi renderer chưa sẵn sàng. Việc bỏ FX ở chế độ nền không làm mất phần thưởng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="test-t-ng">Test tự động</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Suite</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Auto FX</td>
+<td>26/26 PASS local/staging</td>
+</tr>
+<tr>
+<td>Auto gameplay</td>
+<td>21/21 PASS local/staging</td>
+</tr>
+<tr>
+<td>Gear</td>
+<td>38/38 PASS staging,1.800 matrix</td>
+</tr>
+<tr>
+<td>Balance/integrity</td>
+<td>70/70 PASS staging</td>
+</tr>
+<tr>
+<td>Huyền Vũ</td>
+<td>24/24 PASS staging</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>714 bảng PASS</td>
+</tr>
+</tbody></table></div>
+<p>Tổng <strong>179 nhóm test staging PASS</strong>. FX suite bao gồm bán-only, equip-only, mixed,10 type, locked/partial held, callback trùng, receipt replay, reconnect, mất raid/view/actor/slot/coin target, scene đổi, renderer exception và dừng khi chờ ACK. Thực thi callback và helper flight/coin native, kiểm đích và số lần gọi; chưa nghiệm thu renderer bằng hình ảnh.</p>
+<h3 id="live-qa-s2-v-s1-tr-c-khi-publish-client">Live QA S2 và S1 trước khi publish client</h3>
+<ul>
+<li>Dùng nhân vật QA riêng. Server chọn cá mạnh đúng, bán cá yếu, giữ ô khóa, nhận109 Ngư Tệ từ100 sau batch fixture, save history/receipt đúng.</li>
+<li>Phản hồi thật4008 được đưa vào callback native mới; flight tới <code>slot1</code>, <code>coin68</code>, coin pulse1 lần. Callback lặp và response replay không thêm flight hoặc thưởng.</li>
+<li>Setting binary/relog, retry sau relog, câu thật→auto, tương tác tẩy/hộp vẫn PASS; không claim Huyền Vũ hoặc thao tác người thật.</li>
+<li>Asset icon ở live-ACK harness là stub; membership/target icon thật được kiểm ở fixture dùng config thật. Không coi harness này là hình ảnh game đã render.</li>
+<li>QA player và mail được xóa đúng scope, hậu kiểm còn0 ở cả hai DB.</li>
+</ul>
+<h3 id="h-u-ki-m12-17-23-utc-7">Hậu kiểm12:17:23 UTC+7</h3>
+<p>-154 artifact khớp expected:2 client file thay,152 artifact khác giữ nguyên; toàn bộ server source nguyên.</p>
+<ul>
+<li>Main SHA-256 <code>698ee96c1072607a2d527fa5157e96ce3cd534d5d4321bb2f1e7762608a519a7</code>.</li>
+<li>Index production SHA-256 <code>7de1ef55e759deb5dc3b843e6f415c3d46baa7728544bdb1525cefda542e8f83</code>.</li>
+<li>Main/index phục vụ cổng81 đúng hash mới. Main local/candidate khớp; index normalized nội dung khớp, giữ newline local.</li>
+<li>Cả6 tiến trình giữ PID/restart: S1 PID29724/restart1376, S2 PID27996/restart42, dist30824, admin30856, bot1600 và1576. Ready8080/8083 đều200.</li>
+<li>Không restart, compensation, migration hoặc sửa item/player lịch sử.</li>
+<li>Các sửa trước về đổi map và bỏ ngày giữ byte-identical trong source/client. Chưa chạy lại toàn suite level-only ở phiên FX vì không đổi chúng; inverse check chứng minh phạm vi client và full server hash chứng minh phần server giữ nguyên.</li>
+<li><strong>Chưa nghiệm thu hình ảnh trực tiếp trên trình duyệt/APK</strong>, chưa cold-start. Không tuyên bố các phần đó PASS từ kết quả VM/WS.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng tải lại game một lần để nạp token <code>20260906_fishing_auto_fx_v1</code>.</li>
+<li>Bật “Tự trang bị cá mạnh, bán cá yếu”, giữ màn câu cá mở: lượt có bán sẽ bay Ngư Tệ về ô tiền; lượt thực sự thay/trang bị cá sẽ bay icon về đúng ô.</li>
+<li>Nếu toàn cá yếu thì chỉ có hiệu ứng bán. Nếu toàn cá được giữ/khóa/ngang điểm thì không giả hiệu ứng bán hoặc trang bị.</li>
+<li>Đóng màn câu cá/chuyển khu thì không phát FX lên cảnh khác; tiền/cá vẫn theo state server. Dừng auto khi chờ ACK không làm mất kết quả đã lưu.</li>
+<li>Nếu không thấy flight trên client cụ thể, lấy thời điểm/khu và video ngắn để kiểm stage/lifecycle thực; không chạy lại giao dịch hoặc bù chỉ vì thiếu animation.</li>
+</ol></main></body></html>

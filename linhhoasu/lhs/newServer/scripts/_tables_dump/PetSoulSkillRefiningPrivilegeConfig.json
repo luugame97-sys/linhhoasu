@@ -1,0 +1,135 @@
+{
+  "_table": "PetSoulSkillRefiningPrivilegeConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,useQuality,privilege,showType,showParam,priority",
+  "_sample": [
+    {
+      "262": {
+        "id": 262,
+        "useQuality": [
+          3,
+          7
+        ],
+        "privilege": {
+          "2": 1
+        },
+        "showType": 1,
+        "showParam": 0,
+        "priority": 3
+      }
+    },
+    {
+      "284": {
+        "id": 284,
+        "useQuality": [
+          3,
+          7
+        ],
+        "privilege": {
+          "1": 1
+        },
+        "showType": 1,
+        "showParam": 0,
+        "priority": 2
+      }
+    },
+    {
+      "285": {
+        "id": 285,
+        "useQuality": [
+          3,
+          7
+        ],
+        "privilege": {
+          "3": 1
+        },
+        "showType": 1,
+        "showParam": 0,
+        "priority": 4
+      }
+    }
+  ],
+  "data": {
+    "262": {
+      "id": 262,
+      "useQuality": [
+        3,
+        7
+      ],
+      "privilege": {
+        "2": 1
+      },
+      "showType": 1,
+      "showParam": 0,
+      "priority": 3
+    },
+    "284": {
+      "id": 284,
+      "useQuality": [
+        3,
+        7
+      ],
+      "privilege": {
+        "1": 1
+      },
+      "showType": 1,
+      "showParam": 0,
+      "priority": 2
+    },
+    "285": {
+      "id": 285,
+      "useQuality": [
+        3,
+        7
+      ],
+      "privilege": {
+        "3": 1
+      },
+      "showType": 1,
+      "showParam": 0,
+      "priority": 4
+    },
+    "286": {
+      "id": 286,
+      "useQuality": [
+        3,
+        7
+      ],
+      "privilege": {
+        "4": 1
+      },
+      "showType": 1,
+      "showParam": 0,
+      "priority": 1
+    },
+    "289": {
+      "id": 289,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "5": 2,
+        "6": 5,
+        "7": 1
+      },
+      "showType": 2,
+      "showParam": 0,
+      "priority": 5
+    },
+    "343": {
+      "id": 343,
+      "useQuality": [
+        3,
+        7
+      ],
+      "privilege": {
+        "8": 1
+      },
+      "showType": 2,
+      "showParam": 0,
+      "priority": 6
+    }
+  }
+}

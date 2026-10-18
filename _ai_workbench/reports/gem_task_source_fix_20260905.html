@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sửa nhiệm vụ phát Hồn ngọc không dùng được</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="s-a-ngu-n-nhi-m-v-ph-t-t-i-h-n-ng-c-kh-ng-d-ng-c">Sửa nguồn nhiệm vụ phát túi Hồn ngọc không dùng được</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã xác định nguồn có lỗi: TaskConfig10083 thưởng100091×3; task.claimTaskRewards gọi trực tiếp raid.addRewardToPlayer, nên bỏ qua router gemPack đã sửa. Type99 bị cộng vào items, không có nút Sử dụng.</li>
+<li>nicky S1 đã nhận nhiệm vụ10083 (status30), giữ100091×3 và100095×30. Kết quả phù hợp nguồn túi cấp1; chưa có ledger đủ để kết luận nguồn30túi cấp5.</li>
+<li>Đã sửa hai handler nhận thưởng nhiệm vụ, áp dụng cho toàn bộ placeholder100091–100096 cấp1–6. Phần thưởng mới vào Hồn ngọc native, không vào túi dưới dạng placeholder.</li>
+<li>Đã deploy đúng một file task.js lên S1/S2, backup và hash guard. Không sửa client và không thao tác nhân vật thật.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source chính: <code>linhhoasu/lhs/newServer/src/handlers/task.js</code>.</li>
+<li>Tools: <code>audit_gem_sources_20260905.py</code>, <code>check_gem_template_20260905.py</code>, <code>test_gem_task_source_20260905.js</code>, <code>deploy_gem_task_source_20260905.py</code>.</li>
+<li>Snapshot/audit/deploy evidence: <code>_ai_workbench/temp/gem_source_fix_20260905/</code>.</li>
+<li>Production backup: <code>/linhhoasu/_ai_workbench/backups/gem_task_20260905_084504/task.js.before</code>.</li>
+<li>Local backup: <code>_ai_workbench/backups/gem_task_pre_20260905/task.js</code>.</li>
+<li>Report MD/HTML này và session_report MD/HTML; backup báo cáo trước cập nhật tại <code>_ai_workbench/backups/gem_task_report_pre_20260905/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Tránh lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhận100091×3 nhưng không dùng được</td>
+<td>Nhiệm vụ đi qua hàm cộng túi cũ</td>
+<td>Với gemPack, gọi RewardGrantService và đưa kết quả vào rewardInfo.gems</td>
+<td>Test actual entrypoint, không chỉ router</td>
+</tr>
+<tr>
+<td>Client không nhận Hồn ngọc mới</td>
+<td>Phản hồi task chỉ có rewardInfo.items</td>
+<td>Trả gems và push3900/3901 trước callback</td>
+<td>Kiểm state và packet cùng lúc</td>
+</tr>
+<tr>
+<td>Thưởng thành công trước save</td>
+<td>Task dùng background save</td>
+<td>Riêng claim có gem phải await save; lỗi thì invalidate session và không trả success</td>
+<td>Test save-failure và replay</td>
+</tr>
+<tr>
+<td>Test đếm tổng gem sai</td>
+<td>ensureGemInfo có default3gem</td>
+<td>So trước/sau retry, kiểm đúng3reward và UID</td>
+<td>Không nhầm baseline với quà phát thêm</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Cùng một ID có thể đúng ở code/mail nhưng lỗi ở nhiệm vụ vì entrypoint không dùng router chung.</li>
+<li>Config có31 tham chiếu cấp phát gem placeholder: Task10083,6ShopConfig và Activity3/12. Không phải mọi tham chiếu đều đang hỏng: shop/activity đã có nhánh resolve; cần test theo luồng cụ thể.</li>
+<li>Hàm PlayerGrantService.applyGivePayloadToPlayer và raid.addRewardToPlayer vẫn có nhánh bag trực tiếp. Đã nhận diện rủi ro, nhưng không chuyển đổi rộng toàn bộ caller trong patch task này vì cần contract sync/delivery riêng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>12case =6cấp×2handler PASS; nhiệm vụ gốc10083 cấp đúng3Hồn ngọc cấp1; retry không grant thêm; save-failure không success.</li>
+<li>Staging production + fixture chạy source production sau deploy PASS; core714bảng PASS; Activity7 hồi quy PASS.</li>
+<li>Sau restart readyS1/S2 đạt200; cả6PM2process online; bot đang reconnect, virtual580,slot2466,×2,invalid0. Không restart dist/admin/DB.</li>
+<li>Audit trước sửa:265người thật S1 đang có placeholder; tổng100091×396 và100095×8070. S2 không thấy. Đây là tồn kho, không phải kết luận từng người mất quà hoặc đủ điều kiện repair.</li>
+<li>Không chuyển/bù tồn kho lịch sử. <strong>3túi cấp1+30túi cấp5 của nicky vẫn giữ nguyên và chưa có nút dùng</strong>. Patch này chặn phát sai từ nguồn nhiệm vụ cho lần nhận mới, không tự sửa dữ liệu cũ.</li>
+<li>Template mặc định <code>/linhhoasu/lhs/LHS-file/src/data/player_template.json</code> không tồn tại trên VPS hiện tại; chưa có bằng chứng30túi cấp5 được phát từ template.</li>
+</ul>
+<h2 id="6-h-ng-d-n-ng-i-d-ng-test-v-vi-c-ti-p-theo">6. Hướng dẫn người dùng test và việc tiếp theo</h2>
+<ol>
+<li>Trên nhân vật test chưa nhận nhiệm vụ10083, chụp danh sách Hồn ngọc trước khi nhận. Không reset nhiệm vụ người thật.</li>
+<li>Nhận nhiệm vụ: phải thêm3Hồn ngọc cấp1 vào hệ Hồn ngọc, không xuất hiện3placeholder100091 trong túi. Popup phải có3Hồn ngọc.</li>
+<li>Đóng/mở bảng, đăng nhập lại và kiểm số lượng. Nhận lại nhiệm vụ không được phát thêm.</li>
+<li>Những túi cũ phải xử lý riêng. Có thể lập preview đổi1:1 từ100091–100096 sang100081–100086 (cùng cấp, có nút dùng) hoặc resolve thành gem; cần chốt cách và phạm vi trước khi thay inventory.</li>
+<li>Truy nguồn lịch sử100095, kiểm các đường GM/direct give trước khi khẳng định không còn nguồn nào phát sai. Không gọi patch task là hoàn tất toàn bộ nguồn.</li>
+</ol></main></body></html>

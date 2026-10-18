@@ -1,0 +1,52 @@
+{
+  "_table": "PetAttrImproveConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "level,percent",
+  "_sample": [
+    {
+      "201": {
+        "level": 201,
+        "percent": 500
+      }
+    },
+    {
+      "240": {
+        "level": 240,
+        "percent": 1000
+      }
+    },
+    {
+      "280": {
+        "level": 280,
+        "percent": 1500
+      }
+    }
+  ],
+  "data": {
+    "201": {
+      "level": 201,
+      "percent": 500
+    },
+    "240": {
+      "level": 240,
+      "percent": 1000
+    },
+    "280": {
+      "level": 280,
+      "percent": 1500
+    },
+    "320": {
+      "level": 320,
+      "percent": 2000
+    },
+    "360": {
+      "level": 360,
+      "percent": 2500
+    },
+    "400": {
+      "level": 400,
+      "percent": 3000
+    }
+  }
+}

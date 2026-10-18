@@ -1,0 +1,1129 @@
+{
+  "_table": "FashionColorConfig",
+  "_rows": 21,
+  "_type": "object",
+  "_firstKeys": "0,1,2",
+  "_sample": [
+    {
+      "28000": {
+        "0": {
+          "id": 28000,
+          "colorId": 0,
+          "icon": "",
+          "star": 0,
+          "fashionIds": [],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "1": {
+          "id": 28000,
+          "colorId": 1,
+          "icon": "",
+          "cost": {
+            "id": 118,
+            "count": 10
+          },
+          "star": 1,
+          "fashionIds": [],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "2": {
+          "id": 28000,
+          "colorId": 2,
+          "icon": "",
+          "cost": {
+            "id": 118,
+            "count": 10
+          },
+          "star": 1,
+          "fashionIds": [],
+          "showType": 1,
+          "showTypeTw": 1
+        }
+      }
+    },
+    {
+      "29000": {
+        "0": {
+          "id": 29000,
+          "colorId": 0,
+          "name": 29000,
+          "icon": "head_rs_2900",
+          "star": 0,
+          "fashionIds": [
+            29901,
+            29002,
+            29003,
+            29009
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "1": {
+          "id": 29000,
+          "colorId": 1,
+          "name": 80129000,
+          "icon": "head_rs_8012900",
+          "cost": {
+            "id": 118,
+            "count": 40
+          },
+          "star": 4,
+          "fashionIds": [
+            80129001,
+            80129002,
+            80129003,
+            80129009
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "2": {
+          "id": 29000,
+          "colorId": 2,
+          "name": 80229000,
+          "icon": "head_rs_8022900",
+          "cost": {
+            "id": 118,
+            "count": 40
+          },
+          "star": 4,
+          "fashionIds": [
+            80229001,
+            80229002,
+            80229003,
+            80229009
+          ],
+          "showType": 1,
+          "openDay": 57,
+          "showTypeTw": 1,
+          "openDayTw": 57
+        }
+      }
+    },
+    {
+      "29010": {
+        "0": {
+          "id": 29010,
+          "colorId": 0,
+          "name": 29010,
+          "icon": "head_rs_2901",
+          "star": 0,
+          "fashionIds": [
+            29011,
+            29012,
+            29013,
+            29019
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "1": {
+          "id": 29010,
+          "colorId": 1,
+          "name": 80129010,
+          "icon": "head_rs_8012901",
+          "cost": {
+            "id": 118,
+            "count": 40
+          },
+          "star": 4,
+          "fashionIds": [
+            80129011,
+            80129012,
+            80129013,
+            80129019
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "2": {
+          "id": 29010,
+          "colorId": 2,
+          "name": 80229010,
+          "icon": "head_rs_8022901",
+          "cost": {
+            "id": 118,
+            "count": 40
+          },
+          "star": 4,
+          "fashionIds": [
+            80229011,
+            80229012,
+            80229013,
+            80229019
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        }
+      }
+    }
+  ],
+  "data": {
+    "28000": {
+      "0": {
+        "id": 28000,
+        "colorId": 0,
+        "icon": "",
+        "star": 0,
+        "fashionIds": [],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 28000,
+        "colorId": 1,
+        "icon": "",
+        "cost": {
+          "id": 118,
+          "count": 10
+        },
+        "star": 1,
+        "fashionIds": [],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28000,
+        "colorId": 2,
+        "icon": "",
+        "cost": {
+          "id": 118,
+          "count": 10
+        },
+        "star": 1,
+        "fashionIds": [],
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "29000": {
+      "0": {
+        "id": 29000,
+        "colorId": 0,
+        "name": 29000,
+        "icon": "head_rs_2900",
+        "star": 0,
+        "fashionIds": [
+          29901,
+          29002,
+          29003,
+          29009
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 29000,
+        "colorId": 1,
+        "name": 80129000,
+        "icon": "head_rs_8012900",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129001,
+          80129002,
+          80129003,
+          80129009
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 29000,
+        "colorId": 2,
+        "name": 80229000,
+        "icon": "head_rs_8022900",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80229001,
+          80229002,
+          80229003,
+          80229009
+        ],
+        "showType": 1,
+        "openDay": 57,
+        "showTypeTw": 1,
+        "openDayTw": 57
+      }
+    },
+    "29010": {
+      "0": {
+        "id": 29010,
+        "colorId": 0,
+        "name": 29010,
+        "icon": "head_rs_2901",
+        "star": 0,
+        "fashionIds": [
+          29011,
+          29012,
+          29013,
+          29019
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 29010,
+        "colorId": 1,
+        "name": 80129010,
+        "icon": "head_rs_8012901",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129011,
+          80129012,
+          80129013,
+          80129019
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 29010,
+        "colorId": 2,
+        "name": 80229010,
+        "icon": "head_rs_8022901",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80229011,
+          80229012,
+          80229013,
+          80229019
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "29020": {
+      "0": {
+        "id": 29020,
+        "colorId": 0,
+        "name": 29020,
+        "icon": "head_rs_2902",
+        "star": 0,
+        "fashionIds": [
+          29021,
+          29022,
+          29023,
+          29029
+        ],
+        "showType": 3,
+        "openDay": 29,
+        "showTypeTw": 3,
+        "openDayTw": 29
+      },
+      "1": {
+        "id": 29020,
+        "colorId": 1,
+        "name": 80129020,
+        "icon": "head_rs_8012902",
+        "cost": {
+          "id": 165,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80129021,
+          80129022,
+          80129023,
+          80129029
+        ],
+        "showType": 3,
+        "openDay": 43,
+        "showTypeTw": 3,
+        "openDayTw": 43
+      }
+    },
+    "29030": {
+      "0": {
+        "id": 29030,
+        "colorId": 0,
+        "name": 29030,
+        "icon": "head_rs_2903",
+        "star": 0,
+        "fashionIds": [
+          29031,
+          29032,
+          29033,
+          29039
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 29030,
+        "colorId": 1,
+        "name": 80129030,
+        "icon": "head_rs_8012903",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129031,
+          80129032,
+          80129033,
+          80129039
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 29030,
+        "colorId": 2,
+        "name": 80229030,
+        "icon": "head_rs_8022903",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80229031,
+          80229032,
+          80229033,
+          80229039
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "29040": {
+      "0": {
+        "id": 29040,
+        "colorId": 0,
+        "name": 29040,
+        "icon": "head_rs_2904",
+        "star": 0,
+        "fashionIds": [
+          29041,
+          29042,
+          29043,
+          29049
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 29040,
+        "colorId": 1,
+        "name": 80129040,
+        "icon": "head_rs_8012904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80129041,
+          80129042,
+          80129043,
+          80129049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "2": {
+        "id": 29040,
+        "colorId": 2,
+        "name": 80229040,
+        "icon": "head_rs_8022904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80229041,
+          80229042,
+          80229043,
+          80229049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "3": {
+        "id": 29040,
+        "colorId": 3,
+        "name": 80329040,
+        "icon": "head_rs_8032904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80329041,
+          80329042,
+          80329043,
+          80329049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "4": {
+        "id": 29040,
+        "colorId": 4,
+        "name": 80429040,
+        "icon": "head_rs_8042904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80429041,
+          80429042,
+          80429043,
+          80429049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "5": {
+        "id": 29040,
+        "colorId": 5,
+        "name": 80529040,
+        "icon": "head_rs_8052904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80529041,
+          80529042,
+          80529043,
+          80529049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "6": {
+        "id": 29040,
+        "colorId": 6,
+        "name": 80629040,
+        "icon": "head_rs_8062904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80629041,
+          80629042,
+          80629043,
+          80629049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "7": {
+        "id": 29040,
+        "colorId": 7,
+        "name": 80729040,
+        "icon": "head_rs_8072904",
+        "cost": {
+          "id": 164,
+          "count": 1
+        },
+        "star": 4,
+        "fashionIds": [
+          80729041,
+          80729042,
+          80729043,
+          80729049
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29050": {
+      "0": {
+        "id": 29050,
+        "colorId": 0,
+        "name": 29050,
+        "icon": "head_rs_2905",
+        "star": 0,
+        "fashionIds": [
+          29051,
+          29052,
+          29053,
+          29059
+        ],
+        "showType": 3,
+        "openDay": 50,
+        "showTypeTw": 3,
+        "openDayTw": 50
+      },
+      "2": {
+        "id": 29050,
+        "colorId": 2,
+        "name": 80229050,
+        "icon": "head_rs_8022905",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80229051,
+          80229052,
+          80229053,
+          80229059
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29060": {
+      "0": {
+        "id": 29060,
+        "colorId": 0,
+        "name": 29060,
+        "icon": "head_rs_2906",
+        "star": 0,
+        "fashionIds": [
+          29061,
+          29062,
+          29063,
+          29069
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29060,
+        "colorId": 1,
+        "name": 80129060,
+        "icon": "head_rs_8012906",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129061,
+          80129062,
+          80129063,
+          80129069
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29070": {
+      "0": {
+        "id": 29070,
+        "colorId": 0,
+        "name": 29070,
+        "icon": "head_rs_2907",
+        "star": 0,
+        "fashionIds": [
+          29071,
+          29072,
+          29073,
+          29079
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29070,
+        "colorId": 1,
+        "name": 80129070,
+        "icon": "head_rs_8012907",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129071,
+          80129072,
+          80129073,
+          80129079
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29080": {
+      "0": {
+        "id": 29080,
+        "colorId": 0,
+        "name": 29080,
+        "icon": "head_rs_2908",
+        "star": 0,
+        "fashionIds": [
+          29081,
+          29082,
+          29083,
+          29089
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29080,
+        "colorId": 1,
+        "name": 80129080,
+        "icon": "head_rs_8012908",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129081,
+          80129082,
+          80129083,
+          80129089
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29090": {
+      "0": {
+        "id": 29090,
+        "colorId": 0,
+        "name": 29090,
+        "icon": "head_rs_2909",
+        "star": 0,
+        "fashionIds": [
+          29091,
+          29092,
+          29093,
+          29099
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29090,
+        "colorId": 1,
+        "name": 80129090,
+        "icon": "head_rs_8012909",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129091,
+          80129092,
+          80129093,
+          80129099
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29100": {
+      "0": {
+        "id": 29100,
+        "colorId": 0,
+        "name": 29100,
+        "icon": "head_rs_2910",
+        "star": 0,
+        "fashionIds": [
+          29101,
+          29102,
+          29103,
+          29109
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29100,
+        "colorId": 1,
+        "name": 80129100,
+        "icon": "head_rs_8012910",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129101,
+          80129102,
+          80129103,
+          80129109
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29150": {
+      "0": {
+        "id": 29150,
+        "colorId": 0,
+        "name": 29150,
+        "icon": "head_rs_2915",
+        "star": 0,
+        "fashionIds": [
+          29151,
+          29152,
+          29153,
+          29159
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29150,
+        "colorId": 1,
+        "name": 80129150,
+        "icon": "head_rs_8012915",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129151,
+          80129152,
+          80129153,
+          80129159
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29160": {
+      "0": {
+        "id": 29160,
+        "colorId": 0,
+        "name": 29160,
+        "icon": "head_rs_2916",
+        "star": 0,
+        "fashionIds": [
+          29161,
+          29162,
+          29163,
+          29169
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0
+      },
+      "1": {
+        "id": 29160,
+        "colorId": 1,
+        "name": 80129160,
+        "icon": "head_rs_8012916",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129161,
+          80129162,
+          80129163,
+          80129169
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0
+      }
+    },
+    "29170": {
+      "0": {
+        "id": 29170,
+        "colorId": 0,
+        "name": 29170,
+        "icon": "head_rs_2917",
+        "star": 0,
+        "fashionIds": [
+          29171,
+          29172,
+          29173,
+          29179
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29170,
+        "colorId": 1,
+        "name": 80129170,
+        "icon": "head_rs_8012917",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129171,
+          80129172,
+          80129173,
+          80129179
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29180": {
+      "0": {
+        "id": 29180,
+        "colorId": 0,
+        "name": 29180,
+        "icon": "head_rs_2918",
+        "star": 0,
+        "fashionIds": [
+          29181,
+          29182,
+          29183,
+          29189
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29180,
+        "colorId": 1,
+        "name": 80129180,
+        "icon": "head_rs_8012918",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129181,
+          80129182,
+          80129183,
+          80129189
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29240": {
+      "0": {
+        "id": 29240,
+        "colorId": 0,
+        "name": 29240,
+        "icon": "head_rs_2924",
+        "star": 0,
+        "fashionIds": [
+          29241,
+          29242,
+          29243,
+          29249
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29240,
+        "colorId": 1,
+        "name": 80129240,
+        "icon": "head_rs_8012924",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129241,
+          80129242,
+          80129243,
+          80129249
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29250": {
+      "0": {
+        "id": 29250,
+        "colorId": 0,
+        "name": 29250,
+        "icon": "head_rs_2925",
+        "star": 0,
+        "fashionIds": [
+          29251,
+          29252,
+          29253,
+          29259
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 29250,
+        "colorId": 1,
+        "name": 80129250,
+        "icon": "head_rs_8012925",
+        "cost": {
+          "id": 118,
+          "count": 40
+        },
+        "star": 4,
+        "fashionIds": [
+          80129251,
+          80129252,
+          80129253,
+          80129259
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29260": {
+      "0": {
+        "id": 29260,
+        "colorId": 0,
+        "name": 29260,
+        "icon": "head_rs_2926",
+        "star": 0,
+        "fashionIds": [
+          29261,
+          29262,
+          29263,
+          29269
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29270": {
+      "0": {
+        "id": 29270,
+        "colorId": 0,
+        "name": 29270,
+        "icon": "head_rs_2927",
+        "star": 0,
+        "fashionIds": [
+          29271,
+          29272,
+          29273,
+          29279
+        ],
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 2
+      }
+    },
+    "29999": {
+      "0": {
+        "id": 29999,
+        "colorId": 0,
+        "name": 80129990,
+        "icon": "head_rs_8012999",
+        "cost": {
+          "id": 118,
+          "count": 10
+        },
+        "star": 1,
+        "fashionIds": [
+          80129991,
+          80129992,
+          80129993,
+          80129999
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 29999,
+        "colorId": 1,
+        "name": 80229990,
+        "icon": "head_rs_8022999",
+        "cost": {
+          "id": 118,
+          "count": 10
+        },
+        "star": 1,
+        "fashionIds": [
+          80229991,
+          80229992,
+          80229993,
+          80229999
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 29999,
+        "colorId": 2,
+        "name": 80329990,
+        "icon": "head_rs_8032999",
+        "star": 0,
+        "fashionIds": [
+          80329991,
+          80329992,
+          80329993,
+          80329999
+        ],
+        "showType": 0,
+        "showTypeTw": 0
+      },
+      "3": {
+        "id": 29999,
+        "colorId": 3,
+        "name": 80429990,
+        "icon": "head_rs_8042999",
+        "star": 0,
+        "fashionIds": [
+          80429991,
+          80429992,
+          80429993,
+          80429999
+        ],
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    }
+  }
+}

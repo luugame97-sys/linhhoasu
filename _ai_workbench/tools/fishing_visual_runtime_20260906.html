@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#213d45}.egret-player{width:100%;height:100%}</style></head><body><div class="egret-player" data-entry-class="VisualMain" data-content-width="720" data-content-height="1280" data-scale-mode="showAll" data-frame-rate="30"></div>
+<script>window.errors=[];window.addEventListener('error',e=>errors.push(e.message));window.AppInfo={params:{},ckState:false,inChina:0};window.platform={};</script>
+<script src="/game/js/egret.min_7d668222.js"></script><script src="/game/js/egret.web.min_587897e9.js"></script><script src="/game/js/egretex.min_37b3ee13.js"></script><script src="/game/js/thirds.min_b052d442.js"></script><script src="/game/js/start.min_52ac8d58.js"></script><script src="/main.fixed.js"></script>
+<script>
+ window.inspectRuntime={global:typeof GlobalManager,spine:typeof spine,entity:typeof FishEntity,res:typeof RES,config:typeof GlobalConfig,skeleton:typeof SkeletonAnimationEx};
+Promise.all(['/visual-config.json','/visual-assets.json','/visual-skins.json','/visual-lang.json'].map(p=>fetch(p).then(r=>r.json()))).then(async function(data){
+ var cfg=data[0],resources=data[1],skins=data[2],lang=data[3],textures={};cfg.LanguageConfig=lang.LanguageConfig||lang;
+ async function texture(name){if(textures[name])return textures[name];var src=resources[name];if(!src)throw Error('IMAGE_MISSING_'+name);return new Promise((resolve,reject)=>{var loader=new egret.ImageLoader;loader.addEventListener(egret.Event.COMPLETE,function(){var t=new egret.Texture;t._setBitmapData(loader.data);textures[name]=t;resolve(t);},this);loader.addEventListener(egret.IOErrorEvent.IO_ERROR,reject,this);loader.load(src);});}
+ RES.hasRes=name=>!!resources[name]||!!SpineHelper.skelPackData?.[name]||!!SpineHelper.atlasPackData?.[name];RES.nameSelector=p=>p.replace(/\.png$/,'');
+ RES.getRes=name=>textures[name];RES.destroyRes=()=>true;RES.getResourceInfo=name=>({images:SpineHelper.atlasPackData[name]?.images||[]});
+ RES.getResAsync=async name=>{
+  if(SpineHelper.skelPackData?.[name])return SpineHelper.skelPackData[name];
+  if(SpineHelper.atlasPackData?.[name]){var a=SpineHelper.atlasPackData[name];await Promise.all(a.images.map(p=>texture(RES.nameSelector(p))));return a.atlas;}
+  var url=resources[name];if(!url)throw Error('RESOURCE_MISSING_'+name);if(/\.(png|jpg)$/.test(url))return texture(name);var r=await fetch(url);if(/\.json$/.test(url))return r.json();if(/\.atlas$/.test(url))return r.text();var bytes=await r.arrayBuffer();if(new Uint8Array(bytes)[0]===0x78){var inflated=new zlib.Inflate(new Uint8Array(bytes)).decompress();return inflated.buffer.slice(inflated.byteOffset,inflated.byteOffset+inflated.byteLength);}return bytes;
+ };
+ egret.registerImplementation('eui.IAssetAdapter',{getAsset:function(name,cb,obj){texture(name).then(t=>cb.call(obj,t,name)).catch(()=>cb.call(obj,null,name));}});
+ JSONParseClass.setData(skins);
+ SpineHelper.skelPackData={};SpineHelper.atlasPackData={};await SpineHelper.loadSingleSkelPack('skel_pack_bin');await SpineHelper.loadSingleAtlasPack('atlas_pack_bin');await SpineHelper.loadSingleSkelPack('skel_lang_pack_bin');await SpineHelper.loadSingleAtlasPack('atlas_lang_pack_bin');
+ var originalPath=SpineHelper.getSpinePath;window.spineMissing=[];SpineHelper.getSpinePath=function(name){var result=originalPath.call(this,name);if(!result[0])spineMissing.push(name);return result;};
+ Object.defineProperty(GlobalManager,'Config',{get:()=>cfg,configurable:true});GlobalManager.LanguageConfig=cfg.LanguageConfig||{};
+ GlobalManager.FashionModel=Object.create(FashionModel.prototype);GlobalManager.FishingModel=Object.create(FishingModel.prototype);GlobalManager.ActorModel={actorID:'visual0'};GlobalManager.RoleModel={getNameByStage:()=>''};
+ window.VisualMain=function(){var self=eui.UILayer.call(this)||this;self.addEventListener(egret.Event.ADDED_TO_STAGE,self.ready,self);return self;};__extends(VisualMain,eui.UILayer);
+ VisualMain.prototype.ready=async function(){try{var root=this;var bg=new eui.Image;bg.source='fishing_scene_1';bg.horizontalCenter=0;bg.verticalCenter=0;root.addChild(bg);window.objects=[];
+  for(var i=0;i<4;i++){var actor=new FishEntity;actor.x=360+(i%2?228:-228);actor.y=640+(i<2?-80:121)+166;actor.scaleX=i%2?-.76:.76;actor.scaleY=.76;root.addChild(actor);actor.validateNow();
+   var info=GlobalManager.FashionModel.CreateEmptyShowInfo(4,0);info.dbid='visual'+i;info.name='Ngư hữu '+(i+1);info.level=116;info.pos=i;info.rodId=5905+i;info.raftId=6207+i;info.food=5501;info.fashionMap=GlobalManager.FashionModel.CreateSuitFashionData([28010,28020,28030,28040][i],0);
+   var d=new FishEntityData;d.parse(info);actor.Init(d);await actor.zhufaSpine.loadEnsure();await actor.rodSpine.loadEnsure();objects.push({actor,raft:actor.zhufaSpine,rod:actor.rodSpine});
+  }window.inspectRuntime.assetCount=objects.length;window.ready=true;
+ }catch(e){errors.push(e.stack);window.inspectRuntime.missing=spineMissing;window.ready=false;}};egret.runEgret({renderMode:'webgl',audioType:0});
+});
+</script></body></html>

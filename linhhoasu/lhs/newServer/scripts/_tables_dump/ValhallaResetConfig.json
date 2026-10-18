@@ -1,0 +1,44 @@
+{
+  "_table": "ValhallaResetConfig",
+  "_rows": 1,
+  "_type": "object",
+  "_firstKeys": "quality,baseCosts,levelCosts,starCosts",
+  "_sample": [
+    {
+      "7": {
+        "quality": 7,
+        "baseCosts": [
+          {
+            "id": 1,
+            "count": 300
+          }
+        ],
+        "levelCosts": [],
+        "starCosts": [
+          {
+            "id": 209,
+            "count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "7": {
+      "quality": 7,
+      "baseCosts": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "levelCosts": [],
+      "starCosts": [
+        {
+          "id": 209,
+          "count": 1
+        }
+      ]
+    }
+  }
+}

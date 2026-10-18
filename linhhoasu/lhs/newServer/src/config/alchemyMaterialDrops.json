@@ -1,0 +1,10 @@
+{
+  "version": "20260914_current_tier_only_v1",
+  "provenance": "Normal-map material trigger rates remain on the owner-approved policy; tier selection now follows the current realm tier only. Cross-tier random drops are disabled because no official legacy-tier weight table is present in the 714 game tables.",
+  "enabled": true,
+  "currentTierWeightBps": 10000,
+  "groups": [
+    { "baseId": 2000, "tiers": 15, "chanceBps": 2000, "count": 1 },
+    { "baseId": 2200, "tiers": 15, "chanceBps": 500, "count": 1 }
+  ]
+}

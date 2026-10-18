@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S2 đang mở — chờ yêu cầu đóng</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="s2-m-cho-m-i-t-i-kho-n-05-09-2026">S2 mở cho mọi tài khoản — 05/09/2026</h1>
+<h2 id="1-t-m-t-t">1. Tóm tắt</h2>
+<p>Theo chỉ đạo cuối cùng, giữ S2 mở công khai cho mọi tài khoản; chỉ đóng khi người dùng yêu cầu. Không áp dụng whitelist vanduc97/vanduc990; không dời lịch sang 18:55 hoặc 19:00.</p>
+<h2 id="2-thay-i-v-b-ng-ch-ng">2. Thay đổi và bằng chứng</h2>
+<ul>
+<li>Không cần sửa DB: kiểm tra trực tiếp lúc18:20:33 UTC+7, bản ghi chính lhs_s1001.gameservers/serverId1002 đã running=true,status=1,openTime=1788602400000 (17:00 hôm nay, đã qua).</li>
+<li>ServerAccessService production không chứa EARLY_S2_ACCOUNTS; whitelist chỉ là candidate chưa triển khai trong <code>_ai_workbench/temp/s2_whitelist_20260905/</code>.</li>
+<li>Evidence trạng thái mới: <code>_ai_workbench/temp/s2_keep_open_20260905.json</code>.</li>
+<li>Phiên trước cùng chuỗi yêu cầu đã triển khai sửa ingress proxy tại HTTPServer.js: giữ public host khi S1 chuyển SDK login sang S2. Backup <code>/linhhoasu/_ai_workbench/backups/s2_proxy_20260905_111609/</code>; evidence <code>_ai_workbench/temp/s2_login_20260905/deploy_20260905_111609.json</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-v-gi-i-ph-p">3. Lỗi đã gặp và giải pháp</h2>
+<p>SDK S2 trước đó trả127.0.0.1:81/ws-s2 vì internal proxy mất header host. Sau sửa trả103.116.105.154:81/ws-s2. Test tài khoản QA SDK2820 → publicWS → loginACK +player500 thành công; account/role QA đã cleanup. Không thay mật khẩu hoặc role của người thật.</p>
+<h2 id="4-kinh-nghi-m">4. Kinh nghiệm</h2>
+<p>Chỉ đạo mới nhất thay thế các phương án thời gian/whitelist trước đó; không triển khai candidate đã bị hủy. Giữ trạng thái đang đúng, không restart chỉ để xác nhận mở.</p>
+<h2 id="5-tr-ng-th-i">5. Trạng thái</h2>
+<p>S2 openNow=true; healthok; botreal580,virtual580,slot2466,×2,invalid0. Không mutation hoặc restart trong lần xác nhận giữ mở này. Không có automation đóng/mở được tạo.</p>
+<h2 id="6-ti-p-theo">6. Tiếp theo</h2>
+<p>Người dùng vào S2 test. Nếu danh sách hoặc địa chỉ kết nối đang cũ, tải lại trang rồi chọn S2. Chỉ khi người dùng ra lệnh đóng mới thực hiện đóng; không tự đóng lúc18:55/19:00.</p></main></body></html>

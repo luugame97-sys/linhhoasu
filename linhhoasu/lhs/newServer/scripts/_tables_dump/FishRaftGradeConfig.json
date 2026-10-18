@@ -1,0 +1,376 @@
+{
+  "_table": "FishRaftGradeConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "id,level,exp,levelUpCost,gradeUpCost,levelUpAttrs,fullLevelAttrs,attrs",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "level": 10,
+        "exp": 100,
+        "levelUpCost": {
+          "id": 68,
+          "count": 1
+        },
+        "gradeUpCost": {
+          "id": 69,
+          "count": 15
+        },
+        "levelUpAttrs": {
+          "1": 500,
+          "5": 30,
+          "6": 5
+        },
+        "fullLevelAttrs": {
+          "1": 4000,
+          "5": 240,
+          "6": 40
+        },
+        "attrs": {
+          "101": 100,
+          "104": 150,
+          "105": 450
+        }
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "level": 20,
+        "exp": 400,
+        "levelUpCost": {
+          "id": 68,
+          "count": 1
+        },
+        "gradeUpCost": {
+          "id": 69,
+          "count": 45
+        },
+        "levelUpAttrs": {
+          "1": 600,
+          "5": 36,
+          "6": 6
+        },
+        "fullLevelAttrs": {
+          "1": 9000,
+          "5": 540,
+          "6": 90
+        },
+        "attrs": {
+          "101": 200,
+          "104": 300,
+          "105": 900
+        }
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "level": 30,
+        "exp": 1000,
+        "levelUpCost": {
+          "id": 68,
+          "count": 1
+        },
+        "gradeUpCost": {
+          "id": 69,
+          "count": 120
+        },
+        "levelUpAttrs": {
+          "1": 700,
+          "5": 42,
+          "6": 7
+        },
+        "fullLevelAttrs": {
+          "1": 21000,
+          "5": 1260,
+          "6": 210
+        },
+        "attrs": {
+          "101": 300,
+          "104": 450,
+          "105": 1350
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "level": 10,
+      "exp": 100,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 15
+      },
+      "levelUpAttrs": {
+        "1": 500,
+        "5": 30,
+        "6": 5
+      },
+      "fullLevelAttrs": {
+        "1": 4000,
+        "5": 240,
+        "6": 40
+      },
+      "attrs": {
+        "101": 100,
+        "104": 150,
+        "105": 450
+      }
+    },
+    "2": {
+      "id": 2,
+      "level": 20,
+      "exp": 400,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 45
+      },
+      "levelUpAttrs": {
+        "1": 600,
+        "5": 36,
+        "6": 6
+      },
+      "fullLevelAttrs": {
+        "1": 9000,
+        "5": 540,
+        "6": 90
+      },
+      "attrs": {
+        "101": 200,
+        "104": 300,
+        "105": 900
+      }
+    },
+    "3": {
+      "id": 3,
+      "level": 30,
+      "exp": 1000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 120
+      },
+      "levelUpAttrs": {
+        "1": 700,
+        "5": 42,
+        "6": 7
+      },
+      "fullLevelAttrs": {
+        "1": 21000,
+        "5": 1260,
+        "6": 210
+      },
+      "attrs": {
+        "101": 300,
+        "104": 450,
+        "105": 1350
+      }
+    },
+    "4": {
+      "id": 4,
+      "level": 60,
+      "exp": 2000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 450
+      },
+      "levelUpAttrs": {
+        "1": 800,
+        "5": 48,
+        "6": 8
+      },
+      "fullLevelAttrs": {
+        "1": 42000,
+        "5": 2520,
+        "6": 420
+      },
+      "attrs": {
+        "101": 400,
+        "104": 600,
+        "105": 1800
+      }
+    },
+    "5": {
+      "id": 5,
+      "level": 120,
+      "exp": 3000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 1200
+      },
+      "levelUpAttrs": {
+        "1": 900,
+        "5": 54,
+        "6": 9
+      },
+      "fullLevelAttrs": {
+        "1": 90000,
+        "5": 5400,
+        "6": 900
+      },
+      "attrs": {
+        "101": 500,
+        "104": 750,
+        "105": 2250
+      }
+    },
+    "6": {
+      "id": 6,
+      "level": 280,
+      "exp": 4000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 3000
+      },
+      "levelUpAttrs": {
+        "1": 1000,
+        "5": 60,
+        "6": 10
+      },
+      "fullLevelAttrs": {
+        "1": 198000,
+        "5": 11880,
+        "6": 1980
+      },
+      "attrs": {
+        "101": 600,
+        "104": 900,
+        "105": 2700
+      }
+    },
+    "7": {
+      "id": 7,
+      "level": 560,
+      "exp": 5000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 4500
+      },
+      "levelUpAttrs": {
+        "1": 1100,
+        "5": 66,
+        "6": 11
+      },
+      "fullLevelAttrs": {
+        "1": 478000,
+        "5": 28680,
+        "6": 4780
+      },
+      "attrs": {
+        "101": 700,
+        "104": 1050,
+        "105": 3150
+      }
+    },
+    "8": {
+      "id": 8,
+      "level": 840,
+      "exp": 6000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 6000
+      },
+      "levelUpAttrs": {
+        "1": 1200,
+        "5": 72,
+        "6": 12
+      },
+      "fullLevelAttrs": {
+        "1": 1094000,
+        "5": 65640,
+        "6": 10940
+      },
+      "attrs": {
+        "101": 800,
+        "104": 1200,
+        "105": 3600
+      }
+    },
+    "9": {
+      "id": 9,
+      "level": 1120,
+      "exp": 7000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "gradeUpCost": {
+        "id": 69,
+        "count": 7500
+      },
+      "levelUpAttrs": {
+        "1": 1300,
+        "5": 78,
+        "6": 13
+      },
+      "fullLevelAttrs": {
+        "1": 2102000,
+        "5": 126120,
+        "6": 21020
+      },
+      "attrs": {
+        "101": 900,
+        "104": 1350,
+        "105": 4050
+      }
+    },
+    "10": {
+      "id": 10,
+      "level": 1400,
+      "exp": 8000,
+      "levelUpCost": {
+        "id": 68,
+        "count": 1
+      },
+      "levelUpAttrs": {
+        "1": 1400,
+        "5": 84,
+        "6": 14
+      },
+      "fullLevelAttrs": {
+        "1": 3558000,
+        "5": 213480,
+        "6": 35580
+      },
+      "attrs": {
+        "101": 1000,
+        "104": 1500,
+        "105": 4500
+      }
+    }
+  }
+}

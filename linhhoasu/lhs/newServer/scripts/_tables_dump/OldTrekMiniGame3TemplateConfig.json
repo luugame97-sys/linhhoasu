@@ -1,0 +1,1150 @@
+{
+  "_table": "OldTrekMiniGame3TemplateConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4,5,6",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "difficulty": 1,
+          "id": 1,
+          "barBeat": [
+            0,
+            16,
+            32,
+            48
+          ],
+          "baseSpecialRate": 2000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "2": {
+          "difficulty": 1,
+          "id": 2,
+          "barBeat": [
+            0,
+            32
+          ],
+          "baseSpecialRate": 2000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "3": {
+          "difficulty": 1,
+          "id": 3,
+          "barBeat": [
+            16,
+            48
+          ],
+          "baseSpecialRate": 2000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "4": {
+          "difficulty": 1,
+          "id": 4,
+          "barBeat": [
+            0,
+            16,
+            48
+          ],
+          "baseSpecialRate": 2000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "5": {
+          "difficulty": 1,
+          "id": 5,
+          "barBeat": [
+            0,
+            32,
+            48
+          ],
+          "baseSpecialRate": 2000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "6": {
+          "difficulty": 1,
+          "id": 6,
+          "barBeat": [
+            16,
+            32,
+            48
+          ],
+          "baseSpecialRate": 2000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "2": {
+        "7": {
+          "difficulty": 2,
+          "id": 7,
+          "barBeat": [
+            0,
+            8,
+            16,
+            24
+          ],
+          "baseSpecialRate": 5000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "8": {
+          "difficulty": 2,
+          "id": 8,
+          "barBeat": [
+            32,
+            40,
+            48,
+            56
+          ],
+          "baseSpecialRate": 5000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "9": {
+          "difficulty": 2,
+          "id": 9,
+          "barBeat": [
+            16,
+            24,
+            32,
+            40
+          ],
+          "baseSpecialRate": 5000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "10": {
+          "difficulty": 2,
+          "id": 10,
+          "barBeat": [
+            0,
+            8,
+            16,
+            32,
+            48
+          ],
+          "baseSpecialRate": 5000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "11": {
+          "difficulty": 2,
+          "id": 11,
+          "barBeat": [
+            0,
+            16,
+            24,
+            32,
+            48
+          ],
+          "baseSpecialRate": 5000,
+          "feverSpecialRate": 8000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "3": {
+        "12": {
+          "difficulty": 3,
+          "id": 12,
+          "barBeat": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "baseSpecialRate": 10000,
+          "feverSpecialRate": 10000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "13": {
+          "difficulty": 3,
+          "id": 13,
+          "barBeat": [
+            24,
+            32,
+            40,
+            48,
+            56
+          ],
+          "baseSpecialRate": 10000,
+          "feverSpecialRate": 10000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "14": {
+          "difficulty": 3,
+          "id": 14,
+          "barBeat": [
+            8,
+            16,
+            24,
+            32,
+            40,
+            48
+          ],
+          "baseSpecialRate": 10000,
+          "feverSpecialRate": 10000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "15": {
+          "difficulty": 3,
+          "id": 15,
+          "barBeat": [
+            0,
+            8,
+            16,
+            32,
+            40,
+            48
+          ],
+          "baseSpecialRate": 10000,
+          "feverSpecialRate": 10000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        },
+        "16": {
+          "difficulty": 3,
+          "id": 16,
+          "barBeat": [
+            0,
+            8,
+            16,
+            24,
+            32,
+            40,
+            48
+          ],
+          "baseSpecialRate": 10000,
+          "feverSpecialRate": 10000,
+          "specialWeight": [
+            {
+              "weight": 1000,
+              "id": 1
+            },
+            {
+              "weight": 1000,
+              "id": 2
+            },
+            {
+              "weight": 1000,
+              "id": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "difficulty": 1,
+        "id": 1,
+        "barBeat": [
+          0,
+          16,
+          32,
+          48
+        ],
+        "baseSpecialRate": 2000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "2": {
+        "difficulty": 1,
+        "id": 2,
+        "barBeat": [
+          0,
+          32
+        ],
+        "baseSpecialRate": 2000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "3": {
+        "difficulty": 1,
+        "id": 3,
+        "barBeat": [
+          16,
+          48
+        ],
+        "baseSpecialRate": 2000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "4": {
+        "difficulty": 1,
+        "id": 4,
+        "barBeat": [
+          0,
+          16,
+          48
+        ],
+        "baseSpecialRate": 2000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "5": {
+        "difficulty": 1,
+        "id": 5,
+        "barBeat": [
+          0,
+          32,
+          48
+        ],
+        "baseSpecialRate": 2000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "6": {
+        "difficulty": 1,
+        "id": 6,
+        "barBeat": [
+          16,
+          32,
+          48
+        ],
+        "baseSpecialRate": 2000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      }
+    },
+    "2": {
+      "7": {
+        "difficulty": 2,
+        "id": 7,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24
+        ],
+        "baseSpecialRate": 5000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "8": {
+        "difficulty": 2,
+        "id": 8,
+        "barBeat": [
+          32,
+          40,
+          48,
+          56
+        ],
+        "baseSpecialRate": 5000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "9": {
+        "difficulty": 2,
+        "id": 9,
+        "barBeat": [
+          16,
+          24,
+          32,
+          40
+        ],
+        "baseSpecialRate": 5000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "10": {
+        "difficulty": 2,
+        "id": 10,
+        "barBeat": [
+          0,
+          8,
+          16,
+          32,
+          48
+        ],
+        "baseSpecialRate": 5000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "11": {
+        "difficulty": 2,
+        "id": 11,
+        "barBeat": [
+          0,
+          16,
+          24,
+          32,
+          48
+        ],
+        "baseSpecialRate": 5000,
+        "feverSpecialRate": 8000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      }
+    },
+    "3": {
+      "12": {
+        "difficulty": 3,
+        "id": 12,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24,
+          32
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "13": {
+        "difficulty": 3,
+        "id": 13,
+        "barBeat": [
+          24,
+          32,
+          40,
+          48,
+          56
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "14": {
+        "difficulty": 3,
+        "id": 14,
+        "barBeat": [
+          8,
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "15": {
+        "difficulty": 3,
+        "id": 15,
+        "barBeat": [
+          0,
+          8,
+          16,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "16": {
+        "difficulty": 3,
+        "id": 16,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      }
+    },
+    "4": {
+      "17": {
+        "difficulty": 4,
+        "id": 17,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24,
+          32
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "18": {
+        "difficulty": 4,
+        "id": 18,
+        "barBeat": [
+          24,
+          32,
+          40,
+          48,
+          56
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "19": {
+        "difficulty": 4,
+        "id": 19,
+        "barBeat": [
+          8,
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "20": {
+        "difficulty": 4,
+        "id": 20,
+        "barBeat": [
+          0,
+          8,
+          16,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "21": {
+        "difficulty": 4,
+        "id": 21,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      }
+    },
+    "5": {
+      "22": {
+        "difficulty": 5,
+        "id": 22,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24,
+          32
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "23": {
+        "difficulty": 5,
+        "id": 23,
+        "barBeat": [
+          24,
+          32,
+          40,
+          48,
+          56
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "24": {
+        "difficulty": 5,
+        "id": 24,
+        "barBeat": [
+          8,
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "25": {
+        "difficulty": 5,
+        "id": 25,
+        "barBeat": [
+          0,
+          8,
+          16,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      },
+      "26": {
+        "difficulty": 5,
+        "id": 26,
+        "barBeat": [
+          0,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48
+        ],
+        "baseSpecialRate": 10000,
+        "feverSpecialRate": 10000,
+        "specialWeight": [
+          {
+            "weight": 1000,
+            "id": 1
+          },
+          {
+            "weight": 1000,
+            "id": 2
+          },
+          {
+            "weight": 1000,
+            "id": 3
+          }
+        ]
+      }
+    }
+  }
+}

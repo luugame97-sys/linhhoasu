@@ -1,0 +1,8 @@
+import getpass,paramiko
+LOCAL=r'I:\Linhhoasu\server\server\_ai_workbench\tools\repair_webshop_fashion_orders.js'; EXPORT_LOCAL=r'I:\Linhhoasu\server\server\_ai_workbench\tools\export_buggy_fashion_orders.php'; REMOTE='/linhhoasu/_ai_workbench/temp/repair_webshop_fashion_orders.js'; EXPORT_REMOTE='/linhhoasu/_ai_workbench/temp/export_buggy_fashion_orders.php'
+s=paramiko.SSHClient();s.set_missing_host_key_policy(paramiko.AutoAddPolicy());s.connect('103.116.105.154',username='root',password=getpass.getpass('VPS password (not logged): '),look_for_keys=False,allow_agent=False,timeout=15)
+try:
+ sf=s.open_sftp();sf.put(LOCAL,REMOTE);sf.put(EXPORT_LOCAL,EXPORT_REMOTE);sf.close()
+ cmd="set -eu; stamp=$(date +%Y%m%d_%H%M%S); backup=/linhhoasu/_ai_workbench/backups/webshop_fashion_repair_$stamp; mkdir -p \"$backup\"; php "+EXPORT_REMOTE+"; pm2 stop lhs-s1001; trap 'pm2 start lhs-s1001 --update-env >/dev/null 2>&1 || true' EXIT; export MONGO_URI=mongodb://localhost:27017/lhs_s1001; WEBSHOP_FASHION_REPAIR_BACKUP=\"$backup\" node "+REMOTE+" --commit; pm2 start lhs-s1001 --update-env; trap - EXIT; pm2 save; for i in $(seq 1 30); do c=$(curl -sS -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/ready || true); [ \"$c\" = 200 ] && echo READY=200 && break; sleep 1; done; echo BACKUP=$backup; pm2 jlist | python3 -c \"import sys,json; p=next(x for x in json.load(sys.stdin) if x.get('name')=='lhs-s1001'); e=p.get('pm2_env',{}); print('STATUS='+str(e.get('status'))+' PID='+str(p.get('pid'))+' RESTARTS='+str(e.get('restart_time')))\""
+ _,o,e=s.exec_command(cmd); print(o.read().decode('utf-8','replace')); print(e.read().decode('utf-8','replace'))
+finally:s.close()

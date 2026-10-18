@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marquee broadcast deploy - 01/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="th-ng-b-o-ch-y-ngang-native-trong-game-01-09-2026">Thông báo chạy ngang native trong game (01/09/2026)</h1>
+<h2 id="1-k-t-qu">1. Kết quả</h2>
+<ul>
+<li>Đã triển khai tính năng vào WebGM production tại <code>http://103.116.105.154:88</code>.</li>
+<li>Thông báo đi qua UI native của game, không dùng HTML overlay bên ngoài.</li>
+<li>Client hiện có sẵn đường xử lý: server <code>msgType=16</code> → client chat type <code>19</code> → <code>MarqueeModel.addMarquee()</code>.</li>
+<li>Đã chốt TextFlow hotfix: màu/cỡ/viền dùng cú pháp native <code>|C:...&amp;S:...&amp;R:...&amp;K:...&amp;T:...</code>, đúng với <code>TextFlowMaker</code> của bundle hiện tại.</li>
+<li>Đã phát hiện một số lần thử live qua WebGM trong log: client cũ xử lý <code>msgType=16</code> như QiXi và <code>JSON.parse()</code> nội dung TextFlow, gây <code>Unexpected token '|'</code> khi khởi tạo chat.</li>
+<li>Đã chặn route khẩn cấp với mã <code>MARQUEE_CLIENT_PATCH_REQUIRED</code>, restart <code>lhs-s1001</code> để xóa lịch sử packet lỗi trong bộ nhớ và xác nhận client sạch không còn lỗi này.</li>
+<li>Tính năng gửi marquee đang <strong>tạm khóa an toàn</strong>; không dùng nút gửi cho tới khi client decoder được patch đúng contract.</li>
+</ul>
+<h2 id="2-ch-c-n-ng-webgm">2. Chức năng WebGM</h2>
+<p>Tab mới: <strong>Thông báo chạy ngang</strong>.</p>
+<ul>
+<li>Nội dung tối đa 200 ký tự.</li>
+<li>Xem trước trước khi gửi và hộp thoại xác nhận riêng.</li>
+<li>Màu chữ và màu viền.</li>
+<li>Cỡ chữ 18–40.</li>
+<li>Font nằm trong allowlist native: mặc định, sans-serif, serif, monospace, Arial, Verdana, Tahoma, Times New Roman.</li>
+<li>Đậm, nghiêng, gạch chân.</li>
+<li>Viền chữ 0–4.</li>
+<li>Phát 1–5 lần; nếu nhiều lần, khoảng cách 10–300 giây.</li>
+<li>Chỉ gửi tới kết nối game đang online tại thời điểm phát; người offline không nhận lại thông báo này.</li>
+</ul>
+<h2 id="3-b-o-v-v-gi-i-h-n">3. Bảo vệ và giới hạn</h2>
+<ul>
+<li>WebGM yêu cầu session admin + CSRF như các thao tác khác.</li>
+<li>WebGM giới hạn 5 lần gửi/60 giây.</li>
+<li>Game internal API yêu cầu API key + HMAC-SHA256 + timestamp + nonce chống replay.</li>
+<li>Event key được tạo cho mỗi lần gửi, chống retry trùng trong 5 phút.</li>
+<li>Nội dung được loại control character, đổi <code>|</code> thành ký tự an toàn và escape markup; không cho chèn HTML tùy ý.</li>
+<li>Màu, font, cỡ, viền đều được canonical hóa/giới hạn ở backend; không tin dữ liệu frontend.</li>
+<li>Restart dịch vụ sẽ hủy các lượt phát đang chờ; tính năng phát lại sau restart chưa được bật.</li>
+</ul>
+<h2 id="4-file-production-thay-i">4. File production đã thay đổi</h2>
+<h3 id="game">Game</h3>
+<ul>
+<li><code>/linhhoasu/lhs/newServer/src/handlers/chat.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/net/HTTPServer.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/net/WSServer.js</code></li>
+</ul>
+<h3 id="webgm">WebGM</h3>
+<ul>
+<li><code>/linhhoasu/webgame/gm/config.php</code></li>
+<li><code>/linhhoasu/webgame/gm/admin/admin_api.php</code></li>
+<li><code>/linhhoasu/webgame/gm/admin/index.php</code></li>
+<li><code>/linhhoasu/webgame/gm/assets/js/admin.js</code></li>
+</ul>
+<h2 id="5-ki-m-th">5. Kiểm thử</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Kiểm tra</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Contract native marquee local</td>
+<td>PASS, 22 checks</td>
+</tr>
+<tr>
+<td>Node syntax game handlers</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Node syntax WebGM JS</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>PHP lint trên VPS</td>
+<td>PASS cho <code>config.php</code>, <code>admin_api.php</code>, <code>index.php</code></td>
+</tr>
+<tr>
+<td>Hash candidate/live 7 file</td>
+<td>7/7 khớp</td>
+</tr>
+<tr>
+<td><code>lhs-s1001</code></td>
+<td>online, PID <code>19964</code></td>
+</tr>
+<tr>
+<td>Game readiness/WebSocket</td>
+<td><code>ready=200</code>, <code>ws=200</code></td>
+</tr>
+<tr>
+<td>WebGM admin/JS</td>
+<td><code>302</code> / <code>200</code></td>
+</tr>
+<tr>
+<td>Route không có auth</td>
+<td><code>401 UNAUTHORIZED</code></td>
+</tr>
+<tr>
+<td>Route có HMAC nhưng text rỗng</td>
+<td><code>400 MARQUEE_TEXT_REQUIRED</code> — không phát thông báo</td>
+</tr>
+<tr>
+<td>Route sau safety gate</td>
+<td><code>503 MARQUEE_CLIENT_PATCH_REQUIRED</code> — không phát packet</td>
+</tr>
+<tr>
+<td>Process restart</td>
+<td>Chỉ <code>lhs-s1001</code>; <code>lhs-dist</code>, <code>lhs-admin</code>, <code>lhs-real-bots</code> không restart</td>
+</tr>
+</tbody></table></div>
+<p>Evidence hậu kiểm: <code>_ai_workbench/temp/marquee_broadcast_prod_verify_20260901.json</code> và <code>_ai_workbench/temp/marquee_broadcast_route_test_20260901.json</code>.</p>
+<h2 id="6-backup-v-rollback">6. Backup và rollback</h2>
+<ul>
+<li>Backup remote ban đầu: <code>/linhhoasu/_ai_workbench/backups/marquee_broadcast_pre_20260901_153303/</code>.</li>
+<li>Backup TextFlow hotfix: <code>/linhhoasu/_ai_workbench/backups/marquee_textflow_pre_20260901_154901/</code>.</li>
+<li>Backup emergency safety gate: <code>/linhhoasu/_ai_workbench/backups/marquee_route_disabled_pre_20260901_161055/</code>.</li>
+<li>Stage remote: <code>/linhhoasu/_ai_workbench/temp/marquee_broadcast_20260901_153303/</code>.</li>
+<li>Tool deploy có hash precondition, staging syntax check và rollback file + restart nếu bước triển khai thất bại.</li>
+</ul>
+<h2 id="7-c-ch-s-d-ng">7. Cách sử dụng</h2>
+<ol>
+<li>Đăng nhập WebGM <code>:88</code> bằng tài khoản admin.</li>
+<li>Mở tab <strong>Thông báo chạy ngang</strong>.</li>
+<li>Nhập nội dung, chọn màu/cỡ/kiểu chữ và số lần chạy.</li>
+<li>Bấm <strong>Xem trước</strong> để kiểm tra bố cục.</li>
+<li>Bấm <strong>Gửi vào game</strong>, đọc lại hộp thoại rồi xác nhận.</li>
+</ol>
+<p>Chưa gửi thử live sau safety gate. Chỉ mở lại gửi sau khi đã patch client <code>parseQiXiMsg</code>/decoder và QA packet trên client sạch.</p></main></body></html>

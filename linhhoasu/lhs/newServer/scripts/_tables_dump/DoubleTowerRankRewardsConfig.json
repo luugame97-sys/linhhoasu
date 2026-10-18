@@ -1,0 +1,178 @@
+{
+  "_table": "DoubleTowerRankRewardsConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,score,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "score": 0,
+        "rewards": [
+          {
+            "id": 80,
+            "count": 1
+          },
+          {
+            "id": 83,
+            "count": 2
+          },
+          {
+            "id": 71,
+            "count": 500
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "score": 5,
+        "rewards": [
+          {
+            "id": 80,
+            "count": 2
+          },
+          {
+            "id": 83,
+            "count": 3
+          },
+          {
+            "id": 71,
+            "count": 1000
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "score": 10,
+        "rewards": [
+          {
+            "id": 81,
+            "count": 1
+          },
+          {
+            "id": 83,
+            "count": 3
+          },
+          {
+            "id": 71,
+            "count": 1500
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "score": 0,
+      "rewards": [
+        {
+          "id": 80,
+          "count": 1
+        },
+        {
+          "id": 83,
+          "count": 2
+        },
+        {
+          "id": 71,
+          "count": 500
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "score": 5,
+      "rewards": [
+        {
+          "id": 80,
+          "count": 2
+        },
+        {
+          "id": 83,
+          "count": 3
+        },
+        {
+          "id": 71,
+          "count": 1000
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "score": 10,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 1
+        },
+        {
+          "id": 83,
+          "count": 3
+        },
+        {
+          "id": 71,
+          "count": 1500
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "score": 15,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 2
+        },
+        {
+          "id": 83,
+          "count": 3
+        },
+        {
+          "id": 72,
+          "count": 500
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "score": 20,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 3
+        },
+        {
+          "id": 83,
+          "count": 3
+        },
+        {
+          "id": 72,
+          "count": 800
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "score": 25,
+      "rewards": [
+        {
+          "id": 100114,
+          "count": 1
+        },
+        {
+          "id": 81,
+          "count": 4
+        },
+        {
+          "id": 72,
+          "count": 1000
+        }
+      ]
+    }
+  }
+}

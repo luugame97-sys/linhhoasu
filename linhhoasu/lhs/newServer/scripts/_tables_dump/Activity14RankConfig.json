@@ -1,0 +1,550 @@
+{
+  "_table": "Activity14RankConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4,11,51,101,501",
+  "_sample": [
+    {
+      "14001": {
+        "1": {
+          "activityId": 14001,
+          "rankMin": 1,
+          "rankMax": 1,
+          "rankShow": "1",
+          "rewards": [
+            {
+              "id": 11208,
+              "count": 1
+            },
+            {
+              "id": 1,
+              "count": 1000
+            },
+            {
+              "id": 6,
+              "count": 100
+            }
+          ]
+        },
+        "2": {
+          "activityId": 14001,
+          "rankMin": 2,
+          "rankMax": 2,
+          "rankShow": "2",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 800
+            },
+            {
+              "id": 6,
+              "count": 80
+            }
+          ]
+        },
+        "3": {
+          "activityId": 14001,
+          "rankMin": 3,
+          "rankMax": 3,
+          "rankShow": "3",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 600
+            },
+            {
+              "id": 6,
+              "count": 60
+            }
+          ]
+        },
+        "4": {
+          "activityId": 14001,
+          "rankMin": 4,
+          "rankMax": 10,
+          "rankShow": "4-10",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 500
+            },
+            {
+              "id": 6,
+              "count": 50
+            }
+          ]
+        },
+        "11": {
+          "activityId": 14001,
+          "rankMin": 11,
+          "rankMax": 50,
+          "rankShow": "11-50",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 400
+            },
+            {
+              "id": 6,
+              "count": 40
+            }
+          ]
+        },
+        "51": {
+          "activityId": 14001,
+          "rankMin": 51,
+          "rankMax": 100,
+          "rankShow": "51-100",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 350
+            },
+            {
+              "id": 6,
+              "count": 35
+            }
+          ]
+        },
+        "101": {
+          "activityId": 14001,
+          "rankMin": 101,
+          "rankMax": 500,
+          "rankShow": "101-500",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 300
+            },
+            {
+              "id": 6,
+              "count": 30
+            }
+          ]
+        },
+        "501": {
+          "activityId": 14001,
+          "rankMin": 501,
+          "rankMax": 999999,
+          "rankShow": "501+",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 200
+            },
+            {
+              "id": 6,
+              "count": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "14051": {
+        "1": {
+          "activityId": 14051,
+          "rankMin": 1,
+          "rankMax": 1,
+          "rankShow": "1",
+          "rewards": [
+            {
+              "id": 11208,
+              "count": 1
+            },
+            {
+              "id": 1,
+              "count": 1000
+            },
+            {
+              "id": 6,
+              "count": 100
+            }
+          ]
+        },
+        "2": {
+          "activityId": 14051,
+          "rankMin": 2,
+          "rankMax": 2,
+          "rankShow": "2",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 800
+            },
+            {
+              "id": 6,
+              "count": 80
+            }
+          ]
+        },
+        "3": {
+          "activityId": 14051,
+          "rankMin": 3,
+          "rankMax": 3,
+          "rankShow": "3",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 600
+            },
+            {
+              "id": 6,
+              "count": 60
+            }
+          ]
+        },
+        "4": {
+          "activityId": 14051,
+          "rankMin": 4,
+          "rankMax": 10,
+          "rankShow": "4-10",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 500
+            },
+            {
+              "id": 6,
+              "count": 50
+            }
+          ]
+        },
+        "11": {
+          "activityId": 14051,
+          "rankMin": 11,
+          "rankMax": 50,
+          "rankShow": "11-50",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 400
+            },
+            {
+              "id": 6,
+              "count": 40
+            }
+          ]
+        },
+        "51": {
+          "activityId": 14051,
+          "rankMin": 51,
+          "rankMax": 100,
+          "rankShow": "51-100",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 350
+            },
+            {
+              "id": 6,
+              "count": 35
+            }
+          ]
+        },
+        "101": {
+          "activityId": 14051,
+          "rankMin": 101,
+          "rankMax": 500,
+          "rankShow": "101-500",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 300
+            },
+            {
+              "id": 6,
+              "count": 30
+            }
+          ]
+        },
+        "501": {
+          "activityId": 14051,
+          "rankMin": 501,
+          "rankMax": 999999,
+          "rankShow": "501+",
+          "rewards": [
+            {
+              "id": 1,
+              "count": 200
+            },
+            {
+              "id": 6,
+              "count": 20
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "14001": {
+      "1": {
+        "activityId": 14001,
+        "rankMin": 1,
+        "rankMax": 1,
+        "rankShow": "1",
+        "rewards": [
+          {
+            "id": 11208,
+            "count": 1
+          },
+          {
+            "id": 1,
+            "count": 1000
+          },
+          {
+            "id": 6,
+            "count": 100
+          }
+        ]
+      },
+      "2": {
+        "activityId": 14001,
+        "rankMin": 2,
+        "rankMax": 2,
+        "rankShow": "2",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 800
+          },
+          {
+            "id": 6,
+            "count": 80
+          }
+        ]
+      },
+      "3": {
+        "activityId": 14001,
+        "rankMin": 3,
+        "rankMax": 3,
+        "rankShow": "3",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 600
+          },
+          {
+            "id": 6,
+            "count": 60
+          }
+        ]
+      },
+      "4": {
+        "activityId": 14001,
+        "rankMin": 4,
+        "rankMax": 10,
+        "rankShow": "4-10",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 500
+          },
+          {
+            "id": 6,
+            "count": 50
+          }
+        ]
+      },
+      "11": {
+        "activityId": 14001,
+        "rankMin": 11,
+        "rankMax": 50,
+        "rankShow": "11-50",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 400
+          },
+          {
+            "id": 6,
+            "count": 40
+          }
+        ]
+      },
+      "51": {
+        "activityId": 14001,
+        "rankMin": 51,
+        "rankMax": 100,
+        "rankShow": "51-100",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 350
+          },
+          {
+            "id": 6,
+            "count": 35
+          }
+        ]
+      },
+      "101": {
+        "activityId": 14001,
+        "rankMin": 101,
+        "rankMax": 500,
+        "rankShow": "101-500",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 300
+          },
+          {
+            "id": 6,
+            "count": 30
+          }
+        ]
+      },
+      "501": {
+        "activityId": 14001,
+        "rankMin": 501,
+        "rankMax": 999999,
+        "rankShow": "501+",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 200
+          },
+          {
+            "id": 6,
+            "count": 20
+          }
+        ]
+      }
+    },
+    "14051": {
+      "1": {
+        "activityId": 14051,
+        "rankMin": 1,
+        "rankMax": 1,
+        "rankShow": "1",
+        "rewards": [
+          {
+            "id": 11208,
+            "count": 1
+          },
+          {
+            "id": 1,
+            "count": 1000
+          },
+          {
+            "id": 6,
+            "count": 100
+          }
+        ]
+      },
+      "2": {
+        "activityId": 14051,
+        "rankMin": 2,
+        "rankMax": 2,
+        "rankShow": "2",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 800
+          },
+          {
+            "id": 6,
+            "count": 80
+          }
+        ]
+      },
+      "3": {
+        "activityId": 14051,
+        "rankMin": 3,
+        "rankMax": 3,
+        "rankShow": "3",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 600
+          },
+          {
+            "id": 6,
+            "count": 60
+          }
+        ]
+      },
+      "4": {
+        "activityId": 14051,
+        "rankMin": 4,
+        "rankMax": 10,
+        "rankShow": "4-10",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 500
+          },
+          {
+            "id": 6,
+            "count": 50
+          }
+        ]
+      },
+      "11": {
+        "activityId": 14051,
+        "rankMin": 11,
+        "rankMax": 50,
+        "rankShow": "11-50",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 400
+          },
+          {
+            "id": 6,
+            "count": 40
+          }
+        ]
+      },
+      "51": {
+        "activityId": 14051,
+        "rankMin": 51,
+        "rankMax": 100,
+        "rankShow": "51-100",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 350
+          },
+          {
+            "id": 6,
+            "count": 35
+          }
+        ]
+      },
+      "101": {
+        "activityId": 14051,
+        "rankMin": 101,
+        "rankMax": 500,
+        "rankShow": "101-500",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 300
+          },
+          {
+            "id": 6,
+            "count": 30
+          }
+        ]
+      },
+      "501": {
+        "activityId": 14051,
+        "rankMin": 501,
+        "rankMax": 999999,
+        "rankShow": "501+",
+        "rewards": [
+          {
+            "id": 1,
+            "count": 200
+          },
+          {
+            "id": 6,
+            "count": 20
+          }
+        ]
+      }
+    }
+  }
+}

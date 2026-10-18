@@ -1,0 +1,728 @@
+{
+  "_table": "PetSoulUpgradeConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "0,1,2,3,4,5",
+  "_sample": [
+    {
+      "3": {
+        "0": {
+          "quality": 3,
+          "star": 0,
+          "require": 250,
+          "attrRate": 0,
+          "usageLimit": [],
+          "coercion": 80,
+          "attrs": {
+            "205": 30
+          }
+        },
+        "1": {
+          "quality": 3,
+          "star": 1,
+          "require": 400,
+          "attrRate": 2000,
+          "usageLimit": [],
+          "coercion": 120,
+          "attrs": {
+            "205": 45
+          }
+        },
+        "2": {
+          "quality": 3,
+          "star": 2,
+          "require": 550,
+          "attrRate": 4500,
+          "usageLimit": [],
+          "coercion": 160,
+          "attrs": {
+            "205": 60
+          }
+        },
+        "3": {
+          "quality": 3,
+          "star": 3,
+          "require": 700,
+          "attrRate": 7500,
+          "usageLimit": [],
+          "coercion": 200,
+          "attrs": {
+            "205": 75
+          }
+        },
+        "4": {
+          "quality": 3,
+          "star": 4,
+          "require": 900,
+          "attrRate": 11000,
+          "usageLimit": [],
+          "coercion": 240,
+          "attrs": {
+            "205": 90
+          }
+        },
+        "5": {
+          "quality": 3,
+          "star": 5,
+          "attrRate": 15000,
+          "usageLimit": [],
+          "coercion": 280,
+          "attrs": {
+            "205": 105
+          }
+        }
+      }
+    },
+    {
+      "4": {
+        "0": {
+          "quality": 4,
+          "star": 0,
+          "require": 600,
+          "attrRate": 0,
+          "usageLimit": [],
+          "coercion": 130,
+          "attrs": {
+            "205": 50
+          }
+        },
+        "1": {
+          "quality": 4,
+          "star": 1,
+          "require": 950,
+          "attrRate": 2000,
+          "usageLimit": [],
+          "coercion": 195,
+          "attrs": {
+            "205": 75
+          }
+        },
+        "2": {
+          "quality": 4,
+          "star": 2,
+          "require": 1300,
+          "attrRate": 4500,
+          "usageLimit": [],
+          "coercion": 260,
+          "attrs": {
+            "205": 100
+          }
+        },
+        "3": {
+          "quality": 4,
+          "star": 3,
+          "require": 1750,
+          "attrRate": 7500,
+          "usageLimit": [],
+          "coercion": 325,
+          "attrs": {
+            "205": 125
+          }
+        },
+        "4": {
+          "quality": 4,
+          "star": 4,
+          "require": 2250,
+          "attrRate": 11000,
+          "usageLimit": [],
+          "coercion": 390,
+          "attrs": {
+            "205": 150
+          }
+        },
+        "5": {
+          "quality": 4,
+          "star": 5,
+          "attrRate": 15000,
+          "usageLimit": [],
+          "coercion": 455,
+          "attrs": {
+            "205": 175
+          }
+        }
+      }
+    },
+    {
+      "5": {
+        "0": {
+          "quality": 5,
+          "star": 0,
+          "require": 2000,
+          "attrRate": 0,
+          "usageLimit": [],
+          "coercion": 210,
+          "attrs": {
+            "205": 80
+          }
+        },
+        "1": {
+          "quality": 5,
+          "star": 1,
+          "require": 3150,
+          "attrRate": 2000,
+          "usageLimit": [],
+          "coercion": 315,
+          "attrs": {
+            "205": 120
+          }
+        },
+        "2": {
+          "quality": 5,
+          "star": 2,
+          "require": 4300,
+          "attrRate": 4500,
+          "usageLimit": [],
+          "coercion": 420,
+          "attrs": {
+            "205": 160
+          }
+        },
+        "3": {
+          "quality": 5,
+          "star": 3,
+          "require": 5850,
+          "attrRate": 7500,
+          "usageLimit": [],
+          "coercion": 525,
+          "attrs": {
+            "205": 200
+          }
+        },
+        "4": {
+          "quality": 5,
+          "star": 4,
+          "require": 7450,
+          "attrRate": 11000,
+          "usageLimit": [],
+          "coercion": 630,
+          "attrs": {
+            "205": 240
+          }
+        },
+        "5": {
+          "quality": 5,
+          "star": 5,
+          "require": 9400,
+          "attrRate": 15000,
+          "usageLimit": [],
+          "coercion": 735,
+          "attrs": {
+            "205": 280
+          }
+        },
+        "6": {
+          "quality": 5,
+          "star": 6,
+          "require": 11950,
+          "attrRate": 19500,
+          "usageLimit": [],
+          "coercion": 840,
+          "attrs": {
+            "205": 320
+          }
+        },
+        "7": {
+          "quality": 5,
+          "star": 7,
+          "attrRate": 24500,
+          "usageLimit": [],
+          "coercion": 945,
+          "attrs": {
+            "205": 360
+          }
+        }
+      }
+    }
+  ],
+  "data": {
+    "3": {
+      "0": {
+        "quality": 3,
+        "star": 0,
+        "require": 250,
+        "attrRate": 0,
+        "usageLimit": [],
+        "coercion": 80,
+        "attrs": {
+          "205": 30
+        }
+      },
+      "1": {
+        "quality": 3,
+        "star": 1,
+        "require": 400,
+        "attrRate": 2000,
+        "usageLimit": [],
+        "coercion": 120,
+        "attrs": {
+          "205": 45
+        }
+      },
+      "2": {
+        "quality": 3,
+        "star": 2,
+        "require": 550,
+        "attrRate": 4500,
+        "usageLimit": [],
+        "coercion": 160,
+        "attrs": {
+          "205": 60
+        }
+      },
+      "3": {
+        "quality": 3,
+        "star": 3,
+        "require": 700,
+        "attrRate": 7500,
+        "usageLimit": [],
+        "coercion": 200,
+        "attrs": {
+          "205": 75
+        }
+      },
+      "4": {
+        "quality": 3,
+        "star": 4,
+        "require": 900,
+        "attrRate": 11000,
+        "usageLimit": [],
+        "coercion": 240,
+        "attrs": {
+          "205": 90
+        }
+      },
+      "5": {
+        "quality": 3,
+        "star": 5,
+        "attrRate": 15000,
+        "usageLimit": [],
+        "coercion": 280,
+        "attrs": {
+          "205": 105
+        }
+      }
+    },
+    "4": {
+      "0": {
+        "quality": 4,
+        "star": 0,
+        "require": 600,
+        "attrRate": 0,
+        "usageLimit": [],
+        "coercion": 130,
+        "attrs": {
+          "205": 50
+        }
+      },
+      "1": {
+        "quality": 4,
+        "star": 1,
+        "require": 950,
+        "attrRate": 2000,
+        "usageLimit": [],
+        "coercion": 195,
+        "attrs": {
+          "205": 75
+        }
+      },
+      "2": {
+        "quality": 4,
+        "star": 2,
+        "require": 1300,
+        "attrRate": 4500,
+        "usageLimit": [],
+        "coercion": 260,
+        "attrs": {
+          "205": 100
+        }
+      },
+      "3": {
+        "quality": 4,
+        "star": 3,
+        "require": 1750,
+        "attrRate": 7500,
+        "usageLimit": [],
+        "coercion": 325,
+        "attrs": {
+          "205": 125
+        }
+      },
+      "4": {
+        "quality": 4,
+        "star": 4,
+        "require": 2250,
+        "attrRate": 11000,
+        "usageLimit": [],
+        "coercion": 390,
+        "attrs": {
+          "205": 150
+        }
+      },
+      "5": {
+        "quality": 4,
+        "star": 5,
+        "attrRate": 15000,
+        "usageLimit": [],
+        "coercion": 455,
+        "attrs": {
+          "205": 175
+        }
+      }
+    },
+    "5": {
+      "0": {
+        "quality": 5,
+        "star": 0,
+        "require": 2000,
+        "attrRate": 0,
+        "usageLimit": [],
+        "coercion": 210,
+        "attrs": {
+          "205": 80
+        }
+      },
+      "1": {
+        "quality": 5,
+        "star": 1,
+        "require": 3150,
+        "attrRate": 2000,
+        "usageLimit": [],
+        "coercion": 315,
+        "attrs": {
+          "205": 120
+        }
+      },
+      "2": {
+        "quality": 5,
+        "star": 2,
+        "require": 4300,
+        "attrRate": 4500,
+        "usageLimit": [],
+        "coercion": 420,
+        "attrs": {
+          "205": 160
+        }
+      },
+      "3": {
+        "quality": 5,
+        "star": 3,
+        "require": 5850,
+        "attrRate": 7500,
+        "usageLimit": [],
+        "coercion": 525,
+        "attrs": {
+          "205": 200
+        }
+      },
+      "4": {
+        "quality": 5,
+        "star": 4,
+        "require": 7450,
+        "attrRate": 11000,
+        "usageLimit": [],
+        "coercion": 630,
+        "attrs": {
+          "205": 240
+        }
+      },
+      "5": {
+        "quality": 5,
+        "star": 5,
+        "require": 9400,
+        "attrRate": 15000,
+        "usageLimit": [],
+        "coercion": 735,
+        "attrs": {
+          "205": 280
+        }
+      },
+      "6": {
+        "quality": 5,
+        "star": 6,
+        "require": 11950,
+        "attrRate": 19500,
+        "usageLimit": [],
+        "coercion": 840,
+        "attrs": {
+          "205": 320
+        }
+      },
+      "7": {
+        "quality": 5,
+        "star": 7,
+        "attrRate": 24500,
+        "usageLimit": [],
+        "coercion": 945,
+        "attrs": {
+          "205": 360
+        }
+      }
+    },
+    "6": {
+      "0": {
+        "quality": 6,
+        "star": 0,
+        "require": 10000,
+        "attrRate": 0,
+        "usageLimit": [],
+        "coercion": 315,
+        "attrs": {
+          "205": 120
+        }
+      },
+      "1": {
+        "quality": 6,
+        "star": 1,
+        "require": 15650,
+        "attrRate": 2000,
+        "usageLimit": [],
+        "coercion": 470,
+        "attrs": {
+          "205": 180
+        }
+      },
+      "2": {
+        "quality": 6,
+        "star": 2,
+        "require": 21450,
+        "attrRate": 4500,
+        "usageLimit": [],
+        "coercion": 625,
+        "attrs": {
+          "205": 240
+        }
+      },
+      "3": {
+        "quality": 6,
+        "star": 3,
+        "require": 29200,
+        "attrRate": 7500,
+        "usageLimit": [],
+        "coercion": 780,
+        "attrs": {
+          "205": 300
+        }
+      },
+      "4": {
+        "quality": 6,
+        "star": 4,
+        "require": 37050,
+        "attrRate": 11000,
+        "usageLimit": [],
+        "coercion": 935,
+        "attrs": {
+          "205": 360
+        }
+      },
+      "5": {
+        "quality": 6,
+        "star": 5,
+        "require": 46900,
+        "attrRate": 15000,
+        "usageLimit": [],
+        "coercion": 1090,
+        "attrs": {
+          "205": 420
+        }
+      },
+      "6": {
+        "quality": 6,
+        "star": 6,
+        "require": 59550,
+        "attrRate": 19500,
+        "usageLimit": [],
+        "coercion": 1245,
+        "attrs": {
+          "205": 480
+        }
+      },
+      "7": {
+        "quality": 6,
+        "star": 7,
+        "require": 68750,
+        "attrRate": 24500,
+        "usageLimit": [],
+        "coercion": 1400,
+        "attrs": {
+          "205": 540
+        }
+      },
+      "8": {
+        "quality": 6,
+        "star": 8,
+        "require": 75000,
+        "attrRate": 30000,
+        "usageLimit": [],
+        "coercion": 1555,
+        "attrs": {
+          "205": 600
+        }
+      },
+      "9": {
+        "quality": 6,
+        "star": 9,
+        "require": 87500,
+        "attrRate": 36000,
+        "usageLimit": [],
+        "coercion": 1710,
+        "attrs": {
+          "205": 660
+        }
+      },
+      "10": {
+        "quality": 6,
+        "star": 10,
+        "attrRate": 43000,
+        "usageLimit": [],
+        "coercion": 1865,
+        "attrs": {
+          "205": 720
+        }
+      }
+    },
+    "7": {
+      "0": {
+        "quality": 7,
+        "star": 0,
+        "require": 56000,
+        "attrRate": 0,
+        "usageLimit": {
+          "1": 10
+        },
+        "coercion": 580,
+        "attrs": {
+          "205": 220
+        }
+      },
+      "1": {
+        "quality": 7,
+        "star": 1,
+        "require": 87500,
+        "attrRate": 2000,
+        "usageLimit": {
+          "1": 12
+        },
+        "coercion": 870,
+        "attrs": {
+          "205": 330
+        }
+      },
+      "2": {
+        "quality": 7,
+        "star": 2,
+        "require": 120000,
+        "attrRate": 4500,
+        "usageLimit": {
+          "1": 14
+        },
+        "coercion": 1160,
+        "attrs": {
+          "205": 440
+        }
+      },
+      "3": {
+        "quality": 7,
+        "star": 3,
+        "require": 163350,
+        "attrRate": 7500,
+        "usageLimit": {
+          "1": 17
+        },
+        "coercion": 1450,
+        "attrs": {
+          "205": 550
+        }
+      },
+      "4": {
+        "quality": 7,
+        "star": 4,
+        "require": 207450,
+        "attrRate": 11000,
+        "usageLimit": {
+          "1": 20
+        },
+        "coercion": 1740,
+        "attrs": {
+          "205": 660
+        }
+      },
+      "5": {
+        "quality": 7,
+        "star": 5,
+        "require": 262500,
+        "attrRate": 15000,
+        "usageLimit": {
+          "1": 24
+        },
+        "coercion": 2030,
+        "attrs": {
+          "205": 770
+        }
+      },
+      "6": {
+        "quality": 7,
+        "star": 6,
+        "require": 333350,
+        "attrRate": 19500,
+        "usageLimit": {
+          "1": 28
+        },
+        "coercion": 2320,
+        "attrs": {
+          "205": 880
+        }
+      },
+      "7": {
+        "quality": 7,
+        "star": 7,
+        "require": 385000,
+        "attrRate": 24500,
+        "usageLimit": {
+          "1": 33
+        },
+        "coercion": 2610,
+        "attrs": {
+          "205": 990
+        }
+      },
+      "8": {
+        "quality": 7,
+        "star": 8,
+        "require": 420000,
+        "attrRate": 30000,
+        "usageLimit": {
+          "1": 38
+        },
+        "coercion": 2900,
+        "attrs": {
+          "205": 1100
+        }
+      },
+      "9": {
+        "quality": 7,
+        "star": 9,
+        "require": 490000,
+        "attrRate": 36000,
+        "usageLimit": {
+          "1": 44
+        },
+        "coercion": 3190,
+        "attrs": {
+          "205": 1210
+        }
+      },
+      "10": {
+        "quality": 7,
+        "star": 10,
+        "attrRate": 43000,
+        "usageLimit": {
+          "1": 50
+        },
+        "coercion": 3480,
+        "attrs": {
+          "205": 1320
+        }
+      }
+    }
+  }
+}

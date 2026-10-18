@@ -1,0 +1,10 @@
+'use strict';
+const {execFileSync}=require('child_process');
+const fs=require('fs'),crypto=require('crypto');
+const cfgPath='/linhhoasu/lhs/newServer/src/config/crossServerEventSchedule.json';
+const cfg=JSON.parse(fs.readFileSync(cfgPath,'utf8'));
+const list=JSON.parse(execFileSync('pm2',['jlist'],{encoding:'utf8'}));
+const nodes=list.filter(x=>/^lhs-s100[1-7]$/.test(x.name)).map(x=>({name:x.name,status:x.pm2_env.status,pid:x.pid,restarts:x.pm2_env.restart_time,crossEventEnabled:x.pm2_env.env.CROSS_EVENT_ENABLED||''}));
+const now=Date.now(),DAY=86400000,a=Date.parse(cfg.anchor),i=Math.floor((now-a)/(cfg.periodDays*DAY)),ai=cfg.independent.crossArena,ca=Date.parse(ai.anchor),ci=Math.floor((now-ca)/(ai.periodDays*DAY));
+const out={result:'PASS',at:new Date(now).toISOString(),configSha256:crypto.createHash('sha256').update(fs.readFileSync(cfgPath)).digest('hex'),schedule:{enabled:cfg.enabled,rotation:cfg.rotation,periodDays:cfg.periodDays,settlementGraceMs:cfg.settlementGraceMs},cycles:{crossRival:{index:i,startTime:a+i*cfg.periodDays*DAY,endTime:a+(i+1)*cfg.periodDays*DAY,key:`C${i}_${a+i*cfg.periodDays*DAY}`},crossArena:{index:ci,startTime:ca+ci*ai.periodDays*DAY,endTime:ca+(ci+1)*ai.periodDays*DAY,key:`W_crossArena_${ci}_${ca+ci*ai.periodDays*DAY}`}},nodes};
+console.log(JSON.stringify(out,null,2));

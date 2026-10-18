@@ -1,0 +1,176 @@
+{
+  "_table": "DoubleTowerBaseConfig",
+  "_rows": 38,
+  "_type": "object",
+  "_firstKeys": "(obj)[LevelUpCost|RefreshBaseCost|RefreshIncreaseCost|RefreshMaximumCost|CarBasicHP]",
+  "_sample": [
+    {
+      "LevelUpCost": [
+        30,
+        50,
+        80,
+        120,
+        160
+      ]
+    },
+    {
+      "RefreshBaseCost": 5
+    },
+    {
+      "RefreshIncreaseCost": 5
+    }
+  ],
+  "data": {
+    "LevelUpCost": [
+      30,
+      50,
+      80,
+      120,
+      160
+    ],
+    "RefreshBaseCost": 5,
+    "RefreshIncreaseCost": 5,
+    "RefreshMaximumCost": 50,
+    "CarBasicHP": 100000,
+    "BoxBaseWeight": [
+      9000,
+      1000
+    ],
+    "BoxEquipWeight": [
+      1500,
+      1500,
+      1500,
+      1500,
+      1500,
+      1500
+    ],
+    "SilverCoinBaseNum": 100,
+    "SilverCoinIncreaseNum": 0,
+    "SilverCoinMaximumNum": 150,
+    "CarLevelLimit": 6,
+    "SilverCoinInitialNum": 50,
+    "HitBase": 10000,
+    "CritBase": 0,
+    "CritDamageBase": 20000,
+    "ArmorBase": 100,
+    "ArmorParameter": 1,
+    "PenetrationResisBase": 100,
+    "PenetrationResisParameter": 1,
+    "DailyWinAdsLimit": 5,
+    "DailyLoseAdsLimit": 5,
+    "CombatTimeLimit": 36000,
+    "InitialHero": [
+      26111,
+      26211,
+      26311,
+      26411,
+      26511,
+      26121,
+      26221,
+      26321,
+      26421,
+      26521
+    ],
+    "SeasonStartTime": 1676822400,
+    "dailyWinCountMax": 5,
+    "dailyLoseCountMax": 5,
+    "matchingTime": [
+      2,
+      3
+    ],
+    "tipsLibrary": [
+      99200001,
+      99200002,
+      99200003,
+      99200004,
+      99200005,
+      99200006,
+      99200007,
+      99200008,
+      99200009,
+      99200010,
+      99200011,
+      99200012,
+      99200013,
+      99200014,
+      99200015,
+      99200016,
+      99200017,
+      99200018,
+      99200019,
+      99200020
+    ],
+    "firstBattleRefresh": [
+      [
+        26411,
+        26311,
+        26111
+      ],
+      [
+        26421,
+        26511,
+        26521
+      ],
+      [
+        26321,
+        26121,
+        26521
+      ]
+    ],
+    "firstBattleAI": 10001,
+    "battleWinRewards": [
+      {
+        "id": 80,
+        "count": 1
+      },
+      {
+        "id": 71,
+        "count": 200
+      }
+    ],
+    "battleWinAddRewards": [
+      {
+        "id": 80,
+        "count": 1
+      },
+      {
+        "id": 71,
+        "count": 200
+      }
+    ],
+    "longTimeBattleLimit": [
+      {
+        "time": 300,
+        "hpDec": 50,
+        "healDec": 5000,
+        "extraCoin": 3,
+        "chiyouShieldDec": 5000
+      },
+      {
+        "time": 420,
+        "hpDec": 100,
+        "healDec": 9000,
+        "extraCoin": 5,
+        "chiyouShieldDec": 9000
+      }
+    ],
+    "preloadSound": [
+      "effect_dt_matching",
+      "effect_dt_mached",
+      "effect_open",
+      "effect_dt_shipLevelUp",
+      "effect_dt_unLock",
+      "effect_dt_heroEnter"
+    ],
+    "lowHPAlarm": 1500,
+    "heavyHit": 400,
+    "multipleConditions": [
+      {
+        "type": 5,
+        "value": 36,
+        "cond": 4
+      }
+    ],
+    "multipleNum": 5
+  }
+}

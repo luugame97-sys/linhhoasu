@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audit khóa hiển thị sau nhuộm màu - Linh Họa Sư</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="audit-kh-a-hi-n-th-sau-nhu-m-m-u-05-09-2026">Audit khóa hiển thị sau nhuộm màu — 05/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Xác định đúng bộ trong ảnh: <code>29030 – Cửu Thiên Phong Lôi</code>.</li>
+<li>Màu đang chọn/mặc là màu <code>2 – Thương Minh Thám Nhược</code>.</li>
+<li>Bốn component của màu 2: <code>80229031</code>, <code>80229032</code>, <code>80229033</code>, <code>80229039</code>.</li>
+<li>Chi phí nhuộm: item <code>118 × 40</code>.</li>
+<li>Audit Mongo production chỉ đọc và đã ẩn danh người chơi.</li>
+<li>Kết luận: server đã lưu đúng quyền sở hữu và trạng thái mặc; dấu khóa còn lại do client chưa nhận packet cập nhật Fashion ngay sau tag <code>1803</code>.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source game production/local: <strong>không thay đổi</strong>.</li>
+<li>Tool audit: <code>_ai_workbench/tools/audit_suit_dye_state_remote_20260905.js</code>.</li>
+<li>Runner: <code>_ai_workbench/tools/run_suit_dye_audit_20260905.py</code>.</li>
+<li>Fixture tái hiện: <code>_ai_workbench/tools/test_suit_dye_ui_sync_gap_20260905.js</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/suit_dye_audit_20260905_004953.json</code>.</li>
+<li>Hậu kiểm production: <code>_ai_workbench/temp/appearance_fix_postdeploy_20260905_005202.json</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách kiểm tra</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhuộm xong popup cho mặc nhưng ô màu vẫn có khóa</td>
+<td><code>handleSuitColorUnlock</code> mở component trên server nhưng phản hồi chỉ có tag <code>1202</code> và <code>1803</code>, thiếu tag <code>1800</code> cập nhật <code>activateFashion</code></td>
+<td>Fixture: server owned=true, client snapshot owned=false, responseTags=<code>[1202,1803]</code></td>
+<td>Sau unlock phải push <code>1800</code> chứa <code>fashionData</code> và <code>activateFashion</code></td>
+</tr>
+<tr>
+<td>Client xác định màu bị khóa</td>
+<td><code>IsSuitActive(suitId,color)</code> yêu cầu đủ toàn bộ component trong <code>activateFashion</code></td>
+<td>Đối chiếu công thức client với bốn ID màu</td>
+<td>Không chỉ dispatch event giao diện khi state model chưa được cập nhật</td>
+</tr>
+<tr>
+<td>Có thể hiểu nhầm là mất vật phẩm</td>
+<td>Nhân vật preview/mặc được nhưng model ownership trong phiên vẫn cũ</td>
+<td>Audit Mongo và relog payload</td>
+<td>Phân biệt state server với cache client</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Một màu thời trang không phải một flag đơn: client coi màu mở khi đủ toàn bộ Fashion component của biến thể.</li>
+<li>Tag <code>1803</code> chỉ xác nhận thao tác nhuộm; muốn UI hết khóa ngay cần thêm tag <code>1800</code> hoặc cập nhật trực tiếp <code>FashionModel.activateFashion</code>.</li>
+<li>Tag <code>1802</code> có thể mặc component đã lưu trên server, nhưng không tự bổ sung ownership vào model client.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Production có đúng một người thật cấp 93 sở hữu suit <code>29030</code>; trạng thái đã ẩn danh.</li>
+<li>Người này sở hữu đủ màu <code>0</code>, <code>1</code>, <code>2</code>; không thiếu component, không có partial.</li>
+<li>Màu đang mặc là <code>2</code>; <code>suitColors[29030]=[1,2]</code>.</li>
+<li>Toàn S1: 1.769 player/609 người thật; số người có màu đã mở nhưng màu gốc vẫn khóa: <code>0</code>; số người partial component: <code>0</code>.</li>
+<li>Toàn S2: 581 player/1 người thật; hai loại lệch trên đều <code>0</code>.</li>
+<li>Fixture tái hiện chính xác: server mở màu thành công và trừ nguyên liệu, nhưng client chưa đổi trạng thái khóa cho tới relog.</li>
+<li>Hậu kiểm: 12/12 hash production đúng, S1/S2 ready 200, bot 580/580, runtime issue 0, log lỗi rỗng.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Workaround hiện tại: đóng hẳn game/trang rồi đăng nhập lại; màu 2 sẽ đọc lại đúng là đã mở.</li>
+<li>Nếu người dùng yêu cầu sửa, thêm packet <code>1800</code> sau <code>1803</code> và <code>1804</code>, giữ nguyên packet chi phí và response gốc.</li>
+<li>Test native: nhuộm → khóa biến mất ngay → mặc → đóng/mở panel → relog; đồng thời kiểm tra không trừ nguyên liệu lần hai.</li>
+</ol></main></body></html>

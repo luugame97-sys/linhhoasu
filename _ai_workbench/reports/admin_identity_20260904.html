@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin - danh tính theo S1/S2</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-danh-t-nh-ng-i-ch-i-v-log-admin-theo-server">Session Report — Danh tính người chơi và log admin theo server</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã triển khai WebGM admin hiển thị server, tài khoản, tên nhân vật và UID theo đúng node S1/S2.</li>
+<li>Quản lý người chơi có bộ chọn server để xem; VIP và điểm Donate được tính theo server đang xem. Ví Xu và khóa account vẫn là phạm vi toàn tài khoản.</li>
+<li>Khi xem server khác phiên đăng nhập admin, nút thao tác bị vô hiệu hóa; không thay đổi server của phiên hoặc quyền ghi ngầm.</li>
+<li>Audit và monitor có bộ lọc tất cả/S1/S2, áp dụng ở SQL trước phân trang và thống kê.</li>
+<li>Log có UID được đối chiếu đúng node để lấy tên hiện tại và chủ tài khoản. Không gán tên của người thao tác admin thành tên người nhận.</li>
+<li>Log SePay/login không lưu UID chỉ được liên kết khi account có đúng một role trên server đó, với nhãn rõ là nhân vật hiện tại, không phải UID được lưu trong lịch sử.</li>
+<li>Log cũ thiếu server, UID không khớp, hoặc trường hợp nhiều role không xác định được: để trống danh tính và hiển thị không xác định, không suy đoán về S1.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Production <code>/linhhoasu/webgame/gm/config.php</code>: ghi server vào <code>login_attempts</code>.</li>
+<li>Production <code>/linhhoasu/webgame/gm/api/user_api.php</code>: truyền server khi gọi ghi login.</li>
+<li>Production <code>/linhhoasu/webgame/gm/admin/admin_api.php</code>: trả server context, lookup danh tính, lọc server cho log, tổng quan Donate tách account/server.</li>
+<li>Production <code>/linhhoasu/webgame/gm/admin/index.php</code>: bộ lọc server, nhãn phạm vi quản trị, bảng người chơi rõ server.</li>
+<li>Production <code>/linhhoasu/webgame/gm/assets/js/admin.js</code>: render tên/UID/server, nhãn nguồn đối chiếu và khóa nút ở chế độ xem server khác.</li>
+<li>MySQL: thêm <code>login_attempts.server_id VARCHAR(32) NOT NULL DEFAULT ''</code>, không backfill đoán dữ liệu lịch sử.</li>
+<li>Candidate local: <code>_ai_workbench/temp/webgm_admin_identity_candidate_20260904/</code>.</li>
+<li>Tool: <code>_ai_workbench/tools/deploy_admin_identity_20260904.py</code>, <code>qa_admin_identity.php</code>, <code>verify_admin_login_log.php</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/admin_identity_deploy_20260904_040004.json</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/rủi ro</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Patch HTML khớp sai khối cột</td>
+<td>File có CRCRLF và nhiều đoạn Bootstrap giống nhau</td>
+<td>Chuẩn hóa newline candidate, so diff và khôi phục cột ngoài phạm vi</td>
+<td>Dùng context chứa ID duy nhất, không patch class chung</td>
+</tr>
+<tr>
+<td>Log admin bị hiểu nhầm là người chơi nhận quà</td>
+<td>Account trong GM log có thể là người thao tác</td>
+<td>Lookup bằng UID đích + server; trả riêng player_account</td>
+<td>Không dùng account của operator làm tên người nhận</td>
+</tr>
+<tr>
+<td>Log cũ thiếu server</td>
+<td>Schema login trước đây không có server_id</td>
+<td>Thêm cột cho bản ghi mới; log cũ vẫn rỗng</td>
+<td>Không backfill server theo phiên đang xem</td>
+</tr>
+<tr>
+<td>Tên hiện tại bị hiểu là tên lịch sử</td>
+<td>Lookup trực tiếp Player có thể đã đổi tên</td>
+<td>Hiển thị nhãn tên hiện tại của UID, hoặc đối chiếu account hiện tại</td>
+<td>Không tuyên bố đã lưu tên tại thời điểm giao dịch</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Cache lookup theo cặp server + UID/account trong từng request; không dùng chung cache theo account giữa S1/S2.</li>
+<li>Bộ lọc xem không làm thay đổi session server của các thao tác quản trị.</li>
+<li>Kiểm tra server scope cần cả thử UID đúng, UID chéo server, log không có server và trường hợp operator khác người nhận.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>PHP lint 4 file và Node syntax PASS.</li>
+<li>Staging và production dùng cùng một account có role S1/S2 để đối chiếu tên/UID với MongoDB: PASS; UID chéo server không được xác minh nhầm.</li>
+<li><code>get_users_list</code> lọc S1/S2: PASS tên/UID/server, VIP/Donate theo server; <code>can_manage=false</code> khi khác session S1.</li>
+<li><code>get_audit_logs</code>: 25 dòng S1 và 2 dòng S2 ở mẫu kiểm tra, tất cả đúng server lọc.</li>
+<li><code>get_monitor_logs</code>: 30 dòng S1 và 2 dòng S2 ở mẫu kiểm tra, tất cả đúng server lọc.</li>
+<li>Chặn non-admin, sai CSRF và server không có cấu hình: PASS. HTTP public không có đăng nhập trả error.</li>
+<li>Kiểm tra writer log login S2 trong transaction: server_id=1002; rollback xong probeRowsRemaining=0.</li>
+<li>So sánh PM2 trước/sau: toàn bộ PID, restart counter và trạng thái giữ nguyên; không restart game/bot/Nginx.</li>
+<li>Không sửa inventory, phần thưởng, số dư hay log giao dịch cũ.</li>
+<li>Đã kiểm tra API bằng harness CLI gọi source production và guard HTTP không đăng nhập. Chưa QA trực quan bằng phiên trình duyệt admin và chưa xác nhận tên lịch sử tại thời điểm giao dịch (hiện hiển thị tên hiện tại có nhãn).</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/admin_identity_20260904_040004/</code>.</li>
+<li>SHA-256 evidence: <code>0987ad89821b677e8082744321622d34ad0ec4e9bdc8c6aef9d43ebf1361b049</code>.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Tải lại trang admin, chọn server trong Quản lý người chơi hoặc bộ lọc audit/monitor.</li>
+<li>Muốn thao tác ghi với S2: dùng phiên admin đăng nhập vào S2; dropdown xem không tự đổi session.</li>
+<li>Nếu rollback UI/API, khôi phục 5 file từ backup. Giữ cột server_id đã thêm để không mất metadata login mới.</li>
+</ol></main></body></html>

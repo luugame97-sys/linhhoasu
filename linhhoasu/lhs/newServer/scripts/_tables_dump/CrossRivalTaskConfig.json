@@ -1,0 +1,542 @@
+{
+  "_table": "CrossRivalTaskConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4,5,6,7,8,9,10",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "tag": 1,
+          "id": 1,
+          "textId": 30104501,
+          "activeId": 1,
+          "taskValue1": 2500,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "2": {
+          "tag": 1,
+          "id": 2,
+          "textId": 30104502,
+          "activeId": 1,
+          "taskValue1": 5000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "3": {
+          "tag": 1,
+          "id": 3,
+          "textId": 30104503,
+          "activeId": 1,
+          "taskValue1": 10000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 300
+            }
+          ]
+        },
+        "4": {
+          "tag": 1,
+          "id": 4,
+          "textId": 30104504,
+          "activeId": 1,
+          "taskValue1": 15000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 500
+            }
+          ]
+        },
+        "5": {
+          "tag": 1,
+          "id": 5,
+          "textId": 30104505,
+          "activeId": 2,
+          "taskValue1": 20000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 200
+            }
+          ]
+        },
+        "6": {
+          "tag": 1,
+          "id": 6,
+          "textId": 30104506,
+          "activeId": 2,
+          "taskValue1": 50000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 300
+            }
+          ]
+        },
+        "7": {
+          "tag": 1,
+          "id": 7,
+          "textId": 30104507,
+          "activeId": 2,
+          "taskValue1": 100000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 500
+            }
+          ]
+        },
+        "8": {
+          "tag": 1,
+          "id": 8,
+          "textId": 30104508,
+          "activeId": 3,
+          "taskValue1": 5,
+          "reward": [
+            {
+              "id": 311,
+              "count": 200
+            }
+          ]
+        },
+        "9": {
+          "tag": 1,
+          "id": 9,
+          "textId": 30104509,
+          "activeId": 3,
+          "taskValue1": 10,
+          "reward": [
+            {
+              "id": 311,
+              "count": 300
+            }
+          ]
+        },
+        "10": {
+          "tag": 1,
+          "id": 10,
+          "textId": 30104510,
+          "activeId": 3,
+          "taskValue1": 25,
+          "reward": [
+            {
+              "id": 311,
+              "count": 500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "2": {
+        "11": {
+          "tag": 2,
+          "id": 11,
+          "textId": 30104511,
+          "activeId": 4,
+          "taskValue1": 500000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "12": {
+          "tag": 2,
+          "id": 12,
+          "textId": 30104512,
+          "activeId": 4,
+          "taskValue1": 1000000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "13": {
+          "tag": 2,
+          "id": 13,
+          "textId": 30104513,
+          "activeId": 4,
+          "taskValue1": 1500000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "14": {
+          "tag": 2,
+          "id": 14,
+          "textId": 30104514,
+          "activeId": 4,
+          "taskValue1": 2000000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "15": {
+          "tag": 2,
+          "id": 15,
+          "textId": 30104515,
+          "activeId": 4,
+          "taskValue1": 2500000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "16": {
+          "tag": 2,
+          "id": 16,
+          "textId": 30104516,
+          "activeId": 4,
+          "taskValue1": 3000000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "17": {
+          "tag": 2,
+          "id": 17,
+          "textId": 30104517,
+          "activeId": 4,
+          "taskValue1": 3500000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "18": {
+          "tag": 2,
+          "id": 18,
+          "textId": 30104518,
+          "activeId": 4,
+          "taskValue1": 4000000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "19": {
+          "tag": 2,
+          "id": 19,
+          "textId": 30104519,
+          "activeId": 4,
+          "taskValue1": 4500000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        },
+        "20": {
+          "tag": 2,
+          "id": 20,
+          "textId": 30104520,
+          "activeId": 4,
+          "taskValue1": 5000000,
+          "reward": [
+            {
+              "id": 311,
+              "count": 100
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "tag": 1,
+        "id": 1,
+        "textId": 30104501,
+        "activeId": 1,
+        "taskValue1": 2500,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "2": {
+        "tag": 1,
+        "id": 2,
+        "textId": 30104502,
+        "activeId": 1,
+        "taskValue1": 5000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "3": {
+        "tag": 1,
+        "id": 3,
+        "textId": 30104503,
+        "activeId": 1,
+        "taskValue1": 10000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 300
+          }
+        ]
+      },
+      "4": {
+        "tag": 1,
+        "id": 4,
+        "textId": 30104504,
+        "activeId": 1,
+        "taskValue1": 15000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 500
+          }
+        ]
+      },
+      "5": {
+        "tag": 1,
+        "id": 5,
+        "textId": 30104505,
+        "activeId": 2,
+        "taskValue1": 20000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 200
+          }
+        ]
+      },
+      "6": {
+        "tag": 1,
+        "id": 6,
+        "textId": 30104506,
+        "activeId": 2,
+        "taskValue1": 50000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 300
+          }
+        ]
+      },
+      "7": {
+        "tag": 1,
+        "id": 7,
+        "textId": 30104507,
+        "activeId": 2,
+        "taskValue1": 100000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 500
+          }
+        ]
+      },
+      "8": {
+        "tag": 1,
+        "id": 8,
+        "textId": 30104508,
+        "activeId": 3,
+        "taskValue1": 5,
+        "reward": [
+          {
+            "id": 311,
+            "count": 200
+          }
+        ]
+      },
+      "9": {
+        "tag": 1,
+        "id": 9,
+        "textId": 30104509,
+        "activeId": 3,
+        "taskValue1": 10,
+        "reward": [
+          {
+            "id": 311,
+            "count": 300
+          }
+        ]
+      },
+      "10": {
+        "tag": 1,
+        "id": 10,
+        "textId": 30104510,
+        "activeId": 3,
+        "taskValue1": 25,
+        "reward": [
+          {
+            "id": 311,
+            "count": 500
+          }
+        ]
+      }
+    },
+    "2": {
+      "11": {
+        "tag": 2,
+        "id": 11,
+        "textId": 30104511,
+        "activeId": 4,
+        "taskValue1": 500000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "12": {
+        "tag": 2,
+        "id": 12,
+        "textId": 30104512,
+        "activeId": 4,
+        "taskValue1": 1000000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "13": {
+        "tag": 2,
+        "id": 13,
+        "textId": 30104513,
+        "activeId": 4,
+        "taskValue1": 1500000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "14": {
+        "tag": 2,
+        "id": 14,
+        "textId": 30104514,
+        "activeId": 4,
+        "taskValue1": 2000000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "15": {
+        "tag": 2,
+        "id": 15,
+        "textId": 30104515,
+        "activeId": 4,
+        "taskValue1": 2500000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "16": {
+        "tag": 2,
+        "id": 16,
+        "textId": 30104516,
+        "activeId": 4,
+        "taskValue1": 3000000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "17": {
+        "tag": 2,
+        "id": 17,
+        "textId": 30104517,
+        "activeId": 4,
+        "taskValue1": 3500000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "18": {
+        "tag": 2,
+        "id": 18,
+        "textId": 30104518,
+        "activeId": 4,
+        "taskValue1": 4000000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "19": {
+        "tag": 2,
+        "id": 19,
+        "textId": 30104519,
+        "activeId": 4,
+        "taskValue1": 4500000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      },
+      "20": {
+        "tag": 2,
+        "id": 20,
+        "textId": 30104520,
+        "activeId": 4,
+        "taskValue1": 5000000,
+        "reward": [
+          {
+            "id": 311,
+            "count": 100
+          }
+        ]
+      }
+    }
+  }
+}

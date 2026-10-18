@@ -1,0 +1,55 @@
+{
+  "_table": "CuriosGameBaseConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "(obj)[dailyLevel|shakeoutAD|recallAD|removeAD|cardAmount]",
+  "_sample": [
+    {
+      "dailyLevel": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "shakeoutAD": 2
+    },
+    {
+      "recallAD": 2
+    }
+  ],
+  "data": {
+    "dailyLevel": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "shakeoutAD": 2,
+    "recallAD": 2,
+    "removeAD": 2,
+    "cardAmount": 16,
+    "rebirthLimitation": 1
+  }
+}

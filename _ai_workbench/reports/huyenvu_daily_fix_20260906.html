@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Huyen Vu - Qua ngay va tang toc goc</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-s-a-qu-huy-n-v-v-x-c-minh-t-ng-t-c-g-c">Session Report — sửa quà Huyền Vũ và xác minh tăng tốc gốc</h1>
+<p>Ngày 06/09/2026, hậu kiểm <strong>11:20:39 UTC+7</strong>. <strong>Đã triển khai sửa nhận quà ngày trên S2 rồi S1; kiểm qua WebSocket/DB/relog đều đạt. Tăng tốc câu cá được xác nhận có trong client gốc/tham chiếu và giữ nguyên1,11×, không tự chế tốc độ mới. Không bù hoặc nhận lại quà lịch sử của người chơi.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="qu-huy-n-v-s-a">Quà Huyền Vũ đã sửa</h3>
+<ul>
+<li>Thẻ11000009 tiếp tục cấp đúng ShopConfig.extraRewards: <strong>50 Đùi Gà — ID65 và2 phiếu làm mới đơn — ID70</strong>. Không đổi giá thẻ, thời hạn hoặc số lượng quà.</li>
+<li>Gửi packet1202 gồm số tăng và số dư tuyệt đối <strong>trước</strong> phản hồi thành công1211. Số lượng client có thể cập nhật ngay, không chỉ mở cửa sổ quà.</li>
+<li>Tính quà và thời điểm nhận trên bản sao player; lưu cùng một snapshot. Chỉ trả success sau save có kết quả xác nhận.</li>
+<li>Nếu save trảnull hoặc throw: không báo nhận thành công, không ghi rollback giả; session bị vô hiệu để đăng nhập lại đọc trạng thái durable. Trường hợp write đã commit nhưng phản hồi lỗi vẫn không phát lại khi retry.</li>
+<li>Giữ kiểm quyền sở hữu/thời hạn, ID thẻ và ngày nhận. Giữ lịch nhận <strong>GMT+8</strong> như luồng đang có, không tự đổi sang timezone máyVPS+7.</li>
+<li>Bấm lại trong cùng ngày: <strong>không cấp thêm</strong>, chỉ gửi số dư hiện tại và thời điểm nhận đã lưu. Điều này phục hồi số hiển thị sau mất ACK/packet, không phải compensation.</li>
+<li>Client chỉ đánh dấu nhận khi success hoặc server xác nhận đã nhận trong ngày. Các lỗi hết hạn/ID/config/save không còn tự đánh dấu đã nhận theo đồng hồ client.</li>
+<li>Xóa cache item list khi nhận/resync để lần mở túi không lấy số cũ.</li>
+<li>Handler1211 dùng chung5 thẻ tháng/đặc quyền; đã kiểm quà của11000001/11000002/11000007/11000012 không bị đổi. Các hàm quảng cáo và gói chuỗi không bị sửa trên production.</li>
+</ul>
+<h3 id="t-ng-t-c-c-th-t-trong-g-c-kh-ng-s-a-c-ch">Tăng tốc có thật trong gốc — không sửa cơ chế</h3>
+<p>Đã đọc cả file trong gói ban đầu và client Trung tham chiếu lưu sẵn:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Nguồn</th>
+<th>Bằng chứng</th>
+</tr></thead><tbody>
+<tr>
+<td>server.zip → linhhoasu/webgame/game/js/main.min_a6195824.js</td>
+<td>Có fishing_isFastMode, isFishSpeedAdd, chia timer cho1.11 và phát hoạt ảnh1.11×</td>
+</tr>
+<tr>
+<td>_ai_workbench/temp/cn_origin_70000001_20260831/js/main.min_97d2b812.js</td>
+<td>Có cùng cờ và hệ số1.11; tên biến minify khác</td>
+</tr>
+<tr>
+<td>Production baseline hiện tại</td>
+<td>Cơ chế tăng tốc cùng hệ số vẫn còn</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>Main trong archive SHA256: d0463feecb7a55070a38772950a048d026d560be5c3fe918f61ff78d1d73e021.</li>
+<li>Main Trung tham chiếu SHA256: c127a9cc99e6f012a03c745bc1a495b8c45ef1f08067f434873dbcf8c580ca47.</li>
+<li>Evidence offset/đoạn code/hash ở speed-origin-proof.json.</li>
+<li><strong>Đây là cơ chế có sẵn, không phải tính năng tốc độ do phiên này thêm.</strong>1,11× giảm khoảng9,9% thời gian hoạt ảnh, không phải2×.</li>
+<li>Chỉ đổi hàm C.sendGetMonthcardsReward ở client. Hàm tăng tốc, timer, auto trang bị, danh sách cá, skin/config đều giữ nguyên từng byte ngoài hàm nhận quà.</li>
+<li>Không thay hệ số, không thêm2×, không giả lập animation/timer mới. Guard metadata của auto mới đã làm ở phiên trước cũng không đổi.</li>
+<li>Chứng minh bằng source không đồng nghĩa đã đo FPS/tốc độ tổng qua UI trên mọi thiết bị; không tuyên bố mọi lỗi lifecycle câu cá đã được giải quyết.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Nội dung</th>
+</tr></thead><tbody>
+<tr>
+<td>linhhoasu/lhs/newServer/src/handlers/commerce-compat.js</td>
+<td>Sửa1211: grant và marker trênclone, saveconfirmed,1202, same-day resync và lý do lỗi</td>
+</tr>
+<tr>
+<td>linhhoasu/webgame/game/js/main.min_a6195824.js</td>
+<td>Chỉ sửa native callback nhận quà tháng; thời điểm server và result guard</td>
+</tr>
+<tr>
+<td>linhhoasu/webgame/game/index.html</td>
+<td>Cache key20260906_huyenvu_daily_v1</td>
+</tr>
+</tbody></table></div>
+<p>Production bắt đầu từ snapshot mới, không upload file local cũ. Local commerce trước đó thiếu các kiểm tra đã có ở production; đã đưa logic nhận quà về cùng bản mới, nhưng <strong>giữ riêng lời gọi persistPlayer cũ của local</strong> vì nó phục vụ quảng cáo/gói chuỗi ngoài scope. Hậu kiểm so normalized source có đúng một khác biệt đã ghi nhận này.</p>
+<p>Không đổi FishConfig/ShopConfig, bảng cân bằng, tốc độ, WebGM, DB schema, WSServer, PlayerService hoặc bot worker.</p>
+<h3 id="c-ng-c-evidence-v-backup">Công cụ, evidence và backup</h3>
+<ul>
+<li>Tools mới: build_huyenvu_daily_client_20260906.js, verify_fishing_speed_origin_20260906.py, test_huyenvu_daily_20260906.js, qa_huyenvu_daily_live_20260906.js, release_huyenvu_daily_20260906.py, sync_huyenvu_daily_local_20260906.py, final_huyenvu_daily_20260906.py; đều dưới _ai_workbench/tools/.</li>
+<li>Điều chỉnh tool test_fishing_auto_20260906.js để nhận đường baseline gốc qua AUTO_ORIGINAL_MAIN và bỏ riêng2 probe chẩn đoán lỗi commerce cũ khi chạy hồi quy.21 test tính năng auto vẫn chạy đầy đủ.</li>
+<li>Baseline: _ai_workbench/temp/fishing_audit_20260906T041024Z/.</li>
+<li>Candidate/evidence: _ai_workbench/temp/huyenvu_daily_fix_20260906/: daily-tests.json, speed-origin-proof.json, client-build.json, stage.json, canary-progress.json, deploy.json, final-check.json, local-sync.json.</li>
+<li>Remote backup: /linhhoasu/_ai_workbench/backups/huyenvu_daily_20260906_041648/.</li>
+<li>Local backup: _ai_workbench/backups/huyenvu_daily_local_20260906/; report backup: _ai_workbench/backups/huyenvu_daily_reports_20260906/.</li>
+<li>Gói source-only: temp/huyenvu_daily_fix_20260906/huyenvu_daily_fix_v1_20260906.zip,4 entry,2.166.029 bytes; SHA256ccf6f84aff0a75e8773f425a70ea55f5cae5ed0e1680ff71f914943d2e4b467c.</li>
+<li>Gói dựa trên fishing_auto_power_v1, không có credential, dữ liệu người chơi hoặc binary config. Không triển khai đè mù lên bản mới hơn.</li>
+<li>Báo cáo này và session_report.md có đầy đủ bản HTML; không tạo tool/file tạm ở root.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Đã xử lý</th>
+<th>Tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Bấm nhận nhưng số lượng không tăng trên UI</td>
+<td>Thiếu packet1202</td>
+<td>Gửi delta và số dư tuyệt đối trướcACK</td>
+<td>Kiểm DB+1202+1211, không chỉ popup</td>
+</tr>
+<tr>
+<td>Save-null vẫn success</td>
+<td>Không kiểm kết quả save</td>
+<td>Reject/invalidate khi không xác nhận</td>
+<td>Null/throw tests</td>
+</tr>
+<tr>
+<td>Rollback sau timeout có thể làm mất write đã commit</td>
+<td>Ghi lại preimage trong memory khi chưa rõ durable</td>
+<td>Không giả rollback; relog và guard ngày</td>
+<td>Commit-then-throw/retry test</td>
+</tr>
+<tr>
+<td>Lỗi server mà client đánh dấu nhận</td>
+<td>Callback không checkresult</td>
+<td>Chỉ cập nhật khi success/confirmedalreadyclaimed, dùng claimTime server</td>
+<td>Native callback tests</td>
+</tr>
+<tr>
+<td>Retry mấtACK có nguy cơ hiểu nhầm là thiếu quà</td>
+<td>Chỉ trả lỗi chung, không resync</td>
+<td>Resync số dư khi đã nhận; rewardInfo rỗng</td>
+<td>Retry trước/sau relog không cấp thêm</td>
+</tr>
+<tr>
+<td>Regex bằng chứng speed không nhận biến $7</td>
+<td>Regex chỉ dùng ký tự word</td>
+<td>Cho phép dấu$ trong tên biếnminify</td>
+<td>Đối chiếu cả3 nguồn trước kết luận</td>
+</tr>
+<tr>
+<td>Hồi quy auto so nhầm baseline</td>
+<td>Baseline mới đã có byte settingauto</td>
+<td>Truyền bản trước auto cho testappend-only</td>
+<td>Không sửa source để chiều test</td>
+</tr>
+<tr>
+<td>Local commerce khácproduction</td>
+<td>Cây local cũ</td>
+<td>Lấy snapshotproduction, sync hẹp và backup</td>
+<td>Hashguard, không chép toàn cây local</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Quà ngày là một giao dịch gồm inventory và marker; cùng save mới đủ, popup không chứng minh số lượng client đã đồng bộ.</li>
+<li>Không reset monthCardRecords của người thật để thử. Khi đã nhận, resync số dư hiện tại là an toàn; cấp lại cả gói là một hành động khác cần bằng chứng và quyền riêng.</li>
+<li>GMT+8 của reset ngày khác UTC+7 của máy/VPS; giữ contract hiện hành tránh nhận hai lần quanh nửa đêm.</li>
+<li>Tìm source gốc bằng archive/tham chiếu và so chính đoạn xử lý tốc độ, không chỉ tìm chữ “tăng tốc” trong giao diện.</li>
+<li>Lỗi native callback được kiểm bằng hàm thật tríchAST, không chỉ mô tả/mô phỏng lại ý tưởng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li><strong>24 kiểm thử quà ngày PASS</strong> local/staging:50+2,1202,clone/save, thời hạn/ID/config, nhận lặp, resync, relog, ngày GMT8, không bù ngày cũ, marker tương lai, lỗi lưu trước/sau commit,2 request trong hàng đợi và callback native.</li>
+<li>Hồi quy <strong>21 auto PASS,38 gear/1.800 tổ hợp PASS,70 balance PASS</strong>, core gameplay714 bảng PASS. Test thống kê profile lịch sử không chạy trong staging này, không tính thành39.</li>
+<li>Triển khai thử: <strong>S2 PASS trước S1</strong>. Mỗi QA nhận một lần50 Đùi Gà+2 phiếu; kiểm packet1202, DB, claimTime, nhận lặp/hết hạn/ID sai và relog. Không nhận quà trên người thật.</li>
+<li>QA cleanup0. Không cấp bù, không reset ngày, không tăng thời hạn thẻ hoặc chỉnh vật phẩm/ngày nhận lịch sử của người chơi.</li>
+<li><strong>154 artifact kiểm hash đúng:3 file release và151 file ngoài scope giữ nguyên</strong>. Main/index phục vụ ở cổng81 khớp; logic nhận quà local đồng nhất, khác biệt save helper đã ghi rõ.</li>
+<li>S1 PID23011/restart1374; S2 PID21270/restart38. Chỉ restart game1 lần/server. Dist30824,admin30856,bot1600/1576 giữ PID/restart count.</li>
+<li>HTTP ready8080/8083=200 và WS ready9200/9201=ok. Error tail không có TypeError/ReferenceError/Unhandled/FATAL/SyntaxError.</li>
+<li>Tăng tốc native có trong3 nguồn, tất cả hàm tốc độ được kiểm byte-identical trước/sau bản sửa này.</li>
+<li>Chưa nghiệm thu hình ảnh UI trên phiên người thật hoặc giữ dữ liệu QA qua thêm một lần restart. Đã kiểm callback thật và WS/DB/relog thật.</li>
+</ul>
+<p><strong>Huyền Vũ đã sửa luồng nhận từ nay về sau. Lượt nhận trong quá khứ không được tự bù hay suy ngược từ số dư hiện tại.</strong></p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Ctrl+F5 và đăng nhập lại để nhận client mới. Khi đủ điều kiện nhận ngày, số Đùi Gà/phiếu phải cập nhật ngay.</li>
+<li>Nếu đã nhận hôm nay, bấm lại chỉ đồng bộ số đang có và báo đã nhận; không cấp thêm50+2. Không xóa marker để vượt chốt.</li>
+<li>Giữ nguyên tăng tốc1,11× của gốc. Không thêm2× hoặc sửa RNG/lifecycle khi không có yêu cầu và bằng chứng riêng.</li>
+<li>Nếu vẫn có lượt nhận không khớp, cần mốc giờ và số dư trước/sau để đối chiếu log/DB; không thử bằng nhận hộ tài khoản thật.</li>
+<li>Rollback chỉsource bằng preimage/hash; bảo toàn dữ liệu nhận quà/marker mới, không restore player từ snapshot cũ.</li>
+</ol></main></body></html>

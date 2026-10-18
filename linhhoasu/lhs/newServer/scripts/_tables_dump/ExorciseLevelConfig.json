@@ -1,0 +1,120 @@
+{
+  "_table": "ExorciseLevelConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "id,mapRes,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "mapRes": "cywd_map_bg_01",
+        "rewards": {
+          "3": 2,
+          "5": 2
+        }
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "mapRes": "cywd_map_bg_02",
+        "rewards": {
+          "5": 2,
+          "11": 2
+        }
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "mapRes": "cywd_map_bg_03",
+        "rewards": {
+          "3": 2,
+          "13": 2
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "mapRes": "cywd_map_bg_01",
+      "rewards": {
+        "3": 2,
+        "5": 2
+      }
+    },
+    "2": {
+      "id": 2,
+      "mapRes": "cywd_map_bg_02",
+      "rewards": {
+        "5": 2,
+        "11": 2
+      }
+    },
+    "3": {
+      "id": 3,
+      "mapRes": "cywd_map_bg_03",
+      "rewards": {
+        "3": 2,
+        "13": 2
+      }
+    },
+    "4": {
+      "id": 4,
+      "mapRes": "cywd_map_bg_01",
+      "rewards": {
+        "5": 2,
+        "13": 2
+      }
+    },
+    "5": {
+      "id": 5,
+      "mapRes": "cywd_map_bg_02",
+      "rewards": {
+        "11": 2,
+        "13": 2
+      }
+    },
+    "6": {
+      "id": 6,
+      "mapRes": "cywd_map_bg_03",
+      "rewards": {
+        "3": 2,
+        "5": 2
+      }
+    },
+    "7": {
+      "id": 7,
+      "mapRes": "cywd_map_bg_01",
+      "rewards": {
+        "11": 2,
+        "12": 2
+      }
+    },
+    "8": {
+      "id": 8,
+      "mapRes": "cywd_map_bg_02",
+      "rewards": {
+        "13": 2,
+        "14": 2
+      }
+    },
+    "9": {
+      "id": 9,
+      "mapRes": "cywd_map_bg_03",
+      "rewards": {
+        "5": 2,
+        "16": 2
+      }
+    },
+    "10": {
+      "id": 10,
+      "mapRes": "cywd_map_bg_01",
+      "rewards": {
+        "3": 2,
+        "17": 2
+      }
+    }
+  }
+}

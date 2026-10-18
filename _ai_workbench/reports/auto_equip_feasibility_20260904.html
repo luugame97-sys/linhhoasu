@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audit tự động mặc trang bị mạnh hơn</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-kh-n-ng-t-ng-m-c-trang-b-m-nh-h-n">Session Report — Khả năng tự động mặc trang bị mạnh hơn</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã audit read-only client production, FSM <code>Ủy thác tự động</code>, server tag <code>2200/2201</code>, <code>EquipService</code> và lịch sử triển khai/rollback tính năng tương tự.</li>
+<li>Kết luận: <strong>có thể triển khai</strong>, nhưng phải làm đồng thời client + server-authoritative; không an toàn nếu chỉ bỏ popup hoặc tự gọi tag 2200 ở client.</li>
+<li>Phiên này chưa sửa hoặc bật tính năng trên production.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Không sửa source/runtime production.</li>
+<li>Tạo tool snapshot read-only <code>_ai_workbench/tools/snapshot_auto_equip_audit.py</code>.</li>
+<li>Evidence source production: <code>_ai_workbench/temp/auto_equip_audit_20260904_044658/</code>.</li>
+<li>Tạo báo cáo <code>_ai_workbench/reports/auto_equip_feasibility_20260904.md</code> và <code>.html</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/rủi ro</th>
+<th>Nguyên nhân</th>
+<th>Phương án xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Bản thử 31/08 vẫn mở popup đồ mạnh</td>
+<td>Static contract đã PASS nhưng native client không đi hết nhánh auto-equip; binding/trạng thái checkbox không được xác nhận E2E</td>
+<td>Dựng lại từ source production hiện tại và test native thực tế</td>
+<td>Không tuyên bố hoàn tất từ marker/static contract</td>
+</tr>
+<tr>
+<td>Client có thể mặc món yếu</td>
+<td>Tag 2200 hiện không có guard tăng lực dành cho auto mode</td>
+<td>Gửi cờ auto riêng; server tính lại power và chỉ chấp nhận <code>newPower &gt; currentPower</code></td>
+<td>Không tin power do client tính/gửi</td>
+</tr>
+<tr>
+<td>Auto-sale có thể bán nhầm</td>
+<td>Tag 2201 hiện bán mọi UID có trong open list</td>
+<td>Safe mode chỉ bán món yếu hơn món đang mặc; cấm UID đang dùng ở mọi preset</td>
+<td>Server trả <code>ignoredUids</code>, client dừng nếu có món bị chặn</td>
+</tr>
+<tr>
+<td>Nhiều món cùng slot</td>
+<td>Nếu mặc theo thứ tự rơi có thể chọn món không mạnh nhất</td>
+<td>Gom theo slot và chọn strict max trước khi gọi 2200 tuần tự</td>
+<td>Contract nhiều món cùng type và thứ tự đảo</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li><code>EquipCheckModel.CheckAutoStop()</code> đang tách danh sách dừng/manual khỏi danh sách bán; checkbox <code>enoughPower</code> hiện chỉ khiến đồ mạnh được giữ lại để mở popup.</li>
+<li><code>IdleFightStateSelect.dealSelect()</code> là điểm chuyển thích hợp để chạy auto-equip trước <code>openHeroReplaceView</code>.</li>
+<li>Client có <code>YV.calPower()</code>; server cần hàm tương đương dựa <code>AttrConfig.power</code>, không nhận kết quả client.</li>
+<li><code>EquipModel.getEquipFromPlan(uid)</code> trả list ID của open list; sau RPC 2200 thành công client phải remove new UID, replace active preset và đưa đồ cũ về sale list đúng list.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Production không có <code>autoDelegateEquip</code>, <code>safeAutoDelegate</code>, <code>requirePowerUpgrade</code> hay marker tự mặc.</li>
+<li>Client hiện tại: khi checkbox lực chiến bật và có đồ mạnh, <code>CheckAutoStop</code> giữ món đó rồi <code>IdleFightStateSelect</code> mở popup so sánh.</li>
+<li>Server <code>replaceOpenEquipToPlan()</code> hiện thay đồ từ open list mà chưa kiểm tra power tăng nghiêm ngặt.</li>
+<li>Server <code>saleOpenEquips()</code> hiện chưa bảo vệ theo power/preset trong chế độ auto.</li>
+<li>Source production đã snapshot; hash: EquipService <code>c58859919419...</code>, item.js <code>06330978c628...</code>, main JS <code>4de77d94ecd5...</code>, index <code>1d6ee833bf1a...</code>.</li>
+<li>Không restart dịch vụ và không thay đổi trang bị/dữ liệu người chơi.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Đổi checkbox native <code>Dừng khi lực chiến cao hơn</code> thành tùy chọn opt-in <code>Tự động mặc trang bị mạnh hơn</code>, mặc định tắt để không làm người chơi hiện tại tự động mặc ngoài ý muốn.</li>
+<li>Client chọn món mạnh nhất mỗi slot, gọi 2200 tuần tự; chỉ sau ACK thành công mới cập nhật model và đưa đồ cũ vào danh sách bán.</li>
+<li>Server guard auto 2200 strict power-up; auto 2201 bảo vệ tất cả preset và mọi món không yếu hơn.</li>
+<li>Test fixture: slot trống, một/multiple upgrade, bằng power, yếu hơn, giữ phẩm chất/thuộc tính, preset khác, RPC fail/retry, relog và restart.</li>
+<li>Native E2E bằng tài khoản QA có snapshot/restore: bật tùy chọn → rơi đồ mạnh → tự mặc → bán đồ cũ/yếu → tiếp tục ủy thác, không mở popup.</li>
+</ol></main></body></html>

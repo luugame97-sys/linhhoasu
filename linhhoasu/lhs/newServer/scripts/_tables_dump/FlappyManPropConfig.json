@@ -1,0 +1,81 @@
+{
+  "_table": "FlappyManPropConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,res,effect",
+  "_sample": [
+    {
+      "0": {
+        "id": 0,
+        "res": "icon_yjcf_0",
+        "effect": []
+      }
+    },
+    {
+      "1": {
+        "id": 1,
+        "res": "bwzg_icon_xing",
+        "effect": {
+          "1": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "res": "icon_yjcf_2",
+        "effect": {
+          "2": [
+            1800
+          ],
+          "5": [
+            1800
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "id": 0,
+      "res": "icon_yjcf_0",
+      "effect": []
+    },
+    "1": {
+      "id": 1,
+      "res": "bwzg_icon_xing",
+      "effect": {
+        "1": [
+          1
+        ]
+      }
+    },
+    "2": {
+      "id": 2,
+      "res": "icon_yjcf_2",
+      "effect": {
+        "2": [
+          1800
+        ],
+        "5": [
+          1800
+        ]
+      }
+    },
+    "3": {
+      "id": 3,
+      "res": "icon_yjcf_4",
+      "effect": {
+        "2": [
+          1800
+        ],
+        "4": [
+          1500,
+          3
+        ]
+      }
+    }
+  }
+}

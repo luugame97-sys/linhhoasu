@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uy thac cau ca va dac quyen Huyen Vu</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-t-trang-b-c-t-ng-t-c-v-huy-n-v">Session Report — tự trang bị cá, tăng tốc và Huyền Vũ</h1>
+<p>Ngày 06/09/2026, hậu kiểm lúc <strong>11:05 UTC+7</strong>. <strong>Đã thêm tùy chọn tự trang bị cá mạnh, bán cá yếu trên S2/S1. Tăng tốc và quà Huyền Vũ được kiểm tra; handler quà ngày chưa sửa, không phát bù.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="t-trang-b-b-n-c-tri-n-khai">Tự trang bị/bán cá — đã triển khai</h3>
+<ul>
+<li>Thêm ô <strong>“Tự trang bị cá mạnh, bán cá yếu”</strong> ở cửa sổ ủy thác câu cá thường, mặc định <strong>tắt</strong>.</li>
+<li>Server so lực chiến của nhân vật nếu trang bị từng ứng viên vào đúng loại cá, dùng BattleService và dữ liệu đã lưu, không tin điểm client gửi.</li>
+<li>Chọn cá mạnh nhất trong lô hiện tại, thay toàn bộ entity; bán cá yếu hơn, kể cả cá cũ vừa thay ra. Giữ giá bán server hiện hành (Ngư Tệ theo quality), không thiết lập lại giá.</li>
+<li>Giữ cá khóa, chết, có kỹ năng hoặc tempSkills. Nếu cá đang trang bị được bảo vệ thì giữ cả ô và cá mới cùng loại. Cá ngang lực chiến không tự bán.</li>
+<li>So theo <strong>thuộc tính có hiệu lực ở cấp câu hiện tại</strong>. Cá có tiềm năng cao ở cấp sau nhưng lực chiến hiện tại thấp vẫn có thể được bán; muốn giữ tiềm năng/sưu tầm phải tắt chế độ này hoặc giữ cá thủ công.</li>
+<li>Chế độ mới ưu tiên hơn bộ lọc dừng phẩm chất/loài và tự nộp đơn. Ghi chú này hiện dưới ô tùy chọn. Tắt chế độ mới thì luồng cũ giữ nguyên.</li>
+<li>Còn cá cần giữ thì tự dừng và mở phần nhận cá; chỉ bắt đầu lượt câu tiếp sau khi nhận ACK/state mới.</li>
+<li>Cấu hình thêm ở cuối định dạng nhị phân cũ, có kiểm độ dài khi đọc; bản cũ mặc định false, không thay vị trí trường trước.</li>
+<li>Lưu20 lịch sử giao dịch tự động gần nhất tại autoPowerHistory, có entity cá đã bán. Chỉ dùng phục hồi nội bộ, không phải túi để nhận lại miễn phí; không gửi lịch sử này trong login.</li>
+<li>requestId/balanceRevision/receipt ngăn xử lý lặp. Chặn UID trùng, state pending cũ, batch quá10 và thiếu quyền ủy thác. Yêu cầu cấp câu10 hoặc thẻ11000009 còn hiệu lực.</li>
+<li>Reconnect reset cờ chờ, tăng generation; callback cũ không ghi đè state hoặc tự câu tiếp. Dừng thủ công trong lúc chờ ACK không bị tự khởi động lại.</li>
+</ul>
+<h3 id="t-ng-t-c-y-th-c-k-t-qu-ki-m-tra">Tăng tốc ủy thác — kết quả kiểm tra</h3>
+<ul>
+<li>Native hiện là <strong>1,11×</strong>, không phải2×. Không tự thay đổi hệ số.</li>
+<li>Probe hàm startFishing thật:3200ms →2883ms khi bật nhanh, giảm khoảng9,9% thời gian. Tổng thời gian thực tế còn phụ thuộc metadata, vòng chờ và mạng.</li>
+<li>Metadata chưa tải (Anim_Config toàn0) có thể tạo waitAllTime=NaN. Luồng tự động mới chặn gọi câu khi raid/metadata chưa sẵn sàng, không tiêu hao để rồi kẹt.</li>
+<li>Nhãn mới ghi “Tăng tốc câu cá (1,11×)”. Không sửa vòng hoạt ảnh toàn game hoặc lỗi input-freeze đã tạm dừng.</li>
+<li>Chưa đo native UI/FPS, background hoặc Hoang Cổ trực tiếp; không tuyên bố toàn bộ tăng tốc đã hết lỗi. Đây là ủy thác client trong phiên online, không phải tiến trình offline server.</li>
+</ul>
+<h3 id="huy-n-v-nh-ch-nh-v-k-t-lu-n">Huyền Vũ — đính chính và kết luận</h3>
+<p><strong>Đính chính thông báo sơ bộ:</strong> đoạn cấp50 Nguyên bảo thuộc cây local cũ. Source production thật đã có kiểm thời hạn/ngày nhận và cấp ShopConfig.extraRewards đúng. Không dùng local khác hash để kết luận quà live là50 Nguyên bảo.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Hạng mục</th>
+<th>Bằng chứng snapshot/probe</th>
+</tr></thead><tbody>
+<tr>
+<td>Quà ngày cấu hình11000009</td>
+<td>65×50 Đùi Gà +70×2 phiếu làm mới</td>
+</tr>
+<tr>
+<td>Quà thực cấp vào player</td>
+<td>Đúng50 Đùi Gà và2 phiếu</td>
+</tr>
+<tr>
+<td>Thời hạn thẻ</td>
+<td>Có kiểm activeUntil; không thẻ/hết hạn bị từ chối</td>
+</tr>
+<tr>
+<td>Nhận lặp cùng ngày</td>
+<td>Có kiểm ngày GMT+8; lần hai bị từ chối</td>
+</tr>
+<tr>
+<td>Cập nhật số lượng1202</td>
+<td><strong>Thiếu</strong>: chỉ trả1211.rewardInfo, không cập nhật số đếm item</td>
+</tr>
+<tr>
+<td>Save trảnull</td>
+<td><strong>Lỗi</strong>: vẫn có thể trảresult0 dù chưa xác nhận durable write</td>
+</tr>
+<tr>
+<td>Client nhận phản hồi lỗi</td>
+<td>Không check result trước changeMonthCardRewardTime, có thể đánh dấu đã nhận dù thất bại</td>
+</tr>
+</tbody></table></div>
+<p>“Bấm nhận mà không thấy tăng” phù hợp lỗi <strong>đồng bộ UI</strong>, không chứng minh DB chưa cấp. Probe trên clone:65 tăng100→150,70 tăng0→2, nhưng không có1202. Chưa có log đủ để xác định riêng lượt người dùng đã bấm có commit không.</p>
+<p>Snapshot nicky cho thấy thẻ còn hiệu lực và có monthCardRecords. Không suy ngược quà thiếu từ số vật phẩm hiện tại. Không gọi1211 trên tài khoản đó, không reset ngày, không nhận lại hoặc phát bù.</p>
+<p><strong>Commerce-compat.js production giữ nguyên trong release này</strong>: phạm vi Huyền Vũ là kiểm tra. Khi được yêu cầu sửa cần bổ sung1202, save xác nhận và callback chỉ đánh dấu nhận khi thành công.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-local-production">Source chính local/production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Nội dung</th>
+</tr></thead><tbody>
+<tr>
+<td>linhhoasu/lhs/newServer/src/services/FishingAutoService.js</td>
+<td>Mới: chọn theo lực chiến server, guard và lập kế hoạch</td>
+</tr>
+<tr>
+<td>linhhoasu/lhs/newServer/src/handlers/fish.js</td>
+<td>Nhánh autoPower4008, quyền, ledger, clone+save, history và ACK</td>
+</tr>
+<tr>
+<td>linhhoasu/lhs/newServer/src/handlers/playerPayload.js</td>
+<td>Ẩn autoPowerHistory khỏi login</td>
+</tr>
+<tr>
+<td>linhhoasu/webgame/game/js/main.min_a6195824.js</td>
+<td>Checkbox EUI native, setting, callback, reconnect, metadata guard</td>
+</tr>
+<tr>
+<td>linhhoasu/webgame/game/index.html</td>
+<td>Cache key20260906_fishing_auto_power_v1</td>
+</tr>
+</tbody></table></div>
+<p>Không đổi binary config/skin, commerce-compat, giá bán, bảng cân bằng, WebGM, DB schema, WSServer hoặc bot worker. Không dùng HTML overlay để thay UI native.</p>
+<h3 id="c-ng-c-v-evidence">Công cụ và evidence</h3>
+<ul>
+<li>Tools mới: audit_fishing_auto_privilege_20260906.py, build_fishing_auto_client_20260906.js, test_fishing_auto_20260906.js, qa_fishing_auto_live_20260906.js, release_fishing_auto_20260906.py, sync_fishing_auto_local_20260906.py, final_fishing_auto_20260906.py; tất cả trong _ai_workbench/tools/.</li>
+<li>Baseline: _ai_workbench/temp/fishing_audit_20260906T005207Z/.</li>
+<li>Candidate: _ai_workbench/temp/fishing_auto_20260906/; gồm privilege-audit.json, auto-tests.json, qa-auto-settings.json, client-build.json, stage.json, canary-progress.json, deploy.json, final-check.json, local-sync.json.</li>
+<li>Backup remote: /linhhoasu/_ai_workbench/backups/fishing_auto_20260906_040301/.</li>
+<li>Backup local: _ai_workbench/backups/fishing_auto_local_20260906/; report backup: _ai_workbench/backups/fishing_auto_reports_20260906/.</li>
+<li>Gói source-only: temp/fishing_auto_20260906/fishing_auto_power_v1_20260906.zip,6 entry,2.189.356 bytes; SHA25604078615d52314d78f4cdf9777443ca2b116821ce91063081417bc53747555a3.</li>
+<li>Gói yêu cầu fishing_gear_v1; không chứa credential/runtime/DB hoặc fix quà ngày. Snapshot/log chỉ dùng nội bộ.</li>
+<li>Báo cáo này và session_report.md có HTML đầy đủ, không tạo file tạm ở root.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhầm quà live với local</td>
+<td>Local commerce cũ khác production</td>
+<td>Đính chính bằng snapshot/hash và handler thật</td>
+<td>Không suy từ local khác hash</td>
+</tr>
+<tr>
+<td>Quà ngày không hiện số tăng</td>
+<td>Thiếu1202</td>
+<td>Chẩn đoán, chưa sửa</td>
+<td>Test DB+ACK+sync, không chỉ popup</td>
+</tr>
+<tr>
+<td>Quà save-null vẫn success</td>
+<td>persistPlayer bỏ qua null</td>
+<td>Chẩn đoán, chưa sửa</td>
+<td>Không đánh dấu nhận trước xác nhận save</td>
+</tr>
+<tr>
+<td>Auto cũ chỉ dừng khi cá mạnh</td>
+<td>Không có equip tự động</td>
+<td>Tùy chọn riêng server-authoritative</td>
+<td>Không đổi ý nghĩa tùy chọn cũ</td>
+</tr>
+<tr>
+<td>Bán nhầm cá có giá trị khác</td>
+<td>Không bảo vệ khóa/kỹ năng</td>
+<td>Giữ/cảnh báo/dừng, ngang điểm không bán</td>
+<td>Test protected/type/UID/skill</td>
+</tr>
+<tr>
+<td>Callback cũ sau reconnect</td>
+<td>Cờ pending còn lại</td>
+<td>Generation và reset pending</td>
+<td>Late callback test</td>
+</tr>
+<tr>
+<td>Metadata0 tạoNaN</td>
+<td>Duration chưa tải</td>
+<td>New auto kiểm readiness</td>
+<td>Không tiêu hao rồi kẹt</td>
+</tr>
+<tr>
+<td>Chèn UI nhầm class minified</td>
+<td>childrenCreated là tên dùng chung</td>
+<td>Exact marker V6e.prototype và VM test</td>
+<td>Không dùng anchor mơ hồ</td>
+</tr>
+<tr>
+<td>ByteArray không constructor</td>
+<td>Module export trực tiếp</td>
+<td>Sửa import harness</td>
+<td>Binary roundtrip actual functions</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Score cá phải tính khi đặt vào đúng slot; không chỉ so quality/multi/tổngvalue khác loại. Bản này dùng chuẩn BattleService; công thức/scale hiển thị client cũ chưa phải oracle tuyệt đối.</li>
+<li>Kiểm cấp câu hoặc thẻ còn hiệu lực trước ủy thác; không tin trạng thái bật do client gửi.</li>
+<li>Danh sách UID phải khớp toàn bộ pending; không nhận danh sách cắt xén rồi xóa phần còn lại.</li>
+<li>Ảnh07:21/07:23 chụp trước gear release07:45, không dùng ảnh cũ để phủ nhận bản cường hóa mới.</li>
+<li>1,11× tương đương giảm khoảng9,9% thời gian. Zero/NaN khi chưa có metadata khác với hệ số tăng tốc sai.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>-21 tests auto/persistence/guard PASS local/staging; gồm binarytrue/false/legacy roundtrip và nativecheckbox layout trong VM. -70 hồi quy balance PASS; staging gear38 nhóm/1.800 matrix PASS. Một test thống kê profile lịch sử không chạy tại staging này vì không upload runtime, không gắn nhãn39. Core714 bảng PASS local/staging. -3 probe chẩn đoán xác nhận thiếu1202, nullsave và speed1,11×/metadata0. Probe tái hiện bug không đồng nghĩa featurePASS. -Live S2 QA đạt trước S1: chọn tốt nhất, bán3 cá yếu, giữ ô khóa, sale history, setting10002/relog, retry, câu thật rồi auto, tẩy/hộp dùng chung ledger. Dailyclaim1211 live actions=0. -QA cleanup0. Chỉ2 UID QA riêng bị thao tác; không vật phẩm/cá người chơi thật, không compensation. Auto mặc định tắt. -154 hash tracked PASS;5 file release/149 artifact khác nguyên. Commerce hash không đổi;3 source local và main/index served khớp. -PID cuốiS1=2605/restart1373,S2=32330/restart37. Restart1 lần/server; dist30824/admin30856/bot1600/1576 giữ PID/restart. HTTPready8080/8083=200, WSready9200/9201=ok. -Chưa nghiệm thu visual UI trên phiên người thật; chưa offline automation hoặc QA state xuyên thêm restart.</p>
+<h3 id="c-n-l-i-gi-i-h-n">Còn lỗi / giới hạn</h3>
+<ol>
+<li><strong>Huyền Vũ:</strong> thiếu1202, save-null vẫnsuccess, callback đánh dấu nhận khi lỗi. Đã chẩn đoán, chưa sửa; không bù lịch sử.</li>
+<li><strong>Cold animation metadata:</strong> luồng auto mới có guard; luồng cũ/Hoang Cổ chưa được nghiệm thu đầy đủ.</li>
+<li><strong>Lực chiến:</strong> dùng cấp hiện tại, không đánh giá tiềm năng ở cấp sau. Muốn giữ cá sưu tầm cần tắt auto hoặc giữ thủ công.</li>
+<li><strong>Giá/bonus bán cá:</strong> giữ quy tắc server hiện hành, chưa xác minh đủ bonus cần vàng/đặc quyền so bản gốc.</li>
+<li>RNG linh hồn, di vật/event, hiệu ứng mồi nâng cao, activation mảnh Thiên Công vẫn là phần chưa nghiệm thu trước đây. Không tuyên bố câu cá hoàn thiện100%.</li>
+</ol>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Ctrl+F5/đăng nhập lại, mở ủy thác câu cá thường, bật “Tự trang bị cá mạnh, bán cá yếu” rồi Bắt đầu. Đọc lưu ý về cá được giữ và bộ lọc.</li>
+<li>Khi được yêu cầu sửa Huyền Vũ: dùng production baseline, sửa save-confirmed+1202+clientresultguard; test hết hạn/đã nhận/ngày mới/retry/save bất định. Không reset ngày nhận/phát bù tự động.</li>
+<li>Nếu muốn sửa toàn bộ cold-start/tăng tốc: kiểm metadata thật, lifecycle/timer và UI native; không thay1,11 thành2 để gọi là fix.</li>
+<li>Rollback source phải giữ balanceReceipts/autoPowerHistory/state DB, không restore player snapshot cũ; chỉ restart game trong phạm vi.</li>
+</ol></main></body></html>

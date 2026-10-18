@@ -1,0 +1,3612 @@
+{
+  "_table": "AttrConfig",
+  "_rows": 197,
+  "_type": "object",
+  "_firstKeys": "id,type,name,desc,icon,atkIcon,dataType,power,ifShow,priority,linkId,defineLinkId,conditions",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "type": 1,
+        "name": 10001,
+        "desc": 10010001,
+        "icon": "icon_attribute_1",
+        "atkIcon": "",
+        "dataType": 1,
+        "power": 2,
+        "ifShow": 1,
+        "priority": 1,
+        "linkId": [],
+        "defineLinkId": [],
+        "conditions": []
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "type": 1,
+        "name": 10002,
+        "desc": 10010002,
+        "icon": "icon_attribute_2",
+        "atkIcon": "",
+        "dataType": 1,
+        "power": 20,
+        "ifShow": 1,
+        "priority": 2,
+        "linkId": [],
+        "defineLinkId": [],
+        "conditions": []
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "type": 1,
+        "name": 10003,
+        "desc": 10010003,
+        "icon": "icon_attribute_3",
+        "atkIcon": "",
+        "dataType": 1,
+        "power": 20,
+        "ifShow": 1,
+        "priority": 3,
+        "linkId": [],
+        "defineLinkId": [],
+        "conditions": []
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "type": 1,
+      "name": 10001,
+      "desc": 10010001,
+      "icon": "icon_attribute_1",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 2,
+      "ifShow": 1,
+      "priority": 1,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "2": {
+      "id": 2,
+      "type": 1,
+      "name": 10002,
+      "desc": 10010002,
+      "icon": "icon_attribute_2",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 20,
+      "ifShow": 1,
+      "priority": 2,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "3": {
+      "id": 3,
+      "type": 1,
+      "name": 10003,
+      "desc": 10010003,
+      "icon": "icon_attribute_3",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 20,
+      "ifShow": 1,
+      "priority": 3,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "4": {
+      "id": 4,
+      "type": 1,
+      "name": 10004,
+      "desc": 10010004,
+      "icon": "icon_attribute_4",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "5": {
+      "id": 5,
+      "type": 1,
+      "name": 10005,
+      "desc": 10010005,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 5,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "type": 1,
+      "name": 10006,
+      "desc": 10010006,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 6,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "type": 1,
+      "name": 10009,
+      "desc": 10010009,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": -1,
+      "ifShow": 1,
+      "priority": 9,
+      "linkId": [],
+      "defineLinkId": {
+        "1": 200,
+        "5": 12,
+        "6": 2
+      },
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "type": 1,
+      "name": 10010,
+      "desc": 10010010,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 1,
+      "priority": 10,
+      "linkId": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "51": {
+      "id": 51,
+      "type": 2,
+      "name": 10051,
+      "desc": 10010051,
+      "icon": "icon_attribute_1",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [
+        1
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "52": {
+      "id": 52,
+      "type": 2,
+      "name": 10052,
+      "desc": 10010052,
+      "icon": "icon_attribute_2",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [
+        2
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "53": {
+      "id": 53,
+      "type": 2,
+      "name": 10053,
+      "desc": 10010053,
+      "icon": "icon_attribute_3",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [
+        3
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "54": {
+      "id": 54,
+      "type": 2,
+      "name": 10054,
+      "desc": 10010054,
+      "icon": "icon_attribute_4",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [
+        4
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "55": {
+      "id": 55,
+      "type": 2,
+      "name": 10055,
+      "desc": 10010055,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [
+        5
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "56": {
+      "id": 56,
+      "type": 2,
+      "name": 10056,
+      "desc": 10010056,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [
+        6
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "101": {
+      "id": 101,
+      "type": 3,
+      "name": 10101,
+      "desc": 10010101,
+      "shortDesc": 30030011,
+      "icon": "icon_attribute_5",
+      "atkIcon": "battle_txt_xixue",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1001,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "102": {
+      "id": 102,
+      "type": 3,
+      "name": 10102,
+      "desc": 10010102,
+      "shortDesc": 30030012,
+      "icon": "icon_attribute_6",
+      "atkIcon": "battle_txt_fanji",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1003,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "103": {
+      "id": 103,
+      "type": 3,
+      "name": 10103,
+      "desc": 10010103,
+      "shortDesc": 30030013,
+      "icon": "icon_attribute_7",
+      "atkIcon": "battle_txt_lianji",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1005,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "104": {
+      "id": 104,
+      "type": 3,
+      "name": 10104,
+      "desc": 10010104,
+      "shortDesc": 30030014,
+      "icon": "icon_attribute_8",
+      "atkIcon": "battle_txt_shanbi",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1007,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "105": {
+      "id": 105,
+      "type": 3,
+      "name": 10105,
+      "desc": 10010105,
+      "shortDesc": 30030015,
+      "icon": "icon_attribute_9",
+      "atkIcon": "battle_txt_baoji",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1009,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "106": {
+      "id": 106,
+      "type": 3,
+      "name": 10106,
+      "desc": 10010106,
+      "shortDesc": 30030016,
+      "icon": "icon_attribute_10",
+      "atkIcon": "battle_txt_jiyun",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1011,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "151": {
+      "id": 151,
+      "type": 3,
+      "name": 10151,
+      "desc": 10010151,
+      "shortDesc": 30030021,
+      "icon": "icon_attribute_11",
+      "atkIcon": "battle_txt_xixuekangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1002,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "152": {
+      "id": 152,
+      "type": 3,
+      "name": 10152,
+      "desc": 10010152,
+      "shortDesc": 30030022,
+      "icon": "icon_attribute_12",
+      "atkIcon": "battle_txt_fanjikangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1004,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "153": {
+      "id": 153,
+      "type": 3,
+      "name": 10153,
+      "desc": 10010153,
+      "shortDesc": 30030023,
+      "icon": "icon_attribute_13",
+      "atkIcon": "battle_txt_lianjikangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1006,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "154": {
+      "id": 154,
+      "type": 3,
+      "name": 10154,
+      "desc": 10010154,
+      "shortDesc": 30030024,
+      "icon": "icon_attribute_14",
+      "atkIcon": "battle_txt_shanbikangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1008,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "155": {
+      "id": 155,
+      "type": 3,
+      "name": 10155,
+      "desc": 10010155,
+      "shortDesc": 30030025,
+      "icon": "icon_attribute_15",
+      "atkIcon": "battle_txt_baojikangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1010,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "156": {
+      "id": 156,
+      "type": 3,
+      "name": 10156,
+      "desc": 10010156,
+      "shortDesc": 30030026,
+      "icon": "icon_attribute_16",
+      "atkIcon": "battle_txt_jiyunkangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 1012,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "161": {
+      "id": 161,
+      "type": 4,
+      "name": 10161,
+      "desc": 10010161,
+      "icon": "",
+      "atkIcon": "battle_eff_liuxue",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2001,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "162": {
+      "id": 162,
+      "type": 4,
+      "name": 10162,
+      "desc": 10010162,
+      "icon": "",
+      "atkIcon": "battle_eff_zhongdu",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2003,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "163": {
+      "id": 163,
+      "type": 4,
+      "name": 10163,
+      "desc": 10010163,
+      "icon": "",
+      "atkIcon": "battle_eff_bingdong",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2005,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "164": {
+      "id": 164,
+      "type": 4,
+      "name": 10164,
+      "desc": 10010164,
+      "icon": "",
+      "atkIcon": "battle_eff_ranshao",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2007,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "165": {
+      "id": 165,
+      "type": 4,
+      "name": 10165,
+      "desc": 10010165,
+      "icon": "",
+      "atkIcon": "battle_eff_jianren",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2009,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "171": {
+      "id": 171,
+      "type": 4,
+      "name": 10171,
+      "desc": 10010171,
+      "icon": "",
+      "atkIcon": "battle_txt_liuxuekangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2002,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "172": {
+      "id": 172,
+      "type": 4,
+      "name": 10172,
+      "desc": 10010172,
+      "icon": "",
+      "atkIcon": "battle_txt_chanraokangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2004,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "173": {
+      "id": 173,
+      "type": 4,
+      "name": 10173,
+      "desc": 10010173,
+      "icon": "",
+      "atkIcon": "battle_txt_bingdongkangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2006,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "174": {
+      "id": 174,
+      "type": 4,
+      "name": 10174,
+      "desc": 10010174,
+      "icon": "",
+      "atkIcon": "battle_txt_ranshaokangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2008,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "175": {
+      "id": 175,
+      "type": 4,
+      "name": 10175,
+      "desc": 10010175,
+      "icon": "",
+      "atkIcon": "battle_txt_jianrenkangxing",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 2010,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "201": {
+      "id": 201,
+      "type": 5,
+      "name": 10201,
+      "desc": 10010201,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 2,
+      "priority": 0,
+      "linkId": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "202": {
+      "id": 202,
+      "type": 5,
+      "name": 10202,
+      "desc": 10010202,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3001,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "203": {
+      "id": 203,
+      "type": 5,
+      "name": 10203,
+      "desc": 10010203,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3003,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "204": {
+      "id": 204,
+      "type": 5,
+      "name": 10204,
+      "desc": 10010204,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3005,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "205": {
+      "id": 205,
+      "type": 5,
+      "name": 10205,
+      "desc": 10010205,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3007,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 231,
+          "cond": 0
+        }
+      ]
+    },
+    "206": {
+      "id": 206,
+      "type": 5,
+      "name": 10206,
+      "desc": 10010206,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3009,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 231,
+          "cond": 0
+        }
+      ]
+    },
+    "207": {
+      "id": 207,
+      "type": 5,
+      "name": 10207,
+      "desc": 10010207,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 2,
+      "priority": 0,
+      "linkId": [
+        161,
+        162,
+        163,
+        164,
+        165
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "221": {
+      "id": 221,
+      "type": 5,
+      "name": 10221,
+      "desc": 10010221,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 2,
+      "priority": 0,
+      "linkId": [
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "222": {
+      "id": 222,
+      "type": 5,
+      "name": 10222,
+      "desc": 10010222,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3002,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "223": {
+      "id": 223,
+      "type": 5,
+      "name": 10223,
+      "desc": 10010223,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3004,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "224": {
+      "id": 224,
+      "type": 5,
+      "name": 10224,
+      "desc": 10010224,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3006,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "225": {
+      "id": 225,
+      "type": 5,
+      "name": 10225,
+      "desc": 10010225,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3008,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 231,
+          "cond": 0
+        }
+      ]
+    },
+    "226": {
+      "id": 226,
+      "type": 5,
+      "name": 10226,
+      "desc": 10010226,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3010,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 231,
+          "cond": 0
+        }
+      ]
+    },
+    "227": {
+      "id": 227,
+      "type": 5,
+      "name": 10227,
+      "desc": 10010227,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": -1,
+      "ifShow": 2,
+      "priority": 0,
+      "linkId": [
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "231": {
+      "id": 231,
+      "type": 5,
+      "name": 10231,
+      "desc": 10010231,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3023,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "232": {
+      "id": 232,
+      "type": 5,
+      "name": 10232,
+      "desc": 10010232,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3024,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "233": {
+      "id": 233,
+      "type": 5,
+      "name": 10233,
+      "desc": 10010233,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3025,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "234": {
+      "id": 234,
+      "type": 5,
+      "name": 10234,
+      "desc": 10010234,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3026,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "241": {
+      "id": 241,
+      "type": 5,
+      "name": 10241,
+      "desc": 10010241,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 100,
+      "ifShow": 1,
+      "priority": 3011,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "242": {
+      "id": 242,
+      "type": 5,
+      "name": 10242,
+      "desc": 10010242,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 100,
+      "ifShow": 1,
+      "priority": 3012,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "243": {
+      "id": 243,
+      "type": 5,
+      "name": 10243,
+      "desc": 10010243,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3027,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "244": {
+      "id": 244,
+      "type": 5,
+      "name": 10244,
+      "desc": 10010244,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3028,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "245": {
+      "id": 245,
+      "type": 5,
+      "name": 10245,
+      "desc": 10010245,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3029,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "246": {
+      "id": 246,
+      "type": 5,
+      "name": 10246,
+      "desc": 10010246,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3030,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "251": {
+      "id": 251,
+      "type": 5,
+      "name": 10251,
+      "desc": 10010251,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 3017,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ]
+    },
+    "252": {
+      "id": 252,
+      "type": 5,
+      "name": 10252,
+      "desc": 10010252,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 25,
+      "ifShow": 1,
+      "priority": 3018,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ]
+    },
+    "253": {
+      "id": 253,
+      "type": 5,
+      "name": 10253,
+      "desc": 10010253,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3019,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ]
+    },
+    "254": {
+      "id": 254,
+      "type": 5,
+      "name": 10254,
+      "desc": 10010254,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3020,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ]
+    },
+    "255": {
+      "id": 255,
+      "type": 5,
+      "name": 10255,
+      "desc": 10010255,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 60,
+      "ifShow": 1,
+      "priority": 3015,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 225,
+          "cond": 0
+        }
+      ]
+    },
+    "256": {
+      "id": 256,
+      "type": 5,
+      "name": 10256,
+      "desc": 10010256,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 60,
+      "ifShow": 1,
+      "priority": 3016,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 225,
+          "cond": 0
+        }
+      ]
+    },
+    "257": {
+      "id": 257,
+      "type": 5,
+      "name": 10257,
+      "desc": 10010257,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3013,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 228,
+          "cond": 0
+        }
+      ]
+    },
+    "258": {
+      "id": 258,
+      "type": 5,
+      "name": 10258,
+      "desc": 10010258,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3014,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 228,
+          "cond": 0
+        }
+      ]
+    },
+    "259": {
+      "id": 259,
+      "type": 5,
+      "name": 10259,
+      "desc": 10010259,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3021,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 228,
+          "cond": 0
+        }
+      ]
+    },
+    "260": {
+      "id": 260,
+      "type": 5,
+      "name": 10260,
+      "desc": 10010260,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3021,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 228,
+          "cond": 0
+        }
+      ]
+    },
+    "261": {
+      "id": 261,
+      "type": 5,
+      "name": 10261,
+      "desc": 10010261,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3035,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "263": {
+      "id": 263,
+      "type": 5,
+      "name": 10263,
+      "desc": 10010263,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3037,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "264": {
+      "id": 264,
+      "type": 5,
+      "name": 10264,
+      "desc": 10010264,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3039,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "265": {
+      "id": 265,
+      "type": 5,
+      "name": 10265,
+      "desc": 10010265,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3041,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "266": {
+      "id": 266,
+      "type": 5,
+      "name": 10266,
+      "desc": 10010266,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3043,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "268": {
+      "id": 268,
+      "type": 5,
+      "name": 10268,
+      "desc": 10010268,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3045,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "281": {
+      "id": 281,
+      "type": 5,
+      "name": 10281,
+      "desc": 10010281,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3036,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "283": {
+      "id": 283,
+      "type": 5,
+      "name": 10283,
+      "desc": 10010283,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3038,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "284": {
+      "id": 284,
+      "type": 5,
+      "name": 10284,
+      "desc": 10010284,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3040,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "285": {
+      "id": 285,
+      "type": 5,
+      "name": 10285,
+      "desc": 10010285,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3042,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "286": {
+      "id": 286,
+      "type": 5,
+      "name": 10286,
+      "desc": 10010286,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3044,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "288": {
+      "id": 288,
+      "type": 5,
+      "name": 10288,
+      "desc": 10010288,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3046,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 211,
+          "cond": 0
+        }
+      ]
+    },
+    "301": {
+      "id": 301,
+      "type": 5,
+      "name": 10301,
+      "desc": 10010301,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3047,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "302": {
+      "id": 302,
+      "type": 5,
+      "name": 10302,
+      "desc": 10010302,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3049,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "303": {
+      "id": 303,
+      "type": 5,
+      "name": 10303,
+      "desc": 10010303,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3051,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "304": {
+      "id": 304,
+      "type": 5,
+      "name": 10304,
+      "desc": 10010304,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3053,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "305": {
+      "id": 305,
+      "type": 5,
+      "name": 10305,
+      "desc": 10010305,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3055,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "311": {
+      "id": 311,
+      "type": 5,
+      "name": 10311,
+      "desc": 10010311,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3048,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "312": {
+      "id": 312,
+      "type": 5,
+      "name": 10312,
+      "desc": 10010312,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3050,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "313": {
+      "id": 313,
+      "type": 5,
+      "name": 10313,
+      "desc": 10010313,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3052,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "314": {
+      "id": 314,
+      "type": 5,
+      "name": 10314,
+      "desc": 10010314,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3054,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "315": {
+      "id": 315,
+      "type": 5,
+      "name": 10315,
+      "desc": 10010315,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3056,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 216,
+          "cond": 0
+        }
+      ]
+    },
+    "331": {
+      "id": 331,
+      "type": 5,
+      "name": 10331,
+      "desc": 10010331,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 150,
+      "ifShow": 1,
+      "priority": 3031,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "332": {
+      "id": 332,
+      "type": 5,
+      "name": 10332,
+      "desc": 10010332,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 150,
+      "ifShow": 1,
+      "priority": 3032,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "341": {
+      "id": 341,
+      "type": 5,
+      "name": 10341,
+      "desc": 10010341,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 150,
+      "ifShow": 1,
+      "priority": 3033,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "342": {
+      "id": 342,
+      "type": 5,
+      "name": 10342,
+      "desc": 10010342,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 150,
+      "ifShow": 1,
+      "priority": 3034,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "350": {
+      "id": 350,
+      "type": 1,
+      "name": 10350,
+      "desc": 10010350,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 0,
+      "ifShow": 1,
+      "priority": 11,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 0
+        }
+      ]
+    },
+    "351": {
+      "id": 351,
+      "type": 5,
+      "name": 10351,
+      "desc": 10010351,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 0
+        }
+      ]
+    },
+    "352": {
+      "id": 352,
+      "type": 5,
+      "name": 10352,
+      "desc": 10010352,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 0
+        }
+      ]
+    },
+    "353": {
+      "id": 353,
+      "type": 5,
+      "name": 10353,
+      "desc": 10010353,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3022,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 0
+        }
+      ]
+    },
+    "354": {
+      "id": 354,
+      "type": 5,
+      "name": 10354,
+      "desc": 10010354,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 3022,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 0
+        }
+      ]
+    },
+    "355": {
+      "id": 355,
+      "type": 1,
+      "name": 10355,
+      "desc": 10010355,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 1,
+      "priority": 12,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 0
+        }
+      ]
+    },
+    "401": {
+      "id": 401,
+      "type": 6,
+      "name": 10401,
+      "desc": 10010401,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9001
+    },
+    "402": {
+      "id": 402,
+      "type": 6,
+      "name": 10402,
+      "desc": 10010402,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9002
+    },
+    "403": {
+      "id": 403,
+      "type": 6,
+      "name": 10403,
+      "desc": 10010403,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9003
+    },
+    "404": {
+      "id": 404,
+      "type": 6,
+      "name": 10404,
+      "desc": 10010404,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9004
+    },
+    "405": {
+      "id": 405,
+      "type": 6,
+      "name": 10405,
+      "desc": 10010405,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9005
+    },
+    "406": {
+      "id": 406,
+      "type": 6,
+      "name": 10406,
+      "desc": 10010406,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9006
+    },
+    "407": {
+      "id": 407,
+      "type": 6,
+      "name": 10407,
+      "desc": 10010407,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9007
+    },
+    "408": {
+      "id": 408,
+      "type": 6,
+      "name": 10408,
+      "desc": 10010408,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9008
+    },
+    "409": {
+      "id": 409,
+      "type": 6,
+      "name": 10409,
+      "desc": 10010409,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9009
+    },
+    "410": {
+      "id": 410,
+      "type": 6,
+      "name": 10410,
+      "desc": 10010410,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9010
+    },
+    "411": {
+      "id": 411,
+      "type": 6,
+      "name": 10411,
+      "desc": 10010411,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10101
+    },
+    "412": {
+      "id": 412,
+      "type": 6,
+      "name": 10412,
+      "desc": 10010412,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10201
+    },
+    "420": {
+      "id": 420,
+      "type": 6,
+      "name": 10420,
+      "desc": 10010420,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401101
+    },
+    "421": {
+      "id": 421,
+      "type": 6,
+      "name": 10421,
+      "desc": 10010421,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401201
+    },
+    "422": {
+      "id": 422,
+      "type": 6,
+      "name": 10422,
+      "desc": 10010422,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401102
+    },
+    "423": {
+      "id": 423,
+      "type": 6,
+      "name": 10423,
+      "desc": 10010423,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401202
+    },
+    "424": {
+      "id": 424,
+      "type": 6,
+      "name": 10424,
+      "desc": 10010424,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401103
+    },
+    "425": {
+      "id": 425,
+      "type": 6,
+      "name": 10425,
+      "desc": 10010425,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401203
+    },
+    "426": {
+      "id": 426,
+      "type": 6,
+      "name": 10426,
+      "desc": 10010426,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401104
+    },
+    "427": {
+      "id": 427,
+      "type": 6,
+      "name": 10427,
+      "desc": 10010427,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401204
+    },
+    "428": {
+      "id": 428,
+      "type": 6,
+      "name": 10428,
+      "desc": 10010428,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401105
+    },
+    "429": {
+      "id": 429,
+      "type": 6,
+      "name": 10429,
+      "desc": 10010429,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 401205
+    },
+    "430": {
+      "id": 430,
+      "type": 6,
+      "name": 10430,
+      "desc": 10010430,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10411
+    },
+    "431": {
+      "id": 431,
+      "type": 6,
+      "name": 10431,
+      "desc": 10010431,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10412
+    },
+    "432": {
+      "id": 432,
+      "type": 6,
+      "name": 10432,
+      "desc": 10010432,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10413
+    },
+    "433": {
+      "id": 433,
+      "type": 6,
+      "name": 10433,
+      "desc": 10010433,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10414
+    },
+    "434": {
+      "id": 434,
+      "type": 6,
+      "name": 10434,
+      "desc": 10010434,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10415
+    },
+    "440": {
+      "id": 440,
+      "type": 6,
+      "name": 10440,
+      "desc": 10010440,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10301
+    },
+    "441": {
+      "id": 441,
+      "type": 6,
+      "name": 10441,
+      "desc": 10010441,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10302
+    },
+    "442": {
+      "id": 442,
+      "type": 6,
+      "name": 10442,
+      "desc": 10010442,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10303
+    },
+    "443": {
+      "id": 443,
+      "type": 6,
+      "name": 10443,
+      "desc": 10010443,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10304
+    },
+    "444": {
+      "id": 444,
+      "type": 6,
+      "name": 10444,
+      "desc": 10010444,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10305
+    },
+    "445": {
+      "id": 445,
+      "type": 6,
+      "name": 10445,
+      "desc": 10010445,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10306
+    },
+    "446": {
+      "id": 446,
+      "type": 6,
+      "name": 10446,
+      "desc": 10010446,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10307
+    },
+    "447": {
+      "id": 447,
+      "type": 6,
+      "name": 10447,
+      "desc": 10010447,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10308
+    },
+    "448": {
+      "id": 448,
+      "type": 6,
+      "name": 10448,
+      "desc": 10010448,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10309
+    },
+    "449": {
+      "id": 449,
+      "type": 6,
+      "name": 10449,
+      "desc": 10010449,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10310
+    },
+    "451": {
+      "id": 451,
+      "type": 6,
+      "name": 10451,
+      "desc": 10010451,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9001
+    },
+    "452": {
+      "id": 452,
+      "type": 6,
+      "name": 10452,
+      "desc": 10010452,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9002
+    },
+    "453": {
+      "id": 453,
+      "type": 6,
+      "name": 10453,
+      "desc": 10010453,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9003
+    },
+    "454": {
+      "id": 454,
+      "type": 6,
+      "name": 10454,
+      "desc": 10010454,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9004
+    },
+    "455": {
+      "id": 455,
+      "type": 6,
+      "name": 10455,
+      "desc": 10010455,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9005
+    },
+    "456": {
+      "id": 456,
+      "type": 6,
+      "name": 10456,
+      "desc": 10010456,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9006
+    },
+    "457": {
+      "id": 457,
+      "type": 6,
+      "name": 10457,
+      "desc": 10010457,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9007
+    },
+    "458": {
+      "id": 458,
+      "type": 6,
+      "name": 10458,
+      "desc": 10010458,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9008
+    },
+    "459": {
+      "id": 459,
+      "type": 6,
+      "name": 10459,
+      "desc": 10010459,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9009
+    },
+    "460": {
+      "id": 460,
+      "type": 6,
+      "name": 10460,
+      "desc": 10010460,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9010
+    },
+    "501": {
+      "id": 501,
+      "type": 1001,
+      "name": 10501,
+      "desc": 10010501,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 1
+    },
+    "502": {
+      "id": 502,
+      "type": 1001,
+      "name": 10502,
+      "desc": 10010502,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 2
+    },
+    "503": {
+      "id": 503,
+      "type": 1001,
+      "name": 10503,
+      "desc": 10010503,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 3
+    },
+    "504": {
+      "id": 504,
+      "type": 1001,
+      "name": 10504,
+      "desc": 10010504,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 4
+    },
+    "505": {
+      "id": 505,
+      "type": 1001,
+      "name": 10505,
+      "desc": 10010505,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 5
+    },
+    "506": {
+      "id": 506,
+      "type": 1001,
+      "name": 10506,
+      "desc": 10010506,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 6
+    },
+    "507": {
+      "id": 507,
+      "type": 1001,
+      "name": 10507,
+      "desc": 10010507,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 7
+    },
+    "508": {
+      "id": 508,
+      "type": 1001,
+      "name": 10508,
+      "desc": 10010508,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 8
+    },
+    "509": {
+      "id": 509,
+      "type": 1001,
+      "name": 10509,
+      "desc": 10010509,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 9
+    },
+    "510": {
+      "id": 510,
+      "type": 1001,
+      "name": 10510,
+      "desc": 10010510,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [],
+      "appearanceID": 10
+    },
+    "531": {
+      "id": 531,
+      "type": 7,
+      "name": 10531,
+      "desc": 10010531,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "532": {
+      "id": 532,
+      "type": 7,
+      "name": 10532,
+      "desc": 10010532,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "533": {
+      "id": 533,
+      "type": 7,
+      "name": 10533,
+      "desc": 10010533,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "534": {
+      "id": 534,
+      "type": 7,
+      "name": 10534,
+      "desc": 10010534,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "535": {
+      "id": 535,
+      "type": 7,
+      "name": 10535,
+      "desc": 10010535,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "536": {
+      "id": 536,
+      "type": 7,
+      "name": 10536,
+      "desc": 10010536,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "537": {
+      "id": 537,
+      "type": 7,
+      "name": 10537,
+      "desc": 10010537,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "538": {
+      "id": 538,
+      "type": 7,
+      "name": 10538,
+      "desc": 10010538,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "601": {
+      "id": 601,
+      "type": 8,
+      "name": 10601,
+      "desc": 10010601,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4001,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "602": {
+      "id": 602,
+      "type": 8,
+      "name": 10602,
+      "desc": 10010602,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4003,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "603": {
+      "id": 603,
+      "type": 8,
+      "name": 10603,
+      "desc": 10010603,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4005,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "604": {
+      "id": 604,
+      "type": 8,
+      "name": 10604,
+      "desc": 10010604,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4007,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "605": {
+      "id": 605,
+      "type": 8,
+      "name": 10605,
+      "desc": 10010605,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4009,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "606": {
+      "id": 606,
+      "type": 8,
+      "name": 10606,
+      "desc": 10010606,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4011,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "611": {
+      "id": 611,
+      "type": 8,
+      "name": 10611,
+      "desc": 10010611,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4002,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "612": {
+      "id": 612,
+      "type": 8,
+      "name": 10612,
+      "desc": 10010612,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4004,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "613": {
+      "id": 613,
+      "type": 8,
+      "name": 10613,
+      "desc": 10010613,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4006,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "614": {
+      "id": 614,
+      "type": 8,
+      "name": 10614,
+      "desc": 10010614,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4008,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "615": {
+      "id": 615,
+      "type": 8,
+      "name": 10615,
+      "desc": 10010615,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4010,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "616": {
+      "id": 616,
+      "type": 8,
+      "name": 10616,
+      "desc": 10010616,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4012,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "621": {
+      "id": 621,
+      "type": 8,
+      "name": 10621,
+      "desc": 10010621,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4013,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "622": {
+      "id": 622,
+      "type": 8,
+      "name": 10622,
+      "desc": 10010622,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4015,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "623": {
+      "id": 623,
+      "type": 8,
+      "name": 10623,
+      "desc": 10010623,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4017,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "624": {
+      "id": 624,
+      "type": 8,
+      "name": 10624,
+      "desc": 10010624,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4019,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "625": {
+      "id": 625,
+      "type": 8,
+      "name": 10625,
+      "desc": 10010625,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4021,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "631": {
+      "id": 631,
+      "type": 8,
+      "name": 10631,
+      "desc": 10010631,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4014,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "632": {
+      "id": 632,
+      "type": 8,
+      "name": 10632,
+      "desc": 10010632,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4016,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "633": {
+      "id": 633,
+      "type": 8,
+      "name": 10633,
+      "desc": 10010633,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4018,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "634": {
+      "id": 634,
+      "type": 8,
+      "name": 10634,
+      "desc": 10010634,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4020,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "635": {
+      "id": 635,
+      "type": 8,
+      "name": 10635,
+      "desc": 10010635,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 40,
+      "ifShow": 1,
+      "priority": 4022,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 0
+        }
+      ]
+    },
+    "701": {
+      "id": 701,
+      "type": 9,
+      "name": 10701,
+      "desc": 10010701,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "702": {
+      "id": 702,
+      "type": 9,
+      "name": 10702,
+      "desc": 10010702,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "703": {
+      "id": 703,
+      "type": 9,
+      "name": 10703,
+      "desc": 10010703,
+      "icon": "",
+      "atkIcon": "",
+      "dataType": 2,
+      "power": 0,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": [],
+      "conditions": []
+    },
+    "801": {
+      "id": 801,
+      "type": 10,
+      "name": 10801,
+      "desc": 10010801,
+      "icon": "jingpo_icon_shenshi",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": {
+        "1": 80,
+        "5": 8
+      },
+      "conditions": []
+    },
+    "802": {
+      "id": 802,
+      "type": 10,
+      "name": 10802,
+      "desc": 10010802,
+      "icon": "jingpo_icon_gangli",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": {
+        "2": 14,
+        "3": 10
+      },
+      "conditions": []
+    },
+    "803": {
+      "id": 803,
+      "type": 10,
+      "name": 10803,
+      "desc": 10010803,
+      "icon": "jingpo_icon_lingshi",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": {
+        "1": 120,
+        "2": 8,
+        "4": 2
+      },
+      "conditions": []
+    },
+    "804": {
+      "id": 804,
+      "type": 10,
+      "name": 10804,
+      "desc": 10010804,
+      "icon": "jingpo_icon_qihai",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": {
+        "1": 180,
+        "2": 6
+      },
+      "conditions": []
+    },
+    "805": {
+      "id": 805,
+      "type": 10,
+      "name": 10805,
+      "desc": 10010805,
+      "icon": "jingpo_icon_huiqiao",
+      "atkIcon": "",
+      "dataType": 1,
+      "power": -1,
+      "ifShow": 0,
+      "priority": 0,
+      "linkId": [],
+      "defineLinkId": {
+        "5": 8,
+        "6": 4
+      },
+      "conditions": []
+    }
+  }
+}

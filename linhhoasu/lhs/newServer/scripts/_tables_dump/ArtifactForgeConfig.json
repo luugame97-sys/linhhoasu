@@ -1,0 +1,227 @@
+{
+  "_table": "ArtifactForgeConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "level,upRate,fitRate,unfitReturns,fitReturns",
+  "_sample": [
+    {
+      "1": {
+        "level": 1,
+        "upRate": 40,
+        "fitRate": 10,
+        "unfitReturns": [
+          {
+            "id": 192,
+            "count": 1
+          }
+        ],
+        "fitReturns": []
+      }
+    },
+    {
+      "2": {
+        "level": 2,
+        "upRate": 40,
+        "fitRate": 14,
+        "unfitReturns": [
+          {
+            "id": 192,
+            "count": 2
+          }
+        ],
+        "fitReturns": [
+          {
+            "id": 192,
+            "count": 3
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "level": 3,
+        "upRate": 42,
+        "fitRate": 18,
+        "unfitReturns": [
+          {
+            "id": 192,
+            "count": 3
+          }
+        ],
+        "fitReturns": [
+          {
+            "id": 192,
+            "count": 4
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "level": 1,
+      "upRate": 40,
+      "fitRate": 10,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 1
+        }
+      ],
+      "fitReturns": []
+    },
+    "2": {
+      "level": 2,
+      "upRate": 40,
+      "fitRate": 14,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 2
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 3
+        }
+      ]
+    },
+    "3": {
+      "level": 3,
+      "upRate": 42,
+      "fitRate": 18,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 3
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 4
+        }
+      ]
+    },
+    "4": {
+      "level": 4,
+      "upRate": 44,
+      "fitRate": 22,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 4
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 5
+        }
+      ]
+    },
+    "5": {
+      "level": 5,
+      "upRate": 46,
+      "fitRate": 25,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 5
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 6
+        }
+      ]
+    },
+    "6": {
+      "level": 6,
+      "upRate": 48,
+      "fitRate": 28,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 6
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 8
+        }
+      ]
+    },
+    "7": {
+      "level": 7,
+      "upRate": 50,
+      "fitRate": 31,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 8
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 12
+        }
+      ]
+    },
+    "8": {
+      "level": 8,
+      "upRate": 52,
+      "fitRate": 33,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 12
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 20
+        }
+      ]
+    },
+    "9": {
+      "level": 9,
+      "upRate": 54,
+      "fitRate": 36,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 20
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 40
+        }
+      ]
+    },
+    "10": {
+      "level": 10,
+      "upRate": 0,
+      "fitRate": 38,
+      "unfitReturns": [
+        {
+          "id": 192,
+          "count": 25
+        }
+      ],
+      "fitReturns": [
+        {
+          "id": 192,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

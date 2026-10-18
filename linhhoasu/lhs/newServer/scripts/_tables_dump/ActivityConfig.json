@@ -1,0 +1,5047 @@
+{
+  "_table": "ActivityConfig",
+  "_rows": 305,
+  "_type": "object",
+  "_firstKeys": "id,area,type,activityType,timeType,conditions,theme",
+  "_sample": [
+    {
+      "1001": {
+        "id": 1001,
+        "area": 1,
+        "type": 3,
+        "activityType": 1,
+        "timeType": 1,
+        "conditions": [
+          {
+            "type": 3,
+            "value": 6,
+            "cond": 4
+          }
+        ],
+        "theme": 0
+      }
+    },
+    {
+      "1051": {
+        "id": 1051,
+        "area": 2,
+        "type": 3,
+        "activityType": 1,
+        "timeType": 1,
+        "conditions": [
+          {
+            "type": 3,
+            "value": 6,
+            "cond": 4
+          }
+        ],
+        "theme": 0
+      }
+    },
+    {
+      "1101": {
+        "id": 1101,
+        "area": 1,
+        "type": 3,
+        "activityType": 1,
+        "timeType": 1,
+        "conditions": [
+          {
+            "type": 3,
+            "value": 6,
+            "cond": 4
+          }
+        ],
+        "theme": 0
+      }
+    }
+  ],
+  "data": {
+    "1001": {
+      "id": 1001,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1051": {
+      "id": 1051,
+      "area": 2,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1101": {
+      "id": 1101,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1151": {
+      "id": 1151,
+      "area": 2,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1201": {
+      "id": 1201,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1251": {
+      "id": 1251,
+      "area": 2,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1301": {
+      "id": 1301,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 999,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1302": {
+      "id": 1302,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1352": {
+      "id": 1352,
+      "area": 2,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "1401": {
+      "id": 1401,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 220,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "1451": {
+      "id": 1451,
+      "area": 2,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 220,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "1501": {
+      "id": 1501,
+      "area": 1,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "1551": {
+      "id": 1551,
+      "area": 2,
+      "type": 3,
+      "activityType": 1,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "2001": {
+      "id": 2001,
+      "area": 1,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2002": {
+      "id": 2002,
+      "area": 1,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2003": {
+      "id": 2003,
+      "area": 1,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2007": {
+      "id": 2007,
+      "area": 1,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2008": {
+      "id": 2008,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2009": {
+      "id": 2009,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2051": {
+      "id": 2051,
+      "area": 2,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2052": {
+      "id": 2052,
+      "area": 2,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2053": {
+      "id": 2053,
+      "area": 2,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2057": {
+      "id": 2057,
+      "area": 2,
+      "type": 1,
+      "activityType": 2,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2101": {
+      "id": 2101,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2105": {
+      "id": 2105,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2106": {
+      "id": 2106,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2107": {
+      "id": 2107,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2108": {
+      "id": 2108,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2109": {
+      "id": 2109,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2201": {
+      "id": 2201,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2202": {
+      "id": 2202,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "2203": {
+      "id": 2203,
+      "area": 1,
+      "type": 2,
+      "activityType": 2,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "3001": {
+      "id": 3001,
+      "area": 1,
+      "type": 1,
+      "activityType": 3,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "3002": {
+      "id": 3002,
+      "area": 1,
+      "type": 2,
+      "activityType": 3,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "3051": {
+      "id": 3051,
+      "area": 2,
+      "type": 1,
+      "activityType": 3,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "4001": {
+      "id": 4001,
+      "area": 1,
+      "type": 3,
+      "activityType": 4,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "4051": {
+      "id": 4051,
+      "area": 2,
+      "type": 3,
+      "activityType": 4,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "5001": {
+      "id": 5001,
+      "area": 1,
+      "type": 1,
+      "activityType": 5,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "5051": {
+      "id": 5051,
+      "area": 2,
+      "type": 1,
+      "activityType": 5,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6001": {
+      "id": 6001,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6002": {
+      "id": 6002,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6004": {
+      "id": 6004,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6005": {
+      "id": 6005,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 65,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6006": {
+      "id": 6006,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 55,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6007": {
+      "id": 6007,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 85,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6008": {
+      "id": 6008,
+      "area": 1,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6051": {
+      "id": 6051,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6052": {
+      "id": 6052,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6054": {
+      "id": 6054,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6055": {
+      "id": 6055,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 65,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6056": {
+      "id": 6056,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 55,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6057": {
+      "id": 6057,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 85,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6058": {
+      "id": 6058,
+      "area": 2,
+      "type": 1,
+      "activityType": 6,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "6101": {
+      "id": 6101,
+      "area": 1,
+      "type": 2,
+      "activityType": 6,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "param": 2,
+      "theme": 0
+    },
+    "6201": {
+      "id": 6201,
+      "area": 1,
+      "type": 2,
+      "activityType": 6,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "7001": {
+      "id": 7001,
+      "area": 1,
+      "type": 3,
+      "activityType": 7,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 15,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "7051": {
+      "id": 7051,
+      "area": 2,
+      "type": 3,
+      "activityType": 7,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 15,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "8001": {
+      "id": 8001,
+      "area": 1,
+      "type": 3,
+      "activityType": 8,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "8051": {
+      "id": 8051,
+      "area": 2,
+      "type": 3,
+      "activityType": 8,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 6,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9001": {
+      "id": 9001,
+      "area": 1,
+      "type": 1,
+      "activityType": 9,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9002": {
+      "id": 9002,
+      "area": 1,
+      "type": 1,
+      "activityType": 9,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9004": {
+      "id": 9004,
+      "area": 1,
+      "type": 2,
+      "activityType": 9,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9005": {
+      "id": 9005,
+      "area": 1,
+      "type": 2,
+      "activityType": 9,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9051": {
+      "id": 9051,
+      "area": 2,
+      "type": 1,
+      "activityType": 9,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9052": {
+      "id": 9052,
+      "area": 2,
+      "type": 1,
+      "activityType": 9,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "9101": {
+      "id": 9101,
+      "area": 1,
+      "type": 2,
+      "activityType": 9,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "10001": {
+      "id": 10001,
+      "area": 1,
+      "type": 1,
+      "activityType": 10,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "10002": {
+      "id": 10002,
+      "area": 1,
+      "type": 1,
+      "activityType": 10,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "10004": {
+      "id": 10004,
+      "area": 1,
+      "type": 2,
+      "activityType": 10,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "10051": {
+      "id": 10051,
+      "area": 2,
+      "type": 1,
+      "activityType": 10,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11001": {
+      "id": 11001,
+      "area": 1,
+      "type": 1,
+      "activityType": 11,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11002": {
+      "id": 11002,
+      "area": 1,
+      "type": 1,
+      "activityType": 11,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11003": {
+      "id": 11003,
+      "area": 1,
+      "type": 1,
+      "activityType": 11,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11005": {
+      "id": 11005,
+      "area": 1,
+      "type": 2,
+      "activityType": 11,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11007": {
+      "id": 11007,
+      "area": 1,
+      "type": 2,
+      "activityType": 11,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11008": {
+      "id": 11008,
+      "area": 1,
+      "type": 2,
+      "activityType": 11,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11009": {
+      "id": 11009,
+      "area": 1,
+      "type": 2,
+      "activityType": 11,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11051": {
+      "id": 11051,
+      "area": 2,
+      "type": 1,
+      "activityType": 11,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11052": {
+      "id": 11052,
+      "area": 2,
+      "type": 1,
+      "activityType": 11,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11053": {
+      "id": 11053,
+      "area": 2,
+      "type": 1,
+      "activityType": 11,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11101": {
+      "id": 11101,
+      "area": 1,
+      "type": 2,
+      "activityType": 11,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "11102": {
+      "id": 11102,
+      "area": 1,
+      "type": 2,
+      "activityType": 11,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "12001": {
+      "id": 12001,
+      "area": 1,
+      "type": 1,
+      "activityType": 12,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "12003": {
+      "id": 12003,
+      "area": 1,
+      "type": 2,
+      "activityType": 12,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "12051": {
+      "id": 12051,
+      "area": 2,
+      "type": 1,
+      "activityType": 12,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13001": {
+      "id": 13001,
+      "area": 1,
+      "type": 1,
+      "activityType": 13,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13002": {
+      "id": 13002,
+      "area": 1,
+      "type": 1,
+      "activityType": 13,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13005": {
+      "id": 13005,
+      "area": 1,
+      "type": 1,
+      "activityType": 13,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13006": {
+      "id": 13006,
+      "area": 1,
+      "type": 2,
+      "activityType": 13,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13007": {
+      "id": 13007,
+      "area": 1,
+      "type": 2,
+      "activityType": 13,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13008": {
+      "id": 13008,
+      "area": 1,
+      "type": 2,
+      "activityType": 13,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13051": {
+      "id": 13051,
+      "area": 2,
+      "type": 1,
+      "activityType": 13,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13052": {
+      "id": 13052,
+      "area": 2,
+      "type": 1,
+      "activityType": 13,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13055": {
+      "id": 13055,
+      "area": 2,
+      "type": 1,
+      "activityType": 13,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "13101": {
+      "id": 13101,
+      "area": 1,
+      "type": 2,
+      "activityType": 13,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "14001": {
+      "id": 14001,
+      "area": 1,
+      "type": 1,
+      "activityType": 14,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "14051": {
+      "id": 14051,
+      "area": 2,
+      "type": 1,
+      "activityType": 14,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "15001": {
+      "id": 15001,
+      "area": 1,
+      "type": 1,
+      "activityType": 15,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "15051": {
+      "id": 15051,
+      "area": 2,
+      "type": 1,
+      "activityType": 15,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 10,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "16001": {
+      "id": 16001,
+      "area": 1,
+      "type": 1,
+      "activityType": 16,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "16002": {
+      "id": 16002,
+      "area": 1,
+      "type": 1,
+      "activityType": 16,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "16004": {
+      "id": 16004,
+      "area": 1,
+      "type": 2,
+      "activityType": 16,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "16051": {
+      "id": 16051,
+      "area": 2,
+      "type": 1,
+      "activityType": 16,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "16052": {
+      "id": 16052,
+      "area": 2,
+      "type": 1,
+      "activityType": 16,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "16101": {
+      "id": 16101,
+      "area": 1,
+      "type": 2,
+      "activityType": 16,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "17001": {
+      "id": 17001,
+      "area": 1,
+      "type": 3,
+      "activityType": 17,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "17051": {
+      "id": 17051,
+      "area": 2,
+      "type": 3,
+      "activityType": 17,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "18001": {
+      "id": 18001,
+      "area": 1,
+      "type": 1,
+      "activityType": 18,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "18002": {
+      "id": 18002,
+      "area": 1,
+      "type": 2,
+      "activityType": 18,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "18051": {
+      "id": 18051,
+      "area": 2,
+      "type": 1,
+      "activityType": 18,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "19001": {
+      "id": 19001,
+      "area": 1,
+      "type": 3,
+      "activityType": 19,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 3,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "19051": {
+      "id": 19051,
+      "area": 2,
+      "type": 3,
+      "activityType": 19,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 3,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "20001": {
+      "id": 20001,
+      "area": 1,
+      "type": 1,
+      "activityType": 20,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "20003": {
+      "id": 20003,
+      "area": 1,
+      "type": 1,
+      "activityType": 20,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "20004": {
+      "id": 20004,
+      "area": 1,
+      "type": 2,
+      "activityType": 20,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "20051": {
+      "id": 20051,
+      "area": 2,
+      "type": 1,
+      "activityType": 20,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "20053": {
+      "id": 20053,
+      "area": 2,
+      "type": 1,
+      "activityType": 20,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "21001": {
+      "id": 21001,
+      "area": 1,
+      "type": 1,
+      "activityType": 21,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "21002": {
+      "id": 21002,
+      "area": 1,
+      "type": 2,
+      "activityType": 21,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "21003": {
+      "id": 21003,
+      "area": 1,
+      "type": 3,
+      "activityType": 21,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "21051": {
+      "id": 21051,
+      "area": 2,
+      "type": 1,
+      "activityType": 21,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "22001": {
+      "id": 22001,
+      "area": 1,
+      "type": 1,
+      "activityType": 22,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "22003": {
+      "id": 22003,
+      "area": 1,
+      "type": 2,
+      "activityType": 22,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "22004": {
+      "id": 22004,
+      "area": 1,
+      "type": 2,
+      "activityType": 22,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "22005": {
+      "id": 22005,
+      "area": 1,
+      "type": 2,
+      "activityType": 22,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "22051": {
+      "id": 22051,
+      "area": 2,
+      "type": 1,
+      "activityType": 22,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "22101": {
+      "id": 22101,
+      "area": 1,
+      "type": 2,
+      "activityType": 22,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "23001": {
+      "id": 23001,
+      "area": 1,
+      "type": 1,
+      "activityType": 23,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "23002": {
+      "id": 23002,
+      "area": 1,
+      "type": 1,
+      "activityType": 23,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "23052": {
+      "id": 23052,
+      "area": 2,
+      "type": 1,
+      "activityType": 23,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "23101": {
+      "id": 23101,
+      "area": 1,
+      "type": 2,
+      "activityType": 23,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "23102": {
+      "id": 23102,
+      "area": 1,
+      "type": 2,
+      "activityType": 23,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "23103": {
+      "id": 23103,
+      "area": 1,
+      "type": 2,
+      "activityType": 23,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24001": {
+      "id": 24001,
+      "area": 1,
+      "type": 2,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24002": {
+      "id": 24002,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24003": {
+      "id": 24003,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24004": {
+      "id": 24004,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24005": {
+      "id": 24005,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24006": {
+      "id": 24006,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24007": {
+      "id": 24007,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24008": {
+      "id": 24008,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24009": {
+      "id": 24009,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24010": {
+      "id": 24010,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24011": {
+      "id": 24011,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24012": {
+      "id": 24012,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24013": {
+      "id": 24013,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24014": {
+      "id": 24014,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24015": {
+      "id": 24015,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24016": {
+      "id": 24016,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24017": {
+      "id": 24017,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24018": {
+      "id": 24018,
+      "area": 1,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24057": {
+      "id": 24057,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24058": {
+      "id": 24058,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24059": {
+      "id": 24059,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24060": {
+      "id": 24060,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24061": {
+      "id": 24061,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24062": {
+      "id": 24062,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24063": {
+      "id": 24063,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24064": {
+      "id": 24064,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24065": {
+      "id": 24065,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24066": {
+      "id": 24066,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24067": {
+      "id": 24067,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "24068": {
+      "id": 24068,
+      "area": 2,
+      "type": 3,
+      "activityType": 24,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25001": {
+      "id": 25001,
+      "area": 1,
+      "type": 1,
+      "activityType": 25,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25005": {
+      "id": 25005,
+      "area": 1,
+      "type": 1,
+      "activityType": 25,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25006": {
+      "id": 25006,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25007": {
+      "id": 25007,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25008": {
+      "id": 25008,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25009": {
+      "id": 25009,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25051": {
+      "id": 25051,
+      "area": 2,
+      "type": 1,
+      "activityType": 25,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25055": {
+      "id": 25055,
+      "area": 2,
+      "type": 1,
+      "activityType": 25,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25101": {
+      "id": 25101,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25102": {
+      "id": 25102,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25105": {
+      "id": 25105,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25106": {
+      "id": 25106,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25107": {
+      "id": 25107,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "25108": {
+      "id": 25108,
+      "area": 1,
+      "type": 2,
+      "activityType": 25,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26001": {
+      "id": 26001,
+      "area": 1,
+      "type": 1,
+      "activityType": 26,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26002": {
+      "id": 26002,
+      "area": 1,
+      "type": 1,
+      "activityType": 26,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26051": {
+      "id": 26051,
+      "area": 2,
+      "type": 1,
+      "activityType": 26,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26052": {
+      "id": 26052,
+      "area": 2,
+      "type": 1,
+      "activityType": 26,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26101": {
+      "id": 26101,
+      "area": 1,
+      "type": 2,
+      "activityType": 26,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26102": {
+      "id": 26102,
+      "area": 1,
+      "type": 2,
+      "activityType": 26,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26103": {
+      "id": 26103,
+      "area": 1,
+      "type": 2,
+      "activityType": 26,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26104": {
+      "id": 26104,
+      "area": 1,
+      "type": 2,
+      "activityType": 26,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26105": {
+      "id": 26105,
+      "area": 1,
+      "type": 2,
+      "activityType": 26,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "26106": {
+      "id": 26106,
+      "area": 1,
+      "type": 2,
+      "activityType": 26,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "27001": {
+      "id": 27001,
+      "area": 1,
+      "type": 2,
+      "activityType": 27,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "27002": {
+      "id": 27002,
+      "area": 1,
+      "type": 2,
+      "activityType": 27,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "28001": {
+      "id": 28001,
+      "area": 1,
+      "type": 1,
+      "activityType": 28,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "28003": {
+      "id": 28003,
+      "area": 1,
+      "type": 2,
+      "activityType": 28,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "28051": {
+      "id": 28051,
+      "area": 2,
+      "type": 1,
+      "activityType": 28,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "29001": {
+      "id": 29001,
+      "area": 1,
+      "type": 1,
+      "activityType": 29,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "29003": {
+      "id": 29003,
+      "area": 1,
+      "type": 2,
+      "activityType": 29,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "29004": {
+      "id": 29004,
+      "area": 1,
+      "type": 2,
+      "activityType": 29,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "29005": {
+      "id": 29005,
+      "area": 1,
+      "type": 2,
+      "activityType": 29,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "29006": {
+      "id": 29006,
+      "area": 1,
+      "type": 2,
+      "activityType": 29,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "29051": {
+      "id": 29051,
+      "area": 2,
+      "type": 1,
+      "activityType": 29,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "30001": {
+      "id": 30001,
+      "area": 1,
+      "type": 1,
+      "activityType": 30,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "30051": {
+      "id": 30051,
+      "area": 2,
+      "type": 1,
+      "activityType": 30,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "30102": {
+      "id": 30102,
+      "area": 1,
+      "type": 2,
+      "activityType": 30,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "31001": {
+      "id": 31001,
+      "area": 1,
+      "type": 1,
+      "activityType": 31,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "31003": {
+      "id": 31003,
+      "area": 1,
+      "type": 2,
+      "activityType": 31,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "31051": {
+      "id": 31051,
+      "area": 2,
+      "type": 1,
+      "activityType": 31,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "32001": {
+      "id": 32001,
+      "area": 1,
+      "type": 1,
+      "activityType": 32,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "32002": {
+      "id": 32002,
+      "area": 1,
+      "type": 2,
+      "activityType": 32,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "32003": {
+      "id": 32003,
+      "area": 1,
+      "type": 2,
+      "activityType": 32,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "32051": {
+      "id": 32051,
+      "area": 2,
+      "type": 1,
+      "activityType": 32,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 75,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "33001": {
+      "id": 33001,
+      "area": 1,
+      "type": 1,
+      "activityType": 33,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33002": {
+      "id": 33002,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33051": {
+      "id": 33051,
+      "area": 2,
+      "type": 1,
+      "activityType": 33,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33201": {
+      "id": 33201,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33202": {
+      "id": 33202,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33203": {
+      "id": 33203,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33204": {
+      "id": 33204,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33301": {
+      "id": 33301,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33302": {
+      "id": 33302,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33303": {
+      "id": 33303,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "33304": {
+      "id": 33304,
+      "area": 1,
+      "type": 2,
+      "activityType": 33,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 215,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "35201": {
+      "id": 35201,
+      "area": 1,
+      "type": 2,
+      "activityType": 35,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 304,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "35202": {
+      "id": 35202,
+      "area": 1,
+      "type": 2,
+      "activityType": 35,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 304,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "36001": {
+      "id": 36001,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36002": {
+      "id": 36002,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36003": {
+      "id": 36003,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36004": {
+      "id": 36004,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36005": {
+      "id": 36005,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36006": {
+      "id": 36006,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36007": {
+      "id": 36007,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36008": {
+      "id": 36008,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36009": {
+      "id": 36009,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36101": {
+      "id": 36101,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36102": {
+      "id": 36102,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "36103": {
+      "id": 36103,
+      "area": 1,
+      "type": 3,
+      "activityType": 36,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "37001": {
+      "id": 37001,
+      "area": 1,
+      "type": 2,
+      "activityType": 37,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 304,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "37002": {
+      "id": 37002,
+      "area": 1,
+      "type": 2,
+      "activityType": 37,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 304,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "37003": {
+      "id": 37003,
+      "area": 1,
+      "type": 2,
+      "activityType": 37,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 304,
+          "cond": 0
+        }
+      ],
+      "theme": 0
+    },
+    "38001": {
+      "id": 38001,
+      "area": 1,
+      "type": 2,
+      "activityType": 38,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 40,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "38002": {
+      "id": 38002,
+      "area": 1,
+      "type": 2,
+      "activityType": 38,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 40,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39001": {
+      "id": 39001,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39002": {
+      "id": 39002,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39003": {
+      "id": 39003,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39004": {
+      "id": 39004,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39005": {
+      "id": 39005,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39006": {
+      "id": 39006,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39007": {
+      "id": 39007,
+      "area": 1,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "39057": {
+      "id": 39057,
+      "area": 2,
+      "type": 3,
+      "activityType": 39,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40001": {
+      "id": 40001,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40002": {
+      "id": 40002,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40003": {
+      "id": 40003,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40004": {
+      "id": 40004,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40005": {
+      "id": 40005,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40006": {
+      "id": 40006,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40007": {
+      "id": 40007,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40008": {
+      "id": 40008,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40009": {
+      "id": 40009,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40101": {
+      "id": 40101,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40102": {
+      "id": 40102,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40103": {
+      "id": 40103,
+      "area": 1,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "40153": {
+      "id": 40153,
+      "area": 2,
+      "type": 3,
+      "activityType": 40,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "41001": {
+      "id": 41001,
+      "area": 1,
+      "type": 3,
+      "activityType": 41,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "41002": {
+      "id": 41002,
+      "area": 1,
+      "type": 3,
+      "activityType": 41,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "41004": {
+      "id": 41004,
+      "area": 1,
+      "type": 3,
+      "activityType": 41,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "41005": {
+      "id": 41005,
+      "area": 1,
+      "type": 3,
+      "activityType": 41,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "41006": {
+      "id": 41006,
+      "area": 1,
+      "type": 3,
+      "activityType": 41,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "41007": {
+      "id": 41007,
+      "area": 1,
+      "type": 3,
+      "activityType": 41,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "42001": {
+      "id": 42001,
+      "area": 1,
+      "type": 2,
+      "activityType": 42,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "43001": {
+      "id": 43001,
+      "area": 1,
+      "type": 3,
+      "activityType": 43,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "43002": {
+      "id": 43002,
+      "area": 1,
+      "type": 3,
+      "activityType": 43,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "44001": {
+      "id": 44001,
+      "area": 1,
+      "type": 3,
+      "activityType": 44,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "44002": {
+      "id": 44002,
+      "area": 1,
+      "type": 3,
+      "activityType": 44,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "45001": {
+      "id": 45001,
+      "area": 1,
+      "type": 3,
+      "activityType": 45,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "45002": {
+      "id": 45002,
+      "area": 1,
+      "type": 3,
+      "activityType": 45,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "46001": {
+      "id": 46001,
+      "area": 1,
+      "type": 3,
+      "activityType": 46,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "46003": {
+      "id": 46003,
+      "area": 1,
+      "type": 3,
+      "activityType": 46,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "47001": {
+      "id": 47001,
+      "area": 1,
+      "type": 3,
+      "activityType": 47,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "47003": {
+      "id": 47003,
+      "area": 1,
+      "type": 3,
+      "activityType": 47,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "48001": {
+      "id": 48001,
+      "area": 1,
+      "type": 3,
+      "activityType": 48,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "48003": {
+      "id": 48003,
+      "area": 1,
+      "type": 3,
+      "activityType": 48,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "49001": {
+      "id": 49001,
+      "area": 1,
+      "type": 3,
+      "activityType": 49,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "49003": {
+      "id": 49003,
+      "area": 1,
+      "type": 3,
+      "activityType": 49,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "49004": {
+      "id": 49004,
+      "area": 1,
+      "type": 3,
+      "activityType": 49,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "50001": {
+      "id": 50001,
+      "area": 1,
+      "type": 2,
+      "activityType": 50,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "50002": {
+      "id": 50002,
+      "area": 1,
+      "type": 2,
+      "activityType": 50,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "51001": {
+      "id": 51001,
+      "area": 1,
+      "type": 3,
+      "activityType": 51,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "51002": {
+      "id": 51002,
+      "area": 1,
+      "type": 3,
+      "activityType": 51,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "51003": {
+      "id": 51003,
+      "area": 1,
+      "type": 3,
+      "activityType": 51,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "52001": {
+      "id": 52001,
+      "area": 1,
+      "type": 3,
+      "activityType": 52,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 29,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "53001": {
+      "id": 53001,
+      "area": 1,
+      "type": 3,
+      "activityType": 53,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 95,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 38,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "53002": {
+      "id": 53002,
+      "area": 1,
+      "type": 1,
+      "activityType": 53,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 95,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "53062": {
+      "id": 53062,
+      "area": 2,
+      "type": 1,
+      "activityType": 53,
+      "timeType": 3,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 95,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "54001": {
+      "id": 54001,
+      "area": 1,
+      "type": 3,
+      "activityType": 54,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "55001": {
+      "id": 55001,
+      "area": 1,
+      "type": 4,
+      "activityType": 55,
+      "timeType": 4,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "55051": {
+      "id": 55051,
+      "area": 2,
+      "type": 4,
+      "activityType": 55,
+      "timeType": 4,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "56001": {
+      "id": 56001,
+      "area": 1,
+      "type": 4,
+      "activityType": 56,
+      "timeType": 4,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "56051": {
+      "id": 56051,
+      "area": 2,
+      "type": 4,
+      "activityType": 56,
+      "timeType": 4,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "57001": {
+      "id": 57001,
+      "area": 1,
+      "type": 3,
+      "activityType": 57,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 25,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "58001": {
+      "id": 58001,
+      "area": 1,
+      "type": 3,
+      "activityType": 58,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "59001": {
+      "id": 59001,
+      "area": 1,
+      "type": 3,
+      "activityType": 59,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "60001": {
+      "id": 60001,
+      "area": 1,
+      "type": 3,
+      "activityType": 60,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "60002": {
+      "id": 60002,
+      "area": 1,
+      "type": 3,
+      "activityType": 60,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "60052": {
+      "id": 60052,
+      "area": 2,
+      "type": 3,
+      "activityType": 60,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 30,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "61001": {
+      "id": 61001,
+      "area": 1,
+      "type": 3,
+      "activityType": 61,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "62001": {
+      "id": 62001,
+      "area": 1,
+      "type": 3,
+      "activityType": 62,
+      "timeType": 2,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 100,
+          "cond": 4
+        },
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "999001": {
+      "id": 999001,
+      "area": 1,
+      "type": 3,
+      "activityType": 999,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 2,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    },
+    "999051": {
+      "id": 999051,
+      "area": 2,
+      "type": 3,
+      "activityType": 999,
+      "timeType": 1,
+      "conditions": [
+        {
+          "type": 3,
+          "value": 2,
+          "cond": 4
+        }
+      ],
+      "theme": 0
+    }
+  }
+}

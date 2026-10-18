@@ -1,0 +1,9031 @@
+{
+  "_table": "TeamFightBuffConfig",
+  "_rows": 352,
+  "_type": "object",
+  "_firstKeys": "id,trigger,effect,triggerTotalCnt,durType,duration,target,targetRange,targetCountType,targetCountParam,targetSame,exEffect,triggerCond,priority,exTriggCond",
+  "_sample": [
+    {
+      "101": {
+        "id": 101,
+        "trigger": [
+          4
+        ],
+        "effect": [
+          1010,
+          1011,
+          1012,
+          1013
+        ],
+        "triggerTotalCnt": 1,
+        "durType": 0,
+        "duration": 0,
+        "target": 1,
+        "targetRange": 0,
+        "targetCountType": 0,
+        "targetCountParam": [],
+        "targetSame": 0,
+        "exEffect": [],
+        "triggerCond": [],
+        "priority": 1,
+        "exTriggCond": []
+      }
+    },
+    {
+      "102": {
+        "id": 102,
+        "trigger": [
+          4
+        ],
+        "effect": [
+          1020,
+          1021,
+          1022,
+          1023
+        ],
+        "triggerTotalCnt": 1,
+        "durType": 0,
+        "duration": 0,
+        "target": 1,
+        "targetRange": 0,
+        "targetCountType": 0,
+        "targetCountParam": [],
+        "targetSame": 0,
+        "exEffect": [],
+        "triggerCond": [],
+        "priority": 1,
+        "exTriggCond": []
+      }
+    },
+    {
+      "103": {
+        "id": 103,
+        "trigger": [
+          4
+        ],
+        "effect": [
+          1030
+        ],
+        "triggerTotalCnt": 1,
+        "durType": 0,
+        "duration": 0,
+        "target": 1,
+        "targetRange": 0,
+        "targetCountType": 0,
+        "targetCountParam": [],
+        "targetSame": 0,
+        "exEffect": [],
+        "triggerCond": [],
+        "priority": 1,
+        "exTriggCond": []
+      }
+    }
+  ],
+  "data": {
+    "101": {
+      "id": 101,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        1010,
+        1011,
+        1012,
+        1013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "102": {
+      "id": 102,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        1020,
+        1021,
+        1022,
+        1023
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "103": {
+      "id": 103,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        1030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "104": {
+      "id": 104,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        1040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1101": {
+      "id": 1101,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        11010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "1102": {
+      "id": 1102,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        11020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "1201": {
+      "id": 1201,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        12010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "1202": {
+      "id": 1202,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        12020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "1301": {
+      "id": 1301,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        13010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "1302": {
+      "id": 1302,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        13020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "2101": {
+      "id": 2101,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        21010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 6,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 7,
+            "param": [
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    "2102": {
+      "id": 2102,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        21020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 6,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 7,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "2201": {
+      "id": 2201,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        22010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 6,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 7,
+            "param": [
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    "2202": {
+      "id": 2202,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        22020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 6,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 7,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "2301": {
+      "id": 2301,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        23010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 6,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 7,
+            "param": [
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    "2302": {
+      "id": 2302,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        23020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 6,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 7,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "3101": {
+      "id": 3101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        31010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "3102": {
+      "id": 3102,
+      "trigger": [
+        9
+      ],
+      "effect": [
+        31020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "3201": {
+      "id": 3201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        32010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "3202": {
+      "id": 3202,
+      "trigger": [
+        9
+      ],
+      "effect": [
+        32020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "3301": {
+      "id": 3301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        33010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "3302": {
+      "id": 3302,
+      "trigger": [
+        9
+      ],
+      "effect": [
+        33020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4101": {
+      "id": 4101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        41010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4201": {
+      "id": 4201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        42010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301": {
+      "id": 4301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        43010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4302": {
+      "id": 4302,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        43011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "5101": {
+      "id": 5101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        51010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "5102": {
+      "id": 5102,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        51020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "5201": {
+      "id": 5201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        52010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "5202": {
+      "id": 5202,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        52020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "5301": {
+      "id": 5301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        53010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "5302": {
+      "id": 5302,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        53020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "1001101": {
+      "id": 1001101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10011010,
+        10011011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1001102": {
+      "id": 1001102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10011020,
+        10011021
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1001201": {
+      "id": 1001201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10012010,
+        10012011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1001202": {
+      "id": 1001202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10012020,
+        10012021
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1001301": {
+      "id": 1001301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10013010,
+        10013011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1001302": {
+      "id": 1001302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10013020,
+        10013021
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1002101": {
+      "id": 1002101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10021010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1002102": {
+      "id": 1002102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10021020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1002201": {
+      "id": 1002201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10022010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1002202": {
+      "id": 1002202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10022020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1002301": {
+      "id": 1002301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10023010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1002302": {
+      "id": 1002302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10023020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1003101": {
+      "id": 1003101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10031010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1003102": {
+      "id": 1003102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10031020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1003201": {
+      "id": 1003201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10032010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1003202": {
+      "id": 1003202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10032020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1003301": {
+      "id": 1003301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10033010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1003302": {
+      "id": 1003302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10033020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1004101": {
+      "id": 1004101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10041010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1004102": {
+      "id": 1004102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10041020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1004201": {
+      "id": 1004201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10042010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1004202": {
+      "id": 1004202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10042020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1004301": {
+      "id": 1004301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10043010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1004302": {
+      "id": 1004302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10043020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1005101": {
+      "id": 1005101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10051010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1005102": {
+      "id": 1005102,
+      "trigger": [
+        10,
+        100
+      ],
+      "effect": [
+        10051020
+      ],
+      "triggerTotalCnt": 10,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1005201": {
+      "id": 1005201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10052010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1005202": {
+      "id": 1005202,
+      "trigger": [
+        10,
+        100
+      ],
+      "effect": [
+        10052020
+      ],
+      "triggerTotalCnt": 12,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1005301": {
+      "id": 1005301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10053010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1005302": {
+      "id": 1005302,
+      "trigger": [
+        10,
+        100
+      ],
+      "effect": [
+        10053020
+      ],
+      "triggerTotalCnt": 15,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1011101": {
+      "id": 1011101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10111010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1011201": {
+      "id": 1011201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10112010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1011301": {
+      "id": 1011301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10113010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1012101": {
+      "id": 1012101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10121010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1012201": {
+      "id": 1012201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10122010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1012301": {
+      "id": 1012301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10123010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1013101": {
+      "id": 1013101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10131010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1013201": {
+      "id": 1013201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10132010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1013301": {
+      "id": 1013301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10133010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1014101": {
+      "id": 1014101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10141010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1014201": {
+      "id": 1014201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10142010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1014301": {
+      "id": 1014301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10143010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1015101": {
+      "id": 1015101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10151010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1015201": {
+      "id": 1015201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10152010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1015301": {
+      "id": 1015301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10153010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1021101": {
+      "id": 1021101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10211010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1021201": {
+      "id": 1021201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10212010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1021301": {
+      "id": 1021301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10213010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1022101": {
+      "id": 1022101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10221010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1022201": {
+      "id": 1022201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10222010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1022301": {
+      "id": 1022301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10223010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1023101": {
+      "id": 1023101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10231010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1023201": {
+      "id": 1023201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10232010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1023301": {
+      "id": 1023301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10233010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1024101": {
+      "id": 1024101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10241010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1024201": {
+      "id": 1024201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10242010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1024301": {
+      "id": 1024301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10243010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1025101": {
+      "id": 1025101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10251010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1025201": {
+      "id": 1025201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10252010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1025301": {
+      "id": 1025301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        10253010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1031101": {
+      "id": 1031101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10311010,
+        10311011,
+        10311012
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1031102": {
+      "id": 1031102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10311020,
+        10311021
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1031201": {
+      "id": 1031201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10312010,
+        10312011,
+        10312012
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1031202": {
+      "id": 1031202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10312020,
+        10312021
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1031301": {
+      "id": 1031301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10313010,
+        10313011,
+        10313012
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1031302": {
+      "id": 1031302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10313020,
+        10313021
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1032101": {
+      "id": 1032101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10321010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1032102": {
+      "id": 1032102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10321020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1032201": {
+      "id": 1032201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10322010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1032202": {
+      "id": 1032202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10322020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1032301": {
+      "id": 1032301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10323010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1032302": {
+      "id": 1032302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10323020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1033101": {
+      "id": 1033101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10331010,
+        10331011,
+        10331012,
+        10331013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1033102": {
+      "id": 1033102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10331020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1033201": {
+      "id": 1033201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10332010,
+        10332011,
+        10332012,
+        10332013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1033202": {
+      "id": 1033202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10332020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1033301": {
+      "id": 1033301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10333010,
+        10333011,
+        10333012,
+        10333013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1033302": {
+      "id": 1033302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10333020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1034101": {
+      "id": 1034101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10341010,
+        10341011,
+        10341012
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1034102": {
+      "id": 1034102,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10341020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1034201": {
+      "id": 1034201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10342010,
+        10342011,
+        10342012
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1034202": {
+      "id": 1034202,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10342020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1034301": {
+      "id": 1034301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10343010,
+        10343011,
+        10343012
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1034302": {
+      "id": 1034302,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10343020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1035101": {
+      "id": 1035101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10351010,
+        10351011,
+        10351012,
+        10351013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1035102": {
+      "id": 1035102,
+      "trigger": [
+        9
+      ],
+      "effect": [
+        10351020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1035201": {
+      "id": 1035201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10352010,
+        10352011,
+        10352012,
+        10352013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1035202": {
+      "id": 1035202,
+      "trigger": [
+        9
+      ],
+      "effect": [
+        10352020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1035301": {
+      "id": 1035301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10353010,
+        10353011,
+        10353012,
+        10353013
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1035302": {
+      "id": 1035302,
+      "trigger": [
+        9
+      ],
+      "effect": [
+        10353020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041101": {
+      "id": 1041101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        10411010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041102": {
+      "id": 1041102,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10411020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          2
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041103": {
+      "id": 1041103,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10411030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 301,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 10,
+            "param": []
+          }
+        ]
+      ],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041201": {
+      "id": 1041201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        10412010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041202": {
+      "id": 1041202,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10412020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          2
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041203": {
+      "id": 1041203,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10412030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 301,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 10,
+            "param": []
+          }
+        ]
+      ],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041301": {
+      "id": 1041301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        10413010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041302": {
+      "id": 1041302,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10413020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          2
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1041303": {
+      "id": 1041303,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10413030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 301,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 10,
+            "param": []
+          }
+        ]
+      ],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042101": {
+      "id": 1042101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10421010,
+        10421011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042102": {
+      "id": 1042102,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10421020,
+        10421010,
+        10421011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          6
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042103": {
+      "id": 1042103,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10421030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042201": {
+      "id": 1042201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10422010,
+        10422011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042202": {
+      "id": 1042202,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10422020,
+        10422010,
+        10422011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          6
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042203": {
+      "id": 1042203,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10422030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042301": {
+      "id": 1042301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10423010,
+        10423011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042302": {
+      "id": 1042302,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10423020,
+        10423010,
+        10423011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          6
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1042303": {
+      "id": 1042303,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10423030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1043101": {
+      "id": 1043101,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10431010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 301,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1043102": {
+      "id": 1043102,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10431020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1043201": {
+      "id": 1043201,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10432010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 301,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1043202": {
+      "id": 1043202,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10432020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1043301": {
+      "id": 1043301,
+      "trigger": [
+        10
+      ],
+      "effect": [
+        10433010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 301,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1043302": {
+      "id": 1043302,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10433020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1044101": {
+      "id": 1044101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10441010,
+        10441011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1044102": {
+      "id": 1044102,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10441020,
+        10441010,
+        10441011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          7
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1044201": {
+      "id": 1044201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10442010,
+        10442011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1044202": {
+      "id": 1044202,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10442020,
+        10442010,
+        10442011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          7
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1044301": {
+      "id": 1044301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10443010,
+        10443011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1044302": {
+      "id": 1044302,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10443020,
+        10443010,
+        10443011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          7
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1045101": {
+      "id": 1045101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10451010,
+        10451011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1045102": {
+      "id": 1045102,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10451020,
+        10451010,
+        10451011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          11
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1045201": {
+      "id": 1045201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10452010,
+        10452011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1045202": {
+      "id": 1045202,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10452020,
+        10452010,
+        10452011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          11
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1045301": {
+      "id": 1045301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        10453010,
+        10453011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "1045302": {
+      "id": 1045302,
+      "trigger": [
+        2
+      ],
+      "effect": [
+        10453020,
+        10453010,
+        10453011
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 17,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1,
+          11
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "4101101": {
+      "id": 4101101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_154101",
+      "hitEff": "sp_skill_baodian_154101",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 500
+    },
+    "4101102": {
+      "id": 4101102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41011020,
+        41011021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 1,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 2,
+            "param": [
+              2,
+              2
+            ]
+          },
+          {
+            "id": 2,
+            "param": [
+              2,
+              3
+            ]
+          }
+        ]
+      ]
+    },
+    "4101201": {
+      "id": 4101201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_154101",
+      "hitEff": "sp_skill_baodian_154101",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 500
+    },
+    "4101202": {
+      "id": 4101202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41012020,
+        41012021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 1,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 2,
+            "param": [
+              2,
+              2
+            ]
+          },
+          {
+            "id": 2,
+            "param": [
+              2,
+              3
+            ]
+          }
+        ]
+      ]
+    },
+    "4101301": {
+      "id": 4101301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_154101",
+      "hitEff": "sp_skill_baodian_154101",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 500
+    },
+    "4101302": {
+      "id": 4101302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41013020,
+        41013021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 1,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 2,
+            "param": [
+              2,
+              2
+            ]
+          },
+          {
+            "id": 2,
+            "param": [
+              2,
+              3
+            ]
+          }
+        ]
+      ]
+    },
+    "4102101": {
+      "id": 4102101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4102102": {
+      "id": 4102102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_154102",
+      "hitSound": "effect_tf_pingAHit_zhanshi",
+      "aniTime": 433
+    },
+    "4102201": {
+      "id": 4102201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4102202": {
+      "id": 4102202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_154102",
+      "hitSound": "effect_tf_pingAHit_zhanshi",
+      "aniTime": 433
+    },
+    "4102301": {
+      "id": 4102301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4102302": {
+      "id": 4102302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        41023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_154102",
+      "hitSound": "effect_tf_pingAHit_zhanshi",
+      "aniTime": 433
+    },
+    "4201101": {
+      "id": 4201101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 333
+    },
+    "4201201": {
+      "id": 4201201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 333
+    },
+    "4201301": {
+      "id": 4201301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 333
+    },
+    "4202101": {
+      "id": 4202101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_154202",
+      "hitEff": "sp_skill_baodian_154202",
+      "hitSound": "effect_tf_pingAHit_fashi",
+      "aniTime": 533
+    },
+    "4202102": {
+      "id": 4202102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4202201": {
+      "id": 4202201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_154202",
+      "hitEff": "sp_skill_baodian_154202",
+      "hitSound": "effect_tf_pingAHit_fashi",
+      "aniTime": 533
+    },
+    "4202202": {
+      "id": 4202202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4202301": {
+      "id": 4202301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_154202",
+      "hitEff": "sp_skill_baodian_154202",
+      "hitSound": "effect_tf_pingAHit_fashi",
+      "aniTime": 533
+    },
+    "4202302": {
+      "id": 4202302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        42023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301101": {
+      "id": 4301101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301102": {
+      "id": 4301102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_154301",
+      "hitSound": "normal_Axe",
+      "aniTime": 333
+    },
+    "4301103": {
+      "id": 4301103,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43011030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301201": {
+      "id": 4301201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301202": {
+      "id": 4301202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_154301",
+      "hitSound": "normal_Axe",
+      "aniTime": 333
+    },
+    "4301203": {
+      "id": 4301203,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43012030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301301": {
+      "id": 4301301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4301302": {
+      "id": 4301302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_154301",
+      "hitSound": "normal_Axe",
+      "aniTime": 333
+    },
+    "4301303": {
+      "id": 4301303,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43013030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4302101": {
+      "id": 4302101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 366
+    },
+    "4302102": {
+      "id": 4302102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_baodian_154302",
+      "hitSound": "effect_tf_pingAHit_fuzhu"
+    },
+    "4302103": {
+      "id": 4302103,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43021030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 4,
+      "targetRange": 10,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4302201": {
+      "id": 4302201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 366
+    },
+    "4302202": {
+      "id": 4302202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_baodian_154302",
+      "hitSound": "effect_tf_pingAHit_fuzhu"
+    },
+    "4302203": {
+      "id": 4302203,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43022030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 4,
+      "targetRange": 10,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4302301": {
+      "id": 4302301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 366
+    },
+    "4302302": {
+      "id": 4302302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_baodian_154302",
+      "hitSound": "effect_tf_pingAHit_fuzhu"
+    },
+    "4302303": {
+      "id": 4302303,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        43023030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 4,
+      "targetRange": 10,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          1
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4401101": {
+      "id": 4401101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 3,
+            "param": [
+              3
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "atkSound": "effect_tf_pingAHit_zhanshi",
+      "aniTime": 433
+    },
+    "4401102": {
+      "id": 4401102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4401201": {
+      "id": 4401201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 3,
+            "param": [
+              3
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "atkSound": "effect_tf_pingAHit_zhanshi",
+      "aniTime": 433
+    },
+    "4401202": {
+      "id": 4401202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4401301": {
+      "id": 4401301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 3,
+            "param": [
+              3
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "atkSound": "effect_tf_pingAHit_zhanshi",
+      "aniTime": 433
+    },
+    "4401302": {
+      "id": 4401302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4401401": {
+      "id": 4401401,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        44014010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4402101": {
+      "id": 4402101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44021010,
+        44021011,
+        44021012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154402",
+      "hitEff": "sp_skill_chess_baodian_154402_s",
+      "hitSound": "effect_tf_pingAHit_fuzhu",
+      "aniTime": 400
+    },
+    "4402102": {
+      "id": 4402102,
+      "trigger": [
+        2,
+        3
+      ],
+      "effect": [
+        44021020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_154402",
+      "hitSound": "effect_tf_pingAHit_fuzhu"
+    },
+    "4402103": {
+      "id": 4402103,
+      "trigger": [
+        2,
+        3
+      ],
+      "effect": [
+        44021030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 6,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_154402"
+    },
+    "4402201": {
+      "id": 4402201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44022010,
+        44022011,
+        44022012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154402",
+      "hitEff": "sp_skill_chess_baodian_154402_s",
+      "hitSound": "effect_tf_pingAHit_fuzhu",
+      "aniTime": 400
+    },
+    "4402202": {
+      "id": 4402202,
+      "trigger": [
+        2,
+        3
+      ],
+      "effect": [
+        44022020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_154402",
+      "hitSound": "effect_tf_pingAHit_fuzhu"
+    },
+    "4402203": {
+      "id": 4402203,
+      "trigger": [
+        2,
+        3
+      ],
+      "effect": [
+        44022030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 6,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_154402"
+    },
+    "4402301": {
+      "id": 4402301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        44023010,
+        44023011,
+        44022012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154402",
+      "hitEff": "sp_skill_chess_baodian_154402_s",
+      "hitSound": "effect_tf_pingAHit_fuzhu",
+      "aniTime": 400
+    },
+    "4402302": {
+      "id": 4402302,
+      "trigger": [
+        2,
+        3
+      ],
+      "effect": [
+        44023020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_154402",
+      "hitSound": "effect_tf_pingAHit_fuzhu"
+    },
+    "4402303": {
+      "id": 4402303,
+      "trigger": [
+        2,
+        3
+      ],
+      "effect": [
+        44023030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 6,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_154402"
+    },
+    "4501101": {
+      "id": 4501101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154501_b",
+      "hitEff": "sp_skill_chess_baodian_154501",
+      "hitSound": "effect_tf_pingAHit_fashi",
+      "aniTime": 533
+    },
+    "4501102": {
+      "id": 4501102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 7,
+      "targetRange": 1,
+      "targetCountType": 3,
+      "targetCountParam": [
+        [
+          3
+        ],
+        [
+          2,
+          10000
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154501_a",
+      "hitEff": "sp_skill_chess_baodian_154501"
+    },
+    "4501201": {
+      "id": 4501201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154501_b",
+      "hitEff": "sp_skill_chess_baodian_154501",
+      "hitSound": "effect_tf_pingAHit_fashi",
+      "aniTime": 533
+    },
+    "4501202": {
+      "id": 4501202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 7,
+      "targetRange": 1,
+      "targetCountType": 3,
+      "targetCountParam": [
+        [
+          3
+        ],
+        [
+          2,
+          10000
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154501_a",
+      "hitEff": "sp_skill_chess_baodian_154501"
+    },
+    "4501301": {
+      "id": 4501301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154501_b",
+      "hitEff": "sp_skill_chess_baodian_154501",
+      "hitSound": "effect_tf_pingAHit_fashi",
+      "aniTime": 533
+    },
+    "4501302": {
+      "id": 4501302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 7,
+      "targetRange": 1,
+      "targetCountType": 3,
+      "targetCountParam": [
+        [
+          3
+        ],
+        [
+          2,
+          10000
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_154501_a",
+      "hitEff": "sp_skill_chess_baodian_154501"
+    },
+    "4502101": {
+      "id": 4502101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        45021010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4502102": {
+      "id": 4502102,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        45021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "154502_PingA_bullet",
+      "hitEff": "154502_PingA_hit",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 300
+    },
+    "4502103": {
+      "id": 4502103,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        45021030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 4,
+      "targetCountType": 3,
+      "targetCountParam": [
+        [
+          0
+        ],
+        [
+          2,
+          10000
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "154502_PingA_bullet",
+      "hitEff": "154502_PingA_hit"
+    },
+    "4502104": {
+      "id": 4502104,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45021040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4502201": {
+      "id": 4502201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        45022010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4502202": {
+      "id": 4502202,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        45022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "154502_PingA_bullet",
+      "hitEff": "154502_PingA_hit",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 300
+    },
+    "4502203": {
+      "id": 4502203,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        45022030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 4,
+      "targetCountType": 3,
+      "targetCountParam": [
+        [
+          0
+        ],
+        [
+          2,
+          10000
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "154502_PingA_bullet",
+      "hitEff": "154502_PingA_hit"
+    },
+    "4502204": {
+      "id": 4502204,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45022040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4502301": {
+      "id": 4502301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        45023010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "4502302": {
+      "id": 4502302,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        45023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "154502_PingA_bullet",
+      "hitEff": "154502_PingA_hit",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 300
+    },
+    "4502303": {
+      "id": 4502303,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        45023030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 4,
+      "targetCountType": 3,
+      "targetCountParam": [
+        [
+          0
+        ],
+        [
+          2,
+          10000
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "154502_PingA_bullet",
+      "hitEff": "154502_PingA_hit"
+    },
+    "4502304": {
+      "id": 4502304,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        45023040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6101101": {
+      "id": 6101101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 101,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              3,
+              0
+            ]
+          }
+        ]
+      ],
+      "eff": "sp_skill_chess_fly_156101_a",
+      "hitEff": "sp_skill_chess_baodian_156101",
+      "atkSound": "effect_tf_skillFly_156101",
+      "aniTime": 400
+    },
+    "6101102": {
+      "id": 6101102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61011020,
+        61011021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 102,
+      "targetRange": 3,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              3
+            ]
+          }
+        ],
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "eff": "sp_skill_chess_fly_156101_b",
+      "atkSound": "effect_tf_skillFly_156101",
+      "aniTime": 400
+    },
+    "6101201": {
+      "id": 6101201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 101,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              3,
+              0
+            ]
+          }
+        ]
+      ],
+      "eff": "sp_skill_chess_fly_156101_a",
+      "hitEff": "sp_skill_chess_baodian_156101",
+      "atkSound": "effect_tf_skillFly_156101",
+      "aniTime": 400
+    },
+    "6101202": {
+      "id": 6101202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61012020,
+        61012021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 102,
+      "targetRange": 3,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              3
+            ]
+          }
+        ],
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "eff": "sp_skill_chess_fly_156101_b",
+      "atkSound": "effect_tf_skillFly_156101",
+      "aniTime": 400
+    },
+    "6101301": {
+      "id": 6101301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 101,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              3,
+              0
+            ]
+          }
+        ]
+      ],
+      "eff": "sp_skill_chess_fly_156101_a",
+      "hitEff": "sp_skill_chess_baodian_156101",
+      "atkSound": "effect_tf_skillFly_156101",
+      "aniTime": 400
+    },
+    "6101302": {
+      "id": 6101302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61013020,
+        61013021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 102,
+      "targetRange": 3,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              3
+            ]
+          }
+        ],
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "eff": "sp_skill_chess_fly_156101_b",
+      "atkSound": "effect_tf_skillFly_156101",
+      "aniTime": 400
+    },
+    "6102101": {
+      "id": 6102101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6102102": {
+      "id": 6102102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156102",
+      "hitEff": "sp_skill_chess_baodian_156102",
+      "hitSound": "effect_tf_skillHit_156102",
+      "aniTime": 366
+    },
+    "6102103": {
+      "id": 6102103,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61021030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 6,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6102201": {
+      "id": 6102201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6102202": {
+      "id": 6102202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156102",
+      "hitEff": "sp_skill_chess_baodian_156102",
+      "hitSound": "effect_tf_skillHit_156102",
+      "aniTime": 366
+    },
+    "6102203": {
+      "id": 6102203,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61022030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 6,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6102301": {
+      "id": 6102301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6102302": {
+      "id": 6102302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156102",
+      "hitEff": "sp_skill_chess_baodian_156102",
+      "hitSound": "effect_tf_skillHit_156102",
+      "aniTime": 366
+    },
+    "6102303": {
+      "id": 6102303,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        61023030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 6,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6201101": {
+      "id": 6201101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62011010,
+        62011011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6201102": {
+      "id": 6201102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 4,
+      "targetRange": 1,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156201",
+      "hitSound": "effect_tf_skillHit_156201",
+      "aniTime": 366
+    },
+    "6201103": {
+      "id": 6201103,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62011030,
+        62011031
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 1,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6201201": {
+      "id": 6201201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62012010,
+        62012011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6201202": {
+      "id": 6201202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 4,
+      "targetRange": 1,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156201",
+      "hitSound": "effect_tf_skillHit_156201",
+      "aniTime": 366
+    },
+    "6201203": {
+      "id": 6201203,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62012030,
+        62012031
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 1,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6201301": {
+      "id": 6201301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62013010,
+        62013011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6201302": {
+      "id": 6201302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 4,
+      "targetRange": 1,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156201",
+      "hitSound": "effect_tf_skillHit_156201",
+      "aniTime": 366
+    },
+    "6201303": {
+      "id": 6201303,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        62013030,
+        62013031
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 1,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6202101": {
+      "id": 6202101,
+      "trigger": [
+        100,
+        5
+      ],
+      "effect": [
+        62021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6202102": {
+      "id": 6202102,
+      "trigger": [
+        100,
+        5
+      ],
+      "effect": [
+        62021020,
+        62021021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_daoguang_156202",
+      "hitSound": "effect_tf_skillHit_156502",
+      "aniTime": 466
+    },
+    "6202201": {
+      "id": 6202201,
+      "trigger": [
+        100,
+        5
+      ],
+      "effect": [
+        62022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6202202": {
+      "id": 6202202,
+      "trigger": [
+        100,
+        5
+      ],
+      "effect": [
+        62022020,
+        62021021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_daoguang_156202",
+      "hitSound": "effect_tf_skillHit_156502",
+      "aniTime": 466
+    },
+    "6202301": {
+      "id": 6202301,
+      "trigger": [
+        100,
+        5
+      ],
+      "effect": [
+        62023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6202302": {
+      "id": 6202302,
+      "trigger": [
+        100,
+        5
+      ],
+      "effect": [
+        62023020,
+        62021021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_daoguang_156202",
+      "hitSound": "effect_tf_skillHit_156502",
+      "aniTime": 466
+    },
+    "6301101": {
+      "id": 6301101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        63011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 433
+    },
+    "6301102": {
+      "id": 6301102,
+      "trigger": [
+        6
+      ],
+      "effect": [
+        63011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156301",
+      "hitSound": "effect_tf_skillHit_156301",
+      "aniTime": 433
+    },
+    "6301201": {
+      "id": 6301201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        63012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 433
+    },
+    "6301202": {
+      "id": 6301202,
+      "trigger": [
+        6
+      ],
+      "effect": [
+        63012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156301",
+      "hitSound": "effect_tf_skillHit_156301",
+      "aniTime": 433
+    },
+    "6301301": {
+      "id": 6301301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        63013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 433
+    },
+    "6301302": {
+      "id": 6301302,
+      "trigger": [
+        6
+      ],
+      "effect": [
+        63013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156301",
+      "hitSound": "effect_tf_skillHit_156301",
+      "aniTime": 433
+    },
+    "6302101": {
+      "id": 6302101,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        63021010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6302102": {
+      "id": 6302102,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        63021020,
+        63021021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 8,
+            "param": [
+              2,
+              0
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156302",
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 466
+    },
+    "6302103": {
+      "id": 6302103,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        63021030,
+        63021031
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 4,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          2
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 8,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156302",
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 466
+    },
+    "6302201": {
+      "id": 6302201,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        63022010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6302202": {
+      "id": 6302202,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        63022020,
+        63022021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 8,
+            "param": [
+              2,
+              0
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156302",
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 466
+    },
+    "6302203": {
+      "id": 6302203,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        63022030,
+        63022031
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 4,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          2
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 8,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156302",
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 466
+    },
+    "6302301": {
+      "id": 6302301,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        63023010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6302302": {
+      "id": 6302302,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        63023020,
+        63023021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 8,
+            "param": [
+              2,
+              0
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156302",
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 466
+    },
+    "6302303": {
+      "id": 6302303,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        63023030,
+        63023031
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 4,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          4
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 8,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156302",
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 466
+    },
+    "6302401": {
+      "id": 6302401,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        63024010,
+        63024011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 103,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [
+        [
+          156302
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 533
+    },
+    "6302501": {
+      "id": 6302501,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        63025010,
+        63025011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 103,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [
+        [
+          156302
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 533
+    },
+    "6302601": {
+      "id": 6302601,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        63026010,
+        63026011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 103,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [
+        [
+          156302
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_156302",
+      "hitSound": "effect_tf_pingAHit_youxia",
+      "aniTime": 533
+    },
+    "6401101": {
+      "id": 6401101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 102,
+      "targetRange": 3,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [
+        {
+          "target": 201,
+          "id": 64011011
+        }
+      ],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156401",
+      "hitSound": "effect_tf_skillFly_156401",
+      "aniTime": 600
+    },
+    "6401102": {
+      "id": 6401102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 5,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "6401201": {
+      "id": 6401201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 102,
+      "targetRange": 3,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [
+        {
+          "target": 201,
+          "id": 64012011
+        }
+      ],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156401",
+      "hitSound": "effect_tf_skillFly_156401",
+      "aniTime": 600
+    },
+    "6401202": {
+      "id": 6401202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 5,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "6401301": {
+      "id": 6401301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 102,
+      "targetRange": 3,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [
+        {
+          "target": 201,
+          "id": 64013011
+        }
+      ],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_156401",
+      "hitSound": "effect_tf_skillFly_156401",
+      "aniTime": 600
+    },
+    "6401302": {
+      "id": 6401302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 5,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "6402101": {
+      "id": 6402101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6402102": {
+      "id": 6402102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64021021,
+        64021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_156402_b",
+      "hitSound": "effect_tf_skillHit_156402_sub",
+      "aniTime": 333
+    },
+    "6402201": {
+      "id": 6402201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6402202": {
+      "id": 6402202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64022021,
+        64022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_156402_b",
+      "hitSound": "effect_tf_skillHit_156402_sub",
+      "aniTime": 333
+    },
+    "6402301": {
+      "id": 6402301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6402302": {
+      "id": 6402302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        64023021,
+        64023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 3,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_156402_b",
+      "hitSound": "effect_tf_skillHit_156402_sub",
+      "aniTime": 333
+    },
+    "6501101": {
+      "id": 6501101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65011010,
+        65011011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 400
+    },
+    "6501102": {
+      "id": 6501102,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        65011020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156501_a2",
+      "hitSound": "effect_tf_skillHit_156501_sub",
+      "aniTime": 400
+    },
+    "6501103": {
+      "id": 6501103,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        65011030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6501104": {
+      "id": 6501104,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65011012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6501201": {
+      "id": 6501201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65012010,
+        65012011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 400
+    },
+    "6501202": {
+      "id": 6501202,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        65012020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156501_a2",
+      "hitSound": "effect_tf_skillHit_156501_sub",
+      "aniTime": 400
+    },
+    "6501203": {
+      "id": 6501203,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        65012030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6501204": {
+      "id": 6501204,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65012012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6501301": {
+      "id": 6501301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65013010,
+        65013011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "aniTime": 400
+    },
+    "6501302": {
+      "id": 6501302,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        65013020
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_buff_156501_a2",
+      "hitSound": "effect_tf_skillHit_156501_sub",
+      "aniTime": 400
+    },
+    "6501303": {
+      "id": 6501303,
+      "trigger": [
+        4
+      ],
+      "effect": [
+        65013030
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6501304": {
+      "id": 6501304,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65013012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 4,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6502101": {
+      "id": 6502101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65021010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6502102": {
+      "id": 6502102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65021021,
+        65021020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_daoguang_156502",
+      "hitSound": "effect_tf_skillHit_156502",
+      "aniTime": 466
+    },
+    "6502201": {
+      "id": 6502201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65022010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6502202": {
+      "id": 6502202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65022021,
+        65022020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_daoguang_156502",
+      "hitSound": "effect_tf_skillHit_156502",
+      "aniTime": 466
+    },
+    "6502301": {
+      "id": 6502301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65023010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "6502302": {
+      "id": 6502302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        65023021,
+        65023020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 2,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_daoguang_156502",
+      "hitSound": "effect_tf_skillHit_156502",
+      "aniTime": 466
+    },
+    "7101101": {
+      "id": 7101101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71011010,
+        71011011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7101102": {
+      "id": 7101102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_baodian_157101",
+      "hitSound": "effect_tf_skillHit_157101",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7101103": {
+      "id": 7101103,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71011030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 11,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7101104": {
+      "id": 7101104,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71011040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 5,
+      "targetRange": 10,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ]
+    },
+    "7101105": {
+      "id": 7101105,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71011050
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 1,
+      "target": 4,
+      "targetRange": 10,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          6
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ]
+    },
+    "7101201": {
+      "id": 7101201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71012010,
+        71012011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7101202": {
+      "id": 7101202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_baodian_157101",
+      "hitSound": "effect_tf_skillHit_157101",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7101203": {
+      "id": 7101203,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71012030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 11,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7101204": {
+      "id": 7101204,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71012040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 5,
+      "targetRange": 10,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ]
+    },
+    "7101205": {
+      "id": 7101205,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71012050
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 1,
+      "target": 4,
+      "targetRange": 10,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          6
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              2
+            ]
+          }
+        ]
+      ]
+    },
+    "7101301": {
+      "id": 7101301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71013010,
+        71013011
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7101302": {
+      "id": 7101302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 5,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_baodian_157101",
+      "hitSound": "effect_tf_skillHit_157101",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7101303": {
+      "id": 7101303,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71013030
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 11,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7101304": {
+      "id": 7101304,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71013040
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 2,
+      "target": 5,
+      "targetRange": 10,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "7101305": {
+      "id": 7101305,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        71013050
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 1,
+      "target": 4,
+      "targetRange": 10,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          6
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [
+        [
+          {
+            "id": 4,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ]
+    },
+    "7201101": {
+      "id": 7201101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        72011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 5,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7201102": {
+      "id": 7201102,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        72011020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          2
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_157201_b",
+      "hitEff": "sp_skill_chess_baodian_b",
+      "atkSound": "effect_tf_skillFly_157201",
+      "hitSound": "effect_tf_skillHit_157201",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7201201": {
+      "id": 7201201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        72012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 5,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7201202": {
+      "id": 7201202,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        72012020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          2
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_157201_b",
+      "hitEff": "sp_skill_chess_baodian_b",
+      "atkSound": "effect_tf_skillFly_157201",
+      "hitSound": "effect_tf_skillHit_157201",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7201301": {
+      "id": 7201301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        72013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 5,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7201302": {
+      "id": 7201302,
+      "trigger": [
+        7
+      ],
+      "effect": [
+        72013020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 2,
+      "targetRange": 0,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          2
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_chess_fly_157201_b",
+      "hitEff": "sp_skill_chess_baodian_b",
+      "atkSound": "effect_tf_skillFly_157201",
+      "hitSound": "effect_tf_skillHit_157201",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7201401": {
+      "id": 7201401,
+      "trigger": [
+        1
+      ],
+      "effect": [
+        72014010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7301101": {
+      "id": 7301101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        73011010,
+        73011011,
+        73011012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 9,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_157301_b",
+      "atkSound": "effect_tf_skillHit_157301",
+      "aniTime": 700,
+      "shakeScreen": 1
+    },
+    "7301102": {
+      "id": 7301102,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        73011020,
+        73011021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7301201": {
+      "id": 7301201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        73012010,
+        73012011,
+        73012012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 9,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_157301_b",
+      "atkSound": "effect_tf_skillHit_157301",
+      "aniTime": 700,
+      "shakeScreen": 1
+    },
+    "7301202": {
+      "id": 7301202,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        73012020,
+        73012021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7301301": {
+      "id": 7301301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        73013010,
+        73013011,
+        73013012
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 9,
+      "targetRange": 1,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_157301_b",
+      "atkSound": "effect_tf_skillHit_157301",
+      "aniTime": 700,
+      "shakeScreen": 1
+    },
+    "7301302": {
+      "id": 7301302,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        73013020,
+        73013021
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 1,
+      "duration": 3,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": []
+    },
+    "7301401": {
+      "id": 7301401,
+      "trigger": [
+        8
+      ],
+      "effect": [
+        73014010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 5,
+            "param": [
+              3
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_157301_a",
+      "atkSound": "effect_tf_shunyi_157301",
+      "aniTime": 633
+    },
+    "7301501": {
+      "id": 7301501,
+      "trigger": [
+        8
+      ],
+      "effect": [
+        73015010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 5,
+            "param": [
+              3
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_157301_a",
+      "atkSound": "effect_tf_shunyi_157301",
+      "aniTime": 633
+    },
+    "7301601": {
+      "id": 7301601,
+      "trigger": [
+        8
+      ],
+      "effect": [
+        73016010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 5,
+            "param": [
+              3
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_baodian_157301_a",
+      "atkSound": "effect_tf_shunyi_157301",
+      "aniTime": 633
+    },
+    "7401101": {
+      "id": 7401101,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        74011010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 104,
+      "targetRange": 5,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          10
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_157401",
+      "hitEff": "sp_skill_baodian_157401",
+      "atkSound": "effect_tf_skillFly_157401",
+      "hitSound": "effect_tf_skillHit_157401",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7401201": {
+      "id": 7401201,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        74012010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 104,
+      "targetRange": 5,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          15
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_157401",
+      "hitEff": "sp_skill_baodian_157401",
+      "atkSound": "effect_tf_skillFly_157401",
+      "hitSound": "effect_tf_skillHit_157401",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7401301": {
+      "id": 7401301,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        74013010
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 104,
+      "targetRange": 5,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          18
+        ]
+      ],
+      "targetSame": 1,
+      "exEffect": [],
+      "triggerCond": [
+        [
+          {
+            "id": 1,
+            "param": [
+              1
+            ]
+          }
+        ]
+      ],
+      "priority": 1000,
+      "exTriggCond": [],
+      "eff": "sp_skill_fly_157401",
+      "hitEff": "sp_skill_baodian_157401",
+      "atkSound": "effect_tf_skillFly_157401",
+      "hitSound": "effect_tf_skillHit_157401",
+      "aniTime": 333,
+      "shakeScreen": 1
+    },
+    "7501101": {
+      "id": 7501101,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        75011010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "7501201": {
+      "id": 7501201,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        75012010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "7501301": {
+      "id": 7501301,
+      "trigger": [
+        101
+      ],
+      "effect": [
+        75013010
+      ],
+      "triggerTotalCnt": 1,
+      "durType": 0,
+      "duration": 0,
+      "target": 1,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1,
+      "exTriggCond": []
+    },
+    "7501401": {
+      "id": 7501401,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        75014010
+      ],
+      "triggerTotalCnt": 5,
+      "durType": 0,
+      "duration": 0,
+      "target": 13,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_buff_157501",
+      "aniTime": 500
+    },
+    "7501402": {
+      "id": 7501402,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        75014020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 104,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_157501",
+      "atkSound": "effect_tf_skillFly_157501",
+      "hitSound": "effect_tf_skillHit_157501",
+      "shakeScreen": 1,
+      "shakeScreenDelay": 3000
+    },
+    "7501501": {
+      "id": 7501501,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        75015010
+      ],
+      "triggerTotalCnt": 5,
+      "durType": 0,
+      "duration": 0,
+      "target": 13,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_buff_157501",
+      "aniTime": 500
+    },
+    "7501502": {
+      "id": 7501502,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        75015020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 104,
+      "targetRange": 3,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          3
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_157501",
+      "atkSound": "effect_tf_skillFly_157501",
+      "hitSound": "effect_tf_skillHit_157501",
+      "shakeScreen": 1,
+      "shakeScreenDelay": 3000
+    },
+    "7501601": {
+      "id": 7501601,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        75016010
+      ],
+      "triggerTotalCnt": 5,
+      "durType": 0,
+      "duration": 0,
+      "target": 13,
+      "targetRange": 0,
+      "targetCountType": 0,
+      "targetCountParam": [],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_chess_buff_157501",
+      "aniTime": 500
+    },
+    "7501602": {
+      "id": 7501602,
+      "trigger": [
+        100
+      ],
+      "effect": [
+        75016020
+      ],
+      "triggerTotalCnt": 0,
+      "durType": 0,
+      "duration": 0,
+      "target": 104,
+      "targetRange": 6,
+      "targetCountType": 1,
+      "targetCountParam": [
+        [
+          5
+        ]
+      ],
+      "targetSame": 0,
+      "exEffect": [],
+      "triggerCond": [],
+      "priority": 1000,
+      "exTriggCond": [],
+      "hitEff": "sp_skill_baodian_157501",
+      "atkSound": "effect_tf_skillFly_157501",
+      "hitSound": "effect_tf_skillHit_157501",
+      "shakeScreen": 1,
+      "shakeScreenDelay": 3000
+    }
+  }
+}

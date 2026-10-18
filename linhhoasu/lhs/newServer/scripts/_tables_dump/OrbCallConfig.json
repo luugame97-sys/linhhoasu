@@ -1,0 +1,164 @@
+{
+  "_table": "OrbCallConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,nextRate,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "nextRate": 10000,
+        "rewards": [
+          {
+            "id": 205,
+            "count": 20,
+            "weight": 10000
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "nextRate": 7000,
+        "rewards": [
+          {
+            "id": 205,
+            "count": 25,
+            "weight": 5000
+          },
+          {
+            "id": 206,
+            "count": 3,
+            "weight": 5000
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "nextRate": 5000,
+        "rewards": [
+          {
+            "id": 205,
+            "count": 30,
+            "weight": 4165
+          },
+          {
+            "id": 206,
+            "count": 6,
+            "weight": 4835
+          },
+          {
+            "id": 199,
+            "count": 1,
+            "weight": 1000
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "nextRate": 10000,
+      "rewards": [
+        {
+          "id": 205,
+          "count": 20,
+          "weight": 10000
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "nextRate": 7000,
+      "rewards": [
+        {
+          "id": 205,
+          "count": 25,
+          "weight": 5000
+        },
+        {
+          "id": 206,
+          "count": 3,
+          "weight": 5000
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "nextRate": 5000,
+      "rewards": [
+        {
+          "id": 205,
+          "count": 30,
+          "weight": 4165
+        },
+        {
+          "id": 206,
+          "count": 6,
+          "weight": 4835
+        },
+        {
+          "id": 199,
+          "count": 1,
+          "weight": 1000
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "nextRate": 3000,
+      "rewards": [
+        {
+          "id": 205,
+          "count": 45,
+          "weight": 3500
+        },
+        {
+          "id": 206,
+          "count": 8,
+          "weight": 4000
+        },
+        {
+          "id": 199,
+          "count": 1,
+          "weight": 1000
+        },
+        {
+          "id": 100512,
+          "count": 1,
+          "weight": 1200
+        },
+        {
+          "id": 100513,
+          "count": 1,
+          "weight": 300
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "nextRate": 0,
+      "rewards": [
+        {
+          "id": 199,
+          "count": 1,
+          "weight": 7500
+        },
+        {
+          "id": 100512,
+          "count": 1,
+          "weight": 2000
+        },
+        {
+          "id": 100513,
+          "count": 1,
+          "weight": 500
+        }
+      ]
+    }
+  }
+}

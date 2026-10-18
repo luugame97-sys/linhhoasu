@@ -1,0 +1,15 @@
+"""Read-only current tickets/orders/history summary and narrow log tail."""
+import json,sys
+from pathlib import Path
+import paramiko
+from release_fishing_auto_20260906 import WB,APP,node,run,hashes,pm2,ready
+OUT=WB/'temp/fishing_audit_20260906T042330Z'
+sys.stdout.reconfigure(encoding='utf-8');creds=(WB/'VPS103.116.105.154.txt').read_text(encoding='utf-8-sig').splitlines();ssh=paramiko.SSHClient();ssh.load_system_host_keys();ssh.set_missing_host_key_policy(paramiko.RejectPolicy());ssh.connect(creds[0].strip(),username='root',password=creds[2],look_for_keys=False,allow_agent=False,timeout=20)
+try:
+ data=node(ssh,r"""const fs=require('fs'),{MongoClient}=require('/linhhoasu/lhs/newServer/node_modules/mongodb');(async()=>{const c=new MongoClient('mongodb://127.0.0.1:27017',{maxPoolSize:1,serverSelectionTimeoutMS:8000});await c.connect();const out={checkedAt:new Date().toISOString(),subjects:{}};for(const dbName of ['lhs_s1001','lhs_s1002']){const p=await c.db(dbName).collection('players').findOne({name:/^nicky$/i},{projection:{_id:0,userId:1,'items.65':1,'items.68':1,'items.70':1,'fishInfo.level':1,'fishInfo.scene':1,'fishInfo.food':1,'fishInfo.foodBag':1,'fishInfo.orders':1,'fishInfo.fishResult':1,'fishInfo.autoPowerHistory':1,updatedAt:1}});if(!p)continue;const id=p.userId;delete p.userId;const history=p.fishInfo.autoPowerHistory||[];delete p.fishInfo.autoPowerHistory;p.historySummary={count:history.length,sold:history.reduce((n,h)=>n+(h.sold||[]).length,0),allSold:history.filter(h=>h.sold?.length&&!h.equipped?.length&&!h.held?.length).length,last:history.at(-1)?.time};out.subjects[dbName]=p;const file='/root/.pm2/logs/'+(dbName==='lhs_s1001'?'lhs-s1001':'lhs-s1002')+'-out.log',st=fs.statSync(file),size=Math.min(st.size,4*1024*1024),b=Buffer.alloc(size),fd=fs.openSync(file,'r');fs.readSync(fd,b,0,size,st.size-size);fs.closeSync(fd);p.log= b.toString('utf8').split(/\r?\n/).filter(line=>line.includes(id)&&/tag[=:](4000|4002|4008|4020|4050)/.test(line)).slice(-25).map(line=>line.replaceAll(id,'[subject]'));}await c.close();console.log(JSON.stringify(out));})().catch(e=>{console.error(e.name);process.exitCode=1});""")
+ data['ready']=ready(ssh);data['pm2']=pm2(ssh)
+ manifest=json.loads((OUT/'manifest.json').read_text(encoding='utf-8'));expected={row['remote']:row['sha256']for row in manifest['files'].values()}
+ current=hashes(ssh,list(expected));data['unchangedArtifacts']=sum(current[p]==h for p,h in expected.items());assert data['unchangedArtifacts']==len(expected)
+ (OUT/'map-order-state.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ print(json.dumps({'checkedAt':data['checkedAt'],'subjects':{db:{'tickets':p['items'].get('70',0),'scene':p['fishInfo']['scene'],'fishLevel':p['fishInfo']['level'],'receivedOrders':[r['received']for r in p['fishInfo']['orders']],'pending':len(p['fishInfo']['fishResult']['fishInfos']),'history':p['historySummary'],'loggedRequests':len(p['log'])}for db,p in data['subjects'].items()},'unchangedArtifacts':data['unchangedArtifacts'],'ready':data['ready']},ensure_ascii=False))
+finally:ssh.close()

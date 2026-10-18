@@ -1,0 +1,138 @@
+{
+  "_table": "OldTrekMiniGameParamConfig",
+  "_rows": 17,
+  "_type": "object",
+  "_firstKeys": "(obj)[baseFallTime|railAudio|feverTrigger|feverPool|feverBarNum]",
+  "_sample": [
+    {
+      "baseFallTime": 1200
+    },
+    {
+      "railAudio": [
+        [
+          "effect_oldTrek_MMaster_R1_P",
+          "effect_oldTrek_MMaster_R1_P"
+        ],
+        [
+          "effect_oldTrek_MMaster_R2_P",
+          "effect_oldTrek_MMaster_R2_P"
+        ],
+        [
+          "effect_oldTrek_MMaster_R3_P",
+          "effect_oldTrek_MMaster_R3_P"
+        ]
+      ]
+    },
+    {
+      "feverTrigger": 5
+    }
+  ],
+  "data": {
+    "baseFallTime": 1200,
+    "railAudio": [
+      [
+        "effect_oldTrek_MMaster_R1_P",
+        "effect_oldTrek_MMaster_R1_P"
+      ],
+      [
+        "effect_oldTrek_MMaster_R2_P",
+        "effect_oldTrek_MMaster_R2_P"
+      ],
+      [
+        "effect_oldTrek_MMaster_R3_P",
+        "effect_oldTrek_MMaster_R3_P"
+      ]
+    ],
+    "feverTrigger": 5,
+    "feverPool": 30,
+    "feverBarNum": 5,
+    "feverBonus": 10000,
+    "feverMissPunish": -5,
+    "comboBonus": [
+      [
+        5,
+        0
+      ],
+      [
+        10,
+        1000
+      ],
+      [
+        20,
+        2000
+      ],
+      [
+        40,
+        4000
+      ]
+    ],
+    "hitScore": [
+      -5,
+      10,
+      20
+    ],
+    "judgeTime": 300,
+    "goodTime": 150,
+    "prefectTime": 80,
+    "difficultTemplateWeight": [
+      [
+        8000,
+        2000,
+        0,
+        0
+      ],
+      [
+        6000,
+        4000,
+        0,
+        0
+      ],
+      [
+        4000,
+        6000,
+        0,
+        0
+      ],
+      [
+        2000,
+        8000,
+        0,
+        0
+      ]
+    ],
+    "difficultBarSameAppear": [
+      [
+        3000,
+        1000,
+        0
+      ],
+      [
+        2000,
+        1000,
+        0
+      ],
+      [
+        1000,
+        1000,
+        0
+      ],
+      [
+        1000,
+        1000,
+        0
+      ]
+    ],
+    "beatSailor": [
+      350301,
+      350302,
+      350305
+    ],
+    "beatShip": 300003,
+    "blockMatchTimeLimit": [
+      50,
+      50,
+      50,
+      50
+    ]
+  }
+}

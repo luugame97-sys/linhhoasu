@@ -1,0 +1,966 @@
+{
+  "_table": "OldTrekGiftConfig",
+  "_rows": 22,
+  "_type": "object",
+  "_firstKeys": "11103,11104,11105,11106,11107,11108",
+  "_sample": [
+    {
+      "1": {
+        "11103": {
+          "activityId": 1,
+          "shopId": 11103,
+          "limit": 1,
+          "limitType": 1
+        },
+        "11104": {
+          "activityId": 1,
+          "shopId": 11104,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11105": {
+          "activityId": 1,
+          "shopId": 11105,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11106": {
+          "activityId": 1,
+          "shopId": 11106,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11107": {
+          "activityId": 1,
+          "shopId": 11107,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11108": {
+          "activityId": 1,
+          "shopId": 11108,
+          "limit": 0,
+          "limitType": 0
+        }
+      }
+    },
+    {
+      "2": {
+        "11103": {
+          "activityId": 2,
+          "shopId": 11103,
+          "limit": 1,
+          "limitType": 1
+        },
+        "11104": {
+          "activityId": 2,
+          "shopId": 11104,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11105": {
+          "activityId": 2,
+          "shopId": 11105,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11106": {
+          "activityId": 2,
+          "shopId": 11106,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11107": {
+          "activityId": 2,
+          "shopId": 11107,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11108": {
+          "activityId": 2,
+          "shopId": 11108,
+          "limit": 0,
+          "limitType": 0
+        }
+      }
+    },
+    {
+      "3": {
+        "11103": {
+          "activityId": 3,
+          "shopId": 11103,
+          "limit": 1,
+          "limitType": 1
+        },
+        "11104": {
+          "activityId": 3,
+          "shopId": 11104,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11105": {
+          "activityId": 3,
+          "shopId": 11105,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11106": {
+          "activityId": 3,
+          "shopId": 11106,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11107": {
+          "activityId": 3,
+          "shopId": 11107,
+          "limit": 0,
+          "limitType": 0
+        },
+        "11108": {
+          "activityId": 3,
+          "shopId": 11108,
+          "limit": 0,
+          "limitType": 0
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "11103": {
+        "activityId": 1,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 1,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 1,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 1,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 1,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 1,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "2": {
+      "11103": {
+        "activityId": 2,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 2,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 2,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 2,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 2,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 2,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "3": {
+      "11103": {
+        "activityId": 3,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 3,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 3,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 3,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 3,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 3,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "4": {
+      "11103": {
+        "activityId": 4,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 4,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 4,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 4,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 4,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 4,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "5": {
+      "11103": {
+        "activityId": 5,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 5,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 5,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 5,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 5,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 5,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "6": {
+      "11103": {
+        "activityId": 6,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 6,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 6,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 6,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 6,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 6,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "7": {
+      "11103": {
+        "activityId": 7,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 7,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 7,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 7,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 7,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 7,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "8": {
+      "11103": {
+        "activityId": 8,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 8,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 8,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 8,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 8,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 8,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "9": {
+      "11103": {
+        "activityId": 9,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 9,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 9,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 9,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 9,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 9,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "10": {
+      "11103": {
+        "activityId": 10,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 10,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 10,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 10,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 10,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 10,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "11": {
+      "11103": {
+        "activityId": 11,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 11,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 11,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 11,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 11,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 11,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "12": {
+      "11103": {
+        "activityId": 12,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 12,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 12,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 12,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 12,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 12,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "13": {
+      "11103": {
+        "activityId": 13,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 13,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 13,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 13,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 13,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 13,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "14": {
+      "11103": {
+        "activityId": 14,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 14,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 14,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 14,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 14,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 14,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "15": {
+      "11103": {
+        "activityId": 15,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 15,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 15,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 15,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 15,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 15,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "16": {
+      "11103": {
+        "activityId": 16,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 16,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 16,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 16,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 16,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 16,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "17": {
+      "11103": {
+        "activityId": 17,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 17,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 17,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 17,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 17,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 17,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "18": {
+      "11103": {
+        "activityId": 18,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 18,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 18,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 18,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 18,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 18,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "19": {
+      "11103": {
+        "activityId": 19,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 19,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 19,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 19,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 19,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 19,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "20": {
+      "11103": {
+        "activityId": 20,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 20,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 20,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 20,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 20,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 20,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "21": {
+      "11103": {
+        "activityId": 21,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 21,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 21,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 21,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 21,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 21,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    },
+    "22": {
+      "11103": {
+        "activityId": 22,
+        "shopId": 11103,
+        "limit": 1,
+        "limitType": 1
+      },
+      "11104": {
+        "activityId": 22,
+        "shopId": 11104,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11105": {
+        "activityId": 22,
+        "shopId": 11105,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11106": {
+        "activityId": 22,
+        "shopId": 11106,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11107": {
+        "activityId": 22,
+        "shopId": 11107,
+        "limit": 0,
+        "limitType": 0
+      },
+      "11108": {
+        "activityId": 22,
+        "shopId": 11108,
+        "limit": 0,
+        "limitType": 0
+      }
+    }
+  }
+}

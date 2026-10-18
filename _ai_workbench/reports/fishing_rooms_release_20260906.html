@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phòng câu cùng bạn bè và bố cục ủy thác</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ph-ng-c-u-4-ng-i-v-b-c-c-y-th-c-06-09-2026">Phòng câu 4 người và bố cục ủy thác — 06/09/2026</h1>
+<p><strong>Đã triển khai S1/S2.</strong> Người chơi chọn cùng ngư trường và cùng phòng để câu cùng nhau; mỗi phòng có4 chỗ riêng, danh sách hiện số người/tên. Mục “Tự trang bị cá mạnh, bán cá yếu” đã nằm trong khung riêng đồng bộ phong cách game, không nằm ngoài khung hoặc đè nút Bắt đầu.</p>
+<p>Hậu kiểm cuối13:53 UTC+7:183 nhóm test đạt, live QA8 nhân vật mỗi server đạt,155 hash đúng, dữ liệu QA đã dọn sạch. Bản client mới: <code>20260906_fishing_rooms_v2</code>.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="ch-n-ph-ng-v-c-ng-c-u">Chọn phòng và cùng câu</h3>
+<ul>
+<li>Thêm nút <strong>Phòng N</strong> ở mép dưới, bên trái nút quay lại và bên phải vùng chat; không đặt đè lên giỏ/ô trang bị cá phía trên.</li>
+<li>Danh sách dùng khung thoại, hoa văn, nền ô và nút xanh/vàng của game. Mỗi trang4 phòng; có Trước/Sau/Làm mới và tên người trong phòng.</li>
+<li>Vào ngư trường tự chọn phòng còn chỗ; người chơi có thể chọn phòng cụ thể để cùng bạn bè. Phòng hiện tại được đánh dấu; phòng đầy không cho vào và server kiểm lại tại thời điểm chọn.</li>
+<li>Mỗi phòng tối đa4 người, vị trí native0–3, thứ tự lấp chỗ1→0→3→2. Người đang câu giữ nguyên chỗ; người rời nhường chỗ trống cho người tiếp theo. Phòng rỗng bị xóa, danh sách luôn cung cấp một phòng trống kế tiếp.</li>
+<li>Roster vào phòng chứa đầy đủ người đang có. Những người đã ở phòng cũng nhận thông báo người mới; không còn tình trạng chỉ thấy nhau một chiều.</li>
+<li>Phòng tách theo ngư trường và từng tiến trình S1/S2. Chọn cùng số phòng nhưng khác ngư trường hoặc khác server không nhìn thấy nhau.</li>
+<li>Phòng/membership là state tạm thời, không ghi vào DB player: restart server hoặc reconnect có thể được tự xếp lại. Không cam kết giữ số phòng/chỗ qua restart; có thể chọn lại phòng bạn bè còn trống.</li>
+</ul>
+<h3 id="ng-b-v-an-to-n-d-li-u">Đồng bộ và an toàn dữ liệu</h3>
+<ul>
+<li>Entry, leave, emoji, đổi cần/mồi/bè và animation câu chỉ gửi thành viên cùng phòng; không broadcast presence sang mọi socket hoặc người ngoài phòng.</li>
+<li>Peer catch4060 và đổi cần4061/mồi4062 được nối đúng receiver có sẵn. Emoji dùng ID người gửi từ session, không tin ID người khác trong request.</li>
+<li>Join/leave xếp hàng ở cấp registry và chờ save xác nhận; người vào đồng thời không lấy trùng ghế. Hàng đợi này chỉ phục vụ giao dịch phòng, không thay hàng đợi catch/auto/reward hiện có.</li>
+<li>Gói roster được gửi ngay trong lượt xử lý room để thông báo join tiếp theo không vượt qua roster.</li>
+<li>Giữ cache ACK chuẩn của WSServer cho giao dịch gửi trực tiếp. Gửi lại request rời phòng cũ không thể đẩy người chơi khỏi phòng mới.</li>
+<li>Cảnh native lọc mapId+roomId; peer leave được xóa ngay để không để hình cũ trong animation rời chiếm chỗ vừa được cấp lại. Join trùng ID không tạo entity trùng.</li>
+<li>Disconnect thu hồi đúng session. Socket cũ đóng không giải phóng ghế của session mới cùng tài khoản. Lỗi save/null/commit bất định không công bố phòng mới; invalidate theo cơ chế cũ, không rollback giả player DB.</li>
+<li>Chọn chuyển phòng dừng auto. Nếu lượt câu/kết quả auto còn đang xử lý, client yêu cầu chờ lượt hoàn thành. Không tự xử lý/bán/xóa cá pending khi chuyển phòng; tiền, mồi, thuộc tính, khóa và receipt giữ nguyên.</li>
+</ul>
+<h3 id="b-c-c-auto-theo-nh-ng-i-d-ng">Bố cục auto theo ảnh người dùng</h3>
+<ul>
+<li>Checkbox, tiêu đề và mô tả auto-power cùng nằm trong một <code>Group</code>592×126, viền <code>common_line_4</code>, nền <code>common_box_2</code> giống các nhóm tùy chọn có sẵn.</li>
+<li>Thẻ ởy777; nội dung không vượt thẻ. Nút Bắt đầu xuốngy924; khung thoại cao1230, baseGroup1000. Có khoảng trống giữa thẻ và nút.</li>
+<li>Không thay setting key, serialization, mặc định, điều kiện dừng, auto-order hay hệ số tốc độ1,11×.</li>
+</ul>
+<p>Ảnh xem trước dựng bằng <strong>Egret/EUI và asset gốc</strong>, không phải HTML thay giao diện game:</p>
+<ul>
+<li><a href="../temp/fishing_rooms_release_20260906/ui-rooms.png">Giao diện chọn phòng</a>.</li>
+<li><a href="../temp/fishing_rooms_release_20260906/ui-auto.png">Khung tự trang bị/bán cá</a>.</li>
+</ul>
+<p>Ảnh là fixture local với dữ liệu mẫu. Wrapper CommonWindowBg được mô phỏng khâu gắn viewport; không gọi đây là nghiệm thu toàn client production hoặc mọi bè/thời trang khi4 nhân vật cùng xuất hiện.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-local-v-production">Source chính local và production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Thay đổi</th>
+</tr></thead><tbody>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/services/FishingRoomService.js</code></td>
+<td>Mới: registry, list, cấp4 ghế, join/leave, room broadcast, ACK cache</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish.js</code></td>
+<td>Ghế0–3, list qua4050 action=list, room entry4002/4050, leave, peer packets</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/net/WSServer.js</code></td>
+<td>Registry mỗi server, send hook và disconnect đúng session</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></td>
+<td>Picker native, room guards/peer filtering, khung auto-power</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/index.html</code></td>
+<td>Cache token <code>20260906_fishing_rooms_v2</code></td>
+</tr>
+</tbody></table></div>
+<p>Local3 server file và main khớp candidate; index normalized content khớp (giữ newline local). Không chép toàn cây local lên VPS; commerce khác local từ trước được giữ nguyên. Không đổi config bin, economy, DB schema, WebGM, tăng tốc, luật cá hoặc input-freeze đã tạm dừng.</p>
+<h3 id="c-ng-c-evidence">Công cụ/evidence</h3>
+<ul>
+<li>Baseline hash-guard: <code>_ai_workbench/temp/fishing_room_audit_20260906T060009Z/</code>.</li>
+<li>Candidate: <code>_ai_workbench/temp/fishing_rooms_release_20260906/</code>.</li>
+<li>Tools mới trong <code>_ai_workbench/tools/</code>: build_fishing_rooms_client, fishing_rooms_client_methods, fishing_rooms_view_methods, fishing_auto_power_layout, test_fishing_rooms, qa_fishing_rooms_v2, release_fishing_rooms, finalize_fishing_rooms, publish_fishing_room_ui_v2, sync_fishing_rooms_local_patch, sync_fishing_room_ui_v2, check_fishing_rooms_residue (hậu tố20260906).</li>
+<li>Công cụ UI: inspect_fishing_room_skins, build_room_ui_fixture, render_room_ui, room_ui_fixture_20260906.html. Chỉ dùng runtime/asset local, không login tài khoản người thật để chụp hình.</li>
+<li>Test cũ được cập nhật dependency/policy fixture: test_fishing_balance thêm room registry qua cờ <code>FISH_ROOM_REGISTRY=1</code>; test_fishing_auto thêm kỳ vọng khung qua <code>FISH_AUTO_FRAMED=1</code>. Giữ các assertion gameplay khác.</li>
+<li>Evidence chính: <code>rooms-tests.json</code>, <code>stage.json</code>, <code>deploy.json</code>, <code>ui-update.json</code>, <code>final-deploy.json</code>, <code>verify.json</code>, <code>residue-check.json</code>, <code>client-build.json</code>, <code>ui-render.json</code> và2 PNG.</li>
+<li><code>release-error.json</code> ghi canary cũ thất bại; trạng thái cuối phải đọc <code>final-deploy.json</code>/<code>verify.json</code>, không lấy lỗi cũ làm kết quả cuối.</li>
+<li>Không dùng lại2 harness room live đã bị WITHDRAWN ở phiên audit.</li>
+</ul>
+<h3 id="backup-rollback">Backup/rollback</h3>
+<ul>
+<li>Local trước sửa: <code>_ai_workbench/backups/fishing_rooms_local_20260906/</code>.</li>
+<li>Báo cáo trước sửa: <code>_ai_workbench/backups/fishing_rooms_reports_20260906/</code>.</li>
+<li>Backup production chính: <code>/linhhoasu/_ai_workbench/backups/fishing_rooms_20260906_063700/</code>.</li>
+<li>UI chỉnh vị trí nút: thư mục con <code>ui-v2/</code>; bổ sung ACK cache: <code>ack-cache/service.before</code>.</li>
+<li>Staging: <code>/linhhoasu/_ai_workbench/temp/fishing_rooms_20260906_063700/</code>.</li>
+<li>Rollback source/client theo preimage; không rollback hoặc chỉnh player DB. File mới có thể chuyển vào backup khi rollback, không xóa rộng.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Chồng nhân vật/nhìn một chiều</td>
+<td>Mọi pos1, roster=[]</td>
+<td>4 ghế riêng và roster/fanout cùng phòng</td>
+<td>2/4/5/8/20/40 client đồng thời</td>
+</tr>
+<tr>
+<td>Ghế0 bị ép thành1</td>
+<td>Normalizer cũ&gt;=1</td>
+<td>Chỉ nhận0–3</td>
+<td>Native parse/coordinates assertions</td>
+</tr>
+<tr>
+<td>Người ngoài phòng nhận gói</td>
+<td>Broadcast toàn server</td>
+<td>Broadcast registry; client map+room guard</td>
+<td>Kiểm phòng khác không nhận peer catch</td>
+</tr>
+<tr>
+<td>Ghế đã dùng lại còn hình cũ</td>
+<td>Animation leave giữ entity tạm</td>
+<td>Xóa peer ngay khi rời</td>
+<td>Leave→join cùng seat test</td>
+</tr>
+<tr>
+<td>Replay rời phòng cũ làm mất chỗ mới</td>
+<td>Room gửi trực tiếp không đi qua result cache</td>
+<td>Ghi ACK cùng cache WSServer, giới hạn100</td>
+<td>Live gửi lại đúng msgUid sau chuyển phòng</td>
+</tr>
+<tr>
+<td>Auto-power nằm ngoài khung</td>
+<td>3 control thêm trực tiếp vào baseGroup</td>
+<td>Thẻ có viền/nền, khoảng cách nút rõ</td>
+<td>EUI render+bounding check</td>
+</tr>
+<tr>
+<td>Nút chọn phòng có thể đè ô cá</td>
+<td>Vị trí ban đầu ở trên vùng equipment</td>
+<td>Chuyển xuống giữa chat và nút quay lại</td>
+<td>Đối chiếu tọa độ skin thật</td>
+</tr>
+<tr>
+<td>Staging room suite chạy lâu</td>
+<td>Parse hàm minify lặp cho nhiều client</td>
+<td>Cache extraction một lần; timeout tiến trình test</td>
+<td>Không kéo dài live timeout vô hạn</td>
+</tr>
+<tr>
+<td>QA đầu tăng cấp116→117</td>
+<td>Clone còn EXP của bot mẫu</td>
+<td>QA exp0, giữ assertion identity chặt</td>
+<td>Chuẩn hóa fixture trước login</td>
+</tr>
+<tr>
+<td>Render auto ban đầu trống</td>
+<td>Fixture thiếu transclusion CommonWindowBg</td>
+<td>Gắn đúng viewport trong wrapper kiểm UI</td>
+<td>Không sửa game để chiều harness</td>
+</tr>
+<tr>
+<td>UTF-8 output Python báoGBK</td>
+<td>stdout Windows mặc định</td>
+<td>reconfigure utf-8 trong tool inspect</td>
+<td>Không sửa bytes asset/chuỗi để né console</td>
+</tr>
+<tr>
+<td>apply_patch hunk/marker không khớp</td>
+<td>Context khác và method đầu minify</td>
+<td>Đọc exact source, neo method đúng; chạy lại</td>
+<td>Không suy tên/ghi đè nguyên source</td>
+</tr>
+<tr>
+<td>Mongoose warning isNew</td>
+<td>Schema có tên reserved sẵn</td>
+<td>Ghi nhận, không thay model ngoài scope</td>
+<td>Phân biệt warning và fail</td>
+</tr>
+</tbody></table></div>
+<p>Canary đầu13:35 dừng tại S2 do fixture EXP, chưa chạm S1/client mới; tự khôi phục source và ready200. Sau khi chuẩn hóa QA và rerun182 test, S2/S1 đạt. Bản khép cuối bổ sung cache ACK được test lại183 nhóm và live hai server. S2 có4 restart trong cả phiên (canary lỗi+rollback+release+final); S1 có2 (release+final).4 dịch vụ khác không restart.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Roster phải đến trước peer delta để không bị rebuild xóa người vừa vào; gửi có thứ tự cần nằm trong giao dịch phòng, nhưng vẫn phải lưu ACK cho replay.</li>
+<li>Khóa theo user không bảo vệ chỗ ngồi dùng chung; bộ cấp ghế cần quản lý các join cùng một registry. Session identity khác userId, đặc biệt lúc reconnect.</li>
+<li>Tên phòng trống có thể thay đổi do người khác vào trước; luôn kiểm lại room capacity ở server, không dựa vào nút UI.</li>
+<li>Dùng skin/texture gốc, kiểm EUI rendering thật cho layout mới; không dựng mock DOM rồi gọi giao diện game hoàn tất.</li>
+<li>Live QA cần assert playerID trong Mongo và cấp/name500 trước gameplay; không tự tạo tài khoản lệch suffix. Cleanup kể cả partial login và kết nối lỗi.</li>
+<li>FX/catch/auto/settings giữ logic cũ. Khi thay vị trí thành phần UI phải đối chiếu toàn khung để tránh che chat hoặc giỏ cá.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="ki-m-th">Kiểm thử</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Phòng mới + native receiver</td>
+<td>30/30 PASS local/Linux staging; mô phỏng đến40 người</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>21/21 PASS</td>
+</tr>
+<tr>
+<td>Cần/bè</td>
+<td>38/38 PASS,1.800 case ma trận</td>
+</tr>
+<tr>
+<td>Balance/integrity</td>
+<td>70/70 PASS</td>
+</tr>
+<tr>
+<td>Huyền Vũ</td>
+<td>24/24 PASS</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>PASS,714 bảng</td>
+</tr>
+<tr>
+<td>Giao diện</td>
+<td>EUI/WebGL+asset gốc render2 panel không lỗi; click nút Vào phòng nhận đúng ID; nội dung auto nằm trong thẻ/nút dưới thẻ</td>
+</tr>
+<tr>
+<td>Live S2</td>
+<td>8 QA đúng identity,2 phòng×4 vị trí, roster2chiều, full reject, thay chỗ, peer cast lọc, pending/relog, disconnect, stale-leave replay PASS</td>
+</tr>
+<tr>
+<td>Live S1</td>
+<td>Cùng bộ8 QA PASS sau S2</td>
+</tr>
+</tbody></table></div>
+<p>Tổng183 nhóm test hồi quy. Client inverse-build kiểm19 chỉnh sửa có chủ đích; hàm auto-power/FX, speed và animation tính thời gian gốc giữ nguyên. Không tự bù hoặc chỉnh cá/vật phẩm của người thật.</p>
+<h3 id="h-u-ki-m13-53-utc-7">Hậu kiểm13:53 UTC+7</h3>
+<p>-155/155 expected artifact đúng;5 file thay (bao gồm service mới),150 giữ nguyên.</p>
+<ul>
+<li><code>FishingRoomService.js</code>: <code>01fdc148b1315eba4e8908decc2e6c1852dff2c88fbcac616451b9a263019760</code>.</li>
+<li><code>fish.js</code>: <code>6dd91f922a21069c3a0cf889377e1fa71e3c7a23feee0fbb63e0087cd2146f67</code>.</li>
+<li><code>WSServer.js</code>: <code>bdf75549831074824b5c60d864ab3a47fa5c609a0adba67c7b590b6e0861dec8</code>.</li>
+<li>Main served: <code>0c69e4b217e2bfa1a5c76d7d084bab13835e9c6433f4e17be93d662a3922e5bd</code>.</li>
+<li>Index served: <code>f3cb60a4c8fedf410592d71d63ac2f0e75360e5ebfe1777ab621e976a4a26101</code>.</li>
+<li>S1 PID16313/restart1378, S2 PID15390/restart46, ready8080/8083=200.</li>
+<li>Dist30824, admin30856, bot1600/1576 giữ PID/restart; không đổi DB/Nginx.</li>
+<li>Mỗi lượt QA chỉ xóa đúng dữ liệu test đã tạo. Hậu kiểm Mongo player/mail prefixqafroomv2 còn0 cả hai DB; Redis session/rank scope rỗng; không còn tiến trình QA chạy. Không có tồn dư như harness cũ.</li>
+<li>Chưa nghiệm thu toàn cảnh4 người có mọi loại bè/thời trang lớn trong client production. Đã kiểm tọa độ native và UI local, chưa khẳng định tuyệt đối mọi asset/hoạt ảnh không che nhau trên mọi màn hình.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng reload game một lần để nhận token <code>20260906_fishing_rooms_v2</code>.</li>
+<li>Vào cùng ngư trường, bấm <strong>Phòng N</strong> ở dưới bên phải, chọn phòng còn chỗ giống bạn bè. Bấm Làm mới nếu danh sách vừa thay đổi.</li>
+<li>Kiểm mục auto trong khung mới, không thay lựa chọn đã lưu. Khi đang trong lượt câu thì chờ xong mới đổi phòng; chuyển phòng sẽ dừng auto.</li>
+<li>Nghiệm thu cùng4 người trong game: đúng tên,4 chỗ, đồng bộ cần/mồi/bè/động tác. Nếu asset lớn che nhau, gửi ảnh4 người để điều chỉnh layout có bằng chứng; không thay ngẫu nhiên vị trí người đang câu.</li>
+<li>Các phòng không liên server, không giữ chỗ qua restart. Muốn phòng riêng/mật khẩu/mời bạn trực tiếp hoặc trên4 người là mở rộng khác, chưa có trong bản này.</li>
+</ol></main></body></html>

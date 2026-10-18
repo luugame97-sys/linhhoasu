@@ -1,0 +1,957 @@
+{
+  "_table": "HeroRoadLevelConfig",
+  "_rows": 52,
+  "_type": "object",
+  "_firstKeys": "id,mapId,roleHp,rebornCost,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "mapId": 1,
+        "roleHp": 10,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "mapId": 2,
+        "roleHp": 20,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "mapId": 3,
+        "roleHp": 30,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "mapId": 1,
+      "roleHp": 10,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "mapId": 2,
+      "roleHp": 20,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "mapId": 3,
+      "roleHp": 30,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "mapId": 4,
+      "roleHp": 40,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "mapId": 5,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "mapId": 6,
+      "roleHp": 15,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "mapId": 7,
+      "roleHp": 25,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "mapId": 8,
+      "roleHp": 35,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "mapId": 9,
+      "roleHp": 45,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "mapId": 10,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "11": {
+      "id": 11,
+      "mapId": 1,
+      "roleHp": 10,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "12": {
+      "id": 12,
+      "mapId": 2,
+      "roleHp": 20,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "13": {
+      "id": 13,
+      "mapId": 3,
+      "roleHp": 30,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "14": {
+      "id": 14,
+      "mapId": 4,
+      "roleHp": 40,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "15": {
+      "id": 15,
+      "mapId": 5,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "16": {
+      "id": 16,
+      "mapId": 6,
+      "roleHp": 15,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "17": {
+      "id": 17,
+      "mapId": 7,
+      "roleHp": 25,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "18": {
+      "id": 18,
+      "mapId": 8,
+      "roleHp": 35,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "19": {
+      "id": 19,
+      "mapId": 9,
+      "roleHp": 45,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "20": {
+      "id": 20,
+      "mapId": 10,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "21": {
+      "id": 21,
+      "mapId": 1,
+      "roleHp": 10,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "22": {
+      "id": 22,
+      "mapId": 2,
+      "roleHp": 20,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "23": {
+      "id": 23,
+      "mapId": 3,
+      "roleHp": 30,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "24": {
+      "id": 24,
+      "mapId": 4,
+      "roleHp": 40,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "25": {
+      "id": 25,
+      "mapId": 5,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "26": {
+      "id": 26,
+      "mapId": 6,
+      "roleHp": 15,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "27": {
+      "id": 27,
+      "mapId": 7,
+      "roleHp": 25,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "28": {
+      "id": 28,
+      "mapId": 8,
+      "roleHp": 35,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "29": {
+      "id": 29,
+      "mapId": 9,
+      "roleHp": 45,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "30": {
+      "id": 30,
+      "mapId": 10,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "31": {
+      "id": 31,
+      "mapId": 1,
+      "roleHp": 10,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "32": {
+      "id": 32,
+      "mapId": 2,
+      "roleHp": 20,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "33": {
+      "id": 33,
+      "mapId": 3,
+      "roleHp": 30,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "34": {
+      "id": 34,
+      "mapId": 4,
+      "roleHp": 40,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "35": {
+      "id": 35,
+      "mapId": 5,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "36": {
+      "id": 36,
+      "mapId": 6,
+      "roleHp": 15,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "37": {
+      "id": 37,
+      "mapId": 7,
+      "roleHp": 25,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "38": {
+      "id": 38,
+      "mapId": 8,
+      "roleHp": 35,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "39": {
+      "id": 39,
+      "mapId": 9,
+      "roleHp": 45,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "40": {
+      "id": 40,
+      "mapId": 10,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "41": {
+      "id": 41,
+      "mapId": 1,
+      "roleHp": 10,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "42": {
+      "id": 42,
+      "mapId": 2,
+      "roleHp": 20,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "43": {
+      "id": 43,
+      "mapId": 3,
+      "roleHp": 30,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "44": {
+      "id": 44,
+      "mapId": 4,
+      "roleHp": 40,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "45": {
+      "id": 45,
+      "mapId": 5,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "46": {
+      "id": 46,
+      "mapId": 6,
+      "roleHp": 15,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "47": {
+      "id": 47,
+      "mapId": 7,
+      "roleHp": 25,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "48": {
+      "id": 48,
+      "mapId": 8,
+      "roleHp": 35,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "49": {
+      "id": 49,
+      "mapId": 9,
+      "roleHp": 45,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "50": {
+      "id": 50,
+      "mapId": 10,
+      "roleHp": 50,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "51": {
+      "id": 51,
+      "mapId": 1,
+      "roleHp": 15,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "52": {
+      "id": 52,
+      "mapId": 2,
+      "roleHp": 20,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "rewards": [
+      {
+        "id": 1,
+        "count": 1000
+      }
+    ]
+  }
+}

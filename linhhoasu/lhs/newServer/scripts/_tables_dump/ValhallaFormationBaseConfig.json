@@ -1,0 +1,141 @@
+{
+  "_table": "ValhallaFormationBaseConfig",
+  "_rows": 20,
+  "_type": "object",
+  "_firstKeys": "(obj)[initialKnot|minTaskSuccess|dailyTaskNum|taskStarWeight|taskRefreshCosts]",
+  "_sample": [
+    {
+      "initialKnot": [
+        2,
+        10000
+      ]
+    },
+    {
+      "minTaskSuccess": 6000
+    },
+    {
+      "dailyTaskNum": 4
+    }
+  ],
+  "data": {
+    "initialKnot": [
+      2,
+      10000
+    ],
+    "minTaskSuccess": 6000,
+    "dailyTaskNum": 4,
+    "taskStarWeight": [
+      {
+        "weight": 3000,
+        "id": 1
+      },
+      {
+        "weight": 3500,
+        "id": 2
+      },
+      {
+        "weight": 2000,
+        "id": 3
+      },
+      {
+        "weight": 1000,
+        "id": 4
+      },
+      {
+        "weight": 500,
+        "id": 5
+      }
+    ],
+    "taskRefreshCosts": [
+      {
+        "id": 231,
+        "count": 1
+      }
+    ],
+    "formationUnlock": {
+      "2": 36,
+      "3": 126
+    },
+    "extraAttrLevel": [
+      4,
+      7
+    ],
+    "deformLevel": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "openAutoNum": {
+      "id": 229,
+      "count": 200
+    },
+    "autoQuality": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "formationName": {
+      "1": 30036132,
+      "2": 30036133,
+      "3": 30036134
+    },
+    "filterType": {
+      "1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "2": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "3": [
+        13,
+        14
+      ]
+    },
+    "filterLevel": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "filterLevelInitial": 6,
+    "filterTypeName": {
+      "1": 30036139,
+      "2": 30036140,
+      "3": 30036141
+    },
+    "quickUpgradeLevel": [
+      2,
+      10
+    ],
+    "extraQuality": 5,
+    "entryShow": [
+      1,
+      2
+    ],
+    "extraLevelItem": 228,
+    "autoSpeed": 1200
+  }
+}

@@ -1,0 +1,1481 @@
+{
+  "_table": "PetSoulConfig",
+  "_rows": 25,
+  "_type": "object",
+  "_firstKeys": "id,quality,races,name,maxAttr,appearId,icon,halfImage,activeSkills,specialSkills,starSkills,initialLifeSkill,initialPassiveSkill,atlasReward,transItem,effect,loseReward,mainAttr",
+  "_sample": [
+    {
+      "210101": {
+        "id": 210101,
+        "quality": 3,
+        "races": 1,
+        "name": 210101,
+        "maxAttr": {
+          "801": 58,
+          "802": 58,
+          "803": 45,
+          "804": 45,
+          "805": 45
+        },
+        "appearId": 210101,
+        "icon": "head_210101",
+        "halfImage": "jp_bsx_210101",
+        "activeSkills": [
+          2801100
+        ],
+        "specialSkills": [],
+        "starSkills": [
+          2831005
+        ],
+        "initialLifeSkill": 2821001,
+        "initialPassiveSkill": [
+          2810030
+        ],
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "transItem": [
+          {
+            "id": 263,
+            "count": 20
+          }
+        ],
+        "effect": 2801100,
+        "loseReward": [
+          {
+            "id": 263,
+            "count": 1
+          }
+        ],
+        "mainAttr": [
+          801,
+          802
+        ]
+      }
+    },
+    {
+      "210201": {
+        "id": 210201,
+        "quality": 4,
+        "races": 1,
+        "name": 210201,
+        "maxAttr": {
+          "801": 104,
+          "802": 104,
+          "803": 81,
+          "804": 81,
+          "805": 81
+        },
+        "appearId": 210201,
+        "icon": "head_210201",
+        "halfImage": "jp_bsx_210201",
+        "activeSkills": [
+          2802100
+        ],
+        "specialSkills": [],
+        "starSkills": [
+          2831005
+        ],
+        "initialLifeSkill": 2821001,
+        "initialPassiveSkill": [
+          2810030
+        ],
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 150
+          }
+        ],
+        "transItem": [
+          {
+            "id": 263,
+            "count": 50
+          }
+        ],
+        "effect": 2802100,
+        "loseReward": [
+          {
+            "id": 263,
+            "count": 2
+          }
+        ],
+        "mainAttr": [
+          801,
+          802
+        ]
+      }
+    },
+    {
+      "210301": {
+        "id": 210301,
+        "quality": 5,
+        "races": 1,
+        "name": 210301,
+        "maxAttr": {
+          "801": 196,
+          "802": 196,
+          "803": 153,
+          "804": 153,
+          "805": 153
+        },
+        "appearId": 210301,
+        "icon": "head_210301",
+        "halfImage": "jp_bsx_210301",
+        "activeSkills": [
+          2803100
+        ],
+        "specialSkills": [],
+        "starSkills": [
+          2831005
+        ],
+        "initialLifeSkill": 2821001,
+        "initialPassiveSkill": [
+          2810030
+        ],
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "transItem": [
+          {
+            "id": 268,
+            "count": 6
+          }
+        ],
+        "effect": 2803100,
+        "loseReward": [
+          {
+            "id": 263,
+            "count": 6
+          }
+        ],
+        "mainAttr": [
+          801,
+          802
+        ]
+      }
+    }
+  ],
+  "data": {
+    "210101": {
+      "id": 210101,
+      "quality": 3,
+      "races": 1,
+      "name": 210101,
+      "maxAttr": {
+        "801": 58,
+        "802": 58,
+        "803": 45,
+        "804": 45,
+        "805": 45
+      },
+      "appearId": 210101,
+      "icon": "head_210101",
+      "halfImage": "jp_bsx_210101",
+      "activeSkills": [
+        2801100
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2831005
+      ],
+      "initialLifeSkill": 2821001,
+      "initialPassiveSkill": [
+        2810030
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "transItem": [
+        {
+          "id": 263,
+          "count": 20
+        }
+      ],
+      "effect": 2801100,
+      "loseReward": [
+        {
+          "id": 263,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        801,
+        802
+      ]
+    },
+    "210201": {
+      "id": 210201,
+      "quality": 4,
+      "races": 1,
+      "name": 210201,
+      "maxAttr": {
+        "801": 104,
+        "802": 104,
+        "803": 81,
+        "804": 81,
+        "805": 81
+      },
+      "appearId": 210201,
+      "icon": "head_210201",
+      "halfImage": "jp_bsx_210201",
+      "activeSkills": [
+        2802100
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2831005
+      ],
+      "initialLifeSkill": 2821001,
+      "initialPassiveSkill": [
+        2810030
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 150
+        }
+      ],
+      "transItem": [
+        {
+          "id": 263,
+          "count": 50
+        }
+      ],
+      "effect": 2802100,
+      "loseReward": [
+        {
+          "id": 263,
+          "count": 2
+        }
+      ],
+      "mainAttr": [
+        801,
+        802
+      ]
+    },
+    "210301": {
+      "id": 210301,
+      "quality": 5,
+      "races": 1,
+      "name": 210301,
+      "maxAttr": {
+        "801": 196,
+        "802": 196,
+        "803": 153,
+        "804": 153,
+        "805": 153
+      },
+      "appearId": 210301,
+      "icon": "head_210301",
+      "halfImage": "jp_bsx_210301",
+      "activeSkills": [
+        2803100
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2831005
+      ],
+      "initialLifeSkill": 2821001,
+      "initialPassiveSkill": [
+        2810030
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "transItem": [
+        {
+          "id": 268,
+          "count": 6
+        }
+      ],
+      "effect": 2803100,
+      "loseReward": [
+        {
+          "id": 263,
+          "count": 6
+        }
+      ],
+      "mainAttr": [
+        801,
+        802
+      ]
+    },
+    "210401": {
+      "id": 210401,
+      "quality": 6,
+      "races": 1,
+      "name": 210401,
+      "maxAttr": {
+        "801": 357,
+        "802": 357,
+        "803": 279,
+        "804": 279,
+        "805": 279
+      },
+      "appearId": 210401,
+      "icon": "head_210401",
+      "halfImage": "jp_bsx_210401",
+      "activeSkills": [
+        2804100,
+        2804101,
+        2804101
+      ],
+      "specialSkills": [
+        2804110,
+        2804111
+      ],
+      "starSkills": [
+        2831005,
+        2831010
+      ],
+      "initialLifeSkill": 2821001,
+      "initialPassiveSkill": [
+        2810030
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 250
+        }
+      ],
+      "transItem": [
+        {
+          "id": 268,
+          "count": 35
+        }
+      ],
+      "effect": 2804100,
+      "loseReward": [
+        {
+          "id": 268,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        801,
+        802
+      ]
+    },
+    "210501": {
+      "id": 210501,
+      "quality": 7,
+      "races": 1,
+      "name": 210501,
+      "maxAttr": {
+        "801": 552,
+        "802": 552,
+        "803": 432,
+        "804": 432,
+        "805": 432
+      },
+      "appearId": 210501,
+      "icon": "head_210501",
+      "halfImage": "jp_bsx_210501",
+      "activeSkills": [
+        2805100,
+        2805101,
+        2805101
+      ],
+      "specialSkills": [
+        2805110,
+        2805111
+      ],
+      "starSkills": [
+        2831005,
+        2831010
+      ],
+      "initialLifeSkill": 2821002,
+      "initialPassiveSkill": [
+        2810030,
+        2810050
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "transItem": [
+        {
+          "id": 273,
+          "count": 35
+        }
+      ],
+      "effect": 2805100,
+      "loseReward": [
+        {
+          "id": 273,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        801,
+        802
+      ]
+    },
+    "220101": {
+      "id": 220101,
+      "quality": 3,
+      "races": 2,
+      "name": 220101,
+      "maxAttr": {
+        "801": 45,
+        "802": 45,
+        "803": 45,
+        "804": 58,
+        "805": 58
+      },
+      "appearId": 220101,
+      "icon": "head_220101",
+      "halfImage": "jp_bsx_220101",
+      "activeSkills": [
+        2801200
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2832005
+      ],
+      "initialLifeSkill": 2822001,
+      "initialPassiveSkill": [
+        2810034
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "transItem": [
+        {
+          "id": 264,
+          "count": 20
+        }
+      ],
+      "effect": 2801200,
+      "loseReward": [
+        {
+          "id": 264,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        804,
+        805
+      ]
+    },
+    "220201": {
+      "id": 220201,
+      "quality": 4,
+      "races": 2,
+      "name": 220201,
+      "maxAttr": {
+        "801": 81,
+        "802": 81,
+        "803": 81,
+        "804": 104,
+        "805": 104
+      },
+      "appearId": 220201,
+      "icon": "head_220201",
+      "halfImage": "jp_bsx_220201",
+      "activeSkills": [
+        2802200
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2832005
+      ],
+      "initialLifeSkill": 2822001,
+      "initialPassiveSkill": [
+        2810034
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 150
+        }
+      ],
+      "transItem": [
+        {
+          "id": 264,
+          "count": 50
+        }
+      ],
+      "effect": 2802200,
+      "loseReward": [
+        {
+          "id": 264,
+          "count": 2
+        }
+      ],
+      "mainAttr": [
+        804,
+        805
+      ]
+    },
+    "220301": {
+      "id": 220301,
+      "quality": 5,
+      "races": 2,
+      "name": 220301,
+      "maxAttr": {
+        "801": 153,
+        "802": 153,
+        "803": 153,
+        "804": 196,
+        "805": 196
+      },
+      "appearId": 220301,
+      "icon": "head_220301",
+      "halfImage": "jp_bsx_220301",
+      "activeSkills": [
+        2803200
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2832005
+      ],
+      "initialLifeSkill": 2822001,
+      "initialPassiveSkill": [
+        2810034
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "transItem": [
+        {
+          "id": 269,
+          "count": 6
+        }
+      ],
+      "effect": 2803200,
+      "loseReward": [
+        {
+          "id": 264,
+          "count": 6
+        }
+      ],
+      "mainAttr": [
+        804,
+        805
+      ]
+    },
+    "220401": {
+      "id": 220401,
+      "quality": 6,
+      "races": 2,
+      "name": 220401,
+      "maxAttr": {
+        "801": 279,
+        "802": 279,
+        "803": 279,
+        "804": 357,
+        "805": 357
+      },
+      "appearId": 220401,
+      "icon": "head_220401",
+      "halfImage": "jp_bsx_220401",
+      "activeSkills": [
+        2804200,
+        2804201,
+        2804201
+      ],
+      "specialSkills": [
+        2804210,
+        2804211
+      ],
+      "starSkills": [
+        2832005,
+        2832010
+      ],
+      "initialLifeSkill": 2822001,
+      "initialPassiveSkill": [
+        2810034
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 250
+        }
+      ],
+      "transItem": [
+        {
+          "id": 269,
+          "count": 35
+        }
+      ],
+      "effect": 2804200,
+      "loseReward": [
+        {
+          "id": 269,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        804,
+        805
+      ]
+    },
+    "220501": {
+      "id": 220501,
+      "quality": 7,
+      "races": 2,
+      "name": 220501,
+      "maxAttr": {
+        "801": 432,
+        "802": 432,
+        "803": 432,
+        "804": 552,
+        "805": 552
+      },
+      "appearId": 220501,
+      "icon": "head_220501",
+      "halfImage": "jp_bsx_220501",
+      "activeSkills": [
+        2805200,
+        2805201,
+        2805201
+      ],
+      "specialSkills": [
+        2805210,
+        2805211
+      ],
+      "starSkills": [
+        2832005,
+        2832010
+      ],
+      "initialLifeSkill": 2822002,
+      "initialPassiveSkill": [
+        2810034,
+        2810054
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "transItem": [
+        {
+          "id": 274,
+          "count": 35
+        }
+      ],
+      "effect": 2805200,
+      "loseReward": [
+        {
+          "id": 274,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        804,
+        805
+      ]
+    },
+    "230101": {
+      "id": 230101,
+      "quality": 3,
+      "races": 3,
+      "name": 230101,
+      "maxAttr": {
+        "801": 45,
+        "802": 45,
+        "803": 58,
+        "804": 45,
+        "805": 58
+      },
+      "appearId": 230101,
+      "icon": "head_230101",
+      "halfImage": "jp_bsx_230101",
+      "activeSkills": [
+        2801300
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2833005
+      ],
+      "initialLifeSkill": 2823001,
+      "initialPassiveSkill": [
+        2810032
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "transItem": [
+        {
+          "id": 265,
+          "count": 20
+        }
+      ],
+      "effect": 2801300,
+      "loseReward": [
+        {
+          "id": 265,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        803,
+        805
+      ]
+    },
+    "230201": {
+      "id": 230201,
+      "quality": 4,
+      "races": 3,
+      "name": 230201,
+      "maxAttr": {
+        "801": 81,
+        "802": 81,
+        "803": 104,
+        "804": 81,
+        "805": 104
+      },
+      "appearId": 230201,
+      "icon": "head_230201",
+      "halfImage": "jp_bsx_230201",
+      "activeSkills": [
+        2802300
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2833005
+      ],
+      "initialLifeSkill": 2823001,
+      "initialPassiveSkill": [
+        2810032
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 150
+        }
+      ],
+      "transItem": [
+        {
+          "id": 265,
+          "count": 50
+        }
+      ],
+      "effect": 2802300,
+      "loseReward": [
+        {
+          "id": 265,
+          "count": 2
+        }
+      ],
+      "mainAttr": [
+        803,
+        805
+      ]
+    },
+    "230301": {
+      "id": 230301,
+      "quality": 5,
+      "races": 3,
+      "name": 230301,
+      "maxAttr": {
+        "801": 153,
+        "802": 153,
+        "803": 196,
+        "804": 153,
+        "805": 196
+      },
+      "appearId": 230301,
+      "icon": "head_230301",
+      "halfImage": "jp_bsx_230301",
+      "activeSkills": [
+        2803300
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2833005
+      ],
+      "initialLifeSkill": 2823001,
+      "initialPassiveSkill": [
+        2810032
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "transItem": [
+        {
+          "id": 270,
+          "count": 6
+        }
+      ],
+      "effect": 2803300,
+      "loseReward": [
+        {
+          "id": 265,
+          "count": 6
+        }
+      ],
+      "mainAttr": [
+        803,
+        805
+      ]
+    },
+    "230401": {
+      "id": 230401,
+      "quality": 6,
+      "races": 3,
+      "name": 230401,
+      "maxAttr": {
+        "801": 279,
+        "802": 279,
+        "803": 357,
+        "804": 279,
+        "805": 357
+      },
+      "appearId": 230401,
+      "icon": "head_230401",
+      "halfImage": "jp_bsx_230401",
+      "activeSkills": [
+        2804300,
+        2804301,
+        2804301
+      ],
+      "specialSkills": [
+        2804310,
+        2804311
+      ],
+      "starSkills": [
+        2833005,
+        2833010
+      ],
+      "initialLifeSkill": 2823001,
+      "initialPassiveSkill": [
+        2810032
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 250
+        }
+      ],
+      "transItem": [
+        {
+          "id": 270,
+          "count": 35
+        }
+      ],
+      "effect": 2804300,
+      "loseReward": [
+        {
+          "id": 270,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        803,
+        805
+      ]
+    },
+    "230501": {
+      "id": 230501,
+      "quality": 7,
+      "races": 3,
+      "name": 230501,
+      "maxAttr": {
+        "801": 432,
+        "802": 432,
+        "803": 552,
+        "804": 432,
+        "805": 552
+      },
+      "appearId": 230501,
+      "icon": "head_230501",
+      "halfImage": "jp_bsx_230501",
+      "activeSkills": [
+        2805300,
+        2805301,
+        2805301
+      ],
+      "specialSkills": [
+        2805310,
+        2805311
+      ],
+      "starSkills": [
+        2833005,
+        2833010
+      ],
+      "initialLifeSkill": 2823002,
+      "initialPassiveSkill": [
+        2810032,
+        2810052
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "transItem": [
+        {
+          "id": 275,
+          "count": 35
+        }
+      ],
+      "effect": 2805300,
+      "loseReward": [
+        {
+          "id": 275,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        803,
+        805
+      ]
+    },
+    "240101": {
+      "id": 240101,
+      "quality": 3,
+      "races": 4,
+      "name": 240101,
+      "maxAttr": {
+        "801": 45,
+        "802": 58,
+        "803": 58,
+        "804": 45,
+        "805": 45
+      },
+      "appearId": 240101,
+      "icon": "head_240101",
+      "halfImage": "jp_bsx_240101",
+      "activeSkills": [
+        2801400
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2834005
+      ],
+      "initialLifeSkill": 2824001,
+      "initialPassiveSkill": [
+        2810031
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "transItem": [
+        {
+          "id": 266,
+          "count": 20
+        }
+      ],
+      "effect": 2801400,
+      "loseReward": [
+        {
+          "id": 266,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        802,
+        803
+      ]
+    },
+    "240201": {
+      "id": 240201,
+      "quality": 4,
+      "races": 4,
+      "name": 240201,
+      "maxAttr": {
+        "801": 81,
+        "802": 104,
+        "803": 104,
+        "804": 81,
+        "805": 81
+      },
+      "appearId": 240201,
+      "icon": "head_240201",
+      "halfImage": "jp_bsx_240201",
+      "activeSkills": [
+        2802400
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2834005
+      ],
+      "initialLifeSkill": 2824001,
+      "initialPassiveSkill": [
+        2810031
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 150
+        }
+      ],
+      "transItem": [
+        {
+          "id": 266,
+          "count": 50
+        }
+      ],
+      "effect": 2802400,
+      "loseReward": [
+        {
+          "id": 266,
+          "count": 2
+        }
+      ],
+      "mainAttr": [
+        802,
+        803
+      ]
+    },
+    "240301": {
+      "id": 240301,
+      "quality": 5,
+      "races": 4,
+      "name": 240301,
+      "maxAttr": {
+        "801": 153,
+        "802": 196,
+        "803": 196,
+        "804": 153,
+        "805": 153
+      },
+      "appearId": 240301,
+      "icon": "head_240301",
+      "halfImage": "jp_bsx_240301",
+      "activeSkills": [
+        2803400
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2834005
+      ],
+      "initialLifeSkill": 2824001,
+      "initialPassiveSkill": [
+        2810031
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "transItem": [
+        {
+          "id": 271,
+          "count": 6
+        }
+      ],
+      "effect": 2803400,
+      "loseReward": [
+        {
+          "id": 266,
+          "count": 6
+        }
+      ],
+      "mainAttr": [
+        802,
+        803
+      ]
+    },
+    "240401": {
+      "id": 240401,
+      "quality": 6,
+      "races": 4,
+      "name": 240401,
+      "maxAttr": {
+        "801": 279,
+        "802": 357,
+        "803": 357,
+        "804": 279,
+        "805": 279
+      },
+      "appearId": 240401,
+      "icon": "head_240401",
+      "halfImage": "jp_bsx_240401",
+      "activeSkills": [
+        2804400,
+        2804401,
+        2804401
+      ],
+      "specialSkills": [
+        2804410,
+        2804411
+      ],
+      "starSkills": [
+        2834005,
+        2834010
+      ],
+      "initialLifeSkill": 2824001,
+      "initialPassiveSkill": [
+        2810031
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 250
+        }
+      ],
+      "transItem": [
+        {
+          "id": 271,
+          "count": 35
+        }
+      ],
+      "effect": 2804400,
+      "loseReward": [
+        {
+          "id": 271,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        802,
+        803
+      ]
+    },
+    "240501": {
+      "id": 240501,
+      "quality": 7,
+      "races": 4,
+      "name": 240501,
+      "maxAttr": {
+        "801": 432,
+        "802": 552,
+        "803": 552,
+        "804": 432,
+        "805": 432
+      },
+      "appearId": 240501,
+      "icon": "head_240501",
+      "halfImage": "jp_bsx_240501",
+      "activeSkills": [
+        2805400,
+        2805401,
+        2805401
+      ],
+      "specialSkills": [
+        2805410,
+        2805411
+      ],
+      "starSkills": [
+        2834005,
+        2834010
+      ],
+      "initialLifeSkill": 2824002,
+      "initialPassiveSkill": [
+        2810031,
+        2810051
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "transItem": [
+        {
+          "id": 276,
+          "count": 35
+        }
+      ],
+      "effect": 2805400,
+      "loseReward": [
+        {
+          "id": 276,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        802,
+        803
+      ]
+    },
+    "250101": {
+      "id": 250101,
+      "quality": 3,
+      "races": 5,
+      "name": 250101,
+      "maxAttr": {
+        "801": 58,
+        "802": 45,
+        "803": 45,
+        "804": 58,
+        "805": 45
+      },
+      "appearId": 250101,
+      "icon": "head_250101",
+      "halfImage": "jp_bsx_250101",
+      "activeSkills": [
+        2801500
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2835005
+      ],
+      "initialLifeSkill": 2825001,
+      "initialPassiveSkill": [
+        2810033
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "transItem": [
+        {
+          "id": 267,
+          "count": 20
+        }
+      ],
+      "effect": 2801500,
+      "loseReward": [
+        {
+          "id": 267,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        801,
+        804
+      ]
+    },
+    "250201": {
+      "id": 250201,
+      "quality": 4,
+      "races": 5,
+      "name": 250201,
+      "maxAttr": {
+        "801": 104,
+        "802": 81,
+        "803": 81,
+        "804": 104,
+        "805": 81
+      },
+      "appearId": 250201,
+      "icon": "head_250201",
+      "halfImage": "jp_bsx_250201",
+      "activeSkills": [
+        2802500
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2835005
+      ],
+      "initialLifeSkill": 2825001,
+      "initialPassiveSkill": [
+        2810033
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 150
+        }
+      ],
+      "transItem": [
+        {
+          "id": 267,
+          "count": 50
+        }
+      ],
+      "effect": 2802500,
+      "loseReward": [
+        {
+          "id": 267,
+          "count": 2
+        }
+      ],
+      "mainAttr": [
+        801,
+        804
+      ]
+    },
+    "250301": {
+      "id": 250301,
+      "quality": 5,
+      "races": 5,
+      "name": 250301,
+      "maxAttr": {
+        "801": 196,
+        "802": 153,
+        "803": 153,
+        "804": 196,
+        "805": 153
+      },
+      "appearId": 250301,
+      "icon": "head_250301",
+      "halfImage": "jp_bsx_250301",
+      "activeSkills": [
+        2803500
+      ],
+      "specialSkills": [],
+      "starSkills": [
+        2835005
+      ],
+      "initialLifeSkill": 2825001,
+      "initialPassiveSkill": [
+        2810033
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ],
+      "transItem": [
+        {
+          "id": 272,
+          "count": 6
+        }
+      ],
+      "effect": 2803500,
+      "loseReward": [
+        {
+          "id": 267,
+          "count": 6
+        }
+      ],
+      "mainAttr": [
+        801,
+        804
+      ]
+    },
+    "250401": {
+      "id": 250401,
+      "quality": 6,
+      "races": 5,
+      "name": 250401,
+      "maxAttr": {
+        "801": 357,
+        "802": 279,
+        "803": 279,
+        "804": 357,
+        "805": 279
+      },
+      "appearId": 250401,
+      "icon": "head_250401",
+      "halfImage": "jp_bsx_250401",
+      "activeSkills": [
+        2804500,
+        2804501,
+        2804501
+      ],
+      "specialSkills": [
+        2804510,
+        2804511
+      ],
+      "starSkills": [
+        2835005,
+        2835010
+      ],
+      "initialLifeSkill": 2825001,
+      "initialPassiveSkill": [
+        2810033
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 250
+        }
+      ],
+      "transItem": [
+        {
+          "id": 272,
+          "count": 35
+        }
+      ],
+      "effect": 2804500,
+      "loseReward": [
+        {
+          "id": 272,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        801,
+        804
+      ]
+    },
+    "250501": {
+      "id": 250501,
+      "quality": 7,
+      "races": 5,
+      "name": 250501,
+      "maxAttr": {
+        "801": 552,
+        "802": 432,
+        "803": 432,
+        "804": 552,
+        "805": 432
+      },
+      "appearId": 250501,
+      "icon": "head_250501",
+      "halfImage": "jp_bsx_250501",
+      "activeSkills": [
+        2805500,
+        2805501,
+        2805501
+      ],
+      "specialSkills": [
+        2805510,
+        2805511
+      ],
+      "starSkills": [
+        2835005,
+        2835010
+      ],
+      "initialLifeSkill": 2825002,
+      "initialPassiveSkill": [
+        2810033,
+        2810053
+      ],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "transItem": [
+        {
+          "id": 277,
+          "count": 35
+        }
+      ],
+      "effect": 2805500,
+      "loseReward": [
+        {
+          "id": 277,
+          "count": 1
+        }
+      ],
+      "mainAttr": [
+        801,
+        804
+      ]
+    }
+  }
+}

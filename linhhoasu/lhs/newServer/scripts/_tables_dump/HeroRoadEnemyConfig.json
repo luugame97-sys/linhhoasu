@@ -1,0 +1,106 @@
+{
+  "_table": "HeroRoadEnemyConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "id,isBoss,res,scale",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "isBoss": 0,
+        "res": "sp_dungeonMonster_10401",
+        "scale": 0.5
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "isBoss": 0,
+        "res": "sp_mapMonster_10001",
+        "scale": 0.8
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "isBoss": 0,
+        "res": "sp_mapMonster_10081",
+        "scale": 0.8
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "isBoss": 0,
+      "res": "sp_dungeonMonster_10401",
+      "scale": 0.5
+    },
+    "2": {
+      "id": 2,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10001",
+      "scale": 0.8
+    },
+    "3": {
+      "id": 3,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10081",
+      "scale": 0.8
+    },
+    "4": {
+      "id": 4,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10003",
+      "scale": 0.8
+    },
+    "5": {
+      "id": 5,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10091",
+      "scale": 0.8
+    },
+    "6": {
+      "id": 6,
+      "isBoss": 1,
+      "res": "sp_mapBoss_10006",
+      "scale": 0.2
+    },
+    "7": {
+      "id": 7,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10907",
+      "scale": 0.8
+    },
+    "8": {
+      "id": 8,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10011",
+      "scale": 0.8
+    },
+    "9": {
+      "id": 9,
+      "isBoss": 0,
+      "res": "sp_mapMonster_10002",
+      "scale": 0.8
+    },
+    "10": {
+      "id": 10,
+      "isBoss": 0,
+      "res": "sp_dungeonMonster_10403",
+      "scale": 0.5
+    },
+    "11": {
+      "id": 11,
+      "isBoss": 0,
+      "res": "sp_dungeonMonster_10404",
+      "scale": 0.5
+    },
+    "12": {
+      "id": 12,
+      "isBoss": 1,
+      "res": "sp_mapBoss_10004",
+      "scale": 0.2
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "_table": "BidKingBaseConfig",
+  "_rows": 55,
+  "_type": "object",
+  "_firstKeys": "(obj)[limitPlayer|costItemId|reliefDailyLimit|reliefAmount|reliefBase]",
+  "_sample": [
+    {
+      "limitPlayer": 4
+    },
+    {
+      "costItemId": 339
+    },
+    {
+      "reliefDailyLimit": 99
+    }
+  ],
+  "data": {
+    "limitPlayer": 4,
+    "costItemId": 339,
+    "reliefDailyLimit": 99,
+    "reliefAmount": 50000,
+    "reliefBase": 100000,
+    "reliefCost": [
+      0,
+      0,
+      0,
+      10,
+      10,
+      20,
+      30,
+      50,
+      80,
+      100
+    ],
+    "itemAmount": 5,
+    "roundLimit": 5,
+    "anonymousText": 30140086,
+    "roundKing": [
+      20000,
+      16000,
+      13000,
+      11000,
+      10000
+    ],
+    "minReturn": 10000,
+    "returnRate": 1000,
+    "autoSaleQuality": 6,
+    "robotNameRandomRange": [
+      [
+        20076001,
+        20077248
+      ]
+    ],
+    "matchingTime": [
+      3,
+      10
+    ],
+    "stageCountdown": [
+      60,
+      60,
+      60,
+      60,
+      60
+    ],
+    "roundResultCountdown": 5,
+    "planItemAmount": 5,
+    "cooldownTime": 1,
+    "listableCollectionQuality": 7,
+    "listRandomTime": [
+      10,
+      30
+    ],
+    "listRefreshTime": 5,
+    "salePriceLimitation": [
+      10000,
+      30000
+    ],
+    "addPriceRate": 1000,
+    "minPrice": 500000,
+    "expiredTime": 172800,
+    "dailyLimitation": 20,
+    "forbiddenSale": 432000,
+    "typeFilter": {
+      "1": 30140540,
+      "2": 30140541,
+      "3": 30140542,
+      "4": 30140543,
+      "5": 30140544,
+      "6": 30140545,
+      "7": 30140546,
+      "8": 30140547,
+      "9": 30140548,
+      "10": 30140549
+    },
+    "maxSaleLimitation": 10,
+    "taxFee": 500,
+    "maxColumnBag": 10,
+    "maxRowBag": 100,
+    "maxColumnCollection": 10,
+    "maxRowCollection": 20,
+    "maxCollectionNum": 10,
+    "maxColumnAuction": 10,
+    "maxRowAuction": 100,
+    "maxTempCollection": 20,
+    "rankLimitation": 1,
+    "experienceChange": {
+      "304401": {
+        "id": 1,
+        "count": 1
+      },
+      "304402": {
+        "id": 1,
+        "count": 1
+      },
+      "304403": {
+        "id": 1,
+        "count": 1
+      },
+      "304601": {
+        "id": 1,
+        "count": 1
+      },
+      "304603": {
+        "id": 1,
+        "count": 1
+      },
+      "304604": {
+        "id": 1,
+        "count": 1
+      },
+      "304701": {
+        "id": 1,
+        "count": 1
+      },
+      "304702": {
+        "id": 1,
+        "count": 1
+      },
+      "304703": {
+        "id": 1,
+        "count": 1
+      }
+    },
+    "planCount": 3,
+    "mailID": 148,
+    "valueRate": [
+      10000,
+      8000,
+      6000,
+      4000,
+      2000,
+      1000
+    ],
+    "treasureValueChange": [
+      {
+        "type": 1,
+        "param": [
+          1
+        ],
+        "value": 2000
+      },
+      {
+        "type": 2,
+        "param": [
+          2,
+          2
+        ],
+        "value": 2000
+      }
+    ],
+    "guideBeginCoin": 100000,
+    "guideShowTreasure": [
+      311402,
+      312503,
+      311511,
+      313709,
+      313301,
+      312201,
+      314503,
+      312710,
+      316414,
+      312802,
+      314013,
+      313007,
+      312108,
+      312007,
+      313401,
+      312904,
+      312408,
+      312906,
+      313703,
+      313002,
+      312006
+    ],
+    "guideFirstBid": 30000,
+    "guideSecondBid": 50000,
+    "robotFirstBid": {
+      "1": [
+        20000,
+        20000
+      ],
+      "2": [
+        18000,
+        18000
+      ],
+      "3": [
+        30000,
+        30000
+      ]
+    },
+    "robotCharacter": [
+      303401,
+      303402,
+      303403
+    ],
+    "guideMap": 1,
+    "guideReward": {
+      "id": 339,
+      "count": 100000
+    },
+    "skillQuality": {
+      "501": 7,
+      "502": 6,
+      "503": 5,
+      "504": 4,
+      "505": 3
+    },
+    "experienceCard": {
+      "id": 344,
+      "count": 1
+    }
+  }
+}

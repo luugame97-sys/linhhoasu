@@ -1,0 +1,70 @@
+{
+  "_table": "ValhallaBaseConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "(obj)[exchangeMaterial|exchangeCount|countLimit|fightLimit|callRateShow1]",
+  "_sample": [
+    {
+      "exchangeMaterial": 71
+    },
+    {
+      "exchangeCount": {
+        "72": {
+          "id": 71,
+          "count": 5
+        },
+        "73": {
+          "id": 72,
+          "count": 5
+        }
+      }
+    },
+    {
+      "countLimit": 300
+    }
+  ],
+  "data": {
+    "exchangeMaterial": 71,
+    "exchangeCount": {
+      "72": {
+        "id": 71,
+        "count": 5
+      },
+      "73": {
+        "id": 72,
+        "count": 5
+      }
+    },
+    "countLimit": 300,
+    "fightLimit": 4,
+    "callRateShow1": {
+      "2": 5000,
+      "3": 3900,
+      "4": 950,
+      "5": 150
+    },
+    "callRateShow2": {
+      "2": 4000,
+      "3": 4000,
+      "4": 1700,
+      "5": 250,
+      "6": 50
+    },
+    "callRateShow3": {
+      "2": 5990,
+      "4": 2400,
+      "5": 1200,
+      "6": 350,
+      "7": 60
+    },
+    "planCountLimit": 3,
+    "planConsume": [
+      0,
+      100,
+      200
+    ],
+    "skillCountLimit": 3,
+    "normalCallMin": 100,
+    "resetExchangeRate": 260
+  }
+}

@@ -1,0 +1,5829 @@
+{
+  "_table": "OldTrekSailorConfig",
+  "_rows": 100,
+  "_type": "object",
+  "_firstKeys": "id,type,quality,minStar,apperanceType,strikeSound,apperance,name,desc,unlockShow,recruitElement,entry,initialEntryNum,skill,baseDimAttrs,maxDimAttrs,attrs,moraleAttrs,ownTalk,atlasReward",
+  "_sample": [
+    {
+      "340101": {
+        "id": 340101,
+        "type": 1,
+        "quality": 4,
+        "minStar": 0,
+        "apperanceType": 4,
+        "strikeSound": "effect_sailor_cast_4",
+        "apperance": [
+          104401,
+          4,
+          1403,
+          2402,
+          3409
+        ],
+        "name": 340101,
+        "desc": 30110396,
+        "unlockShow": 1,
+        "recruitElement": 1,
+        "entry": [
+          46,
+          10075
+        ],
+        "initialEntryNum": 1,
+        "skill": 4001,
+        "baseDimAttrs": {
+          "101": 1,
+          "102": 2,
+          "103": 1,
+          "104": 1,
+          "105": 2,
+          "106": 2
+        },
+        "maxDimAttrs": {
+          "101": 3,
+          "102": 7,
+          "103": 3,
+          "104": 6,
+          "105": 9,
+          "106": 10
+        },
+        "attrs": {
+          "1": 1889,
+          "2": 161,
+          "3": 149,
+          "4": 61
+        },
+        "moraleAttrs": 4,
+        "ownTalk": [],
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "340102": {
+        "id": 340102,
+        "type": 1,
+        "quality": 4,
+        "minStar": 0,
+        "apperanceType": 2,
+        "strikeSound": "effect_sailor_cast_2",
+        "apperance": [
+          102401,
+          1,
+          1203,
+          2202,
+          3209
+        ],
+        "name": 340102,
+        "desc": 30110397,
+        "unlockShow": 1,
+        "recruitElement": 1,
+        "entry": [
+          41,
+          10025
+        ],
+        "initialEntryNum": 1,
+        "skill": 4002,
+        "baseDimAttrs": {
+          "101": 2,
+          "102": 1,
+          "103": 1,
+          "104": 1,
+          "105": 2,
+          "106": 2
+        },
+        "maxDimAttrs": {
+          "101": 10,
+          "102": 4,
+          "103": 2,
+          "104": 4,
+          "105": 8,
+          "106": 10
+        },
+        "attrs": {
+          "1": 1961,
+          "2": 159,
+          "3": 165,
+          "4": 58
+        },
+        "moraleAttrs": 4,
+        "ownTalk": [],
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "340103": {
+        "id": 340103,
+        "type": 1,
+        "quality": 4,
+        "minStar": 0,
+        "apperanceType": 1,
+        "strikeSound": "effect_sailor_cast_1",
+        "apperance": [
+          101401,
+          2,
+          1103,
+          2102,
+          3109
+        ],
+        "name": 340103,
+        "desc": 30110398,
+        "unlockShow": 1,
+        "recruitElement": 1,
+        "entry": [
+          45,
+          10025
+        ],
+        "initialEntryNum": 1,
+        "skill": 4003,
+        "baseDimAttrs": {
+          "101": 2,
+          "102": 1,
+          "103": 2,
+          "104": 1,
+          "105": 2,
+          "106": 1
+        },
+        "maxDimAttrs": {
+          "101": 8,
+          "102": 4,
+          "103": 10,
+          "104": 1,
+          "105": 11,
+          "106": 4
+        },
+        "attrs": {
+          "1": 2307,
+          "2": 155,
+          "3": 156,
+          "4": 58
+        },
+        "moraleAttrs": 4,
+        "ownTalk": [],
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "340101": {
+      "id": 340101,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104401,
+        4,
+        1403,
+        2402,
+        3409
+      ],
+      "name": 340101,
+      "desc": 30110396,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        46,
+        10075
+      ],
+      "initialEntryNum": 1,
+      "skill": 4001,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 1,
+        "104": 1,
+        "105": 2,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 3,
+        "102": 7,
+        "103": 3,
+        "104": 6,
+        "105": 9,
+        "106": 10
+      },
+      "attrs": {
+        "1": 1889,
+        "2": 161,
+        "3": 149,
+        "4": 61
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340102": {
+      "id": 340102,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102401,
+        1,
+        1203,
+        2202,
+        3209
+      ],
+      "name": 340102,
+      "desc": 30110397,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        41,
+        10025
+      ],
+      "initialEntryNum": 1,
+      "skill": 4002,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 1,
+        "104": 1,
+        "105": 2,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 10,
+        "102": 4,
+        "103": 2,
+        "104": 4,
+        "105": 8,
+        "106": 10
+      },
+      "attrs": {
+        "1": 1961,
+        "2": 159,
+        "3": 165,
+        "4": 58
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340103": {
+      "id": 340103,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101401,
+        2,
+        1103,
+        2102,
+        3109
+      ],
+      "name": 340103,
+      "desc": 30110398,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        45,
+        10025
+      ],
+      "initialEntryNum": 1,
+      "skill": 4003,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 2,
+        "104": 1,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 8,
+        "102": 4,
+        "103": 10,
+        "104": 1,
+        "105": 11,
+        "106": 4
+      },
+      "attrs": {
+        "1": 2307,
+        "2": 155,
+        "3": 156,
+        "4": 58
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340104": {
+      "id": 340104,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103401,
+        11,
+        1303,
+        2302,
+        3309
+      ],
+      "name": 340104,
+      "desc": 30110399,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        42,
+        10125
+      ],
+      "initialEntryNum": 1,
+      "skill": 4004,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 2,
+        "103": 1,
+        "104": 1,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 11,
+        "103": 4,
+        "104": 3,
+        "105": 5,
+        "106": 8
+      },
+      "attrs": {
+        "1": 2009,
+        "2": 165,
+        "3": 158,
+        "4": 57
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340105": {
+      "id": 340105,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103402,
+        3,
+        1303,
+        2302,
+        3309
+      ],
+      "name": 340105,
+      "desc": 30110400,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        43,
+        10065
+      ],
+      "initialEntryNum": 1,
+      "skill": 4005,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 2,
+        "104": 2,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 8,
+        "103": 10,
+        "104": 9,
+        "105": 1,
+        "106": 5
+      },
+      "attrs": {
+        "1": 1993,
+        "2": 148,
+        "3": 170,
+        "4": 57
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340201": {
+      "id": 340201,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103401,
+        3,
+        2303,
+        3302,
+        1309
+      ],
+      "name": 340201,
+      "desc": 30110401,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        46,
+        10015
+      ],
+      "initialEntryNum": 1,
+      "skill": 4101,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 2,
+        "104": 1,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 10,
+        "102": 3,
+        "103": 8,
+        "104": 3,
+        "105": 3,
+        "106": 11
+      },
+      "attrs": {
+        "1": 2037,
+        "2": 155,
+        "3": 169,
+        "4": 61
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340202": {
+      "id": 340202,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101402,
+        2,
+        2103,
+        3102,
+        1109
+      ],
+      "name": 340202,
+      "desc": 30110402,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        44,
+        10025
+      ],
+      "initialEntryNum": 1,
+      "skill": 4102,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 2,
+        "104": 2,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 4,
+        "102": 3,
+        "103": 7,
+        "104": 10,
+        "105": 10,
+        "106": 4
+      },
+      "attrs": {
+        "1": 2239,
+        "2": 151,
+        "3": 155,
+        "4": 55
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340203": {
+      "id": 340203,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102402,
+        1,
+        2203,
+        3202,
+        1209
+      ],
+      "name": 340203,
+      "desc": 30110403,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        43,
+        10135
+      ],
+      "initialEntryNum": 1,
+      "skill": 4103,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 2,
+        "104": 1,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 8,
+        "103": 11,
+        "104": 3,
+        "105": 2,
+        "106": 9
+      },
+      "attrs": {
+        "1": 2029,
+        "2": 161,
+        "3": 163,
+        "4": 61
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340204": {
+      "id": 340204,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104402,
+        21,
+        2403,
+        3402,
+        1409
+      ],
+      "name": 340204,
+      "desc": 30110404,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        41,
+        10135
+      ],
+      "initialEntryNum": 1,
+      "skill": 4104,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 2,
+        "104": 1,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 11,
+        "102": 3,
+        "103": 9,
+        "104": 3,
+        "105": 8,
+        "106": 4
+      },
+      "attrs": {
+        "1": 1932,
+        "2": 172,
+        "3": 164,
+        "4": 53
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340205": {
+      "id": 340205,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101401,
+        4,
+        2103,
+        3102,
+        1109
+      ],
+      "name": 340205,
+      "desc": 30110405,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        45,
+        10045
+      ],
+      "initialEntryNum": 1,
+      "skill": 4105,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 2,
+        "104": 1,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 8,
+        "102": 5,
+        "103": 8,
+        "104": 5,
+        "105": 10,
+        "106": 2
+      },
+      "attrs": {
+        "1": 1935,
+        "2": 166,
+        "3": 155,
+        "4": 64
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340301": {
+      "id": 340301,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101402,
+        3,
+        3103,
+        1102,
+        2109
+      ],
+      "name": 340301,
+      "desc": 30110406,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        43,
+        10145
+      ],
+      "initialEntryNum": 1,
+      "skill": 4201,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 2,
+        "104": 1,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 8,
+        "103": 11,
+        "104": 2,
+        "105": 8,
+        "106": 4
+      },
+      "attrs": {
+        "1": 2072,
+        "2": 149,
+        "3": 171,
+        "4": 62
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340302": {
+      "id": 340302,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102401,
+        2,
+        3203,
+        1202,
+        2209
+      ],
+      "name": 340302,
+      "desc": 30110407,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        42,
+        10065
+      ],
+      "initialEntryNum": 1,
+      "skill": 4202,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 1,
+        "104": 2,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 3,
+        "102": 11,
+        "103": 4,
+        "104": 8,
+        "105": 4,
+        "106": 8
+      },
+      "attrs": {
+        "1": 2361,
+        "2": 145,
+        "3": 146,
+        "4": 55
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340303": {
+      "id": 340303,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103402,
+        31,
+        3303,
+        1302,
+        2309
+      ],
+      "name": 340303,
+      "desc": 30110408,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        44,
+        10095
+      ],
+      "initialEntryNum": 1,
+      "skill": 4203,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 1,
+        "104": 2,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 4,
+        "102": 9,
+        "103": 4,
+        "104": 10,
+        "105": 8,
+        "106": 3
+      },
+      "attrs": {
+        "1": 1906,
+        "2": 177,
+        "3": 168,
+        "4": 53
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340304": {
+      "id": 340304,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101401,
+        4,
+        3103,
+        1102,
+        2109
+      ],
+      "name": 340304,
+      "desc": 30110409,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        41,
+        10105
+      ],
+      "initialEntryNum": 1,
+      "skill": 4204,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 2,
+        "104": 2,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 10,
+        "102": 6,
+        "103": 7,
+        "104": 9,
+        "105": 3,
+        "106": 3
+      },
+      "attrs": {
+        "1": 1841,
+        "2": 169,
+        "3": 157,
+        "4": 65
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340305": {
+      "id": 340305,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104401,
+        1,
+        3403,
+        1402,
+        2409
+      ],
+      "name": 340305,
+      "desc": 30110410,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        46,
+        10045
+      ],
+      "initialEntryNum": 1,
+      "skill": 4205,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 2,
+        "104": 2,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 3,
+        "102": 2,
+        "103": 10,
+        "104": 8,
+        "105": 4,
+        "106": 11
+      },
+      "attrs": {
+        "1": 2027,
+        "2": 155,
+        "3": 160,
+        "4": 58
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340401": {
+      "id": 340401,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103401,
+        2,
+        1302,
+        4303,
+        2309
+      ],
+      "name": 340401,
+      "desc": 30110435,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        46,
+        10115
+      ],
+      "initialEntryNum": 1,
+      "skill": 4301,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 1,
+        "104": 1,
+        "105": 2,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 2,
+        "102": 8,
+        "103": 4,
+        "104": 3,
+        "105": 10,
+        "106": 11
+      },
+      "attrs": {
+        "1": 2215,
+        "2": 154,
+        "3": 157,
+        "4": 56
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340402": {
+      "id": 340402,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102401,
+        41,
+        2202,
+        4203,
+        3209
+      ],
+      "name": 340402,
+      "desc": 30110436,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        44,
+        10035
+      ],
+      "initialEntryNum": 1,
+      "skill": 4302,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 2,
+        "104": 2,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 7,
+        "103": 8,
+        "104": 11,
+        "105": 4,
+        "106": 3
+      },
+      "attrs": {
+        "1": 1882,
+        "2": 172,
+        "3": 169,
+        "4": 54
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340403": {
+      "id": 340403,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104401,
+        4,
+        3402,
+        4403,
+        1409
+      ],
+      "name": 340403,
+      "desc": 30110437,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        42,
+        10025
+      ],
+      "initialEntryNum": 1,
+      "skill": 4303,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 2,
+        "104": 1,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 4,
+        "102": 11,
+        "103": 8,
+        "104": 4,
+        "105": 7,
+        "106": 4
+      },
+      "attrs": {
+        "1": 1843,
+        "2": 170,
+        "3": 147,
+        "4": 62
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340404": {
+      "id": 340404,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101401,
+        3,
+        1102,
+        4103,
+        3109
+      ],
+      "name": 340404,
+      "desc": 30110438,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        45,
+        10055
+      ],
+      "initialEntryNum": 1,
+      "skill": 4304,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 2,
+        "104": 1,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 3,
+        "102": 10,
+        "103": 8,
+        "104": 3,
+        "105": 10,
+        "106": 4
+      },
+      "attrs": {
+        "1": 1976,
+        "2": 151,
+        "3": 164,
+        "4": 58
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "340405": {
+      "id": 340405,
+      "type": 1,
+      "quality": 4,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102402,
+        1,
+        3202,
+        4203,
+        1209
+      ],
+      "name": 340405,
+      "desc": 30110439,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        43,
+        10095
+      ],
+      "initialEntryNum": 1,
+      "skill": 4305,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 2,
+        "104": 2,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 8,
+        "102": 3,
+        "103": 11,
+        "104": 8,
+        "105": 5,
+        "106": 3
+      },
+      "attrs": {
+        "1": 1937,
+        "2": 159,
+        "3": 156,
+        "4": 61
+      },
+      "moraleAttrs": 4,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "350101": {
+      "id": 350101,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102501,
+        4,
+        1203,
+        2202,
+        3209
+      ],
+      "name": 350101,
+      "desc": 30110381,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        52,
+        10004
+      ],
+      "initialEntryNum": 1,
+      "skill": 5001,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 3,
+        "104": 1,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 3,
+        "102": 17,
+        "103": 13,
+        "104": 6,
+        "105": 5,
+        "106": 13
+      },
+      "attrs": {
+        "1": 2439,
+        "2": 215,
+        "3": 184,
+        "4": 77
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350102": {
+      "id": 350102,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101501,
+        2,
+        1103,
+        2102,
+        3109
+      ],
+      "name": 350102,
+      "desc": 30110382,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        54,
+        10024
+      ],
+      "initialEntryNum": 1,
+      "skill": 5002,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 3,
+        "103": 1,
+        "104": 3,
+        "105": 1,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 3,
+        "102": 11,
+        "103": 8,
+        "104": 15,
+        "105": 7,
+        "106": 13
+      },
+      "attrs": {
+        "1": 2846,
+        "2": 199,
+        "3": 197,
+        "4": 70
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350103": {
+      "id": 350103,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104501,
+        3,
+        1403,
+        2402,
+        3409
+      ],
+      "name": 350103,
+      "desc": 30110383,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        51,
+        10034
+      ],
+      "initialEntryNum": 1,
+      "skill": 5003,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 1,
+        "103": 1,
+        "104": 1,
+        "105": 3,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 17,
+        "102": 3,
+        "103": 6,
+        "104": 4,
+        "105": 15,
+        "106": 12
+      },
+      "attrs": {
+        "1": 2432,
+        "2": 186,
+        "3": 207,
+        "4": 75
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350104": {
+      "id": 350104,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103501,
+        11,
+        1303,
+        2302,
+        3309
+      ],
+      "name": 350104,
+      "desc": 30110384,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        53,
+        10094
+      ],
+      "initialEntryNum": 1,
+      "skill": 5004,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 3,
+        "104": 1,
+        "105": 2,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 14,
+        "102": 7,
+        "103": 16,
+        "104": 6,
+        "105": 3,
+        "106": 11
+      },
+      "attrs": {
+        "1": 2335,
+        "2": 227,
+        "3": 200,
+        "4": 68
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350105": {
+      "id": 350105,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102502,
+        1,
+        1203,
+        2202,
+        3209
+      ],
+      "name": 350105,
+      "desc": 30110385,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        55,
+        10124
+      ],
+      "initialEntryNum": 1,
+      "skill": 5005,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 3,
+        "104": 1,
+        "105": 3,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 6,
+        "103": 13,
+        "104": 3,
+        "105": 17,
+        "106": 13
+      },
+      "attrs": {
+        "1": 2498,
+        "2": 199,
+        "3": 192,
+        "4": 74
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350201": {
+      "id": 350201,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102501,
+        21,
+        2203,
+        3202,
+        1209
+      ],
+      "name": 350201,
+      "desc": 30110386,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        53,
+        10004
+      ],
+      "initialEntryNum": 1,
+      "skill": 5101,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 3,
+        "104": 1,
+        "105": 3,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 5,
+        "103": 16,
+        "104": 5,
+        "105": 11,
+        "106": 13
+      },
+      "attrs": {
+        "1": 2309,
+        "2": 207,
+        "3": 215,
+        "4": 69
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350202": {
+      "id": 350202,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103502,
+        2,
+        2303,
+        3302,
+        1309
+      ],
+      "name": 350202,
+      "desc": 30110387,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        55,
+        10064
+      ],
+      "initialEntryNum": 1,
+      "skill": 5102,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 2,
+        "103": 1,
+        "104": 2,
+        "105": 3,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 14,
+        "102": 12,
+        "103": 7,
+        "104": 3,
+        "105": 15,
+        "106": 6
+      },
+      "attrs": {
+        "1": 2802,
+        "2": 183,
+        "3": 189,
+        "4": 70
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350203": {
+      "id": 350203,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101502,
+        1,
+        2103,
+        3102,
+        1109
+      ],
+      "name": 350203,
+      "desc": 30110388,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        52,
+        10074
+      ],
+      "initialEntryNum": 1,
+      "skill": 5103,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 3,
+        "103": 1,
+        "104": 1,
+        "105": 1,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 14,
+        "102": 14,
+        "103": 4,
+        "104": 5,
+        "105": 8,
+        "106": 12
+      },
+      "attrs": {
+        "1": 2518,
+        "2": 194,
+        "3": 194,
+        "4": 79
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350204": {
+      "id": 350204,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102502,
+        4,
+        2203,
+        3202,
+        1209
+      ],
+      "name": 350204,
+      "desc": 30110389,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        54,
+        10084
+      ],
+      "initialEntryNum": 1,
+      "skill": 5104,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 3,
+        "103": 1,
+        "104": 2,
+        "105": 3,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 12,
+        "103": 3,
+        "104": 15,
+        "105": 14,
+        "106": 6
+      },
+      "attrs": {
+        "1": 2478,
+        "2": 209,
+        "3": 196,
+        "4": 77
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350205": {
+      "id": 350205,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104502,
+        3,
+        2403,
+        3402,
+        1409
+      ],
+      "name": 350205,
+      "desc": 30110390,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        56,
+        10004
+      ],
+      "initialEntryNum": 1,
+      "skill": 5105,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 1,
+        "104": 3,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 4,
+        "103": 6,
+        "104": 12,
+        "105": 14,
+        "106": 15
+      },
+      "attrs": {
+        "1": 2440,
+        "2": 183,
+        "3": 214,
+        "4": 74
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350301": {
+      "id": 350301,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104501,
+        4,
+        3403,
+        1402,
+        2409
+      ],
+      "name": 350301,
+      "desc": 30110391,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        53,
+        10004
+      ],
+      "initialEntryNum": 1,
+      "skill": 5201,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 3,
+        "103": 3,
+        "104": 1,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 14,
+        "102": 11,
+        "103": 17,
+        "104": 6,
+        "105": 5,
+        "106": 4
+      },
+      "attrs": {
+        "1": 2307,
+        "2": 213,
+        "3": 192,
+        "4": 76
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350302": {
+      "id": 350302,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102501,
+        1,
+        3203,
+        1202,
+        2209
+      ],
+      "name": 350302,
+      "desc": 30110392,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        56,
+        10144
+      ],
+      "initialEntryNum": 1,
+      "skill": 5202,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 3,
+        "104": 1,
+        "105": 3,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 5,
+        "103": 11,
+        "104": 4,
+        "105": 14,
+        "106": 17
+      },
+      "attrs": {
+        "1": 2386,
+        "2": 210,
+        "3": 201,
+        "4": 75
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350303": {
+      "id": 350303,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103501,
+        2,
+        3303,
+        1302,
+        2309
+      ],
+      "name": 350303,
+      "desc": 30110393,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        55,
+        10144
+      ],
+      "initialEntryNum": 1,
+      "skill": 5203,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 1,
+        "103": 1,
+        "104": 3,
+        "105": 3,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 14,
+        "102": 6,
+        "103": 4,
+        "104": 11,
+        "105": 17,
+        "106": 5
+      },
+      "attrs": {
+        "1": 2955,
+        "2": 196,
+        "3": 192,
+        "4": 69
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350304": {
+      "id": 350304,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104502,
+        31,
+        3403,
+        1402,
+        2409
+      ],
+      "name": 350304,
+      "desc": 30110394,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        51,
+        10084
+      ],
+      "initialEntryNum": 1,
+      "skill": 5204,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 3,
+        "103": 1,
+        "104": 3,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 17,
+        "102": 13,
+        "103": 5,
+        "104": 11,
+        "105": 7,
+        "106": 4
+      },
+      "attrs": {
+        "1": 2398,
+        "2": 208,
+        "3": 202,
+        "4": 69
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350305": {
+      "id": 350305,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101501,
+        3,
+        3103,
+        1102,
+        2109
+      ],
+      "name": 350305,
+      "desc": 30110395,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        52,
+        10034
+      ],
+      "initialEntryNum": 1,
+      "skill": 5205,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 3,
+        "103": 1,
+        "104": 3,
+        "105": 1,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 15,
+        "103": 7,
+        "104": 12,
+        "105": 4,
+        "106": 13
+      },
+      "attrs": {
+        "1": 2527,
+        "2": 199,
+        "3": 204,
+        "4": 77
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350401": {
+      "id": 350401,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102501,
+        3,
+        1202,
+        4203,
+        2209
+      ],
+      "name": 350401,
+      "desc": 30110430,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        52,
+        10154
+      ],
+      "initialEntryNum": 1,
+      "skill": 5301,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 3,
+        "103": 1,
+        "104": 1,
+        "105": 3,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 14,
+        "103": 5,
+        "104": 6,
+        "105": 14,
+        "106": 11
+      },
+      "attrs": {
+        "1": 2571,
+        "2": 187,
+        "3": 207,
+        "4": 75
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350402": {
+      "id": 350402,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101501,
+        41,
+        2102,
+        4103,
+        3109
+      ],
+      "name": 350402,
+      "desc": 30110431,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        55,
+        10084
+      ],
+      "initialEntryNum": 1,
+      "skill": 5302,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 3,
+        "103": 1,
+        "104": 1,
+        "105": 3,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 12,
+        "102": 13,
+        "103": 5,
+        "104": 3,
+        "105": 17,
+        "106": 7
+      },
+      "attrs": {
+        "1": 2495,
+        "2": 217,
+        "3": 196,
+        "4": 67
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350403": {
+      "id": 350403,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103501,
+        4,
+        3302,
+        4303,
+        1309
+      ],
+      "name": 350403,
+      "desc": 30110432,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        56,
+        10054
+      ],
+      "initialEntryNum": 1,
+      "skill": 5303,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 2,
+        "103": 1,
+        "104": 3,
+        "105": 1,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 11,
+        "102": 7,
+        "103": 5,
+        "104": 12,
+        "105": 5,
+        "106": 17
+      },
+      "attrs": {
+        "1": 2259,
+        "2": 200,
+        "3": 194,
+        "4": 80
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350404": {
+      "id": 350404,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104501,
+        2,
+        1402,
+        4403,
+        3409
+      ],
+      "name": 350404,
+      "desc": 30110433,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        53,
+        10114
+      ],
+      "initialEntryNum": 1,
+      "skill": 5304,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 4,
+        "104": 3,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 5,
+        "103": 16,
+        "104": 14,
+        "105": 11,
+        "106": 5
+      },
+      "attrs": {
+        "1": 2771,
+        "2": 194,
+        "3": 190,
+        "4": 68
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "350405": {
+      "id": 350405,
+      "type": 1,
+      "quality": 5,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103502,
+        1,
+        2302,
+        4303,
+        3309
+      ],
+      "name": 350405,
+      "desc": 30110434,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        53,
+        10054
+      ],
+      "initialEntryNum": 1,
+      "skill": 5305,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 3,
+        "103": 3,
+        "104": 1,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 14,
+        "102": 13,
+        "103": 16,
+        "104": 6,
+        "105": 2,
+        "106": 6
+      },
+      "attrs": {
+        "1": 2469,
+        "2": 195,
+        "3": 198,
+        "4": 72
+      },
+      "moraleAttrs": 12,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "360101": {
+      "id": 360101,
+      "type": 0,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_360101",
+      "apperance": [
+        3601011,
+        3601012,
+        3601013,
+        3601019
+      ],
+      "name": 360101,
+      "desc": 30110341,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        66,
+        11007,
+        11008
+      ],
+      "initialEntryNum": 1,
+      "skill": 6001,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 4,
+        "103": 1,
+        "104": 2,
+        "105": 4,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 4,
+        "102": 20,
+        "103": 9,
+        "104": 7,
+        "105": 17,
+        "106": 25
+      },
+      "attrs": {
+        "1": 3905,
+        "2": 246,
+        "3": 247,
+        "4": 96
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12172,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360102": {
+      "id": 360102,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104601,
+        11,
+        1402,
+        1403,
+        1409
+      ],
+      "name": 360102,
+      "desc": 30110342,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        665,
+        10003,
+        10033
+      ],
+      "initialEntryNum": 1,
+      "skill": 6002,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 4,
+        "104": 1,
+        "105": 5,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 19,
+        "102": 11,
+        "103": 18,
+        "104": 4,
+        "105": 26,
+        "106": 4
+      },
+      "attrs": {
+        "1": 3080,
+        "2": 276,
+        "3": 271,
+        "4": 88
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360103": {
+      "id": 360103,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103601,
+        3,
+        1302,
+        1303,
+        1309
+      ],
+      "name": 360103,
+      "desc": 30110343,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        63,
+        10013,
+        11009
+      ],
+      "initialEntryNum": 1,
+      "skill": 6003,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 3,
+        "103": 5,
+        "104": 2,
+        "105": 2,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 17,
+        "103": 27,
+        "104": 5,
+        "105": 7,
+        "106": 20
+      },
+      "attrs": {
+        "1": 3399,
+        "2": 247,
+        "3": 276,
+        "4": 95
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360104": {
+      "id": 360104,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103602,
+        3,
+        1302,
+        1303,
+        1309
+      ],
+      "name": 360104,
+      "desc": 30110344,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        64,
+        10043,
+        10123
+      ],
+      "initialEntryNum": 1,
+      "skill": 6004,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 4,
+        "104": 5,
+        "105": 4,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 7,
+        "103": 17,
+        "104": 25,
+        "105": 20,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3229,
+        "2": 250,
+        "3": 272,
+        "4": 98
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360105": {
+      "id": 360105,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102601,
+        11,
+        1202,
+        1203,
+        1209
+      ],
+      "name": 360105,
+      "desc": 30110345,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        66,
+        10003,
+        11010
+      ],
+      "initialEntryNum": 1,
+      "skill": 6005,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 4,
+        "103": 1,
+        "104": 2,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 21,
+        "102": 17,
+        "103": 5,
+        "104": 6,
+        "105": 7,
+        "106": 26
+      },
+      "attrs": {
+        "1": 3079,
+        "2": 283,
+        "3": 278,
+        "4": 91
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360106": {
+      "id": 360106,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102602,
+        4,
+        1202,
+        1203,
+        1209
+      ],
+      "name": 360106,
+      "desc": 30110346,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        464,
+        10093,
+        10043
+      ],
+      "initialEntryNum": 1,
+      "skill": 6006,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 2,
+        "103": 1,
+        "104": 6,
+        "105": 2,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 18,
+        "102": 5,
+        "103": 8,
+        "104": 25,
+        "105": 10,
+        "106": 16
+      },
+      "attrs": {
+        "1": 2976,
+        "2": 266,
+        "3": 257,
+        "4": 104
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360107": {
+      "id": 360107,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104602,
+        1,
+        1402,
+        1403,
+        1409
+      ],
+      "name": 360107,
+      "desc": 30110347,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        61,
+        10043,
+        11011
+      ],
+      "initialEntryNum": 1,
+      "skill": 6007,
+      "baseDimAttrs": {
+        "101": 6,
+        "102": 1,
+        "103": 1,
+        "104": 1,
+        "105": 4,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 5,
+        "103": 8,
+        "104": 9,
+        "105": 18,
+        "106": 17
+      },
+      "attrs": {
+        "1": 3309,
+        "2": 267,
+        "3": 254,
+        "4": 99
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360108": {
+      "id": 360108,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101601,
+        2,
+        1102,
+        1103,
+        1109
+      ],
+      "name": 360108,
+      "desc": 30110348,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        161,
+        10063,
+        10023
+      ],
+      "initialEntryNum": 1,
+      "skill": 6008,
+      "baseDimAttrs": {
+        "101": 6,
+        "102": 4,
+        "103": 1,
+        "104": 4,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 17,
+        "103": 6,
+        "104": 21,
+        "105": 5,
+        "106": 8
+      },
+      "attrs": {
+        "1": 3678,
+        "2": 240,
+        "3": 249,
+        "4": 93
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360109": {
+      "id": 360109,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103603,
+        1,
+        1302,
+        1303,
+        1309
+      ],
+      "name": 360109,
+      "desc": 30110349,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        65,
+        10053,
+        10043
+      ],
+      "initialEntryNum": 1,
+      "skill": 6009,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 1,
+        "104": 4,
+        "105": 6,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 16,
+        "102": 9,
+        "103": 5,
+        "104": 20,
+        "105": 25,
+        "106": 7
+      },
+      "attrs": {
+        "1": 3295,
+        "2": 269,
+        "3": 262,
+        "4": 96
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360110": {
+      "id": 360110,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101602,
+        2,
+        1102,
+        1103,
+        1109
+      ],
+      "name": 360110,
+      "desc": 30110350,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        62,
+        10023,
+        10063
+      ],
+      "initialEntryNum": 1,
+      "skill": 6010,
+      "baseDimAttrs": {
+        "101": 3,
+        "102": 5,
+        "103": 4,
+        "104": 1,
+        "105": 2,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 18,
+        "102": 25,
+        "103": 18,
+        "104": 6,
+        "105": 7,
+        "106": 8
+      },
+      "attrs": {
+        "1": 3682,
+        "2": 253,
+        "3": 249,
+        "4": 95
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360111": {
+      "id": 360111,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101603,
+        4,
+        1102,
+        1103,
+        1109
+      ],
+      "name": 360111,
+      "desc": 30110351,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        362,
+        10003,
+        11012
+      ],
+      "initialEntryNum": 1,
+      "skill": 6011,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 4,
+        "103": 3,
+        "104": 4,
+        "105": 2,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 27,
+        "103": 20,
+        "104": 17,
+        "105": 6,
+        "106": 5
+      },
+      "attrs": {
+        "1": 3154,
+        "2": 268,
+        "3": 251,
+        "4": 104
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360112": {
+      "id": 360112,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104603,
+        4,
+        1402,
+        1403,
+        1409
+      ],
+      "name": 360112,
+      "desc": 30110352,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        264,
+        10013,
+        1001
+      ],
+      "initialEntryNum": 1,
+      "skill": 6012,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 2,
+        "104": 4,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 9,
+        "102": 17,
+        "103": 4,
+        "104": 27,
+        "105": 7,
+        "106": 18
+      },
+      "attrs": {
+        "1": 2947,
+        "2": 239,
+        "3": 233,
+        "4": 89
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360113": {
+      "id": 360113,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102603,
+        4,
+        1202,
+        1203,
+        1209
+      ],
+      "name": 360113,
+      "desc": 30110353,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        666,
+        10123,
+        1002
+      ],
+      "initialEntryNum": 1,
+      "skill": 6013,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 2,
+        "103": 1,
+        "104": 4,
+        "105": 1,
+        "106": 5
+      },
+      "maxDimAttrs": {
+        "101": 17,
+        "102": 7,
+        "103": 9,
+        "104": 20,
+        "105": 4,
+        "106": 25
+      },
+      "attrs": {
+        "1": 2868,
+        "2": 232,
+        "3": 234,
+        "4": 89
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360114": {
+      "id": 360114,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101604,
+        4,
+        1102,
+        1103,
+        1109
+      ],
+      "name": 360114,
+      "desc": 30110354,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        563,
+        10053,
+        1003
+      ],
+      "initialEntryNum": 1,
+      "skill": 6014,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 3,
+        "103": 5,
+        "104": 2,
+        "105": 4,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 17,
+        "103": 26,
+        "104": 7,
+        "105": 17,
+        "106": 9
+      },
+      "attrs": {
+        "1": 2794,
+        "2": 245,
+        "3": 224,
+        "4": 85
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360201": {
+      "id": 360201,
+      "type": 0,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_360201",
+      "apperance": [
+        3602011,
+        3602012,
+        3602013,
+        3602019
+      ],
+      "name": 360201,
+      "desc": 30110412,
+      "unlockShow": 2,
+      "recruitElement": 2,
+      "entry": [
+        64,
+        11013,
+        11014
+      ],
+      "initialEntryNum": 1,
+      "skill": 6101,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 3,
+        "104": 5,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 10,
+        "102": 7,
+        "103": 16,
+        "104": 25,
+        "105": 7,
+        "106": 17
+      },
+      "attrs": {
+        "1": 3298,
+        "2": 262,
+        "3": 260,
+        "4": 101
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12174,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360202": {
+      "id": 360202,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102604,
+        4,
+        2202,
+        2203,
+        2209
+      ],
+      "name": 360202,
+      "desc": 30110355,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        464,
+        10003,
+        10103
+      ],
+      "initialEntryNum": 1,
+      "skill": 6102,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 2,
+        "104": 5,
+        "105": 4,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 20,
+        "102": 7,
+        "103": 8,
+        "104": 26,
+        "105": 19,
+        "106": 2
+      },
+      "attrs": {
+        "1": 2923,
+        "2": 278,
+        "3": 247,
+        "4": 101
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360203": {
+      "id": 360203,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104604,
+        1,
+        2402,
+        2403,
+        2409
+      ],
+      "name": 360203,
+      "desc": 30110356,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        64,
+        10013,
+        10033
+      ],
+      "initialEntryNum": 1,
+      "skill": 6103,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 4,
+        "103": 1,
+        "104": 5,
+        "105": 4,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 18,
+        "103": 3,
+        "104": 27,
+        "105": 21,
+        "106": 7
+      },
+      "attrs": {
+        "1": 3367,
+        "2": 262,
+        "3": 266,
+        "4": 96
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360204": {
+      "id": 360204,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102601,
+        4,
+        2202,
+        2203,
+        2209
+      ],
+      "name": 360204,
+      "desc": 30110357,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        62,
+        10133,
+        10003
+      ],
+      "initialEntryNum": 1,
+      "skill": 6104,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 5,
+        "103": 4,
+        "104": 2,
+        "105": 4,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 25,
+        "103": 19,
+        "104": 7,
+        "105": 21,
+        "106": 3
+      },
+      "attrs": {
+        "1": 3203,
+        "2": 260,
+        "3": 257,
+        "4": 106
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360205": {
+      "id": 360205,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101601,
+        1,
+        2102,
+        2103,
+        2109
+      ],
+      "name": 360205,
+      "desc": 30110358,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        63,
+        10083,
+        10073
+      ],
+      "initialEntryNum": 1,
+      "skill": 6105,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 5,
+        "104": 1,
+        "105": 4,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 5,
+        "103": 25,
+        "104": 7,
+        "105": 17,
+        "106": 21
+      },
+      "attrs": {
+        "1": 3300,
+        "2": 261,
+        "3": 248,
+        "4": 95
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360206": {
+      "id": 360206,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103604,
+        21,
+        2302,
+        2303,
+        2309
+      ],
+      "name": 360206,
+      "desc": 30110359,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        66,
+        10063,
+        11015
+      ],
+      "initialEntryNum": 1,
+      "skill": 6106,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 2,
+        "104": 1,
+        "105": 4,
+        "106": 5
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 17,
+        "103": 8,
+        "104": 7,
+        "105": 18,
+        "106": 25
+      },
+      "attrs": {
+        "1": 3137,
+        "2": 284,
+        "3": 268,
+        "4": 93
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360207": {
+      "id": 360207,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103601,
+        21,
+        2302,
+        2303,
+        2309
+      ],
+      "name": 360207,
+      "desc": 30110360,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        61,
+        10043,
+        11016
+      ],
+      "initialEntryNum": 1,
+      "skill": 6107,
+      "baseDimAttrs": {
+        "101": 5,
+        "102": 1,
+        "103": 1,
+        "104": 4,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 7,
+        "103": 4,
+        "104": 19,
+        "105": 9,
+        "106": 18
+      },
+      "attrs": {
+        "1": 3280,
+        "2": 281,
+        "3": 266,
+        "4": 90
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360208": {
+      "id": 360208,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102602,
+        3,
+        2202,
+        2203,
+        2209
+      ],
+      "name": 360208,
+      "desc": 30110361,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        561,
+        10073,
+        11017
+      ],
+      "initialEntryNum": 1,
+      "skill": 6108,
+      "baseDimAttrs": {
+        "101": 5,
+        "102": 4,
+        "103": 1,
+        "104": 2,
+        "105": 4,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 18,
+        "103": 6,
+        "104": 7,
+        "105": 16,
+        "106": 10
+      },
+      "attrs": {
+        "1": 3291,
+        "2": 255,
+        "3": 283,
+        "4": 92
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360209": {
+      "id": 360209,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101602,
+        2,
+        2102,
+        2103,
+        2109
+      ],
+      "name": 360209,
+      "desc": 30110362,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        263,
+        10043,
+        10043
+      ],
+      "initialEntryNum": 1,
+      "skill": 6109,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 2,
+        "103": 5,
+        "104": 2,
+        "105": 1,
+        "106": 3
+      },
+      "maxDimAttrs": {
+        "101": 18,
+        "102": 7,
+        "103": 27,
+        "104": 6,
+        "105": 4,
+        "106": 20
+      },
+      "attrs": {
+        "1": 3720,
+        "2": 239,
+        "3": 251,
+        "4": 91
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360210": {
+      "id": 360210,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104601,
+        3,
+        2402,
+        2403,
+        2409
+      ],
+      "name": 360210,
+      "desc": 30110363,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        264,
+        10133,
+        11018
+      ],
+      "initialEntryNum": 1,
+      "skill": 6110,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 4,
+        "104": 4,
+        "105": 2,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 17,
+        "103": 19,
+        "104": 24,
+        "105": 6,
+        "106": 10
+      },
+      "attrs": {
+        "1": 3228,
+        "2": 260,
+        "3": 272,
+        "4": 100
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360211": {
+      "id": 360211,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101603,
+        2,
+        2102,
+        2103,
+        2109
+      ],
+      "name": 360211,
+      "desc": 30110364,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        65,
+        10023,
+        10023
+      ],
+      "initialEntryNum": 1,
+      "skill": 6111,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 2,
+        "103": 3,
+        "104": 4,
+        "105": 5,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 9,
+        "102": 5,
+        "103": 20,
+        "104": 16,
+        "105": 24,
+        "106": 8
+      },
+      "attrs": {
+        "1": 3720,
+        "2": 243,
+        "3": 253,
+        "4": 92
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360212": {
+      "id": 360212,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103602,
+        4,
+        2302,
+        2303,
+        2309
+      ],
+      "name": 360212,
+      "desc": 30110365,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        162,
+        10003,
+        1011
+      ],
+      "initialEntryNum": 1,
+      "skill": 6112,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 4,
+        "103": 4,
+        "104": 2,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 21,
+        "102": 27,
+        "103": 17,
+        "104": 8,
+        "105": 3,
+        "106": 6
+      },
+      "attrs": {
+        "1": 2968,
+        "2": 234,
+        "3": 241,
+        "4": 89
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360213": {
+      "id": 360213,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104602,
+        4,
+        2402,
+        2403,
+        2409
+      ],
+      "name": 360213,
+      "desc": 30110366,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        366,
+        10033,
+        1012
+      ],
+      "initialEntryNum": 1,
+      "skill": 6113,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 2,
+        "103": 1,
+        "104": 4,
+        "105": 1,
+        "106": 5
+      },
+      "maxDimAttrs": {
+        "101": 17,
+        "102": 6,
+        "103": 5,
+        "104": 20,
+        "105": 10,
+        "106": 24
+      },
+      "attrs": {
+        "1": 2904,
+        "2": 236,
+        "3": 245,
+        "4": 86
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360214": {
+      "id": 360214,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102603,
+        4,
+        2202,
+        2203,
+        2209
+      ],
+      "name": 360214,
+      "desc": 30110367,
+      "unlockShow": 1,
+      "recruitElement": 2,
+      "entry": [
+        465,
+        10133,
+        1013
+      ],
+      "initialEntryNum": 1,
+      "skill": 6114,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 4,
+        "104": 2,
+        "105": 4,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 16,
+        "102": 7,
+        "103": 16,
+        "104": 7,
+        "105": 25,
+        "106": 11
+      },
+      "attrs": {
+        "1": 2935,
+        "2": 226,
+        "3": 234,
+        "4": 86
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360301": {
+      "id": 360301,
+      "type": 0,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_360301",
+      "apperance": [
+        3603011,
+        3603012,
+        3603013,
+        3603019
+      ],
+      "name": 360301,
+      "desc": 30110414,
+      "unlockShow": 3,
+      "recruitElement": 3,
+      "entry": [
+        63,
+        11019,
+        11020
+      ],
+      "initialEntryNum": 1,
+      "skill": 6201,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 4,
+        "103": 5,
+        "104": 1,
+        "105": 1,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 18,
+        "103": 24,
+        "104": 6,
+        "105": 7,
+        "106": 21
+      },
+      "attrs": {
+        "1": 3334,
+        "2": 245,
+        "3": 275,
+        "4": 100
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12176,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360302": {
+      "id": 360302,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101604,
+        2,
+        3102,
+        3103,
+        3109
+      ],
+      "name": 360302,
+      "desc": 30110368,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        66,
+        10023,
+        10033
+      ],
+      "initialEntryNum": 1,
+      "skill": 6202,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 2,
+        "103": 3,
+        "104": 4,
+        "105": 1,
+        "106": 5
+      },
+      "maxDimAttrs": {
+        "101": 9,
+        "102": 4,
+        "103": 18,
+        "104": 17,
+        "105": 7,
+        "106": 27
+      },
+      "attrs": {
+        "1": 3594,
+        "2": 257,
+        "3": 253,
+        "4": 93
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360303": {
+      "id": 360303,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103603,
+        1,
+        3302,
+        3303,
+        3309
+      ],
+      "name": 360303,
+      "desc": 30110369,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        666,
+        10043,
+        11021
+      ],
+      "initialEntryNum": 1,
+      "skill": 6203,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 3,
+        "103": 2,
+        "104": 3,
+        "105": 2,
+        "106": 6
+      },
+      "maxDimAttrs": {
+        "101": 9,
+        "102": 19,
+        "103": 6,
+        "104": 18,
+        "105": 5,
+        "106": 25
+      },
+      "attrs": {
+        "1": 3314,
+        "2": 263,
+        "3": 262,
+        "4": 99
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360304": {
+      "id": 360304,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102604,
+        4,
+        3202,
+        3203,
+        3209
+      ],
+      "name": 360304,
+      "desc": 30110370,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        63,
+        10033,
+        10143
+      ],
+      "initialEntryNum": 1,
+      "skill": 6204,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 2,
+        "103": 5,
+        "104": 3,
+        "105": 4,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 7,
+        "103": 25,
+        "104": 20,
+        "105": 19,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3104,
+        "2": 280,
+        "3": 246,
+        "4": 105
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360305": {
+      "id": 360305,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104603,
+        3,
+        3402,
+        3403,
+        3409
+      ],
+      "name": 360305,
+      "desc": 30110371,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        65,
+        10073,
+        10003
+      ],
+      "initialEntryNum": 1,
+      "skill": 6205,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 3,
+        "104": 1,
+        "105": 6,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 19,
+        "102": 7,
+        "103": 19,
+        "104": 9,
+        "105": 24,
+        "106": 4
+      },
+      "attrs": {
+        "1": 3352,
+        "2": 252,
+        "3": 277,
+        "4": 96
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360306": {
+      "id": 360306,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101601,
+        31,
+        3102,
+        3103,
+        3109
+      ],
+      "name": 360306,
+      "desc": 30110372,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        61,
+        10003,
+        11022
+      ],
+      "initialEntryNum": 1,
+      "skill": 6206,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 4,
+        "103": 2,
+        "104": 4,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 26,
+        "102": 17,
+        "103": 7,
+        "104": 16,
+        "105": 10,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3272,
+        "2": 281,
+        "3": 269,
+        "4": 89
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360307": {
+      "id": 360307,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103604,
+        31,
+        3302,
+        3303,
+        3309
+      ],
+      "name": 360307,
+      "desc": 30110373,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        64,
+        10003,
+        11023
+      ],
+      "initialEntryNum": 1,
+      "skill": 6207,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 1,
+        "103": 1,
+        "104": 5,
+        "105": 4,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 7,
+        "103": 7,
+        "104": 25,
+        "105": 20,
+        "106": 16
+      },
+      "attrs": {
+        "1": 3306,
+        "2": 294,
+        "3": 255,
+        "4": 88
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360308": {
+      "id": 360308,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103601,
+        1,
+        3302,
+        3303,
+        3309
+      ],
+      "name": 360308,
+      "desc": 30110374,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        161,
+        10033,
+        11024
+      ],
+      "initialEntryNum": 1,
+      "skill": 6208,
+      "baseDimAttrs": {
+        "101": 5,
+        "102": 1,
+        "103": 1,
+        "104": 4,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 26,
+        "102": 6,
+        "103": 8,
+        "104": 20,
+        "105": 5,
+        "106": 17
+      },
+      "attrs": {
+        "1": 3310,
+        "2": 269,
+        "3": 260,
+        "4": 98
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360309": {
+      "id": 360309,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101602,
+        2,
+        3102,
+        3103,
+        3109
+      ],
+      "name": 360309,
+      "desc": 30110375,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        563,
+        10023,
+        10023
+      ],
+      "initialEntryNum": 1,
+      "skill": 6209,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 3,
+        "103": 6,
+        "104": 4,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 2,
+        "102": 21,
+        "103": 27,
+        "104": 20,
+        "105": 6,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3618,
+        "2": 244,
+        "3": 247,
+        "4": 95
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360310": {
+      "id": 360310,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104604,
+        31,
+        3402,
+        3403,
+        3409
+      ],
+      "name": 360310,
+      "desc": 30110376,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        62,
+        10033,
+        10043
+      ],
+      "initialEntryNum": 1,
+      "skill": 6210,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 5,
+        "103": 1,
+        "104": 2,
+        "105": 4,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 21,
+        "102": 25,
+        "103": 7,
+        "104": 7,
+        "105": 16,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3079,
+        "2": 286,
+        "3": 255,
+        "4": 89
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360311": {
+      "id": 360311,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102601,
+        3,
+        3202,
+        3203,
+        3209
+      ],
+      "name": 360311,
+      "desc": 30110377,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        561,
+        10043,
+        10013
+      ],
+      "initialEntryNum": 1,
+      "skill": 6211,
+      "baseDimAttrs": {
+        "101": 6,
+        "102": 3,
+        "103": 1,
+        "104": 4,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 20,
+        "103": 9,
+        "104": 18,
+        "105": 5,
+        "106": 5
+      },
+      "attrs": {
+        "1": 3389,
+        "2": 250,
+        "3": 277,
+        "4": 92
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360312": {
+      "id": 360312,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104601,
+        4,
+        3402,
+        3403,
+        3409
+      ],
+      "name": 360312,
+      "desc": 30110378,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        465,
+        10003,
+        1021
+      ],
+      "initialEntryNum": 1,
+      "skill": 6212,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 3,
+        "104": 1,
+        "105": 6,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 8,
+        "103": 19,
+        "104": 6,
+        "105": 25,
+        "106": 19
+      },
+      "attrs": {
+        "1": 2813,
+        "2": 225,
+        "3": 224,
+        "4": 91
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360313": {
+      "id": 360313,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103602,
+        4,
+        3302,
+        3303,
+        3309
+      ],
+      "name": 360313,
+      "desc": 30110379,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        464,
+        10023,
+        1022
+      ],
+      "initialEntryNum": 1,
+      "skill": 6213,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 1,
+        "103": 2,
+        "104": 5,
+        "105": 4,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 4,
+        "103": 9,
+        "104": 25,
+        "105": 21,
+        "106": 18
+      },
+      "attrs": {
+        "1": 3001,
+        "2": 240,
+        "3": 233,
+        "4": 84
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360314": {
+      "id": 360314,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102602,
+        4,
+        3202,
+        3203,
+        3209
+      ],
+      "name": 360314,
+      "desc": 30110380,
+      "unlockShow": 1,
+      "recruitElement": 3,
+      "entry": [
+        362,
+        10133,
+        1023
+      ],
+      "initialEntryNum": 1,
+      "skill": 6214,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 5,
+        "103": 4,
+        "104": 2,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 19,
+        "102": 27,
+        "103": 16,
+        "104": 7,
+        "105": 4,
+        "106": 9
+      },
+      "attrs": {
+        "1": 3070,
+        "2": 228,
+        "3": 233,
+        "4": 88
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360401": {
+      "id": 360401,
+      "type": 0,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_360401",
+      "apperance": [
+        3604011,
+        3604012,
+        3604013,
+        3604019
+      ],
+      "name": 360401,
+      "desc": 30110416,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        61,
+        11027,
+        11014
+      ],
+      "initialEntryNum": 1,
+      "skill": 6301,
+      "baseDimAttrs": {
+        "101": 5,
+        "102": 1,
+        "103": 2,
+        "104": 4,
+        "105": 1,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 5,
+        "103": 10,
+        "104": 20,
+        "105": 5,
+        "106": 17
+      },
+      "attrs": {
+        "1": 3882,
+        "2": 253,
+        "3": 256,
+        "4": 94
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12178,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360402": {
+      "id": 360402,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101601,
+        4,
+        4102,
+        4103,
+        4109
+      ],
+      "name": 360402,
+      "desc": 30110417,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        63,
+        10023,
+        10053
+      ],
+      "initialEntryNum": 1,
+      "skill": 6302,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 4,
+        "103": 3,
+        "104": 2,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 18,
+        "103": 24,
+        "104": 8,
+        "105": 8,
+        "106": 17
+      },
+      "attrs": {
+        "1": 3174,
+        "2": 266,
+        "3": 255,
+        "4": 105
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360403": {
+      "id": 360403,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103601,
+        3,
+        4302,
+        4303,
+        4309
+      ],
+      "name": 360403,
+      "desc": 30110418,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        66,
+        10013,
+        10003
+      ],
+      "initialEntryNum": 1,
+      "skill": 6303,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 1,
+        "104": 4,
+        "105": 4,
+        "106": 5
+      },
+      "maxDimAttrs": {
+        "101": 5,
+        "102": 9,
+        "103": 6,
+        "104": 17,
+        "105": 20,
+        "106": 25
+      },
+      "attrs": {
+        "1": 3371,
+        "2": 251,
+        "3": 277,
+        "4": 92
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360404": {
+      "id": 360404,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102601,
+        1,
+        4202,
+        4203,
+        4209
+      ],
+      "name": 360404,
+      "desc": 30110419,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        64,
+        10103,
+        11028
+      ],
+      "initialEntryNum": 1,
+      "skill": 6304,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 2,
+        "103": 4,
+        "104": 4,
+        "105": 2,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 19,
+        "102": 7,
+        "103": 19,
+        "104": 25,
+        "105": 7,
+        "106": 5
+      },
+      "attrs": {
+        "1": 3232,
+        "2": 252,
+        "3": 261,
+        "4": 96
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360405": {
+      "id": 360405,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104601,
+        4,
+        4402,
+        4403,
+        4409
+      ],
+      "name": 360405,
+      "desc": 30110420,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        61,
+        10053,
+        10113
+      ],
+      "initialEntryNum": 1,
+      "skill": 6305,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 2,
+        "104": 4,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 25,
+        "102": 6,
+        "103": 10,
+        "104": 17,
+        "105": 7,
+        "106": 17
+      },
+      "attrs": {
+        "1": 3157,
+        "2": 266,
+        "3": 251,
+        "4": 106
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360406": {
+      "id": 360406,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102602,
+        3,
+        4202,
+        4203,
+        4209
+      ],
+      "name": 360406,
+      "desc": 30110421,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        62,
+        10103,
+        11029
+      ],
+      "initialEntryNum": 1,
+      "skill": 6306,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 4,
+        "104": 2,
+        "105": 2,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 6,
+        "102": 24,
+        "103": 18,
+        "104": 8,
+        "105": 8,
+        "106": 18
+      },
+      "attrs": {
+        "1": 3357,
+        "2": 245,
+        "3": 266,
+        "4": 97
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360407": {
+      "id": 360407,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104602,
+        1,
+        4402,
+        4403,
+        4409
+      ],
+      "name": 360407,
+      "desc": 30110422,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        65,
+        10043,
+        11009
+      ],
+      "initialEntryNum": 1,
+      "skill": 6307,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 1,
+        "104": 4,
+        "105": 6,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 21,
+        "103": 6,
+        "104": 18,
+        "105": 24,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3102,
+        "2": 267,
+        "3": 259,
+        "4": 94
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360408": {
+      "id": 360408,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103602,
+        41,
+        4302,
+        4303,
+        4309
+      ],
+      "name": 360408,
+      "desc": 30110423,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        465,
+        10153,
+        10003
+      ],
+      "initialEntryNum": 1,
+      "skill": 6308,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 1,
+        "103": 1,
+        "104": 1,
+        "105": 6,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 21,
+        "102": 6,
+        "103": 7,
+        "104": 4,
+        "105": 25,
+        "106": 19
+      },
+      "attrs": {
+        "1": 3167,
+        "2": 284,
+        "3": 276,
+        "4": 87
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360409": {
+      "id": 360409,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101602,
+        2,
+        4102,
+        4103,
+        4109
+      ],
+      "name": 360409,
+      "desc": 30110424,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        264,
+        10083,
+        11018
+      ],
+      "initialEntryNum": 1,
+      "skill": 6309,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 2,
+        "103": 4,
+        "104": 5,
+        "105": 3,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 9,
+        "102": 9,
+        "103": 17,
+        "104": 25,
+        "105": 16,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3842,
+        "2": 254,
+        "3": 245,
+        "4": 91
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360410": {
+      "id": 360410,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 1,
+      "strikeSound": "effect_sailor_cast_1",
+      "apperance": [
+        101603,
+        1,
+        4102,
+        4103,
+        4109
+      ],
+      "name": 360410,
+      "desc": 30110425,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        366,
+        10113,
+        10023
+      ],
+      "initialEntryNum": 1,
+      "skill": 6310,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 1,
+        "104": 2,
+        "105": 3,
+        "106": 6
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 17,
+        "103": 5,
+        "104": 11,
+        "105": 17,
+        "106": 25
+      },
+      "attrs": {
+        "1": 3299,
+        "2": 250,
+        "3": 259,
+        "4": 97
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360411": {
+      "id": 360411,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 3,
+      "strikeSound": "effect_sailor_cast_3",
+      "apperance": [
+        103603,
+        41,
+        4302,
+        4303,
+        4309
+      ],
+      "name": 360411,
+      "desc": 30110426,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        263,
+        10013,
+        10103
+      ],
+      "initialEntryNum": 1,
+      "skill": 6311,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 4,
+        "103": 6,
+        "104": 1,
+        "105": 1,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 18,
+        "102": 19,
+        "103": 25,
+        "104": 7,
+        "105": 7,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3017,
+        "2": 285,
+        "3": 259,
+        "4": 88
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360412": {
+      "id": 360412,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 4,
+      "strikeSound": "effect_sailor_cast_4",
+      "apperance": [
+        104603,
+        3,
+        4402,
+        4403,
+        4409
+      ],
+      "name": 360412,
+      "desc": 30110427,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        464,
+        10043,
+        1031
+      ],
+      "initialEntryNum": 1,
+      "skill": 6312,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 4,
+        "103": 2,
+        "104": 5,
+        "105": 3,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 4,
+        "102": 21,
+        "103": 7,
+        "104": 25,
+        "105": 16,
+        "106": 9
+      },
+      "attrs": {
+        "1": 2866,
+        "2": 234,
+        "3": 233,
+        "4": 86
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360413": {
+      "id": 360413,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102603,
+        3,
+        4202,
+        4203,
+        4209
+      ],
+      "name": 360413,
+      "desc": 30110428,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        665,
+        10093,
+        1032
+      ],
+      "initialEntryNum": 1,
+      "skill": 6313,
+      "baseDimAttrs": {
+        "101": 4,
+        "102": 4,
+        "103": 2,
+        "104": 1,
+        "105": 5,
+        "106": 1
+      },
+      "maxDimAttrs": {
+        "101": 19,
+        "102": 19,
+        "103": 7,
+        "104": 5,
+        "105": 26,
+        "106": 6
+      },
+      "attrs": {
+        "1": 2785,
+        "2": 233,
+        "3": 225,
+        "4": 90
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "360414": {
+      "id": 360414,
+      "type": 1,
+      "quality": 6,
+      "minStar": 0,
+      "apperanceType": 2,
+      "strikeSound": "effect_sailor_cast_2",
+      "apperance": [
+        102604,
+        3,
+        4202,
+        4203,
+        4209
+      ],
+      "name": 360414,
+      "desc": 30110429,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        563,
+        10033,
+        1033
+      ],
+      "initialEntryNum": 1,
+      "skill": 6314,
+      "baseDimAttrs": {
+        "101": 1,
+        "102": 2,
+        "103": 5,
+        "104": 4,
+        "105": 1,
+        "106": 4
+      },
+      "maxDimAttrs": {
+        "101": 7,
+        "102": 7,
+        "103": 25,
+        "104": 17,
+        "105": 7,
+        "106": 19
+      },
+      "attrs": {
+        "1": 2918,
+        "2": 226,
+        "3": 227,
+        "4": 85
+      },
+      "moraleAttrs": 30,
+      "ownTalk": [],
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "370101": {
+      "id": 370101,
+      "type": 0,
+      "quality": 7,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_370101",
+      "apperance": [
+        3701011,
+        3701012,
+        3701013,
+        3701019
+      ],
+      "name": 370101,
+      "desc": 30110340,
+      "unlockShow": 1,
+      "recruitElement": 1,
+      "entry": [
+        71,
+        11001,
+        11002,
+        12601
+      ],
+      "initialEntryNum": 1,
+      "skill": 7001,
+      "baseDimAttrs": {
+        "101": 7,
+        "102": 2,
+        "103": 7,
+        "104": 6,
+        "105": 1,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 35,
+        "102": 9,
+        "103": 30,
+        "104": 24,
+        "105": 9,
+        "106": 3
+      },
+      "attrs": {
+        "1": 4013,
+        "2": 350,
+        "3": 336,
+        "4": 114
+      },
+      "moraleAttrs": 80,
+      "homelandAttrs": 500,
+      "homelandBuilding": [
+        172001,
+        172002,
+        172201,
+        172202,
+        172401,
+        172402,
+        172601,
+        172602,
+        172801,
+        172802
+      ],
+      "homelandAttrsName": 30107601,
+      "treasureValueBonusType": 1,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12171,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ]
+    },
+    "370201": {
+      "id": 370201,
+      "type": 0,
+      "quality": 7,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_370201",
+      "apperance": [
+        3702011,
+        3702012,
+        3702013,
+        3702019
+      ],
+      "name": 370201,
+      "desc": 30110411,
+      "unlockShow": 2,
+      "recruitElement": 2,
+      "entry": [
+        75,
+        11003,
+        11004,
+        12602
+      ],
+      "initialEntryNum": 1,
+      "skill": 7101,
+      "baseDimAttrs": {
+        "101": 6,
+        "102": 2,
+        "103": 1,
+        "104": 2,
+        "105": 7,
+        "106": 7
+      },
+      "maxDimAttrs": {
+        "101": 24,
+        "102": 10,
+        "103": 6,
+        "104": 7,
+        "105": 33,
+        "106": 30
+      },
+      "attrs": {
+        "1": 4218,
+        "2": 313,
+        "3": 343,
+        "4": 119
+      },
+      "moraleAttrs": 80,
+      "homelandAttrs": 500,
+      "homelandBuilding": [
+        172003,
+        172004,
+        172203,
+        172204,
+        172403,
+        172404,
+        172603,
+        172604,
+        172803,
+        172804
+      ],
+      "homelandAttrsName": 30107601,
+      "treasureValueBonusType": 2,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12173,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ]
+    },
+    "370301": {
+      "id": 370301,
+      "type": 0,
+      "quality": 7,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_370301",
+      "apperance": [
+        3703011,
+        3703012,
+        3703013,
+        3703019
+      ],
+      "name": 370301,
+      "desc": 30110413,
+      "unlockShow": 3,
+      "recruitElement": 3,
+      "entry": [
+        72,
+        11005,
+        11006,
+        12603
+      ],
+      "initialEntryNum": 1,
+      "skill": 7201,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 7,
+        "103": 2,
+        "104": 6,
+        "105": 6,
+        "106": 2
+      },
+      "maxDimAttrs": {
+        "101": 10,
+        "102": 34,
+        "103": 9,
+        "104": 23,
+        "105": 28,
+        "106": 6
+      },
+      "attrs": {
+        "1": 3872,
+        "2": 349,
+        "3": 303,
+        "4": 127
+      },
+      "moraleAttrs": 80,
+      "homelandAttrs": 500,
+      "homelandBuilding": [
+        172005,
+        172006,
+        172205,
+        172206,
+        172405,
+        172406,
+        172605,
+        172606,
+        172805,
+        172806
+      ],
+      "homelandAttrsName": 30107601,
+      "treasureValueBonusType": 3,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12175,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ]
+    },
+    "370401": {
+      "id": 370401,
+      "type": 0,
+      "quality": 7,
+      "minStar": 0,
+      "apperanceType": 99,
+      "strikeSound": "effect_sailor_cast_370401",
+      "apperance": [
+        3704011,
+        3704012,
+        3704013,
+        3704019
+      ],
+      "name": 370401,
+      "desc": 30110415,
+      "unlockShow": 4,
+      "recruitElement": 4,
+      "entry": [
+        72,
+        11025,
+        11026,
+        12604
+      ],
+      "initialEntryNum": 1,
+      "skill": 7301,
+      "baseDimAttrs": {
+        "101": 2,
+        "102": 7,
+        "103": 1,
+        "104": 1,
+        "105": 7,
+        "106": 7
+      },
+      "maxDimAttrs": {
+        "101": 9,
+        "102": 35,
+        "103": 3,
+        "104": 4,
+        "105": 30,
+        "106": 29
+      },
+      "attrs": {
+        "1": 3944,
+        "2": 354,
+        "3": 344,
+        "4": 113
+      },
+      "moraleAttrs": 80,
+      "homelandAttrs": 500,
+      "homelandBuilding": [
+        172007,
+        172008,
+        172207,
+        172208,
+        172407,
+        172408,
+        172607,
+        172608,
+        172807,
+        172808
+      ],
+      "homelandAttrsName": 30107601,
+      "treasureValueBonusType": 4,
+      "ownTalk": [],
+      "rewards": {
+        "id": 12177,
+        "count": 1
+      },
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ]
+    }
+  }
+}

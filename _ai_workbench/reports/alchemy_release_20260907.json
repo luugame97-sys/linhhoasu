@@ -1,0 +1,102 @@
+{
+  "status": "DEPLOYED",
+  "stage": "/linhhoasu/_ai_workbench/temp/alchemy_20260907_124007",
+  "baseline": {
+    "/linhhoasu/lhs/newServer/src/services/AlchemyCraftService.js": null,
+    "/linhhoasu/webgame/game/js/lhs-alchemy-v1.js": null,
+    "/linhhoasu/webgame/game/index.html": "4766bb380a13c9be8513d30b4b7d1f8a3031bc7824d5b9ea2c7a6a09ba414966",
+    "/linhhoasu/lhs/newServer/src/handlers/alchemy.js": "dba71cac1228ccbafda0299bed752f13617e702ade63468c684b0444d690815d"
+  },
+  "expected": {
+    "/linhhoasu/lhs/newServer/src/services/AlchemyCraftService.js": "e244f00fd8dc45fd791cd0d5bab8e38e1968b2b2d542f81f8789519d2d540ea1",
+    "/linhhoasu/webgame/game/js/lhs-alchemy-v1.js": "ed3e899fa1d7cdfc3e085a7ebedd829d749aa24b626d74915a5cf8979a07e7ae",
+    "/linhhoasu/webgame/game/index.html": "0f7b1cd0c3e176aaf6fa4512c9444a1aed635fa831e16f65e606e08b835c464f",
+    "/linhhoasu/lhs/newServer/src/handlers/alchemy.js": "5384a12c47a311ee8880db96f3b24895cb1d88f32964b26351f855691fa346ea"
+  },
+  "tests": "[2026-09-07 20:40:07] [INFO] [Config] \u5df2\u52a0\u8f7d 714 \u5f20\u914d\u7f6e\u8868\nPASS normal cost, actual pill, reusable formula\nPASS invalid ids and counts do not mutate\nPASS ownership stage and materials\nPASS auto exchanges missing herb only, never free silver\nPASS auto uses owned herbs before exchange\nPASS auto without resources and invalid exchange\nPASS daily cap and partial auto count\nPASS failure consumes materials, no reward\nPASS pill cap stops before extra exchange\nPASS configured level threshold\n{\"result\":\"PASS\",\"tests\":19,\"productionWrites\":0}\n",
+  "beforePm2": [
+    {
+      "name": "lhs-s1001",
+      "pid": 5358,
+      "status": "online",
+      "restarts": 1387
+    },
+    {
+      "name": "lhs-dist",
+      "pid": 30824,
+      "status": "online",
+      "restarts": 32
+    },
+    {
+      "name": "lhs-admin",
+      "pid": 30856,
+      "status": "online",
+      "restarts": 0
+    },
+    {
+      "name": "lhs-real-bots",
+      "pid": 1600,
+      "status": "online",
+      "restarts": 20
+    },
+    {
+      "name": "lhs-s1002",
+      "pid": 3792,
+      "status": "online",
+      "restarts": 59
+    },
+    {
+      "name": "lhs-real-bots-s2",
+      "pid": 1576,
+      "status": "online",
+      "restarts": 3
+    }
+  ],
+  "ready": {
+    "8080": 200,
+    "8083": 200
+  },
+  "backup": "/linhhoasu/_ai_workbench/backups/alchemy_20260907_124007",
+  "afterPm2": [
+    {
+      "name": "lhs-s1001",
+      "pid": 1438,
+      "status": "online",
+      "restarts": 1388
+    },
+    {
+      "name": "lhs-dist",
+      "pid": 30824,
+      "status": "online",
+      "restarts": 32
+    },
+    {
+      "name": "lhs-admin",
+      "pid": 30856,
+      "status": "online",
+      "restarts": 0
+    },
+    {
+      "name": "lhs-real-bots",
+      "pid": 1600,
+      "status": "online",
+      "restarts": 20
+    },
+    {
+      "name": "lhs-s1002",
+      "pid": 1378,
+      "status": "online",
+      "restarts": 60
+    },
+    {
+      "name": "lhs-real-bots-s2",
+      "pid": 1576,
+      "status": "online",
+      "restarts": 3
+    }
+  ],
+  "restarted": [
+    "lhs-s1002",
+    "lhs-s1001"
+  ]
+}

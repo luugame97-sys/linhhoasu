@@ -1,0 +1,96 @@
+{
+  "_table": "HorseRaceOpenConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,startTime,endTime,startRankTime,endRankTime,serverId",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "startTime": 1784304000000,
+        "endTime": 1784908800000,
+        "startRankTime": 1784304000000,
+        "endRankTime": 1784908800000,
+        "serverId": [
+          [
+            1001,
+            1002,
+            1006
+          ]
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "startTime": 3379759200000,
+        "endTime": 3379939200000,
+        "startRankTime": 3379759200000,
+        "endRankTime": 3379939200000,
+        "serverId": [
+          [
+            1001,
+            1002
+          ]
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "startTime": 3379759200000,
+        "endTime": 3379939200000,
+        "startRankTime": 3379759200000,
+        "endRankTime": 3379939200000,
+        "serverId": [
+          [
+            1001,
+            1006
+          ]
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "startTime": 1784304000000,
+      "endTime": 1784908800000,
+      "startRankTime": 1784304000000,
+      "endRankTime": 1784908800000,
+      "serverId": [
+        [
+          1001,
+          1002,
+          1006
+        ]
+      ]
+    },
+    "2": {
+      "id": 2,
+      "startTime": 3379759200000,
+      "endTime": 3379939200000,
+      "startRankTime": 3379759200000,
+      "endRankTime": 3379939200000,
+      "serverId": [
+        [
+          1001,
+          1002
+        ]
+      ]
+    },
+    "3": {
+      "id": 3,
+      "startTime": 3379759200000,
+      "endTime": 3379939200000,
+      "startRankTime": 3379759200000,
+      "endRankTime": 3379939200000,
+      "serverId": [
+        [
+          1001,
+          1006
+        ]
+      ]
+    }
+  }
+}

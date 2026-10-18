@@ -1,0 +1,22 @@
+'use strict';
+const assert=require('assert/strict'),path=require('path');
+const app=process.env.LHS_APP_ROOT||path.resolve(__dirname,'../temp/cross_server_login_20260905');
+function stub(relative,exports){const f=path.join(app,'src',relative+'.js');require.cache[f]={id:f,filename:f,loaded:true,exports};}
+const roles=[{roleId:'r1',userId:'u1',serverId:1001},{roleId:'stale-s2',userId:'stale',serverId:1002},{roleId:'r2',userId:'u2',serverId:1002}];
+let account={accountId:'test',authVersion:1,roles,activeRoleByServer:{1002:'stale-s2'},status:1};
+let session={accountId:'test',authVersion:1,roleId:'r1',userId:'u1',serverId:1001,serverSwitched:true};let allowed=true;
+stub('db/models/Account',{findOne:async()=>account});stub('db/models/Player',{});
+stub('services/PlayerService',{loadPlayer:async id=>({userId:id,accountId:'test',serverId:id==='u2'?1002:1001,level:99}),resetPlayerForServerSwitch:()=>{throw Error('RESET_FORBIDDEN');}});
+stub('services/AuthSessionService',{get:async token=>token==='valid'?session:null});
+stub('services/ServerAccessService',{resolveServerAccess:async()=>({ok:allowed,code:'SERVER_NOT_OPEN',openTime:1})});
+const service=require(path.join(app,'src/services/AccountService'));
+(async()=>{let checks=0;
+const x=await service.resolveServerLoginSession('valid',1002);assert.equal(x.userId,'u2');assert.equal(x.roleId,'r2');assert.equal(x.serverSwitched,false);assert.equal(session.userId,'u1');checks+=4;
+await assert.rejects(()=>service.resolveServerLoginSession('bad',1002),/AUTH_SESSION_INVALID/);checks++;
+session={...session,authVersion:2};await assert.rejects(()=>service.resolveServerLoginSession('valid',1002),/AUTH_SESSION_INVALID/);session.authVersion=1;checks++;
+session={...session,userId:'foreign'};await assert.rejects(()=>service.resolveServerLoginSession('valid',1002),/AUTH_ROLE_MISMATCH/);session.userId='u1';checks++;
+allowed=false;await assert.rejects(()=>service.resolveServerLoginSession('valid',1002),/SERVER_NOT_OPEN/);allowed=true;checks++;
+account.status=0;await assert.rejects(()=>service.resolveServerLoginSession('valid',1002),/ACCOUNT_BANNED/);account.status=1;checks++;
+const parallel=await Promise.all([service.resolveServerLoginSession('valid',1002),service.resolveServerLoginSession('valid',1002)]);assert(parallel.every(x=>x.userId==='u2'));checks++;
+console.log(JSON.stringify({result:'PASS',checks,wrongTokenRejected:true,wrongOwnerRejected:true,banAndGatePreserved:true,noReset:true}));
+})().catch(e=>{console.error(e.stack);process.exitCode=1;});

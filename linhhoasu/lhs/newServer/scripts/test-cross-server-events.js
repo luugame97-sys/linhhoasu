@@ -1,0 +1,13 @@
+'use strict';
+const assert = require('assert');
+const app = process.env.COMPETITION_APP || require('path').resolve(__dirname, '..');
+const { cycleAt, isServerAllowed } = require(app + '/src/services/CrossServerEventService');
+const rules = { enabled: true, anchor: '2026-01-01T00:00:00+07:00', periodDays: 7, rotation: ['crossRival', 'crossArena', 'topArena'], serverIds: [1001, 1002, 1003] };
+const anchor = Date.parse(rules.anchor);
+assert.equal(cycleAt(anchor - 1, rules), null);
+assert.deepEqual(cycleAt(anchor, rules), { index: 0, event: 'crossRival', startTime: anchor, endTime: anchor + 7 * 86400000, key: `C0_${anchor}` });
+assert.equal(cycleAt(anchor + 7 * 86400000, rules).event, 'crossArena');
+assert.equal(cycleAt(anchor + 14 * 86400000, rules).event, 'topArena');
+assert.equal(cycleAt(anchor + 21 * 86400000, rules).event, 'crossRival');
+assert.equal(isServerAllowed(1001), true); assert.equal(isServerAllowed(2001), false);
+console.log('cross-server-event-contract: PASS');

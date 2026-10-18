@@ -1,0 +1,5828 @@
+{
+  "_table": "OldTrekSailorLevelUpConfig",
+  "_rows": 300,
+  "_type": "object",
+  "_firstKeys": "level,levelCosts,levelType,levelAttrsUp,fishSoulBaseAttrs,rank,rankLv",
+  "_sample": [
+    {
+      "1": {
+        "level": 1,
+        "levelCosts": [
+          {
+            "id": 331,
+            "count": 200
+          }
+        ],
+        "levelType": 0,
+        "levelAttrsUp": 10000,
+        "fishSoulBaseAttrs": {
+          "1": 6500,
+          "2": 520,
+          "3": 520,
+          "4": 195
+        },
+        "rank": 1,
+        "rankLv": 1
+      }
+    },
+    {
+      "2": {
+        "level": 2,
+        "levelCosts": [
+          {
+            "id": 331,
+            "count": 200
+          }
+        ],
+        "levelType": 0,
+        "levelAttrsUp": 10800,
+        "fishSoulBaseAttrs": {
+          "1": 7020,
+          "2": 562,
+          "3": 562,
+          "4": 211
+        },
+        "rank": 1,
+        "rankLv": 2
+      }
+    },
+    {
+      "3": {
+        "level": 3,
+        "levelCosts": [
+          {
+            "id": 331,
+            "count": 210
+          }
+        ],
+        "levelType": 0,
+        "levelAttrsUp": 11600,
+        "fishSoulBaseAttrs": {
+          "1": 7540,
+          "2": 604,
+          "3": 604,
+          "4": 227
+        },
+        "rank": 1,
+        "rankLv": 3
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "level": 1,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 200
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 10000,
+      "fishSoulBaseAttrs": {
+        "1": 6500,
+        "2": 520,
+        "3": 520,
+        "4": 195
+      },
+      "rank": 1,
+      "rankLv": 1
+    },
+    "2": {
+      "level": 2,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 200
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 10800,
+      "fishSoulBaseAttrs": {
+        "1": 7020,
+        "2": 562,
+        "3": 562,
+        "4": 211
+      },
+      "rank": 1,
+      "rankLv": 2
+    },
+    "3": {
+      "level": 3,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 210
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 11600,
+      "fishSoulBaseAttrs": {
+        "1": 7540,
+        "2": 604,
+        "3": 604,
+        "4": 227
+      },
+      "rank": 1,
+      "rankLv": 3
+    },
+    "4": {
+      "level": 4,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 210
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 12400,
+      "fishSoulBaseAttrs": {
+        "1": 8060,
+        "2": 645,
+        "3": 645,
+        "4": 242
+      },
+      "rank": 1,
+      "rankLv": 4
+    },
+    "5": {
+      "level": 5,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 220
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 13200,
+      "fishSoulBaseAttrs": {
+        "1": 8580,
+        "2": 687,
+        "3": 687,
+        "4": 258
+      },
+      "rank": 1,
+      "rankLv": 5
+    },
+    "6": {
+      "level": 6,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 220
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 14000,
+      "fishSoulBaseAttrs": {
+        "1": 9100,
+        "2": 728,
+        "3": 728,
+        "4": 273
+      },
+      "rank": 1,
+      "rankLv": 6
+    },
+    "7": {
+      "level": 7,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 230
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 14800,
+      "fishSoulBaseAttrs": {
+        "1": 9620,
+        "2": 770,
+        "3": 770,
+        "4": 289
+      },
+      "rank": 1,
+      "rankLv": 7
+    },
+    "8": {
+      "level": 8,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 230
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 15600,
+      "fishSoulBaseAttrs": {
+        "1": 10140,
+        "2": 812,
+        "3": 812,
+        "4": 305
+      },
+      "rank": 1,
+      "rankLv": 8
+    },
+    "9": {
+      "level": 9,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 240
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 16400,
+      "fishSoulBaseAttrs": {
+        "1": 10660,
+        "2": 853,
+        "3": 853,
+        "4": 320
+      },
+      "rank": 1,
+      "rankLv": 9
+    },
+    "10": {
+      "level": 10,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 240
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 17200,
+      "fishSoulBaseAttrs": {
+        "1": 11180,
+        "2": 895,
+        "3": 895,
+        "4": 336
+      },
+      "rank": 1,
+      "rankLv": 10
+    },
+    "11": {
+      "level": 11,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 250
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 18000,
+      "fishSoulBaseAttrs": {
+        "1": 11700,
+        "2": 936,
+        "3": 936,
+        "4": 351
+      },
+      "rank": 1,
+      "rankLv": 11
+    },
+    "12": {
+      "level": 12,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 250
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 18800,
+      "fishSoulBaseAttrs": {
+        "1": 12220,
+        "2": 978,
+        "3": 978,
+        "4": 367
+      },
+      "rank": 1,
+      "rankLv": 12
+    },
+    "13": {
+      "level": 13,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 260
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 19600,
+      "fishSoulBaseAttrs": {
+        "1": 12740,
+        "2": 1020,
+        "3": 1020,
+        "4": 383
+      },
+      "rank": 1,
+      "rankLv": 13
+    },
+    "14": {
+      "level": 14,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 260
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 20400,
+      "fishSoulBaseAttrs": {
+        "1": 13260,
+        "2": 1061,
+        "3": 1061,
+        "4": 398
+      },
+      "rank": 1,
+      "rankLv": 14
+    },
+    "15": {
+      "level": 15,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 270
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 21200,
+      "fishSoulBaseAttrs": {
+        "1": 13780,
+        "2": 1103,
+        "3": 1103,
+        "4": 414
+      },
+      "rank": 1,
+      "rankLv": 15
+    },
+    "16": {
+      "level": 16,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 270
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 22000,
+      "fishSoulBaseAttrs": {
+        "1": 14300,
+        "2": 1144,
+        "3": 1144,
+        "4": 429
+      },
+      "rank": 1,
+      "rankLv": 16
+    },
+    "17": {
+      "level": 17,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 280
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 22800,
+      "fishSoulBaseAttrs": {
+        "1": 14820,
+        "2": 1186,
+        "3": 1186,
+        "4": 445
+      },
+      "rank": 1,
+      "rankLv": 17
+    },
+    "18": {
+      "level": 18,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 280
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 23600,
+      "fishSoulBaseAttrs": {
+        "1": 15340,
+        "2": 1228,
+        "3": 1228,
+        "4": 461
+      },
+      "rank": 1,
+      "rankLv": 18
+    },
+    "19": {
+      "level": 19,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 290
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 24400,
+      "fishSoulBaseAttrs": {
+        "1": 15860,
+        "2": 1269,
+        "3": 1269,
+        "4": 476
+      },
+      "rank": 1,
+      "rankLv": 19
+    },
+    "20": {
+      "level": 20,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 290
+        },
+        {
+          "id": 332,
+          "count": 20
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 25200,
+      "fishSoulBaseAttrs": {
+        "1": 16380,
+        "2": 1311,
+        "3": 1311,
+        "4": 492
+      },
+      "rank": 1,
+      "rankLv": 20
+    },
+    "21": {
+      "level": 21,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 300
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 30000,
+      "fishSoulBaseAttrs": {
+        "1": 19500,
+        "2": 1560,
+        "3": 1560,
+        "4": 585
+      },
+      "rank": 1,
+      "rankLv": 21
+    },
+    "22": {
+      "level": 22,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 300
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 30800,
+      "fishSoulBaseAttrs": {
+        "1": 20020,
+        "2": 1602,
+        "3": 1602,
+        "4": 601
+      },
+      "rank": 1,
+      "rankLv": 22
+    },
+    "23": {
+      "level": 23,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 310
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 31600,
+      "fishSoulBaseAttrs": {
+        "1": 20540,
+        "2": 1644,
+        "3": 1644,
+        "4": 617
+      },
+      "rank": 1,
+      "rankLv": 23
+    },
+    "24": {
+      "level": 24,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 310
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 32400,
+      "fishSoulBaseAttrs": {
+        "1": 21060,
+        "2": 1685,
+        "3": 1685,
+        "4": 632
+      },
+      "rank": 1,
+      "rankLv": 24
+    },
+    "25": {
+      "level": 25,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 320
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 33200,
+      "fishSoulBaseAttrs": {
+        "1": 21580,
+        "2": 1727,
+        "3": 1727,
+        "4": 648
+      },
+      "rank": 1,
+      "rankLv": 25
+    },
+    "26": {
+      "level": 26,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 320
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 34000,
+      "fishSoulBaseAttrs": {
+        "1": 22100,
+        "2": 1768,
+        "3": 1768,
+        "4": 663
+      },
+      "rank": 1,
+      "rankLv": 26
+    },
+    "27": {
+      "level": 27,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 330
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 34800,
+      "fishSoulBaseAttrs": {
+        "1": 22620,
+        "2": 1810,
+        "3": 1810,
+        "4": 679
+      },
+      "rank": 1,
+      "rankLv": 27
+    },
+    "28": {
+      "level": 28,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 330
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 35600,
+      "fishSoulBaseAttrs": {
+        "1": 23140,
+        "2": 1852,
+        "3": 1852,
+        "4": 695
+      },
+      "rank": 1,
+      "rankLv": 28
+    },
+    "29": {
+      "level": 29,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 340
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 36400,
+      "fishSoulBaseAttrs": {
+        "1": 23660,
+        "2": 1893,
+        "3": 1893,
+        "4": 710
+      },
+      "rank": 1,
+      "rankLv": 29
+    },
+    "30": {
+      "level": 30,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 340
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 37200,
+      "fishSoulBaseAttrs": {
+        "1": 24180,
+        "2": 1935,
+        "3": 1935,
+        "4": 726
+      },
+      "rank": 1,
+      "rankLv": 30
+    },
+    "31": {
+      "level": 31,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 350
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 38000,
+      "fishSoulBaseAttrs": {
+        "1": 24700,
+        "2": 1976,
+        "3": 1976,
+        "4": 741
+      },
+      "rank": 1,
+      "rankLv": 31
+    },
+    "32": {
+      "level": 32,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 350
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 38800,
+      "fishSoulBaseAttrs": {
+        "1": 25220,
+        "2": 2018,
+        "3": 2018,
+        "4": 757
+      },
+      "rank": 1,
+      "rankLv": 32
+    },
+    "33": {
+      "level": 33,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 360
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 39600,
+      "fishSoulBaseAttrs": {
+        "1": 25740,
+        "2": 2060,
+        "3": 2060,
+        "4": 773
+      },
+      "rank": 1,
+      "rankLv": 33
+    },
+    "34": {
+      "level": 34,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 360
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 40400,
+      "fishSoulBaseAttrs": {
+        "1": 26260,
+        "2": 2101,
+        "3": 2101,
+        "4": 788
+      },
+      "rank": 1,
+      "rankLv": 34
+    },
+    "35": {
+      "level": 35,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 370
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 41200,
+      "fishSoulBaseAttrs": {
+        "1": 26780,
+        "2": 2143,
+        "3": 2143,
+        "4": 804
+      },
+      "rank": 1,
+      "rankLv": 35
+    },
+    "36": {
+      "level": 36,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 370
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 42000,
+      "fishSoulBaseAttrs": {
+        "1": 27300,
+        "2": 2184,
+        "3": 2184,
+        "4": 819
+      },
+      "rank": 1,
+      "rankLv": 36
+    },
+    "37": {
+      "level": 37,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 380
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 42800,
+      "fishSoulBaseAttrs": {
+        "1": 27820,
+        "2": 2226,
+        "3": 2226,
+        "4": 835
+      },
+      "rank": 1,
+      "rankLv": 37
+    },
+    "38": {
+      "level": 38,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 380
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 43600,
+      "fishSoulBaseAttrs": {
+        "1": 28340,
+        "2": 2268,
+        "3": 2268,
+        "4": 851
+      },
+      "rank": 1,
+      "rankLv": 38
+    },
+    "39": {
+      "level": 39,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 390
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 44400,
+      "fishSoulBaseAttrs": {
+        "1": 28860,
+        "2": 2309,
+        "3": 2309,
+        "4": 866
+      },
+      "rank": 1,
+      "rankLv": 39
+    },
+    "40": {
+      "level": 40,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 390
+        },
+        {
+          "id": 332,
+          "count": 30
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 45200,
+      "fishSoulBaseAttrs": {
+        "1": 29380,
+        "2": 2351,
+        "3": 2351,
+        "4": 882
+      },
+      "rank": 1,
+      "rankLv": 40
+    },
+    "41": {
+      "level": 41,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 400
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 50000,
+      "fishSoulBaseAttrs": {
+        "1": 32500,
+        "2": 2600,
+        "3": 2600,
+        "4": 976
+      },
+      "rank": 1,
+      "rankLv": 41
+    },
+    "42": {
+      "level": 42,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 400
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 50800,
+      "fishSoulBaseAttrs": {
+        "1": 33020,
+        "2": 2642,
+        "3": 2642,
+        "4": 991
+      },
+      "rank": 1,
+      "rankLv": 42
+    },
+    "43": {
+      "level": 43,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 410
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 51600,
+      "fishSoulBaseAttrs": {
+        "1": 33540,
+        "2": 2684,
+        "3": 2684,
+        "4": 1007
+      },
+      "rank": 1,
+      "rankLv": 43
+    },
+    "44": {
+      "level": 44,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 410
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 52400,
+      "fishSoulBaseAttrs": {
+        "1": 34060,
+        "2": 2725,
+        "3": 2725,
+        "4": 1022
+      },
+      "rank": 1,
+      "rankLv": 44
+    },
+    "45": {
+      "level": 45,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 420
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 53200,
+      "fishSoulBaseAttrs": {
+        "1": 34580,
+        "2": 2767,
+        "3": 2767,
+        "4": 1038
+      },
+      "rank": 1,
+      "rankLv": 45
+    },
+    "46": {
+      "level": 46,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 420
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 54000,
+      "fishSoulBaseAttrs": {
+        "1": 35100,
+        "2": 2808,
+        "3": 2808,
+        "4": 1053
+      },
+      "rank": 1,
+      "rankLv": 46
+    },
+    "47": {
+      "level": 47,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 430
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 54800,
+      "fishSoulBaseAttrs": {
+        "1": 35620,
+        "2": 2850,
+        "3": 2850,
+        "4": 1069
+      },
+      "rank": 1,
+      "rankLv": 47
+    },
+    "48": {
+      "level": 48,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 430
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 55600,
+      "fishSoulBaseAttrs": {
+        "1": 36140,
+        "2": 2892,
+        "3": 2892,
+        "4": 1085
+      },
+      "rank": 1,
+      "rankLv": 48
+    },
+    "49": {
+      "level": 49,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 440
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 56400,
+      "fishSoulBaseAttrs": {
+        "1": 36660,
+        "2": 2933,
+        "3": 2933,
+        "4": 1100
+      },
+      "rank": 1,
+      "rankLv": 49
+    },
+    "50": {
+      "level": 50,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 450
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 57200,
+      "fishSoulBaseAttrs": {
+        "1": 37180,
+        "2": 2975,
+        "3": 2975,
+        "4": 1116
+      },
+      "rank": 1,
+      "rankLv": 50
+    },
+    "51": {
+      "level": 51,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 450
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 58000,
+      "fishSoulBaseAttrs": {
+        "1": 37700,
+        "2": 3016,
+        "3": 3016,
+        "4": 1131
+      },
+      "rank": 1,
+      "rankLv": 51
+    },
+    "52": {
+      "level": 52,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 460
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 58800,
+      "fishSoulBaseAttrs": {
+        "1": 38220,
+        "2": 3058,
+        "3": 3058,
+        "4": 1147
+      },
+      "rank": 1,
+      "rankLv": 52
+    },
+    "53": {
+      "level": 53,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 460
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 59600,
+      "fishSoulBaseAttrs": {
+        "1": 38740,
+        "2": 3100,
+        "3": 3100,
+        "4": 1163
+      },
+      "rank": 1,
+      "rankLv": 53
+    },
+    "54": {
+      "level": 54,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 470
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 60400,
+      "fishSoulBaseAttrs": {
+        "1": 39260,
+        "2": 3141,
+        "3": 3141,
+        "4": 1178
+      },
+      "rank": 1,
+      "rankLv": 54
+    },
+    "55": {
+      "level": 55,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 470
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 61200,
+      "fishSoulBaseAttrs": {
+        "1": 39780,
+        "2": 3183,
+        "3": 3183,
+        "4": 1194
+      },
+      "rank": 1,
+      "rankLv": 55
+    },
+    "56": {
+      "level": 56,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 480
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 62000,
+      "fishSoulBaseAttrs": {
+        "1": 40300,
+        "2": 3224,
+        "3": 3224,
+        "4": 1209
+      },
+      "rank": 1,
+      "rankLv": 56
+    },
+    "57": {
+      "level": 57,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 480
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 62800,
+      "fishSoulBaseAttrs": {
+        "1": 40820,
+        "2": 3266,
+        "3": 3266,
+        "4": 1225
+      },
+      "rank": 1,
+      "rankLv": 57
+    },
+    "58": {
+      "level": 58,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 490
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 63600,
+      "fishSoulBaseAttrs": {
+        "1": 41340,
+        "2": 3308,
+        "3": 3308,
+        "4": 1241
+      },
+      "rank": 1,
+      "rankLv": 58
+    },
+    "59": {
+      "level": 59,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 500
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 64400,
+      "fishSoulBaseAttrs": {
+        "1": 41860,
+        "2": 3349,
+        "3": 3349,
+        "4": 1256
+      },
+      "rank": 1,
+      "rankLv": 59
+    },
+    "60": {
+      "level": 60,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 500
+        },
+        {
+          "id": 332,
+          "count": 40
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 65200,
+      "fishSoulBaseAttrs": {
+        "1": 42380,
+        "2": 3391,
+        "3": 3391,
+        "4": 1272
+      },
+      "rank": 1,
+      "rankLv": 60
+    },
+    "61": {
+      "level": 61,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 510
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 70000,
+      "fishSoulBaseAttrs": {
+        "1": 45500,
+        "2": 3640,
+        "3": 3640,
+        "4": 1365
+      },
+      "rank": 1,
+      "rankLv": 61
+    },
+    "62": {
+      "level": 62,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 520
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 70800,
+      "fishSoulBaseAttrs": {
+        "1": 46020,
+        "2": 3682,
+        "3": 3682,
+        "4": 1381
+      },
+      "rank": 1,
+      "rankLv": 62
+    },
+    "63": {
+      "level": 63,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 520
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 71600,
+      "fishSoulBaseAttrs": {
+        "1": 46540,
+        "2": 3724,
+        "3": 3724,
+        "4": 1397
+      },
+      "rank": 1,
+      "rankLv": 63
+    },
+    "64": {
+      "level": 64,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 530
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 72400,
+      "fishSoulBaseAttrs": {
+        "1": 47060,
+        "2": 3765,
+        "3": 3765,
+        "4": 1412
+      },
+      "rank": 1,
+      "rankLv": 64
+    },
+    "65": {
+      "level": 65,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 540
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 73200,
+      "fishSoulBaseAttrs": {
+        "1": 47580,
+        "2": 3807,
+        "3": 3807,
+        "4": 1428
+      },
+      "rank": 1,
+      "rankLv": 65
+    },
+    "66": {
+      "level": 66,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 550
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 74000,
+      "fishSoulBaseAttrs": {
+        "1": 48100,
+        "2": 3848,
+        "3": 3848,
+        "4": 1443
+      },
+      "rank": 1,
+      "rankLv": 66
+    },
+    "67": {
+      "level": 67,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 560
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 74800,
+      "fishSoulBaseAttrs": {
+        "1": 48620,
+        "2": 3890,
+        "3": 3890,
+        "4": 1459
+      },
+      "rank": 1,
+      "rankLv": 67
+    },
+    "68": {
+      "level": 68,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 570
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 75600,
+      "fishSoulBaseAttrs": {
+        "1": 49140,
+        "2": 3932,
+        "3": 3932,
+        "4": 1475
+      },
+      "rank": 1,
+      "rankLv": 68
+    },
+    "69": {
+      "level": 69,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 580
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 76400,
+      "fishSoulBaseAttrs": {
+        "1": 49660,
+        "2": 3973,
+        "3": 3973,
+        "4": 1490
+      },
+      "rank": 1,
+      "rankLv": 69
+    },
+    "70": {
+      "level": 70,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 590
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 77200,
+      "fishSoulBaseAttrs": {
+        "1": 50180,
+        "2": 4015,
+        "3": 4015,
+        "4": 1506
+      },
+      "rank": 1,
+      "rankLv": 70
+    },
+    "71": {
+      "level": 71,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 590
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 78000,
+      "fishSoulBaseAttrs": {
+        "1": 50700,
+        "2": 4056,
+        "3": 4056,
+        "4": 1521
+      },
+      "rank": 1,
+      "rankLv": 71
+    },
+    "72": {
+      "level": 72,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 600
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 78800,
+      "fishSoulBaseAttrs": {
+        "1": 51220,
+        "2": 4098,
+        "3": 4098,
+        "4": 1537
+      },
+      "rank": 1,
+      "rankLv": 72
+    },
+    "73": {
+      "level": 73,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 610
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 79600,
+      "fishSoulBaseAttrs": {
+        "1": 51740,
+        "2": 4140,
+        "3": 4140,
+        "4": 1553
+      },
+      "rank": 1,
+      "rankLv": 73
+    },
+    "74": {
+      "level": 74,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 620
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 80400,
+      "fishSoulBaseAttrs": {
+        "1": 52260,
+        "2": 4181,
+        "3": 4181,
+        "4": 1568
+      },
+      "rank": 1,
+      "rankLv": 74
+    },
+    "75": {
+      "level": 75,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 630
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 81200,
+      "fishSoulBaseAttrs": {
+        "1": 52780,
+        "2": 4223,
+        "3": 4223,
+        "4": 1584
+      },
+      "rank": 1,
+      "rankLv": 75
+    },
+    "76": {
+      "level": 76,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 640
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 82000,
+      "fishSoulBaseAttrs": {
+        "1": 53300,
+        "2": 4264,
+        "3": 4264,
+        "4": 1599
+      },
+      "rank": 1,
+      "rankLv": 76
+    },
+    "77": {
+      "level": 77,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 650
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 82800,
+      "fishSoulBaseAttrs": {
+        "1": 53820,
+        "2": 4306,
+        "3": 4306,
+        "4": 1615
+      },
+      "rank": 1,
+      "rankLv": 77
+    },
+    "78": {
+      "level": 78,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 650
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 83600,
+      "fishSoulBaseAttrs": {
+        "1": 54340,
+        "2": 4348,
+        "3": 4348,
+        "4": 1631
+      },
+      "rank": 1,
+      "rankLv": 78
+    },
+    "79": {
+      "level": 79,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 660
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 84400,
+      "fishSoulBaseAttrs": {
+        "1": 54860,
+        "2": 4389,
+        "3": 4389,
+        "4": 1646
+      },
+      "rank": 1,
+      "rankLv": 79
+    },
+    "80": {
+      "level": 80,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 670
+        },
+        {
+          "id": 332,
+          "count": 50
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 85200,
+      "fishSoulBaseAttrs": {
+        "1": 55380,
+        "2": 4431,
+        "3": 4431,
+        "4": 1662
+      },
+      "rank": 1,
+      "rankLv": 80
+    },
+    "81": {
+      "level": 81,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 680
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 90000,
+      "fishSoulBaseAttrs": {
+        "1": 58500,
+        "2": 4680,
+        "3": 4680,
+        "4": 1755
+      },
+      "rank": 1,
+      "rankLv": 81
+    },
+    "82": {
+      "level": 82,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 700
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 90800,
+      "fishSoulBaseAttrs": {
+        "1": 59020,
+        "2": 4722,
+        "3": 4722,
+        "4": 1771
+      },
+      "rank": 1,
+      "rankLv": 82
+    },
+    "83": {
+      "level": 83,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 720
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 91600,
+      "fishSoulBaseAttrs": {
+        "1": 59540,
+        "2": 4764,
+        "3": 4764,
+        "4": 1787
+      },
+      "rank": 1,
+      "rankLv": 83
+    },
+    "84": {
+      "level": 84,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 730
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 92400,
+      "fishSoulBaseAttrs": {
+        "1": 60060,
+        "2": 4805,
+        "3": 4805,
+        "4": 1802
+      },
+      "rank": 1,
+      "rankLv": 84
+    },
+    "85": {
+      "level": 85,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 750
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 93200,
+      "fishSoulBaseAttrs": {
+        "1": 60580,
+        "2": 4847,
+        "3": 4847,
+        "4": 1818
+      },
+      "rank": 1,
+      "rankLv": 85
+    },
+    "86": {
+      "level": 86,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 770
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 94000,
+      "fishSoulBaseAttrs": {
+        "1": 61100,
+        "2": 4888,
+        "3": 4888,
+        "4": 1833
+      },
+      "rank": 1,
+      "rankLv": 86
+    },
+    "87": {
+      "level": 87,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 790
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 94800,
+      "fishSoulBaseAttrs": {
+        "1": 61620,
+        "2": 4930,
+        "3": 4930,
+        "4": 1849
+      },
+      "rank": 1,
+      "rankLv": 87
+    },
+    "88": {
+      "level": 88,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 800
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 95600,
+      "fishSoulBaseAttrs": {
+        "1": 62140,
+        "2": 4972,
+        "3": 4972,
+        "4": 1865
+      },
+      "rank": 1,
+      "rankLv": 88
+    },
+    "89": {
+      "level": 89,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 820
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 96400,
+      "fishSoulBaseAttrs": {
+        "1": 62660,
+        "2": 5013,
+        "3": 5013,
+        "4": 1880
+      },
+      "rank": 1,
+      "rankLv": 89
+    },
+    "90": {
+      "level": 90,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 840
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 97200,
+      "fishSoulBaseAttrs": {
+        "1": 63180,
+        "2": 5055,
+        "3": 5055,
+        "4": 1896
+      },
+      "rank": 1,
+      "rankLv": 90
+    },
+    "91": {
+      "level": 91,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 860
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 98000,
+      "fishSoulBaseAttrs": {
+        "1": 63700,
+        "2": 5096,
+        "3": 5096,
+        "4": 1911
+      },
+      "rank": 1,
+      "rankLv": 91
+    },
+    "92": {
+      "level": 92,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 880
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 98800,
+      "fishSoulBaseAttrs": {
+        "1": 64220,
+        "2": 5138,
+        "3": 5138,
+        "4": 1927
+      },
+      "rank": 1,
+      "rankLv": 92
+    },
+    "93": {
+      "level": 93,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 890
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 99600,
+      "fishSoulBaseAttrs": {
+        "1": 64740,
+        "2": 5180,
+        "3": 5180,
+        "4": 1943
+      },
+      "rank": 1,
+      "rankLv": 93
+    },
+    "94": {
+      "level": 94,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 910
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 100400,
+      "fishSoulBaseAttrs": {
+        "1": 65260,
+        "2": 5221,
+        "3": 5221,
+        "4": 1958
+      },
+      "rank": 1,
+      "rankLv": 94
+    },
+    "95": {
+      "level": 95,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 930
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 101200,
+      "fishSoulBaseAttrs": {
+        "1": 65780,
+        "2": 5263,
+        "3": 5263,
+        "4": 1974
+      },
+      "rank": 1,
+      "rankLv": 95
+    },
+    "96": {
+      "level": 96,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 950
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 102000,
+      "fishSoulBaseAttrs": {
+        "1": 66300,
+        "2": 5304,
+        "3": 5304,
+        "4": 1989
+      },
+      "rank": 1,
+      "rankLv": 96
+    },
+    "97": {
+      "level": 97,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 960
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 102800,
+      "fishSoulBaseAttrs": {
+        "1": 66820,
+        "2": 5346,
+        "3": 5346,
+        "4": 2005
+      },
+      "rank": 1,
+      "rankLv": 97
+    },
+    "98": {
+      "level": 98,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 980
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 103600,
+      "fishSoulBaseAttrs": {
+        "1": 67340,
+        "2": 5388,
+        "3": 5388,
+        "4": 2021
+      },
+      "rank": 1,
+      "rankLv": 98
+    },
+    "99": {
+      "level": 99,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1000
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 104400,
+      "fishSoulBaseAttrs": {
+        "1": 67860,
+        "2": 5429,
+        "3": 5429,
+        "4": 2036
+      },
+      "rank": 1,
+      "rankLv": 99
+    },
+    "100": {
+      "level": 100,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1020
+        },
+        {
+          "id": 332,
+          "count": 60
+        },
+        {
+          "id": 333,
+          "count": 1
+        }
+      ],
+      "levelType": 2,
+      "levelAttrsUp": 105200,
+      "fishSoulBaseAttrs": {
+        "1": 68380,
+        "2": 5471,
+        "3": 5471,
+        "4": 2052
+      },
+      "rank": 1,
+      "rankLv": 100
+    },
+    "101": {
+      "level": 101,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1040
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 118000,
+      "fishSoulBaseAttrs": {
+        "1": 76700,
+        "2": 6136,
+        "3": 6136,
+        "4": 2301
+      },
+      "rank": 2,
+      "rankLv": 1
+    },
+    "102": {
+      "level": 102,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1050
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 118800,
+      "fishSoulBaseAttrs": {
+        "1": 77220,
+        "2": 6178,
+        "3": 6178,
+        "4": 2317
+      },
+      "rank": 2,
+      "rankLv": 2
+    },
+    "103": {
+      "level": 103,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1060
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 119600,
+      "fishSoulBaseAttrs": {
+        "1": 77740,
+        "2": 6220,
+        "3": 6220,
+        "4": 2333
+      },
+      "rank": 2,
+      "rankLv": 3
+    },
+    "104": {
+      "level": 104,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1080
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 120400,
+      "fishSoulBaseAttrs": {
+        "1": 78260,
+        "2": 6261,
+        "3": 6261,
+        "4": 2348
+      },
+      "rank": 2,
+      "rankLv": 4
+    },
+    "105": {
+      "level": 105,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1090
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 121200,
+      "fishSoulBaseAttrs": {
+        "1": 78780,
+        "2": 6303,
+        "3": 6303,
+        "4": 2364
+      },
+      "rank": 2,
+      "rankLv": 5
+    },
+    "106": {
+      "level": 106,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1110
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 122000,
+      "fishSoulBaseAttrs": {
+        "1": 79300,
+        "2": 6344,
+        "3": 6344,
+        "4": 2379
+      },
+      "rank": 2,
+      "rankLv": 6
+    },
+    "107": {
+      "level": 107,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1120
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 122800,
+      "fishSoulBaseAttrs": {
+        "1": 79820,
+        "2": 6386,
+        "3": 6386,
+        "4": 2395
+      },
+      "rank": 2,
+      "rankLv": 7
+    },
+    "108": {
+      "level": 108,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1140
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 123600,
+      "fishSoulBaseAttrs": {
+        "1": 80340,
+        "2": 6428,
+        "3": 6428,
+        "4": 2411
+      },
+      "rank": 2,
+      "rankLv": 8
+    },
+    "109": {
+      "level": 109,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1150
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 124400,
+      "fishSoulBaseAttrs": {
+        "1": 80860,
+        "2": 6469,
+        "3": 6469,
+        "4": 2426
+      },
+      "rank": 2,
+      "rankLv": 9
+    },
+    "110": {
+      "level": 110,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1170
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 125200,
+      "fishSoulBaseAttrs": {
+        "1": 81380,
+        "2": 6511,
+        "3": 6511,
+        "4": 2442
+      },
+      "rank": 2,
+      "rankLv": 10
+    },
+    "111": {
+      "level": 111,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1180
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 126000,
+      "fishSoulBaseAttrs": {
+        "1": 81900,
+        "2": 6552,
+        "3": 6552,
+        "4": 2457
+      },
+      "rank": 2,
+      "rankLv": 11
+    },
+    "112": {
+      "level": 112,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1200
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 126800,
+      "fishSoulBaseAttrs": {
+        "1": 82420,
+        "2": 6594,
+        "3": 6594,
+        "4": 2473
+      },
+      "rank": 2,
+      "rankLv": 12
+    },
+    "113": {
+      "level": 113,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1210
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 127600,
+      "fishSoulBaseAttrs": {
+        "1": 82940,
+        "2": 6636,
+        "3": 6636,
+        "4": 2489
+      },
+      "rank": 2,
+      "rankLv": 13
+    },
+    "114": {
+      "level": 114,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1230
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 128400,
+      "fishSoulBaseAttrs": {
+        "1": 83460,
+        "2": 6677,
+        "3": 6677,
+        "4": 2504
+      },
+      "rank": 2,
+      "rankLv": 14
+    },
+    "115": {
+      "level": 115,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1240
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 129200,
+      "fishSoulBaseAttrs": {
+        "1": 83980,
+        "2": 6719,
+        "3": 6719,
+        "4": 2520
+      },
+      "rank": 2,
+      "rankLv": 15
+    },
+    "116": {
+      "level": 116,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1260
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 130000,
+      "fishSoulBaseAttrs": {
+        "1": 84500,
+        "2": 6760,
+        "3": 6760,
+        "4": 2535
+      },
+      "rank": 2,
+      "rankLv": 16
+    },
+    "117": {
+      "level": 117,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1270
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 130800,
+      "fishSoulBaseAttrs": {
+        "1": 85020,
+        "2": 6802,
+        "3": 6802,
+        "4": 2551
+      },
+      "rank": 2,
+      "rankLv": 17
+    },
+    "118": {
+      "level": 118,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1280
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 131600,
+      "fishSoulBaseAttrs": {
+        "1": 85540,
+        "2": 6844,
+        "3": 6844,
+        "4": 2567
+      },
+      "rank": 2,
+      "rankLv": 18
+    },
+    "119": {
+      "level": 119,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1300
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 132400,
+      "fishSoulBaseAttrs": {
+        "1": 86060,
+        "2": 6885,
+        "3": 6885,
+        "4": 2582
+      },
+      "rank": 2,
+      "rankLv": 19
+    },
+    "120": {
+      "level": 120,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1310
+        },
+        {
+          "id": 332,
+          "count": 100
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 133200,
+      "fishSoulBaseAttrs": {
+        "1": 86580,
+        "2": 6927,
+        "3": 6927,
+        "4": 2598
+      },
+      "rank": 2,
+      "rankLv": 20
+    },
+    "121": {
+      "level": 121,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1330
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 138000,
+      "fishSoulBaseAttrs": {
+        "1": 89700,
+        "2": 7176,
+        "3": 7176,
+        "4": 2691
+      },
+      "rank": 2,
+      "rankLv": 21
+    },
+    "122": {
+      "level": 122,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1340
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 138800,
+      "fishSoulBaseAttrs": {
+        "1": 90221,
+        "2": 7218,
+        "3": 7218,
+        "4": 2707
+      },
+      "rank": 2,
+      "rankLv": 22
+    },
+    "123": {
+      "level": 123,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1360
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 139600,
+      "fishSoulBaseAttrs": {
+        "1": 90741,
+        "2": 7260,
+        "3": 7260,
+        "4": 2723
+      },
+      "rank": 2,
+      "rankLv": 23
+    },
+    "124": {
+      "level": 124,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1370
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 140400,
+      "fishSoulBaseAttrs": {
+        "1": 91261,
+        "2": 7301,
+        "3": 7301,
+        "4": 2738
+      },
+      "rank": 2,
+      "rankLv": 24
+    },
+    "125": {
+      "level": 125,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1390
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 141200,
+      "fishSoulBaseAttrs": {
+        "1": 91781,
+        "2": 7343,
+        "3": 7343,
+        "4": 2754
+      },
+      "rank": 2,
+      "rankLv": 25
+    },
+    "126": {
+      "level": 126,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1400
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 142000,
+      "fishSoulBaseAttrs": {
+        "1": 92301,
+        "2": 7384,
+        "3": 7384,
+        "4": 2769
+      },
+      "rank": 2,
+      "rankLv": 26
+    },
+    "127": {
+      "level": 127,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1420
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 142800,
+      "fishSoulBaseAttrs": {
+        "1": 92821,
+        "2": 7426,
+        "3": 7426,
+        "4": 2785
+      },
+      "rank": 2,
+      "rankLv": 27
+    },
+    "128": {
+      "level": 128,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1430
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 143600,
+      "fishSoulBaseAttrs": {
+        "1": 93341,
+        "2": 7468,
+        "3": 7468,
+        "4": 2801
+      },
+      "rank": 2,
+      "rankLv": 28
+    },
+    "129": {
+      "level": 129,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1440
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 144400,
+      "fishSoulBaseAttrs": {
+        "1": 93861,
+        "2": 7509,
+        "3": 7509,
+        "4": 2816
+      },
+      "rank": 2,
+      "rankLv": 29
+    },
+    "130": {
+      "level": 130,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1460
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 145200,
+      "fishSoulBaseAttrs": {
+        "1": 94381,
+        "2": 7551,
+        "3": 7551,
+        "4": 2832
+      },
+      "rank": 2,
+      "rankLv": 30
+    },
+    "131": {
+      "level": 131,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1470
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 146000,
+      "fishSoulBaseAttrs": {
+        "1": 94901,
+        "2": 7592,
+        "3": 7592,
+        "4": 2847
+      },
+      "rank": 2,
+      "rankLv": 31
+    },
+    "132": {
+      "level": 132,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1490
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 146800,
+      "fishSoulBaseAttrs": {
+        "1": 95421,
+        "2": 7634,
+        "3": 7634,
+        "4": 2863
+      },
+      "rank": 2,
+      "rankLv": 32
+    },
+    "133": {
+      "level": 133,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1500
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 147600,
+      "fishSoulBaseAttrs": {
+        "1": 95941,
+        "2": 7676,
+        "3": 7676,
+        "4": 2879
+      },
+      "rank": 2,
+      "rankLv": 33
+    },
+    "134": {
+      "level": 134,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1520
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 148400,
+      "fishSoulBaseAttrs": {
+        "1": 96461,
+        "2": 7717,
+        "3": 7717,
+        "4": 2894
+      },
+      "rank": 2,
+      "rankLv": 34
+    },
+    "135": {
+      "level": 135,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1530
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 149200,
+      "fishSoulBaseAttrs": {
+        "1": 96981,
+        "2": 7759,
+        "3": 7759,
+        "4": 2910
+      },
+      "rank": 2,
+      "rankLv": 35
+    },
+    "136": {
+      "level": 136,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1550
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 150000,
+      "fishSoulBaseAttrs": {
+        "1": 97501,
+        "2": 7800,
+        "3": 7800,
+        "4": 2925
+      },
+      "rank": 2,
+      "rankLv": 36
+    },
+    "137": {
+      "level": 137,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1560
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 150800,
+      "fishSoulBaseAttrs": {
+        "1": 98021,
+        "2": 7842,
+        "3": 7842,
+        "4": 2941
+      },
+      "rank": 2,
+      "rankLv": 37
+    },
+    "138": {
+      "level": 138,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1570
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 151600,
+      "fishSoulBaseAttrs": {
+        "1": 98541,
+        "2": 7884,
+        "3": 7884,
+        "4": 2957
+      },
+      "rank": 2,
+      "rankLv": 38
+    },
+    "139": {
+      "level": 139,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1590
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 152400,
+      "fishSoulBaseAttrs": {
+        "1": 99061,
+        "2": 7925,
+        "3": 7925,
+        "4": 2972
+      },
+      "rank": 2,
+      "rankLv": 39
+    },
+    "140": {
+      "level": 140,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1600
+        },
+        {
+          "id": 332,
+          "count": 130
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 153200,
+      "fishSoulBaseAttrs": {
+        "1": 99581,
+        "2": 7967,
+        "3": 7967,
+        "4": 2988
+      },
+      "rank": 2,
+      "rankLv": 40
+    },
+    "141": {
+      "level": 141,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1620
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 158000,
+      "fishSoulBaseAttrs": {
+        "1": 102700,
+        "2": 8216,
+        "3": 8216,
+        "4": 3081
+      },
+      "rank": 2,
+      "rankLv": 41
+    },
+    "142": {
+      "level": 142,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1630
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 158800,
+      "fishSoulBaseAttrs": {
+        "1": 103220,
+        "2": 8258,
+        "3": 8258,
+        "4": 3097
+      },
+      "rank": 2,
+      "rankLv": 42
+    },
+    "143": {
+      "level": 143,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1650
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 159600,
+      "fishSoulBaseAttrs": {
+        "1": 103740,
+        "2": 8300,
+        "3": 8300,
+        "4": 3113
+      },
+      "rank": 2,
+      "rankLv": 43
+    },
+    "144": {
+      "level": 144,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1660
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 160400,
+      "fishSoulBaseAttrs": {
+        "1": 104260,
+        "2": 8341,
+        "3": 8341,
+        "4": 3128
+      },
+      "rank": 2,
+      "rankLv": 44
+    },
+    "145": {
+      "level": 145,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1680
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 161200,
+      "fishSoulBaseAttrs": {
+        "1": 104780,
+        "2": 8383,
+        "3": 8383,
+        "4": 3144
+      },
+      "rank": 2,
+      "rankLv": 45
+    },
+    "146": {
+      "level": 146,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1700
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 162000,
+      "fishSoulBaseAttrs": {
+        "1": 105300,
+        "2": 8424,
+        "3": 8424,
+        "4": 3159
+      },
+      "rank": 2,
+      "rankLv": 46
+    },
+    "147": {
+      "level": 147,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1710
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 162800,
+      "fishSoulBaseAttrs": {
+        "1": 105820,
+        "2": 8466,
+        "3": 8466,
+        "4": 3175
+      },
+      "rank": 2,
+      "rankLv": 47
+    },
+    "148": {
+      "level": 148,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1730
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 163600,
+      "fishSoulBaseAttrs": {
+        "1": 106340,
+        "2": 8508,
+        "3": 8508,
+        "4": 3191
+      },
+      "rank": 2,
+      "rankLv": 48
+    },
+    "149": {
+      "level": 149,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1740
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 164400,
+      "fishSoulBaseAttrs": {
+        "1": 106860,
+        "2": 8549,
+        "3": 8549,
+        "4": 3206
+      },
+      "rank": 2,
+      "rankLv": 49
+    },
+    "150": {
+      "level": 150,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1760
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 165200,
+      "fishSoulBaseAttrs": {
+        "1": 107380,
+        "2": 8591,
+        "3": 8591,
+        "4": 3222
+      },
+      "rank": 2,
+      "rankLv": 50
+    },
+    "151": {
+      "level": 151,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1780
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 166000,
+      "fishSoulBaseAttrs": {
+        "1": 107900,
+        "2": 8632,
+        "3": 8632,
+        "4": 3237
+      },
+      "rank": 2,
+      "rankLv": 51
+    },
+    "152": {
+      "level": 152,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1790
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 166800,
+      "fishSoulBaseAttrs": {
+        "1": 108420,
+        "2": 8674,
+        "3": 8674,
+        "4": 3253
+      },
+      "rank": 2,
+      "rankLv": 52
+    },
+    "153": {
+      "level": 153,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1810
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 167600,
+      "fishSoulBaseAttrs": {
+        "1": 108940,
+        "2": 8716,
+        "3": 8716,
+        "4": 3269
+      },
+      "rank": 2,
+      "rankLv": 53
+    },
+    "154": {
+      "level": 154,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1820
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 168400,
+      "fishSoulBaseAttrs": {
+        "1": 109460,
+        "2": 8757,
+        "3": 8757,
+        "4": 3284
+      },
+      "rank": 2,
+      "rankLv": 54
+    },
+    "155": {
+      "level": 155,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1840
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 169200,
+      "fishSoulBaseAttrs": {
+        "1": 109980,
+        "2": 8799,
+        "3": 8799,
+        "4": 3300
+      },
+      "rank": 2,
+      "rankLv": 55
+    },
+    "156": {
+      "level": 156,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1860
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 170000,
+      "fishSoulBaseAttrs": {
+        "1": 110500,
+        "2": 8840,
+        "3": 8840,
+        "4": 3315
+      },
+      "rank": 2,
+      "rankLv": 56
+    },
+    "157": {
+      "level": 157,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1870
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 170800,
+      "fishSoulBaseAttrs": {
+        "1": 111020,
+        "2": 8882,
+        "3": 8882,
+        "4": 3331
+      },
+      "rank": 2,
+      "rankLv": 57
+    },
+    "158": {
+      "level": 158,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1890
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 171600,
+      "fishSoulBaseAttrs": {
+        "1": 111540,
+        "2": 8924,
+        "3": 8924,
+        "4": 3347
+      },
+      "rank": 2,
+      "rankLv": 58
+    },
+    "159": {
+      "level": 159,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1900
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 172400,
+      "fishSoulBaseAttrs": {
+        "1": 112060,
+        "2": 8965,
+        "3": 8965,
+        "4": 3362
+      },
+      "rank": 2,
+      "rankLv": 59
+    },
+    "160": {
+      "level": 160,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1920
+        },
+        {
+          "id": 332,
+          "count": 160
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 173200,
+      "fishSoulBaseAttrs": {
+        "1": 112580,
+        "2": 9007,
+        "3": 9007,
+        "4": 3378
+      },
+      "rank": 2,
+      "rankLv": 60
+    },
+    "161": {
+      "level": 161,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1940
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 178000,
+      "fishSoulBaseAttrs": {
+        "1": 115700,
+        "2": 9256,
+        "3": 9256,
+        "4": 3471
+      },
+      "rank": 2,
+      "rankLv": 61
+    },
+    "162": {
+      "level": 162,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1950
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 178900,
+      "fishSoulBaseAttrs": {
+        "1": 116253,
+        "2": 9301,
+        "3": 9301,
+        "4": 3488
+      },
+      "rank": 2,
+      "rankLv": 62
+    },
+    "163": {
+      "level": 163,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1970
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 179700,
+      "fishSoulBaseAttrs": {
+        "1": 116805,
+        "2": 9345,
+        "3": 9345,
+        "4": 3505
+      },
+      "rank": 2,
+      "rankLv": 63
+    },
+    "164": {
+      "level": 164,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 1980
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 180600,
+      "fishSoulBaseAttrs": {
+        "1": 117358,
+        "2": 9389,
+        "3": 9389,
+        "4": 3521
+      },
+      "rank": 2,
+      "rankLv": 64
+    },
+    "165": {
+      "level": 165,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2000
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 181400,
+      "fishSoulBaseAttrs": {
+        "1": 117910,
+        "2": 9433,
+        "3": 9433,
+        "4": 3538
+      },
+      "rank": 2,
+      "rankLv": 65
+    },
+    "166": {
+      "level": 166,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2020
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 182300,
+      "fishSoulBaseAttrs": {
+        "1": 118463,
+        "2": 9477,
+        "3": 9477,
+        "4": 3554
+      },
+      "rank": 2,
+      "rankLv": 66
+    },
+    "167": {
+      "level": 167,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2030
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 183100,
+      "fishSoulBaseAttrs": {
+        "1": 119015,
+        "2": 9522,
+        "3": 9522,
+        "4": 3571
+      },
+      "rank": 2,
+      "rankLv": 67
+    },
+    "168": {
+      "level": 168,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2050
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 184000,
+      "fishSoulBaseAttrs": {
+        "1": 119568,
+        "2": 9566,
+        "3": 9566,
+        "4": 3588
+      },
+      "rank": 2,
+      "rankLv": 68
+    },
+    "169": {
+      "level": 169,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2070
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 184800,
+      "fishSoulBaseAttrs": {
+        "1": 120120,
+        "2": 9610,
+        "3": 9610,
+        "4": 3604
+      },
+      "rank": 2,
+      "rankLv": 69
+    },
+    "170": {
+      "level": 170,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2080
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 185700,
+      "fishSoulBaseAttrs": {
+        "1": 120673,
+        "2": 9654,
+        "3": 9654,
+        "4": 3621
+      },
+      "rank": 2,
+      "rankLv": 70
+    },
+    "171": {
+      "level": 171,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2100
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 186500,
+      "fishSoulBaseAttrs": {
+        "1": 121225,
+        "2": 9698,
+        "3": 9698,
+        "4": 3637
+      },
+      "rank": 2,
+      "rankLv": 71
+    },
+    "172": {
+      "level": 172,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2110
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 187400,
+      "fishSoulBaseAttrs": {
+        "1": 121778,
+        "2": 9743,
+        "3": 9743,
+        "4": 3654
+      },
+      "rank": 2,
+      "rankLv": 72
+    },
+    "173": {
+      "level": 173,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2130
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 188200,
+      "fishSoulBaseAttrs": {
+        "1": 122330,
+        "2": 9787,
+        "3": 9787,
+        "4": 3670
+      },
+      "rank": 2,
+      "rankLv": 73
+    },
+    "174": {
+      "level": 174,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2150
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 189100,
+      "fishSoulBaseAttrs": {
+        "1": 122883,
+        "2": 9831,
+        "3": 9831,
+        "4": 3687
+      },
+      "rank": 2,
+      "rankLv": 74
+    },
+    "175": {
+      "level": 175,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2160
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 189900,
+      "fishSoulBaseAttrs": {
+        "1": 123435,
+        "2": 9875,
+        "3": 9875,
+        "4": 3704
+      },
+      "rank": 2,
+      "rankLv": 75
+    },
+    "176": {
+      "level": 176,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2180
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 190800,
+      "fishSoulBaseAttrs": {
+        "1": 123988,
+        "2": 9919,
+        "3": 9919,
+        "4": 3720
+      },
+      "rank": 2,
+      "rankLv": 76
+    },
+    "177": {
+      "level": 177,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2200
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 191600,
+      "fishSoulBaseAttrs": {
+        "1": 124540,
+        "2": 9964,
+        "3": 9964,
+        "4": 3737
+      },
+      "rank": 2,
+      "rankLv": 77
+    },
+    "178": {
+      "level": 178,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2210
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 192500,
+      "fishSoulBaseAttrs": {
+        "1": 125093,
+        "2": 10008,
+        "3": 10008,
+        "4": 3753
+      },
+      "rank": 2,
+      "rankLv": 78
+    },
+    "179": {
+      "level": 179,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2230
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 193300,
+      "fishSoulBaseAttrs": {
+        "1": 125645,
+        "2": 10052,
+        "3": 10052,
+        "4": 3770
+      },
+      "rank": 2,
+      "rankLv": 79
+    },
+    "180": {
+      "level": 180,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2240
+        },
+        {
+          "id": 332,
+          "count": 190
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 194200,
+      "fishSoulBaseAttrs": {
+        "1": 126198,
+        "2": 10096,
+        "3": 10096,
+        "4": 3786
+      },
+      "rank": 2,
+      "rankLv": 80
+    },
+    "181": {
+      "level": 181,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2260
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 199300,
+      "fishSoulBaseAttrs": {
+        "1": 129513,
+        "2": 10361,
+        "3": 10361,
+        "4": 3886
+      },
+      "rank": 2,
+      "rankLv": 81
+    },
+    "182": {
+      "level": 182,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2280
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 200200,
+      "fishSoulBaseAttrs": {
+        "1": 130098,
+        "2": 10408,
+        "3": 10408,
+        "4": 3903
+      },
+      "rank": 2,
+      "rankLv": 82
+    },
+    "183": {
+      "level": 183,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2290
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 201100,
+      "fishSoulBaseAttrs": {
+        "1": 130683,
+        "2": 10455,
+        "3": 10455,
+        "4": 3921
+      },
+      "rank": 2,
+      "rankLv": 83
+    },
+    "184": {
+      "level": 184,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2300
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 202000,
+      "fishSoulBaseAttrs": {
+        "1": 131268,
+        "2": 10502,
+        "3": 10502,
+        "4": 3939
+      },
+      "rank": 2,
+      "rankLv": 84
+    },
+    "185": {
+      "level": 185,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2320
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 202900,
+      "fishSoulBaseAttrs": {
+        "1": 131853,
+        "2": 10549,
+        "3": 10549,
+        "4": 3956
+      },
+      "rank": 2,
+      "rankLv": 85
+    },
+    "186": {
+      "level": 186,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2330
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 203800,
+      "fishSoulBaseAttrs": {
+        "1": 132438,
+        "2": 10595,
+        "3": 10595,
+        "4": 3974
+      },
+      "rank": 2,
+      "rankLv": 86
+    },
+    "187": {
+      "level": 187,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2350
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 204700,
+      "fishSoulBaseAttrs": {
+        "1": 133023,
+        "2": 10642,
+        "3": 10642,
+        "4": 3991
+      },
+      "rank": 2,
+      "rankLv": 87
+    },
+    "188": {
+      "level": 188,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2360
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 205600,
+      "fishSoulBaseAttrs": {
+        "1": 133608,
+        "2": 10689,
+        "3": 10689,
+        "4": 4009
+      },
+      "rank": 2,
+      "rankLv": 88
+    },
+    "189": {
+      "level": 189,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2380
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 206500,
+      "fishSoulBaseAttrs": {
+        "1": 134193,
+        "2": 10736,
+        "3": 10736,
+        "4": 4026
+      },
+      "rank": 2,
+      "rankLv": 89
+    },
+    "190": {
+      "level": 190,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2390
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 207400,
+      "fishSoulBaseAttrs": {
+        "1": 134778,
+        "2": 10783,
+        "3": 10783,
+        "4": 4044
+      },
+      "rank": 2,
+      "rankLv": 90
+    },
+    "191": {
+      "level": 191,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2400
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 208300,
+      "fishSoulBaseAttrs": {
+        "1": 135363,
+        "2": 10829,
+        "3": 10829,
+        "4": 4061
+      },
+      "rank": 2,
+      "rankLv": 91
+    },
+    "192": {
+      "level": 192,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2420
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 209200,
+      "fishSoulBaseAttrs": {
+        "1": 135948,
+        "2": 10876,
+        "3": 10876,
+        "4": 4079
+      },
+      "rank": 2,
+      "rankLv": 92
+    },
+    "193": {
+      "level": 193,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2430
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 210100,
+      "fishSoulBaseAttrs": {
+        "1": 136533,
+        "2": 10923,
+        "3": 10923,
+        "4": 4096
+      },
+      "rank": 2,
+      "rankLv": 93
+    },
+    "194": {
+      "level": 194,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2450
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 211000,
+      "fishSoulBaseAttrs": {
+        "1": 137118,
+        "2": 10970,
+        "3": 10970,
+        "4": 4114
+      },
+      "rank": 2,
+      "rankLv": 94
+    },
+    "195": {
+      "level": 195,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2460
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 211900,
+      "fishSoulBaseAttrs": {
+        "1": 137703,
+        "2": 11017,
+        "3": 11017,
+        "4": 4132
+      },
+      "rank": 2,
+      "rankLv": 95
+    },
+    "196": {
+      "level": 196,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2480
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 212800,
+      "fishSoulBaseAttrs": {
+        "1": 138288,
+        "2": 11063,
+        "3": 11063,
+        "4": 4149
+      },
+      "rank": 2,
+      "rankLv": 96
+    },
+    "197": {
+      "level": 197,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2490
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 213700,
+      "fishSoulBaseAttrs": {
+        "1": 138873,
+        "2": 11110,
+        "3": 11110,
+        "4": 4167
+      },
+      "rank": 2,
+      "rankLv": 97
+    },
+    "198": {
+      "level": 198,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2500
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 214600,
+      "fishSoulBaseAttrs": {
+        "1": 139458,
+        "2": 11157,
+        "3": 11157,
+        "4": 4184
+      },
+      "rank": 2,
+      "rankLv": 98
+    },
+    "199": {
+      "level": 199,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2520
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 215500,
+      "fishSoulBaseAttrs": {
+        "1": 140043,
+        "2": 11204,
+        "3": 11204,
+        "4": 4202
+      },
+      "rank": 2,
+      "rankLv": 99
+    },
+    "200": {
+      "level": 200,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2530
+        },
+        {
+          "id": 332,
+          "count": 220
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 216400,
+      "fishSoulBaseAttrs": {
+        "1": 140628,
+        "2": 11251,
+        "3": 11251,
+        "4": 4219
+      },
+      "rank": 2,
+      "rankLv": 100
+    },
+    "201": {
+      "level": 201,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2550
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 221800,
+      "fishSoulBaseAttrs": {
+        "1": 144138,
+        "2": 11531,
+        "3": 11531,
+        "4": 4325
+      },
+      "rank": 2,
+      "rankLv": 101
+    },
+    "202": {
+      "level": 202,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2560
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 222700,
+      "fishSoulBaseAttrs": {
+        "1": 144772,
+        "2": 11582,
+        "3": 11582,
+        "4": 4344
+      },
+      "rank": 2,
+      "rankLv": 102
+    },
+    "203": {
+      "level": 203,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2580
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 223700,
+      "fishSoulBaseAttrs": {
+        "1": 145405,
+        "2": 11633,
+        "3": 11633,
+        "4": 4363
+      },
+      "rank": 2,
+      "rankLv": 103
+    },
+    "204": {
+      "level": 204,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2590
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 224700,
+      "fishSoulBaseAttrs": {
+        "1": 146039,
+        "2": 11684,
+        "3": 11684,
+        "4": 4382
+      },
+      "rank": 2,
+      "rankLv": 104
+    },
+    "205": {
+      "level": 205,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2610
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 225700,
+      "fishSoulBaseAttrs": {
+        "1": 146673,
+        "2": 11734,
+        "3": 11734,
+        "4": 4401
+      },
+      "rank": 2,
+      "rankLv": 105
+    },
+    "206": {
+      "level": 206,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2620
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 226600,
+      "fishSoulBaseAttrs": {
+        "1": 147307,
+        "2": 11785,
+        "3": 11785,
+        "4": 4420
+      },
+      "rank": 2,
+      "rankLv": 106
+    },
+    "207": {
+      "level": 207,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2640
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 227600,
+      "fishSoulBaseAttrs": {
+        "1": 147940,
+        "2": 11836,
+        "3": 11836,
+        "4": 4439
+      },
+      "rank": 2,
+      "rankLv": 107
+    },
+    "208": {
+      "level": 208,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2650
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 228600,
+      "fishSoulBaseAttrs": {
+        "1": 148574,
+        "2": 11886,
+        "3": 11886,
+        "4": 4458
+      },
+      "rank": 2,
+      "rankLv": 108
+    },
+    "209": {
+      "level": 209,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2670
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 229600,
+      "fishSoulBaseAttrs": {
+        "1": 149208,
+        "2": 11937,
+        "3": 11937,
+        "4": 4477
+      },
+      "rank": 2,
+      "rankLv": 109
+    },
+    "210": {
+      "level": 210,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2680
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 230500,
+      "fishSoulBaseAttrs": {
+        "1": 149842,
+        "2": 11988,
+        "3": 11988,
+        "4": 4496
+      },
+      "rank": 2,
+      "rankLv": 110
+    },
+    "211": {
+      "level": 211,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2700
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 231500,
+      "fishSoulBaseAttrs": {
+        "1": 150475,
+        "2": 12038,
+        "3": 12038,
+        "4": 4515
+      },
+      "rank": 2,
+      "rankLv": 111
+    },
+    "212": {
+      "level": 212,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2720
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 232500,
+      "fishSoulBaseAttrs": {
+        "1": 151109,
+        "2": 12089,
+        "3": 12089,
+        "4": 4534
+      },
+      "rank": 2,
+      "rankLv": 112
+    },
+    "213": {
+      "level": 213,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2730
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 233500,
+      "fishSoulBaseAttrs": {
+        "1": 151743,
+        "2": 12140,
+        "3": 12140,
+        "4": 4553
+      },
+      "rank": 2,
+      "rankLv": 113
+    },
+    "214": {
+      "level": 214,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2750
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 234400,
+      "fishSoulBaseAttrs": {
+        "1": 152377,
+        "2": 12191,
+        "3": 12191,
+        "4": 4572
+      },
+      "rank": 2,
+      "rankLv": 114
+    },
+    "215": {
+      "level": 215,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2760
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 235400,
+      "fishSoulBaseAttrs": {
+        "1": 153010,
+        "2": 12241,
+        "3": 12241,
+        "4": 4591
+      },
+      "rank": 2,
+      "rankLv": 115
+    },
+    "216": {
+      "level": 216,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2780
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 236400,
+      "fishSoulBaseAttrs": {
+        "1": 153644,
+        "2": 12292,
+        "3": 12292,
+        "4": 4610
+      },
+      "rank": 2,
+      "rankLv": 116
+    },
+    "217": {
+      "level": 217,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2790
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 237400,
+      "fishSoulBaseAttrs": {
+        "1": 154278,
+        "2": 12343,
+        "3": 12343,
+        "4": 4629
+      },
+      "rank": 2,
+      "rankLv": 117
+    },
+    "218": {
+      "level": 218,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2810
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 238300,
+      "fishSoulBaseAttrs": {
+        "1": 154912,
+        "2": 12393,
+        "3": 12393,
+        "4": 4648
+      },
+      "rank": 2,
+      "rankLv": 118
+    },
+    "219": {
+      "level": 219,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2820
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 239300,
+      "fishSoulBaseAttrs": {
+        "1": 155545,
+        "2": 12444,
+        "3": 12444,
+        "4": 4667
+      },
+      "rank": 2,
+      "rankLv": 119
+    },
+    "220": {
+      "level": 220,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2840
+        },
+        {
+          "id": 332,
+          "count": 250
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 240300,
+      "fishSoulBaseAttrs": {
+        "1": 156179,
+        "2": 12495,
+        "3": 12495,
+        "4": 4686
+      },
+      "rank": 2,
+      "rankLv": 120
+    },
+    "221": {
+      "level": 221,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2850
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 246100,
+      "fishSoulBaseAttrs": {
+        "1": 159982,
+        "2": 12799,
+        "3": 12799,
+        "4": 4800
+      },
+      "rank": 2,
+      "rankLv": 121
+    },
+    "222": {
+      "level": 222,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2870
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 247200,
+      "fishSoulBaseAttrs": {
+        "1": 160664,
+        "2": 12854,
+        "3": 12854,
+        "4": 4820
+      },
+      "rank": 2,
+      "rankLv": 122
+    },
+    "223": {
+      "level": 223,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2890
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 248200,
+      "fishSoulBaseAttrs": {
+        "1": 161347,
+        "2": 12908,
+        "3": 12908,
+        "4": 4841
+      },
+      "rank": 2,
+      "rankLv": 123
+    },
+    "224": {
+      "level": 224,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2900
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 249300,
+      "fishSoulBaseAttrs": {
+        "1": 162029,
+        "2": 12963,
+        "3": 12963,
+        "4": 4861
+      },
+      "rank": 2,
+      "rankLv": 124
+    },
+    "225": {
+      "level": 225,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2920
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 250300,
+      "fishSoulBaseAttrs": {
+        "1": 162712,
+        "2": 13017,
+        "3": 13017,
+        "4": 4882
+      },
+      "rank": 2,
+      "rankLv": 125
+    },
+    "226": {
+      "level": 226,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2940
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 251400,
+      "fishSoulBaseAttrs": {
+        "1": 163394,
+        "2": 13072,
+        "3": 13072,
+        "4": 4902
+      },
+      "rank": 2,
+      "rankLv": 126
+    },
+    "227": {
+      "level": 227,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2950
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 252400,
+      "fishSoulBaseAttrs": {
+        "1": 164077,
+        "2": 13127,
+        "3": 13127,
+        "4": 4923
+      },
+      "rank": 2,
+      "rankLv": 127
+    },
+    "228": {
+      "level": 228,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2970
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 253500,
+      "fishSoulBaseAttrs": {
+        "1": 164759,
+        "2": 13181,
+        "3": 13181,
+        "4": 4943
+      },
+      "rank": 2,
+      "rankLv": 128
+    },
+    "229": {
+      "level": 229,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 2980
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 254500,
+      "fishSoulBaseAttrs": {
+        "1": 165442,
+        "2": 13236,
+        "3": 13236,
+        "4": 4964
+      },
+      "rank": 2,
+      "rankLv": 129
+    },
+    "230": {
+      "level": 230,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3000
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 255600,
+      "fishSoulBaseAttrs": {
+        "1": 166124,
+        "2": 13290,
+        "3": 13290,
+        "4": 4984
+      },
+      "rank": 2,
+      "rankLv": 130
+    },
+    "231": {
+      "level": 231,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3020
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 256600,
+      "fishSoulBaseAttrs": {
+        "1": 166807,
+        "2": 13345,
+        "3": 13345,
+        "4": 5005
+      },
+      "rank": 2,
+      "rankLv": 131
+    },
+    "232": {
+      "level": 232,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3030
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 257700,
+      "fishSoulBaseAttrs": {
+        "1": 167489,
+        "2": 13400,
+        "3": 13400,
+        "4": 5025
+      },
+      "rank": 2,
+      "rankLv": 132
+    },
+    "233": {
+      "level": 233,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3050
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 258700,
+      "fishSoulBaseAttrs": {
+        "1": 168172,
+        "2": 13454,
+        "3": 13454,
+        "4": 5046
+      },
+      "rank": 2,
+      "rankLv": 133
+    },
+    "234": {
+      "level": 234,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3070
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 259800,
+      "fishSoulBaseAttrs": {
+        "1": 168854,
+        "2": 13509,
+        "3": 13509,
+        "4": 5066
+      },
+      "rank": 2,
+      "rankLv": 134
+    },
+    "235": {
+      "level": 235,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3080
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 260800,
+      "fishSoulBaseAttrs": {
+        "1": 169537,
+        "2": 13563,
+        "3": 13563,
+        "4": 5087
+      },
+      "rank": 2,
+      "rankLv": 135
+    },
+    "236": {
+      "level": 236,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3100
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 261900,
+      "fishSoulBaseAttrs": {
+        "1": 170219,
+        "2": 13618,
+        "3": 13618,
+        "4": 5107
+      },
+      "rank": 2,
+      "rankLv": 136
+    },
+    "237": {
+      "level": 237,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3120
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 262900,
+      "fishSoulBaseAttrs": {
+        "1": 170902,
+        "2": 13673,
+        "3": 13673,
+        "4": 5128
+      },
+      "rank": 2,
+      "rankLv": 137
+    },
+    "238": {
+      "level": 238,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3130
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 264000,
+      "fishSoulBaseAttrs": {
+        "1": 171584,
+        "2": 13727,
+        "3": 13727,
+        "4": 5148
+      },
+      "rank": 2,
+      "rankLv": 138
+    },
+    "239": {
+      "level": 239,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3150
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 265000,
+      "fishSoulBaseAttrs": {
+        "1": 172267,
+        "2": 13782,
+        "3": 13782,
+        "4": 5168
+      },
+      "rank": 2,
+      "rankLv": 139
+    },
+    "240": {
+      "level": 240,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3160
+        },
+        {
+          "id": 332,
+          "count": 280
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 266100,
+      "fishSoulBaseAttrs": {
+        "1": 172949,
+        "2": 13836,
+        "3": 13836,
+        "4": 5189
+      },
+      "rank": 2,
+      "rankLv": 140
+    },
+    "241": {
+      "level": 241,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3180
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 272400,
+      "fishSoulBaseAttrs": {
+        "1": 177044,
+        "2": 14164,
+        "3": 14164,
+        "4": 5312
+      },
+      "rank": 2,
+      "rankLv": 141
+    },
+    "242": {
+      "level": 242,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3200
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 273500,
+      "fishSoulBaseAttrs": {
+        "1": 177775,
+        "2": 14222,
+        "3": 14222,
+        "4": 5334
+      },
+      "rank": 2,
+      "rankLv": 142
+    },
+    "243": {
+      "level": 243,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3220
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 274600,
+      "fishSoulBaseAttrs": {
+        "1": 178507,
+        "2": 14281,
+        "3": 14281,
+        "4": 5356
+      },
+      "rank": 2,
+      "rankLv": 143
+    },
+    "244": {
+      "level": 244,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3230
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 275800,
+      "fishSoulBaseAttrs": {
+        "1": 179238,
+        "2": 14339,
+        "3": 14339,
+        "4": 5378
+      },
+      "rank": 2,
+      "rankLv": 144
+    },
+    "245": {
+      "level": 245,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3250
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 276900,
+      "fishSoulBaseAttrs": {
+        "1": 179969,
+        "2": 14398,
+        "3": 14398,
+        "4": 5400
+      },
+      "rank": 2,
+      "rankLv": 145
+    },
+    "246": {
+      "level": 246,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3270
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 278000,
+      "fishSoulBaseAttrs": {
+        "1": 180700,
+        "2": 14456,
+        "3": 14456,
+        "4": 5421
+      },
+      "rank": 2,
+      "rankLv": 146
+    },
+    "247": {
+      "level": 247,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3290
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 279100,
+      "fishSoulBaseAttrs": {
+        "1": 181432,
+        "2": 14515,
+        "3": 14515,
+        "4": 5443
+      },
+      "rank": 2,
+      "rankLv": 147
+    },
+    "248": {
+      "level": 248,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3300
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 280300,
+      "fishSoulBaseAttrs": {
+        "1": 182163,
+        "2": 14573,
+        "3": 14573,
+        "4": 5465
+      },
+      "rank": 2,
+      "rankLv": 148
+    },
+    "249": {
+      "level": 249,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3320
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 281400,
+      "fishSoulBaseAttrs": {
+        "1": 182894,
+        "2": 14632,
+        "3": 14632,
+        "4": 5487
+      },
+      "rank": 2,
+      "rankLv": 149
+    },
+    "250": {
+      "level": 250,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3340
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 282500,
+      "fishSoulBaseAttrs": {
+        "1": 183625,
+        "2": 14690,
+        "3": 14690,
+        "4": 5509
+      },
+      "rank": 2,
+      "rankLv": 150
+    },
+    "251": {
+      "level": 251,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3360
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 283600,
+      "fishSoulBaseAttrs": {
+        "1": 184357,
+        "2": 14749,
+        "3": 14749,
+        "4": 5531
+      },
+      "rank": 2,
+      "rankLv": 151
+    },
+    "252": {
+      "level": 252,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3370
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 284800,
+      "fishSoulBaseAttrs": {
+        "1": 185088,
+        "2": 14807,
+        "3": 14807,
+        "4": 5553
+      },
+      "rank": 2,
+      "rankLv": 152
+    },
+    "253": {
+      "level": 253,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3390
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 285900,
+      "fishSoulBaseAttrs": {
+        "1": 185819,
+        "2": 14866,
+        "3": 14866,
+        "4": 5575
+      },
+      "rank": 2,
+      "rankLv": 153
+    },
+    "254": {
+      "level": 254,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3410
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 287000,
+      "fishSoulBaseAttrs": {
+        "1": 186550,
+        "2": 14924,
+        "3": 14924,
+        "4": 5597
+      },
+      "rank": 2,
+      "rankLv": 154
+    },
+    "255": {
+      "level": 255,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3430
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 288100,
+      "fishSoulBaseAttrs": {
+        "1": 187282,
+        "2": 14983,
+        "3": 14983,
+        "4": 5619
+      },
+      "rank": 2,
+      "rankLv": 155
+    },
+    "256": {
+      "level": 256,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3450
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 289300,
+      "fishSoulBaseAttrs": {
+        "1": 188013,
+        "2": 15041,
+        "3": 15041,
+        "4": 5641
+      },
+      "rank": 2,
+      "rankLv": 156
+    },
+    "257": {
+      "level": 257,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3460
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 290400,
+      "fishSoulBaseAttrs": {
+        "1": 188744,
+        "2": 15100,
+        "3": 15100,
+        "4": 5663
+      },
+      "rank": 2,
+      "rankLv": 157
+    },
+    "258": {
+      "level": 258,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3480
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 291500,
+      "fishSoulBaseAttrs": {
+        "1": 189475,
+        "2": 15158,
+        "3": 15158,
+        "4": 5685
+      },
+      "rank": 2,
+      "rankLv": 158
+    },
+    "259": {
+      "level": 259,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3500
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 292600,
+      "fishSoulBaseAttrs": {
+        "1": 190207,
+        "2": 15217,
+        "3": 15217,
+        "4": 5707
+      },
+      "rank": 2,
+      "rankLv": 159
+    },
+    "260": {
+      "level": 260,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3520
+        },
+        {
+          "id": 332,
+          "count": 310
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 293800,
+      "fishSoulBaseAttrs": {
+        "1": 190938,
+        "2": 15275,
+        "3": 15275,
+        "4": 5729
+      },
+      "rank": 2,
+      "rankLv": 160
+    },
+    "261": {
+      "level": 261,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3530
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 300500,
+      "fishSoulBaseAttrs": {
+        "1": 195325,
+        "2": 15626,
+        "3": 15626,
+        "4": 5860
+      },
+      "rank": 2,
+      "rankLv": 161
+    },
+    "262": {
+      "level": 262,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3550
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 301700,
+      "fishSoulBaseAttrs": {
+        "1": 196105,
+        "2": 15689,
+        "3": 15689,
+        "4": 5884
+      },
+      "rank": 2,
+      "rankLv": 162
+    },
+    "263": {
+      "level": 263,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3570
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 302900,
+      "fishSoulBaseAttrs": {
+        "1": 196885,
+        "2": 15751,
+        "3": 15751,
+        "4": 5907
+      },
+      "rank": 2,
+      "rankLv": 163
+    },
+    "264": {
+      "level": 264,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3590
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 304100,
+      "fishSoulBaseAttrs": {
+        "1": 197665,
+        "2": 15814,
+        "3": 15814,
+        "4": 5930
+      },
+      "rank": 2,
+      "rankLv": 164
+    },
+    "265": {
+      "level": 265,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3600
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 305300,
+      "fishSoulBaseAttrs": {
+        "1": 198445,
+        "2": 15876,
+        "3": 15876,
+        "4": 5954
+      },
+      "rank": 2,
+      "rankLv": 165
+    },
+    "266": {
+      "level": 266,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3620
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 306500,
+      "fishSoulBaseAttrs": {
+        "1": 199225,
+        "2": 15938,
+        "3": 15938,
+        "4": 5977
+      },
+      "rank": 2,
+      "rankLv": 166
+    },
+    "267": {
+      "level": 267,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3640
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 307700,
+      "fishSoulBaseAttrs": {
+        "1": 200005,
+        "2": 16001,
+        "3": 16001,
+        "4": 6001
+      },
+      "rank": 2,
+      "rankLv": 167
+    },
+    "268": {
+      "level": 268,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3660
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 308900,
+      "fishSoulBaseAttrs": {
+        "1": 200785,
+        "2": 16063,
+        "3": 16063,
+        "4": 6024
+      },
+      "rank": 2,
+      "rankLv": 168
+    },
+    "269": {
+      "level": 269,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3670
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 310100,
+      "fishSoulBaseAttrs": {
+        "1": 201565,
+        "2": 16126,
+        "3": 16126,
+        "4": 6047
+      },
+      "rank": 2,
+      "rankLv": 169
+    },
+    "270": {
+      "level": 270,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3690
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 311300,
+      "fishSoulBaseAttrs": {
+        "1": 202345,
+        "2": 16188,
+        "3": 16188,
+        "4": 6071
+      },
+      "rank": 2,
+      "rankLv": 170
+    },
+    "271": {
+      "level": 271,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3710
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 312500,
+      "fishSoulBaseAttrs": {
+        "1": 203125,
+        "2": 16250,
+        "3": 16250,
+        "4": 6094
+      },
+      "rank": 2,
+      "rankLv": 171
+    },
+    "272": {
+      "level": 272,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3730
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 313700,
+      "fishSoulBaseAttrs": {
+        "1": 203905,
+        "2": 16313,
+        "3": 16313,
+        "4": 6118
+      },
+      "rank": 2,
+      "rankLv": 172
+    },
+    "273": {
+      "level": 273,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3740
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 314900,
+      "fishSoulBaseAttrs": {
+        "1": 204685,
+        "2": 16375,
+        "3": 16375,
+        "4": 6141
+      },
+      "rank": 2,
+      "rankLv": 173
+    },
+    "274": {
+      "level": 274,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3760
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 316100,
+      "fishSoulBaseAttrs": {
+        "1": 205465,
+        "2": 16438,
+        "3": 16438,
+        "4": 6164
+      },
+      "rank": 2,
+      "rankLv": 174
+    },
+    "275": {
+      "level": 275,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3780
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 317300,
+      "fishSoulBaseAttrs": {
+        "1": 206245,
+        "2": 16500,
+        "3": 16500,
+        "4": 6188
+      },
+      "rank": 2,
+      "rankLv": 175
+    },
+    "276": {
+      "level": 276,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3800
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 318500,
+      "fishSoulBaseAttrs": {
+        "1": 207025,
+        "2": 16562,
+        "3": 16562,
+        "4": 6211
+      },
+      "rank": 2,
+      "rankLv": 176
+    },
+    "277": {
+      "level": 277,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3810
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 319700,
+      "fishSoulBaseAttrs": {
+        "1": 207805,
+        "2": 16625,
+        "3": 16625,
+        "4": 6235
+      },
+      "rank": 2,
+      "rankLv": 177
+    },
+    "278": {
+      "level": 278,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3830
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 320900,
+      "fishSoulBaseAttrs": {
+        "1": 208585,
+        "2": 16687,
+        "3": 16687,
+        "4": 6258
+      },
+      "rank": 2,
+      "rankLv": 178
+    },
+    "279": {
+      "level": 279,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3850
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 322100,
+      "fishSoulBaseAttrs": {
+        "1": 209365,
+        "2": 16750,
+        "3": 16750,
+        "4": 6281
+      },
+      "rank": 2,
+      "rankLv": 179
+    },
+    "280": {
+      "level": 280,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3870
+        },
+        {
+          "id": 332,
+          "count": 350
+        }
+      ],
+      "levelType": 1,
+      "levelAttrsUp": 323300,
+      "fishSoulBaseAttrs": {
+        "1": 210145,
+        "2": 16812,
+        "3": 16812,
+        "4": 6305
+      },
+      "rank": 2,
+      "rankLv": 180
+    },
+    "281": {
+      "level": 281,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3880
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 330500,
+      "fishSoulBaseAttrs": {
+        "1": 214825,
+        "2": 17186,
+        "3": 17186,
+        "4": 6445
+      },
+      "rank": 2,
+      "rankLv": 181
+    },
+    "282": {
+      "level": 282,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3900
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 331800,
+      "fishSoulBaseAttrs": {
+        "1": 215654,
+        "2": 17253,
+        "3": 17253,
+        "4": 6470
+      },
+      "rank": 2,
+      "rankLv": 182
+    },
+    "283": {
+      "level": 283,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3920
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 333100,
+      "fishSoulBaseAttrs": {
+        "1": 216483,
+        "2": 17319,
+        "3": 17319,
+        "4": 6495
+      },
+      "rank": 2,
+      "rankLv": 183
+    },
+    "284": {
+      "level": 284,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3940
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 334300,
+      "fishSoulBaseAttrs": {
+        "1": 217312,
+        "2": 17385,
+        "3": 17385,
+        "4": 6520
+      },
+      "rank": 2,
+      "rankLv": 184
+    },
+    "285": {
+      "level": 285,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3960
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 335600,
+      "fishSoulBaseAttrs": {
+        "1": 218140,
+        "2": 17452,
+        "3": 17452,
+        "4": 6545
+      },
+      "rank": 2,
+      "rankLv": 185
+    },
+    "286": {
+      "level": 286,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 3980
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 336900,
+      "fishSoulBaseAttrs": {
+        "1": 218969,
+        "2": 17518,
+        "3": 17518,
+        "4": 6570
+      },
+      "rank": 2,
+      "rankLv": 186
+    },
+    "287": {
+      "level": 287,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4000
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 338200,
+      "fishSoulBaseAttrs": {
+        "1": 219798,
+        "2": 17584,
+        "3": 17584,
+        "4": 6594
+      },
+      "rank": 2,
+      "rankLv": 187
+    },
+    "288": {
+      "level": 288,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4020
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 339400,
+      "fishSoulBaseAttrs": {
+        "1": 220627,
+        "2": 17651,
+        "3": 17651,
+        "4": 6619
+      },
+      "rank": 2,
+      "rankLv": 188
+    },
+    "289": {
+      "level": 289,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4040
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 340700,
+      "fishSoulBaseAttrs": {
+        "1": 221455,
+        "2": 17717,
+        "3": 17717,
+        "4": 6644
+      },
+      "rank": 2,
+      "rankLv": 189
+    },
+    "290": {
+      "level": 290,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4060
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 342000,
+      "fishSoulBaseAttrs": {
+        "1": 222284,
+        "2": 17783,
+        "3": 17783,
+        "4": 6669
+      },
+      "rank": 2,
+      "rankLv": 190
+    },
+    "291": {
+      "level": 291,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4080
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 343300,
+      "fishSoulBaseAttrs": {
+        "1": 223113,
+        "2": 17849,
+        "3": 17849,
+        "4": 6694
+      },
+      "rank": 2,
+      "rankLv": 191
+    },
+    "292": {
+      "level": 292,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4100
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 344500,
+      "fishSoulBaseAttrs": {
+        "1": 223942,
+        "2": 17916,
+        "3": 17916,
+        "4": 6719
+      },
+      "rank": 2,
+      "rankLv": 192
+    },
+    "293": {
+      "level": 293,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4110
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 345800,
+      "fishSoulBaseAttrs": {
+        "1": 224770,
+        "2": 17982,
+        "3": 17982,
+        "4": 6744
+      },
+      "rank": 2,
+      "rankLv": 193
+    },
+    "294": {
+      "level": 294,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4130
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 347100,
+      "fishSoulBaseAttrs": {
+        "1": 225599,
+        "2": 18048,
+        "3": 18048,
+        "4": 6768
+      },
+      "rank": 2,
+      "rankLv": 194
+    },
+    "295": {
+      "level": 295,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4150
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 348400,
+      "fishSoulBaseAttrs": {
+        "1": 226428,
+        "2": 18115,
+        "3": 18115,
+        "4": 6793
+      },
+      "rank": 2,
+      "rankLv": 195
+    },
+    "296": {
+      "level": 296,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4170
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 349600,
+      "fishSoulBaseAttrs": {
+        "1": 227257,
+        "2": 18181,
+        "3": 18181,
+        "4": 6818
+      },
+      "rank": 2,
+      "rankLv": 196
+    },
+    "297": {
+      "level": 297,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4190
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 350900,
+      "fishSoulBaseAttrs": {
+        "1": 228085,
+        "2": 18247,
+        "3": 18247,
+        "4": 6843
+      },
+      "rank": 2,
+      "rankLv": 197
+    },
+    "298": {
+      "level": 298,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4210
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 352200,
+      "fishSoulBaseAttrs": {
+        "1": 228914,
+        "2": 18314,
+        "3": 18314,
+        "4": 6868
+      },
+      "rank": 2,
+      "rankLv": 198
+    },
+    "299": {
+      "level": 299,
+      "levelCosts": [
+        {
+          "id": 331,
+          "count": 4230
+        }
+      ],
+      "levelType": 0,
+      "levelAttrsUp": 353500,
+      "fishSoulBaseAttrs": {
+        "1": 229743,
+        "2": 18380,
+        "3": 18380,
+        "4": 6893
+      },
+      "rank": 2,
+      "rankLv": 199
+    },
+    "300": {
+      "level": 300,
+      "levelCosts": [],
+      "levelType": 2,
+      "levelAttrsUp": 354700,
+      "fishSoulBaseAttrs": {
+        "1": 230572,
+        "2": 18446,
+        "3": 18446,
+        "4": 6918
+      },
+      "rank": 2,
+      "rankLv": 200
+    }
+  }
+}

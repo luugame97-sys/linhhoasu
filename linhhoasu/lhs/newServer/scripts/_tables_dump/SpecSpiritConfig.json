@@ -1,0 +1,5902 @@
+{
+  "_table": "SpecSpiritConfig",
+  "_rows": 240,
+  "_type": "object",
+  "_firstKeys": "id,quality,stage,type,tag,appearId,exp,decomposes,attrs,proShieldPercent,skill",
+  "_sample": [
+    {
+      "261021": {
+        "id": 261021,
+        "quality": 2,
+        "stage": 1,
+        "type": 1,
+        "tag": 101,
+        "appearId": 24011,
+        "exp": 100,
+        "decomposes": [
+          {
+            "id": 457,
+            "count": 30
+          },
+          {
+            "id": 458,
+            "count": 1
+          }
+        ],
+        "attrs": {
+          "3": 260,
+          "4": 20,
+          "350": 110600
+        },
+        "proShieldPercent": 14000,
+        "skill": 240111
+      }
+    },
+    {
+      "261022": {
+        "id": 261022,
+        "quality": 2,
+        "stage": 2,
+        "type": 1,
+        "tag": 101,
+        "appearId": 24011,
+        "exp": 100,
+        "decomposes": [
+          {
+            "id": 457,
+            "count": 40
+          },
+          {
+            "id": 458,
+            "count": 1
+          }
+        ],
+        "attrs": {
+          "3": 650,
+          "4": 40,
+          "350": 268800
+        },
+        "proShieldPercent": 19600,
+        "skill": 240112
+      }
+    },
+    {
+      "261023": {
+        "id": 261023,
+        "quality": 2,
+        "stage": 3,
+        "type": 1,
+        "tag": 101,
+        "appearId": 24011,
+        "exp": 100,
+        "decomposes": [
+          {
+            "id": 457,
+            "count": 50
+          },
+          {
+            "id": 458,
+            "count": 1
+          }
+        ],
+        "attrs": {
+          "3": 1150,
+          "4": 60,
+          "350": 496000
+        },
+        "proShieldPercent": 27400,
+        "skill": 240113
+      }
+    }
+  ],
+  "data": {
+    "261021": {
+      "id": 261021,
+      "quality": 2,
+      "stage": 1,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 30
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 260,
+        "4": 20,
+        "350": 110600
+      },
+      "proShieldPercent": 14000,
+      "skill": 240111
+    },
+    "261022": {
+      "id": 261022,
+      "quality": 2,
+      "stage": 2,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 40
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 650,
+        "4": 40,
+        "350": 268800
+      },
+      "proShieldPercent": 19600,
+      "skill": 240112
+    },
+    "261023": {
+      "id": 261023,
+      "quality": 2,
+      "stage": 3,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 50
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 1150,
+        "4": 60,
+        "350": 496000
+      },
+      "proShieldPercent": 27400,
+      "skill": 240113
+    },
+    "261024": {
+      "id": 261024,
+      "quality": 2,
+      "stage": 4,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 1760,
+        "4": 90,
+        "350": 855100
+      },
+      "proShieldPercent": 38400,
+      "skill": 240114
+    },
+    "261025": {
+      "id": 261025,
+      "quality": 2,
+      "stage": 5,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 70
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 2430,
+        "4": 110,
+        "350": 1350900
+      },
+      "proShieldPercent": 53800,
+      "skill": 240115
+    },
+    "261026": {
+      "id": 261026,
+      "quality": 2,
+      "stage": 6,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 3190,
+        "4": 140,
+        "350": 2051300
+      },
+      "proShieldPercent": 75300,
+      "skill": 240116
+    },
+    "261027": {
+      "id": 261027,
+      "quality": 2,
+      "stage": 7,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 90
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 4130,
+        "4": 170,
+        "350": 3148000
+      },
+      "proShieldPercent": 105400,
+      "skill": 240117
+    },
+    "261028": {
+      "id": 261028,
+      "quality": 2,
+      "stage": 8,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 5460,
+        "4": 220,
+        "350": 4676200
+      },
+      "proShieldPercent": 147600,
+      "skill": 240118
+    },
+    "261031": {
+      "id": 261031,
+      "quality": 3,
+      "stage": 1,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 312,
+        "4": 24,
+        "350": 132720
+      },
+      "proShieldPercent": 16000,
+      "skill": 240111
+    },
+    "261032": {
+      "id": 261032,
+      "quality": 3,
+      "stage": 2,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 780,
+        "4": 48,
+        "350": 322560
+      },
+      "proShieldPercent": 22400,
+      "skill": 240112
+    },
+    "261033": {
+      "id": 261033,
+      "quality": 3,
+      "stage": 3,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 1380,
+        "4": 72,
+        "350": 595200
+      },
+      "proShieldPercent": 31400,
+      "skill": 240113
+    },
+    "261034": {
+      "id": 261034,
+      "quality": 3,
+      "stage": 4,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2112,
+        "4": 108,
+        "350": 1026120
+      },
+      "proShieldPercent": 43900,
+      "skill": 240114
+    },
+    "261035": {
+      "id": 261035,
+      "quality": 3,
+      "stage": 5,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 140
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2916,
+        "4": 132,
+        "350": 1621080
+      },
+      "proShieldPercent": 61500,
+      "skill": 240115
+    },
+    "261036": {
+      "id": 261036,
+      "quality": 3,
+      "stage": 6,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 3828,
+        "4": 168,
+        "350": 2461560
+      },
+      "proShieldPercent": 86100,
+      "skill": 240116
+    },
+    "261037": {
+      "id": 261037,
+      "quality": 3,
+      "stage": 7,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 4956,
+        "4": 204,
+        "350": 3777600
+      },
+      "proShieldPercent": 120500,
+      "skill": 240117
+    },
+    "261038": {
+      "id": 261038,
+      "quality": 3,
+      "stage": 8,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 6552,
+        "4": 264,
+        "350": 5611440
+      },
+      "proShieldPercent": 168700,
+      "skill": 240118
+    },
+    "261041": {
+      "id": 261041,
+      "quality": 4,
+      "stage": 1,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 364,
+        "4": 28,
+        "350": 154840
+      },
+      "proShieldPercent": 18000,
+      "skill": 240111
+    },
+    "261042": {
+      "id": 261042,
+      "quality": 4,
+      "stage": 2,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 910,
+        "4": 56,
+        "350": 376320
+      },
+      "proShieldPercent": 25200,
+      "skill": 240112
+    },
+    "261043": {
+      "id": 261043,
+      "quality": 4,
+      "stage": 3,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 1610,
+        "4": 84,
+        "350": 694400
+      },
+      "proShieldPercent": 35300,
+      "skill": 240113
+    },
+    "261044": {
+      "id": 261044,
+      "quality": 4,
+      "stage": 4,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 2464,
+        "4": 126,
+        "350": 1197140
+      },
+      "proShieldPercent": 49400,
+      "skill": 240114
+    },
+    "261045": {
+      "id": 261045,
+      "quality": 4,
+      "stage": 5,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 280
+        },
+        {
+          "id": 458,
+          "count": 9
+        }
+      ],
+      "attrs": {
+        "3": 3402,
+        "4": 154,
+        "350": 1891260
+      },
+      "proShieldPercent": 69100,
+      "skill": 240115
+    },
+    "261046": {
+      "id": 261046,
+      "quality": 4,
+      "stage": 6,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 320
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 4466,
+        "4": 196,
+        "350": 2871820
+      },
+      "proShieldPercent": 96800,
+      "skill": 240116
+    },
+    "261047": {
+      "id": 261047,
+      "quality": 4,
+      "stage": 7,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 5782,
+        "4": 238,
+        "350": 4407200
+      },
+      "proShieldPercent": 135500,
+      "skill": 240117
+    },
+    "261048": {
+      "id": 261048,
+      "quality": 4,
+      "stage": 8,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 400
+        },
+        {
+          "id": 458,
+          "count": 13
+        }
+      ],
+      "attrs": {
+        "3": 7644,
+        "4": 308,
+        "350": 6546680
+      },
+      "proShieldPercent": 189700,
+      "skill": 240118
+    },
+    "261061": {
+      "id": 261061,
+      "quality": 6,
+      "stage": 1,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 416,
+        "4": 32,
+        "350": 176960
+      },
+      "proShieldPercent": 20000,
+      "skill": 240111
+    },
+    "261062": {
+      "id": 261062,
+      "quality": 6,
+      "stage": 2,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 1040,
+        "4": 64,
+        "350": 430080
+      },
+      "proShieldPercent": 28000,
+      "skill": 240112
+    },
+    "261063": {
+      "id": 261063,
+      "quality": 6,
+      "stage": 3,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 300
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 1840,
+        "4": 96,
+        "350": 793600
+      },
+      "proShieldPercent": 39200,
+      "skill": 240113
+    },
+    "261064": {
+      "id": 261064,
+      "quality": 6,
+      "stage": 4,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 2816,
+        "4": 144,
+        "350": 1368160
+      },
+      "proShieldPercent": 54900,
+      "skill": 240114
+    },
+    "261065": {
+      "id": 261065,
+      "quality": 6,
+      "stage": 5,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 420
+        },
+        {
+          "id": 458,
+          "count": 14
+        }
+      ],
+      "attrs": {
+        "3": 3888,
+        "4": 176,
+        "350": 2161440
+      },
+      "proShieldPercent": 76800,
+      "skill": 240115
+    },
+    "261066": {
+      "id": 261066,
+      "quality": 6,
+      "stage": 6,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 480
+        },
+        {
+          "id": 458,
+          "count": 16
+        }
+      ],
+      "attrs": {
+        "3": 5104,
+        "4": 224,
+        "350": 3282080
+      },
+      "proShieldPercent": 107600,
+      "skill": 240116
+    },
+    "261067": {
+      "id": 261067,
+      "quality": 6,
+      "stage": 7,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 540
+        },
+        {
+          "id": 458,
+          "count": 18
+        }
+      ],
+      "attrs": {
+        "3": 6608,
+        "4": 272,
+        "350": 5036800
+      },
+      "proShieldPercent": 150600,
+      "skill": 240117
+    },
+    "261068": {
+      "id": 261068,
+      "quality": 6,
+      "stage": 8,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 600
+        },
+        {
+          "id": 458,
+          "count": 20
+        }
+      ],
+      "attrs": {
+        "3": 8736,
+        "4": 352,
+        "350": 7481920
+      },
+      "proShieldPercent": 210800,
+      "skill": 240118
+    },
+    "261071": {
+      "id": 261071,
+      "quality": 7,
+      "stage": 1,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 520,
+        "4": 40,
+        "350": 221200
+      },
+      "proShieldPercent": 24000,
+      "skill": 240111
+    },
+    "261072": {
+      "id": 261072,
+      "quality": 7,
+      "stage": 2,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 1300,
+        "4": 80,
+        "350": 537600
+      },
+      "proShieldPercent": 33600,
+      "skill": 240112
+    },
+    "261073": {
+      "id": 261073,
+      "quality": 7,
+      "stage": 3,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 2300,
+        "4": 120,
+        "350": 992000
+      },
+      "proShieldPercent": 47000,
+      "skill": 240113
+    },
+    "261074": {
+      "id": 261074,
+      "quality": 7,
+      "stage": 4,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 3520,
+        "4": 180,
+        "350": 1710200
+      },
+      "proShieldPercent": 65900,
+      "skill": 240114
+    },
+    "261075": {
+      "id": 261075,
+      "quality": 7,
+      "stage": 5,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 4860,
+        "4": 220,
+        "350": 2701800
+      },
+      "proShieldPercent": 92200,
+      "skill": 240115
+    },
+    "261076": {
+      "id": 261076,
+      "quality": 7,
+      "stage": 6,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 6380,
+        "4": 280,
+        "350": 4102600
+      },
+      "proShieldPercent": 129100,
+      "skill": 240116
+    },
+    "261077": {
+      "id": 261077,
+      "quality": 7,
+      "stage": 7,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 8260,
+        "4": 340,
+        "350": 6296000
+      },
+      "proShieldPercent": 180700,
+      "skill": 240117
+    },
+    "261078": {
+      "id": 261078,
+      "quality": 7,
+      "stage": 8,
+      "type": 1,
+      "tag": 101,
+      "appearId": 24011,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 10920,
+        "4": 440,
+        "350": 9352400
+      },
+      "proShieldPercent": 253000,
+      "skill": 240118
+    },
+    "261121": {
+      "id": 261121,
+      "quality": 2,
+      "stage": 1,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 30
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 260,
+        "4": 20,
+        "350": 110600
+      },
+      "proShieldPercent": 14000,
+      "skill": 240121
+    },
+    "261122": {
+      "id": 261122,
+      "quality": 2,
+      "stage": 2,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 40
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 650,
+        "4": 40,
+        "350": 268800
+      },
+      "proShieldPercent": 19600,
+      "skill": 240122
+    },
+    "261123": {
+      "id": 261123,
+      "quality": 2,
+      "stage": 3,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 50
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 1150,
+        "4": 60,
+        "350": 496000
+      },
+      "proShieldPercent": 27400,
+      "skill": 240123
+    },
+    "261124": {
+      "id": 261124,
+      "quality": 2,
+      "stage": 4,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 1760,
+        "4": 90,
+        "350": 855100
+      },
+      "proShieldPercent": 38400,
+      "skill": 240124
+    },
+    "261125": {
+      "id": 261125,
+      "quality": 2,
+      "stage": 5,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 70
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 2430,
+        "4": 110,
+        "350": 1350900
+      },
+      "proShieldPercent": 53800,
+      "skill": 240125
+    },
+    "261126": {
+      "id": 261126,
+      "quality": 2,
+      "stage": 6,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 3190,
+        "4": 140,
+        "350": 2051300
+      },
+      "proShieldPercent": 75300,
+      "skill": 240126
+    },
+    "261127": {
+      "id": 261127,
+      "quality": 2,
+      "stage": 7,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 90
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 4130,
+        "4": 170,
+        "350": 3148000
+      },
+      "proShieldPercent": 105400,
+      "skill": 240127
+    },
+    "261128": {
+      "id": 261128,
+      "quality": 2,
+      "stage": 8,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 5460,
+        "4": 220,
+        "350": 4676200
+      },
+      "proShieldPercent": 147600,
+      "skill": 240128
+    },
+    "261131": {
+      "id": 261131,
+      "quality": 3,
+      "stage": 1,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 312,
+        "4": 24,
+        "350": 132720
+      },
+      "proShieldPercent": 16000,
+      "skill": 240121
+    },
+    "261132": {
+      "id": 261132,
+      "quality": 3,
+      "stage": 2,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 780,
+        "4": 48,
+        "350": 322560
+      },
+      "proShieldPercent": 22400,
+      "skill": 240122
+    },
+    "261133": {
+      "id": 261133,
+      "quality": 3,
+      "stage": 3,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 1380,
+        "4": 72,
+        "350": 595200
+      },
+      "proShieldPercent": 31400,
+      "skill": 240123
+    },
+    "261134": {
+      "id": 261134,
+      "quality": 3,
+      "stage": 4,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2112,
+        "4": 108,
+        "350": 1026120
+      },
+      "proShieldPercent": 43900,
+      "skill": 240124
+    },
+    "261135": {
+      "id": 261135,
+      "quality": 3,
+      "stage": 5,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 140
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2916,
+        "4": 132,
+        "350": 1621080
+      },
+      "proShieldPercent": 61500,
+      "skill": 240125
+    },
+    "261136": {
+      "id": 261136,
+      "quality": 3,
+      "stage": 6,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 3828,
+        "4": 168,
+        "350": 2461560
+      },
+      "proShieldPercent": 86100,
+      "skill": 240126
+    },
+    "261137": {
+      "id": 261137,
+      "quality": 3,
+      "stage": 7,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 4956,
+        "4": 204,
+        "350": 3777600
+      },
+      "proShieldPercent": 120500,
+      "skill": 240127
+    },
+    "261138": {
+      "id": 261138,
+      "quality": 3,
+      "stage": 8,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 6552,
+        "4": 264,
+        "350": 5611440
+      },
+      "proShieldPercent": 168700,
+      "skill": 240128
+    },
+    "261141": {
+      "id": 261141,
+      "quality": 4,
+      "stage": 1,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 364,
+        "4": 28,
+        "350": 154840
+      },
+      "proShieldPercent": 18000,
+      "skill": 240121
+    },
+    "261142": {
+      "id": 261142,
+      "quality": 4,
+      "stage": 2,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 910,
+        "4": 56,
+        "350": 376320
+      },
+      "proShieldPercent": 25200,
+      "skill": 240122
+    },
+    "261143": {
+      "id": 261143,
+      "quality": 4,
+      "stage": 3,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 1610,
+        "4": 84,
+        "350": 694400
+      },
+      "proShieldPercent": 35300,
+      "skill": 240123
+    },
+    "261144": {
+      "id": 261144,
+      "quality": 4,
+      "stage": 4,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 2464,
+        "4": 126,
+        "350": 1197140
+      },
+      "proShieldPercent": 49400,
+      "skill": 240124
+    },
+    "261145": {
+      "id": 261145,
+      "quality": 4,
+      "stage": 5,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 280
+        },
+        {
+          "id": 458,
+          "count": 9
+        }
+      ],
+      "attrs": {
+        "3": 3402,
+        "4": 154,
+        "350": 1891260
+      },
+      "proShieldPercent": 69100,
+      "skill": 240125
+    },
+    "261146": {
+      "id": 261146,
+      "quality": 4,
+      "stage": 6,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 320
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 4466,
+        "4": 196,
+        "350": 2871820
+      },
+      "proShieldPercent": 96800,
+      "skill": 240126
+    },
+    "261147": {
+      "id": 261147,
+      "quality": 4,
+      "stage": 7,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 5782,
+        "4": 238,
+        "350": 4407200
+      },
+      "proShieldPercent": 135500,
+      "skill": 240127
+    },
+    "261148": {
+      "id": 261148,
+      "quality": 4,
+      "stage": 8,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 400
+        },
+        {
+          "id": 458,
+          "count": 13
+        }
+      ],
+      "attrs": {
+        "3": 7644,
+        "4": 308,
+        "350": 6546680
+      },
+      "proShieldPercent": 189700,
+      "skill": 240128
+    },
+    "261161": {
+      "id": 261161,
+      "quality": 6,
+      "stage": 1,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 416,
+        "4": 32,
+        "350": 176960
+      },
+      "proShieldPercent": 20000,
+      "skill": 240121
+    },
+    "261162": {
+      "id": 261162,
+      "quality": 6,
+      "stage": 2,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 1040,
+        "4": 64,
+        "350": 430080
+      },
+      "proShieldPercent": 28000,
+      "skill": 240122
+    },
+    "261163": {
+      "id": 261163,
+      "quality": 6,
+      "stage": 3,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 300
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 1840,
+        "4": 96,
+        "350": 793600
+      },
+      "proShieldPercent": 39200,
+      "skill": 240123
+    },
+    "261164": {
+      "id": 261164,
+      "quality": 6,
+      "stage": 4,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 2816,
+        "4": 144,
+        "350": 1368160
+      },
+      "proShieldPercent": 54900,
+      "skill": 240124
+    },
+    "261165": {
+      "id": 261165,
+      "quality": 6,
+      "stage": 5,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 420
+        },
+        {
+          "id": 458,
+          "count": 14
+        }
+      ],
+      "attrs": {
+        "3": 3888,
+        "4": 176,
+        "350": 2161440
+      },
+      "proShieldPercent": 76800,
+      "skill": 240125
+    },
+    "261166": {
+      "id": 261166,
+      "quality": 6,
+      "stage": 6,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 480
+        },
+        {
+          "id": 458,
+          "count": 16
+        }
+      ],
+      "attrs": {
+        "3": 5104,
+        "4": 224,
+        "350": 3282080
+      },
+      "proShieldPercent": 107600,
+      "skill": 240126
+    },
+    "261167": {
+      "id": 261167,
+      "quality": 6,
+      "stage": 7,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 540
+        },
+        {
+          "id": 458,
+          "count": 18
+        }
+      ],
+      "attrs": {
+        "3": 6608,
+        "4": 272,
+        "350": 5036800
+      },
+      "proShieldPercent": 150600,
+      "skill": 240127
+    },
+    "261168": {
+      "id": 261168,
+      "quality": 6,
+      "stage": 8,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 600
+        },
+        {
+          "id": 458,
+          "count": 20
+        }
+      ],
+      "attrs": {
+        "3": 8736,
+        "4": 352,
+        "350": 7481920
+      },
+      "proShieldPercent": 210800,
+      "skill": 240128
+    },
+    "261171": {
+      "id": 261171,
+      "quality": 7,
+      "stage": 1,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 520,
+        "4": 40,
+        "350": 221200
+      },
+      "proShieldPercent": 24000,
+      "skill": 240121
+    },
+    "261172": {
+      "id": 261172,
+      "quality": 7,
+      "stage": 2,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 1300,
+        "4": 80,
+        "350": 537600
+      },
+      "proShieldPercent": 33600,
+      "skill": 240122
+    },
+    "261173": {
+      "id": 261173,
+      "quality": 7,
+      "stage": 3,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 2300,
+        "4": 120,
+        "350": 992000
+      },
+      "proShieldPercent": 47000,
+      "skill": 240123
+    },
+    "261174": {
+      "id": 261174,
+      "quality": 7,
+      "stage": 4,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 3520,
+        "4": 180,
+        "350": 1710200
+      },
+      "proShieldPercent": 65900,
+      "skill": 240124
+    },
+    "261175": {
+      "id": 261175,
+      "quality": 7,
+      "stage": 5,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 4860,
+        "4": 220,
+        "350": 2701800
+      },
+      "proShieldPercent": 92200,
+      "skill": 240125
+    },
+    "261176": {
+      "id": 261176,
+      "quality": 7,
+      "stage": 6,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 6380,
+        "4": 280,
+        "350": 4102600
+      },
+      "proShieldPercent": 129100,
+      "skill": 240126
+    },
+    "261177": {
+      "id": 261177,
+      "quality": 7,
+      "stage": 7,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 8260,
+        "4": 340,
+        "350": 6296000
+      },
+      "proShieldPercent": 180700,
+      "skill": 240127
+    },
+    "261178": {
+      "id": 261178,
+      "quality": 7,
+      "stage": 8,
+      "type": 1,
+      "tag": 102,
+      "appearId": 24012,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 10920,
+        "4": 440,
+        "350": 9352400
+      },
+      "proShieldPercent": 253000,
+      "skill": 240128
+    },
+    "261221": {
+      "id": 261221,
+      "quality": 2,
+      "stage": 1,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 30
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 260,
+        "4": 20,
+        "350": 110600
+      },
+      "proShieldPercent": 14000,
+      "skill": 240131
+    },
+    "261222": {
+      "id": 261222,
+      "quality": 2,
+      "stage": 2,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 40
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 650,
+        "4": 40,
+        "350": 268800
+      },
+      "proShieldPercent": 19600,
+      "skill": 240132
+    },
+    "261223": {
+      "id": 261223,
+      "quality": 2,
+      "stage": 3,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 50
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 1150,
+        "4": 60,
+        "350": 496000
+      },
+      "proShieldPercent": 27400,
+      "skill": 240133
+    },
+    "261224": {
+      "id": 261224,
+      "quality": 2,
+      "stage": 4,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 1760,
+        "4": 90,
+        "350": 855100
+      },
+      "proShieldPercent": 38400,
+      "skill": 240134
+    },
+    "261225": {
+      "id": 261225,
+      "quality": 2,
+      "stage": 5,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 70
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 2430,
+        "4": 110,
+        "350": 1350900
+      },
+      "proShieldPercent": 53800,
+      "skill": 240135
+    },
+    "261226": {
+      "id": 261226,
+      "quality": 2,
+      "stage": 6,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 3190,
+        "4": 140,
+        "350": 2051300
+      },
+      "proShieldPercent": 75300,
+      "skill": 240136
+    },
+    "261227": {
+      "id": 261227,
+      "quality": 2,
+      "stage": 7,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 90
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 4130,
+        "4": 170,
+        "350": 3148000
+      },
+      "proShieldPercent": 105400,
+      "skill": 240137
+    },
+    "261228": {
+      "id": 261228,
+      "quality": 2,
+      "stage": 8,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 5460,
+        "4": 220,
+        "350": 4676200
+      },
+      "proShieldPercent": 147600,
+      "skill": 240138
+    },
+    "261231": {
+      "id": 261231,
+      "quality": 3,
+      "stage": 1,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 312,
+        "4": 24,
+        "350": 132720
+      },
+      "proShieldPercent": 16000,
+      "skill": 240131
+    },
+    "261232": {
+      "id": 261232,
+      "quality": 3,
+      "stage": 2,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 780,
+        "4": 48,
+        "350": 322560
+      },
+      "proShieldPercent": 22400,
+      "skill": 240132
+    },
+    "261233": {
+      "id": 261233,
+      "quality": 3,
+      "stage": 3,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 1380,
+        "4": 72,
+        "350": 595200
+      },
+      "proShieldPercent": 31400,
+      "skill": 240133
+    },
+    "261234": {
+      "id": 261234,
+      "quality": 3,
+      "stage": 4,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2112,
+        "4": 108,
+        "350": 1026120
+      },
+      "proShieldPercent": 43900,
+      "skill": 240134
+    },
+    "261235": {
+      "id": 261235,
+      "quality": 3,
+      "stage": 5,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 140
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2916,
+        "4": 132,
+        "350": 1621080
+      },
+      "proShieldPercent": 61500,
+      "skill": 240135
+    },
+    "261236": {
+      "id": 261236,
+      "quality": 3,
+      "stage": 6,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 3828,
+        "4": 168,
+        "350": 2461560
+      },
+      "proShieldPercent": 86100,
+      "skill": 240136
+    },
+    "261237": {
+      "id": 261237,
+      "quality": 3,
+      "stage": 7,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 4956,
+        "4": 204,
+        "350": 3777600
+      },
+      "proShieldPercent": 120500,
+      "skill": 240137
+    },
+    "261238": {
+      "id": 261238,
+      "quality": 3,
+      "stage": 8,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 6552,
+        "4": 264,
+        "350": 5611440
+      },
+      "proShieldPercent": 168700,
+      "skill": 240138
+    },
+    "261241": {
+      "id": 261241,
+      "quality": 4,
+      "stage": 1,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 364,
+        "4": 28,
+        "350": 154840
+      },
+      "proShieldPercent": 18000,
+      "skill": 240131
+    },
+    "261242": {
+      "id": 261242,
+      "quality": 4,
+      "stage": 2,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 910,
+        "4": 56,
+        "350": 376320
+      },
+      "proShieldPercent": 25200,
+      "skill": 240132
+    },
+    "261243": {
+      "id": 261243,
+      "quality": 4,
+      "stage": 3,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 1610,
+        "4": 84,
+        "350": 694400
+      },
+      "proShieldPercent": 35300,
+      "skill": 240133
+    },
+    "261244": {
+      "id": 261244,
+      "quality": 4,
+      "stage": 4,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 2464,
+        "4": 126,
+        "350": 1197140
+      },
+      "proShieldPercent": 49400,
+      "skill": 240134
+    },
+    "261245": {
+      "id": 261245,
+      "quality": 4,
+      "stage": 5,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 280
+        },
+        {
+          "id": 458,
+          "count": 9
+        }
+      ],
+      "attrs": {
+        "3": 3402,
+        "4": 154,
+        "350": 1891260
+      },
+      "proShieldPercent": 69100,
+      "skill": 240135
+    },
+    "261246": {
+      "id": 261246,
+      "quality": 4,
+      "stage": 6,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 320
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 4466,
+        "4": 196,
+        "350": 2871820
+      },
+      "proShieldPercent": 96800,
+      "skill": 240136
+    },
+    "261247": {
+      "id": 261247,
+      "quality": 4,
+      "stage": 7,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 5782,
+        "4": 238,
+        "350": 4407200
+      },
+      "proShieldPercent": 135500,
+      "skill": 240137
+    },
+    "261248": {
+      "id": 261248,
+      "quality": 4,
+      "stage": 8,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 400
+        },
+        {
+          "id": 458,
+          "count": 13
+        }
+      ],
+      "attrs": {
+        "3": 7644,
+        "4": 308,
+        "350": 6546680
+      },
+      "proShieldPercent": 189700,
+      "skill": 240138
+    },
+    "261261": {
+      "id": 261261,
+      "quality": 6,
+      "stage": 1,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 416,
+        "4": 32,
+        "350": 176960
+      },
+      "proShieldPercent": 20000,
+      "skill": 240131
+    },
+    "261262": {
+      "id": 261262,
+      "quality": 6,
+      "stage": 2,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 1040,
+        "4": 64,
+        "350": 430080
+      },
+      "proShieldPercent": 28000,
+      "skill": 240132
+    },
+    "261263": {
+      "id": 261263,
+      "quality": 6,
+      "stage": 3,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 300
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 1840,
+        "4": 96,
+        "350": 793600
+      },
+      "proShieldPercent": 39200,
+      "skill": 240133
+    },
+    "261264": {
+      "id": 261264,
+      "quality": 6,
+      "stage": 4,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 2816,
+        "4": 144,
+        "350": 1368160
+      },
+      "proShieldPercent": 54900,
+      "skill": 240134
+    },
+    "261265": {
+      "id": 261265,
+      "quality": 6,
+      "stage": 5,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 420
+        },
+        {
+          "id": 458,
+          "count": 14
+        }
+      ],
+      "attrs": {
+        "3": 3888,
+        "4": 176,
+        "350": 2161440
+      },
+      "proShieldPercent": 76800,
+      "skill": 240135
+    },
+    "261266": {
+      "id": 261266,
+      "quality": 6,
+      "stage": 6,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 480
+        },
+        {
+          "id": 458,
+          "count": 16
+        }
+      ],
+      "attrs": {
+        "3": 5104,
+        "4": 224,
+        "350": 3282080
+      },
+      "proShieldPercent": 107600,
+      "skill": 240136
+    },
+    "261267": {
+      "id": 261267,
+      "quality": 6,
+      "stage": 7,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 540
+        },
+        {
+          "id": 458,
+          "count": 18
+        }
+      ],
+      "attrs": {
+        "3": 6608,
+        "4": 272,
+        "350": 5036800
+      },
+      "proShieldPercent": 150600,
+      "skill": 240137
+    },
+    "261268": {
+      "id": 261268,
+      "quality": 6,
+      "stage": 8,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 600
+        },
+        {
+          "id": 458,
+          "count": 20
+        }
+      ],
+      "attrs": {
+        "3": 8736,
+        "4": 352,
+        "350": 7481920
+      },
+      "proShieldPercent": 210800,
+      "skill": 240138
+    },
+    "261271": {
+      "id": 261271,
+      "quality": 7,
+      "stage": 1,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 520,
+        "4": 40,
+        "350": 221200
+      },
+      "proShieldPercent": 24000,
+      "skill": 240131
+    },
+    "261272": {
+      "id": 261272,
+      "quality": 7,
+      "stage": 2,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 1300,
+        "4": 80,
+        "350": 537600
+      },
+      "proShieldPercent": 33600,
+      "skill": 240132
+    },
+    "261273": {
+      "id": 261273,
+      "quality": 7,
+      "stage": 3,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 2300,
+        "4": 120,
+        "350": 992000
+      },
+      "proShieldPercent": 47000,
+      "skill": 240133
+    },
+    "261274": {
+      "id": 261274,
+      "quality": 7,
+      "stage": 4,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 3520,
+        "4": 180,
+        "350": 1710200
+      },
+      "proShieldPercent": 65900,
+      "skill": 240134
+    },
+    "261275": {
+      "id": 261275,
+      "quality": 7,
+      "stage": 5,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 4860,
+        "4": 220,
+        "350": 2701800
+      },
+      "proShieldPercent": 92200,
+      "skill": 240135
+    },
+    "261276": {
+      "id": 261276,
+      "quality": 7,
+      "stage": 6,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 6380,
+        "4": 280,
+        "350": 4102600
+      },
+      "proShieldPercent": 129100,
+      "skill": 240136
+    },
+    "261277": {
+      "id": 261277,
+      "quality": 7,
+      "stage": 7,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 8260,
+        "4": 340,
+        "350": 6296000
+      },
+      "proShieldPercent": 180700,
+      "skill": 240137
+    },
+    "261278": {
+      "id": 261278,
+      "quality": 7,
+      "stage": 8,
+      "type": 1,
+      "tag": 103,
+      "appearId": 24013,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 10920,
+        "4": 440,
+        "350": 9352400
+      },
+      "proShieldPercent": 253000,
+      "skill": 240138
+    },
+    "262021": {
+      "id": 262021,
+      "quality": 2,
+      "stage": 1,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 30
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 260,
+        "4": 20,
+        "350": 110600
+      },
+      "proShieldPercent": 14000,
+      "skill": 240141
+    },
+    "262022": {
+      "id": 262022,
+      "quality": 2,
+      "stage": 2,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 40
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 650,
+        "4": 40,
+        "350": 268800
+      },
+      "proShieldPercent": 19600,
+      "skill": 240142
+    },
+    "262023": {
+      "id": 262023,
+      "quality": 2,
+      "stage": 3,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 50
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 1150,
+        "4": 60,
+        "350": 496000
+      },
+      "proShieldPercent": 27400,
+      "skill": 240143
+    },
+    "262024": {
+      "id": 262024,
+      "quality": 2,
+      "stage": 4,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 1760,
+        "4": 90,
+        "350": 855100
+      },
+      "proShieldPercent": 38400,
+      "skill": 240144
+    },
+    "262025": {
+      "id": 262025,
+      "quality": 2,
+      "stage": 5,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 70
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 2430,
+        "4": 110,
+        "350": 1350900
+      },
+      "proShieldPercent": 53800,
+      "skill": 240145
+    },
+    "262026": {
+      "id": 262026,
+      "quality": 2,
+      "stage": 6,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 3190,
+        "4": 140,
+        "350": 2051300
+      },
+      "proShieldPercent": 75300,
+      "skill": 240146
+    },
+    "262027": {
+      "id": 262027,
+      "quality": 2,
+      "stage": 7,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 90
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 4130,
+        "4": 170,
+        "350": 3148000
+      },
+      "proShieldPercent": 105400,
+      "skill": 240147
+    },
+    "262028": {
+      "id": 262028,
+      "quality": 2,
+      "stage": 8,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 5460,
+        "4": 220,
+        "350": 4676200
+      },
+      "proShieldPercent": 147600,
+      "skill": 240148
+    },
+    "262031": {
+      "id": 262031,
+      "quality": 3,
+      "stage": 1,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 312,
+        "4": 24,
+        "350": 132720
+      },
+      "proShieldPercent": 16000,
+      "skill": 240141
+    },
+    "262032": {
+      "id": 262032,
+      "quality": 3,
+      "stage": 2,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 780,
+        "4": 48,
+        "350": 322560
+      },
+      "proShieldPercent": 22400,
+      "skill": 240142
+    },
+    "262033": {
+      "id": 262033,
+      "quality": 3,
+      "stage": 3,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 1380,
+        "4": 72,
+        "350": 595200
+      },
+      "proShieldPercent": 31400,
+      "skill": 240143
+    },
+    "262034": {
+      "id": 262034,
+      "quality": 3,
+      "stage": 4,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2112,
+        "4": 108,
+        "350": 1026120
+      },
+      "proShieldPercent": 43900,
+      "skill": 240144
+    },
+    "262035": {
+      "id": 262035,
+      "quality": 3,
+      "stage": 5,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 140
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2916,
+        "4": 132,
+        "350": 1621080
+      },
+      "proShieldPercent": 61500,
+      "skill": 240145
+    },
+    "262036": {
+      "id": 262036,
+      "quality": 3,
+      "stage": 6,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 3828,
+        "4": 168,
+        "350": 2461560
+      },
+      "proShieldPercent": 86100,
+      "skill": 240146
+    },
+    "262037": {
+      "id": 262037,
+      "quality": 3,
+      "stage": 7,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 4956,
+        "4": 204,
+        "350": 3777600
+      },
+      "proShieldPercent": 120500,
+      "skill": 240147
+    },
+    "262038": {
+      "id": 262038,
+      "quality": 3,
+      "stage": 8,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 6552,
+        "4": 264,
+        "350": 5611440
+      },
+      "proShieldPercent": 168700,
+      "skill": 240148
+    },
+    "262041": {
+      "id": 262041,
+      "quality": 4,
+      "stage": 1,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 364,
+        "4": 28,
+        "350": 154840
+      },
+      "proShieldPercent": 18000,
+      "skill": 240141
+    },
+    "262042": {
+      "id": 262042,
+      "quality": 4,
+      "stage": 2,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 910,
+        "4": 56,
+        "350": 376320
+      },
+      "proShieldPercent": 25200,
+      "skill": 240142
+    },
+    "262043": {
+      "id": 262043,
+      "quality": 4,
+      "stage": 3,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 1610,
+        "4": 84,
+        "350": 694400
+      },
+      "proShieldPercent": 35300,
+      "skill": 240143
+    },
+    "262044": {
+      "id": 262044,
+      "quality": 4,
+      "stage": 4,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 2464,
+        "4": 126,
+        "350": 1197140
+      },
+      "proShieldPercent": 49400,
+      "skill": 240144
+    },
+    "262045": {
+      "id": 262045,
+      "quality": 4,
+      "stage": 5,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 280
+        },
+        {
+          "id": 458,
+          "count": 9
+        }
+      ],
+      "attrs": {
+        "3": 3402,
+        "4": 154,
+        "350": 1891260
+      },
+      "proShieldPercent": 69100,
+      "skill": 240145
+    },
+    "262046": {
+      "id": 262046,
+      "quality": 4,
+      "stage": 6,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 320
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 4466,
+        "4": 196,
+        "350": 2871820
+      },
+      "proShieldPercent": 96800,
+      "skill": 240146
+    },
+    "262047": {
+      "id": 262047,
+      "quality": 4,
+      "stage": 7,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 5782,
+        "4": 238,
+        "350": 4407200
+      },
+      "proShieldPercent": 135500,
+      "skill": 240147
+    },
+    "262048": {
+      "id": 262048,
+      "quality": 4,
+      "stage": 8,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 400
+        },
+        {
+          "id": 458,
+          "count": 13
+        }
+      ],
+      "attrs": {
+        "3": 7644,
+        "4": 308,
+        "350": 6546680
+      },
+      "proShieldPercent": 189700,
+      "skill": 240148
+    },
+    "262061": {
+      "id": 262061,
+      "quality": 6,
+      "stage": 1,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 416,
+        "4": 32,
+        "350": 176960
+      },
+      "proShieldPercent": 20000,
+      "skill": 240141
+    },
+    "262062": {
+      "id": 262062,
+      "quality": 6,
+      "stage": 2,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 1040,
+        "4": 64,
+        "350": 430080
+      },
+      "proShieldPercent": 28000,
+      "skill": 240142
+    },
+    "262063": {
+      "id": 262063,
+      "quality": 6,
+      "stage": 3,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 300
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 1840,
+        "4": 96,
+        "350": 793600
+      },
+      "proShieldPercent": 39200,
+      "skill": 240143
+    },
+    "262064": {
+      "id": 262064,
+      "quality": 6,
+      "stage": 4,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 2816,
+        "4": 144,
+        "350": 1368160
+      },
+      "proShieldPercent": 54900,
+      "skill": 240144
+    },
+    "262065": {
+      "id": 262065,
+      "quality": 6,
+      "stage": 5,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 420
+        },
+        {
+          "id": 458,
+          "count": 14
+        }
+      ],
+      "attrs": {
+        "3": 3888,
+        "4": 176,
+        "350": 2161440
+      },
+      "proShieldPercent": 76800,
+      "skill": 240145
+    },
+    "262066": {
+      "id": 262066,
+      "quality": 6,
+      "stage": 6,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 480
+        },
+        {
+          "id": 458,
+          "count": 16
+        }
+      ],
+      "attrs": {
+        "3": 5104,
+        "4": 224,
+        "350": 3282080
+      },
+      "proShieldPercent": 107600,
+      "skill": 240146
+    },
+    "262067": {
+      "id": 262067,
+      "quality": 6,
+      "stage": 7,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 540
+        },
+        {
+          "id": 458,
+          "count": 18
+        }
+      ],
+      "attrs": {
+        "3": 6608,
+        "4": 272,
+        "350": 5036800
+      },
+      "proShieldPercent": 150600,
+      "skill": 240147
+    },
+    "262068": {
+      "id": 262068,
+      "quality": 6,
+      "stage": 8,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 600
+        },
+        {
+          "id": 458,
+          "count": 20
+        }
+      ],
+      "attrs": {
+        "3": 8736,
+        "4": 352,
+        "350": 7481920
+      },
+      "proShieldPercent": 210800,
+      "skill": 240148
+    },
+    "262071": {
+      "id": 262071,
+      "quality": 7,
+      "stage": 1,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 520,
+        "4": 40,
+        "350": 221200
+      },
+      "proShieldPercent": 24000,
+      "skill": 240141
+    },
+    "262072": {
+      "id": 262072,
+      "quality": 7,
+      "stage": 2,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 1300,
+        "4": 80,
+        "350": 537600
+      },
+      "proShieldPercent": 33600,
+      "skill": 240142
+    },
+    "262073": {
+      "id": 262073,
+      "quality": 7,
+      "stage": 3,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 2300,
+        "4": 120,
+        "350": 992000
+      },
+      "proShieldPercent": 47000,
+      "skill": 240143
+    },
+    "262074": {
+      "id": 262074,
+      "quality": 7,
+      "stage": 4,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 3520,
+        "4": 180,
+        "350": 1710200
+      },
+      "proShieldPercent": 65900,
+      "skill": 240144
+    },
+    "262075": {
+      "id": 262075,
+      "quality": 7,
+      "stage": 5,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 4860,
+        "4": 220,
+        "350": 2701800
+      },
+      "proShieldPercent": 92200,
+      "skill": 240145
+    },
+    "262076": {
+      "id": 262076,
+      "quality": 7,
+      "stage": 6,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 6380,
+        "4": 280,
+        "350": 4102600
+      },
+      "proShieldPercent": 129100,
+      "skill": 240146
+    },
+    "262077": {
+      "id": 262077,
+      "quality": 7,
+      "stage": 7,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 8260,
+        "4": 340,
+        "350": 6296000
+      },
+      "proShieldPercent": 180700,
+      "skill": 240147
+    },
+    "262078": {
+      "id": 262078,
+      "quality": 7,
+      "stage": 8,
+      "type": 2,
+      "tag": 201,
+      "appearId": 24014,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 10920,
+        "4": 440,
+        "350": 9352400
+      },
+      "proShieldPercent": 253000,
+      "skill": 240148
+    },
+    "262121": {
+      "id": 262121,
+      "quality": 2,
+      "stage": 1,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 30
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 260,
+        "4": 20,
+        "350": 110600
+      },
+      "proShieldPercent": 14000,
+      "skill": 240151
+    },
+    "262122": {
+      "id": 262122,
+      "quality": 2,
+      "stage": 2,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 40
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 650,
+        "4": 40,
+        "350": 268800
+      },
+      "proShieldPercent": 19600,
+      "skill": 240152
+    },
+    "262123": {
+      "id": 262123,
+      "quality": 2,
+      "stage": 3,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 50
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 1150,
+        "4": 60,
+        "350": 496000
+      },
+      "proShieldPercent": 27400,
+      "skill": 240153
+    },
+    "262124": {
+      "id": 262124,
+      "quality": 2,
+      "stage": 4,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 1760,
+        "4": 90,
+        "350": 855100
+      },
+      "proShieldPercent": 38400,
+      "skill": 240154
+    },
+    "262125": {
+      "id": 262125,
+      "quality": 2,
+      "stage": 5,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 70
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 2430,
+        "4": 110,
+        "350": 1350900
+      },
+      "proShieldPercent": 53800,
+      "skill": 240155
+    },
+    "262126": {
+      "id": 262126,
+      "quality": 2,
+      "stage": 6,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 3190,
+        "4": 140,
+        "350": 2051300
+      },
+      "proShieldPercent": 75300,
+      "skill": 240156
+    },
+    "262127": {
+      "id": 262127,
+      "quality": 2,
+      "stage": 7,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 90
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 4130,
+        "4": 170,
+        "350": 3148000
+      },
+      "proShieldPercent": 105400,
+      "skill": 240157
+    },
+    "262128": {
+      "id": 262128,
+      "quality": 2,
+      "stage": 8,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 5460,
+        "4": 220,
+        "350": 4676200
+      },
+      "proShieldPercent": 147600,
+      "skill": 240158
+    },
+    "262131": {
+      "id": 262131,
+      "quality": 3,
+      "stage": 1,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 312,
+        "4": 24,
+        "350": 132720
+      },
+      "proShieldPercent": 16000,
+      "skill": 240151
+    },
+    "262132": {
+      "id": 262132,
+      "quality": 3,
+      "stage": 2,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 780,
+        "4": 48,
+        "350": 322560
+      },
+      "proShieldPercent": 22400,
+      "skill": 240152
+    },
+    "262133": {
+      "id": 262133,
+      "quality": 3,
+      "stage": 3,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 1380,
+        "4": 72,
+        "350": 595200
+      },
+      "proShieldPercent": 31400,
+      "skill": 240153
+    },
+    "262134": {
+      "id": 262134,
+      "quality": 3,
+      "stage": 4,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2112,
+        "4": 108,
+        "350": 1026120
+      },
+      "proShieldPercent": 43900,
+      "skill": 240154
+    },
+    "262135": {
+      "id": 262135,
+      "quality": 3,
+      "stage": 5,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 140
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2916,
+        "4": 132,
+        "350": 1621080
+      },
+      "proShieldPercent": 61500,
+      "skill": 240155
+    },
+    "262136": {
+      "id": 262136,
+      "quality": 3,
+      "stage": 6,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 3828,
+        "4": 168,
+        "350": 2461560
+      },
+      "proShieldPercent": 86100,
+      "skill": 240156
+    },
+    "262137": {
+      "id": 262137,
+      "quality": 3,
+      "stage": 7,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 4956,
+        "4": 204,
+        "350": 3777600
+      },
+      "proShieldPercent": 120500,
+      "skill": 240157
+    },
+    "262138": {
+      "id": 262138,
+      "quality": 3,
+      "stage": 8,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 6552,
+        "4": 264,
+        "350": 5611440
+      },
+      "proShieldPercent": 168700,
+      "skill": 240158
+    },
+    "262141": {
+      "id": 262141,
+      "quality": 4,
+      "stage": 1,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 364,
+        "4": 28,
+        "350": 154840
+      },
+      "proShieldPercent": 18000,
+      "skill": 240151
+    },
+    "262142": {
+      "id": 262142,
+      "quality": 4,
+      "stage": 2,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 910,
+        "4": 56,
+        "350": 376320
+      },
+      "proShieldPercent": 25200,
+      "skill": 240152
+    },
+    "262143": {
+      "id": 262143,
+      "quality": 4,
+      "stage": 3,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 1610,
+        "4": 84,
+        "350": 694400
+      },
+      "proShieldPercent": 35300,
+      "skill": 240153
+    },
+    "262144": {
+      "id": 262144,
+      "quality": 4,
+      "stage": 4,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 2464,
+        "4": 126,
+        "350": 1197140
+      },
+      "proShieldPercent": 49400,
+      "skill": 240154
+    },
+    "262145": {
+      "id": 262145,
+      "quality": 4,
+      "stage": 5,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 280
+        },
+        {
+          "id": 458,
+          "count": 9
+        }
+      ],
+      "attrs": {
+        "3": 3402,
+        "4": 154,
+        "350": 1891260
+      },
+      "proShieldPercent": 69100,
+      "skill": 240155
+    },
+    "262146": {
+      "id": 262146,
+      "quality": 4,
+      "stage": 6,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 320
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 4466,
+        "4": 196,
+        "350": 2871820
+      },
+      "proShieldPercent": 96800,
+      "skill": 240156
+    },
+    "262147": {
+      "id": 262147,
+      "quality": 4,
+      "stage": 7,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 5782,
+        "4": 238,
+        "350": 4407200
+      },
+      "proShieldPercent": 135500,
+      "skill": 240157
+    },
+    "262148": {
+      "id": 262148,
+      "quality": 4,
+      "stage": 8,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 400
+        },
+        {
+          "id": 458,
+          "count": 13
+        }
+      ],
+      "attrs": {
+        "3": 7644,
+        "4": 308,
+        "350": 6546680
+      },
+      "proShieldPercent": 189700,
+      "skill": 240158
+    },
+    "262161": {
+      "id": 262161,
+      "quality": 6,
+      "stage": 1,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 416,
+        "4": 32,
+        "350": 176960
+      },
+      "proShieldPercent": 20000,
+      "skill": 240151
+    },
+    "262162": {
+      "id": 262162,
+      "quality": 6,
+      "stage": 2,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 1040,
+        "4": 64,
+        "350": 430080
+      },
+      "proShieldPercent": 28000,
+      "skill": 240152
+    },
+    "262163": {
+      "id": 262163,
+      "quality": 6,
+      "stage": 3,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 300
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 1840,
+        "4": 96,
+        "350": 793600
+      },
+      "proShieldPercent": 39200,
+      "skill": 240153
+    },
+    "262164": {
+      "id": 262164,
+      "quality": 6,
+      "stage": 4,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 2816,
+        "4": 144,
+        "350": 1368160
+      },
+      "proShieldPercent": 54900,
+      "skill": 240154
+    },
+    "262165": {
+      "id": 262165,
+      "quality": 6,
+      "stage": 5,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 420
+        },
+        {
+          "id": 458,
+          "count": 14
+        }
+      ],
+      "attrs": {
+        "3": 3888,
+        "4": 176,
+        "350": 2161440
+      },
+      "proShieldPercent": 76800,
+      "skill": 240155
+    },
+    "262166": {
+      "id": 262166,
+      "quality": 6,
+      "stage": 6,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 480
+        },
+        {
+          "id": 458,
+          "count": 16
+        }
+      ],
+      "attrs": {
+        "3": 5104,
+        "4": 224,
+        "350": 3282080
+      },
+      "proShieldPercent": 107600,
+      "skill": 240156
+    },
+    "262167": {
+      "id": 262167,
+      "quality": 6,
+      "stage": 7,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 540
+        },
+        {
+          "id": 458,
+          "count": 18
+        }
+      ],
+      "attrs": {
+        "3": 6608,
+        "4": 272,
+        "350": 5036800
+      },
+      "proShieldPercent": 150600,
+      "skill": 240157
+    },
+    "262168": {
+      "id": 262168,
+      "quality": 6,
+      "stage": 8,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 600
+        },
+        {
+          "id": 458,
+          "count": 20
+        }
+      ],
+      "attrs": {
+        "3": 8736,
+        "4": 352,
+        "350": 7481920
+      },
+      "proShieldPercent": 210800,
+      "skill": 240158
+    },
+    "262171": {
+      "id": 262171,
+      "quality": 7,
+      "stage": 1,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 520,
+        "4": 40,
+        "350": 221200
+      },
+      "proShieldPercent": 24000,
+      "skill": 240151
+    },
+    "262172": {
+      "id": 262172,
+      "quality": 7,
+      "stage": 2,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 1300,
+        "4": 80,
+        "350": 537600
+      },
+      "proShieldPercent": 33600,
+      "skill": 240152
+    },
+    "262173": {
+      "id": 262173,
+      "quality": 7,
+      "stage": 3,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 2300,
+        "4": 120,
+        "350": 992000
+      },
+      "proShieldPercent": 47000,
+      "skill": 240153
+    },
+    "262174": {
+      "id": 262174,
+      "quality": 7,
+      "stage": 4,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 3520,
+        "4": 180,
+        "350": 1710200
+      },
+      "proShieldPercent": 65900,
+      "skill": 240154
+    },
+    "262175": {
+      "id": 262175,
+      "quality": 7,
+      "stage": 5,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 4860,
+        "4": 220,
+        "350": 2701800
+      },
+      "proShieldPercent": 92200,
+      "skill": 240155
+    },
+    "262176": {
+      "id": 262176,
+      "quality": 7,
+      "stage": 6,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 6380,
+        "4": 280,
+        "350": 4102600
+      },
+      "proShieldPercent": 129100,
+      "skill": 240156
+    },
+    "262177": {
+      "id": 262177,
+      "quality": 7,
+      "stage": 7,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 8260,
+        "4": 340,
+        "350": 6296000
+      },
+      "proShieldPercent": 180700,
+      "skill": 240157
+    },
+    "262178": {
+      "id": 262178,
+      "quality": 7,
+      "stage": 8,
+      "type": 2,
+      "tag": 202,
+      "appearId": 24015,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 10920,
+        "4": 440,
+        "350": 9352400
+      },
+      "proShieldPercent": 253000,
+      "skill": 240158
+    },
+    "262221": {
+      "id": 262221,
+      "quality": 2,
+      "stage": 1,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 30
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 260,
+        "4": 20,
+        "350": 110600
+      },
+      "proShieldPercent": 14000,
+      "skill": 240161
+    },
+    "262222": {
+      "id": 262222,
+      "quality": 2,
+      "stage": 2,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 40
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 650,
+        "4": 40,
+        "350": 268800
+      },
+      "proShieldPercent": 19600,
+      "skill": 240162
+    },
+    "262223": {
+      "id": 262223,
+      "quality": 2,
+      "stage": 3,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 50
+        },
+        {
+          "id": 458,
+          "count": 1
+        }
+      ],
+      "attrs": {
+        "3": 1150,
+        "4": 60,
+        "350": 496000
+      },
+      "proShieldPercent": 27400,
+      "skill": 240163
+    },
+    "262224": {
+      "id": 262224,
+      "quality": 2,
+      "stage": 4,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 1760,
+        "4": 90,
+        "350": 855100
+      },
+      "proShieldPercent": 38400,
+      "skill": 240164
+    },
+    "262225": {
+      "id": 262225,
+      "quality": 2,
+      "stage": 5,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 70
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 2430,
+        "4": 110,
+        "350": 1350900
+      },
+      "proShieldPercent": 53800,
+      "skill": 240165
+    },
+    "262226": {
+      "id": 262226,
+      "quality": 2,
+      "stage": 6,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 3190,
+        "4": 140,
+        "350": 2051300
+      },
+      "proShieldPercent": 75300,
+      "skill": 240166
+    },
+    "262227": {
+      "id": 262227,
+      "quality": 2,
+      "stage": 7,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 90
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 4130,
+        "4": 170,
+        "350": 3148000
+      },
+      "proShieldPercent": 105400,
+      "skill": 240167
+    },
+    "262228": {
+      "id": 262228,
+      "quality": 2,
+      "stage": 8,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 5460,
+        "4": 220,
+        "350": 4676200
+      },
+      "proShieldPercent": 147600,
+      "skill": 240168
+    },
+    "262231": {
+      "id": 262231,
+      "quality": 3,
+      "stage": 1,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 60
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 312,
+        "4": 24,
+        "350": 132720
+      },
+      "proShieldPercent": 16000,
+      "skill": 240161
+    },
+    "262232": {
+      "id": 262232,
+      "quality": 3,
+      "stage": 2,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 80
+        },
+        {
+          "id": 458,
+          "count": 2
+        }
+      ],
+      "attrs": {
+        "3": 780,
+        "4": 48,
+        "350": 322560
+      },
+      "proShieldPercent": 22400,
+      "skill": 240162
+    },
+    "262233": {
+      "id": 262233,
+      "quality": 3,
+      "stage": 3,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 100
+        },
+        {
+          "id": 458,
+          "count": 3
+        }
+      ],
+      "attrs": {
+        "3": 1380,
+        "4": 72,
+        "350": 595200
+      },
+      "proShieldPercent": 31400,
+      "skill": 240163
+    },
+    "262234": {
+      "id": 262234,
+      "quality": 3,
+      "stage": 4,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2112,
+        "4": 108,
+        "350": 1026120
+      },
+      "proShieldPercent": 43900,
+      "skill": 240164
+    },
+    "262235": {
+      "id": 262235,
+      "quality": 3,
+      "stage": 5,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 140
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 2916,
+        "4": 132,
+        "350": 1621080
+      },
+      "proShieldPercent": 61500,
+      "skill": 240165
+    },
+    "262236": {
+      "id": 262236,
+      "quality": 3,
+      "stage": 6,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 3828,
+        "4": 168,
+        "350": 2461560
+      },
+      "proShieldPercent": 86100,
+      "skill": 240166
+    },
+    "262237": {
+      "id": 262237,
+      "quality": 3,
+      "stage": 7,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 4956,
+        "4": 204,
+        "350": 3777600
+      },
+      "proShieldPercent": 120500,
+      "skill": 240167
+    },
+    "262238": {
+      "id": 262238,
+      "quality": 3,
+      "stage": 8,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 6552,
+        "4": 264,
+        "350": 5611440
+      },
+      "proShieldPercent": 168700,
+      "skill": 240168
+    },
+    "262241": {
+      "id": 262241,
+      "quality": 4,
+      "stage": 1,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 120
+        },
+        {
+          "id": 458,
+          "count": 4
+        }
+      ],
+      "attrs": {
+        "3": 364,
+        "4": 28,
+        "350": 154840
+      },
+      "proShieldPercent": 18000,
+      "skill": 240161
+    },
+    "262242": {
+      "id": 262242,
+      "quality": 4,
+      "stage": 2,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 160
+        },
+        {
+          "id": 458,
+          "count": 5
+        }
+      ],
+      "attrs": {
+        "3": 910,
+        "4": 56,
+        "350": 376320
+      },
+      "proShieldPercent": 25200,
+      "skill": 240162
+    },
+    "262243": {
+      "id": 262243,
+      "quality": 4,
+      "stage": 3,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 200
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 1610,
+        "4": 84,
+        "350": 694400
+      },
+      "proShieldPercent": 35300,
+      "skill": 240163
+    },
+    "262244": {
+      "id": 262244,
+      "quality": 4,
+      "stage": 4,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 2464,
+        "4": 126,
+        "350": 1197140
+      },
+      "proShieldPercent": 49400,
+      "skill": 240164
+    },
+    "262245": {
+      "id": 262245,
+      "quality": 4,
+      "stage": 5,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 280
+        },
+        {
+          "id": 458,
+          "count": 9
+        }
+      ],
+      "attrs": {
+        "3": 3402,
+        "4": 154,
+        "350": 1891260
+      },
+      "proShieldPercent": 69100,
+      "skill": 240165
+    },
+    "262246": {
+      "id": 262246,
+      "quality": 4,
+      "stage": 6,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 320
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 4466,
+        "4": 196,
+        "350": 2871820
+      },
+      "proShieldPercent": 96800,
+      "skill": 240166
+    },
+    "262247": {
+      "id": 262247,
+      "quality": 4,
+      "stage": 7,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 5782,
+        "4": 238,
+        "350": 4407200
+      },
+      "proShieldPercent": 135500,
+      "skill": 240167
+    },
+    "262248": {
+      "id": 262248,
+      "quality": 4,
+      "stage": 8,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 400
+        },
+        {
+          "id": 458,
+          "count": 13
+        }
+      ],
+      "attrs": {
+        "3": 7644,
+        "4": 308,
+        "350": 6546680
+      },
+      "proShieldPercent": 189700,
+      "skill": 240168
+    },
+    "262261": {
+      "id": 262261,
+      "quality": 6,
+      "stage": 1,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 180
+        },
+        {
+          "id": 458,
+          "count": 6
+        }
+      ],
+      "attrs": {
+        "3": 416,
+        "4": 32,
+        "350": 176960
+      },
+      "proShieldPercent": 20000,
+      "skill": 240161
+    },
+    "262262": {
+      "id": 262262,
+      "quality": 6,
+      "stage": 2,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 240
+        },
+        {
+          "id": 458,
+          "count": 8
+        }
+      ],
+      "attrs": {
+        "3": 1040,
+        "4": 64,
+        "350": 430080
+      },
+      "proShieldPercent": 28000,
+      "skill": 240162
+    },
+    "262263": {
+      "id": 262263,
+      "quality": 6,
+      "stage": 3,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 300
+        },
+        {
+          "id": 458,
+          "count": 10
+        }
+      ],
+      "attrs": {
+        "3": 1840,
+        "4": 96,
+        "350": 793600
+      },
+      "proShieldPercent": 39200,
+      "skill": 240163
+    },
+    "262264": {
+      "id": 262264,
+      "quality": 6,
+      "stage": 4,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 360
+        },
+        {
+          "id": 458,
+          "count": 12
+        }
+      ],
+      "attrs": {
+        "3": 2816,
+        "4": 144,
+        "350": 1368160
+      },
+      "proShieldPercent": 54900,
+      "skill": 240164
+    },
+    "262265": {
+      "id": 262265,
+      "quality": 6,
+      "stage": 5,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 420
+        },
+        {
+          "id": 458,
+          "count": 14
+        }
+      ],
+      "attrs": {
+        "3": 3888,
+        "4": 176,
+        "350": 2161440
+      },
+      "proShieldPercent": 76800,
+      "skill": 240165
+    },
+    "262266": {
+      "id": 262266,
+      "quality": 6,
+      "stage": 6,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 480
+        },
+        {
+          "id": 458,
+          "count": 16
+        }
+      ],
+      "attrs": {
+        "3": 5104,
+        "4": 224,
+        "350": 3282080
+      },
+      "proShieldPercent": 107600,
+      "skill": 240166
+    },
+    "262267": {
+      "id": 262267,
+      "quality": 6,
+      "stage": 7,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 540
+        },
+        {
+          "id": 458,
+          "count": 18
+        }
+      ],
+      "attrs": {
+        "3": 6608,
+        "4": 272,
+        "350": 5036800
+      },
+      "proShieldPercent": 150600,
+      "skill": 240167
+    },
+    "262268": {
+      "id": 262268,
+      "quality": 6,
+      "stage": 8,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [
+        {
+          "id": 457,
+          "count": 600
+        },
+        {
+          "id": 458,
+          "count": 20
+        }
+      ],
+      "attrs": {
+        "3": 8736,
+        "4": 352,
+        "350": 7481920
+      },
+      "proShieldPercent": 210800,
+      "skill": 240168
+    },
+    "262271": {
+      "id": 262271,
+      "quality": 7,
+      "stage": 1,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 520,
+        "4": 40,
+        "350": 221200
+      },
+      "proShieldPercent": 24000,
+      "skill": 240161
+    },
+    "262272": {
+      "id": 262272,
+      "quality": 7,
+      "stage": 2,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 1300,
+        "4": 80,
+        "350": 537600
+      },
+      "proShieldPercent": 33600,
+      "skill": 240162
+    },
+    "262273": {
+      "id": 262273,
+      "quality": 7,
+      "stage": 3,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 2300,
+        "4": 120,
+        "350": 992000
+      },
+      "proShieldPercent": 47000,
+      "skill": 240163
+    },
+    "262274": {
+      "id": 262274,
+      "quality": 7,
+      "stage": 4,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 3520,
+        "4": 180,
+        "350": 1710200
+      },
+      "proShieldPercent": 65900,
+      "skill": 240164
+    },
+    "262275": {
+      "id": 262275,
+      "quality": 7,
+      "stage": 5,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 4860,
+        "4": 220,
+        "350": 2701800
+      },
+      "proShieldPercent": 92200,
+      "skill": 240165
+    },
+    "262276": {
+      "id": 262276,
+      "quality": 7,
+      "stage": 6,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 6380,
+        "4": 280,
+        "350": 4102600
+      },
+      "proShieldPercent": 129100,
+      "skill": 240166
+    },
+    "262277": {
+      "id": 262277,
+      "quality": 7,
+      "stage": 7,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 8260,
+        "4": 340,
+        "350": 6296000
+      },
+      "proShieldPercent": 180700,
+      "skill": 240167
+    },
+    "262278": {
+      "id": 262278,
+      "quality": 7,
+      "stage": 8,
+      "type": 2,
+      "tag": 203,
+      "appearId": 24016,
+      "exp": 100,
+      "decomposes": [],
+      "attrs": {
+        "3": 10920,
+        "4": 440,
+        "350": 9352400
+      },
+      "proShieldPercent": 253000,
+      "skill": 240168
+    }
+  }
+}

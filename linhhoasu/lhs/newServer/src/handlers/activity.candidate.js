@@ -1,0 +1,2945 @@
+/**
+ * Activity handlers
+ * tags: 1700, 1750, 1760, 1770, 1780, 1785~1791
+ */
+
+const playerService = require('../services/PlayerService');
+const configService = require('../services/ConfigService');
+const { addRewardToPlayer } = require('./raid');
+const { buildRewardItemSync } = require('../services/RewardSync');
+const rewardGrant = require('../services/RewardGrantService');
+const newYearEventSchedule = require('../services/NewYearEventSchedule');
+const arenaReadModel = require('../services/ArenaReadModelService');
+const logger = require('../logger');
+const {
+  ensureActivity9State,
+  getActivity9PayId,
+  getRewardRows: getActivity9RewardRows,
+} = require('../services/Activity9Service');
+const {
+  ensureActivationPassState,
+  hasActivationPassEntitlement,
+} = require('../services/ActivationPassService');
+
+function toSafeInt(value, fallback = 0) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return fallback;
+  return Math.floor(n);
+}
+
+function ensureObject(raw) {
+  return raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
+}
+
+function ensureArray(raw) {
+  return Array.isArray(raw) ? raw : [];
+}
+
+const MS_PER_DAY = 86400000;
+const GMT7_OFFSET_MS = 7 * 60 * 60 * 1000;
+const FORTUNE_FREE_SHOP_ID = 11018000;
+const LOCAL_NEWYEAR_ACTIVITY_IDS = [43001, 44001];
+// The Cozy Fulu client always animates five gourds.  Keep the server packet
+// patterns aligned with the client-side matching table (types 1..7).
+const FULU_COLOR_PATTERNS = Object.freeze({
+  1: Object.freeze([1, 1, 1, 1, 1]),
+  2: Object.freeze([1, 1, 1, 1, 2]),
+  3: Object.freeze([1, 2, 3, 4, 5]),
+  4: Object.freeze([1, 1, 1, 2, 2]),
+  5: Object.freeze([1, 1, 1, 2, 3]),
+  6: Object.freeze([1, 1, 2, 2, 3]),
+  7: Object.freeze([1, 1, 2, 3, 4]),
+});
+const FULU_DEFAULT_SELECTION = 4;
+const FULU_MAX_MULTIPLE = 100;
+const FULU_MAX_TRIGGER_TIMES = 1000;
+const FULU_MAX_DISPLAY = 1000000;
+// Fishing contest shop claims use a per-instance ledger owned by
+// FishingEventShopService. Do not mirror that row through the generic
+// ActivityShopConfig daily ledger or login normalization would reset the
+// native counter back to zero.
+const FISHING_EVENT_FREE_SHOP_ID = 11001400;
+
+function getGmt8DayKey(timestamp = Date.now()) {
+  return Math.floor((Math.max(0, Number(timestamp) || 0) + GMT7_OFFSET_MS) / MS_PER_DAY);
+}
+
+function getActivityShopPolicy(activityId, shopId) {
+  const safeActivityId = Math.max(0, toSafeInt(activityId, 0));
+  const safeShopId = Math.max(0, toSafeInt(shopId, 0));
+  if (safeActivityId <= 0 || safeShopId <= 0) return null;
+  const all = ensureObject(configService.get('ActivityShopConfig'));
+  const activityRows = ensureObject(all[safeActivityId] || all[String(safeActivityId)]);
+  return activityRows[safeShopId] || activityRows[String(safeShopId)] || null;
+}
+
+function getActivityShopRows(activityId) {
+  const safeActivityId = Math.max(0, toSafeInt(activityId, 0));
+  if (safeActivityId <= 0) return {};
+  const all = ensureObject(configService.get('ActivityShopConfig'));
+  return ensureObject(all[safeActivityId] || all[String(safeActivityId)]);
+}
+
+function getDailyShopClaimLedger(info = {}) {
+  info.dailyShopClaims = ensureObject(info.dailyShopClaims);
+  return info.dailyShopClaims;
+}
+
+function readDailyShopClaim(info = {}, activityId, shopId, now = Date.now()) {
+  const ledger = getDailyShopClaimLedger(info);
+  const activityKey = String(Math.max(0, toSafeInt(activityId, 0)));
+  const shopKey = String(Math.max(0, toSafeInt(shopId, 0)));
+  const activityLedger = ensureObject(ledger[activityKey]);
+  const record = ensureObject(activityLedger[shopKey]);
+  const dayKey = getGmt8DayKey(now);
+  const count = toSafeInt(record.dayKey, -1) === dayKey
+    ? Math.max(0, toSafeInt(record.count, 0))
+    : 0;
+  return { dayKey, count, record };
+}
+
+function syncDailyShopClaimRows(info = {}, now = Date.now()) {
+  ensureArray(info.datas).forEach((row) => {
+    const activityId = Math.max(0, toSafeInt(row && row.id, 0));
+    if (activityId <= 0) return;
+    const activityShopRows = getActivityShopRows(activityId);
+    for (const [shopIdKey, policy] of Object.entries(activityShopRows)) {
+      const shopId = Math.max(0, toSafeInt(shopIdKey, 0));
+      if (shopId <= 0 || shopId === FISHING_EVENT_FREE_SHOP_ID) continue;
+      if (!policy || toSafeInt(policy.limitType, 0) !== 1 || toSafeInt(policy.limit, 0) <= 0) continue;
+      row.buyRecords = normalizeBuyRecordsMap(row.buyRecords);
+      row.buyRecords[String(shopId)] = readDailyShopClaim(info, activityId, shopId, now).count;
+    }
+  });
+  return info;
+}
+
+function getActiveDailyShopPolicy(player = {}, shopId, now = Date.now()) {
+  const state = getActiveActivityShopPolicy(player, shopId, now);
+  if (!state || state.limitType !== 1 || state.limit <= 0) return null;
+  return state;
+}
+
+function getActiveActivityShopPolicy(player = {}, shopId, now = Date.now()) {
+  const safeShopId = Math.max(0, toSafeInt(shopId, 0));
+  if (safeShopId <= 0 || safeShopId === FISHING_EVENT_FREE_SHOP_ID) return null;
+  const info = ensureObject(player.activityInfo);
+  player.activityInfo = info;
+  syncDailyShopClaimRows(info, now);
+  const row = ensureArray(info.datas).find((candidate) => {
+    const activityId = Math.max(0, toSafeInt(candidate && candidate.id, 0));
+    if (activityId <= 0) return false;
+    if (!isActivityWindowOpen(candidate, now)) return false;
+    const policy = getActivityShopPolicy(activityId, safeShopId);
+    return !!policy;
+  });
+  if (!row) return null;
+  const activityId = Math.max(0, toSafeInt(row.id, 0));
+  const policy = getActivityShopPolicy(activityId, safeShopId);
+  const limitType = Math.max(0, toSafeInt(policy && policy.limitType, 0));
+  const claim = limitType === 1
+    ? readDailyShopClaim(info, activityId, safeShopId, now)
+    : {
+      dayKey: 0,
+      // limitType=4 is a lifetime/event purchase cap. Preserve historical
+      // counters from both the activity row and legacy shop/recharge records
+      // so enabling the generic policy cannot reopen an already-consumed slot.
+      count: Math.max(
+        0,
+        toSafeInt(ensureObject(row.buyRecords)[String(safeShopId)], 0),
+        toSafeInt(ensureObject(ensureObject(player.shopInfo).buyRecords)[String(safeShopId)], 0),
+        ...ensureArray(ensureObject(player.rechargeInfo).records)
+          .filter((record) => toSafeInt(record && record.id, 0) === safeShopId)
+          .map((record) => toSafeInt(record && record.count, 0)),
+      ),
+    };
+  return {
+    activityId,
+    shopId: safeShopId,
+    activityRow: row,
+    dayKey: claim.dayKey,
+    count: claim.count,
+    limit: Math.max(0, toSafeInt(policy && policy.limit, 0)),
+    limitType,
+  };
+}
+
+function commitDailyShopClaim(player = {}, state = {}, addCount = 1, now = Date.now()) {
+  const info = ensureObject(player.activityInfo);
+  player.activityInfo = info;
+  const activityId = Math.max(0, toSafeInt(state.activityId, 0));
+  const shopId = Math.max(0, toSafeInt(state.shopId, 0));
+  const dayKey = getGmt8DayKey(now);
+  const count = Math.max(0, toSafeInt(state.count, 0)) + Math.max(0, toSafeInt(addCount, 0));
+  const ledger = getDailyShopClaimLedger(info);
+  const activityKey = String(activityId);
+  const shopKey = String(shopId);
+  ledger[activityKey] = ensureObject(ledger[activityKey]);
+  ledger[activityKey][shopKey] = {
+    dayKey,
+    count,
+    lastClaimAt: Math.max(0, Number(now) || 0),
+  };
+  const row = ensureArray(info.datas).find((candidate) => toSafeInt(candidate && candidate.id, 0) === activityId);
+  if (row) {
+    row.buyRecords = normalizeBuyRecordsMap(row.buyRecords);
+    row.buyRecords[shopKey] = count;
+  }
+  return row || state.activityRow || null;
+}
+
+function commitActivityShopPurchase(player = {}, state = {}, addCount = 1, now = Date.now()) {
+  if (toSafeInt(state.limitType, 0) === 1) {
+    return commitDailyShopClaim(player, state, addCount, now);
+  }
+  const info = ensureObject(player.activityInfo);
+  const activityId = Math.max(0, toSafeInt(state.activityId, 0));
+  const shopId = Math.max(0, toSafeInt(state.shopId, 0));
+  const row = ensureArray(info.datas).find((candidate) => toSafeInt(candidate && candidate.id, 0) === activityId);
+  if (!row || shopId <= 0) return row || state.activityRow || null;
+  row.buyRecords = normalizeBuyRecordsMap(row.buyRecords);
+  row.buyRecords[String(shopId)] = Math.max(0, toSafeInt(state.count, 0)) + Math.max(0, toSafeInt(addCount, 0));
+  return row;
+}
+
+function syncNewYearDailyState(info = {}, now = Date.now()) {
+  const dayKey = getGmt8DayKey(now);
+  ensureArray(info.datas).forEach((row) => {
+    const activityId = Math.max(0, toSafeInt(row && row.id, 0));
+    if (getActivityTypeById(activityId) !== 43) return;
+    row.extra = ensureObject(row.extra);
+    const previous = toSafeInt(row.extra.fortuneDayKey, -1);
+    if (previous >= 0 && previous !== dayKey) {
+      row.records = normalizeRecordsMap(row.records, 43);
+      row.records[10] = 0;
+      row.records[11] = 0;
+    }
+    row.extra.fortuneDayKey = dayKey;
+  });
+  return info;
+}
+
+function normalizeActivityIdList(raw) {
+  return Array.from(
+    new Set(
+      ensureArray(raw)
+        .map((v) => Math.max(0, toSafeInt(v, 0)))
+        .filter((v) => v > 0)
+    )
+  ).sort((a, b) => a - b);
+}
+
+function getActivityConfigEntry(activityId) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  if (id <= 0) return null;
+  const cfg = configService.get('ActivityConfig') || {};
+  return cfg[id] || cfg[String(id)] || null;
+}
+
+function getActivityTypeById(activityId) {
+  const meta = getActivityConfigEntry(activityId);
+  return meta ? toSafeInt(meta.activityType, 0) : 0;
+}
+
+function getDefaultActivityTimeWindow(now = Date.now()) {
+  return {
+    startTime: now - MS_PER_DAY,
+    endTime: now + (13 * MS_PER_DAY),
+  };
+}
+
+function isActivityWindowOpen(row, now = Date.now()) {
+  const src = ensureObject(row);
+  const startTime = toSafeInt(src.startTime, 0);
+  const endTime = toSafeInt(src.endTime, 0);
+  return startTime > 0 && endTime > startTime && startTime <= now && now < endTime;
+}
+
+function buildDefaultRecordsForActivityType(activityType) {
+  const type = toSafeInt(activityType, 0);
+  if (type === 43) {
+    return { 1: 1, 3: 0, 10: 0, 11: 0 };
+  }
+  if (type === 44) {
+    return { 1: 0 };
+  }
+  return {};
+}
+
+function normalizeRecordsMap(raw, activityType = 0) {
+  const defaults = buildDefaultRecordsForActivityType(activityType);
+  const src = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
+  const out = { ...defaults };
+  Object.keys(src).forEach((key) => {
+    out[key] = Math.max(0, toSafeInt(src[key], toSafeInt(defaults[key], 0)));
+  });
+  return out;
+}
+
+function normalizeBuyRecordsMap(raw) {
+  const src = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
+  const out = {};
+  Object.keys(src).forEach((key) => {
+    out[key] = Math.max(0, toSafeInt(src[key], 0));
+  });
+  return out;
+}
+
+function normalizeFuluRequestId(raw) {
+  const value = String(raw == null ? '' : raw).trim();
+  if (!value || value.length > 128 || !/^[A-Za-z0-9:_-]+$/.test(value)) return '';
+  return value;
+}
+
+function getFuluReceiptKey(activityId, requestId) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  const request = normalizeFuluRequestId(requestId);
+  return id > 0 && request ? `${id}:${request}` : '';
+}
+
+function hasFuluReceipt(info, activityId, requestId) {
+  const key = getFuluReceiptKey(activityId, requestId);
+  const receipts = ensureObject(info && info.fuluReceipts);
+  return !!(key && receipts[key]);
+}
+
+function storeFuluReceipt(info, activityId, requestId) {
+  const key = getFuluReceiptKey(activityId, requestId);
+  if (!key) return;
+  const receipts = ensureObject(info.fuluReceipts);
+  receipts[key] = { at: Date.now(), result: 0 };
+  const keys = Object.keys(receipts);
+  if (keys.length > 100) {
+    keys.sort((left, right) => toSafeInt(receipts[left] && receipts[left].at, 0)
+      - toSafeInt(receipts[right] && receipts[right].at, 0));
+    keys.slice(0, keys.length - 100).forEach((oldKey) => delete receipts[oldKey]);
+  }
+  info.fuluReceipts = receipts;
+}
+
+function normalizeActivityDataRow(row, activityType = 0) {
+  const src = ensureObject(row);
+  const id = Math.max(0, toSafeInt(src.id, 0));
+  let type = toSafeInt(activityType, 0);
+  if (!type && id > 0) {
+    type = getActivityTypeById(id);
+  }
+
+  const fallbackWindow = (type === 43 || type === 44)
+    ? (newYearEventSchedule.seedWindow(id) || getDefaultActivityTimeWindow())
+    : getDefaultActivityTimeWindow();
+  const hasWindow = toSafeInt(src.startTime, 0) > 0 || toSafeInt(src.endTime, 0) > 0;
+  const score = Math.max(type === 44 ? 1 : 0, toSafeInt(src.score, type === 44 ? 1 : 0));
+
+  return {
+    id,
+    module: Math.max(0, toSafeInt(src.module, 0)),
+    index: Math.max(0, toSafeInt(src.index, 0)),
+    param: toSafeInt(src.param, 0),
+    record: Math.max(0, toSafeInt(src.record, 0)),
+    status: Math.max(0, toSafeInt(src.status, 0)),
+    startTime: hasWindow ? Math.max(0, toSafeInt(src.startTime, 0)) : fallbackWindow.startTime,
+    endTime: hasWindow ? Math.max(0, toSafeInt(src.endTime, 0)) : fallbackWindow.endTime,
+    score,
+    recordList: type === 33 ? ensureArray(src.recordList).map(v=>Math.max(0,toSafeInt(v,0))).filter(v=>v>0) : Array.from(
+      new Set(
+        ensureArray(src.recordList)
+          .map((v) => Math.max(0, toSafeInt(v, 0)))
+          .filter((v) => v > 0)
+      )
+    ),
+    records: normalizeRecordsMap(src.records, type),
+    buyRecords: normalizeBuyRecordsMap(src.buyRecords),
+    extra: type === 33 ? (src.extra?.bottleId ? ensureObject(src.extra) : null) : ensureObject(src.extra),
+  };
+}
+
+function createDefaultActivityRow(activityId) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  const activityType = getActivityTypeById(id);
+  const window = newYearEventSchedule.seedWindow(id) || getDefaultActivityTimeWindow();
+  return normalizeActivityDataRow({
+    id,
+    startTime: window.startTime,
+    endTime: window.endTime,
+    score: activityType === 44 ? 1 : 0,
+    record: 0,
+    recordList: [],
+    records: buildDefaultRecordsForActivityType(activityType),
+    buyRecords: {},
+  }, activityType);
+}
+
+function seedOpenActivityDatas(info = {}) {
+  const byId = new Map();
+  const disabledIds = new Set(normalizeActivityIdList(info.disabledEntryIds));
+  ensureArray(info.datas).forEach((row) => {
+    const id = toSafeInt(row && row.id, 0);
+    if (id > 0 && !disabledIds.has(id)) byId.set(id, row);
+  });
+
+  LOCAL_NEWYEAR_ACTIVITY_IDS.forEach((activityId) => {
+    if (disabledIds.has(activityId)) return;
+    const meta = getActivityConfigEntry(activityId);
+    if (!meta) return;
+    const activityType = toSafeInt(meta.activityType, 0);
+    if (activityType !== 43 && activityType !== 44) return;
+
+    const defaults = createDefaultActivityRow(activityId);
+    const existing = byId.get(activityId);
+    byId.set(activityId, normalizeActivityDataRow({
+      ...defaults,
+      ...ensureObject(existing),
+      id: activityId,
+      records: normalizeRecordsMap(
+        existing && existing.records,
+        activityType,
+      ),
+      buyRecords: normalizeBuyRecordsMap(existing && existing.buyRecords),
+    }, activityType));
+  });
+
+  info.datas = Array.from(byId.values())
+    .map((row) => normalizeActivityDataRow(row, getActivityTypeById(row.id)))
+    .filter((row) => !disabledIds.has(row.id))
+    .sort((a, b) => a.id - b.id);
+  return info;
+}
+
+function setActivityEntryEnabled(info = {}, activityId, enabled = true) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  if (id <= 0) return null;
+
+  info.datas = ensureArray(info.datas);
+  const disabledIds = new Set(normalizeActivityIdList(info.disabledEntryIds));
+  if (enabled) {
+    disabledIds.delete(id);
+    const existing = info.datas.find((row) => toSafeInt(row && row.id, 0) === id);
+    if (!existing) info.datas.push(createDefaultActivityRow(id));
+  } else {
+    disabledIds.add(id);
+    info.datas = info.datas.filter((row) => toSafeInt(row && row.id, 0) !== id);
+  }
+  info.disabledEntryIds = Array.from(disabledIds).sort((a, b) => a - b);
+  seedOpenActivityDatas(info);
+  return ensureArray(info.datas).find((row) => toSafeInt(row && row.id, 0) === id) || null;
+}
+
+function buildActivityUpdatePacket(row, rewardInfo = null) {
+  const data = {
+    data: normalizeActivityDataRow(row, getActivityTypeById(row.id)),
+  };
+  if (rewardInfo && typeof rewardInfo === 'object') {
+    data.rewardInfo = rewardInfo;
+  }
+  return {
+    tag: 1701,
+    msgUid: 0,
+    data,
+  };
+}
+
+function buildActivityAlchemyRewardPacket(
+  row,
+  activityType,
+  rewardInfo = buildRewardInfo([]),
+  count = 0,
+  rewards = {}
+) {
+  const type = toSafeInt(activityType, 0);
+  if (type !== 34 && type !== 37) return null;
+
+  const src = ensureObject(rewards);
+  const data = {
+    data: normalizeActivityDataRow(row, type),
+    rewardInfo: rewardInfo && typeof rewardInfo === 'object'
+      ? rewardInfo
+      : buildRewardInfo([]),
+    count: Math.max(0, toSafeInt(count, 0)),
+  };
+
+  if (type === 34) {
+    data.extraRewards = buildRewardInfo(src.extraRewards);
+  } else {
+    data.alchemyRewards = normalizeRewardRows(src.alchemyRewards);
+    data.extraRewards = normalizeRewardRows(src.extraRewards);
+    data.returnRewards = normalizeRewardRows(src.returnRewards);
+  }
+
+  if (type === 34) {
+    return { tag: 120010, msgUid: 0, data };
+  }
+  return { tag: 120020, msgUid: 0, data };
+}
+
+function buildFestivalDrawPacket(row, rewards = []) {
+  const normalized = normalizeActivityDataRow(row, 43);
+  return {
+    tag: 1796,
+    msgUid: 0,
+    data: {
+      id: normalized.id,
+      score: normalized.score,
+      record: normalized.record,
+      records: { ...normalized.records },
+      rewards: ensureArray(rewards),
+    },
+  };
+}
+
+function buildActivity44RankRow(player = {}, row = {}) {
+  const roleInfo = ensureObject(player.roleInfo);
+  const score = Math.max(0, toSafeInt(row.record, 0));
+  const displayPower = arenaReadModel.displayPowerFromPlayer(player);
+  return {
+    dbid: String(player.playerId || player.userId || player._id || ''),
+    name: String(player.name || ''),
+    serverId: Math.max(0, toSafeInt(player.serverId, toSafeInt(process.env.SERVER_ID, 1))),
+    serverName: String(player.serverName || process.env.SERVER_NAME || ''),
+    level: Math.max(1, toSafeInt(player.level, 1)),
+    avatar: Math.max(0, toSafeInt(player.avatar, toSafeInt(roleInfo.avatar, 0))),
+    avatarUrl: String(player.avatarUrl || roleInfo.avatarUrl || ''),
+    avatarFrame: Math.max(0, toSafeInt(player.avatarFrame, toSafeInt(roleInfo.avatarFrame, 0))),
+    title: Math.max(0, toSafeInt(player.title, toSafeInt(roleInfo.title, 0))),
+    kungfuId: Math.max(0, toSafeInt(roleInfo.kungfuId, 0)),
+    power: Math.max(0, toSafeInt(displayPower, toSafeInt(player.displayPower, 0))),
+    powerUnit: 'native-weighted-point',
+    score,
+  };
+}
+
+const activity44RankCache = new Map();
+
+async function buildActivity44RankPacket(player = {}, row = {}) {
+  const selfRow = buildActivity44RankRow(player, row);
+  const serverId = Number(player.serverId || process.env.SERVER_ID);
+  const activityId = toSafeInt(row.id, 44001);
+  const window = newYearEventSchedule.windowFor(serverId);
+  let ranklist = [];
+  const cacheKey = `${serverId}:${activityId}:${window?.key || 'legacy'}`;
+  const cached = activity44RankCache.get(cacheKey);
+  if (cached && Date.now() - cached.at < 5000) {
+    ranklist = cached.rows.map((entry) => ({ ...entry }));
+  } else {
+    try {
+      // Rank must be based on persisted players, not only the requester. The
+      // result is cached briefly because the panel can poll every few seconds.
+      // eslint-disable-next-line global-require
+      const Player = require('../db/models/Player');
+      const docs = await Player.find({ serverId, isBot: { $ne: true }, managedBot: { $ne: true },
+        'activityInfo.datas': { $elemMatch: { id: activityId } } })
+        .select({ ...arenaReadModel.PLAYER_PROJECTION, activityInfo: 1 })
+        .lean();
+      ranklist = docs.map((doc) => {
+        const data = ensureArray(ensureObject(doc.activityInfo).datas)
+          .find((entry) => toSafeInt(entry && entry.id, 0) === activityId &&
+            (!window || newYearEventSchedule.belongs(entry, window)));
+        if (!data) return null;
+        return buildActivity44RankRow({ ...doc, roleInfo: ensureObject(doc.roleInfo) }, data || {});
+      }).filter((entry) => entry && entry.dbid && entry.score > 0);
+      activity44RankCache.set(cacheKey, { at: Date.now(), rows: ranklist.map((entry) => ({ ...entry })) });
+    } catch (_err) {
+      ranklist = [];
+    }
+  }
+  if (selfRow.dbid && selfRow.score > 0 && !ranklist.some((entry) => entry.dbid === selfRow.dbid)) ranklist.push(selfRow);
+  else if (selfRow.dbid) ranklist = ranklist.map((entry) => entry.dbid === selfRow.dbid ? selfRow : entry);
+  try {
+    // Keep the event rank meaningful for every active process without adding
+    // another database query to the realtime request path.
+    // eslint-disable-next-line global-require
+    const runtimeBus = require('../services/RuntimeBus');
+    const wsServer = runtimeBus && typeof runtimeBus.getWsServer === 'function' ? runtimeBus.getWsServer() : null;
+    const clients = wsServer && wsServer.clients && typeof wsServer.clients.values === 'function'
+      ? Array.from(wsServer.clients.values())
+      : [];
+    clients.forEach((client) => {
+      const candidate = client && (client.session || (client.ws && client.ws._lhsSession) || client._session || client);
+      const peerPlayer = candidate && candidate.player;
+      if (!peerPlayer || peerPlayer === player || candidate._isBot === true ||
+          peerPlayer.isBot === true || peerPlayer.managedBot === true || Number(peerPlayer.serverId) !== serverId) return;
+      const info = ensureObject(peerPlayer.activityInfo);
+      const peerRow = ensureArray(info.datas).find((entry) => toSafeInt(entry && entry.id, 0) === toSafeInt(row.id, 0));
+      if (!peerRow || (window && !newYearEventSchedule.belongs(peerRow, window))) return;
+      const rankRow = buildActivity44RankRow(peerPlayer, peerRow);
+      if (rankRow.dbid && rankRow.score > 0) {
+        const old = ranklist.findIndex(r => r.dbid === rankRow.dbid);
+        if (old >= 0) ranklist[old] = rankRow; else ranklist.push(rankRow);
+      }
+    });
+  } catch (_err) {}
+  ranklist = ranklist.filter(r => r.score > 0);
+  ranklist.sort((left, right) => right.score - left.score || (left.dbid < right.dbid ? -1 : left.dbid > right.dbid ? 1 : 0));
+  const selfRank = ranklist.findIndex((entry) => entry.dbid === selfRow.dbid) + 1;
+  return {
+    tag: 1703,
+    msgUid: 0,
+    data: {
+      id: activityId,
+      rank: selfRank > 0 ? selfRank : 0,
+      myRank: selfRank > 0 ? selfRank : 0,
+      ranklist: ranklist.slice(0, 100),
+      toplist: ranklist.slice(0, 3),
+    },
+  };
+}
+
+function getActivityPushState(info = {}, activityId) {
+  info.pushStates = ensureObject(info.pushStates);
+  const key = String(Math.max(0, toSafeInt(activityId, 0)));
+  info.pushStates[key] = ensureObject(info.pushStates[key]);
+  return info.pushStates[key];
+}
+
+function getActivityTypeConfig(tableName, activityId) {
+  const table = configService.get(tableName) || {};
+  return table[activityId] || table[String(activityId)] || null;
+}
+
+function getAssetConfigEntry(itemId) {
+  const id = Math.max(0, toSafeInt(itemId, 0));
+  if (id <= 0) return null;
+  const table = configService.get('AssetsConfig') || {};
+  return table[id] || table[String(id)] || null;
+}
+
+function readFuluRewardRows(raw, { requireWeight = false } = {}) {
+  const source = ensureArray(raw);
+  if (source.length <= 0) return null;
+  const rows = [];
+  for (const entry of source) {
+    const row = ensureObject(entry);
+    const id = Math.max(0, toSafeInt(row.id, 0));
+    const count = Math.max(0, toSafeInt(row.count, 0));
+    const weight = Math.max(0, toSafeInt(row.weight, 0));
+    if (id <= 0 || count <= 0 || !getAssetConfigEntry(id)) return null;
+    if (requireWeight && weight <= 0) return null;
+    rows.push({ id, count, ...(requireWeight ? { weight } : {}) });
+  }
+  return rows.length === source.length ? rows : null;
+}
+
+function getValidFuluConfig(activityId) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  const meta = getActivityConfigEntry(id);
+  if (!meta || toSafeInt(meta.activityType, 0) !== 52) return null;
+  const cfg = ensureObject(getActivityTypeConfig('Activity52Config', id));
+  const consume = Math.max(0, toSafeInt(cfg.consume, 0));
+  const maxMultiple = Math.max(0, toSafeInt(cfg.maxMultiple, 0));
+  const times = Math.max(0, toSafeInt(cfg.times, 0));
+  const guaranteedTimes = Math.max(0, toSafeInt(cfg.guaranteedTimes, 0));
+  const exchangeId = Math.max(0, toSafeInt(cfg.exchangeId, 0));
+  const triggerTimes = Math.max(0, toSafeInt(cfg.triggerTimes, 0));
+  const rewards = readFuluRewardRows(cfg.rewards);
+  if (toSafeInt(cfg.activityId, 0) !== id
+    || consume <= 0
+    || maxMultiple <= 0 || maxMultiple > FULU_MAX_MULTIPLE
+    || (times <= 0 && guaranteedTimes <= 0)
+    || exchangeId <= 0
+    || triggerTimes <= 0 || triggerTimes > FULU_MAX_TRIGGER_TIMES
+    || !getAssetConfigEntry(consume)
+    || !getAssetConfigEntry(exchangeId)
+    || !rewards) return null;
+  try {
+    rewardGrant.assertRewardRowsSupported(rewards);
+  } catch (_error) {
+    return null;
+  }
+  return {
+    consume,
+    maxMultiple,
+    times: times > 0 ? times : guaranteedTimes,
+    exchangeId,
+    triggerTimes,
+    rewards,
+  };
+}
+
+function pickWeightedRow(rows = [], weightKey = 'weight') {
+  const list = ensureArray(rows).filter((row) => row && typeof row === 'object');
+  if (list.length <= 0) return null;
+  const total = list.reduce((sum, row) => sum + Math.max(0, toSafeInt(row[weightKey], 0)), 0);
+  if (total <= 0) return list[0];
+  let roll = Math.random() * total;
+  for (const row of list) {
+    roll -= Math.max(0, toSafeInt(row[weightKey], 0));
+    if (roll < 0) return row;
+  }
+  return list[list.length - 1];
+}
+
+function flattenObjectRows(raw) {
+  const out = [];
+  const visit = (value) => {
+    if (Array.isArray(value)) {
+      value.forEach(visit);
+      return;
+    }
+    if (!value || typeof value !== 'object') return;
+    if (value.id != null || value.type != null || value.activityId != null) out.push(value);
+    else Object.keys(value).forEach((key) => visit(value[key]));
+  };
+  visit(raw);
+  return out;
+}
+
+function consumeActivityItem(player = {}, itemId, count = 1) {
+  const id = Math.max(0, toSafeInt(itemId, 0));
+  const amount = Math.max(0, toSafeInt(count, 0));
+  if (id <= 0 || amount <= 0) return null;
+  player.items = ensureObject(player.items);
+  const before = Math.max(0, toSafeInt(player.items[id], 0));
+  if (before < amount) return null;
+  const left = before - amount;
+  if (left > 0) player.items[id] = left;
+  else delete player.items[id];
+  return { id, count: amount, left };
+}
+
+function getActivityItemCount(player = {}, itemId) {
+  const id = Math.max(0, toSafeInt(itemId, 0));
+  const items = ensureObject(player.items);
+  const currencies = ensureObject(player.currencies);
+  if (id === 1) return Math.max(0, toSafeInt(currencies.diamond, toSafeInt(items[id], 0)));
+  if (id === 2) return Math.max(0, toSafeInt(currencies.silver, toSafeInt(items[id], 0)));
+  if (id === 6) return Math.max(0, toSafeInt(currencies.gold, toSafeInt(items[id], 0)));
+  return Math.max(0, toSafeInt(items[id], 0));
+}
+
+function setActivityItemCount(player = {}, itemId, count = 0) {
+  const id = Math.max(0, toSafeInt(itemId, 0));
+  const value = Math.max(0, toSafeInt(count, 0));
+  if (id <= 0) return;
+  player.items = ensureObject(player.items);
+  if (value > 0) player.items[id] = value;
+  else delete player.items[id];
+
+  if (id === 1 || id === 2 || id === 6) {
+    player.currencies = ensureObject(player.currencies);
+    const key = id === 1 ? 'diamond' : (id === 2 ? 'silver' : 'gold');
+    player.currencies[key] = value;
+  }
+}
+
+function consumeActivityCosts(player = {}, rows = [], multiplier = 1) {
+  const scale = Math.max(0, toSafeInt(multiplier, 0));
+  if (scale <= 0) return null;
+
+  const costsById = new Map();
+  ensureArray(rows).forEach((row) => {
+    const id = Math.max(0, toSafeInt(row && row.id, 0));
+    const count = Math.max(0, toSafeInt(row && row.count, 0)) * scale;
+    if (id > 0 && count > 0) costsById.set(id, (costsById.get(id) || 0) + count);
+  });
+  if (costsById.size <= 0) return null;
+
+  for (const [id, count] of costsById) {
+    if (getActivityItemCount(player, id) < count) return null;
+  }
+
+  const consumed = [];
+  costsById.forEach((count, id) => {
+    const left = getActivityItemCount(player, id) - count;
+    setActivityItemCount(player, id, left);
+    consumed.push({ id, count, left });
+  });
+  return consumed;
+}
+
+function buildActivityDropPacket(row, rewardInfo) {
+  return {
+    tag: 1702,
+    msgUid: 0,
+    data: {
+      id: Math.max(0, toSafeInt(row && row.id, 0)),
+      rewardInfo: rewardInfo || buildRewardInfo([]),
+    },
+  };
+}
+
+function buildActivityClosePacket(activityId) {
+  return {
+    tag: 1704,
+    msgUid: 0,
+    data: { id: Math.max(0, toSafeInt(activityId, 0)) },
+  };
+}
+
+function buildActivityMonopolyFatePacket(row) {
+  const normalized = normalizeActivityDataRow(row, 21);
+  return {
+    tag: 1751,
+    msgUid: 0,
+    data: { id: normalized.id, record: normalized.record, records: { ...normalized.records } },
+  };
+}
+
+function buildActivityMonopolyMovePacket(row) {
+  const normalized = normalizeActivityDataRow(row, 21);
+  return {
+    tag: 1750,
+    msgUid: 0,
+    data: {
+      id: normalized.id,
+      score: normalized.score,
+      record: normalized.record,
+      records: { ...normalized.records },
+    },
+  };
+}
+
+function buildActivityMultiGiftPacket(row, rewardInfo, multi = 1, addRecord = 0) {
+  return {
+    tag: 1770,
+    msgUid: 0,
+    data: {
+      data: normalizeActivityDataRow(row, getActivityTypeById(row && row.id)),
+      rewardInfo: rewardInfo || buildRewardInfo([]),
+      multi: Math.max(1, toSafeInt(multi, 1)),
+      addRecord: Math.max(0, toSafeInt(addRecord, 0)),
+    },
+  };
+}
+
+function buildActivityGrassTastePacket(row) {
+  return {
+    tag: 12000,
+    msgUid: 0,
+    data: { data: normalizeActivityDataRow(row, 35) },
+  };
+}
+
+function buildActivityBoxDrawPacket(row, rewardInfo) {
+  return {
+    tag: 12010,
+    msgUid: 0,
+    data: {
+      data: normalizeActivityDataRow(row, 49),
+      rewardInfo: rewardInfo || buildRewardInfo([]),
+    },
+  };
+}
+
+function buildSecretTreasureState(player, row, pushState = {}) {
+  const profile = buildActivity44RankRow(player, row);
+  const numCount = {};
+  const countsByDay = {};
+  const rankMap = {};
+  Object.keys(ensureObject(row.records)).forEach((key) => {
+    const encoded = Math.max(0, toSafeInt(key, 0));
+    const day = Math.floor(encoded / 100);
+    const taskId = encoded % 100;
+    const value = Math.max(0, toSafeInt(row.records[key], 0));
+    if (day <= 0 || taskId <= 0 || value <= 0) return;
+    const countKey = String((100 * value) + taskId);
+    numCount[countKey] = Math.max(0, toSafeInt(numCount[countKey], 0)) + 1;
+    countsByDay[day] = ensureObject(countsByDay[day]);
+    countsByDay[day][value] = Math.max(0, toSafeInt(countsByDay[day][value], 0)) + 1;
+    rankMap[day] = ensureArray(rankMap[day]);
+    rankMap[day].push({ ...profile, score: value });
+  });
+
+  const rankRecord = {};
+  Object.keys(countsByDay).forEach((day) => {
+    rankRecord[day] = Object.keys(countsByDay[day])
+      .map((value) => ({ value: Math.max(0, toSafeInt(value, 0)), count: countsByDay[day][value] }))
+      .sort((a, b) => b.count - a.count || a.value - b.value);
+  });
+
+  return {
+    numCount: { ...numCount, ...ensureObject(pushState.numCount) },
+    rankRecord: { ...rankRecord, ...ensureObject(pushState.rankRecord) },
+    rankMap: { ...rankMap, ...ensureObject(pushState.rankMap) },
+    forecastLists: ensureObject(pushState.forecastLists),
+    winner: pushState.winner && typeof pushState.winner === 'object' ? pushState.winner : null,
+  };
+}
+
+function buildSecretTreasurePackets(player, row, pushState, module, index) {
+  const state = buildSecretTreasureState(player, row, ensureObject(pushState.secretTreasure));
+  const id = Math.max(0, toSafeInt(row && row.id, 0));
+  if (module === -1) {
+    return [{ tag: 1760, msgUid: 0, data: { id, numCount: state.numCount, rankRecord: state.rankRecord } }];
+  }
+  if (module === 1) {
+    const key = String(Math.max(0, toSafeInt(index, 0)));
+    let list = ensureArray(state.forecastLists[key]);
+    if (list.length <= 0 && Math.max(0, toSafeInt(row.records[key], 0)) > 0) {
+      list = [{ ...buildActivity44RankRow(player, row), score: Math.max(0, toSafeInt(row.records[key], 0)) }];
+    }
+    return [{ tag: 1761, msgUid: 0, data: { id, list } }];
+  }
+  if (module === 2) return [{ tag: 1762, msgUid: 0, data: { id, rankMap: state.rankMap } }];
+  if (module === 3) return [{ tag: 1763, msgUid: 0, data: { id, winner: state.winner } }];
+  return [];
+}
+
+function normalizeKnifeState(row, pushState, cfg) {
+  const state = ensureObject(pushState.knife);
+  state.winners = ensureArray(state.winners);
+  state.pool = Math.max(0, toSafeInt(state.pool, toSafeInt(cfg && cfg.count, 0)));
+  state.value = Math.max(0, toSafeInt(state.value, toSafeInt(row && row.record, 0)));
+  pushState.knife = state;
+  return state;
+}
+
+function buildKnifeDrawInfoPacket(state) {
+  return {
+    tag: 1755,
+    msgUid: 0,
+    data: { winners: ensureArray(state.winners), pool: state.pool, value: state.value },
+  };
+}
+
+function buildKnifeDrawWinPacket(count) {
+  return { tag: 1756, msgUid: 0, data: { count: Math.max(1, toSafeInt(count, 1)) } };
+}
+
+function buildFishKingRankPacket(player, row) {
+  const self = buildActivity44RankRow(player, row);
+  self.score = Math.max(0, toSafeInt(row && row.score, self.score));
+  const ranklist = self.dbid ? [self] : [];
+  return {
+    tag: 120100,
+    msgUid: 0,
+    data: {
+      rank: ranklist.length > 0 ? 1 : 0,
+      score: self.score,
+      ranklist,
+      toplist: ranklist.slice(0, 3),
+    },
+  };
+}
+
+function buildFishSceneSalvagePacket(data = {}) {
+  const src = ensureObject(data);
+  return {
+    tag: 1781,
+    msgUid: 0,
+    data: {
+      type: Math.max(1, Math.min(4, toSafeInt(src.type, 4))),
+      ...(src.bottle && typeof src.bottle === 'object' ? { bottle: src.bottle } : {}),
+      ...(src.reward && typeof src.reward === 'object' ? { reward: src.reward } : {}),
+    },
+  };
+}
+
+function buildFishSceneBottleContentPacket(bottle = {}) {
+  const src = ensureObject(bottle);
+  return {
+    tag: 1782,
+    msgUid: 0,
+    data: {
+      title: String(src.title || ''),
+      content: String(src.content || ''),
+      textId: Math.max(0, toSafeInt(src.textId, 0)),
+      score: Math.max(0, toSafeInt(src.score, 0)),
+      titles: ensureArray(src.titles).map((v) => String(v)),
+      contents: ensureArray(src.contents).map((v) => String(v)),
+    },
+  };
+}
+
+function buildFuluColorCount(type) {
+  const colors = FULU_COLOR_PATTERNS[toSafeInt(type, 0)] || [];
+  return colors.reduce((map, color) => {
+    map[color] = Math.max(0, toSafeInt(map[color], 0)) + 1;
+    return map;
+  }, {});
+}
+
+function buildFuluDrawPacket(row, rewards, colorCount, special = 0) {
+  return {
+    tag: 1775,
+    msgUid: 0,
+    data: {
+      rewards: normalizeRewardRows(rewards),
+      colorCount: ensureObject(colorCount),
+      score: Math.max(0, toSafeInt(row && row.score, 0)),
+      special: Math.max(0, toSafeInt(special, 0)),
+      records: { ...normalizeRecordsMap(row && row.records, 52) },
+    },
+  };
+}
+
+function operateMonopoly(player, row, params = {}) {
+  const tileConfig = getActivityTypeConfig('Activity21Config', row.id) || {};
+  const steps = Math.max(1, toSafeInt(params.param, toSafeInt(params.index, 1)));
+  const tileCount = Math.max(1, Object.keys(tileConfig).length || 21);
+  row.record = ((Math.max(0, toSafeInt(row.record, 0)) + steps - 1) % tileCount) + 1;
+  const levelRows = ensureObject(tileConfig[row.record] || tileConfig[String(row.record)]);
+  const level = Math.max(1, toSafeInt(row.score, 1));
+  const tile = ensureObject(levelRows[level] || levelRows[String(level)] || levelRows[Object.keys(levelRows)[0]]);
+  let rewardInfo = buildRewardInfo([]);
+  let fate = false;
+
+  if (toSafeInt(tile.type, 0) === 1 && toSafeInt(tile.reward, 0) > 0) {
+    const rewardCfg = configService.get('Activity21RewardConfig') || {};
+    const rewardRow = ensureObject(rewardCfg[tile.reward] || rewardCfg[String(tile.reward)]);
+    const reward = rewardRow.reward;
+    rewardInfo = grantRewardRows(player, reward ? [reward] : []);
+  } else if (toSafeInt(tile.type, 0) === 2) {
+    row.score = Math.max(0, toSafeInt(row.score, 0)) + Math.max(0, toSafeInt(tile.score, 0));
+  } else if (toSafeInt(tile.type, 0) === 3) {
+    const fateId = Math.max(0, toSafeInt(tile.subType, 0));
+    if (fateId > 0) {
+      row.records[fateId] = Math.max(0, toSafeInt(row.records[fateId], 0)) + 1;
+      fate = true;
+    }
+  }
+
+  return {
+    result: 0,
+    row,
+    rewardInfo,
+    packets: [
+      buildActivityMonopolyMovePacket(row),
+      ...(fate ? [buildActivityMonopolyFatePacket(row)] : []),
+    ],
+  };
+}
+
+function resolveKnifeRewardConfig(activityId, level, index) {
+  const root = getActivityTypeConfig('Activity27RewardConfig', activityId) || {};
+  const levelMap = ensureObject(
+    root[Math.max(1, toSafeInt(level, 1))]
+      || root[String(Math.max(1, toSafeInt(level, 1)))]
+      || root[Object.keys(root)[0]]
+  );
+  return ensureObject(
+    levelMap[Math.max(0, toSafeInt(index, 0))]
+      || levelMap[String(Math.max(0, toSafeInt(index, 0)))]
+      || levelMap[Object.keys(levelMap)[0]]
+  );
+}
+
+function operateKnifeReward(player, row, pushState, params = {}) {
+  const cfg = ensureObject(getActivityTypeConfig('Activity27Config', row.id));
+  const state = normalizeKnifeState(row, pushState, cfg);
+  const module = toSafeInt(params.module, 0);
+  if (module === 1) {
+    return { result: 0, row, rewardInfo: buildRewardInfo([]), packets: [buildKnifeDrawInfoPacket(state)] };
+  }
+
+  const consumed = consumeActivityItem(player, cfg.shopId, 1);
+  if (!consumed) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [buildKnifeDrawInfoPacket(state)] };
+  }
+
+  const index = Math.max(0, toSafeInt(params.index, 0));
+  const rewardCfg = resolveKnifeRewardConfig(row.id, Math.max(1, row.score), index);
+  const reward = pickWeightedRow(flattenObjectRows(rewardCfg.rewards));
+  const rewardInfo = grantRewardRows(player, reward ? [reward] : []);
+  row.records[index] = Math.max(0, toSafeInt(row.records[index], 0)) + 1;
+  row.record = Math.max(0, toSafeInt(row.record, 0)) + 1;
+  const add = Math.max(0, toSafeInt(cfg.diamondAward, 0));
+  state.pool += add;
+  state.value += add;
+
+  const packets = [buildKnifeDrawInfoPacket(state)];
+  if (index > 0 && index === Math.max(0, toSafeInt(cfg.bossId, 0))) {
+    row.score = Math.max(0, toSafeInt(row.score, 0)) + 1;
+    state.winners.unshift({ ...buildActivity44RankRow(player, row), score: row.score });
+    state.winners = state.winners.slice(0, 20);
+    packets.push(buildKnifeDrawWinPacket(row.score));
+  }
+
+  return { result: 0, row, rewardInfo, consumed, packets };
+}
+
+function resolveBoxRewardConfig(activityId, index) {
+  const root = ensureObject(getActivityTypeConfig('Activity49RewardConfig', activityId));
+  const requested = Math.max(0, toSafeInt(index, 0));
+  if (root[requested] || root[String(requested)]) return ensureObject(root[requested] || root[String(requested)]);
+  const key = Object.keys(root).find((value) => Math.floor(toSafeInt(value, 0) / 100) === requested);
+  return ensureObject(root[key || Object.keys(root)[0]]);
+}
+
+function operateBoxDraw(player, row, params = {}) {
+  const drawCfg = resolveBoxRewardConfig(row.id, params.index);
+  const cost = ensureObject(drawCfg.cost);
+  const consumed = consumeActivityItem(player, cost.id, cost.count);
+  if (!consumed) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+  const reward = pickWeightedRow(ensureArray(drawCfg.rewards));
+  const rewards = reward ? [{ id: reward.id, count: reward.count }] : [];
+  const rewardInfo = grantRewardRows(player, rewards);
+  const type = Math.max(0, toSafeInt(drawCfg.type, toSafeInt(params.index, 0)));
+  row.records[type] = Math.max(0, toSafeInt(row.records[type], 0)) + 1;
+  row.extra = ensureObject(row.extra);
+  row.extra.index = type;
+  row.extra.list = ensureArray(row.extra.list);
+  row.extra.list.push(type);
+  row.extra.list = row.extra.list.slice(-20);
+  return {
+    result: 0,
+    row,
+    rewardInfo,
+    consumed,
+    packets: [buildActivityBoxDrawPacket(row, rewardInfo)],
+  };
+}
+
+function flattenFuluArrangements(activityId) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  const root = ensureObject(getActivityTypeConfig('Activity52ArrangeConfig', id));
+  return flattenObjectRows(root).map((row) => {
+    const type = toSafeInt(row.type, 0);
+    const showRate = Math.max(0, toSafeInt(row.showRate, 0));
+    const display = Math.max(0, toSafeInt(row.display, 0));
+    const rewards = readFuluRewardRows(row.rewards, { requireWeight: true });
+    if (toSafeInt(row.activityId, 0) !== id
+      || !FULU_COLOR_PATTERNS[type]
+      || showRate <= 0
+      || display <= 0 || display > FULU_MAX_DISPLAY
+      || !rewards) return null;
+    return { ...row, type, showRate, display, rewards };
+  }).filter(Boolean);
+}
+
+function operateFulu(player, row, params = {}) {
+  const cfg = getValidFuluConfig(row.id);
+  if (!cfg) return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  const module = toSafeInt(params.module, 0);
+  if (module === 0) {
+    const requested = toSafeInt(params.index, 0);
+    const current = toSafeInt(row.record, 0);
+    const selection = requested === 0
+      ? (current > 0 ? current : FULU_DEFAULT_SELECTION)
+      : requested;
+    if (selection < 1 || selection > 5) {
+      return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    }
+    row.record = selection;
+    return { result: 0, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+
+  if (module === 2) {
+    const records = normalizeRecordsMap(row.records, 52);
+    const completed = Math.min(cfg.triggerTimes, Math.max(0, toSafeInt(records[2], 0)));
+    if (completed >= cfg.triggerTimes) {
+      return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    }
+    const threshold = cfg.times * (completed + 1);
+    if (!Number.isSafeInteger(threshold)) {
+      return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    }
+    if (Math.max(0, toSafeInt(records[1], 0)) < threshold) {
+      return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    }
+    let rewardInfo;
+    try {
+      rewardGrant.assertRewardRowsSupported(cfg.rewards);
+      rewardInfo = grantRewardRows(player, cfg.rewards);
+    } catch (_error) {
+      return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    }
+    records[2] = completed + 1;
+    row.records = records;
+    return { result: 0, row, rewardInfo, packets: [] };
+  }
+
+  if (module !== 1) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+
+  const requestedMultiple = toSafeInt(params.index, 1);
+  if (requestedMultiple < 1) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+  const multi = Math.max(1, Math.min(cfg.maxMultiple, requestedMultiple));
+  const selected = toSafeInt(row.record, 0) || FULU_DEFAULT_SELECTION;
+  if (selected < 1 || selected > 5) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+
+  // Preflight every post-consume dependency before taking item 233.
+  const arrangement = pickWeightedRow(flattenFuluArrangements(row.id), 'showRate');
+  if (!arrangement) return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  const reward = pickWeightedRow(arrangement.rewards, 'weight');
+  if (!reward) return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  const colorCount = buildFuluColorCount(arrangement.type);
+  const selectedColorCount = Math.max(0, toSafeInt(colorCount[selected], 0));
+  const display = Math.max(0, toSafeInt(arrangement.display, 0));
+  const exchangeCount = selectedColorCount * display * multi;
+  if (!Number.isSafeInteger(exchangeCount) || exchangeCount < 0) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+  const rewardCount = reward.count * multi;
+  if (!Number.isSafeInteger(rewardCount) || rewardCount <= 0) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+  const rewards = [{ id: reward.id, count: rewardCount }];
+  if (exchangeCount > 0) rewards.push({ id: cfg.exchangeId, count: exchangeCount });
+  try {
+    rewardGrant.assertRewardRowsSupported(rewards);
+  } catch (_error) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+
+  const beforeCost = getActivityItemCount(player, cfg.consume);
+  const consumed = consumeActivityItem(player, cfg.consume, multi);
+  if (!consumed) return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  let rewardInfo;
+  try {
+    rewardInfo = grantRewardRows(player, rewards);
+  } catch (_error) {
+    setActivityItemCount(player, cfg.consume, beforeCost);
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+  }
+  const records = normalizeRecordsMap(row.records, 52);
+  records[1] = Math.max(0, toSafeInt(records[1], 0)) + multi;
+  row.records = records;
+  row.record = selected;
+  row.score = Math.max(0, toSafeInt(row.score, 0)) + multi;
+  row.extra = { ...ensureObject(row.extra), currentMultiple: multi };
+  return {
+    result: 0,
+    row,
+    rewardInfo,
+    consumed,
+    packets: [buildFuluDrawPacket(row, rewards, colorCount, 0)],
+  };
+}
+
+function getActivity33BottleConfig(activityId) {
+  return ensureObject(getActivityTypeConfig('Activity33BottleConfig', activityId));
+}
+
+function operateFishSceneActivity(player, row, pushState, params = {}) {
+  const module = toSafeInt(params.module, 0);
+  const state = ensureObject(pushState.fishScene);
+  state.bottle = state.bottle && typeof state.bottle === 'object' ? state.bottle : null;
+  pushState.fishScene = state;
+  if (module === 2) {
+    return { result: 0, row, rewardInfo: buildRewardInfo([]), packets: [buildFishKingRankPacket(player, row)] };
+  }
+  if (module === 10) {
+    const consumed = consumeActivityItem(player, 214, 1);
+    if (!consumed) return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    state.bottle = {
+      title: String(player.name || ''),
+      content: String(params.content || '').slice(0, 100),
+      textId: 0,
+      score: 0,
+      titles: [],
+      contents: [],
+    };
+    row.extra = { ...state.bottle, hit: 0 };
+    return { result: 0, row, rewardInfo: buildRewardInfo([]), consumed, packets: [] };
+  }
+  if (module === 11) {
+    const consumed = consumeActivityItem(player, 215, 1);
+    if (!consumed) return { result: 1, row, rewardInfo: buildRewardInfo([]), packets: [] };
+    const salvage = state.bottle ? { type: 1, bottle: state.bottle } : { type: 4 };
+    state.lastSalvage = salvage;
+    return {
+      result: 0,
+      row,
+      rewardInfo: buildRewardInfo([]),
+      consumed,
+      packets: [buildFishSceneSalvagePacket(salvage)],
+    };
+  }
+  if (module === 12 && state.bottle) {
+    state.bottle.titles = ensureArray(state.bottle.titles);
+    state.bottle.contents = ensureArray(state.bottle.contents);
+    state.bottle.titles.push(String(player.name || ''));
+    state.bottle.contents.push(String(params.content || '').slice(0, 100));
+    row.extra = { ...ensureObject(row.extra), ...state.bottle };
+  } else if (module === 13 && state.bottle) {
+    state.bottle.score = Math.max(0, toSafeInt(state.bottle.score, 0)) + 1;
+    row.extra = { ...ensureObject(row.extra), ...state.bottle, hit: toSafeInt(row.extra && row.extra.hit, 0) | 1 };
+  } else if (module === 14 && state.bottle) {
+    const cfg = getActivity33BottleConfig(row.id);
+    const range = ensureArray(cfg.bottleRewards);
+    const count = Math.max(0, toSafeInt(range[0], 0));
+    const rewards = count > 0 ? [{ id: 216, count }] : [];
+    const rewardInfo = grantRewardRows(player, rewards);
+    state.bottle = null;
+    row.extra = {};
+    return { result: 0, row, rewardInfo, packets: [] };
+  } else if (module === 15 && state.bottle) {
+    return {
+      result: 0,
+      row,
+      rewardInfo: buildRewardInfo([]),
+      packets: [buildFishSceneBottleContentPacket(state.bottle)],
+    };
+  }
+  return { result: 0, row, rewardInfo: buildRewardInfo([]), packets: [] };
+}
+
+function findActivityRow(info, activityId) {
+  const id = Math.max(0, toSafeInt(activityId, 0));
+  if (id <= 0) return null;
+
+  let row = ensureArray(info.datas).find((it) => toSafeInt(it.id, 0) === id);
+  if (!row && LOCAL_NEWYEAR_ACTIVITY_IDS.includes(id)) {
+    row = createDefaultActivityRow(id);
+    info.datas.push(row);
+  }
+  if (!row) return null;
+
+  const normalized = normalizeActivityDataRow(row, getActivityTypeById(id));
+  const index = ensureArray(info.datas).findIndex((it) => toSafeInt(it.id, 0) === id);
+  if (index >= 0) info.datas[index] = normalized;
+  return normalized;
+}
+
+function pickDrawRewards(activityId, drawTimes = 1) {
+  const cfg = configService.get('Activity43Config') || {};
+  const rowCfg = cfg[activityId] || cfg[String(activityId)] || null;
+  const rewardGroups = ensureObject(rowCfg && rowCfg.rewardShow);
+  const groupWeights = ensureObject(rowCfg && rowCfg.weightShow);
+  const groups = Object.keys(rewardGroups)
+    .map((key) => ({ key, weight: Math.max(0, toSafeInt(groupWeights[key], 0)) }))
+    .filter((entry) => normalizeRewardRows(rewardGroups[entry.key]).length > 0);
+  const fallbackPool = rowCfg && Array.isArray(rowCfg.rewardPoolShow) ? rowCfg.rewardPoolShow : [];
+  if (groups.length <= 0 && fallbackPool.length <= 0) {
+    return [{ id: 4, count: 88 * Math.max(1, drawTimes) }];
+  }
+
+  const picks = [];
+  const times = Math.max(1, toSafeInt(drawTimes, 1));
+  for (let i = 0; i < times; i += 1) {
+    const group = groups.length > 0 ? pickWeightedRow(groups) : null;
+    const pool = group ? normalizeRewardRows(rewardGroups[group.key]) : normalizeRewardRows(fallbackPool);
+    const entry = pool[Math.floor(Math.random() * pool.length)];
+    if (!entry) continue;
+    picks.push({
+      id: Math.max(0, toSafeInt(entry.id, 0)),
+      count: Math.max(1, toSafeInt(entry.count, 1)),
+    });
+  }
+  return picks.filter((row) => row.id > 0 && row.count > 0);
+}
+
+function normalizeRewardRows(raw = []) {
+  return ensureArray(raw).map((row) => ({
+    id: Math.max(0, toSafeInt(row && row.id, 0)),
+    count: Math.max(1, toSafeInt(row && row.count, 1)),
+  })).filter((row) => row.id > 0 && row.count > 0);
+}
+
+function getActivity43TaskRows(activityId) {
+  return ensureObject(getActivityTypeConfig('Activity43TaskConfig', activityId));
+}
+
+function getActivity43DailyRewardRows(activityId) {
+  return Object.values(ensureObject(getActivityTypeConfig('Activity43TaskRewardConfig', activityId)))
+    .map(ensureObject)
+    .filter((row) => toSafeInt(row.id, 0) > 0 && toSafeInt(row.score, 0) > 0)
+    .sort((left, right) => toSafeInt(left.id, 0) - toSafeInt(right.id, 0));
+}
+
+function getActivityTaskState(player = {}, taskId = 0) {
+  try {
+    // Refresh through the shared task service first so activity tasks use the
+    // same server-authoritative counters as the normal task panel.
+    // eslint-disable-next-line global-require
+    const progress = require('../services/MainTaskProgressService');
+    if (progress && typeof progress.refreshMainTaskProgress === 'function') {
+      progress.refreshMainTaskProgress(player);
+    }
+  } catch (_err) {}
+  const tasks = ensureObject(ensureObject(player.taskInfo).tasks);
+  return tasks[String(Math.max(0, toSafeInt(taskId, 0)))] || null;
+}
+
+function buildActivityTaskPackets(player = {}, taskIds = []) {
+  try {
+    // eslint-disable-next-line global-require
+    const task = require('./task');
+    if (task && typeof task.buildTaskUpdatePacketsByIds === 'function') {
+      return task.buildTaskUpdatePacketsByIds(player, taskIds, 0);
+    }
+  } catch (_err) {}
+  return [];
+}
+
+function operateNewYearTaskReward(player = {}, row = {}) {
+  const configs = getActivity43TaskRows(row.id);
+  const taskIds = Object.keys(configs)
+    .map((key) => toSafeInt(configs[key] && configs[key].taskId, toSafeInt(key, 0)))
+    .filter((taskId) => taskId > 0)
+    .sort((left, right) => left - right);
+  const completed = taskIds.filter((taskId) => {
+    const state = getActivityTaskState(player, taskId);
+    return state && toSafeInt(state.status, 0) === 20;
+  });
+  const loopCount = Math.max(0, toSafeInt(row.record, 0));
+  if (completed.length <= 0 && loopCount <= 0) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), taskIds: [] };
+  }
+
+  const cfg = ensureObject(getActivityTypeConfig('Activity43Config', row.id));
+  const rewards = normalizeRewardRows(cfg.loopRewards).map((reward) => ({
+    id: reward.id,
+    count: reward.count * loopCount,
+  }));
+  row.record = 0;
+  let addDailyScore = 0;
+  completed.forEach((taskId) => {
+    const cfg = ensureObject(configs[String(taskId)] || configs[taskId]);
+    const state = getActivityTaskState(player, taskId);
+    if (!state || toSafeInt(state.status, 0) !== 20) return;
+    state.status = 30;
+    state.progress = Math.max(toSafeInt(state.progress, 0), toSafeInt(state.target, 0));
+    addDailyScore += Math.max(0, toSafeInt(cfg.score, 0));
+    rewards.push(...normalizeRewardRows(cfg.rewards));
+  });
+
+  row.records = normalizeRecordsMap(row.records, 43);
+  row.records[10] = Math.max(0, toSafeInt(row.records[10], 0)) + addDailyScore;
+  return {
+    result: 0,
+    row,
+    rewardInfo: grantRewardRows(player, rewards),
+    taskIds: completed,
+  };
+}
+
+function operateNewYearDailyScoreReward(player = {}, row = {}) {
+  row.records = normalizeRecordsMap(row.records, 43);
+  const score = Math.max(0, toSafeInt(row.records[10], 0));
+  let flags = Math.max(0, toSafeInt(row.records[11], 0));
+  const rewards = [];
+  let claimed = 0;
+  getActivity43DailyRewardRows(row.id).forEach((cfg) => {
+    const id = Math.max(1, toSafeInt(cfg.id, 0));
+    const bit = 2 ** (id - 1);
+    if (score < Math.max(0, toSafeInt(cfg.score, 0)) || (flags & bit) === bit) return;
+    const reward = normalizeRewardRows([cfg.reward]);
+    if (reward.length <= 0) return;
+    rewards.push(...reward);
+    flags |= bit;
+    claimed += 1;
+  });
+  if (claimed <= 0) return { result: 1, row, rewardInfo: buildRewardInfo([]) };
+  row.records[11] = flags;
+  return { result: 0, row, rewardInfo: grantRewardRows(player, rewards) };
+}
+
+function resolveNewYearScoreReward(activityId, target) {
+  const root = ensureObject(getActivityTypeConfig('ActivityScoreConfig', activityId));
+  const fixedRows = Object.values(ensureObject(root[1] || root['1']))
+    .map(ensureObject)
+    .filter((entry) => toSafeInt(entry.score, 0) > 0)
+    .sort((left, right) => toSafeInt(left.score, 0) - toSafeInt(right.score, 0));
+  const direct = fixedRows.find((entry) => toSafeInt(entry.score, 0) === target);
+  if (direct) return direct;
+
+  const cycleRows = Object.values(ensureObject(root[2] || root['2']))
+    .map(ensureObject)
+    .filter((entry) => toSafeInt(entry.score, 0) > 0)
+    .sort((left, right) => toSafeInt(left.score, 0) - toSafeInt(right.score, 0));
+  if (fixedRows.length <= 0 || cycleRows.length <= 0) return null;
+  const fixedMax = toSafeInt(fixedRows[fixedRows.length - 1].score, 0);
+  const cycleSpan = toSafeInt(cycleRows[cycleRows.length - 1].score, 0);
+  if (target <= fixedMax || cycleSpan <= 0) return null;
+  return cycleRows.find((entry) => {
+    const base = fixedMax + toSafeInt(entry.score, 0);
+    return target >= base && (target - base) % cycleSpan === 0;
+  }) || null;
+}
+
+const ACTIVITY_37_QI_BY_PILL = Object.freeze({
+  118001: 2,
+  118002: 4,
+  118003: 6,
+  118004: 10,
+  118005: 15,
+});
+
+function grantUnmergedRewardRows(player, rows = []) {
+  const items = normalizeRewardRows(rows);
+  items.forEach((row) => addRewardToPlayer(player, row.id, row.count));
+  return { items, equips: [], heros: [] };
+}
+
+function operateActivity34Generate(player, row, params = {}) {
+  const count = Math.max(0, toSafeInt(params.param, 0));
+  const recipeId = Math.max(0, toSafeInt(params.index, 0));
+  const rewardRoot = ensureObject(getActivityTypeConfig('Activity34RewardConfig', row.id));
+  const cfg = ensureObject(rewardRoot[recipeId] || rewardRoot[String(recipeId)]);
+  const limitRoot = ensureObject(getActivityTypeConfig('Activity34Config', row.id));
+  const isEligible = (entry) => {
+    const id = Math.max(0, toSafeInt(entry && entry.id, 0));
+    const limitCfg = ensureObject(limitRoot[id] || limitRoot[String(id)]);
+    const limit = Math.max(0, toSafeInt(limitCfg.count, 0));
+    return id > 0 && (limit <= 0 || Math.max(0, toSafeInt(row.buyRecords[id], 0)) < limit);
+  };
+  const eligibleAtStart = ensureArray(cfg.qualityWeights).filter(isEligible);
+  if (count <= 0 || recipeId <= 0 || eligibleAtStart.length <= 0) {
+    return {
+      result: 1,
+      row,
+      count: 0,
+      rewardInfo: buildRewardInfo([]),
+      extraRewards: buildRewardInfo([]),
+      consumed: [],
+    };
+  }
+
+  const consumed = consumeActivityCosts(player, cfg.consumes, count);
+  if (!consumed) {
+    return {
+      result: 1,
+      row,
+      count: 0,
+      rewardInfo: buildRewardInfo([]),
+      extraRewards: buildRewardInfo([]),
+      consumed: [],
+    };
+  }
+
+  row.buyRecords = normalizeBuyRecordsMap(row.buyRecords);
+  row.records = normalizeRecordsMap(row.records, 34);
+  const succeed = Math.max(0, Math.min(10000, toSafeInt(cfg.succeed, 0)));
+  const mainRewards = [];
+  for (let i = 0; i < count; i += 1) {
+    if ((Math.random() * 10000) >= succeed) continue;
+    const eligible = ensureArray(cfg.qualityWeights).filter(isEligible);
+    if (eligible.length <= 0) continue;
+    const reward = pickWeightedRow(eligible);
+    const id = Math.max(0, toSafeInt(reward && reward.id, 0));
+    if (id <= 0) continue;
+    mainRewards.push({ id, count: 1 });
+    row.buyRecords[id] = Math.max(0, toSafeInt(row.buyRecords[id], 0)) + 1;
+  }
+
+  const extraRows = [];
+  const baseCfg = ensureObject(getActivityTypeConfig('Activity34BaseConfig', row.id));
+  ensureArray(baseCfg.dropItems).forEach((drop) => {
+    const id = Math.max(0, toSafeInt(drop && drop.id, 0));
+    const itemCount = Math.max(1, toSafeInt(drop && drop.count, 1));
+    const maxNum = Math.max(0, toSafeInt(drop && drop.maxNum, 0));
+    const weight = Math.max(0, toSafeInt(drop && drop.weight, 0));
+    for (let i = 0; i < count; i += 1) {
+      const received = Math.max(0, toSafeInt(row.records[id], 0));
+      if (id <= 0 || (maxNum > 0 && received >= maxNum)) break;
+      if ((Math.random() * 10000) >= weight) continue;
+      const granted = maxNum > 0 ? Math.min(itemCount, maxNum - received) : itemCount;
+      if (granted <= 0) continue;
+      extraRows.push({ id, count: granted });
+      row.records[id] = received + granted;
+    }
+  });
+  const title = ensureObject(baseCfg.dropTitle);
+  const titleId = Math.max(0, toSafeInt(title.id, 0));
+  let titleHit = false;
+  for (let i = 0; i < count && !titleHit; i += 1) {
+    titleHit = (Math.random() * 10000) < Math.max(0, toSafeInt(title.weight, 0));
+  }
+  if (
+    titleId > 0
+    && Math.max(0, toSafeInt(row.records[titleId], 0)) <= 0
+    && titleHit
+  ) {
+    const titleCount = Math.max(1, toSafeInt(title.count, 1));
+    extraRows.push({ id: titleId, count: titleCount });
+    row.records[titleId] = titleCount;
+  }
+
+  const rewardRows = [...mainRewards, { id: 41, count }];
+  return {
+    result: 0,
+    row,
+    count,
+    rewardInfo: grantUnmergedRewardRows(player, rewardRows),
+    extraRewards: grantRewardRows(player, extraRows),
+    consumed,
+  };
+}
+
+function operateActivity37Generate(player, row, params = {}) {
+  const count = Math.max(0, toSafeInt(params.param, 0));
+  const cfg = ensureObject(getActivityTypeConfig('Activity37RewardConfig', row.id));
+  const costs = consumeActivityCosts(player, cfg.consumes, count);
+  if (count <= 0 || !costs) {
+    return {
+      result: 1,
+      row,
+      count: 0,
+      rewardInfo: buildRewardInfo([]),
+      alchemyRewards: [],
+      extraRewards: [],
+      returnRewards: [],
+      consumed: [],
+    };
+  }
+
+  const succeed = Math.max(0, Math.min(10000, toSafeInt(cfg.succeed, 0)));
+  const weights = ensureArray(cfg.qualityWeights);
+  const alchemyRewards = [];
+  let qi = 0;
+  for (let i = 0; i < count; i += 1) {
+    if ((Math.random() * 10000) >= succeed) continue;
+    const reward = pickWeightedRow(weights);
+    const id = Math.max(0, toSafeInt(reward && reward.id, 0));
+    if (id <= 0) continue;
+    alchemyRewards.push({ id, count: 1 });
+    qi += Math.max(0, toSafeInt(ACTIVITY_37_QI_BY_PILL[id], 0));
+  }
+
+  const rewardInfo = qi > 0
+    ? grantRewardRows(player, [{ id: 154, count: qi }])
+    : buildRewardInfo([]);
+  return {
+    result: 0,
+    row,
+    count,
+    rewardInfo,
+    alchemyRewards,
+    extraRewards: [],
+    returnRewards: [],
+    consumed: costs,
+  };
+}
+
+function operateActivity37Draw(player, row, params = {}) {
+  const param = Math.max(0, Math.min(1, toSafeInt(params.param, 0)));
+  const cfg = ensureObject(getActivityTypeConfig('Activity37BaseConfig', row.id));
+  const costs = ensureArray(cfg.costs);
+  const cost = ensureObject(costs[param]);
+  const drawCount = param === 1 ? 10 : 1;
+  const consumed = consumeActivityCosts(player, [cost], 1);
+  if (!consumed) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), consumed: [] };
+  }
+
+  const rewards = [];
+  for (let i = 0; i < drawCount; i += 1) {
+    const reward = pickWeightedRow(cfg.rewards);
+    if (reward) rewards.push(reward);
+  }
+  const title = ensureObject(cfg.dropTitle);
+  const titleWeight = Math.max(0, toSafeInt(title.weight, 0));
+  if (toSafeInt(title.id, 0) > 0 && titleWeight > 0) {
+    let titleHit = false;
+    for (let i = 0; i < drawCount && !titleHit; i += 1) {
+      titleHit = (Math.random() * 10000) < titleWeight;
+    }
+    if (titleHit) rewards.push(title);
+  }
+
+  row.score = Math.max(0, toSafeInt(row.score, 0)) + drawCount;
+  return {
+    result: 0,
+    row,
+    rewardInfo: grantRewardRows(player, rewards),
+    consumed,
+  };
+}
+
+function resolveActivity37ScoreReward(activityId, target) {
+  const root = ensureObject(getActivityTypeConfig('ActivityScoreConfig', activityId));
+  const fixedRows = Object.values(ensureObject(root[1] || root['1']))
+    .map(ensureObject)
+    .filter((row) => toSafeInt(row.score, 0) > 0)
+    .sort((a, b) => toSafeInt(a.score, 0) - toSafeInt(b.score, 0));
+  const direct = fixedRows.find((row) => toSafeInt(row.score, 0) === target);
+  if (direct) return direct;
+
+  const cycleRows = Object.values(ensureObject(root[2] || root['2']))
+    .map(ensureObject)
+    .filter((row) => toSafeInt(row.score, 0) > 0)
+    .sort((a, b) => toSafeInt(a.score, 0) - toSafeInt(b.score, 0));
+  if (fixedRows.length <= 0 || cycleRows.length <= 0) return null;
+  const fixedMax = toSafeInt(fixedRows[fixedRows.length - 1].score, 0);
+  const cycleSpan = toSafeInt(cycleRows[cycleRows.length - 1].score, 0);
+  if (target <= fixedMax || cycleSpan <= 0) return null;
+  return cycleRows.find((row) => {
+    const base = fixedMax + toSafeInt(row.score, 0);
+    return target >= base && (target - base) % cycleSpan === 0;
+  }) || null;
+}
+
+function operateActivity37ScoreReward(player, row, params = {}) {
+  const target = Math.max(0, toSafeInt(params.index, 0));
+  const cfg = resolveActivity37ScoreReward(row.id, target);
+  if (!cfg || row.score < target) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), consumed: [] };
+  }
+  if (ensureArray(row.recordList).includes(target)) {
+    return { result: 2, row, rewardInfo: buildRewardInfo([]), consumed: [] };
+  }
+
+  row.recordList = [...ensureArray(row.recordList), target].sort((a, b) => a - b);
+  return {
+    result: 0,
+    row,
+    rewardInfo: grantRewardRows(player, cfg.rewards),
+    consumed: [],
+  };
+}
+
+function pickSpecialDrawReward(rowCfg = null, fallbackReward = null) {
+  const pool = ensureArray(rowCfg && rowCfg.rewardPoolShow1)
+    .map((reward) => ({
+      ...reward,
+      id: Math.max(0, toSafeInt(reward && reward.id, 0)),
+      count: Math.max(1, toSafeInt(reward && reward.count, 1)),
+      weight: Math.max(0, toSafeInt(reward && reward.weight, 0)),
+    }))
+    .filter((reward) => reward.id > 0 && reward.count > 0);
+  if (pool.length > 0) {
+    const picked = pickWeightedRow(pool);
+    return picked ? { id: picked.id, count: picked.count } : { id: pool[0].id, count: pool[0].count };
+  }
+  return fallbackReward || { id: 93092, count: 1 };
+}
+
+function resolveDrawTimes(param = 0, cost = {}, rowCfg = null) {
+  const directCount = Math.max(0, toSafeInt(cost.drawTimes, toSafeInt(cost.times, toSafeInt(cost.num, 0))));
+  if (directCount > 0) return directCount;
+  const cfgTimes = rowCfg && Array.isArray(rowCfg.drawTimes) ? rowCfg.drawTimes : [];
+  const fromCfg = Math.max(0, toSafeInt(cfgTimes[Math.max(0, toSafeInt(param, 0))], 0));
+  if (fromCfg > 0) return fromCfg;
+  return Math.max(0, toSafeInt(param, 0)) > 0 ? 10 : 1;
+}
+
+function handleNewYearDrawOperate(player, row, param = 0) {
+  const cfg = configService.get('Activity43Config') || {};
+  const rowCfg = cfg[row.id] || cfg[String(row.id)] || null;
+  const costs = rowCfg && Array.isArray(rowCfg.cost) ? rowCfg.cost : [{ id: 178, count: 1 }, { id: 178, count: 10 }];
+  const costIndex = Math.max(0, toSafeInt(param, 0));
+  const cost = costs[costIndex] || costs[0] || { id: 178, count: 1 };
+  const drawTimes = resolveDrawTimes(param, cost, rowCfg);
+  const costId = Math.max(0, toSafeInt(cost.id, 0));
+  const costCount = Math.max(1, toSafeInt(cost.count, drawTimes));
+
+  player.items = player.items || {};
+  if (costId <= 0 || (Number(player.items[costId]) || 0) < costCount) {
+    return {
+      result: 1,
+      row,
+      rewardInfo: buildRewardInfo([]),
+      festival: null,
+      consumed: null,
+    };
+  }
+
+  player.items[costId] = Math.max(0, (Number(player.items[costId]) || 0) - costCount);
+  const costLeft = player.items[costId];
+  if (player.items[costId] <= 0) delete player.items[costId];
+
+  const records = normalizeRecordsMap(row.records, 43);
+  const prevSp = toSafeInt(records[3], 0);
+  let drawCounter = Math.max(1, toSafeInt(records[1], 1));
+  const poolMax = rowCfg ? Math.max(1, toSafeInt(rowCfg.rewardPoolCount, 40)) : 40;
+  const triggerTimes = rowCfg ? Math.max(0, toSafeInt(rowCfg.triggerTimes, 0)) : 0;
+  let specialHits = 0;
+  for (let i = 0; i < drawTimes; i += 1) {
+    drawCounter += 1;
+    if (drawCounter <= poolMax) continue;
+    drawCounter = 1;
+    if (triggerTimes <= 0 || prevSp + specialHits < triggerTimes) specialHits += 1;
+  }
+  records[1] = drawCounter;
+  if (specialHits > 0) records[3] = prevSp + specialHits;
+
+  row.records = records;
+  row.score = Math.max(0, toSafeInt(row.score, 0)) + drawTimes;
+  row.record = Math.max(0, toSafeInt(row.record, 0)) + drawTimes;
+
+  const rewards = pickDrawRewards(row.id, drawTimes);
+  for (let i = 0; i < specialHits; i += 1) {
+    const specialReward = pickSpecialDrawReward(rowCfg, rewards[0]);
+    const replaceIndex = Math.max(0, rewards.length - 1 - i);
+    if (rewards.length > 0) rewards[replaceIndex] = specialReward;
+    else rewards.push(specialReward);
+  }
+  const rewardInfo = grantRewardRows(player, rewards);
+  return {
+    result: 0,
+    row,
+    rewardInfo,
+    consumed: { id: costId, count: costCount, left: Math.max(0, costLeft) },
+    festival: {
+      id: row.id,
+      score: row.score,
+      record: row.record,
+      records: { ...records },
+      rewards,
+    },
+  };
+}
+
+function handleNewYearScoreRewardOperate(player, row, scoreTarget = 0) {
+  const target = Math.max(0, toSafeInt(scoreTarget, 0));
+  const cfg = resolveNewYearScoreReward(row.id, target);
+  if (!cfg || target <= 0 || row.score < target) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]) };
+  }
+  if (row.recordList.includes(target)) {
+    return { result: 2, row, rewardInfo: buildRewardInfo([]) };
+  }
+
+  row.recordList = [...row.recordList, target].sort((a, b) => a - b);
+  const rewardInfo = grantRewardRows(player, normalizeRewardRows(cfg.rewards));
+  return { result: 0, row, rewardInfo };
+}
+
+function operateNewYearMonsterAttack(player = {}, row = {}, param = 0) {
+  const cfg = ensureObject(getActivityTypeConfig('Activity44Config', row.id));
+  const costs = ensureArray(cfg.atkCost);
+  const cost = costs[Math.max(0, toSafeInt(param, 0))] || costs[0] || { id: 176, count: 1 };
+  const costId = Math.max(0, toSafeInt(cost.id, 0));
+  const costCount = Math.max(1, toSafeInt(cost.count, 1));
+  const consumed = consumeActivityItem(player, costId, costCount);
+  if (!consumed) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]), consumed: null };
+  }
+
+  const indexMax = Math.max(1, toSafeInt(cfg.indexMax, 30));
+  const monsterIndex = Math.max(1, Math.min(indexMax, toSafeInt(row.score, 1)));
+  const monsterRoot = ensureObject(getActivityTypeConfig('Activity44MonsterConfig', row.id));
+  const monster = ensureObject(monsterRoot[monsterIndex] || monsterRoot[String(monsterIndex)]);
+  const bloodMax = Math.max(1, toSafeInt(monster.bloodMax, monsterIndex * 100000));
+  const damagePerCost = Math.max(1, toSafeInt(cfg.blood, 10000));
+  const meritPerCost = Math.max(1, toSafeInt(cfg.rankScore, 10));
+  const damage = damagePerCost * costCount;
+  const merit = meritPerCost * costCount;
+
+  row.records = normalizeRecordsMap(row.records, 44);
+  const nextDamage = Math.max(0, toSafeInt(row.records[1], 0)) + damage;
+  const defeated = nextDamage >= bloodMax;
+  row.records[1] = defeated ? 0 : nextDamage;
+  row.record = Math.max(0, toSafeInt(row.record, 0)) + merit;
+  if (defeated && monsterIndex < indexMax) row.score = monsterIndex + 1;
+
+  const rewards = [{ id: 177, count: merit }];
+  if (defeated) rewards.push(...normalizeRewardRows(monster.rewards));
+  return {
+    result: 0,
+    row,
+    rewardInfo: grantRewardRows(player, rewards),
+    consumed,
+    defeated,
+  };
+}
+
+function normalizeSnowmanRecordRow(row) {
+  const src = ensureObject(row);
+  return {
+    parts: ensureArray(src.parts).map((v) => Math.max(0, toSafeInt(v, 0))),
+    count: Math.max(0, toSafeInt(src.count, 0)),
+    updateTime: Math.max(0, toSafeInt(src.updateTime, 0)),
+  };
+}
+
+function normalizeSnowmanDesignRow(row) {
+  const src = ensureObject(row);
+  return {
+    dbid: src.dbid == null ? '' : String(src.dbid),
+    name: src.name == null ? '' : String(src.name),
+    design: ensureArray(src.design).map((v) => Math.max(0, toSafeInt(v, 0))),
+    like: Math.max(0, toSafeInt(src.like, 0)),
+    updateTime: Math.max(0, toSafeInt(src.updateTime, 0)),
+  };
+}
+
+function hasActivity9RechargeRecord(player = {}, rechargeId = 0) {
+  const id = Math.max(0, toSafeInt(rechargeId, 0));
+  const records = ensureArray(player.rechargeInfo && player.rechargeInfo.records);
+  return id > 0 && records.some((row) => (
+    toSafeInt(row && row.id, 0) === id && toSafeInt(row && row.count, 0) > 0
+  ));
+}
+
+function operateLoginPrivileges(player = {}, row = {}, params = {}) {
+  const module = toSafeInt(params.module, 0);
+  if (module !== 0) {
+    return { result: 1, row, rewardInfo: buildRewardInfo([]) };
+  }
+  const state = ensureActivity9State(player, { now: Date.now() });
+  if (state && state.row && toSafeInt(state.row.id, 0) === toSafeInt(row.id, 0)) row = state.row;
+  const payId = getActivity9PayId(row.id);
+  row.recordList = Array.from(new Set(ensureArray(row.recordList)
+    .map((value) => Math.max(0, toSafeInt(value, 0)))
+    .filter((value) => value > 0))).sort((left, right) => left - right);
+  const bought = payId > 0 && (row.recordList.includes(payId) || hasActivity9RechargeRecord(player, payId));
+  if (bought && !row.recordList.includes(payId)) {
+    row.recordList.push(payId);
+    row.recordList.sort((left, right) => left - right);
+  }
+  row.records = normalizeRecordsMap(row.records, 9);
+  const openDay = Math.max(0, toSafeInt(row.score, 0));
+  const claimRewards = [];
+  let claimedAny = false;
+  getActivity9RewardRows(row.id).forEach((rewardRow) => {
+    const day = Math.max(0, toSafeInt(rewardRow && rewardRow.day, 0));
+    if (day <= 0 || day > openDay) return;
+    let flags = Math.max(0, toSafeInt(row.records[day], 0));
+    if ((flags & 1) === 0) {
+      claimRewards.push(...ensureArray(rewardRow.rewards));
+      flags |= 1;
+      claimedAny = true;
+    }
+    if (bought && (flags & 2) === 0) {
+      claimRewards.push(...ensureArray(rewardRow.pRewards));
+      flags |= 2;
+      claimedAny = true;
+    }
+    row.records[day] = flags;
+  });
+  if (!claimedAny) return { result: 1, row, rewardInfo: buildRewardInfo([]) };
+  row.status = 1;
+  return { result: 0, row, rewardInfo: grantRewardRows(player, claimRewards) };
+}
+
+function ensureActivityInfo(player = {}) {
+  require('../services/FishingEventSchedule').sync(player);
+  player.activityInfo = ensureObject(player.activityInfo);
+  const info = player.activityInfo;
+
+  info.datas = ensureArray(info.datas).map((row) => (
+    normalizeActivityDataRow(row, getActivityTypeById(row && row.id))
+  ));
+  info.disabledEntryIds = normalizeActivityIdList(info.disabledEntryIds);
+  seedOpenActivityDatas(info);
+  syncNewYearDailyState(info);
+  syncDailyShopClaimRows(info);
+  ensureActivationPassState(player);
+  const activity9State = ensureActivity9State(player);
+  if (activity9State && activity9State.row) {
+    const activity9Index = info.datas.findIndex((row) => (
+      toSafeInt(row && row.id, 0) === activity9State.activityId
+    ));
+    if (activity9Index >= 0) info.datas[activity9Index] = normalizeActivityDataRow(activity9State.row, 9);
+  }
+  const currentDayKey = (() => {
+    const date = new Date();
+    return date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDate();
+  })();
+  if (Math.max(0, toSafeInt(info.dailyRewardDayKey, 0)) !== currentDayKey) {
+    info.dailyRewardRecords = [];
+    info.dailyRewardDayKey = currentDayKey;
+  }
+  info.dailyRewardRecords = Array.from(
+    new Set(
+      ensureArray(info.dailyRewardRecords)
+        .map((v) => Math.max(0, toSafeInt(v, 0)))
+        .filter((v) => v > 0)
+    )
+  );
+  info.rebateValue = Math.max(0, toSafeInt(info.rebateValue, 0));
+  info.giftCodeRecords = ensureObject(info.giftCodeRecords);
+  info.operateRecords = ensureObject(info.operateRecords);
+  info.mooncakeRecords = ensureObject(info.mooncakeRecords);
+  info.petSoulProgress = ensureObject(info.petSoulProgress);
+  info.pushStates = ensureObject(info.pushStates);
+  info.snowman = ensureObject(info.snowman);
+  info.snowman.records = ensureObject(info.snowman.records);
+  info.snowman.designInfo = normalizeSnowmanDesignRow(info.snowman.designInfo);
+  info.snowman.designList = ensureArray(info.snowman.designList).map(normalizeSnowmanDesignRow);
+  info.snowman.likedPlayers = ensureObject(info.snowman.likedPlayers);
+  info.updatedAt = Date.now();
+
+  return info;
+}
+
+function buildActivityPayload(info = {}) {
+  syncDailyShopClaimRows(info);
+  const disabledIds = new Set(normalizeActivityIdList(info.disabledEntryIds));
+  return {
+    datas: ensureArray(info.datas)
+      .map((row) => normalizeActivityDataRow(row, getActivityTypeById(row && row.id)))
+      .filter((row) => !disabledIds.has(row.id) && isActivityWindowOpen(row)),
+  };
+}
+
+function buildRewardInfo(items = []) {
+  const normalized = [];
+  const map = new Map();
+  ensureArray(items).forEach((row) => {
+    const id = Math.max(0, toSafeInt(row && row.id, 0));
+    const count = Math.max(0, toSafeInt(row && row.count, 0));
+    if (id <= 0 || count <= 0) return;
+    map.set(id, (map.get(id) || 0) + count);
+  });
+  map.forEach((count, id) => normalized.push({ id, count }));
+  normalized.sort((a, b) => a.id - b.id);
+  return {
+    items: normalized,
+    equips: [],
+    heros: [],
+    swords: [],
+    pets: [],
+    petSouls: [],
+    artifacts: [],
+    gems: [],
+    valhalla: [],
+    bloodline: [],
+    fashion: [],
+    formations: [],
+    spirits: [],
+    elves: [],
+    sailor: [],
+    extraReward: {},
+  };
+}
+
+function grantRewardRows(player, rows = []) {
+  rewardGrant.assertRewardRowsSupported(rows);
+  const reward = buildRewardInfo([]);
+  buildRewardInfo(rows).items.forEach((row) => {
+    const granted = rewardGrant.grantRewardRow(player, row, 1);
+    if (granted.kind !== 'item') {
+      reward.items.push(...ensureArray(granted.rewardItems));
+      reward.swords.push(...ensureArray(granted.rewardSwords));
+      reward.pets.push(...ensureArray(granted.rewardPets));
+      reward.petSouls.push(...ensureArray(granted.rewardPetSouls));
+      reward.artifacts.push(...ensureArray(granted.rewardArtifacts));
+      reward.gems.push(...ensureArray(granted.rewardGems));
+      reward.valhalla.push(...ensureArray(granted.rewardValhalla));
+      reward.bloodline.push(...ensureArray(granted.rewardBloodlines));
+      ensureArray(granted.rewardFashion).forEach((fashion) => {
+        if (!reward.fashion.some((entry) => toSafeInt(entry && entry.id, 0) === toSafeInt(fashion && fashion.id, 0))) {
+          reward.fashion.push(fashion);
+        }
+      });
+      ensureArray(granted.rewardFormations).forEach((formation) => {
+        if (!reward.formations.some((entry) => toSafeInt(entry && entry.id, 0) === toSafeInt(formation && formation.id, 0))) {
+          reward.formations.push(formation);
+        }
+      });
+      ensureArray(granted.rewardSpirits).forEach((spirit) => {
+        if (!reward.spirits.some((entry) => toSafeInt(entry && entry.id, 0) === toSafeInt(spirit && spirit.id, 0))) {
+          reward.spirits.push(spirit);
+        }
+      });
+      return;
+    }
+    addRewardToPlayer(player, row.id, row.count);
+    reward.items.push(row);
+  });
+  return reward;
+}
+
+function operateActivationPass(player = {}, row = {}) {
+  const now = Date.now();
+  const state = ensureActivationPassState(player, { now });
+  if (state && state.row && toSafeInt(state.row.id, 0) === toSafeInt(row.id, 0)) row = state.row;
+  const id = Math.max(0, toSafeInt(row.id, 0));
+  const stage = Math.max(1, toSafeInt(row.record, 1));
+  const cfgByActivity = ensureObject((configService.get('Activity7Config') || {})[id]);
+  const cfgByStage = ensureObject(cfgByActivity[stage]);
+  const typeByActivity = ensureObject((configService.get('Activity7TypeConfig') || {})[id]);
+  const typeCfg = ensureObject(typeByActivity[stage]);
+  const bought = hasActivationPassEntitlement(player, typeCfg.rechargeId, now);
+  row.records = normalizeRecordsMap(row.records, 7);
+  row.score = Math.max(0, toSafeInt(row.score, 0));
+
+  const thresholds = Object.keys(cfgByStage)
+    .map((key) => cfgByStage[key])
+    .filter((cfg) => cfg && typeof cfg === 'object')
+    .sort((a, b) => toSafeInt(a.param, 0) - toSafeInt(b.param, 0));
+  for (const cfg of thresholds) {
+    const point = Math.max(0, toSafeInt(cfg.param, 0));
+    if (point > row.score) continue;
+    const received = Math.max(0, toSafeInt(row.records[point], 0));
+    const rewards = [];
+    let nextState = received;
+    if (received < 1) {
+      rewards.push(...ensureArray(cfg.rewards));
+      nextState = 1;
+    }
+    if (bought && nextState < 3) {
+      rewards.push(...ensureArray(cfg.eRewards));
+      nextState = 3;
+    }
+    if (nextState !== received) {
+      row.records[point] = nextState;
+      return { result: 0, row, rewardInfo: grantRewardRows(player, rewards) };
+    }
+  }
+  return { result: 1, row, rewardInfo: buildRewardInfo([]) };
+}
+
+function upsertActivityRow(info, id, module, index) {
+  const keyId = Math.max(0, toSafeInt(id, 0));
+  const keyModule = Math.max(0, toSafeInt(module, 0));
+  const keyIndex = Math.max(0, toSafeInt(index, 0));
+  let row = ensureArray(info.datas).find((it) => (
+    toSafeInt(it.id, 0) === keyId
+    && toSafeInt(it.module, 0) === keyModule
+    && toSafeInt(it.index, 0) === keyIndex
+  ));
+  if (!row) {
+    row = createDefaultActivityRow(keyId);
+    row.module = keyModule;
+    row.index = keyIndex;
+    info.datas.push(row);
+  }
+  return normalizeActivityDataRow(row, getActivityTypeById(keyId));
+}
+
+function upsertPetSoulProgress(info, id) {
+  const key = String(Math.max(0, toSafeInt(id, 0)));
+  info.petSoulProgress[key] = ensureObject(info.petSoulProgress[key]);
+  const row = info.petSoulProgress[key];
+  row.progress = Math.max(0, toSafeInt(row.progress, 0));
+  row.recordList = Array.from(
+    new Set(
+      ensureArray(row.recordList)
+        .map((v) => Math.max(0, toSafeInt(v, 0)))
+        .filter((v) => v > 0)
+    )
+  );
+  row.recordList.sort((a, b) => a - b);
+  return row;
+}
+
+function upsertSnowmanRecord(info, index) {
+  const key = String(Math.max(0, toSafeInt(index, 0)));
+  info.snowman.records[key] = normalizeSnowmanRecordRow(info.snowman.records[key]);
+  return info.snowman.records[key];
+}
+
+function buildGiftCodeBatchId(giftCode) {
+  let sum = 0;
+  for (let i = 0; i < giftCode.length; i++) {
+    sum = (sum + giftCode.charCodeAt(i) * (i + 1)) % 90000;
+  }
+  return 10000 + sum;
+}
+
+function normalizeGiftCode(value) {
+  return String(value == null ? '' : value).trim().toUpperCase().replace(/\s+/g, '');
+}
+
+function buildGiftCodeRewardsFromAdmin(row = {}) {
+  const rewards = ensureObject(row.rewards);
+  const items = rewards.items instanceof Map ? Object.fromEntries(rewards.items) : ensureObject(rewards.items);
+  const rows = [];
+  const push = (id, count) => {
+    const safeId = Math.max(0, toSafeInt(id, 0));
+    const safeCount = Math.max(0, toSafeInt(count, 0));
+    if (safeId > 0 && safeCount > 0) rows.push({ id: safeId, count: safeCount });
+  };
+  push(1, rewards.diamond);
+  push(6, rewards.gold);
+  push(2, rewards.silver);
+  Object.keys(items).forEach((id) => push(id, items[id]));
+  return rows;
+}
+
+async function getAdminGiftCodeEntry(giftCode, player) {
+  const normalizedCode = normalizeGiftCode(giftCode);
+  if (!normalizedCode) return null;
+  let RedemptionCode;
+  try {
+    RedemptionCode = require('../db/models/RedemptionCode');
+  } catch (_e) {
+    return null;
+  }
+  if (!RedemptionCode.db || RedemptionCode.db.readyState !== 1) return null;
+  const row = await RedemptionCode.findOne({ code: normalizedCode });
+  if (!row) return null;
+  if (row.status === 'disabled') return { result: 3 };
+
+  const now = Date.now();
+  if (row.startsAt && new Date(row.startsAt).getTime() > now) return { result: 1 };
+  if (row.expiresAt && new Date(row.expiresAt).getTime() < now) return { result: 1 };
+  if (toSafeInt(row.maxUses, 0) > 0 && toSafeInt(row.usedCount, 0) >= toSafeInt(row.maxUses, 0)) {
+    return { result: 4 };
+  }
+
+  const userId = String((player && player.userId) || '');
+  const usedBy = ensureArray(row.usedBy);
+  const usedTimes = usedBy.filter((it) => String(it && it.userId) === userId).length;
+  if (usedTimes >= Math.max(1, toSafeInt(row.perUserLimit, 1))) return { result: 2 };
+
+  const rewards = buildGiftCodeRewardsFromAdmin(row);
+  if (rewards.length <= 0) return { result: 3 };
+  return { row, rewards, batchId: buildGiftCodeBatchId(normalizedCode) };
+}
+
+/**
+ * Validate a gift code against the configured valid codes.
+ * GiftCodeConfig is a map of { code: { rewards: [{id, count}], maxUse: number } }
+ * Falls back to env variable GIFT_CODE_LIST (comma-separated) with default rewards.
+ */
+function getValidGiftCodeEntry(giftCode) {
+  // Check GiftCodeConfig from config service
+  const cfg = configService.get('GiftCodeConfig');
+  if (cfg && typeof cfg === 'object') {
+    const entry = cfg[giftCode] || cfg[String(giftCode)] || null;
+    if (entry) return entry;
+    // If config exists but code not found, it's invalid
+    return null;
+  }
+
+  // Fallback: check GIFT_CODE_LIST env variable (comma-separated valid codes)
+  const envList = process.env.GIFT_CODE_LIST || '';
+  if (envList.trim()) {
+    const validCodes = envList.split(',').map((s) => s.trim()).filter(Boolean);
+    if (validCodes.includes(giftCode)) {
+      // Return default rewards
+      return { rewards: [{ id: 1, count: 88 }, { id: 3, count: 888 }], maxUse: 1 };
+    }
+    return null;
+  }
+
+  // No validation config present — reject all codes to prevent exploitation
+  return null;
+}
+
+function upsertSnowmanDesignSelf(info, player, parts) {
+  const dbid = String((player && (player.playerId || player.userId)) || '');
+  const name = player && player.name ? String(player.name) : '';
+  const design = ensureArray(parts).map((v) => Math.max(0, toSafeInt(v, 0)));
+
+  const row = {
+    dbid,
+    name,
+    design,
+    like: Math.max(0, toSafeInt(info.snowman.designInfo.like, 0)),
+    updateTime: Date.now(),
+  };
+  info.snowman.designInfo = row;
+
+  const list = ensureArray(info.snowman.designList);
+  const idx = list.findIndex((it) => String(it && it.dbid) === dbid);
+  if (idx >= 0) {
+    list[idx] = { ...list[idx], ...row };
+  } else {
+    list.unshift(row);
+  }
+  info.snowman.designList = list.slice(0, 50).map(normalizeSnowmanDesignRow);
+}
+
+async function persistPlayer(session, player) {
+  if (!session || !session.userId) return;
+  let saved;
+  try {
+    saved = await playerService.savePlayer(session.userId, player, { returnSaved: false });
+    if (!saved) throw new Error('ACTIVITY_SAVE_NOT_CONFIRMED');
+  } catch (error) {
+    session.player = null;
+    throw error;
+  }
+  if (saved && typeof saved === 'object') {
+    session.player = saved;
+  }
+}
+
+async function handleActivityOperate(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1700, msgUid, data: { result: -1, datas: [] } };
+  }
+
+  // Fishing events must be provisioned by the server schedule, never by an RPC.
+  const fishingId = Number(params.id);
+  if(require('../services/FishingEventGateService').inScope(fishingId))return require('../services/FishingEventService').operate(params,session,msgUid);
+  const fishingBlock = require('../services/FishingEventGateService').rejection(player, fishingId);
+  if (fishingBlock) return { tag: 1700, msgUid, data: { result: 1, id: fishingId, reason: fishingBlock, rewardInfo: buildRewardInfo([]) } };
+
+  const id = Math.max(0, toSafeInt(params.id, 0));
+  const module = toSafeInt(params.module, 0);
+  const index = Math.max(0, toSafeInt(params.index, 0));
+  const param = toSafeInt(params.param, 0);
+  const activityMeta = getActivityConfigEntry(id);
+  const activityType = activityMeta ? toSafeInt(activityMeta.activityType, 0) : 0;
+  // Never provision or mutate a row for an ID absent from ActivityConfig.
+  if (!activityMeta || activityType <= 0) {
+    return {
+      tag: 1700,
+      msgUid,
+      data: {
+        result: 1,
+        id,
+        module,
+        index,
+        param,
+        rewardInfo: buildRewardInfo([]),
+        datas: [],
+      },
+    };
+  }
+  if (activityType === 52 && (!getValidFuluConfig(id) || ![0, 1, 2].includes(module))) {
+    return {
+      tag: 1700,
+      msgUid,
+      data: {
+        result: 1,
+        id,
+        module,
+        index,
+        param,
+        rewardInfo: buildRewardInfo([]),
+        datas: [],
+      },
+    };
+  }
+
+  const info = ensureActivityInfo(player);
+  const drawParam = activityType === 43 && module === 0 ? Math.max(0, param, index) : param;
+
+  let row = activityType === 52
+    ? ensureArray(info.datas).find((it) => toSafeInt(it && it.id, 0) === id)
+    : findActivityRow(info, id);
+  if (!row) {
+    row = activityType === 52
+      ? createDefaultActivityRow(id)
+      : normalizeActivityDataRow(upsertActivityRow(info, id, module, index), activityType);
+  } else {
+    row = normalizeActivityDataRow(row, activityType);
+  }
+
+  // Keep the entry visible and operable under one contract: expired/future
+  // rows must not consume items, update records, or create reward packets.
+  if (!isActivityWindowOpen(row)) {
+    return {
+      tag: 1700,
+      msgUid,
+      data: {
+        result: 1,
+        id,
+        module,
+        index,
+        param,
+        rewardInfo: buildRewardInfo([]),
+        datas: buildActivityPayload(info).datas,
+      },
+    };
+  }
+
+  if (activityType !== 52) {
+    row.param = drawParam;
+    row.status = 1;
+  }
+
+  if (activityType === 44 && module === 1) {
+    return [
+      await buildActivity44RankPacket(player, row),
+      {
+        tag: 1700,
+        msgUid,
+        data: {
+          result: 0,
+          id,
+          module,
+          index,
+          param,
+          rewardInfo: buildRewardInfo([]),
+          datas: buildActivityPayload(info).datas,
+        },
+      },
+    ];
+  }
+
+  const opKey = `${id}:${module}:${index}`;
+  if (activityType !== 52) {
+    info.operateRecords[opKey] = Math.max(0, toSafeInt(info.operateRecords[opKey], 0)) + 1;
+  }
+
+  let result = 0;
+  let rewardInfo = buildRewardInfo([]);
+  let festivalPacket = null;
+  let consumedCost = null;
+  let consumedCosts = [];
+  let activity34Generate = null;
+  let activity37Generate = null;
+  let additionalSyncRewards = [];
+  let activityPushPackets = [];
+  let activityTaskPackets = [];
+  const pushState = getActivityPushState(info, id);
+
+  if (activityType === 7) {
+    const outcome = operateActivationPass(player, row);
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+  } else if (activityType === 9) {
+    const outcome = operateLoginPrivileges(player, row, { ...params, module, index, param });
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+  } else if (activityType === 21) {
+    const outcome = operateMonopoly(player, row, { ...params, module, index, param });
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    activityPushPackets = outcome.packets;
+  } else if (activityType === 27) {
+    const outcome = operateKnifeReward(player, row, pushState, { ...params, module, index, param });
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCost = outcome.consumed || null;
+    activityPushPackets = outcome.packets;
+  } else if (activityType === 30) {
+    activityPushPackets = buildSecretTreasurePackets(player, row, pushState, module, index);
+  } else if (activityType === 33) {
+    const outcome = operateFishSceneActivity(player, row, pushState, { ...params, module, index, param });
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCost = outcome.consumed || null;
+    activityPushPackets = outcome.packets;
+  } else if (activityType === 34) {
+    const outcome = module === 0
+      ? operateActivity34Generate(player, row, { ...params, module, index, param })
+      : {
+        result: 1,
+        row,
+        count: 0,
+        rewardInfo: buildRewardInfo([]),
+        extraRewards: buildRewardInfo([]),
+        consumed: [],
+      };
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCosts = ensureArray(outcome.consumed);
+    additionalSyncRewards = ensureArray(outcome.extraRewards && outcome.extraRewards.items);
+    activity34Generate = outcome;
+  } else if (activityType === 35) {
+    row.record = Math.max(0, toSafeInt(row.record, 0)) + 1;
+  } else if (activityType === 37) {
+    let outcome;
+    if (module === 1) {
+      outcome = operateActivity37Generate(player, row, { ...params, module, index, param });
+      activity37Generate = outcome;
+    } else if (module === 2) {
+      outcome = operateActivity37Draw(player, row, { ...params, module, index, param });
+    } else if (module === 0) {
+      outcome = operateActivity37ScoreReward(player, row, { ...params, module, index, param });
+    } else {
+      outcome = { result: 1, row, rewardInfo: buildRewardInfo([]), consumed: [] };
+    }
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCosts = ensureArray(outcome.consumed);
+  } else if (activityType === 49) {
+    const outcome = operateBoxDraw(player, row, { ...params, module, index, param });
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCost = outcome.consumed || null;
+    activityPushPackets = outcome.packets;
+  } else if (activityType === 52) {
+    const outcome = operateFulu(player, row, { ...params, module, index, param });
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCost = outcome.consumed || null;
+    activityPushPackets = outcome.packets;
+  } else if (activityType === 43) {
+    if (module === 0) {
+      const drawResult = handleNewYearDrawOperate(player, row, drawParam);
+      result = drawResult.result;
+      row = drawResult.row;
+      rewardInfo = drawResult.rewardInfo;
+      consumedCost = drawResult.consumed;
+      if (drawResult.festival) {
+        festivalPacket = buildFestivalDrawPacket(row, drawResult.festival.rewards);
+      }
+    } else if (module === 1) {
+      const taskResult = operateNewYearTaskReward(player, row);
+      result = taskResult.result;
+      row = taskResult.row;
+      rewardInfo = taskResult.rewardInfo;
+      activityTaskPackets = buildActivityTaskPackets(player, taskResult.taskIds || []);
+    } else if (module === 2) {
+      const dailyResult = operateNewYearDailyScoreReward(player, row);
+      result = dailyResult.result;
+      row = dailyResult.row;
+      rewardInfo = dailyResult.rewardInfo;
+    } else if (module === 3) {
+      const scoreResult = handleNewYearScoreRewardOperate(player, row, index);
+      result = scoreResult.result;
+      row = scoreResult.row;
+      rewardInfo = scoreResult.rewardInfo;
+    } else {
+      result = 1;
+    }
+  } else if (activityType === 44 && module === 0) {
+    const outcome = operateNewYearMonsterAttack(player, row, param);
+    result = outcome.result;
+    row = outcome.row;
+    rewardInfo = outcome.rewardInfo;
+    consumedCost = outcome.consumed;
+  } else {
+    row.record = Math.max(0, toSafeInt(row.record, 0)) + 1;
+    if (module > 0) {
+      rewardInfo = grantRewardRows(player, [{ id: 3, count: 10 }]);
+    }
+  }
+
+  if (activityType === 52 && result === 0) {
+    row.param = drawParam;
+    row.status = 1;
+    info.operateRecords[opKey] = Math.max(0, toSafeInt(info.operateRecords[opKey], 0)) + 1;
+  }
+
+  const rowIndex = ensureArray(info.datas).findIndex((it) => toSafeInt(it.id, 0) === id);
+  const normalizedRow = normalizeActivityDataRow(row, activityType);
+  if (!(activityType === 52 && result !== 0)) {
+    if (rowIndex >= 0) info.datas[rowIndex] = normalizedRow;
+    else info.datas.push(normalizedRow);
+  }
+
+  if (!(activityType === 52 && result !== 0)) await persistPlayer(session, player);
+
+  const isActivity34Generate = activityType === 34 && module === 0;
+  const isActivity37Generate = activityType === 37 && module === 1;
+  const isActivity37RewardUpdate = activityType === 37
+    && result === 0
+    && (module === 0 || module === 2);
+  const packets = [];
+  if (isActivity34Generate) {
+    const outcome = activity34Generate || {};
+    packets.push(buildActivityAlchemyRewardPacket(
+      normalizedRow,
+      activityType,
+      rewardInfo,
+      Math.max(0, toSafeInt(outcome.count, 0)),
+      { extraRewards: ensureArray(outcome.extraRewards && outcome.extraRewards.items) }
+    ));
+  } else if (isActivity37Generate) {
+    const outcome = activity37Generate || {};
+    packets.push(buildActivityAlchemyRewardPacket(
+      normalizedRow,
+      activityType,
+      rewardInfo,
+      Math.max(0, toSafeInt(outcome.count, 0)),
+      {
+        alchemyRewards: outcome.alchemyRewards,
+        extraRewards: outcome.extraRewards,
+        returnRewards: outcome.returnRewards,
+      }
+    ));
+  } else if (isActivity37RewardUpdate) {
+    packets.push(buildActivityUpdatePacket(normalizedRow, rewardInfo));
+  } else if (activityType !== 34 && activityType !== 37
+    && !(activityType === 52 && result !== 0)) {
+    const includeRewardInUpdate = rewardInfo.items.length > 0
+      && (activityType === 44 || (activityType === 43 && module !== 0));
+    packets.push(buildActivityUpdatePacket(normalizedRow, includeRewardInUpdate ? rewardInfo : null));
+  }
+  packets.push(...activityPushPackets);
+  packets.push(...activityTaskPackets);
+  packets.push(...rewardGrant.buildNativeSyncPackets(player, rewardInfo));
+  if (activityType === 35) packets.push(buildActivityGrassTastePacket(normalizedRow));
+  if (festivalPacket) packets.push(festivalPacket);
+  const allConsumedCosts = [
+    ...consumedCosts,
+    ...(consumedCost && consumedCost.id > 0 ? [consumedCost] : []),
+  ];
+  const syncRewardRows = [...ensureArray(rewardInfo.items), ...additionalSyncRewards];
+  if (syncRewardRows.length > 0 || allConsumedCosts.length > 0) {
+    if (rewardInfo.items.length > 0 && activityType !== 34 && activityType !== 37) {
+      packets.push(buildActivityDropPacket(normalizedRow, rewardInfo));
+      if (![21, 27, 33, 35, 43, 44, 49, 52].includes(activityType)) {
+        packets.push(buildActivityMultiGiftPacket(normalizedRow, rewardInfo, 1, 0));
+      }
+    }
+    const rewardSync = buildRewardItemSync(player, syncRewardRows);
+    rewardSync.items = ensureArray(rewardSync.items);
+    rewardSync.changed = ensureArray(rewardSync.changed);
+    allConsumedCosts.forEach((cost) => {
+      const id = Math.max(0, toSafeInt(cost && cost.id, 0));
+      if (id <= 0) return;
+      const item = { id, count: Math.max(0, toSafeInt(cost.left, 0)) };
+      const itemIndex = rewardSync.items.findIndex((row) => toSafeInt(row && row.id, 0) === id);
+      if (itemIndex >= 0) rewardSync.items[itemIndex] = item;
+      else rewardSync.items.push(item);
+      const changedIndex = rewardSync.changed.findIndex((row) => toSafeInt(row && row.id, 0) === id);
+      if (changedIndex >= 0) rewardSync.changed[changedIndex] = item;
+      else rewardSync.changed.push(item);
+    });
+    packets.push({
+      tag: 1202,
+      msgUid: 0,
+      data: rewardSync,
+    });
+  }
+  if (rewardInfo.fashion.length > 0) {
+    packets.push({
+      tag: 1800,
+      msgUid: 0,
+      data: { result: 0, data: [], fashion: rewardInfo.fashion.map((entry) => entry.id) },
+    });
+  }
+  packets.push({
+    tag: 1700,
+    msgUid,
+    data: {
+      result,
+      id,
+      module,
+      index,
+      param: drawParam,
+      rewardInfo,
+      datas: buildActivityPayload(info).datas,
+    },
+  });
+  return packets;
+}
+
+async function handleActivityGiftCode(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1750, msgUid, data: { result: -1, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const info = ensureActivityInfo(player);
+  const giftCode = normalizeGiftCode(params.giftCode);
+  if (!giftCode) {
+    return { tag: 1750, msgUid, data: { result: 1, rewardInfo: buildRewardInfo([]) } };
+  }
+  // Player ledger is authoritative for duplicate protection across both admin
+  // and config-backed codes. It is persisted together with the reward state.
+  if (info.giftCodeRecords[giftCode]) {
+    return { tag: 1750, msgUid, data: { result: 2, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const adminCodeEntry = await getAdminGiftCodeEntry(giftCode, player);
+  if (adminCodeEntry) {
+    if (adminCodeEntry.result) {
+      return { tag: 1750, msgUid, data: { result: adminCodeEntry.result, rewardInfo: buildRewardInfo([]) } };
+    }
+
+    const rewardInfo = grantRewardRows(player, adminCodeEntry.rewards);
+    const rewardSync = buildRewardItemSync(player, rewardInfo.items);
+    info.giftCodeRecords[giftCode] = Date.now();
+    await persistPlayer(session, player);
+    adminCodeEntry.row.usedCount = Math.max(0, toSafeInt(adminCodeEntry.row.usedCount, 0)) + 1;
+    adminCodeEntry.row.usedBy = ensureArray(adminCodeEntry.row.usedBy);
+    adminCodeEntry.row.usedBy.push({
+      userId: String(player.userId || session.userId || ''),
+      playerName: String(player.name || ''),
+      usedAt: new Date(),
+    });
+    try {
+      await adminCodeEntry.row.save();
+    } catch (error) {
+      // Reward + per-player ledger are already durable. A failed aggregate
+      // counter must not turn a successful claim into a retryable duplicate.
+      logger.warn(`[GiftCode] aggregate update pending code=${giftCode} error=${error.message}`);
+    }
+
+    return [
+      { tag: 1202, msgUid: 0, data: rewardSync },
+      ...rewardGrant.buildNativeSyncPackets(player, rewardInfo),
+      {
+        tag: 1750,
+        msgUid,
+        data: {
+          result: 0,
+          batchId: adminCodeEntry.batchId,
+          rewardInfo,
+        },
+      },
+    ];
+  }
+
+  // Validate against known gift codes — reject unknown codes (result: 3)
+  const codeEntry = getValidGiftCodeEntry(giftCode);
+  if (!codeEntry) {
+    return { tag: 1750, msgUid, data: { result: 3, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const batchId = buildGiftCodeBatchId(giftCode);
+  const rewardRows = Array.isArray(codeEntry.rewards) && codeEntry.rewards.length > 0
+    ? codeEntry.rewards
+    : [{ id: 1, count: 88 }, { id: 3, count: 888 }];
+  const rewardInfo = grantRewardRows(player, rewardRows);
+  const rewardSync = buildRewardItemSync(player, rewardInfo.items);
+  info.giftCodeRecords[giftCode] = Date.now();
+  await persistPlayer(session, player);
+
+  return [
+    { tag: 1202, msgUid: 0, data: rewardSync },
+    ...rewardGrant.buildNativeSyncPackets(player, rewardInfo),
+    {
+      tag: 1750,
+      msgUid,
+      data: {
+        result: 0,
+        batchId,
+        rewardInfo,
+      },
+    },
+  ];
+}
+
+async function handleActivityDailyReward(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1760, msgUid, data: { result: -1, ids: [], rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const info = ensureActivityInfo(player);
+  const requestedIds = Array.from(
+    new Set(
+      ensureArray(params.aps)
+        .map((v) => Math.max(0, toSafeInt(v, 0)))
+        .filter((v) => v > 0)
+    )
+  );
+
+  const dailyRewardCfg = ensureObject(configService.get('ConstConfig')).dailyReward || {};
+  const activityPoints = Math.max(0, toSafeInt(player.items && player.items[19], 0));
+  const claimed = new Set(info.dailyRewardRecords);
+  const ids = requestedIds.filter((point) => (
+    !claimed.has(point)
+    && point <= activityPoints
+    && dailyRewardCfg[point]
+    && toSafeInt(dailyRewardCfg[point].id, 0) > 0
+    && toSafeInt(dailyRewardCfg[point].count, 0) > 0
+  ));
+  const rewardRows = ids.map((point) => ({
+    id: toSafeInt(dailyRewardCfg[point].id, 0),
+    count: Math.max(0, toSafeInt(dailyRewardCfg[point].count, 0)),
+  }));
+  const merged = new Set(claimed);
+  ids.forEach((id) => merged.add(id));
+  info.dailyRewardRecords = Array.from(merged).sort((a, b) => a - b);
+
+  const rewardInfo = grantRewardRows(player, rewardRows);
+  const rewardSync = buildRewardItemSync(player, rewardInfo.items);
+  const appearancePackets = rewardGrant.buildNativeSyncPackets(player, rewardInfo);
+  await persistPlayer(session, player);
+
+  const response = {
+    tag: 1760,
+    msgUid,
+    data: {
+      result: 0,
+      ids,
+      rewardInfo,
+    },
+  };
+  if (ids.length <= 0) return response;
+  return [
+    ...(rewardSync.items.length > 0 ? [{ tag: 1202, msgUid: 0, data: rewardSync }] : []),
+    ...appearancePackets,
+    response,
+  ];
+}
+
+async function handleActivityGetRebate(_params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1770, msgUid, data: { result: -1, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const info = ensureActivityInfo(player);
+  const rebate = Math.max(0, toSafeInt(info.rebateValue, 0));
+  if (rebate <= 0) {
+    return { tag: 1770, msgUid, data: { result: 1, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  info.rebateValue = 0;
+  const rewardInfo = grantRewardRows(player, [{ id: 1, count: rebate }]);
+  await persistPlayer(session, player);
+  return { tag: 1770, msgUid, data: { result: 0, rewardInfo } };
+}
+
+async function handleMooncakeMake(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1780, msgUid, data: { result: -1, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const info = ensureActivityInfo(player);
+  const index = Math.max(0, toSafeInt(params.index, 0));
+  const count = Math.max(1, toSafeInt(params.count, 1));
+  const key = String(index);
+  info.mooncakeRecords[key] = Math.max(0, toSafeInt(info.mooncakeRecords[key], 0)) + count;
+
+  const rewardInfo = grantRewardRows(player, [{ id: 3, count: count * 15 }]);
+  await persistPlayer(session, player);
+  return { tag: 1780, msgUid, data: { result: 0, rewardInfo } };
+}
+
+async function handleActivityPetSoulInfo(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1785, msgUid, data: { result: -1, progress: 0, recordList: [] } };
+  }
+  const info = ensureActivityInfo(player);
+  const row = upsertPetSoulProgress(info, params.id);
+  await persistPlayer(session, player);
+  return {
+    tag: 1785,
+    msgUid,
+    data: { result: 0, progress: row.progress, recordList: row.recordList },
+  };
+}
+
+async function handleActivityPetSoulReward(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1786, msgUid, data: { result: -1, progress: 0, recordList: [], rewardInfo: buildRewardInfo([]) } };
+  }
+
+  const info = ensureActivityInfo(player);
+  const row = upsertPetSoulProgress(info, params.id);
+  row.progress += 1;
+  if (!row.recordList.includes(row.progress)) {
+    row.recordList.push(row.progress);
+    row.recordList.sort((a, b) => a - b);
+  }
+
+  const rewardInfo = grantRewardRows(player, [{ id: 3, count: 25 + row.progress * 5 }]);
+  await persistPlayer(session, player);
+  return {
+    tag: 1786,
+    msgUid,
+    data: {
+      result: 0,
+      progress: row.progress,
+      recordList: row.recordList,
+      rewardInfo,
+    },
+  };
+}
+
+async function handleActivitySnowmanMake(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return {
+      tag: 1787,
+      msgUid,
+      data: { result: -1, record: { parts: [], count: 0 }, star: 0, rewardInfo: buildRewardInfo([]) },
+    };
+  }
+
+  const info = ensureActivityInfo(player);
+  const index = Math.max(0, toSafeInt(params.index, 0));
+  const parts = ensureArray(params.parts).map((v) => Math.max(0, toSafeInt(v, 0)));
+  const row = upsertSnowmanRecord(info, index);
+  row.parts = parts;
+  row.count = Math.max(0, toSafeInt(row.count, 0)) + 1;
+  row.updateTime = Date.now();
+
+  const star = parts.reduce((sum, part) => sum + (part > 0 ? 1 : 0), 0);
+  await persistPlayer(session, player);
+  return {
+    tag: 1787,
+    msgUid,
+    data: {
+      result: 0,
+      record: row,
+      star,
+      rewardInfo: buildRewardInfo([]),
+    },
+  };
+}
+
+async function handleActivitySnowmanUploadDesign(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1788, msgUid, data: { result: -1 } };
+  }
+  const info = ensureActivityInfo(player);
+  upsertSnowmanDesignSelf(info, player, params.parts);
+  await persistPlayer(session, player);
+  return { tag: 1788, msgUid, data: { result: 0 } };
+}
+
+function handleActivitySnowmanDesignList(_params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1789, msgUid, data: { design: [] } };
+  }
+  const info = ensureActivityInfo(player);
+  return { tag: 1789, msgUid, data: { design: ensureArray(info.snowman.designList) } };
+}
+
+async function handleActivitySnowmanLike(params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1790, msgUid, data: { result: -1, playerId: '', like: 0, rewardInfo: buildRewardInfo([]) } };
+  }
+  const info = ensureActivityInfo(player);
+  const playerId = params.playerId == null ? '' : String(params.playerId);
+  if (!playerId) {
+    return { tag: 1790, msgUid, data: { result: 1, playerId: '', like: 0, rewardInfo: buildRewardInfo([]) } };
+  }
+  if (info.snowman.likedPlayers[playerId]) {
+    return { tag: 1790, msgUid, data: { result: 2, playerId, like: 0, rewardInfo: buildRewardInfo([]) } };
+  }
+
+  info.snowman.likedPlayers[playerId] = Date.now();
+  const row = ensureArray(info.snowman.designList).find((it) => String(it && it.dbid) === playerId);
+  if (row) row.like = Math.max(0, toSafeInt(row.like, 0)) + 1;
+  if (String(info.snowman.designInfo.dbid) === playerId) {
+    info.snowman.designInfo.like = Math.max(0, toSafeInt(info.snowman.designInfo.like, 0)) + 1;
+  }
+  const like = row
+    ? Math.max(0, toSafeInt(row.like, 0))
+    : (String(info.snowman.designInfo.dbid) === playerId
+      ? Math.max(0, toSafeInt(info.snowman.designInfo.like, 0))
+      : 1);
+
+  const rewardInfo = grantRewardRows(player, [{ id: 3, count: 30 }]);
+  await persistPlayer(session, player);
+  return { tag: 1790, msgUid, data: { result: 0, playerId, like, rewardInfo } };
+}
+
+function handleActivitySnowmanDesignInfo(_params = {}, session = {}, msgUid) {
+  const player = session.player;
+  if (!player) {
+    return { tag: 1791, msgUid, data: { design: [], like: 0, dbid: '', name: '', updateTime: 0 } };
+  }
+  const info = ensureActivityInfo(player);
+  return { tag: 1791, msgUid, data: normalizeSnowmanDesignRow(info.snowman.designInfo) };
+}
+
+module.exports = {
+  ensureActivityInfo,
+  grantRewardRows,
+  buildActivityPayload,
+  buildActivityUpdatePacket,
+  getGmt8DayKey,
+  getActiveDailyShopPolicy,
+  getActiveActivityShopPolicy,
+  readDailyShopClaim,
+  commitDailyShopClaim,
+  commitActivityShopPurchase,
+  syncDailyShopClaimRows,
+  operateNewYearTaskReward,
+  operateNewYearDailyScoreReward,
+  handleNewYearDrawOperate,
+  handleNewYearScoreRewardOperate,
+  operateNewYearMonsterAttack,
+  resolveNewYearScoreReward,
+  isActivityWindowOpen,
+  setActivityEntryEnabled,
+  buildActivityDropPacket,
+  buildActivityClosePacket,
+  buildActivityMonopolyFatePacket,
+  buildActivityMultiGiftPacket,
+  buildActivityGrassTastePacket,
+  buildActivityBoxDrawPacket,
+  buildSecretTreasurePackets,
+  buildKnifeDrawInfoPacket,
+  buildKnifeDrawWinPacket,
+  buildFishKingRankPacket,
+  buildFishSceneSalvagePacket,
+  buildFishSceneBottleContentPacket,
+  buildFuluDrawPacket,
+  handleActivityOperate,
+  handleActivityGiftCode,
+  handleActivityDailyReward,
+  handleActivityGetRebate,
+  handleMooncakeMake,
+  handleActivityPetSoulInfo,
+  handleActivityPetSoulReward,
+  handleActivitySnowmanMake,
+  handleActivitySnowmanUploadDesign,
+  handleActivitySnowmanDesignList,
+  handleActivitySnowmanLike,
+  handleActivitySnowmanDesignInfo,
+};

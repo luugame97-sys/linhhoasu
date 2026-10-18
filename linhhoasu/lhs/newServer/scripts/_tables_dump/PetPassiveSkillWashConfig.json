@@ -1,0 +1,982 @@
+{
+  "_table": "PetPassiveSkillWashConfig",
+  "_rows": 20,
+  "_type": "object",
+  "_firstKeys": "level,exp,rate",
+  "_sample": [
+    {
+      "1": {
+        "level": 1,
+        "exp": 500,
+        "rate": [
+          {
+            "id": 2,
+            "weight": 4000
+          },
+          {
+            "id": 3,
+            "weight": 4000
+          },
+          {
+            "id": 4,
+            "weight": 1500
+          },
+          {
+            "id": 5,
+            "weight": 500
+          },
+          {
+            "id": 6,
+            "weight": 0
+          },
+          {
+            "id": 7,
+            "weight": 0
+          },
+          {
+            "id": 8,
+            "weight": 0
+          },
+          {
+            "id": 9,
+            "weight": 0
+          },
+          {
+            "id": 10,
+            "weight": 0
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "level": 2,
+        "exp": 1000,
+        "rate": [
+          {
+            "id": 2,
+            "weight": 2000
+          },
+          {
+            "id": 3,
+            "weight": 5000
+          },
+          {
+            "id": 4,
+            "weight": 2000
+          },
+          {
+            "id": 5,
+            "weight": 800
+          },
+          {
+            "id": 6,
+            "weight": 200
+          },
+          {
+            "id": 7,
+            "weight": 0
+          },
+          {
+            "id": 8,
+            "weight": 0
+          },
+          {
+            "id": 9,
+            "weight": 0
+          },
+          {
+            "id": 10,
+            "weight": 0
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "level": 3,
+        "exp": 1500,
+        "rate": [
+          {
+            "id": 2,
+            "weight": 1050
+          },
+          {
+            "id": 3,
+            "weight": 5000
+          },
+          {
+            "id": 4,
+            "weight": 2500
+          },
+          {
+            "id": 5,
+            "weight": 1100
+          },
+          {
+            "id": 6,
+            "weight": 350
+          },
+          {
+            "id": 7,
+            "weight": 0
+          },
+          {
+            "id": 8,
+            "weight": 0
+          },
+          {
+            "id": 9,
+            "weight": 0
+          },
+          {
+            "id": 10,
+            "weight": 0
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "level": 1,
+      "exp": 500,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 4000
+        },
+        {
+          "id": 3,
+          "weight": 4000
+        },
+        {
+          "id": 4,
+          "weight": 1500
+        },
+        {
+          "id": 5,
+          "weight": 500
+        },
+        {
+          "id": 6,
+          "weight": 0
+        },
+        {
+          "id": 7,
+          "weight": 0
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "2": {
+      "level": 2,
+      "exp": 1000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 2000
+        },
+        {
+          "id": 3,
+          "weight": 5000
+        },
+        {
+          "id": 4,
+          "weight": 2000
+        },
+        {
+          "id": 5,
+          "weight": 800
+        },
+        {
+          "id": 6,
+          "weight": 200
+        },
+        {
+          "id": 7,
+          "weight": 0
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "3": {
+      "level": 3,
+      "exp": 1500,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 1050
+        },
+        {
+          "id": 3,
+          "weight": 5000
+        },
+        {
+          "id": 4,
+          "weight": 2500
+        },
+        {
+          "id": 5,
+          "weight": 1100
+        },
+        {
+          "id": 6,
+          "weight": 350
+        },
+        {
+          "id": 7,
+          "weight": 0
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "4": {
+      "level": 4,
+      "exp": 2000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 600
+        },
+        {
+          "id": 3,
+          "weight": 4500
+        },
+        {
+          "id": 4,
+          "weight": 3000
+        },
+        {
+          "id": 5,
+          "weight": 1400
+        },
+        {
+          "id": 6,
+          "weight": 500
+        },
+        {
+          "id": 7,
+          "weight": 0
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "5": {
+      "level": 5,
+      "exp": 3000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 4000
+        },
+        {
+          "id": 4,
+          "weight": 4000
+        },
+        {
+          "id": 5,
+          "weight": 1500
+        },
+        {
+          "id": 6,
+          "weight": 500
+        },
+        {
+          "id": 7,
+          "weight": 0
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "6": {
+      "level": 6,
+      "exp": 4000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 2000
+        },
+        {
+          "id": 4,
+          "weight": 5000
+        },
+        {
+          "id": 5,
+          "weight": 2000
+        },
+        {
+          "id": 6,
+          "weight": 800
+        },
+        {
+          "id": 7,
+          "weight": 200
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "7": {
+      "level": 7,
+      "exp": 5000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 1050
+        },
+        {
+          "id": 4,
+          "weight": 5000
+        },
+        {
+          "id": 5,
+          "weight": 2500
+        },
+        {
+          "id": 6,
+          "weight": 1100
+        },
+        {
+          "id": 7,
+          "weight": 350
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "8": {
+      "level": 8,
+      "exp": 6000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 600
+        },
+        {
+          "id": 4,
+          "weight": 4500
+        },
+        {
+          "id": 5,
+          "weight": 3000
+        },
+        {
+          "id": 6,
+          "weight": 1400
+        },
+        {
+          "id": 7,
+          "weight": 500
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "9": {
+      "level": 9,
+      "exp": 8000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 4000
+        },
+        {
+          "id": 5,
+          "weight": 4000
+        },
+        {
+          "id": 6,
+          "weight": 1500
+        },
+        {
+          "id": 7,
+          "weight": 500
+        },
+        {
+          "id": 8,
+          "weight": 0
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "10": {
+      "level": 10,
+      "exp": 10000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 2000
+        },
+        {
+          "id": 5,
+          "weight": 5000
+        },
+        {
+          "id": 6,
+          "weight": 2000
+        },
+        {
+          "id": 7,
+          "weight": 800
+        },
+        {
+          "id": 8,
+          "weight": 200
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "11": {
+      "level": 11,
+      "exp": 12000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 1050
+        },
+        {
+          "id": 5,
+          "weight": 5000
+        },
+        {
+          "id": 6,
+          "weight": 2500
+        },
+        {
+          "id": 7,
+          "weight": 1100
+        },
+        {
+          "id": 8,
+          "weight": 350
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "12": {
+      "level": 12,
+      "exp": 14000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 600
+        },
+        {
+          "id": 5,
+          "weight": 4500
+        },
+        {
+          "id": 6,
+          "weight": 3000
+        },
+        {
+          "id": 7,
+          "weight": 1400
+        },
+        {
+          "id": 8,
+          "weight": 500
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "13": {
+      "level": 13,
+      "exp": 18000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 4000
+        },
+        {
+          "id": 6,
+          "weight": 4000
+        },
+        {
+          "id": 7,
+          "weight": 1500
+        },
+        {
+          "id": 8,
+          "weight": 500
+        },
+        {
+          "id": 9,
+          "weight": 0
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "14": {
+      "level": 14,
+      "exp": 22000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 2000
+        },
+        {
+          "id": 6,
+          "weight": 5000
+        },
+        {
+          "id": 7,
+          "weight": 2000
+        },
+        {
+          "id": 8,
+          "weight": 800
+        },
+        {
+          "id": 9,
+          "weight": 200
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "15": {
+      "level": 15,
+      "exp": 26000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 1050
+        },
+        {
+          "id": 6,
+          "weight": 5000
+        },
+        {
+          "id": 7,
+          "weight": 2500
+        },
+        {
+          "id": 8,
+          "weight": 1100
+        },
+        {
+          "id": 9,
+          "weight": 350
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "16": {
+      "level": 16,
+      "exp": 30000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 600
+        },
+        {
+          "id": 6,
+          "weight": 4500
+        },
+        {
+          "id": 7,
+          "weight": 3000
+        },
+        {
+          "id": 8,
+          "weight": 1400
+        },
+        {
+          "id": 9,
+          "weight": 500
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "17": {
+      "level": 17,
+      "exp": 38000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 0
+        },
+        {
+          "id": 6,
+          "weight": 4000
+        },
+        {
+          "id": 7,
+          "weight": 4000
+        },
+        {
+          "id": 8,
+          "weight": 1500
+        },
+        {
+          "id": 9,
+          "weight": 500
+        },
+        {
+          "id": 10,
+          "weight": 0
+        }
+      ]
+    },
+    "18": {
+      "level": 18,
+      "exp": 46000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 0
+        },
+        {
+          "id": 6,
+          "weight": 2000
+        },
+        {
+          "id": 7,
+          "weight": 5000
+        },
+        {
+          "id": 8,
+          "weight": 2000
+        },
+        {
+          "id": 9,
+          "weight": 800
+        },
+        {
+          "id": 10,
+          "weight": 200
+        }
+      ]
+    },
+    "19": {
+      "level": 19,
+      "exp": 54000,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 0
+        },
+        {
+          "id": 6,
+          "weight": 1050
+        },
+        {
+          "id": 7,
+          "weight": 5000
+        },
+        {
+          "id": 8,
+          "weight": 2500
+        },
+        {
+          "id": 9,
+          "weight": 1100
+        },
+        {
+          "id": 10,
+          "weight": 350
+        }
+      ]
+    },
+    "20": {
+      "level": 20,
+      "exp": 0,
+      "rate": [
+        {
+          "id": 2,
+          "weight": 0
+        },
+        {
+          "id": 3,
+          "weight": 0
+        },
+        {
+          "id": 4,
+          "weight": 0
+        },
+        {
+          "id": 5,
+          "weight": 0
+        },
+        {
+          "id": 6,
+          "weight": 600
+        },
+        {
+          "id": 7,
+          "weight": 4500
+        },
+        {
+          "id": 8,
+          "weight": 3000
+        },
+        {
+          "id": 9,
+          "weight": 1400
+        },
+        {
+          "id": 10,
+          "weight": 500
+        }
+      ]
+    }
+  }
+}

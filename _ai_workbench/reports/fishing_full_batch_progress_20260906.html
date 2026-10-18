@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hoàn thiện câu cá — checkpoint và phần còn thiếu</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ho-n-thi-n-c-u-c-v-m-s-ki-n-chung-checkpoint-06-09-2026">Hoàn thiện câu cá và mở sự kiện chung — checkpoint 06/09/2026</h1>
+<p><strong>Đang làm, chưa phát hành.</strong> Đã tạo bản sửa thật trong candidate cho các phần có đủ dữ liệu và chạy188 nhóm test local đạt. Chưa mở sự kiện trên S1/S2. Phần còn thiếu cần quyết định dùng bảng cân bằng riêng vì không tìm thấy tỷ lệ gốc trong các nguồn hiện có đã kiểm; không tự đoán tỷ lệ rồi mở bán.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Yêu cầu được gộp thành một đợt: xác suất hụt/linh hồn/di vật/sự kiện, mồi nâng cao và cần/bè, Thiên Công, kiểm4 người với bè/thời trang lớn trên nhiều thiết bị. Giữ ý tưởng lịch7 ngày cho các nhóm tranh đầu vào và cửa sự kiện độc lập90 ngày, nhưng chưa cài lịch hoặc bật production.</p>
+<h3 id="1-1-tri-n-khai-code-trong-candidate">1.1 Đã triển khai code trong candidate</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Hạng mục</th>
+<th>Nội dung đã viết</th>
+<th>Phạm vi xác minh</th>
+</tr></thead><tbody>
+<tr>
+<td>Gate sự kiện câu cá</td>
+<td>Không cho request tự tạo active row; từ chối disabled, thiếu metadata, chưa tới/hết hạn, thiếu cấp/hệ thống</td>
+<td>Thiếu row, inactive, metadata thiếu, khóa và no-mutation test</td>
+</tr>
+<tr>
+<td>Cần vàng5904</td>
+<td>Bonus bán10% theo ownership, cả bán tay và auto; tích phần lẻ tránh mất tiền khi bán lẻ</td>
+<td>10 cá×2coin→20coin bán+2coin bonus, batch/split/relog/replay</td>
+</tr>
+<tr>
+<td>Bonus cần vàng đúng native</td>
+<td>Ghi vào fishInfo.extraPrice, nhận tại FishPriceGetPanel/tag4022; không cộng trực tiếp rồi bỏ nút nhận</td>
+<td>Claim một lần,1202 sync, auto callback cập nhật extraPrice</td>
+</tr>
+<tr>
+<td>Cần Bạch Hổ5906</td>
+<td>Sở hữu có10% nhân đôi quà đơn; không cần mặc đúng cây mới có hiệu lực</td>
+<td>Ranh giới0/999/1000/9999, repeat không cấp thêm</td>
+</tr>
+<tr>
+<td>Thiên Công190051/190052</td>
+<td>Ghép đúng100 mảnh190001/190002 theo ShopConfig13190051/52, lưu item kích hoạt; retry không tiêu tiếp</td>
+<td>Thiếu/mixed/số lẻ/unavailable/save null/throw/commit bất định</td>
+</tr>
+<tr>
+<td>Đổi cảnh Thiên Công</td>
+<td>Chỉ chọn0 hoặc skin có cấu hình và đã sở hữu; clone+saveconfirmed</td>
+<td>Chặn ID giả, chưa sở hữu và invalid; relog giữ skin</td>
+</tr>
+<tr>
+<td>Buff Thiên Công</td>
+<td>Mỗi skin đã sở hữu cộng10% thuộc tính kiến trúc;2 skin cộng20%, nhiều bản sao cùng skin không cộng dồn</td>
+<td>So công thức native trước các multiplier combat khác</td>
+</tr>
+<tr>
+<td>Persistence các thao tác liên quan</td>
+<td>Bán/nhận đơn/nhận bonus thực hiện trên clone; save không xác nhận thì invalidate, không ACK thành công</td>
+<td>Test null, throw và commit-then-throw</td>
+</tr>
+</tbody></table></div>
+<p><strong>Đây là code candidate, không phải các sửa đã chạy trên server.</strong> Không tạo quyền lợi miễn phí, không gia hạn thẻ, không bù lịch sử và không đổi cá/thuộc tính cũ.</p>
+<h3 id="1-2-ch-a-l-m-xong-trong-t-n-y">1.2 Chưa làm xong trong đợt này</h3>
+<ul>
+<li>Chu Tước: tỷ lệ10% có mô tả, nhưng cần hoàn thiện paired payload/double animation và các nhánh mồi/catch tổng thể trước ghép vào generator mới.</li>
+<li>Thanh Long, biến dị/linh hồn: thiếu phân phối cơ sở; x2 chưa có ý nghĩa đúng nếu chưa biết tỷ lệ nền.</li>
+<li>Hụt/cá thoát: client có trạng thái nhưng không có bảng tỷ lệ server gốc trong các nguồn đã kiểm.</li>
+<li>Di vật: có danh sách theo map nhưng chưa có tần suất/weight rơi chuẩn.</li>
+<li>Mồi nâng cao: có attr/type và mô tả; một số loại tăng khả năng nhưng không có định nghĩa xác suất nền hoặc độ tăng đủ rõ. Loại5542/5543 có mô tả guarantee/50% biến dị, vẫn cần tích hợp đúng tất cả điều kiện giỏ/kỷ lục và pool.</li>
+<li>Sự kiện: chưa sửa mini-game, shared chai trôi, BXH, vòng nhiệm vụ, settlement hoặc scheduler; chưa bật các row lịch.</li>
+</ul>
+<p>-3 Thiên Công190053–190055: có item/exchange100 mảnh nhưng <strong>không có row HomelandSkinConfig tương ứng</strong>. Native hiện chỉ có0,190051,190052; không mở ID thiếu bằng map giả.</p>
+<ul>
+<li>Hiển thị4 người nhiều bè/thời trang lớn và đa thiết bị: chưa chạy nghiệm thu hình ảnh mới. Kết quả tọa độ/phòng và fixture EUI trước đây không được thay cho yêu cầu này.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="candidate-kh-ng-ph-i-c-y-ang-ch-y">Candidate, không phải cây đang chạy</h3>
+<p>Root: <code>_ai_workbench/temp/fishing_full_candidate_20260906/</code>.</p>
+<ul>
+<li>Sửa <code>app/src/handlers/activity.js</code>, <code>fish.js</code>, <code>homeland.js</code>, <code>item.js</code>, <code>playerPayload.js</code>.</li>
+<li>Sửa <code>app/src/services/BattleService.js</code>.</li>
+<li>Mới <code>app/src/services/FishingKnownEffectsService.js</code>, <code>FishingEventGateService.js</code>, <code>HomelandSkinUnlockService.js</code>.</li>
+<li>Client <code>main.fixed.js</code>: chỉ cập nhật extraPrice từ ACK auto; inverse check bảo đảm các hàm khác nguyên baseline. Chưa đổi index/cache production.</li>
+<li><code>changed-files.json</code>:9 server file có hash;3 file mới,6 file chỉnh.</li>
+<li>Baseline bất biến: <code>_ai_workbench/temp/fishing_events_audit_20260906T093353Z/</code>.</li>
+</ul>
+<h3 id="tools-evidence">Tools/evidence</h3>
+<ul>
+<li><code>_ai_workbench/tools/test_fishing_full_known_20260906.js</code>:34 nhóm mới.</li>
+<li><code>_ai_workbench/tools/build_fishing_full_known_client_20260906.js</code>: build1 callback hiển thị bonus.</li>
+<li><code>_ai_workbench/tools/run_fishing_full_candidate_checks_20260906.js</code>: orchestration các suite local.</li>
+<li><code>_ai_workbench/tools/fishing_full_source_matrix_20260906.py</code>: kiểm source trong server.zip và keys cấu hình, không giải nén/ghi cây tham chiếu.</li>
+<li>Sửa test hỗ trợ <code>test_fishing_balance_20260906.js</code>: kiểm s.player hiện hành thay alias cũ sau clone-save; thêm assertion success/repeat fail, không hạ kỳ vọng gameplay.</li>
+<li>Candidate evidence: <code>known-fixes-tests.json</code>, <code>regression-summary.json</code>, <code>source-matrix.json</code>, <code>client-known-build.json</code>, <code>changed-files.json</code>.</li>
+<li>Backup báo cáo/test cũ: <code>_ai_workbench/backups/fishing_full_reports_20260906/</code>.</li>
+<li>Cập nhật báo cáo này MD/HTML và <code>session_report.md/.html</code>.</li>
+</ul>
+<p>Không sửa source <code>linhhoasu/lhs/newServer</code> hoặc client live; không restart/deploy/ghi DB hay dùng tài khoản người chơi. Không chạy script QA live. Việc copy core test vào candidate chỉ phục vụ test, không thay source production.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Nguyên nhân</th>
+<th>Xử lý/định hướng</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Bật event bằng request tùy ý</td>
+<td>upsert tạo window mặc định</td>
+<td>Candidate gate trước ensure/upsert</td>
+<td>Không dùng ẩn UI làm gate</td>
+</tr>
+<tr>
+<td>Cần vàng không cộng bonus</td>
+<td>Chỉ cộng qualitycoin, không đọc ownership/rate</td>
+<td>Candidate bonus10% vào extraPrice</td>
+<td>Kiểm cả manual/auto, claim, split và replay</td>
+</tr>
+<tr>
+<td>Cộng bonus vào túi làm lệch contract native</td>
+<td>Bản nháp đầu chưa theo FishPriceGetPanel</td>
+<td>Đã sửa nháp về extraPrice/tag4022 trước bàn giao; test cập nhật</td>
+<td>Đọc cả receiver/nút nhận, không chỉ mô tả tỷ lệ</td>
+</tr>
+<tr>
+<td>Bạch Hổ không nhân đôi quà</td>
+<td>Nhánh nhận đơn không có passive</td>
+<td>10% theo sở hữu; RNG10000 điểm</td>
+<td>Không yêu cầu đang mặc nếu mô tả là vĩnh viễn khi sở hữu</td>
+</tr>
+<tr>
+<td>Ghép/đổi Thiên Công thiếu ownership/saveguard</td>
+<td>Đường mua chung cho phép cấp item nhưng đổi skin tin ID</td>
+<td>Specialized transaction chỉ2 skin hỗ trợ, kiểm item trước đổi</td>
+<td>Unknown/mixed/repeat/uncertain-save tests</td>
+</tr>
+<tr>
+<td>Buff Thiên Công chưa vào combat</td>
+<td>BattleService bỏ skin703</td>
+<td>Cộng vào riêng attrs kiến trúc như native</td>
+<td>Không áp10% lên toàn bộ sức mạnh nhân vật</td>
+</tr>
+<tr>
+<td>Test combat kỳ vọng133 bằng130</td>
+<td>Có modifier liên kết sau phần kiến trúc</td>
+<td>So contribution trước modifier, thêm so formula native</td>
+<td>Không bỏ modifier game để test xanh</td>
+</tr>
+<tr>
+<td>Test extraPrice đọc alias cũ</td>
+<td>Session.player được thay bằng clone</td>
+<td>Test dùng session hiện hành và kiểm nhận lặp fail</td>
+<td>Không giữ p qua transaction</td>
+</tr>
+<tr>
+<td>Thiếu dữ liệu gốc cho generator</td>
+<td>Bundle chỉ có UI/catalog; archived server cũng simplified</td>
+<td>Không tự thêm tỷ lệ, yêu cầu duyệt bảng riêng hoặc nguồn chuẩn</td>
+<td>Phân biệt config cap/hiển thị với odds</td>
+</tr>
+<tr>
+<td>Output quá lớn/marker patch không khớp</td>
+<td>Dump quá nhiều trường và context suy đoán</td>
+<td>Thu gọn output, đọc exact line rồi patch</td>
+<td>Lưu evidence JSON, không dựa output bị cắt</td>
+</tr>
+<tr>
+<td>Mongoose warning isNew</td>
+<td>Field reserved hiện hữu</td>
+<td>Ghi nhận, không sửa schema ngoài phạm vi</td>
+<td>Không coi warning là testcase fail</td>
+</tr>
+</tbody></table></div>
+<p>Giữ UTF-8, không sửa tay các tên/mô tả nguồn hơi lủng củng thành nghĩa gameplay mới. Không sửa source tham chiếu hoặc global memories.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Mô tả ownership của cần5904/5906 là “sau khi nhận vĩnh viễn có hiệu ứng”; kiểm item sở hữu khác kiểm rod đang mặc.</li>
+<li>Cần vàng có luồng bonus riêng: extraPrice→FishPriceGetPanel→4022. Cần đồng bộ nó ở auto thay vì chỉ cộng vào túi.</li>
+<li><code>FishSoulBaseConfig.divides=[3000,6500,10000]</code> dùng chia mốc kỷ lục/thanh trọng lượng, <strong>không phải</strong> xác suất phẩm chất. <code>FishLevelConfig.washCount.weight</code> là số dòng tẩy, không phải weight cá.</li>
+<li>Item mảnh/ID skin tồn tại không bảo đảm có HomelandSkinConfig/map/native renderer;190053–55 không được mở bừa vì có ShopConfig.</li>
+<li>Rate mô tả rõ10%,50% có thể lấy làm oracle; các odds cơ sở không có thì việc tự chọn là thiết kế kinh tế mới, cần quyền quyết định riêng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="test-local">Test local</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Candidate known fixes</td>
+<td>34/34 PASS</td>
+</tr>
+<tr>
+<td>Auto regression</td>
+<td>21/21 PASS</td>
+</tr>
+<tr>
+<td>Cần/bè regression</td>
+<td>39/39 PASS, có1.800 matrix cases và kiểm profile lịch sử từ snapshot cũ</td>
+</tr>
+<tr>
+<td>Balance/integrity</td>
+<td>70/70 PASS sau sửa fixture alias</td>
+</tr>
+<tr>
+<td>Huyền Vũ</td>
+<td>24/24 PASS</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>PASS,714 bảng</td>
+</tr>
+</tbody></table></div>
+<p>Tổng188 nhóm local PASS, không phải Linux staging/live QA. Không gọi toàn bộ gói “đã xong” từ kết quả các nhóm đã viết. Chưa test toàn bộ concurrent buy/recharge/skin/event lifecycle, chưa native UI end-to-end hoặc thiết bị vật lý.</p>
+<h3 id="ngu-n-thi-u-i-chi-u">Nguồn thiếu đã đối chiếu</h3>
+<p>Trong <code>server.zip</code>,2 cây <code>newServer</code> và <code>lhs-local-run2</code> có cùng hash handler fish/fish-soul. Handler thường chọn uniform; linh hồn chọn tuần tự <code>soulIds[index % ...]</code>; đều có escapes rỗng. Chúng không cung cấp RNG gốc để phục hồi. Client/config live có minKg/maxKgValue/minAddRate/mốc UI; không tìm được bảng odds nền của hụt, cá thường, linh hồn, di vật hoặc tần suất event trong các nguồn đã kiểm. Đây không phải khẳng định không tồn tại ở bất kỳ nguồn bên ngoài nào.</p>
+<h3 id="production-gi-nguy-n">Production giữ nguyên</h3>
+<p>Hậu kiểm16:49:06 UTC+7:155 artifact khớp release phòng câu; S1/S2 ready200;6 process PID/restart nguyên (S1PID16313, S2PID15390). Chỉ query aggregate theo event ID; không ghi player, không mở mới6006/6056/type33. Toàn bộ candidate ở <code>_ai_workbench/temp/</code>, chưa sync vào source chính.</p>
+<h2 id="6-b-c-ti-p-theo-quy-t-nh-c-n-c">6. Bước tiếp theo / quyết định cần có</h2>
+<p><strong>Cần user cho phép dùng bảng cân bằng riêng cho phần odds còn thiếu</strong> (hoặc cung cấp source/bảng tỷ lệ server gốc). Yêu cầu “bảng cân bằng riêng” trước đây đã áp cho tẩy/hộp; không tự mở rộng thành tỷ lệ tiêu mồi, cá hiếm, linh hồn và kinh tế sự kiện khi chưa xác nhận.</p>
+<p>Nếu được phép: tạo một bảng JSON versioned, công khai tỷ lệ/nguồn; giữ các tỷ lệ đã có trong mô tả/config, chỉ đặt phần nền còn thiếu. Sau đó ghép generator/bonus mồi/cần/bè, di vật, event tickets/rewards/BXH/settlement; chạy simulation và negative test rồi mới kích hoạt luân phiên7ngày/dài hạn90ngày.</p>
+<p>Với Thiên Công190053–55: cần thêm map/skin config/asset hợp lệ hoặc quyết định thiết kế mới; trong lúc đó giữ mảnh, không tiêu để cấp skin không render được. Hai skin190051/52 đã có candidate, chưa bật live.</p>
+<p>Với4 người/đa thiết bị: chuẩn bị bộ render/native thật với các bè/phụ kiện lớn, viewport Android/iPhone/tablet; phân biệt viewport mô phỏng và thiết bị vật lý. Không chỉnh scale/bbox dựa vào fixture chữ hoặc thay game bằng DOM.</p>
+<p>Giữ một đợt phát hành chung như user yêu cầu; chưa chạy deployment riêng lẻ. Sau khi quyết định phần thiếu, tiếp tục từ candidate này, không làm lại các phần đã test.</p></main></body></html>

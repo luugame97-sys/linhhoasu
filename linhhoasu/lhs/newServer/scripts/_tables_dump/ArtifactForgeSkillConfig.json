@@ -1,0 +1,704 @@
+{
+  "_table": "ArtifactForgeSkillConfig",
+  "_rows": 17,
+  "_type": "object",
+  "_firstKeys": "4,6,7",
+  "_sample": [
+    {
+      "54": {
+        "4": {
+          "1": {
+            "id": 54,
+            "quality": 4,
+            "type": 1,
+            "attr": []
+          },
+          "2": {
+            "id": 54,
+            "quality": 4,
+            "type": 2,
+            "attr": []
+          }
+        },
+        "6": {
+          "1": {
+            "id": 54,
+            "quality": 6,
+            "type": 1,
+            "attr": [
+              1
+            ],
+            "skillGroupId": 23009
+          },
+          "2": {
+            "id": 54,
+            "quality": 6,
+            "type": 2,
+            "attr": [
+              3
+            ],
+            "skillGroupId": 23109
+          }
+        },
+        "7": {
+          "1": {
+            "id": 54,
+            "quality": 7,
+            "type": 1,
+            "attr": [
+              2
+            ],
+            "skillGroupId": 23009
+          },
+          "2": {
+            "id": 54,
+            "quality": 7,
+            "type": 2,
+            "attr": [
+              4
+            ],
+            "skillGroupId": 23109
+          }
+        }
+      }
+    },
+    {
+      "101": {
+        "4": {
+          "1": {
+            "id": 101,
+            "quality": 4,
+            "type": 1,
+            "attr": []
+          }
+        },
+        "6": {
+          "1": {
+            "id": 101,
+            "quality": 6,
+            "type": 1,
+            "attr": [
+              1
+            ],
+            "skillGroupId": 23001
+          }
+        },
+        "7": {
+          "1": {
+            "id": 101,
+            "quality": 7,
+            "type": 1,
+            "attr": [
+              2
+            ],
+            "skillGroupId": 23001
+          }
+        }
+      }
+    },
+    {
+      "102": {
+        "4": {
+          "1": {
+            "id": 102,
+            "quality": 4,
+            "type": 1,
+            "attr": []
+          }
+        },
+        "6": {
+          "1": {
+            "id": 102,
+            "quality": 6,
+            "type": 1,
+            "attr": [
+              1
+            ],
+            "skillGroupId": 23002
+          }
+        },
+        "7": {
+          "1": {
+            "id": 102,
+            "quality": 7,
+            "type": 1,
+            "attr": [
+              2
+            ],
+            "skillGroupId": 23002
+          }
+        }
+      }
+    }
+  ],
+  "data": {
+    "54": {
+      "4": {
+        "1": {
+          "id": 54,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        },
+        "2": {
+          "id": 54,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 54,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23009
+        },
+        "2": {
+          "id": 54,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23109
+        }
+      },
+      "7": {
+        "1": {
+          "id": 54,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23009
+        },
+        "2": {
+          "id": 54,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23109
+        }
+      }
+    },
+    "101": {
+      "4": {
+        "1": {
+          "id": 101,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 101,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23001
+        }
+      },
+      "7": {
+        "1": {
+          "id": 101,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23001
+        }
+      }
+    },
+    "102": {
+      "4": {
+        "1": {
+          "id": 102,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 102,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23002
+        }
+      },
+      "7": {
+        "1": {
+          "id": 102,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23002
+        }
+      }
+    },
+    "103": {
+      "4": {
+        "1": {
+          "id": 103,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 103,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23003
+        }
+      },
+      "7": {
+        "1": {
+          "id": 103,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23003
+        }
+      }
+    },
+    "104": {
+      "4": {
+        "1": {
+          "id": 104,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 104,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23004
+        }
+      },
+      "7": {
+        "1": {
+          "id": 104,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23004
+        }
+      }
+    },
+    "105": {
+      "4": {
+        "1": {
+          "id": 105,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 105,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23005
+        }
+      },
+      "7": {
+        "1": {
+          "id": 105,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23005
+        }
+      }
+    },
+    "106": {
+      "4": {
+        "1": {
+          "id": 106,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 106,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23006
+        }
+      },
+      "7": {
+        "1": {
+          "id": 106,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23006
+        }
+      }
+    },
+    "151": {
+      "4": {
+        "2": {
+          "id": 151,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 151,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23101
+        }
+      },
+      "7": {
+        "2": {
+          "id": 151,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23101
+        }
+      }
+    },
+    "152": {
+      "4": {
+        "2": {
+          "id": 152,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 152,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23102
+        }
+      },
+      "7": {
+        "2": {
+          "id": 152,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23102
+        }
+      }
+    },
+    "153": {
+      "4": {
+        "2": {
+          "id": 153,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 153,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23103
+        }
+      },
+      "7": {
+        "2": {
+          "id": 153,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23103
+        }
+      }
+    },
+    "154": {
+      "4": {
+        "2": {
+          "id": 154,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 154,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23104
+        }
+      },
+      "7": {
+        "2": {
+          "id": 154,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23104
+        }
+      }
+    },
+    "155": {
+      "4": {
+        "2": {
+          "id": 155,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 155,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23105
+        }
+      },
+      "7": {
+        "2": {
+          "id": 155,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23105
+        }
+      }
+    },
+    "156": {
+      "4": {
+        "2": {
+          "id": 156,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 156,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23106
+        }
+      },
+      "7": {
+        "2": {
+          "id": 156,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23106
+        }
+      }
+    },
+    "243": {
+      "4": {
+        "1": {
+          "id": 243,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 243,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23007
+        }
+      },
+      "7": {
+        "1": {
+          "id": 243,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23007
+        }
+      }
+    },
+    "244": {
+      "4": {
+        "2": {
+          "id": 244,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 244,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23107
+        }
+      },
+      "7": {
+        "2": {
+          "id": 244,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23107
+        }
+      }
+    },
+    "245": {
+      "4": {
+        "1": {
+          "id": 245,
+          "quality": 4,
+          "type": 1,
+          "attr": []
+        }
+      },
+      "6": {
+        "1": {
+          "id": 245,
+          "quality": 6,
+          "type": 1,
+          "attr": [
+            1
+          ],
+          "skillGroupId": 23008
+        }
+      },
+      "7": {
+        "1": {
+          "id": 245,
+          "quality": 7,
+          "type": 1,
+          "attr": [
+            2
+          ],
+          "skillGroupId": 23008
+        }
+      }
+    },
+    "246": {
+      "4": {
+        "2": {
+          "id": 246,
+          "quality": 4,
+          "type": 2,
+          "attr": []
+        }
+      },
+      "6": {
+        "2": {
+          "id": 246,
+          "quality": 6,
+          "type": 2,
+          "attr": [
+            3
+          ],
+          "skillGroupId": 23108
+        }
+      },
+      "7": {
+        "2": {
+          "id": 246,
+          "quality": 7,
+          "type": 2,
+          "attr": [
+            4
+          ],
+          "skillGroupId": 23108
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,497 @@
+{
+  "_table": "ValhallaFormationKnotEntryConfig",
+  "_rows": 38,
+  "_type": "object",
+  "_firstKeys": "id,weight,buff,entryName,entryDesc,must,numShow",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "weight": 100,
+        "buff": [
+          101,
+          102
+        ],
+        "entryName": 30104850,
+        "entryDesc": 30104900,
+        "must": 1,
+        "numShow": 0
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "weight": 100,
+        "buff": [
+          201,
+          202
+        ],
+        "entryName": 30104851,
+        "entryDesc": 30104901,
+        "must": 1,
+        "numShow": 0
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "weight": 200,
+        "buff": [
+          301,
+          302
+        ],
+        "entryName": 30104852,
+        "entryDesc": 30104902,
+        "must": 1,
+        "numShow": 0
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "weight": 100,
+      "buff": [
+        101,
+        102
+      ],
+      "entryName": 30104850,
+      "entryDesc": 30104900,
+      "must": 1,
+      "numShow": 0
+    },
+    "2": {
+      "id": 2,
+      "weight": 100,
+      "buff": [
+        201,
+        202
+      ],
+      "entryName": 30104851,
+      "entryDesc": 30104901,
+      "must": 1,
+      "numShow": 0
+    },
+    "3": {
+      "id": 3,
+      "weight": 200,
+      "buff": [
+        301,
+        302
+      ],
+      "entryName": 30104852,
+      "entryDesc": 30104902,
+      "must": 1,
+      "numShow": 0
+    },
+    "4": {
+      "id": 4,
+      "weight": 200,
+      "buff": [
+        401,
+        402
+      ],
+      "entryName": 30104853,
+      "entryDesc": 30104903,
+      "must": 1,
+      "numShow": 0
+    },
+    "11": {
+      "id": 11,
+      "weight": 400,
+      "buff": [
+        1101,
+        1102
+      ],
+      "entryName": 30104854,
+      "entryDesc": 30104904,
+      "must": 1,
+      "numShow": 0
+    },
+    "12": {
+      "id": 12,
+      "weight": 400,
+      "buff": [
+        1201,
+        1202
+      ],
+      "entryName": 30104855,
+      "entryDesc": 30104905,
+      "must": 1,
+      "numShow": 0
+    },
+    "13": {
+      "id": 13,
+      "weight": 400,
+      "buff": [
+        1301,
+        1302
+      ],
+      "entryName": 30104856,
+      "entryDesc": 30104906,
+      "must": 1,
+      "numShow": 0
+    },
+    "14": {
+      "id": 14,
+      "weight": 400,
+      "buff": [
+        1401,
+        1402
+      ],
+      "entryName": 30104857,
+      "entryDesc": 30104907,
+      "must": 1,
+      "numShow": 0
+    },
+    "15": {
+      "id": 15,
+      "weight": 400,
+      "buff": [
+        1501,
+        1502
+      ],
+      "entryName": 30104858,
+      "entryDesc": 30104908,
+      "must": 1,
+      "numShow": 0
+    },
+    "21": {
+      "id": 21,
+      "weight": 100,
+      "buff": [
+        2101
+      ],
+      "entryName": 30104859,
+      "entryDesc": 30104909,
+      "must": 0,
+      "numShow": 1
+    },
+    "22": {
+      "id": 22,
+      "weight": 100,
+      "buff": [
+        2201
+      ],
+      "entryName": 30104860,
+      "entryDesc": 30104910,
+      "must": 0,
+      "numShow": 1
+    },
+    "30": {
+      "id": 30,
+      "weight": 75,
+      "buff": [
+        3001
+      ],
+      "entryName": 30104861,
+      "entryDesc": 30104911,
+      "must": 0,
+      "numShow": 1
+    },
+    "31": {
+      "id": 31,
+      "weight": 75,
+      "buff": [
+        3102,
+        3101
+      ],
+      "entryName": 30104862,
+      "entryDesc": 30104912,
+      "must": 0,
+      "numShow": 1
+    },
+    "32": {
+      "id": 32,
+      "weight": 75,
+      "buff": [
+        3202,
+        3201
+      ],
+      "entryName": 30104863,
+      "entryDesc": 30104913,
+      "must": 0,
+      "numShow": 1
+    },
+    "33": {
+      "id": 33,
+      "weight": 75,
+      "buff": [
+        3302,
+        3301
+      ],
+      "entryName": 30104864,
+      "entryDesc": 30104914,
+      "must": 0,
+      "numShow": 1
+    },
+    "34": {
+      "id": 34,
+      "weight": 75,
+      "buff": [
+        3402,
+        3401
+      ],
+      "entryName": 30104865,
+      "entryDesc": 30104915,
+      "must": 0,
+      "numShow": 1
+    },
+    "35": {
+      "id": 35,
+      "weight": 75,
+      "buff": [
+        3502,
+        3501
+      ],
+      "entryName": 30104866,
+      "entryDesc": 30104916,
+      "must": 0,
+      "numShow": 1
+    },
+    "40": {
+      "id": 40,
+      "weight": 75,
+      "buff": [
+        4001
+      ],
+      "entryName": 30104867,
+      "entryDesc": 30104917,
+      "must": 0,
+      "numShow": 1
+    },
+    "41": {
+      "id": 41,
+      "weight": 75,
+      "buff": [
+        4102,
+        4101
+      ],
+      "entryName": 30104868,
+      "entryDesc": 30104918,
+      "must": 0,
+      "numShow": 1
+    },
+    "42": {
+      "id": 42,
+      "weight": 75,
+      "buff": [
+        4202,
+        4201
+      ],
+      "entryName": 30104869,
+      "entryDesc": 30104919,
+      "must": 0,
+      "numShow": 1
+    },
+    "43": {
+      "id": 43,
+      "weight": 75,
+      "buff": [
+        4302,
+        4301
+      ],
+      "entryName": 30104870,
+      "entryDesc": 30104920,
+      "must": 0,
+      "numShow": 1
+    },
+    "44": {
+      "id": 44,
+      "weight": 75,
+      "buff": [
+        4402,
+        4401
+      ],
+      "entryName": 30104871,
+      "entryDesc": 30104921,
+      "must": 0,
+      "numShow": 1
+    },
+    "45": {
+      "id": 45,
+      "weight": 75,
+      "buff": [
+        4502,
+        4501
+      ],
+      "entryName": 30104872,
+      "entryDesc": 30104922,
+      "must": 0,
+      "numShow": 1
+    },
+    "50": {
+      "id": 50,
+      "weight": 400,
+      "buff": [
+        5001
+      ],
+      "entryName": 30104873,
+      "entryDesc": 30104923,
+      "must": 0,
+      "numShow": 1
+    },
+    "51": {
+      "id": 51,
+      "weight": 400,
+      "buff": [
+        5101
+      ],
+      "entryName": 30104874,
+      "entryDesc": 30104924,
+      "must": 0,
+      "numShow": 1
+    },
+    "52": {
+      "id": 52,
+      "weight": 400,
+      "buff": [
+        5201
+      ],
+      "entryName": 30104875,
+      "entryDesc": 30104925,
+      "must": 0,
+      "numShow": 1
+    },
+    "53": {
+      "id": 53,
+      "weight": 400,
+      "buff": [
+        5301
+      ],
+      "entryName": 30104876,
+      "entryDesc": 30104926,
+      "must": 0,
+      "numShow": 1
+    },
+    "54": {
+      "id": 54,
+      "weight": 400,
+      "buff": [
+        5401
+      ],
+      "entryName": 30104877,
+      "entryDesc": 30104927,
+      "must": 0,
+      "numShow": 1
+    },
+    "55": {
+      "id": 55,
+      "weight": 400,
+      "buff": [
+        5501
+      ],
+      "entryName": 30104878,
+      "entryDesc": 30104928,
+      "must": 0,
+      "numShow": 1
+    },
+    "56": {
+      "id": 56,
+      "weight": 400,
+      "buff": [
+        5601
+      ],
+      "entryName": 30104879,
+      "entryDesc": 30104929,
+      "must": 0,
+      "numShow": 1
+    },
+    "61": {
+      "id": 61,
+      "weight": 800,
+      "buff": [
+        6101,
+        6102
+      ],
+      "entryName": 30104880,
+      "entryDesc": 30104930,
+      "must": 0,
+      "numShow": 0
+    },
+    "62": {
+      "id": 62,
+      "weight": 800,
+      "buff": [
+        6201,
+        6202
+      ],
+      "entryName": 30104881,
+      "entryDesc": 30104931,
+      "must": 0,
+      "numShow": 0
+    },
+    "63": {
+      "id": 63,
+      "weight": 800,
+      "buff": [
+        6301,
+        6302
+      ],
+      "entryName": 30104882,
+      "entryDesc": 30104932,
+      "must": 0,
+      "numShow": 0
+    },
+    "64": {
+      "id": 64,
+      "weight": 800,
+      "buff": [
+        6401,
+        6402
+      ],
+      "entryName": 30104883,
+      "entryDesc": 30104933,
+      "must": 0,
+      "numShow": 0
+    },
+    "65": {
+      "id": 65,
+      "weight": 800,
+      "buff": [
+        6501,
+        6502
+      ],
+      "entryName": 30104884,
+      "entryDesc": 30104934,
+      "must": 0,
+      "numShow": 0
+    },
+    "66": {
+      "id": 66,
+      "weight": 800,
+      "buff": [
+        6601,
+        6602
+      ],
+      "entryName": 30104885,
+      "entryDesc": 30104935,
+      "must": 0,
+      "numShow": 0
+    },
+    "67": {
+      "id": 67,
+      "weight": 800,
+      "buff": [
+        6701,
+        6702
+      ],
+      "entryName": 30104886,
+      "entryDesc": 30104936,
+      "must": 0,
+      "numShow": 0
+    },
+    "68": {
+      "id": 68,
+      "weight": 800,
+      "buff": [
+        6801,
+        6802
+      ],
+      "entryName": 30104887,
+      "entryDesc": 30104937,
+      "must": 0,
+      "numShow": 0
+    }
+  }
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo sửa item và bàn giao test</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-s-a-item-ti-p-v-b-n-giao-test-th-c-ng">Session Report — sửa item tiếp và bàn giao test thủ công</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Theo yêu cầu mới: tập trung sửa source và kiểm bằng fixture, người dùng tự kiểm nghiệm game. Không thao tác UI tiếp, không dùng vật phẩm nicky và không sửa đăng nhập.</li>
+<li>Sửa và triển khai đúng họ hồn ngọc: 100081–100086 là cấp 1–6; 100091–100096 là placeholder cấp 1–6, được resolve qua RewardGrantService cho code/mail. Mở nhiều rương sinh lựa chọn riêng từng viên.</li>
+<li>Phục hồi 8 hộp emoji vĩnh viễn và 100019 → Pet 85401 theo config cố định. Đã triển khai S1/S2 với backup/hash guard và test staging trước thay source.</li>
+<li>Full fixture production 940 row: 830 qua tiêu chí cơ bản, 105 còn fail-closed, 5 pending. <strong>Chưa hoàn tất toàn bộ lỗi item.</strong></li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source game local/production: <code>src/handlers/item.js</code>, <code>src/services/RandomUsableItemRewardService.js</code>, <code>src/services/RewardGrantService.js</code>; thêm <code>src/services/FixedEmojiItemService.js</code>.</li>
+<li>Tool mới: <code>test_gem_family_corrected_20260905.js</code>, <code>test_fixed_items_20260905.js</code>, <code>deploy_items_corrected_20260905.py</code>, <code>audit_items_manual_handoff_20260905.py</code>.</li>
+<li>Tool sai cũ <code>test_random_gem_level_20260905.js</code> và <code>deploy_random_gem5_fix_20260905.py</code> đã đặt chặn chạy với thông báo WITHDRAWN; không dùng lại.</li>
+<li>Báo cáo/hướng dẫn: <code>items_manual_test_20260905.md/.html</code>, <code>items_followup_fix_20260905.md/.html</code>, TXT còn chờ <code>items_remaining_manual_20260905.txt</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/items_corrected_deploy_20260905_074023.json</code>, <code>items_corrected_deploy_20260905_074307.json</code>, <code>items_manual_handoff_fixture_20260905.json</code>, <code>items_manual_handoff_health_20260905.json</code>.</li>
+<li>Backup local trước hiệu chỉnh: <code>_ai_workbench/backups/items_correction_20260905/</code>. Backup production bản đúng: <code>/linhhoasu/_ai_workbench/backups/items_corrected_20260905_074023/</code> và <code>/linhhoasu/_ai_workbench/backups/items_corrected_20260905_074307/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhận định sai 100084 là cấp 5 và deploy sai cấp</td>
+<td>Lấy suffix icon làm cấp, chưa đọc LanguageConfig; suffix thực là quality</td>
+<td>Công khai đính chính; chốt 100085 là cấp 5 từ cả tên/mô tả/param 1075/GemLevelConfig; deploy bản đúng 074023</td>
+<td>Luôn đối chiếu ID, tên, target config; không coi số trong icon là level</td>
+</tr>
+<tr>
+<td>Bài test cũ PASS sai</td>
+<td>Expected 100084→cấp5 được tự đặt giống patch sai</td>
+<td>Thu hồi test; test đủ 6 cấp và 6 placeholder, đúng 100085→25041–25044</td>
+<td>Oracle độc lập với implementation</td>
+</tr>
+<tr>
+<td>Random cũ chỉ lấy ID đầu</td>
+<td>pickGemRewardIdByLevel trả ids[0]</td>
+<td>Chọn trong 4 type đúng cấp; mỗi viên bốc riêng</td>
+<td>Test multi-count và target membership; không dùng sample thay bằng chứng tỷ lệ gốc</td>
+</tr>
+<tr>
+<td>Code/mail nhận placeholder gem vào bag</td>
+<td>Router chưa nhận diện type99 gem</td>
+<td>Route gemPack cho 100091–100096, không tự mở rương usable</td>
+<td>Phân biệt placeholder với vật phẩm dùng trong túi</td>
+</tr>
+<tr>
+<td>8 hộp emoji không mở</td>
+<td>type102 không có pool dù thực tế là unlock cố định</td>
+<td>Registry ID/group có 10 emoji; grant permanent type2, push 1802 đúng receiver</td>
+<td>Không ép mọi type102 thành random</td>
+</tr>
+<tr>
+<td>Hộp emoji đã có/multi dùng có thể nuốt hộp</td>
+<td>Không có thưởng thêm khi đủ group</td>
+<td>Reject trước consume, giữ hộp; thiếu một phần thì chỉ cấp phần thiếu</td>
+<td>Test owned/partial/multi/JSON roundtrip</td>
+</tr>
+<tr>
+<td>Xích Viêm Tường Long không grant</td>
+<td>100019 không được map tới PetConfig 85401</td>
+<td>Fixed plan với icon/quality/appearId validation</td>
+<td>Không chọn pet bất kỳ cùng phẩm chất</td>
+</tr>
+<tr>
+<td>Lần deploy gem đầu lỗi require/model</td>
+<td>Đặt item ngoài cây module rồi trộn source production/stage trong cùng tiến trình</td>
+<td>Tool thay thế dùng một cây source theo LHS_APP_ROOT và cùng PlayerService</td>
+<td>Không bỏ gate test vì mô-đun path sai</td>
+</tr>
+<tr>
+<td>Tool deploy cũ rollback sai nhánh</td>
+<td>Khôi phục/restart cả khi chưa install; không tách trạng thái</td>
+<td>Thu hồi tool; tool mới chỉ rollback sau touched, giữ preimage/hash guard</td>
+<td>Không restart khi preflight fail</td>
+</tr>
+<tr>
+<td>Script hậu kiểm cũ báo hash mismatch</td>
+<td>Pin hash release trước khi source vừa thay</td>
+<td>Audit mới ghép manifest deployed baseline + release đúng mới nhất</td>
+<td>Không đổi expected bằng current hash mù</td>
+</tr>
+<tr>
+<td>Powershell heredoc/node path sai</td>
+<td>Dùng cú pháp Bash / thiếu một cấp ../</td>
+<td>Chuyển script file dưới tools và resolve đúng root</td>
+<td>Dùng PowerShell-native command, test path trước run</td>
+</tr>
+</tbody></table></div>
+<p>Bản sai <code>random_gem5_fix_deploy_20260905_073354.json</code> từng tồn tại từ khoảng 07:34 UTC tới lúc bản 074023 thay thế. Nó có thể làm các rương gem phát sai cấp (và cấp6 không có target cấp7). Không lấy tồn kho hiện tại để khẳng định chưa ai bị ảnh hưởng; chưa có ledger đủ để bù/thu hồi. Không tự sửa quà người thật.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Icon random_gem_06 là quality6 tương ứng Hồn ngọc cấp5; paired placeholder param1075 bổ trợ ánh xạ. Registry chứa ID cụ thể và validate metadata thay vì đoán toàn bộ theo tên.</li>
+<li>Mỗi type102 cần phân loại đúng: random, fixed grant, unlock hay flow riêng.</li>
+<li>Emoji receiver 1802 nhận <code>{type:2,id}</code> từng emoji. Không dùng request 1810 làm push. Unlock item khác mở bán event: nhận một hộp đã sở hữu không tự mở mọi event.</li>
+<li>Người dùng đã nhận phần kiểm nghiệm native UI; agent không cần tạo tài khoản, bấm rương hay kiểm login nữa.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li><strong>100085 mở được thành một Hồn ngọc cấp5</strong> (25041/25042/25043/25044), đúng số lượng. 100084 trả cấp4; 100086 trả cấp6.</li>
+<li>Test gem: 240 draw từ 6 rương usable + 240 draw từ 6 placeholder qua activity, validate cấp/target/count/multi. Phân bố hiện tại đều trong 4 loại; chưa chứng minh giống xác suất server gốc.</li>
+<li>Test fixed: 8 hộp/32 ca, 80 emoji, không trừ tiền, duplicate/multi giữ item; 100019×2 sinh 2 Pet85401 UID riêng.</li>
+<li>Hồi quy source local hiện tại: 470 native/940 grant/474 rương case/150 đan/4 receiver; ngoại quan 2.192 ID/234 assertion; token11/cash11/Activity7 PASS.</li>
+<li>Production stage contract và production gem contract PASS; hash deployed 17 file theo manifest hợp nhất khớp, ready S1/S2 HTTP200. Hậu kiểm 07:59:02 UTC: bot real/virtual 580/580 mỗi server, 2.466 slot, multiplier ×2, invalid0. Core714 bảng PASS.</li>
+<li>9 ID newly restored (8 emoji +100019); 197 phục hồi trước, tổng206 trong danh sách311 ban đầu. Gem family là hiệu chỉnh thêm, không cộng lần hai vào 206.</li>
+<li>Còn105 fail-closed: 102 random +90021/90022 +option1 của90151. Hai rương cha93065/100803 vẫn bị ảnh hưởng qua rương con.</li>
+<li>Curios duplicate còn pending conversion; P4 2 người/5 bản sao vẫn chưa commit; các entitlement đặc thù chưa đủ test toàn bộ. Không báo “fix tất cả” nếu còn thiếu dữ liệu gốc.</li>
+<li>Account/player QA cũ của nhánh login đã cleanup exact, remaining0; không động vào nhân vật nicky.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng test theo <a href="items_manual_test_20260905.html">hướng dẫn HTML</a>, ưu tiên100085×1 → hệ Hồn ngọc → relog; không spam mở hàng loạt nếu sai.</li>
+<li>Lấy bảng drop/pool/tỷ lệ chuẩn cho105 ID và quy đổi Curios; nếu muốn thiết kế thưởng khác gốc, chủ game chốt riêng trước implement.</li>
+<li>Chỉ chuyển dữ liệu lịch sử sau khi duyệt preview và đủ receipt; không reroll/bù theo suy đoán.</li>
+<li>Ghi phản hồi bằng server/nhân vật/giờ/itemID/trước-sau/ảnh; không gửi mã code còn hiệu lực hoặc credentials.</li>
+</ol></main></body></html>

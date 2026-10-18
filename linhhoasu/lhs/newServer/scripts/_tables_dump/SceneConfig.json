@@ -1,0 +1,390 @@
+{
+  "_table": "SceneConfig",
+  "_rows": 30,
+  "_type": "object",
+  "_firstKeys": "sceneId,mapfilename,battleName,mapBossBg,mapBgm,miniMap,bmMap,mapName,mapBossShow,mapBossBanner1,mapBossBanner2",
+  "_sample": [
+    {
+      "10001": {
+        "sceneId": 10001,
+        "mapfilename": "map001",
+        "battleName": "battle_001",
+        "mapBossBg": "bzh_bm_banner01",
+        "mapBgm": "mapBgm001",
+        "miniMap": "minimap_001",
+        "bmMap": "main_bm_map_001",
+        "mapName": 30030511,
+        "mapBossShow": 201,
+        "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+        "mapBossBanner2": "main_icon_baoxiangguai_pt"
+      }
+    },
+    {
+      "10004": {
+        "sceneId": 10004,
+        "mapfilename": "map004",
+        "battleName": "battle_002",
+        "mapBossBg": "bzh_bm_banner02",
+        "mapBgm": "mapBgm002",
+        "miniMap": "minimap_004",
+        "bmMap": "main_bm_map_004",
+        "mapName": 30030512,
+        "mapBossShow": 202,
+        "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+        "mapBossBanner2": "main_icon_baoxiangguai_pt"
+      }
+    },
+    {
+      "10007": {
+        "sceneId": 10007,
+        "mapfilename": "map007",
+        "battleName": "battle_003",
+        "mapBossBg": "bzh_bm_banner03",
+        "mapBgm": "mapBgm003",
+        "miniMap": "minimap_007",
+        "bmMap": "main_bm_map_007",
+        "mapName": 30030513,
+        "mapBossShow": 203,
+        "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+        "mapBossBanner2": "main_icon_baoxiangguai_pt"
+      }
+    }
+  ],
+  "data": {
+    "10001": {
+      "sceneId": 10001,
+      "mapfilename": "map001",
+      "battleName": "battle_001",
+      "mapBossBg": "bzh_bm_banner01",
+      "mapBgm": "mapBgm001",
+      "miniMap": "minimap_001",
+      "bmMap": "main_bm_map_001",
+      "mapName": 30030511,
+      "mapBossShow": 201,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10004": {
+      "sceneId": 10004,
+      "mapfilename": "map004",
+      "battleName": "battle_002",
+      "mapBossBg": "bzh_bm_banner02",
+      "mapBgm": "mapBgm002",
+      "miniMap": "minimap_004",
+      "bmMap": "main_bm_map_004",
+      "mapName": 30030512,
+      "mapBossShow": 202,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10007": {
+      "sceneId": 10007,
+      "mapfilename": "map007",
+      "battleName": "battle_003",
+      "mapBossBg": "bzh_bm_banner03",
+      "mapBgm": "mapBgm003",
+      "miniMap": "minimap_007",
+      "bmMap": "main_bm_map_007",
+      "mapName": 30030513,
+      "mapBossShow": 203,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10010": {
+      "sceneId": 10010,
+      "mapfilename": "map010",
+      "battleName": "battle_004",
+      "mapBossBg": "bzh_bm_banner04",
+      "mapBgm": "mapBgm004",
+      "miniMap": "minimap_010",
+      "bmMap": "main_bm_map_010",
+      "mapName": 30030514,
+      "mapBossShow": 204,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10013": {
+      "sceneId": 10013,
+      "mapfilename": "map013",
+      "battleName": "battle_005",
+      "mapBossBg": "bzh_bm_banner05",
+      "mapBgm": "mapBgm005",
+      "miniMap": "minimap_013",
+      "bmMap": "main_bm_map_013",
+      "mapName": 30030515,
+      "mapBossShow": 205,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10016": {
+      "sceneId": 10016,
+      "mapfilename": "map016",
+      "battleName": "battle_006",
+      "mapBossBg": "bzh_bm_banner06",
+      "mapBgm": "mapBgm006",
+      "miniMap": "minimap_016",
+      "bmMap": "main_bm_map_016",
+      "mapName": 30030516,
+      "mapBossShow": 206,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10019": {
+      "sceneId": 10019,
+      "mapfilename": "map019",
+      "battleName": "battle_001",
+      "mapBossBg": "bzh_bm_banner07",
+      "mapBgm": "mapBgm001",
+      "miniMap": "minimap_019",
+      "bmMap": "main_bm_map_019",
+      "mapName": 30030511,
+      "mapBossShow": 201,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10022": {
+      "sceneId": 10022,
+      "mapfilename": "map022",
+      "battleName": "battle_002",
+      "mapBossBg": "bzh_bm_banner08",
+      "mapBgm": "mapBgm002",
+      "miniMap": "minimap_022",
+      "bmMap": "main_bm_map_022",
+      "mapName": 30030512,
+      "mapBossShow": 202,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10025": {
+      "sceneId": 10025,
+      "mapfilename": "map025",
+      "battleName": "battle_003",
+      "mapBossBg": "bzh_bm_banner09",
+      "mapBgm": "mapBgm003",
+      "miniMap": "minimap_025",
+      "bmMap": "main_bm_map_025",
+      "mapName": 30030513,
+      "mapBossShow": 203,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10028": {
+      "sceneId": 10028,
+      "mapfilename": "map010",
+      "battleName": "battle_004",
+      "mapBossBg": "bzh_bm_banner04",
+      "mapBgm": "mapBgm004",
+      "miniMap": "minimap_010",
+      "bmMap": "main_bm_map_010",
+      "mapName": 30030514,
+      "mapBossShow": 204,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10031": {
+      "sceneId": 10031,
+      "mapfilename": "map031",
+      "battleName": "battle_005",
+      "mapBossBg": "bzh_bm_banner11",
+      "mapBgm": "mapBgm005",
+      "miniMap": "minimap_031",
+      "bmMap": "main_bm_map_031",
+      "mapName": 30030515,
+      "mapBossShow": 205,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "10034": {
+      "sceneId": 10034,
+      "mapfilename": "map034",
+      "battleName": "battle_006",
+      "mapBossBg": "bzh_bm_banner12",
+      "mapBgm": "mapBgm006",
+      "miniMap": "minimap_034",
+      "bmMap": "main_bm_map_034",
+      "mapName": 30030516,
+      "mapBossShow": 206,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "20001": {
+      "sceneId": 20001,
+      "mapfilename": "map_dungeon_001",
+      "battleName": "battle_dungeon",
+      "mapBgm": "bgm_dungeon"
+    },
+    "20002": {
+      "sceneId": 20002,
+      "mapfilename": "map_dungeon_002",
+      "battleName": "battle_dungeon",
+      "mapBgm": "bgm_dungeon"
+    },
+    "20003": {
+      "sceneId": 20003,
+      "mapfilename": "map_dungeon_003",
+      "battleName": "battle_dungeon",
+      "mapBgm": "bgm_dungeon"
+    },
+    "30001": {
+      "sceneId": 30001,
+      "mapfilename": "map_temple_001",
+      "battleName": "battle_temple",
+      "mapBgm": "bgm_temple"
+    },
+    "40001": {
+      "sceneId": 40001,
+      "mapfilename": "map_crossRival_001",
+      "battleName": "battle_crossRival",
+      "mapBgm": "bgm_dungeon",
+      "miniMap": "minimap_crossRival_001",
+      "bmMap": "xyzf_bm_map_001",
+      "mapName": 30030520
+    },
+    "40002": {
+      "sceneId": 40002,
+      "mapfilename": "map_crossRival_001",
+      "battleName": "battle_crossRival",
+      "mapBgm": "bgm_dungeon",
+      "miniMap": "minimap_crossRival_002",
+      "bmMap": "xyzf_bm_map_002",
+      "mapName": 30030521
+    },
+    "40003": {
+      "sceneId": 40003,
+      "mapfilename": "map_crossRival_001",
+      "battleName": "battle_crossRival",
+      "mapBgm": "bgm_dungeon",
+      "miniMap": "minimap_crossRival_003",
+      "bmMap": "xyzf_bm_map_003",
+      "mapName": 30030522
+    },
+    "40004": {
+      "sceneId": 40004,
+      "mapfilename": "map_crossRival_001",
+      "battleName": "battle_crossRival",
+      "mapBgm": "bgm_dungeon",
+      "miniMap": "minimap_crossRival_004",
+      "bmMap": "xyzf_bm_map_004",
+      "mapName": 30030523
+    },
+    "70001": {
+      "sceneId": 70001,
+      "mapfilename": "map_hotSpring_001",
+      "battleName": "",
+      "mapBgm": "bgm_hotSpring_001",
+      "miniMap": "minimap_hotSpring_001",
+      "bmMap": "main_bm_map_hotSpring_001",
+      "mapName": 30030528
+    },
+    "200021": {
+      "sceneId": 200021,
+      "mapfilename": "map_dungeon_0021",
+      "battleName": "battle_dungeon",
+      "mapBgm": "bgm_petSoul_summon"
+    },
+    "990001": {
+      "sceneId": 990001,
+      "mapfilename": "map_goose_001",
+      "battleName": "battle_goose",
+      "mapBossBg": "bzh_bm_banner_goose",
+      "mapBgm": "map_goose",
+      "miniMap": "minimap_goose",
+      "bmMap": "main_bm_map_goose",
+      "mapName": 30030517,
+      "mapBossShow": 207,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "990002": {
+      "sceneId": 990002,
+      "mapfilename": "map_springFestival_001",
+      "battleName": "battle_springFestival",
+      "mapBossBg": "bzh_bm_banner_cj",
+      "mapBgm": "map_springFestival",
+      "miniMap": "minimap_springFestival",
+      "bmMap": "main_bm_map_springFestival",
+      "mapName": 30030518,
+      "mapBossShow": 208,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "990003": {
+      "sceneId": 990003,
+      "mapfilename": "map_whiteSnake_001",
+      "battleName": "battle_whiteSnake",
+      "mapBossBg": "bzh_bm_banner_whiteSnake",
+      "mapBgm": "map_whiteSnake",
+      "miniMap": "minimap_whiteSnake",
+      "bmMap": "main_bm_map_whiteSnake",
+      "mapName": 30030519,
+      "mapBossShow": 209,
+      "mapBossBanner1": "main_icon_baoxiangguai_pt2",
+      "mapBossBanner2": "main_icon_baoxiangguai_pt"
+    },
+    "990004": {
+      "sceneId": 990004,
+      "mapfilename": "map_westJourney_001",
+      "battleName": "battle_westJourney",
+      "mapBossBg": "bzh_bm_banner_westJourney",
+      "mapBgm": "map_westJourney",
+      "miniMap": "minimap_westJourney",
+      "bmMap": "main_bm_map_westJourney",
+      "mapName": 30030524,
+      "mapBossShow": 210,
+      "mapBossBanner1": "main_icon_baoxiangguai_ts2",
+      "mapBossBanner2": "main_icon_baoxiangguai_ts"
+    },
+    "990005": {
+      "sceneId": 990005,
+      "mapfilename": "map_winterFestival_001",
+      "battleName": "battle_winterFestival",
+      "mapBossBg": "bzh_bm_banner_shsd",
+      "mapBgm": "map_winterFestival",
+      "miniMap": "minimap_winterFestival",
+      "bmMap": "main_bm_map_winterFestival",
+      "mapName": 30030525,
+      "mapBossShow": 211,
+      "mapBossBanner1": "main_icon_baoxiangguai_ts2",
+      "mapBossBanner2": "main_icon_baoxiangguai_ts"
+    },
+    "990006": {
+      "sceneId": 990006,
+      "mapfilename": "map_Ethereal_001",
+      "battleName": "battle_Ethereal",
+      "mapBossBg": "bzh_bm_banner_qiannvyouhun",
+      "mapBgm": "mapBgm007",
+      "miniMap": "minimap_qiannvyouhun",
+      "bmMap": "main_bm_map_qiannvyouhun",
+      "mapName": 30030526,
+      "mapBossShow": 212,
+      "mapBossBanner1": "main_icon_baoxiangguai_ts2",
+      "mapBossBanner2": "main_icon_baoxiangguai_ts"
+    },
+    "990007": {
+      "sceneId": 990007,
+      "mapfilename": "map_hotSpring_002",
+      "battleName": "battle_Hotspring",
+      "mapBossBg": "bzh_bm_banner_ycxj",
+      "mapBgm": "bgm_hotSpring_002",
+      "miniMap": "minimap_hotSpring_002",
+      "bmMap": "main_bm_map_hotSpring_002",
+      "mapName": 30030527,
+      "mapBossShow": 213,
+      "mapBossBanner1": "main_icon_baoxiangguai_ts2",
+      "mapBossBanner2": "main_icon_baoxiangguai_ts"
+    },
+    "990008": {
+      "sceneId": 990008,
+      "mapfilename": "map_greatRuler_001",
+      "battleName": "battle_greatRuler",
+      "mapBossBg": "bzh_bm_banner_dazhuzai",
+      "mapBgm": "mapBgm008",
+      "miniMap": "minimap_dazhuzai",
+      "bmMap": "main_bm_map_dazhuzai",
+      "mapName": 30030529,
+      "mapBossShow": 214,
+      "mapBossBanner1": "main_icon_baoxiangguai_ts2",
+      "mapBossBanner2": "main_icon_baoxiangguai_ts"
+    }
+  }
+}

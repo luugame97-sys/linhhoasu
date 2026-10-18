@@ -1,0 +1,137 @@
+{
+  "_table": "DungeonBaseConfig",
+  "_rows": 36,
+  "_type": "object",
+  "_firstKeys": "(obj)[hpRecover|dungeonMondayOpenTime|dungeonDailyOpenTime|taskRefreshCost|taskNumPerDay]",
+  "_sample": [
+    {
+      "hpRecover": [
+        1,
+        1000
+      ]
+    },
+    {
+      "dungeonMondayOpenTime": [
+        43200,
+        82800
+      ]
+    },
+    {
+      "dungeonDailyOpenTime": [
+        36000,
+        82800
+      ]
+    }
+  ],
+  "data": {
+    "hpRecover": [
+      1,
+      1000
+    ],
+    "dungeonMondayOpenTime": [
+      43200,
+      82800
+    ],
+    "dungeonDailyOpenTime": [
+      36000,
+      82800
+    ],
+    "taskRefreshCost": {
+      "id": 97,
+      "count": 1
+    },
+    "taskNumPerDay": 4,
+    "slotCatTimePerWeek": 5,
+    "bosssettleTime": 1800,
+    "bossKillRewardTimePerDay": 1,
+    "bossAttackRewardTimePerDay": 1,
+    "reviveCost": {
+      "id": 1,
+      "count": 100
+    },
+    "reviveTime": 30,
+    "battleCD": 15,
+    "boxPerFloor": 20,
+    "boxRefreshTime": [
+      36000,
+      37800,
+      39600,
+      41400,
+      43200,
+      45000,
+      46800,
+      48600,
+      50400,
+      52200,
+      54000,
+      55800,
+      57600,
+      59400,
+      61200,
+      63000,
+      64800,
+      66600,
+      68400,
+      70200,
+      72000,
+      73800,
+      75600,
+      77400,
+      79200,
+      81000
+    ],
+    "boxMaxPerDay": 4,
+    "sinStepResetTime": 1200,
+    "sinDescTime": [
+      90,
+      1
+    ],
+    "sinDescLimit": 301,
+    "sinWash": {
+      "95": 100
+    },
+    "sinJudge": 3,
+    "sinBoardNumber": 4,
+    "sinBoardThreshold": 301,
+    "sinBoardRewardTimes": 1,
+    "bossRefreshTime": [
+      45000,
+      66600,
+      77400
+    ],
+    "activeMaxPerDay": 450,
+    "interactiveDistance": 500,
+    "rejectDuelTime": 3,
+    "autoAttackBoss": [
+      {
+        "type": 5,
+        "value": 17,
+        "cond": 4
+      }
+    ],
+    "autoCloseBattle": 30,
+    "bossKillAccelerate": [
+      [
+        600,
+        10492
+      ],
+      [
+        900,
+        10493
+      ],
+      [
+        1200,
+        10494
+      ]
+    ],
+    "catchTime": 2,
+    "onceLimitCatchTime": 5,
+    "deadRefresh": [
+      210,
+      270
+    ],
+    "killMessage": 1064,
+    "killRefresh": 600,
+    "catchCountdown": 30
+  }
+}

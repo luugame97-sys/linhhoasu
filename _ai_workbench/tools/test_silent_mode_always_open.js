@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs');
+const main=fs.readFileSync(process.argv[2],'utf8'),index=fs.readFileSync(process.argv[3],'utf8');
+assert.equal((main.match(/_.onSilentMode=function\(\)\{U9\.autoConfig\.isSilentMode=!U9\.autoConfig\.isSilentMode\}/g)||[]).length,1);
+assert.equal((main.match(/silentModeOpenLab\.visible=!1,this\.silentModeLab\.textColor=5067090/g)||[]).length,1);
+assert.equal(main.includes('silenceDealOpenDay>=T.serverOpenDay?(this.silentModeBox.selected=!1'),false);
+assert.equal(main.includes('if(U9.autoConfig.isSilentMode)'),true);
+assert.equal(main.includes('t.writeBoolean(e.isSilentMode)'),true);
+assert.equal(main.includes('i.isSilentMode=e.readBoolean()'),true);
+assert.equal(/main\.min_a6195824\.js\?v=20260904_(?:silent_reward_always_open1|auto_delegate_clean_v4)/.test(index),true);
+console.log(JSON.stringify({result:'PASS',checks:7}));

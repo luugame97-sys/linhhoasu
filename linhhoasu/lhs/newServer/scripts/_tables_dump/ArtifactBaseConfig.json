@@ -1,0 +1,267 @@
+{
+  "_table": "ArtifactBaseConfig",
+  "_rows": 22,
+  "_type": "object",
+  "_firstKeys": "(obj)[forgeCountMax|forgeTimeMax|eAttrWeight|eAttrWeightMinus|eAttrNum]",
+  "_sample": [
+    {
+      "forgeCountMax": 7
+    },
+    {
+      "forgeTimeMax": 86400
+    },
+    {
+      "eAttrWeight": 2000
+    }
+  ],
+  "data": {
+    "forgeCountMax": 7,
+    "forgeTimeMax": 86400,
+    "eAttrWeight": 2000,
+    "eAttrWeightMinus": 200,
+    "eAttrNum": {
+      "4": [
+        {
+          "weight": 500,
+          "count": 1
+        },
+        {
+          "weight": 500,
+          "count": 2
+        },
+        {
+          "weight": 0,
+          "count": 3
+        },
+        {
+          "weight": 0,
+          "count": 4
+        }
+      ],
+      "6": [
+        {
+          "weight": 500,
+          "count": 1
+        },
+        {
+          "weight": 350,
+          "count": 2
+        },
+        {
+          "weight": 150,
+          "count": 3
+        },
+        {
+          "weight": 0,
+          "count": 4
+        }
+      ],
+      "7": [
+        {
+          "weight": 0,
+          "count": 1
+        },
+        {
+          "weight": 500,
+          "count": 2
+        },
+        {
+          "weight": 350,
+          "count": 3
+        },
+        {
+          "weight": 150,
+          "count": 4
+        }
+      ]
+    },
+    "eAttrLevelCond": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ],
+    "numMax": 100,
+    "skillGourps": [
+      23010,
+      23011,
+      23012,
+      23013,
+      23014,
+      23015
+    ],
+    "eSkillGourps": [
+      23110,
+      23111,
+      23112,
+      23113,
+      23114,
+      23115
+    ],
+    "skillLvLimit": {
+      "6": [
+        1,
+        6
+      ],
+      "7": [
+        2,
+        10
+      ]
+    },
+    "skillQuality": {
+      "3": [
+        1,
+        2,
+        3
+      ],
+      "4": [
+        4,
+        5,
+        6
+      ],
+      "6": [
+        7,
+        8
+      ],
+      "7": [
+        9,
+        10
+      ]
+    },
+    "forgeConsume": {
+      "6": [
+        {
+          "id": 54,
+          "count": 0
+        },
+        {
+          "id": 54,
+          "count": 1
+        },
+        {
+          "id": 54,
+          "count": 2
+        },
+        {
+          "id": 54,
+          "count": 3
+        },
+        {
+          "id": 54,
+          "count": 4
+        },
+        {
+          "id": 54,
+          "count": 5
+        },
+        {
+          "id": 54,
+          "count": 6
+        }
+      ],
+      "7": [
+        {
+          "id": 54,
+          "count": 1
+        },
+        {
+          "id": 54,
+          "count": 2
+        },
+        {
+          "id": 54,
+          "count": 3
+        },
+        {
+          "id": 54,
+          "count": 4
+        },
+        {
+          "id": 54,
+          "count": 6
+        },
+        {
+          "id": 54,
+          "count": 8
+        },
+        {
+          "id": 54,
+          "count": 10
+        }
+      ]
+    },
+    "shareRefreshTime": 60,
+    "starBuff": {
+      "1": 500,
+      "2": 500,
+      "3": 500,
+      "4": 400,
+      "5": 400,
+      "6": 400,
+      "7": 300,
+      "8": 300,
+      "9": 300,
+      "10": 0
+    },
+    "fitBuff": {
+      "1": 600,
+      "2": 600,
+      "3": 500,
+      "4": 400,
+      "5": 400,
+      "6": 400,
+      "7": 300,
+      "8": 300,
+      "9": 300,
+      "10": 300
+    },
+    "quenchQuality": 7,
+    "resetConsume": [
+      {
+        "id": 193,
+        "count": 5
+      }
+    ],
+    "quenchSelectQuality": {
+      "1": {
+        "id": 194,
+        "count": 1
+      },
+      "2": {
+        "id": 195,
+        "count": 1
+      },
+      "3": {
+        "id": 196,
+        "count": 1
+      },
+      "4": {
+        "id": 197,
+        "count": 1
+      },
+      "5": {
+        "id": 198,
+        "count": 1
+      }
+    },
+    "quenchMatchAttrs": {
+      "51": 1000
+    },
+    "quenchPieceCount": {
+      "191": {
+        "id": 192,
+        "count": 5
+      }
+    },
+    "forgeLevel": 20,
+    "initLvMaxQuality": 6
+  }
+}

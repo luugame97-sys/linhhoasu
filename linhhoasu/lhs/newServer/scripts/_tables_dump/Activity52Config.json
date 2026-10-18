@@ -1,0 +1,74 @@
+{
+  "_table": "Activity52Config",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "activityId,guaranteedTimes,consume,maxMultiple,exchangeId,times,rewards,triggerTimes",
+  "_sample": [
+    {
+      "52001": {
+        "activityId": 52001,
+        "guaranteedTimes": 80,
+        "consume": 233,
+        "maxMultiple": 5,
+        "exchangeId": 232,
+        "times": 80,
+        "rewards": [
+          {
+            "id": 93022,
+            "count": 1
+          }
+        ],
+        "triggerTimes": 2
+      }
+    },
+    {
+      "52061": {
+        "activityId": 52061,
+        "guaranteedTimes": 80,
+        "consume": 233,
+        "maxMultiple": 5,
+        "exchangeId": 232,
+        "times": 80,
+        "rewards": [
+          {
+            "id": 93022,
+            "count": 1
+          }
+        ],
+        "triggerTimes": 2
+      }
+    }
+  ],
+  "data": {
+    "52001": {
+      "activityId": 52001,
+      "guaranteedTimes": 80,
+      "consume": 233,
+      "maxMultiple": 5,
+      "exchangeId": 232,
+      "times": 80,
+      "rewards": [
+        {
+          "id": 93022,
+          "count": 1
+        }
+      ],
+      "triggerTimes": 2
+    },
+    "52061": {
+      "activityId": 52061,
+      "guaranteedTimes": 80,
+      "consume": 233,
+      "maxMultiple": 5,
+      "exchangeId": 232,
+      "times": 80,
+      "rewards": [
+        {
+          "id": 93022,
+          "count": 1
+        }
+      ],
+      "triggerTimes": 2
+    }
+  }
+}

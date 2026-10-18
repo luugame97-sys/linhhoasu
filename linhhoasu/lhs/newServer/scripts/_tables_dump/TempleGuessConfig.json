@@ -1,0 +1,250 @@
+{
+  "_table": "TempleGuessConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,cost,successRewards,failRewards,snapRewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "cost": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "successRewards": [
+          {
+            "id": 1,
+            "count": 120
+          },
+          {
+            "id": 136,
+            "count": 20
+          },
+          {
+            "id": 6,
+            "count": 2
+          }
+        ],
+        "failRewards": [
+          {
+            "id": 1,
+            "count": 80
+          },
+          {
+            "id": 136,
+            "count": 10
+          }
+        ],
+        "snapRewards": [
+          {
+            "id": 1,
+            "count": 40
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "cost": [
+          {
+            "id": 1,
+            "count": 300
+          }
+        ],
+        "successRewards": [
+          {
+            "id": 1,
+            "count": 360
+          },
+          {
+            "id": 136,
+            "count": 60
+          },
+          {
+            "id": 6,
+            "count": 6
+          }
+        ],
+        "failRewards": [
+          {
+            "id": 1,
+            "count": 240
+          },
+          {
+            "id": 136,
+            "count": 30
+          }
+        ],
+        "snapRewards": [
+          {
+            "id": 1,
+            "count": 120
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "cost": [
+          {
+            "id": 1,
+            "count": 500
+          }
+        ],
+        "successRewards": [
+          {
+            "id": 1,
+            "count": 600
+          },
+          {
+            "id": 136,
+            "count": 100
+          },
+          {
+            "id": 6,
+            "count": 10
+          }
+        ],
+        "failRewards": [
+          {
+            "id": 1,
+            "count": 400
+          },
+          {
+            "id": 136,
+            "count": 50
+          }
+        ],
+        "snapRewards": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "cost": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "successRewards": [
+        {
+          "id": 1,
+          "count": 120
+        },
+        {
+          "id": 136,
+          "count": 20
+        },
+        {
+          "id": 6,
+          "count": 2
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 1,
+          "count": 80
+        },
+        {
+          "id": 136,
+          "count": 10
+        }
+      ],
+      "snapRewards": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "cost": [
+        {
+          "id": 1,
+          "count": 300
+        }
+      ],
+      "successRewards": [
+        {
+          "id": 1,
+          "count": 360
+        },
+        {
+          "id": 136,
+          "count": 60
+        },
+        {
+          "id": 6,
+          "count": 6
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 1,
+          "count": 240
+        },
+        {
+          "id": 136,
+          "count": 30
+        }
+      ],
+      "snapRewards": [
+        {
+          "id": 1,
+          "count": 120
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "cost": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "successRewards": [
+        {
+          "id": 1,
+          "count": 600
+        },
+        {
+          "id": 136,
+          "count": 100
+        },
+        {
+          "id": 6,
+          "count": 10
+        }
+      ],
+      "failRewards": [
+        {
+          "id": 1,
+          "count": 400
+        },
+        {
+          "id": 136,
+          "count": 50
+        }
+      ],
+      "snapRewards": [
+        {
+          "id": 1,
+          "count": 200
+        }
+      ]
+    }
+  }
+}

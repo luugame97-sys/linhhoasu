@@ -1,0 +1,58 @@
+{
+  "_table": "OldTrekStableConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,max,min,disDebuff,barRes",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "max": 10000,
+        "min": 7500,
+        "disDebuff": 0,
+        "barRes": "common_bm_progressBar_g"
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "max": 7500,
+        "min": 5000,
+        "disDebuff": -2000,
+        "barRes": "common_bm_progressBar_y"
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "max": 5000,
+        "min": 0,
+        "disDebuff": -5000,
+        "barRes": "common_bm_progressBar_r"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "max": 10000,
+      "min": 7500,
+      "disDebuff": 0,
+      "barRes": "common_bm_progressBar_g"
+    },
+    "2": {
+      "id": 2,
+      "max": 7500,
+      "min": 5000,
+      "disDebuff": -2000,
+      "barRes": "common_bm_progressBar_y"
+    },
+    "3": {
+      "id": 3,
+      "max": 5000,
+      "min": 0,
+      "disDebuff": -5000,
+      "barRes": "common_bm_progressBar_r"
+    }
+  }
+}

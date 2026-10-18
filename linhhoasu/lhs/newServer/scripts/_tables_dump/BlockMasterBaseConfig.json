@@ -1,0 +1,29 @@
+{
+  "_table": "BlockMasterBaseConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "(obj)[initRefresh|initStore|refreshAdsTime|storeAdsTime|refreshAdsReward]",
+  "_sample": [
+    {
+      "initRefresh": 3
+    },
+    {
+      "initStore": 3
+    },
+    {
+      "refreshAdsTime": 3
+    }
+  ],
+  "data": {
+    "initRefresh": 3,
+    "initStore": 3,
+    "refreshAdsTime": 3,
+    "storeAdsTime": 3,
+    "refreshAdsReward": 2,
+    "storeAdsReward": 2,
+    "reviveReward": [
+      2,
+      2
+    ]
+  }
+}

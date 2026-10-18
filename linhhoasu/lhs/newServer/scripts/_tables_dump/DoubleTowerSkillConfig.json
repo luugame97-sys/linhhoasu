@@ -1,0 +1,3709 @@
+{
+  "_table": "DoubleTowerSkillConfig",
+  "_rows": 210,
+  "_type": "object",
+  "_firstKeys": "id,skillType,buffList,target,targetSelection,SkillDesc,skillIcon,skillIconAppear,flyingObjectEffect,hitEffect",
+  "_sample": [
+    {
+      "1001101": {
+        "id": 1001101,
+        "skillType": 1,
+        "buffList": [
+          100110101,
+          1
+        ],
+        "target": 180200010,
+        "targetSelection": 6,
+        "SkillDesc": 99926411,
+        "skillIcon": "",
+        "skillIconAppear": 0,
+        "flyingObjectEffect": {
+          "name": "sp_skill_fly_26411",
+          "scale": 0.72,
+          "showType": 1,
+          "isRotate": 0
+        },
+        "hitEffect": {
+          "name": "sp_skill_baodian_26411",
+          "scale": 1.14
+        }
+      }
+    },
+    {
+      "1001201": {
+        "id": 1001201,
+        "skillType": 2,
+        "buffList": [
+          100120301
+        ],
+        "target": 200300020,
+        "targetSelection": 0,
+        "SkillDesc": 99826411,
+        "skillIcon": "dt_halo_26411_1",
+        "skillIconAppear": 1,
+        "hitEffect": {
+          "name": "",
+          "scale": 1.14
+        }
+      }
+    },
+    {
+      "1001202": {
+        "id": 1001202,
+        "skillType": 3,
+        "buffList": [
+          100120302
+        ],
+        "target": 200300020,
+        "targetSelection": 0,
+        "SkillDesc": 99726411,
+        "skillIcon": "dt_halo_26411_2",
+        "skillIconAppear": 1,
+        "hitEffect": {
+          "name": "",
+          "scale": 1.14
+        }
+      }
+    }
+  ],
+  "data": {
+    "1001101": {
+      "id": 1001101,
+      "skillType": 1,
+      "buffList": [
+        100110101,
+        1
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926411,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26411",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26411",
+        "scale": 1.14
+      }
+    },
+    "1001201": {
+      "id": 1001201,
+      "skillType": 2,
+      "buffList": [
+        100120301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826411,
+      "skillIcon": "dt_halo_26411_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1001202": {
+      "id": 1001202,
+      "skillType": 3,
+      "buffList": [
+        100120302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726411,
+      "skillIcon": "dt_halo_26411_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1002101": {
+      "id": 1002101,
+      "skillType": 1,
+      "buffList": [
+        100210101
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926421,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26421",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26421",
+        "scale": 1.14
+      }
+    },
+    "1002201": {
+      "id": 1002201,
+      "skillType": 2,
+      "buffList": [
+        100220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826421,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1002202": {
+      "id": 1002202,
+      "skillType": 3,
+      "buffList": [
+        100220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726421,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1003101": {
+      "id": 1003101,
+      "skillType": 1,
+      "buffList": [
+        100310101
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926431,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26431",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26431",
+        "scale": 1.14
+      }
+    },
+    "1003201": {
+      "id": 1003201,
+      "skillType": 2,
+      "buffList": [
+        100320301,
+        100320302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826431,
+      "skillIcon": "dt_halo_26431_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1003202": {
+      "id": 1003202,
+      "skillType": 3,
+      "buffList": [
+        100320303,
+        100320304
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726431,
+      "skillIcon": "dt_halo_26431_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1004101": {
+      "id": 1004101,
+      "skillType": 1,
+      "buffList": [
+        100410101,
+        3
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926433,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26433",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 1
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26433",
+        "scale": 1.14
+      }
+    },
+    "1004201": {
+      "id": 1004201,
+      "skillType": 2,
+      "buffList": [
+        100420101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826433,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1004202": {
+      "id": 1004202,
+      "skillType": 3,
+      "buffList": [
+        100420201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726433,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1005101": {
+      "id": 1005101,
+      "skillType": 1,
+      "buffList": [
+        100510101
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926443,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "sp_skill_full_26443",
+        "scale": 0.8
+      }
+    },
+    "1005201": {
+      "id": 1005201,
+      "skillType": 2,
+      "buffList": [
+        100520101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826443,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1005202": {
+      "id": 1005202,
+      "skillType": 3,
+      "buffList": [
+        100520201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726443,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1006101": {
+      "id": 1006101,
+      "skillType": 1,
+      "buffList": [
+        100610101,
+        100610102
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926441,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "sp_skill_full_26441",
+        "scale": 0.8
+      }
+    },
+    "1006201": {
+      "id": 1006201,
+      "skillType": 2,
+      "buffList": [
+        100620301
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99826441,
+      "skillIcon": "dt_halo_26441_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1006202": {
+      "id": 1006202,
+      "skillType": 3,
+      "buffList": [
+        100620302
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99726441,
+      "skillIcon": "dt_halo_26441_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1015101": {
+      "id": 1015101,
+      "skillType": 1,
+      "buffList": [
+        101510101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926432,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26432",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 1
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26432",
+        "scale": 1.14
+      }
+    },
+    "1015201": {
+      "id": 1015201,
+      "skillType": 2,
+      "buffList": [
+        101520101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826432,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1015202": {
+      "id": 1015202,
+      "skillType": 3,
+      "buffList": [
+        101520201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726432,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1016101": {
+      "id": 1016101,
+      "skillType": 1,
+      "buffList": [
+        101610101,
+        4
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926442,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26442",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26442",
+        "scale": 1.14
+      }
+    },
+    "1016201": {
+      "id": 1016201,
+      "skillType": 2,
+      "buffList": [
+        101620101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826442,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1016202": {
+      "id": 1016202,
+      "skillType": 3,
+      "buffList": [
+        101620201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726442,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1701101": {
+      "id": 1701101,
+      "skillType": 1,
+      "buffList": [
+        170110101
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926452,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "sp_skill_full_26452",
+        "scale": 1.14
+      }
+    },
+    "1701201": {
+      "id": 1701201,
+      "skillType": 2,
+      "buffList": [
+        170110102,
+        170120101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826452,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1701202": {
+      "id": 1701202,
+      "skillType": 3,
+      "buffList": [
+        170110102,
+        170120201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726452,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1702101": {
+      "id": 1702101,
+      "skillType": 2,
+      "buffList": [
+        170210101
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926453,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1702201": {
+      "id": 1702201,
+      "skillType": 2,
+      "buffList": [
+        170220101
+      ],
+      "target": 180200020,
+      "targetSelection": 0,
+      "SkillDesc": 99826453,
+      "skillIcon": "dt_halo_26453_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1702202": {
+      "id": 1702202,
+      "skillType": 3,
+      "buffList": [
+        170220201
+      ],
+      "target": 180200020,
+      "targetSelection": 0,
+      "SkillDesc": 99726453,
+      "skillIcon": "dt_halo_26453_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1703101": {
+      "id": 1703101,
+      "skillType": 1,
+      "buffList": [
+        170310101
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926451,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26451",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26451",
+        "scale": 1.14
+      }
+    },
+    "1703201": {
+      "id": 1703201,
+      "skillType": 2,
+      "buffList": [
+        170320102
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826451,
+      "skillIcon": "dt_halo_26451_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1703202": {
+      "id": 1703202,
+      "skillType": 3,
+      "buffList": [
+        170320201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726451,
+      "skillIcon": "dt_halo_26451_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1801101": {
+      "id": 1801101,
+      "skillType": 1,
+      "buffList": [
+        180110101
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926462,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "sp_skill_full_26462",
+        "scale": 1.14
+      }
+    },
+    "1801201": {
+      "id": 1801201,
+      "skillType": 2,
+      "buffList": [
+        180110102,
+        180120101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826462,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1801202": {
+      "id": 1801202,
+      "skillType": 3,
+      "buffList": [
+        180110102,
+        180120201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726462,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1802101": {
+      "id": 1802101,
+      "skillType": 2,
+      "buffList": [
+        180210101
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926463,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1802201": {
+      "id": 1802201,
+      "skillType": 2,
+      "buffList": [
+        180220101
+      ],
+      "target": 180200020,
+      "targetSelection": 0,
+      "SkillDesc": 99826463,
+      "skillIcon": "dt_halo_26463_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1802202": {
+      "id": 1802202,
+      "skillType": 3,
+      "buffList": [
+        180220201
+      ],
+      "target": 180200020,
+      "targetSelection": 0,
+      "SkillDesc": 99726463,
+      "skillIcon": "dt_halo_26463_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1803101": {
+      "id": 1803101,
+      "skillType": 1,
+      "buffList": [
+        180310101
+      ],
+      "target": 180200010,
+      "targetSelection": 6,
+      "SkillDesc": 99926461,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26461",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26461",
+        "scale": 1.14
+      }
+    },
+    "1803201": {
+      "id": 1803201,
+      "skillType": 2,
+      "buffList": [
+        180320102
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826461,
+      "skillIcon": "dt_halo_26461_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "1803202": {
+      "id": 1803202,
+      "skillType": 3,
+      "buffList": [
+        180320201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726461,
+      "skillIcon": "dt_halo_26461_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2001101": {
+      "id": 2001101,
+      "skillType": 1,
+      "buffList": [
+        200110101,
+        3
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926311,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26311",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26311",
+        "scale": 1.14
+      }
+    },
+    "2001201": {
+      "id": 2001201,
+      "skillType": 2,
+      "buffList": [
+        200120301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826311,
+      "skillIcon": "dt_halo_26311_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2001202": {
+      "id": 2001202,
+      "skillType": 3,
+      "buffList": [
+        200120302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726311,
+      "skillIcon": "dt_halo_26311_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2002101": {
+      "id": 2002101,
+      "skillType": 1,
+      "buffList": [
+        200210101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926321,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26321",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26321",
+        "scale": 1.14
+      }
+    },
+    "2002201": {
+      "id": 2002201,
+      "skillType": 2,
+      "buffList": [
+        200220301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826321,
+      "skillIcon": "dt_halo_26321_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2002202": {
+      "id": 2002202,
+      "skillType": 3,
+      "buffList": [
+        200220302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726321,
+      "skillIcon": "dt_halo_26321_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2003101": {
+      "id": 2003101,
+      "skillType": 1,
+      "buffList": [
+        200310102,
+        200310101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926331,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26331",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26331",
+        "scale": 1.14
+      }
+    },
+    "2003201": {
+      "id": 2003201,
+      "skillType": 2,
+      "buffList": [
+        200320301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826331,
+      "skillIcon": "dt_halo_26331_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2003202": {
+      "id": 2003202,
+      "skillType": 3,
+      "buffList": [
+        200320302,
+        200320303
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726331,
+      "skillIcon": "dt_halo_26331_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2004101": {
+      "id": 2004101,
+      "skillType": 1,
+      "buffList": [
+        200410101,
+        2
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926332,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26332",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26332",
+        "scale": 1.14
+      }
+    },
+    "2004201": {
+      "id": 2004201,
+      "skillType": 2,
+      "buffList": [
+        200420101
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99826332,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2004202": {
+      "id": 2004202,
+      "skillType": 3,
+      "buffList": [
+        200420201
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99726332,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2005101": {
+      "id": 2005101,
+      "skillType": 1,
+      "buffList": [
+        200510101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926342,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26342",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26342",
+        "scale": 1.14
+      }
+    },
+    "2005201": {
+      "id": 2005201,
+      "skillType": 2,
+      "buffList": [
+        200520101,
+        200520102
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826342,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2005202": {
+      "id": 2005202,
+      "skillType": 3,
+      "buffList": [
+        200520201
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99726342,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2006101": {
+      "id": 2006101,
+      "skillType": 1,
+      "buffList": [
+        200610101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926341,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26341",
+        "scale": 0.9,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26341",
+        "scale": 1.14
+      }
+    },
+    "2006201": {
+      "id": 2006201,
+      "skillType": 2,
+      "buffList": [
+        200620101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826341,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2006202": {
+      "id": 2006202,
+      "skillType": 3,
+      "buffList": [
+        200620201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726341,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2017101": {
+      "id": 2017101,
+      "skillType": 1,
+      "buffList": [
+        201710101,
+        2
+      ],
+      "target": 180200020,
+      "targetSelection": 7,
+      "SkillDesc": 99926333,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "sp_skill_full_26333",
+        "scale": 1.14
+      }
+    },
+    "2017201": {
+      "id": 2017201,
+      "skillType": 2,
+      "buffList": [
+        201720101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826333,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2017202": {
+      "id": 2017202,
+      "skillType": 3,
+      "buffList": [
+        201720201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726333,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2018101": {
+      "id": 2018101,
+      "skillType": 1,
+      "buffList": [
+        201810101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926343,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26343",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26343",
+        "scale": 1.14
+      }
+    },
+    "2018201": {
+      "id": 2018201,
+      "skillType": 2,
+      "buffList": [
+        201820101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826343,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2018202": {
+      "id": 2018202,
+      "skillType": 3,
+      "buffList": [
+        201820201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726343,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2701101": {
+      "id": 2701101,
+      "skillType": 1,
+      "buffList": [
+        270110101
+      ],
+      "target": 180200010,
+      "targetSelection": 5,
+      "SkillDesc": 99926353,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26353",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26353",
+        "scale": 1.04
+      }
+    },
+    "2701201": {
+      "id": 2701201,
+      "skillType": 2,
+      "buffList": [
+        270120101
+      ],
+      "target": 110200020,
+      "targetSelection": 0,
+      "SkillDesc": 99826353,
+      "skillIcon": "dt_halo_26353_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2701202": {
+      "id": 2701202,
+      "skillType": 3,
+      "buffList": [
+        270120201
+      ],
+      "target": 110200020,
+      "targetSelection": 0,
+      "SkillDesc": 99726353,
+      "skillIcon": "dt_halo_26353_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2702101": {
+      "id": 2702101,
+      "skillType": 1,
+      "buffList": [
+        270210101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926351,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26351",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26351",
+        "scale": 1.14
+      }
+    },
+    "2702201": {
+      "id": 2702201,
+      "skillType": 2,
+      "buffList": [
+        270220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826351,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2702202": {
+      "id": 2702202,
+      "skillType": 3,
+      "buffList": [
+        270220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726351,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2801101": {
+      "id": 2801101,
+      "skillType": 1,
+      "buffList": [
+        280110101
+      ],
+      "target": 180200010,
+      "targetSelection": 5,
+      "SkillDesc": 99926363,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26363",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26363",
+        "scale": 0.95
+      }
+    },
+    "2801201": {
+      "id": 2801201,
+      "skillType": 2,
+      "buffList": [
+        280120101
+      ],
+      "target": 110200020,
+      "targetSelection": 0,
+      "SkillDesc": 99826363,
+      "skillIcon": "dt_halo_26363_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2801202": {
+      "id": 2801202,
+      "skillType": 3,
+      "buffList": [
+        280120201
+      ],
+      "target": 110200020,
+      "targetSelection": 0,
+      "SkillDesc": 99726363,
+      "skillIcon": "dt_halo_26363_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2802101": {
+      "id": 2802101,
+      "skillType": 1,
+      "buffList": [
+        280210101
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926361,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26361",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26361",
+        "scale": 1.14
+      }
+    },
+    "2802201": {
+      "id": 2802201,
+      "skillType": 2,
+      "buffList": [
+        280220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826361,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "2802202": {
+      "id": 2802202,
+      "skillType": 3,
+      "buffList": [
+        280220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726361,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3001101": {
+      "id": 3001101,
+      "skillType": 1,
+      "buffList": [
+        300110101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926111,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26111",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 1
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26111",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3001201": {
+      "id": 3001201,
+      "skillType": 2,
+      "buffList": [
+        300120101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826111,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3001202": {
+      "id": 3001202,
+      "skillType": 3,
+      "buffList": [
+        300120201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726111,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3002101": {
+      "id": 3002101,
+      "skillType": 1,
+      "buffList": [
+        300210101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926121,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26121",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 1
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26121",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3002201": {
+      "id": 3002201,
+      "skillType": 2,
+      "buffList": [
+        300220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826121,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3002202": {
+      "id": 3002202,
+      "skillType": 3,
+      "buffList": [
+        300220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726121,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3003101": {
+      "id": 3003101,
+      "skillType": 1,
+      "buffList": [
+        300310101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926131,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26131",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26131",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3003201": {
+      "id": 3003201,
+      "skillType": 2,
+      "buffList": [
+        300320301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826131,
+      "skillIcon": "dt_halo_26131_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3003202": {
+      "id": 3003202,
+      "skillType": 3,
+      "buffList": [
+        300320302,
+        300320302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726131,
+      "skillIcon": "dt_halo_26131_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3004101": {
+      "id": 3004101,
+      "skillType": 1,
+      "buffList": [
+        300410101
+      ],
+      "target": 180200020,
+      "targetSelection": 3,
+      "SkillDesc": 99926133,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26133",
+        "scale": 0.72,
+        "showType": 1,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26133",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3004201": {
+      "id": 3004201,
+      "skillType": 2,
+      "buffList": [
+        300420101
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99826133,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3004202": {
+      "id": 3004202,
+      "skillType": 3,
+      "buffList": [
+        300420201
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99726133,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3005101": {
+      "id": 3005101,
+      "skillType": 1,
+      "buffList": [
+        300510101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926142,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26142",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26142",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3005201": {
+      "id": 3005201,
+      "skillType": 2,
+      "buffList": [
+        300520101,
+        300520102
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826142,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3005202": {
+      "id": 3005202,
+      "skillType": 3,
+      "buffList": [
+        300520201,
+        300520202
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726142,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3006101": {
+      "id": 3006101,
+      "skillType": 1,
+      "buffList": [
+        300610101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926141,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26141",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26141",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3006201": {
+      "id": 3006201,
+      "skillType": 2,
+      "buffList": [
+        300620301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826141,
+      "skillIcon": "dt_halo_26141_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3006202": {
+      "id": 3006202,
+      "skillType": 3,
+      "buffList": [
+        300620302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726141,
+      "skillIcon": "dt_halo_26141_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3011101": {
+      "id": 3011101,
+      "skillType": 1,
+      "buffList": [
+        301510101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926143,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26143",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26143",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3011201": {
+      "id": 3011201,
+      "skillType": 2,
+      "buffList": [
+        301520101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826143,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3011202": {
+      "id": 3011202,
+      "skillType": 3,
+      "buffList": [
+        301520201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726143,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3014101": {
+      "id": 3014101,
+      "skillType": 1,
+      "buffList": [
+        301410101
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926132,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26132",
+        "scale": 0.85,
+        "showType": 1,
+        "isRotate": 1
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26132",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3014201": {
+      "id": 3014201,
+      "skillType": 2,
+      "buffList": [
+        301420101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826132,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3014202": {
+      "id": 3014202,
+      "skillType": 3,
+      "buffList": [
+        301420201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726132,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3701101": {
+      "id": 3701101,
+      "skillType": 1,
+      "buffList": [
+        370110101,
+        370110102
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926151,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26151",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26151",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3701201": {
+      "id": 3701201,
+      "skillType": 2,
+      "buffList": [
+        370120101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826151,
+      "skillIcon": "dt_halo_26151_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3701202": {
+      "id": 3701202,
+      "skillType": 3,
+      "buffList": [
+        370120201,
+        370120202
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726151,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1
+      }
+    },
+    "3702101": {
+      "id": 3702101,
+      "skillType": 1,
+      "buffList": [
+        370210101,
+        370210201
+      ],
+      "target": 120200020,
+      "targetSelection": 1,
+      "SkillDesc": 99926152,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26152",
+        "scale": 0.45,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3702201": {
+      "id": 3702201,
+      "skillType": 2,
+      "buffList": [
+        370220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826152,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3702202": {
+      "id": 3702202,
+      "skillType": 3,
+      "buffList": [
+        370220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726152,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3703101": {
+      "id": 3703101,
+      "skillType": 1,
+      "buffList": [
+        370310101
+      ],
+      "target": 190200012,
+      "targetSelection": 1,
+      "SkillDesc": 99926153,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26153",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26153",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3703201": {
+      "id": 3703201,
+      "skillType": 2,
+      "buffList": [
+        370320101,
+        370320103,
+        370320105
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826153,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3703202": {
+      "id": 3703202,
+      "skillType": 3,
+      "buffList": [
+        370320201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726153,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3801101": {
+      "id": 3801101,
+      "skillType": 1,
+      "buffList": [
+        380110101,
+        380110102
+      ],
+      "target": 180200011,
+      "targetSelection": 1,
+      "SkillDesc": 99926161,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26161",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26161",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3801201": {
+      "id": 3801201,
+      "skillType": 2,
+      "buffList": [
+        380120101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826161,
+      "skillIcon": "dt_halo_26161_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3801202": {
+      "id": 3801202,
+      "skillType": 3,
+      "buffList": [
+        380120201,
+        380120202
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726161,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3802101": {
+      "id": 3802101,
+      "skillType": 1,
+      "buffList": [
+        380210101,
+        380210201
+      ],
+      "target": 120200020,
+      "targetSelection": 1,
+      "SkillDesc": 99926162,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26162",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26162",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3802201": {
+      "id": 3802201,
+      "skillType": 2,
+      "buffList": [
+        380220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826162,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3802202": {
+      "id": 3802202,
+      "skillType": 3,
+      "buffList": [
+        380220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726162,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3803101": {
+      "id": 3803101,
+      "skillType": 1,
+      "buffList": [
+        380310101
+      ],
+      "target": 190200012,
+      "targetSelection": 1,
+      "SkillDesc": 99926163,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26163",
+        "scale": 0.9,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26163",
+        "scale": 1.14,
+        "sound": "Sound_Axe"
+      }
+    },
+    "3803201": {
+      "id": 3803201,
+      "skillType": 2,
+      "buffList": [
+        380320101,
+        380320103,
+        380320105
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826163,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "3803202": {
+      "id": 3803202,
+      "skillType": 3,
+      "buffList": [
+        380320201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726163,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4001101": {
+      "id": 4001101,
+      "skillType": 1,
+      "buffList": [
+        400110101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926231,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4001201": {
+      "id": 4001201,
+      "skillType": 2,
+      "buffList": [
+        400120301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826231,
+      "skillIcon": "dt_halo_26231_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4001202": {
+      "id": 4001202,
+      "skillType": 3,
+      "buffList": [
+        400120302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726231,
+      "skillIcon": "dt_halo_26231_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4002101": {
+      "id": 4002101,
+      "skillType": 1,
+      "buffList": [
+        400210101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926232,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4002201": {
+      "id": 4002201,
+      "skillType": 2,
+      "buffList": [
+        400220301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826232,
+      "skillIcon": "dt_halo_26232_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4002202": {
+      "id": 4002202,
+      "skillType": 3,
+      "buffList": [
+        400220302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726232,
+      "skillIcon": "dt_halo_26232_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4003101": {
+      "id": 4003101,
+      "skillType": 1,
+      "buffList": [
+        400310101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926242,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4003201": {
+      "id": 4003201,
+      "skillType": 2,
+      "buffList": [
+        400320101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826242,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4003202": {
+      "id": 4003202,
+      "skillType": 3,
+      "buffList": [
+        400320201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726242,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4004101": {
+      "id": 4004101,
+      "skillType": 1,
+      "buffList": [
+        400410101
+      ],
+      "target": 180100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926241,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4004201": {
+      "id": 4004201,
+      "skillType": 2,
+      "buffList": [
+        400420101
+      ],
+      "target": 190100020,
+      "targetSelection": 0,
+      "SkillDesc": 99826241,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4004202": {
+      "id": 4004202,
+      "skillType": 3,
+      "buffList": [
+        400420201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726241,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4005101": {
+      "id": 4005101,
+      "skillType": 1,
+      "buffList": [
+        400510101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926211,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4005201": {
+      "id": 4005201,
+      "skillType": 2,
+      "buffList": [
+        400520101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99826211,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4005202": {
+      "id": 4005202,
+      "skillType": 3,
+      "buffList": [
+        400520201
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99726211,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4006101": {
+      "id": 4006101,
+      "skillType": 1,
+      "buffList": [
+        400610101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926221,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4006201": {
+      "id": 4006201,
+      "skillType": 2,
+      "buffList": [
+        400620301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826221,
+      "skillIcon": "dt_halo_26221_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4006202": {
+      "id": 4006202,
+      "skillType": 3,
+      "buffList": [
+        400620302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726221,
+      "skillIcon": "dt_halo_26221_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4007101": {
+      "id": 4007101,
+      "skillType": 1,
+      "buffList": [
+        400710101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926233,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4007201": {
+      "id": 4007201,
+      "skillType": 2,
+      "buffList": [
+        400720101
+      ],
+      "targetSelection": 0,
+      "SkillDesc": 99826233,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4007202": {
+      "id": 4007202,
+      "skillType": 3,
+      "buffList": [
+        400720201
+      ],
+      "targetSelection": 0,
+      "SkillDesc": 99726233,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4701101": {
+      "id": 4701101,
+      "skillType": 1,
+      "buffList": [
+        470110101,
+        470110102
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926251,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4701201": {
+      "id": 4701201,
+      "skillType": 2,
+      "buffList": [
+        470120101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826251,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4701202": {
+      "id": 4701202,
+      "skillType": 3,
+      "buffList": [
+        470120201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726251,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4702101": {
+      "id": 4702101,
+      "skillType": 1,
+      "buffList": [
+        470210101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926253,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4702201": {
+      "id": 4702201,
+      "skillType": 2,
+      "buffList": [
+        470220101,
+        470220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826253,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4702202": {
+      "id": 4702202,
+      "skillType": 3,
+      "buffList": [
+        470220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726253,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4801101": {
+      "id": 4801101,
+      "skillType": 1,
+      "buffList": [
+        480110101,
+        480110102
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926261,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4801201": {
+      "id": 4801201,
+      "skillType": 2,
+      "buffList": [
+        480120101,
+        480120102
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826261,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4801202": {
+      "id": 4801202,
+      "skillType": 3,
+      "buffList": [
+        480120201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726261,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4802101": {
+      "id": 4802101,
+      "skillType": 1,
+      "buffList": [
+        480210101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926263,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4802201": {
+      "id": 4802201,
+      "skillType": 2,
+      "buffList": [
+        480220101,
+        480220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826263,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "4802202": {
+      "id": 4802202,
+      "skillType": 3,
+      "buffList": [
+        480220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726263,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5001101": {
+      "id": 5001101,
+      "skillType": 2,
+      "buffList": [
+        500110101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926511,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5001201": {
+      "id": 5001201,
+      "skillType": 2,
+      "buffList": [
+        500120301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826511,
+      "skillIcon": "dt_halo_26511_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5001202": {
+      "id": 5001202,
+      "skillType": 3,
+      "buffList": [
+        500120302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726511,
+      "skillIcon": "dt_halo_26511_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5002101": {
+      "id": 5002101,
+      "skillType": 2,
+      "buffList": [
+        500210101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926521,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5002201": {
+      "id": 5002201,
+      "skillType": 2,
+      "buffList": [
+        500220301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826521,
+      "skillIcon": "dt_halo_26521_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5002202": {
+      "id": 5002202,
+      "skillType": 3,
+      "buffList": [
+        500220302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726521,
+      "skillIcon": "dt_halo_26521_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5003101": {
+      "id": 5003101,
+      "skillType": 2,
+      "buffList": [
+        500310101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926531,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5003201": {
+      "id": 5003201,
+      "skillType": 2,
+      "buffList": [
+        500320301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826531,
+      "skillIcon": "dt_halo_26531_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5003202": {
+      "id": 5003202,
+      "skillType": 3,
+      "buffList": [
+        500320302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726531,
+      "skillIcon": "dt_halo_26531_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5004101": {
+      "id": 5004101,
+      "skillType": 2,
+      "buffList": [
+        500410101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926533,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5004201": {
+      "id": 5004201,
+      "skillType": 2,
+      "buffList": [
+        500420301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826533,
+      "skillIcon": "dt_halo_26533_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5004202": {
+      "id": 5004202,
+      "skillType": 3,
+      "buffList": [
+        500420302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726533,
+      "skillIcon": "dt_halo_26533_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5005101": {
+      "id": 5005101,
+      "skillType": 2,
+      "buffList": [
+        500510101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926541,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5005201": {
+      "id": 5005201,
+      "skillType": 2,
+      "buffList": [
+        500520301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826541,
+      "skillIcon": "dt_halo_26541_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5005202": {
+      "id": 5005202,
+      "skillType": 3,
+      "buffList": [
+        500520302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726541,
+      "skillIcon": "dt_halo_26541_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5006101": {
+      "id": 5006101,
+      "skillType": 2,
+      "buffList": [
+        500610101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926542,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5006201": {
+      "id": 5006201,
+      "skillType": 2,
+      "buffList": [
+        500620301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826542,
+      "skillIcon": "dt_halo_26542_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5006202": {
+      "id": 5006202,
+      "skillType": 3,
+      "buffList": [
+        500620302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726542,
+      "skillIcon": "dt_halo_26542_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5007101": {
+      "id": 5007101,
+      "skillType": 2,
+      "buffList": [
+        500710101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926532,
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5007201": {
+      "id": 5007201,
+      "skillType": 2,
+      "buffList": [
+        500720301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826532,
+      "skillIcon": "dt_halo_26532_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5007202": {
+      "id": 5007202,
+      "skillType": 3,
+      "buffList": [
+        500720302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726532,
+      "skillIcon": "dt_halo_26532_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5701101": {
+      "id": 5701101,
+      "skillType": 2,
+      "buffList": [
+        570110101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926551,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5701201": {
+      "id": 5701201,
+      "skillType": 2,
+      "buffList": [
+        570120101,
+        570120102
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826551,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5701202": {
+      "id": 5701202,
+      "skillType": 3,
+      "buffList": [
+        570120201,
+        570120202
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726551,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5702101": {
+      "id": 5702101,
+      "skillType": 2,
+      "buffList": [
+        570210101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926553,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5702201": {
+      "id": 5702201,
+      "skillType": 2,
+      "buffList": [
+        570220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826553,
+      "skillIcon": "dt_halo_26553_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5702202": {
+      "id": 5702202,
+      "skillType": 3,
+      "buffList": [
+        570220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726553,
+      "skillIcon": "dt_halo_26553_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5801101": {
+      "id": 5801101,
+      "skillType": 2,
+      "buffList": [
+        580110101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926561,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5801201": {
+      "id": 5801201,
+      "skillType": 2,
+      "buffList": [
+        580120101,
+        580120102,
+        580120103
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826561,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5801202": {
+      "id": 5801202,
+      "skillType": 3,
+      "buffList": [
+        580120201,
+        580120202,
+        580120203
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726561,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5802101": {
+      "id": 5802101,
+      "skillType": 2,
+      "buffList": [
+        580210101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926563,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5802201": {
+      "id": 5802201,
+      "skillType": 2,
+      "buffList": [
+        580220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826563,
+      "skillIcon": "dt_halo_26563_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "5802202": {
+      "id": 5802202,
+      "skillType": 3,
+      "buffList": [
+        580220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726563,
+      "skillIcon": "dt_halo_26563_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26243101": {
+      "id": 26243101,
+      "skillType": 1,
+      "buffList": [
+        2624310101
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926243,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26243201": {
+      "id": 26243201,
+      "skillType": 2,
+      "buffList": [
+        2624320301
+      ],
+      "target": 180100020,
+      "targetSelection": 0,
+      "SkillDesc": 99826243,
+      "skillIcon": "dt_halo_26243_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26243202": {
+      "id": 26243202,
+      "skillType": 3,
+      "buffList": [
+        2624320302
+      ],
+      "target": 180100020,
+      "targetSelection": 0,
+      "SkillDesc": 99726243,
+      "skillIcon": "dt_halo_26243_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26252101": {
+      "id": 26252101,
+      "skillType": 1,
+      "buffList": [
+        2625210101,
+        2625210102
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926252,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26252201": {
+      "id": 26252201,
+      "skillType": 2,
+      "buffList": [
+        2625220104
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826252,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26252202": {
+      "id": 26252202,
+      "skillType": 3,
+      "buffList": [
+        2625220204
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726252,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26262101": {
+      "id": 26262101,
+      "skillType": 1,
+      "buffList": [
+        2626210101,
+        2626210102
+      ],
+      "target": 120100020,
+      "targetSelection": 0,
+      "SkillDesc": 99926262,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26262201": {
+      "id": 26262201,
+      "skillType": 2,
+      "buffList": [
+        2626220104
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826262,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26262202": {
+      "id": 26262202,
+      "skillType": 3,
+      "buffList": [
+        2626220204
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726262,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26352101": {
+      "id": 26352101,
+      "skillType": 1,
+      "buffList": [
+        2635210101,
+        2635210102
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926352,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26352",
+        "scale": 0.72,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26352",
+        "scale": 0.9
+      }
+    },
+    "26352201": {
+      "id": 26352201,
+      "skillType": 2,
+      "buffList": [
+        2635220101,
+        2635220102,
+        2635220103,
+        2635220104
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826352,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26352202": {
+      "id": 26352202,
+      "skillType": 3,
+      "buffList": [
+        2635220201,
+        2635220202,
+        2635220203,
+        2635220204
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726352,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26362101": {
+      "id": 26362101,
+      "skillType": 1,
+      "buffList": [
+        2636210101,
+        2636210102,
+        2636210103
+      ],
+      "target": 180200015,
+      "targetSelection": 2,
+      "SkillDesc": 99926362,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "flyingObjectEffect": {
+        "name": "sp_skill_fly_26362",
+        "scale": 0.72,
+        "showType": 2,
+        "isRotate": 0
+      },
+      "hitEffect": {
+        "name": "sp_skill_baodian_26362",
+        "scale": 0.9
+      }
+    },
+    "26362201": {
+      "id": 26362201,
+      "skillType": 2,
+      "buffList": [
+        2636220101,
+        2636220102,
+        2636220103,
+        2636220104
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826362,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26362202": {
+      "id": 26362202,
+      "skillType": 3,
+      "buffList": [
+        2636220201,
+        2636220202,
+        2636220203,
+        2636220204
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726362,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26543101": {
+      "id": 26543101,
+      "skillType": 2,
+      "buffList": [
+        2654310101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926543,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26543201": {
+      "id": 26543201,
+      "skillType": 2,
+      "buffList": [
+        2654320301
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826543,
+      "skillIcon": "dt_halo_26543_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26543202": {
+      "id": 26543202,
+      "skillType": 3,
+      "buffList": [
+        2654320302
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726543,
+      "skillIcon": "dt_halo_26543_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26552101": {
+      "id": 26552101,
+      "skillType": 2,
+      "buffList": [
+        2655210101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926552,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26552201": {
+      "id": 26552201,
+      "skillType": 2,
+      "buffList": [
+        2655220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826552,
+      "skillIcon": "dt_halo_26552_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26552202": {
+      "id": 26552202,
+      "skillType": 3,
+      "buffList": [
+        2655220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726552,
+      "skillIcon": "dt_halo_26552_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26562101": {
+      "id": 26562101,
+      "skillType": 2,
+      "buffList": [
+        2656210101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99926562,
+      "skillIcon": "",
+      "skillIconAppear": 0,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26562201": {
+      "id": 26562201,
+      "skillType": 2,
+      "buffList": [
+        2656220101
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99826562,
+      "skillIcon": "dt_halo_26562_1",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    },
+    "26562202": {
+      "id": 26562202,
+      "skillType": 3,
+      "buffList": [
+        2656220201
+      ],
+      "target": 200300020,
+      "targetSelection": 0,
+      "SkillDesc": 99726562,
+      "skillIcon": "dt_halo_26562_2",
+      "skillIconAppear": 1,
+      "hitEffect": {
+        "name": "",
+        "scale": 1.14
+      }
+    }
+  }
+}

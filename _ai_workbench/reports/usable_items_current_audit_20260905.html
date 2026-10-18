@@ -1,0 +1,1726 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audit item/rương hiện tại — 05/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="audit-to-n-b-item-r-ng-hi-n-t-i-05-09-2026">Audit toàn bộ item/rương hiện tại — 05/09/2026</h1>
+<p>&gt; Audit này chạy lại trực tiếp trên source/config production hiện hành. Chỉ đọc source/config/MongoDB; không sửa người chơi, không phát quà và không restart server.</p>
+<h2 id="1-k-t-lu-n">1. Kết luận</h2>
+<ul>
+<li>Đã quét đủ <strong>940/940</strong> item có <code>AssetsUseConfig</code>.</li>
+<li><strong>263 ID cần fix chắc chắn</strong>: 111 rương chưa có pool chuẩn, 150 đan thưởng tức thời chưa hoàn thiện cap/ngày, 2 rương thiếu lựa chọn.</li>
+<li>Cả 263 ID hiện được chặn trước consume: bấm dùng trả lỗi và <strong>không trừ item</strong>. Đây là bảo vệ an toàn, không phải đã phục hồi tính năng.</li>
+<li><strong>672 ID qua fixture hiện tại</strong>; kết quả này chỉ chứng minh handler/state fixture, chưa thay cho kiểm hình và thao tác native trong game.</li>
+<li><strong>5 ID cần kiểm tra riêng</strong>: 1 luồng client đặc biệt và 4 orphan thiếu <code>AssetsConfig</code>.</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>Số lượng</th>
+<th>Trạng thái hiện tại</th>
+</tr></thead><tbody>
+<tr>
+<td>Rương type 102 chưa có pool xác thực</td>
+<td>111</td>
+<td>Bị chặn, không trừ rương</td>
+</tr>
+<tr>
+<td>Đan type 103 có reward</td>
+<td>150</td>
+<td>Bị chặn, không trừ đan</td>
+</tr>
+<tr>
+<td>Rương tự chọn thiếu option</td>
+<td>2</td>
+<td>Bị chặn, không trừ rương</td>
+</tr>
+<tr>
+<td>Cần test native/orphan</td>
+<td>5</td>
+<td>Chưa kết luận lỗi gameplay</td>
+</tr>
+<tr>
+<td>Qua fixture hiện tại</td>
+<td>672</td>
+<td>Chưa đồng nghĩa 100% native OK</td>
+</tr>
+</tbody></table></div>
+<h2 id="2-111-r-ng-ch-a-c-pool-chu-n">2. 111 rương chưa có pool chuẩn</h2>
+<p>Các rương này trước đây có nguy cơ bị trừ mà không có quà. Hiện server trả <code>ITEM_REWARD_POOL_UNVERIFIED</code> trước khi consume. Cần khôi phục đúng pool, tỷ lệ và duplicate conversion từ nguồn gốc trước khi mở lại.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Tên item</th>
+<th>Icon</th>
+<th>Trạng thái</th>
+</tr></thead><tbody>
+<tr>
+<td><code>412</code></td>
+<td>Hộp quà tuyển chọn Tuyết Bảo</td>
+<td><code>icon_412 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>413</code></td>
+<td>Hộp quà tuyển chọn Tuyết Bảo</td>
+<td><code>icon_413 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94301</code></td>
+<td>Túi Phúc Thiên Cơ</td>
+<td><code>icon_bag1 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94401</code></td>
+<td>Cẩm nang Nghê Thường</td>
+<td><code>icon_box22 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94416</code></td>
+<td>Túi Phúc Trăng tròn</td>
+<td><code>icon_94416 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94418</code></td>
+<td>Hộp quà phá kén·Nguyên Bảo</td>
+<td><code>icon_94418 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94419</code></td>
+<td>Hộp quà phá kén·Đùi Gà</td>
+<td><code>icon_94419 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94420</code></td>
+<td>Hộp quà Phá Kiển · Phù Tốc Độ</td>
+<td><code>icon_94420 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94421</code></td>
+<td>Hộp quà Phá Kén · Baozi</td>
+<td><code>icon_94421 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94422</code></td>
+<td>Hộp quà Phá Kién - Tiền bạc</td>
+<td><code>icon_94422 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94515</code></td>
+<td>Dịch Lôi kiếp song phẩm ngẫu nhiên</td>
+<td><code>random_specSpiritRefine_17 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94701</code></td>
+<td>Túi phúc Thu Ý Nồng</td>
+<td><code>icon_bag6 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94702</code></td>
+<td>Biểu cảm Công Tử</td>
+<td><code>icon_emoji_gongzi </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94703</code></td>
+<td>Túi phúc Nguyên Tuế mãn</td>
+<td><code>icon_bag7 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94704</code></td>
+<td>Biểu cảm rắn nhỏ</td>
+<td><code>icon_emoji_snake </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94705</code></td>
+<td>Túi Phúc Chúc Xuân</td>
+<td><code>icon_bag8 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94706</code></td>
+<td>Túi Phúc Hoa Mệnh</td>
+<td><code>icon_bag9 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94707</code></td>
+<td>Biểu cảm Pháp Hải</td>
+<td><code>icon_emoji_fahai </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94708</code></td>
+<td>Chăm chỉ luyện túi phúc</td>
+<td><code>icon_bag10 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94709</code></td>
+<td>Thiên Diễn Bảo Sảo</td>
+<td><code>icon_bag11 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94711</code></td>
+<td>Tông tình gia lễ</td>
+<td><code>icon_bag13 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94712</code></td>
+<td>Biểu cảm Bát Giới</td>
+<td><code>icon_emoji_bajie </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94713</code></td>
+<td>Hộp quà kỷ niệm</td>
+<td><code>icon_bag15 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94715</code></td>
+<td>Hộp quà Thu Ái</td>
+<td><code>icon_bag16 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94716</code></td>
+<td>Biểu cảm Chồn Tuyết</td>
+<td><code>icon_emoji_xuediao </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94718</code></td>
+<td>Khánh lễ Nguyên Chính</td>
+<td><code>icon_bag17 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94719</code></td>
+<td>Huyền Cơ Bảo Sao</td>
+<td><code>icon_94719 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94720</code></td>
+<td>Biểu cảm tiểu mã</td>
+<td><code>icon_emoji_xiaoma </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94721</code></td>
+<td>Đại lễ năm mới</td>
+<td><code>icon_bag18 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94722</code></td>
+<td>Biểu cảm Bà ngoại</td>
+<td><code>icon_emoji_laolao </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94724</code></td>
+<td>Quà ấm Thanh Dương</td>
+<td><code>icon_bag20 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94725</code></td>
+<td>Bạc Tố Ngân Bảo Sào</td>
+<td><code>icon_94725 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94726</code></td>
+<td>Mộc Lan đoan lễ</td>
+<td><code>icon_bag21 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94727</code></td>
+<td>Biểu cảm Cửu U Tước</td>
+<td><code>icon_emoji_jiuyouque </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94729</code></td>
+<td>Hộp quà kỷ niệm 2 năm</td>
+<td><code>icon_bag22 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94801</code></td>
+<td>Rương quyết đấu Bang hội</td>
+<td><code>icon_box26 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94802</code></td>
+<td>Hộp Khởi Nguyên Thần Văn</td>
+<td><code>icon_94802 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94821</code></td>
+<td>Kho báu Vùng biển tham lam</td>
+<td><code>icon_94821 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94822</code></td>
+<td>Kho báu Nộ Hải hải vực</td>
+<td><code>icon_94822 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94823</code></td>
+<td>Kho báu vùng biển Trí Vọng</td>
+<td><code>icon_94823 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94824</code></td>
+<td>Kho báu hải vực ngạo mạn</td>
+<td><code>icon_94824 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94825</code></td>
+<td>Kho báu vùng biển Nghi Cụ</td>
+<td><code>icon_94825 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94902</code></td>
+<td>Mảnh Long Châu ngẫu nhiên</td>
+<td><code>random_curiosPiece_140700 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94904</code></td>
+<td>Mảnh Thần Nông ngẫu nhiên</td>
+<td><code>random_curiosPiece_140705 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94908</code></td>
+<td>Mảnh tiên thực ngẫu nhiên</td>
+<td><code>random_curiosPiece_140718 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94911</code></td>
+<td>Mảnh mài ngẫu nhiên</td>
+<td><code>random_curiosPiece_140726 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94923</code></td>
+<td>Mảnh bắt ngẫu nhiên</td>
+<td><code>random_curiosPiece_140730 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94926</code></td>
+<td>Mảnh luyện đạo ngẫu nhiên</td>
+<td><code>random_curiosPiece_140738 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94929</code></td>
+<td>Mảnh Thiền luyện ngẫu nhiên</td>
+<td><code>random_curiosPiece_140742 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94932</code></td>
+<td>Mảnh tu luyện bếp ngẫu nhiên</td>
+<td><code>random_curiosPiece_140750 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94935</code></td>
+<td>Mảnh đan luyện ngẫu nhiên</td>
+<td><code>random_curiosPiece_140758 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94938</code></td>
+<td>Ngẫu nhiên nhận mảnh cỏ</td>
+<td><code>random_curiosPiece_140766 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>94941</code></td>
+<td>Mảnh phong thình ngẫu nhiên</td>
+<td><code>random_curiosPiece_140770 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100019</code></td>
+<td>Xích Viêm Tường Long</td>
+<td><code>icon_85401 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100020</code></td>
+<td>Mảnh yêu linh ngẫu nhiên</td>
+<td><code>random_elfPiece_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100021</code></td>
+<td>Mảnh yêu linh ưu tú</td>
+<td><code>random_elfPiece_02 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100022</code></td>
+<td>Mảnh tinh linh Tinh xảo</td>
+<td><code>random_elfPiece_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100023</code></td>
+<td>Mảnh yêu tinh Hiếm</td>
+<td><code>random_elfPiece_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100024</code></td>
+<td>Mảnh tinh linh Sử Thi</td>
+<td><code>random_elfPiece_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100025</code></td>
+<td>Mảnh yêu linh Truyền Thuyết</td>
+<td><code>random_elfPiece_07 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100026</code></td>
+<td>Mảnh Yêu linh cao cấp ngẫu nhiên</td>
+<td><code>random_elfPiece_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100030</code></td>
+<td>Yêu linh ngẫu nhiên</td>
+<td><code>random_elf_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100031</code></td>
+<td>Yêu linh Ưu tú ngẫu nhiên</td>
+<td><code>random_elf_02 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100032</code></td>
+<td>Ngẫu nhiên Tinh linh tinh xảo</td>
+<td><code>random_elf_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100033</code></td>
+<td>Yêu linh hiếm ngẫu nhiên</td>
+<td><code>random_elf_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100034</code></td>
+<td>Yêu linh sử thi ngẫu nhiên</td>
+<td><code>random_elf_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100035</code></td>
+<td>Yêu linh Truyền Thuyết ngẫu nhiên</td>
+<td><code>random_elf_07 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100036</code></td>
+<td>Yêu linh cao cấp ngẫu nhiên</td>
+<td><code>random_elf_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100040</code></td>
+<td>Thần binh ngẫu nhiên</td>
+<td><code>random_artifact_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100060</code></td>
+<td>Thần binh đồng hành ngẫu nhiên</td>
+<td><code>random_artifactSoul_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100061</code></td>
+<td>Thần binh đồng hành hiếm ngẫu nhiên</td>
+<td><code>random_artifactSoul_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100062</code></td>
+<td>Thần binh đồng hành Sử Thi ngẫu nhiên</td>
+<td><code>random_artifactSoul_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100063</code></td>
+<td>Ngẫu nhiên Thần binh đồng hành Truyền Thuyết</td>
+<td><code>random_artifactSoul_07 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100139</code></td>
+<td>Mảnh huyết mạch ngẫu nhiên</td>
+<td><code>random_bloodlinePiece_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100160</code></td>
+<td>Mảnh bí bảo ngẫu nhiên</td>
+<td><code>random_curiosPiece_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100170</code></td>
+<td>Bí bảo Đồng ngẫu nhiên</td>
+<td><code>random_curios_shop1_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100171</code></td>
+<td>Mảnh bí bảo đồng tinh xảo ngẫu nhiên</td>
+<td><code>random_curios_shop1_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100172</code></td>
+<td>Bí bảo đồng hiếm ngẫu nhiên</td>
+<td><code>random_curios_shop1_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100173</code></td>
+<td>Bí bảo Đồng Sử Thi ngẫu nhiên</td>
+<td><code>random_curios_shop1_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100174</code></td>
+<td>Bí bảo Truyền Thuyết ngẫu nhiên</td>
+<td><code>random_curios_07 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100185</code></td>
+<td>Mảnh bí bảo Đồng ngẫu nhiên</td>
+<td><code>random_curiosPiece_shop1_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100190</code></td>
+<td>Mảnh bí bảo hải trân ngẫu nhiên</td>
+<td><code>random_curiosPiece_shop2_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100200</code></td>
+<td>Bí bảo hải trân ngẫu nhiên</td>
+<td><code>random_curios_shop2_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100201</code></td>
+<td>Bí bảo hải trân phẩm chất Hiếm ngẫu nhiên</td>
+<td><code>random_curios_shop2_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100202</code></td>
+<td>Bí bảo hải trân quý hiếm ngẫu nhiên</td>
+<td><code>random_curios_shop2_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100203</code></td>
+<td>Bí bảo hải trân sử thi ngẫu nhiên</td>
+<td><code>random_curios_shop2_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100230</code></td>
+<td>Bí bảo ngẫu nhiên</td>
+<td><code>random_curios_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100231</code></td>
+<td>Bí bảo tinh xảo ngẫu nhiên</td>
+<td><code>random_curios_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100232</code></td>
+<td>Bí bảo hiếm ngẫu nhiên</td>
+<td><code>random_curios_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100233</code></td>
+<td>Bí bảo Sử Thi ngẫu nhiên</td>
+<td><code>random_curios_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100250</code></td>
+<td>Bí bảo ngẫu nhiên</td>
+<td><code>random_curios_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100251</code></td>
+<td>Bí bảo tinh xảo ngẫu nhiên</td>
+<td><code>random_curios_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100252</code></td>
+<td>Bí bảo hiếm ngẫu nhiên</td>
+<td><code>random_curios_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100253</code></td>
+<td>Bí bảo Sử Thi ngẫu nhiên</td>
+<td><code>random_curios_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100501</code></td>
+<td>Thần văn Hiếm ngẫu nhiên</td>
+<td><code>random_orb_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100502</code></td>
+<td>Thần văn Sử Thi ngẫu nhiên</td>
+<td><code>random_orb_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100503</code></td>
+<td>Ngẫu nhiên Thần văn Truyền Thuyết</td>
+<td><code>random_orb_07 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100641</code></td>
+<td>Tài nguyên ngẫu nhiên 30 phút</td>
+<td><code>random_homeland_02 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100642</code></td>
+<td>Tài nguyên ngẫu nhiên 2 giờ</td>
+<td><code>random_homeland_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100643</code></td>
+<td>8 giờ tài nguyên ngẫu nhiên</td>
+<td><code>random_homeland_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100701</code></td>
+<td>Ngẫu nhiên 1 cấp Linh Trục</td>
+<td><code>random_connect_01 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100702</code></td>
+<td>Tinh trục cấp 2 ngẫu nhiên</td>
+<td><code>random_connect_02 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100703</code></td>
+<td>Trục linh cấp 3 ngẫu nhiên</td>
+<td><code>random_connect_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100704</code></td>
+<td>Linh Xu cấp 4 ngẫu nhiên</td>
+<td><code>random_connect_04 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100705</code></td>
+<td>Tinh linh 5 cấp ngẫu nhiên</td>
+<td><code>random_connect_05 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100706</code></td>
+<td>Linh trục cấp 6 ngẫu nhiên</td>
+<td><code>random_connect_06 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100707</code></td>
+<td>Linh trục cấp 7 ngẫu nhiên</td>
+<td><code>random_connect_07 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100708</code></td>
+<td>Linh trục 8 cấp ngẫu nhiên</td>
+<td><code>random_connect_08 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>100709</code></td>
+<td>Ngẫu nhiên linh trục cấp 9</td>
+<td><code>random_connect_09 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>101000</code></td>
+<td>Rương tiêu diệt Yêu Tôn tầng 1</td>
+<td><code>syt_bossKilledBox </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>101310</code></td>
+<td>Cẩm nang phòng thủ tranh phong</td>
+<td><code>icon_bag14 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+</tbody></table></div>
+<h2 id="3-150-an-type-103-ch-a-ho-n-thi-n">3. 150 đan type 103 chưa hoàn thiện</h2>
+<p>Các item này có <code>rewards</code> nhưng cần triển khai đúng bộ đếm dùng chung <code>-802/-804</code>, reset ngày và cộng giới hạn đặc quyền. Hiện trả <code>ITEM_PILL_PENDING_VERIFICATION</code> và không trừ đan.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Tên item</th>
+<th>Icon</th>
+<th>Trạng thái</th>
+</tr></thead><tbody>
+<tr>
+<td><code>110122</code></td>
+<td>Bậc 1 phẩm xanh tu vi đan</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110123</code></td>
+<td>Đan tu vi phẩm xanh bậc 1</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110124</code></td>
+<td>Đan dược tu vi phẩm Tím bậc 1</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110126</code></td>
+<td>Bậc 1 phẩm cam tu vi đan</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110127</code></td>
+<td>Đan tu vi phẩm đỏ Bậc 1</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110142</code></td>
+<td>Bậc 1 phẩm xanh Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110143</code></td>
+<td>Bậc 1 phẩm xanh Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110144</code></td>
+<td>Đan tịch cốc phẩm tím bậc 1</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110146</code></td>
+<td>Bức cốc đan phẩm cam bậc 1</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110147</code></td>
+<td>Đan dược Tích Cốc phẩm đỏ bậc 1</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110222</code></td>
+<td>Tu vi đan phẩm xanh bậc 2</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110223</code></td>
+<td>Đan tu vi phẩm xanh bậc 2</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110224</code></td>
+<td>Đan dược tu vi Phẩm Tím Bậc 2</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110226</code></td>
+<td>Đan dược tu vi phẩm cam bậc 2</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110227</code></td>
+<td>Đan tu vi phẩm đỏ bậc 2</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110242</code></td>
+<td>Bậc 2 phẩm xanh đan Tịch Cốc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110243</code></td>
+<td>Tịch Cốc đan Phẩm xanh Bậc 2</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110244</code></td>
+<td>Bậc 2 Phẩm Tím Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110246</code></td>
+<td>Phẩm cam Trúc Cơ Đan bậc 2</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110247</code></td>
+<td>Bậc 2 phẩm Đỏ Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110322</code></td>
+<td>Đan tu vi 3 cấp Phẩm xanh</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110323</code></td>
+<td>bậc 3 phẩm xanh linh đan tu vi</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110324</code></td>
+<td>Đan tu vi phẩm tím Bậc 3</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110326</code></td>
+<td>Đan dược tu vi phẩm cam bậc 3</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110327</code></td>
+<td>Đan dược tu vi phẩm Đỏ Bậc 3</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110342</code></td>
+<td>Đan Tịch Cốc phẩm xanh bậc 3</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110343</code></td>
+<td>Đan Tịch Cốc phẩm xanh Bậc 3</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110344</code></td>
+<td>Đan Tịch Cốc Phẩm Tím Bậc 3</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110346</code></td>
+<td>Đan dược Tích Cốc phẩm cam bậc 3</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110347</code></td>
+<td>Đan Tịch Cốc phẩm Đỏ bậc 3</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110422</code></td>
+<td>Tu vi đan Phẩm xanh Bậc 4</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110423</code></td>
+<td>Đan tu vi Luyện khí phẩm xanh Bậc 4</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110424</code></td>
+<td>Đan tu vi phẩm Tím bậc 4</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110426</code></td>
+<td>Đan tu vi phẩm Cam bậc 4</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110427</code></td>
+<td>Đan tu vi phẩm Đỏ 4 bậc</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110442</code></td>
+<td>Bậc 4 Phẩm xanh Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110443</code></td>
+<td>Tịch Cốc Đan phẩm xanh bậc 4</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110444</code></td>
+<td>Bịch Tịch Cốc phẩm Tím bậc 4</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110446</code></td>
+<td>Phẩm cam Bậc 4 Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110447</code></td>
+<td>Đan dược Tích Cốc phẩm đỏ bậc 4</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110522</code></td>
+<td>Đan tu vi phẩm xanh 5 bậc</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110523</code></td>
+<td>Đan tu vi phẩm xanh bậc 5</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110524</code></td>
+<td>5 bậc Phẩm Tím tu vi đan</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110526</code></td>
+<td>Đan dược tu vi phẩm cam Bậc 5</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110527</code></td>
+<td>Đan dược tu vi phẩm Đỏ 5 bậc</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110542</code></td>
+<td>Tịch Cốc đan 5 bậc phẩm xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110543</code></td>
+<td>Bạch Dương Phẩm xanh 5 Bậc Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110544</code></td>
+<td>Tịch Cốc đan phẩm tím 5 bậc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110546</code></td>
+<td>Đan Tịch Cốc phẩm cam bậc 5</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110547</code></td>
+<td>Đan Tịch Cốc phẩm Đỏ 5 bậc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110622</code></td>
+<td>Đan dược tu vi phẩm xanh Bậc 6</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110623</code></td>
+<td>Đan tu vi Phẩm xanh bậc 6</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110624</code></td>
+<td>Tu vi đan phẩm tím bậc 6</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110626</code></td>
+<td>Phẩm cam tu vi đan Bậc 6</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110627</code></td>
+<td>Bậc 6 phẩm Đỏ linh đan tu vi</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110642</code></td>
+<td>Bậc 6 phẩm xanh Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110643</code></td>
+<td>Bậc 6 Phẩm xanh Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110644</code></td>
+<td>Linh đan diệu dược Tịch Cốc phẩm tím Bậc 6</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110646</code></td>
+<td>Đan Tịch Cốc Phẩm Cam Bậc 6</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110647</code></td>
+<td>Bịch Cốc Đan phẩm Đỏ bậc 6</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110722</code></td>
+<td>Đan tu vi bậc 7 phẩm xanh</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110723</code></td>
+<td>Đan dược tu vi phẩm lam cấp 7</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110724</code></td>
+<td>Đan dược tu vi phẩm Tím bậc 7</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110726</code></td>
+<td>Đan tu vi bậc 7 phẩm cam</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110727</code></td>
+<td>Đan tu vi phẩm Đỏ bậc 7</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110742</code></td>
+<td>Tịch Cốc đan bậc 7 phẩm xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110743</code></td>
+<td>Tịch Cốc Đan phẩm xanh bậc 7</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110744</code></td>
+<td>Đan Tịch Cốc Phẩm Tím bậc 7</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110746</code></td>
+<td>7 cấp Phẩm cam Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110747</code></td>
+<td>bậc 7 phẩm Đỏ Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110822</code></td>
+<td>Đan dược tu vi bậc 8 Phẩm xanh</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110823</code></td>
+<td>Bậc 8 phẩm xanh tu vi đan</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110824</code></td>
+<td>Đan tu vi phẩm Tím bậc 8</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110826</code></td>
+<td>Đan tu vi phẩm cam bậc 8</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110827</code></td>
+<td>Đan tu vi phẩm Đỏ bậc 8</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110842</code></td>
+<td>Đan dược Tịch Cốc bậc 8 phẩm xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110843</code></td>
+<td>Tịch Cốc Đan phẩm xanh bậc 8</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110844</code></td>
+<td>Bậc 8 Phẩm Tím Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110846</code></td>
+<td>Đan Tịch Cốc phẩm cam bậc 8</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110847</code></td>
+<td>bậc 8 phẩm Đỏ Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110922</code></td>
+<td>Đan dược tu vi phẩm xanh bậc 9</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110923</code></td>
+<td>Đan tu vi phẩm xanh bậc 9</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110924</code></td>
+<td>9 bậc Phẩm Tím tu vi đan</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110926</code></td>
+<td>Tu vi đan Phẩm cam bậc 9</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110927</code></td>
+<td>Đan tu vi phẩm Đỏ bậc 9</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110942</code></td>
+<td>Đan Tịch Cốc bậc 9 Phẩm xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110943</code></td>
+<td>bậc 9 Phẩm xanh Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110944</code></td>
+<td>9 bậc Phẩm Tím linh đan tịch cốc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110946</code></td>
+<td>Đan Pịch Cốc phẩm cam bậc 9</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>110947</code></td>
+<td>Đan Tích Cốc phẩm đỏ bậc 9</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111022</code></td>
+<td>Cấp 10 Phẩm xanh Đan tu vi</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111023</code></td>
+<td>Đan dược tu vi phẩm xanh bậc 10</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111024</code></td>
+<td>Đan tu vi Phẩm Tím Bậc 10</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111026</code></td>
+<td>Đan tu vi phẩm cam Cấp 10</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111027</code></td>
+<td>Đan tu vi phẩm Đỏ Bậc 10</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111042</code></td>
+<td>Bậc 10 linh đan tịch cổ phẩm xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111043</code></td>
+<td>Bậc 10 Phẩm xanh Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111044</code></td>
+<td>Đan Tịch Cốc phẩm Tím bậc 10</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111046</code></td>
+<td>Đan Tịch Cốc phẩm Cam bậc 10</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111047</code></td>
+<td>Bậc 10 phẩm Đỏ Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111122</code></td>
+<td>Tu vi đan phẩm xanh Bậc 11</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111123</code></td>
+<td>Tu vi đan phẩm xanh bậc 11</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111124</code></td>
+<td>Đan tu vi Phẩm Tím bậc 11</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111126</code></td>
+<td>Đan dược tu vi Phẩm cam Bậc 11</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111127</code></td>
+<td>Đan tu vi phẩm Đỏ Bậc 11</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111142</code></td>
+<td>Bậc 11 phẩm xanh Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111143</code></td>
+<td>Đan Tịch Cốc phẩm xanh Bậc 11</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111144</code></td>
+<td>11BậcPhẩm TímTịch CốcĐan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111146</code></td>
+<td>Bậc 11 phẩm cam tích cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111147</code></td>
+<td>Tịch Cốc đan phẩm Đỏ bậc 11</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111222</code></td>
+<td>Tu vi đan Bậc 12 phẩm xanh</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111223</code></td>
+<td>Đan tu vi phẩm xanh Bậc 12</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111224</code></td>
+<td>Đan dược tu vi phẩm tím bậc 12</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111226</code></td>
+<td>Đan Tu Vi, Phẩm Cam, Bậc 12</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111227</code></td>
+<td>Tu vi đan phẩm Đỏ Bậc 12</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111242</code></td>
+<td>Đan Tịch Cốc phẩm xanh Bậc 12</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111243</code></td>
+<td>Linh đan Tịch Cốc phẩm xanh Bậc 12</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111244</code></td>
+<td>Đan Tịch Cốc phẩm tím Bậc 12</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111246</code></td>
+<td>Bậc 12 phẩm cam Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111247</code></td>
+<td>Đan Dược Tịch Cốc phẩm Đỏ Bậc 12</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111322</code></td>
+<td>Đan tu vi phẩm xanh bậc 13</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111323</code></td>
+<td>Đan tu vi phẩm xanh Bậc 13</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111324</code></td>
+<td>Đan tu vi Phẩm Tím bậc 13</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111326</code></td>
+<td>Đan phương tu vi Phẩm cam Bậc 13</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111327</code></td>
+<td>Tu vi đan phẩm Đỏ 13 bậc</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111342</code></td>
+<td>Đan Tịch Cốc phẩm xanh Bậc 13</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111343</code></td>
+<td>Đan Tịch Cốc phẩm xanh 13 bậc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111344</code></td>
+<td>13 bậc Phẩm Tím Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111346</code></td>
+<td>Đan tịch cốc phẩm cam 13 bậc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111347</code></td>
+<td>Đan Pịch Cốc phẩm Đỏ cấp 13</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111422</code></td>
+<td>Đan tu vi phẩm lục bậc 14</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111423</code></td>
+<td>Đan tu vi phẩm xanh Bậc 14</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111424</code></td>
+<td>Đan tu vi Phẩm Tím bậc 14</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111426</code></td>
+<td>Tu vi đan phẩm cam Bậc 14</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111427</code></td>
+<td>Đan tu vi phẩm Đỏ Bậc 14</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111442</code></td>
+<td>Bậc 14 Phẩm xanh Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111443</code></td>
+<td>Đan dược Tịch Cốc phẩm xanh bậc 14</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111444</code></td>
+<td>Đan dược Tịch Cốc phẩm tím 14 bậc</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111446</code></td>
+<td>Tịch Cốc Đan phẩm cam bậc 14</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111447</code></td>
+<td>Bậc 14 phẩm Đỏ Tịch Cốc Đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111522</code></td>
+<td>Tu vi đan phẩm xanh Bậc 15</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111523</code></td>
+<td>Đan tu vi phẩm xanh bậc 15</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111524</code></td>
+<td>Đan tu vi phẩm tím bậc 15</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111526</code></td>
+<td>Đan tu vi phẩm cam Bậc 15</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111527</code></td>
+<td>Bậc 15 đan dược tu vi phẩm Đỏ</td>
+<td><code>icon_110121 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111542</code></td>
+<td>Đan tịch cốc 15 bậc phẩm xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111543</code></td>
+<td>Bậc 15 Tịch Cốc Dan Phẩm Xanh</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111544</code></td>
+<td>Bậc 15 Phẩm Tím Tịch Cốc đan</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111546</code></td>
+<td>Đan Phục Cốc 15 cấp Phẩm cam</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>111547</code></td>
+<td>Đan Tịch Cốc phẩm Đỏ bậc 15</td>
+<td><code>icon_110141 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-hai-r-ng-thi-u-l-a-ch-n">4. Hai rương thiếu lựa chọn</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Tên item</th>
+<th>Icon</th>
+<th>Trạng thái</th>
+</tr></thead><tbody>
+<tr>
+<td><code>90021</code></td>
+<td>Tự chọn Mảnh tinh linh Ưu tú</td>
+<td><code>select_elfPiece_02 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+<tr>
+<td><code>90022</code></td>
+<td>Tự chọn Mảnh yêu tinh tinh xảo</td>
+<td><code>select_elfPiece_03 </code></td>
+<td>Từ chối, không trừ item</td>
+</tr>
+</tbody></table></div>
+<p><code>90021/90022</code> có <code>AssetsUseConfig.rewards=[]</code>; catalog Elf hiện không có lựa chọn phẩm chất 2/3 tương ứng. Không nên tự nâng lên phẩm chất 4.</p>
+<h2 id="5-n-m-item-c-n-ki-m-tra-native-orphan">5. Năm item cần kiểm tra native/orphan</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Tên item</th>
+<th>Icon</th>
+<th>Trạng thái</th>
+</tr></thead><tbody>
+<tr>
+<td><code>227</code></td>
+<td>Chỉ đoản tình trường</td>
+<td><code>icon_227 </code></td>
+<td>SPECIAL_CLIENT_FLOW_NOT_TAG1300</td>
+</tr>
+<tr>
+<td><code>94355</code></td>
+<td>(không có tên AssetsConfig)</td>
+<td><code>- </code></td>
+<td>MISSING_ASSETS_CONFIG</td>
+</tr>
+<tr>
+<td><code>94356</code></td>
+<td>(không có tên AssetsConfig)</td>
+<td><code>- </code></td>
+<td>MISSING_ASSETS_CONFIG</td>
+</tr>
+<tr>
+<td><code>94357</code></td>
+<td>(không có tên AssetsConfig)</td>
+<td><code>- </code></td>
+<td>MISSING_ASSETS_CONFIG</td>
+</tr>
+<tr>
+<td><code>94358</code></td>
+<td>(không có tên AssetsConfig)</td>
+<td><code>- </code></td>
+<td>MISSING_ASSETS_CONFIG</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><code>227</code> là luồng client đặc biệt type 108, không dùng tag 1300 như item thường.</li>
+<li><code>94355–94358</code> có <code>AssetsUseConfig</code> nhưng thiếu <code>AssetsConfig</code>, nên cần xác minh client/config gốc trước khi sửa.</li>
+</ul>
+<h2 id="6-nh-h-ng-ng-i-ch-i-hi-n-t-i">6. Ảnh hưởng người chơi hiện tại</h2>
+<ul>
+<li>S1: 621 người thật; 3 người đang giữ item thuộc nhóm cần fix, tổng <code>100139 ×823</code>.</li>
+<li>S2: 1 người thật; 0 người bị ảnh hưởng, không thấy item lỗi đang giữ.</li>
+<li>Không thấy mail chưa nhận hoặc GiftCode active chứa 263 ID này.</li>
+<li>Không tự phát bù: tồn kho chưa mở không phải giao dịch mất quà; cần ledger cụ thể nếu xử lý lịch sử.</li>
+</ul>
+<h2 id="7-file-b-ng-ch-ng-v-danh-s-ch">7. File bằng chứng và danh sách</h2>
+<ul>
+<li>JSON production: <code>_ai_workbench/temp/usable_item_audit_prod_20260905.json</code> — SHA-256 <code>c068982dd14344669a43cdb80ab6dc88375bbaa3d7b3e9e4077ce4bf380e8a44</code>.</li>
+<li>Runtime Mongo read-only: <code>_ai_workbench/temp/usable_item_runtime_audit_20260905_054552.json</code> — SHA-256 <code>e6fd8154606999cacf3ff095c020020c32baa7ec773459cb515c80cb61b4a0e1</code>.</li>
+<li>CSV 268 dòng (263 cần fix + 5 pending): <code>_ai_workbench/reports/usable_items_need_fix_current_20260905.csv</code>.</li>
+<li>TXT 263 ID cần fix: <code>_ai_workbench/reports/usable_items_need_fix_current_20260905.txt</code>.</li>
+<li>TXT 5 pending: <code>_ai_workbench/reports/usable_items_pending_native_current_20260905.txt</code>.</li>
+</ul>
+<h2 id="8-th-t-fix-xu-t">8. Thứ tự fix đề xuất</h2>
+<ol>
+<li><code>100139</code> vì đang có 823 rương trên 3 người thật; khôi phục đúng mảnh huyết mạch, không phát nguyên huyết mạch.</li>
+<li>Rương được event/shop tham chiếu nhiều: <code>412</code>, <code>413</code>, <code>94401</code>, <code>94416</code>, <code>94801</code>, <code>94802</code>.</li>
+<li>Các họ random native: Elf/Curios/Orb/Linh Trục/ArtifactSoul; mỗi họ cần contract riêng và relog.</li>
+<li>Hoàn thiện 150 đan với cap chung/ngày và đặc quyền, rồi mới bỏ chặn.</li>
+<li>Xác minh nguồn gốc <code>90021/90022</code>, <code>227</code>, <code>94355–94358</code> trước khi thay config.</li>
+</ol>
+<p>&gt; Tạo báo cáo lúc 2026-09-05T12:49:21+07:00.</p></main></body></html>

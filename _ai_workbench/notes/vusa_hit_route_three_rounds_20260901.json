@@ -1,0 +1,276 @@
+{
+  "capturedAt": "2026-09-01T01:31:59.579Z",
+  "rounds": [
+    {
+      "round": 1,
+      "elapsedSec": 645,
+      "criterion": "click avatar/menu passed after >10m",
+      "status": "PASS"
+    },
+    {
+      "round": 2,
+      "elapsedSec": 396,
+      "criterion": "original Main -> wrapper control at 4 points and click passed",
+      "status": "PASS"
+    },
+    {
+      "round": 3,
+      "elapsedSec": 631,
+      "criterion": "original Main -> wrapper control at 4 points and click passed",
+      "status": "PASS"
+    }
+  ],
+  "finalProof": {
+    "at": "2026-09-01T01:31:59.456Z",
+    "bootstrap": true,
+    "installed": true,
+    "owner": "v6",
+    "wrapperActive": true,
+    "results": [
+      {
+        "name": "avatar",
+        "x": 58,
+        "y": 63,
+        "original": {
+          "cls": "Main",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "touchChildren": true,
+          "children": 2
+        },
+        "wrapped": {
+          "cls": "eui.Image",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 0.85,
+          "touchEnabled": true,
+          "children": 0
+        }
+      },
+      {
+        "name": "weapon",
+        "x": 200,
+        "y": 850,
+        "original": {
+          "cls": "Main",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "touchChildren": true,
+          "children": 2
+        },
+        "wrapped": {
+          "cls": "eui.Group",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "touchChildren": true,
+          "children": 12
+        }
+      },
+      {
+        "name": "menu",
+        "x": 210,
+        "y": 1070,
+        "original": {
+          "cls": "Main",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "touchChildren": true,
+          "children": 2
+        },
+        "wrapped": {
+          "cls": "eui.Image",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "children": 0
+        }
+      },
+      {
+        "name": "center",
+        "x": 450,
+        "y": 500,
+        "original": {
+          "cls": "Main",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "touchChildren": true,
+          "children": 2
+        },
+        "wrapped": {
+          "cls": "eui.Image",
+          "name": "",
+          "maskedBy": "object",
+          "mask": "object",
+          "visible": true,
+          "alpha": 1,
+          "touchEnabled": true,
+          "children": 0
+        }
+      }
+    ],
+    "rootChildren": [
+      {
+        "cls": "eui.UILayer",
+        "name": "",
+        "maskedBy": "object",
+        "mask": "object",
+        "visible": true,
+        "alpha": 1,
+        "touchEnabled": false,
+        "touchChildren": true,
+        "children": 9,
+        "index": 0,
+        "direct": [
+          {
+            "point": "avatar",
+            "hit": {
+              "cls": "eui.Image",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 0.85,
+              "touchEnabled": true,
+              "children": 0
+            }
+          },
+          {
+            "point": "weapon",
+            "hit": {
+              "cls": "eui.Group",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "touchChildren": true,
+              "children": 12
+            }
+          },
+          {
+            "point": "menu",
+            "hit": {
+              "cls": "eui.Image",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "children": 0
+            }
+          },
+          {
+            "point": "center",
+            "hit": {
+              "cls": "eui.Image",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "children": 0
+            }
+          }
+        ]
+      },
+      {
+        "cls": "eui.Group",
+        "name": "",
+        "maskedBy": "object",
+        "mask": "object",
+        "visible": true,
+        "alpha": 1,
+        "touchEnabled": true,
+        "touchChildren": true,
+        "children": 0,
+        "index": 1,
+        "direct": [
+          {
+            "point": "avatar",
+            "hit": {
+              "cls": "Main",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "touchChildren": true,
+              "children": 2
+            }
+          },
+          {
+            "point": "weapon",
+            "hit": {
+              "cls": "Main",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "touchChildren": true,
+              "children": 2
+            }
+          },
+          {
+            "point": "menu",
+            "hit": {
+              "cls": "Main",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "touchChildren": true,
+              "children": 2
+            }
+          },
+          {
+            "point": "center",
+            "hit": {
+              "cls": "Main",
+              "name": "",
+              "maskedBy": "object",
+              "mask": "object",
+              "visible": true,
+              "alpha": 1,
+              "touchEnabled": true,
+              "touchChildren": true,
+              "children": 2
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

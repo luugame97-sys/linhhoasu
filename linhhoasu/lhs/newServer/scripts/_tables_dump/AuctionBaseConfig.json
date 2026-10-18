@@ -1,0 +1,131 @@
+{
+  "_table": "AuctionBaseConfig",
+  "_rows": 30,
+  "_type": "object",
+  "_firstKeys": "(obj)[taxRate|delay|bidAdjustValue|openDay|openTime]",
+  "_sample": [
+    {
+      "taxRate": 500
+    },
+    {
+      "delay": 60
+    },
+    {
+      "bidAdjustValue": 1000
+    }
+  ],
+  "data": {
+    "taxRate": 500,
+    "delay": 60,
+    "bidAdjustValue": 1000,
+    "openDay": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "openTime": [
+      43200,
+      79200
+    ],
+    "stopOnShelf": 3600,
+    "offShelfCD": 5,
+    "onShelfLimit": 5,
+    "bidLimit": 10,
+    "moneyConversion": {
+      "1001": 10,
+      "1002": 0.6,
+      "1003": 1.875
+    },
+    "dealCD": 30,
+    "recentShow": 48,
+    "artifactTradeQuality": [
+      7
+    ],
+    "artifactTradeStar": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "artifactValueRange": [
+      11000,
+      30000
+    ],
+    "artifactValueSuggest": 13000,
+    "fixedValue": 10000,
+    "artifactReclaimQuality": [
+      7
+    ],
+    "artifactReclaimLevel": 20,
+    "artifactReclaimStar": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "artifactAttrRatio": {
+      "7": 2
+    },
+    "artifactStarValue": {
+      "7": [
+        0,
+        0,
+        60,
+        90,
+        360,
+        900,
+        1950,
+        3480,
+        7200,
+        12750,
+        15300
+      ]
+    },
+    "artifactFitValue": {
+      "7": [
+        0,
+        0,
+        90,
+        135,
+        540,
+        1350,
+        3120,
+        6528,
+        12960,
+        24225,
+        30600
+      ]
+    },
+    "moneyTransfer": 3.12,
+    "royalBidAdjustValue": 600,
+    "royalOpenDay": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "royalOnshelfTime": 43200,
+    "royalOpenTime": [
+      72000,
+      79200
+    ],
+    "artifactReclaimPara": 10000,
+    "privilegeBonus": 2500
+  }
+}

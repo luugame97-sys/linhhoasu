@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quản trị web Linh Họa Sư — 07/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-qu-n-tr-t-i-kho-n-v-giao-di-n">Session Report — Quản trị tài khoản và giao diện</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Đã phát hành lúc <strong>00:37:26 GMT+7 ngày 07/09/2026</strong> phần quản trị/giao diện; không thay đổi ví, cấu hình phần thưởng Donate hoặc gửi bù. Yêu cầu bổ sung đổi cách gọi phía người chơi đã được áp dụng: <strong>Web quản lý tài khoản Linh Họa Sư</strong>; nhãn WebGM/GM Panel chỉ giữ ở khu vực kỹ thuật/quản trị.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Yêu cầu</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Menu lọc tài khoản</td>
+<td>Tất cả, đang khóa, hoạt động, có VIP, VIP1, VIP2, chưa VIP; khóa hết thời hạn không bị hiển thị như còn khóa</td>
+</tr>
+<tr>
+<td>Tìm kiếm tự hiểu</td>
+<td>Tài khoản, ID WebGM, UID, tên đầy đủ nhân vật; tự thử qua API xác thực server, không cần chọn kiểu</td>
+</tr>
+<tr>
+<td>Server trên đầu trang</td>
+<td>Chuyển toàn phiên admin; bỏ bộ chọn server trùng ở quản lý người chơi; xoay CSRF/context, tab cũ phải tải lại</td>
+</tr>
+<tr>
+<td>Tổng tiền SePay</td>
+<td>Tổng toàn thời gian và khoảng đang xem, số giao dịch, Donate Xu/VIP, 50 giao dịch chi tiết gần nhất; chọn account chính xác để xem riêng</td>
+</tr>
+<tr>
+<td>Thẻ lỗi/cảnh báo</td>
+<td>Bấm thẻ để lọc đúng nhóm và cuộn tới bảng; số tổng vẫn phản ánh tập log trước khi chọn thẻ</td>
+</tr>
+<tr>
+<td>Nút lên đầu trang</td>
+<td>Nút nhỏ, mờ, dùng chung login/player/admin; hỗ trợ vùng cuộn lồng bên trong và reduced motion</td>
+</tr>
+<tr>
+<td>Hạn GiftCode</td>
+<td>Form tạo có ngày giờ hết hạn GMT+7; danh sách hiển thị hạn; server kiểm ngày hợp lệ, để trống giữ không giới hạn</td>
+</tr>
+<tr>
+<td>Trạm GM gõ tài khoản</td>
+<td>Tự nhận diện sau khi nhập, hiện tên/account/UID/server; nhiều kết quả phải chọn; server tái xác minh trước thao tác</td>
+</tr>
+<tr>
+<td>Countdown Donate</td>
+<td>Ngày/tuần/tháng theo GMT+7, lấy mốc thời gian server; hết kỳ yêu cầu tải lại, không tự nhận quà</td>
+</tr>
+<tr>
+<td>Đổi/phân bố quà, gửi bù, tăng tháng20 triệu</td>
+<td>Chưa áp dụng do tỷ lệ mâu thuẫn và cần chốt cách xử lý điểm kỹ năng đã tiêu; xem mục6</td>
+</tr>
+</tbody></table></div>
+<p>Tìm tên nhân vật là tìm chính xác theo API hiện hữu, không đoán tên gần giống. Tài khoản hỗ trợ tìm một phần; ID và UID là định danh chính xác. Không tuyên bố hỗ trợ mọi alias/playerId ngoài hợp đồng API đã kiểm tra. Danh sách quản lý vẫn là các tài khoản đã đồng bộ vào web; không tự tạo tài khoản web mới khi tìm thấy role trong game.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<p>Production <code>/linhhoasu/webgame/gm/</code>, tổng12 file:</p>
+<ul>
+<li>Thêm <code>admin_management.php</code>, <code>web_experience.php</code>, <code>assets/js/admin-management.js</code>, <code>assets/js/web-experience.js</code>, <code>assets/css/web-experience.css</code>.</li>
+<li>Sửa <code>admin/admin_api.php</code>, <code>admin/index.php</code>, <code>assets/js/admin.js</code>, <code>index.php</code>, <code>login.php</code>, <code>api/user_api.php</code>.</li>
+<li><code>config.php</code> chỉ thêm thay nhãn WebGM trong thông báo JSON phía người chơi; giữ nguyên các chức năng bảo mật/ban/routing của lần phát hành trước.</li>
+</ul>
+<p>Snapshot/candidate/evidence: <code>_ai_workbench/temp/web_admin_upgrade_20260907/</code>. Tools snapshot, test backend/monitor/switch/JS, render/serve preview, release/verify trong <code>_ai_workbench/tools/</code>. Backup VPS <code>/linhhoasu/_ai_workbench/backups/web_admin_upgrade_20260906_173626/</code>, backup báo cáo local <code>_ai_workbench/backups/web_admin_upgrade_reports_20260907/</code>.</p>
+<p>Không đổi gameplay server/client, không sửa auth/VIP của người thật, không gửi thư QA vào game, không chuyển tiền, không chỉnh bảng Donate/GiftCode đã có. Không ghi global memory hoặc tạo tool tại root. Workspace không phải Git repository; dùng snapshot/hash để bảo vệ baseline.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/vấn đề</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Chống tái diễn</th>
+</tr></thead><tbody>
+<tr>
+<td>Bộ chọn server trùng, hành động bị khóa khi xem khác phiên</td>
+<td>Server xem và server admin tách rời</td>
+<td>Một menu topbar chuyển phiên thật, CSRF mới, tải lại</td>
+<td>Kiểm old-tab context và server từng mutation</td>
+</tr>
+<tr>
+<td>Tìm tên/UID không ra</td>
+<td>Chỉ SQL account/id</td>
+<td>Resolver các loại định danh qua internal API, lọc đúng server</td>
+<td>Không trust frontend hoặc tự chọn nếu nhiều kết quả</td>
+</tr>
+<tr>
+<td>Khóa/VIP lọc sai phạm vi</td>
+<td>Ví chung, VIP theo server; timed ban có thể đã hết</td>
+<td>Query entitlement theo server, tính hạn ban tại thời điểm query</td>
+<td>Fixture S1 VIP2/S2 VIP1, expired ban</td>
+</tr>
+<tr>
+<td>Ký tự gạch dưới trong search thành wildcard</td>
+<td>SQL LIKE mặc định <code>_</code>/<code>%</code> là mẫu</td>
+<td>Escape bằng <code>!</code>, prepared statements</td>
+<td>Test literal underscore và injection</td>
+</tr>
+<tr>
+<td>Response tìm kiếm cũ ghi đè kết quả mới</td>
+<td>Nhiều request về không đúng thứ tự</td>
+<td>Request sequence, bỏ response cũ</td>
+<td>Không dùng kết quả cũ để gửi GM</td>
+</tr>
+<tr>
+<td>Tổng SePay bị tính đôi nếu cộng log sự kiện</td>
+<td>Ledger và log success cùng mô tả giao dịch</td>
+<td>Chỉ tổng hợp sepay_logs; status tabs không thay số tiền đã nhận</td>
+<td>Test ledger10k + notice không thành20k</td>
+</tr>
+<tr>
+<td>Lỗi/cảnh báo đếm chồng</td>
+<td>failed có thể đi cùng warning</td>
+<td>Nhóm error ưu tiên, warning loại error</td>
+<td>Tab manual_review/ignored/failed</td>
+</tr>
+<tr>
+<td>Form GiftCode không có hạn dùng</td>
+<td>Backend có trường nhưng form tạo không nhập</td>
+<td>datetime-local + parser ngày GMT+7</td>
+<td>Test ngày30/02 bị từ chối</td>
+</tr>
+<tr>
+<td>GM đang xác nhận nhưng mục tiêu bị đổi</td>
+<td>Đọc input sau khi mở xác nhận</td>
+<td>Chốt payload/role và kiểm lại mục tiêu trước gửi</td>
+<td>Không tự gửi lại khi không rõ kết quả</td>
+</tr>
+<tr>
+<td>Tab admin cũ chưa có UI mới</td>
+<td>Cache/page cũ vẫn có token hợp lệ</td>
+<td>Header phiên bản UI; bắt tải lại trước xử lý</td>
+<td>Deploy assets/pages trước API mới</td>
+</tr>
+<tr>
+<td>Patch API đầu thất bại</td>
+<td>CRLF từ PowerShell không khớp chunk</td>
+<td>Chuẩn hóa newline trước apply_patch; thao tác đầu không sửa dở</td>
+<td>Kiểm syntax/diff sau patch</td>
+</tr>
+<tr>
+<td>Browser element stale</td>
+<td>Text accessibility được render lại</td>
+<td>Đọc lại state, dùng phần tử mới</td>
+<td>Không click lặp trên index cũ</td>
+</tr>
+</tbody></table></div>
+<p>Nội dung mới giữ UTF-8. Không sửa thủ công các file mã hóa cũ ngoài phạm vi. Frontend được kiểm bằng skill computer-use trên dữ liệu QA; kỹ năng này giúp xác nhận hành vi thực tế của filter, thẻ log, target preview và nút lên đầu trang.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<p>Server chọn ở admin là quyền tác động, không chỉ là bộ lọc trang; đổi server phải vô hiệu ngữ cảnh của tab cũ. Tìm tự hiểu chỉ được hiển thị/chọn dựa trên dữ liệu API server, không đoán chủ nhân của UID. Lọc tài khoản và nạp tiền không được làm biến đổi trạng thái ban hoặc số dư.</p>
+<p>Tổng tài chính phải từ ledger duy nhất; log retry/cảnh báo có thể nhiều dòng cho một giao dịch. Tìm riêng SePay bằng account/id được ràng buộc account chính xác để không lẫn account tên gần nhau. Chi tiết giới hạn50 dòng, tổng tiền vẫn tính toàn tập theo phạm vi chọn.</p>
+<p>Countdown lấy mốc server GMT+7, dùng thời gian chạy đơn điệu của trang; không tin đồng hồ hệ điều hành người dùng. Tuần làm mới00:00 thứ Hai, tháng làm mới00:00 ngày1. Sau hết kỳ UI yêu cầu reload; claim vẫn tự kiểm server.</p>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>Đã triển khai và hậu kiểm:</p>
+<ul>
+<li>24 backend checks trên PHP7.4.33/MySQL5.7.44 với TEMP clone schema: lọc/search/expiry/finance/countdown.</li>
+<li>9 checks chạy đúng handler monitor với schema thật được shadow bằng TEMP: exact account, SQL tổng tiền, tab lỗi/cảnh báo, phân trang.</li>
+<li>8 checks session chuyển server bằng handler thật: giữ identity/admin, xoay CSRF, chặn context tab cũ, reject server lạ.</li>
+<li>12 checks JS: scroll đa vùng, countdown, form expiry, request race, target payload, same-origin header, branding.</li>
+<li>Browser QA: chọn “Đang bị khóa” chỉ còn tài khoản khóa; chọn SePay hiện tổng và chi tiết; bấm thẻ Lỗi trả dòng failed/error; gõ qa_alice hiện đúng tên/UID/server. Preview không có kết nối ngân hàng/game thật.</li>
+<li>Live read-only:412 tài khoản web;5 khóa đang hiệu lực; S1 có1 VIP, S2 chưa có VIP tại snapshot. Cùng account thực được tìm bằng account/UID/tên ở cả hai server; tổng finance khớp SQL trực tiếp. Không xuất danh tính/tài khoản ra báo cáo.</li>
+<li>12/12 source hash đúng. Login/JS/CSS200, player/admin guest302; ready8080/8083 đều200. Sáu process PM2 giữ PID/restart, không restart game hoặc PHP-FPM.</li>
+<li>Browser live trang đăng nhập hiển thị đúng “Web quản lý tài khoản Linh Họa Sư”, không còn GM Panel/WebGM trong nhãn người chơi. Không đăng nhập người thật hoặc thử mutation trên tài khoản thật.</li>
+</ul>
+<p>Giới hạn: không live gửi GM, không đổi server trong phiên admin người thật, chưa nghiệm thu thiết bị vật lý; UI thử bằng fixture rồi kiểm source/HTTP/live read-only. Quà Donate/gửi bù chưa thực hiện. Endpoint lookup hiện hữu dùng tên đầy đủ/UID chính xác; chưa thêm tìm gần đúng tên hoặc playerId khác userId.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<p>Admin tải lại trang để nhận header phiên bản mới; menu server ở topbar đổi phiên toàn bộ trang. Quản lý người chơi lọc theo menu; SePay chọn nguồn, nhập account/id chính xác và khoảng thời gian. GiftCode mới có thể đặt hạn hoặc để trống không giới hạn.</p>
+<h3 id="c-n-ch-t-tr-c-thay-qu-v-g-i-b">Cần chốt trước thay quà và gửi bù</h3>
+<p>Snapshot read-only có50 mốc active;15 mốc tuần400.000–5.000.000đ liên quan41 claim lịch sử; mốc tháng hiện tối đa10.000.000đ. Item5 là Điểm kỹ năng, item65 là Đùi Gà, item4 là Bánh Bao/Baozi.</p>
+<ul>
+<li>Điểm kỹ năng→Đùi Gà: ví dụ5.000→500 là chia10 nhưng10.000→10.000 là giữ nguyên. Đề xuất thống nhất chia10 (10.000→1.000), chưa áp dụng.</li>
+<li>Bánh Bao tuần: user nêu x10 và10.000→100.000, nhưng15.000→1.500.000 là x100. Đề xuất x10 (15.000→150.000), chưa áp dụng.</li>
+<li>Gửi bù: đối chiếu mail/outbox/claim theo account+server+milestone+period. Không dùng số claim×cấu hình mới để khẳng định phần thiếu khi cấu hình cũ có thể khác; trừ đúng phần đã cấp, key bù duy nhất tránh lặp.</li>
+<li>Đổi điểm đã nhận: cần chốt phần điểm đã tiêu có giữ nguyên, chỉ đổi số còn, hay phương án khác. Không tự âm điểm, reset kỹ năng hoặc thu từ nguồn khác.</li>
+<li>Tháng20 triệu: sau chốt tỷ lệ mới, đề xuất thêm các mốc12/14/16/18/20 triệu và cân đối phần thưởng gia tăng theo mức nạp; giữ mốc/claim lịch sử, không đổi ID để mở nhận lại. Cần duyệt bảng quà trước áp production.</li>
+</ul>
+<p>Chưa phát sinh thay đổi số dư/phần thưởng trong phiên này. Không tự mở automation, không tự thu hồi hoặc gửi bù khi chưa rõ quy tắc.</p></main></body></html>

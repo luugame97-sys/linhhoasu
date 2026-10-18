@@ -1,0 +1,80 @@
+{
+  "_table": "BidKingRankTreasureConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,type,rankRange,endRange,rankRangeShow,skill",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "type": 1,
+        "rankRange": 1,
+        "endRange": 10,
+        "rankRangeShow": "jpzw_phb_txt_qianshim",
+        "skill": 501
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "type": 2,
+        "rankRange": 0,
+        "endRange": 500,
+        "rankRangeShow": "jpzw_phb_txt_qianwu",
+        "skill": 502
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "type": 2,
+        "rankRange": 500,
+        "endRange": 1000,
+        "rankRangeShow": "5%-10%",
+        "skill": 503
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "type": 1,
+      "rankRange": 1,
+      "endRange": 10,
+      "rankRangeShow": "jpzw_phb_txt_qianshim",
+      "skill": 501
+    },
+    "2": {
+      "id": 2,
+      "type": 2,
+      "rankRange": 0,
+      "endRange": 500,
+      "rankRangeShow": "jpzw_phb_txt_qianwu",
+      "skill": 502
+    },
+    "3": {
+      "id": 3,
+      "type": 2,
+      "rankRange": 500,
+      "endRange": 1000,
+      "rankRangeShow": "5%-10%",
+      "skill": 503
+    },
+    "4": {
+      "id": 4,
+      "type": 2,
+      "rankRange": 1000,
+      "endRange": 2000,
+      "rankRangeShow": "10%-20%",
+      "skill": 504
+    },
+    "5": {
+      "id": 5,
+      "type": 2,
+      "rankRange": 2000,
+      "endRange": 10000,
+      "rankRangeShow": "20%+",
+      "skill": 505
+    }
+  }
+}

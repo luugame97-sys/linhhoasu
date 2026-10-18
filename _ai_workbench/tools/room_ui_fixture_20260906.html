@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#213D45}.egret-player{width:100%;height:100%}</style></head><body>
+<div class="egret-player" data-entry-class="FixtureMain" data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30" data-content-width="720" data-content-height="1280" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"></div>
+<script src="/game/js/egret.min_7d668222.js"></script><script src="/game/js/egret.web.min_587897e9.js"></script><script src="/game/js/egretex.min_37b3ee13.js"></script>
+<script>
+window.fixtureErrors=[];window.addEventListener('error',e=>fixtureErrors.push(e.message));
+Promise.all(['/all-skins.json','/images.json','/ui-functions.json'].map(p=>fetch(p).then(r=>r.json()))).then(function(all){
+ var skins=all[0],images=all[1],funcs=all[2];
+ window.TabView=eui.ViewStack;window.CommonWindowBg=eui.Component;window.PopPanelViewport=eui.Group;window.spine={SkeletonAnimation:eui.Group};window.Help1Btn=eui.Skin;
+ window.SkeletonAnimationEx=eui.Group;window.ScreenAdapterLayer=eui.Group;window.ProgressBar=eui.ProgressBar;
+ for(var name in skins){if(skins[name].$sC&&!/^(\$|eui)/.test(skins[name].$sC))skins[name].$sC='$eSk';}
+ var labels={30030101:'Điều kiện cơ bản',30035800:'Phẩm chất cá',30030103:'Và đáp ứng',30030104:'Hoặc',30030107:'Dừng khi lực chiến cao hơn',30035843:'Loại cá',30030105:'Điều kiện thêm',30035850:'3 lần câu cá',30030110:'Bắt đầu',30035803:'Tăng tốc câu cá (1,11×)',30035859:'Tĩnh lặng nhận phần thưởng rơi',30035801:'Dừng lại khi phát hiện cá biến dị',30035802:'Cá không đủ điều kiện sẽ tự động nộp đơn hàng',30035851:'Dừng lại khi thu được cá chất lượng cao'};
+ labels[30035876]='Dừng lại khi phát hiện cá biến dị';labels[30035883]='Dừng lại khi thu được cá chất lượng cao';labels[30020298]='Tĩnh lặng nhận phần thưởng rơi';
+ Object.defineProperty(eui.Label.prototype,'textId',{set:function(id){this.text=labels[id]||'Tùy chọn';},configurable:true});Object.defineProperty(eui.Button.prototype,'labelId',{set:function(id){this.label=labels[id]||'Bắt đầu';},configurable:true});
+ egret.registerImplementation('eui.IAssetAdapter',{getAsset:function(source,cb,thisObj){var url=images[source];if(!url){cb.call(thisObj,null,source);return;}var loader=new egret.ImageLoader;loader.crossOrigin='anonymous';loader.addEventListener(egret.Event.COMPLETE,function(){var t=new egret.Texture;t._setBitmapData(loader.data);cb.call(thisObj,t,source);},this);loader.load(url);}});
+ JSONParseClass.setData(skins);
+ window.U=eui;window.U9={autoConfig:{}};window.Cc={generateTextFlow:x=>[{text:String(x)}]};window.B={ConvertLanguageToText:id=>id===30035853?'': 'Kim Sa Lệ Thủy'};window.D={SetLinkStyleLabel(){},SetClickEffect(){}};window.P={ins:()=>({open(){}})};window.py={};window.Pa={};
+ window.Y={Config:{FishSceneConfig:{1:{name:30030280}}},FishRoomModel:{roomInfo:{roomId:1}}};
+ function FixtureMain(){var self=eui.UILayer.call(this)||this;self.addEventListener(egret.Event.ADDED_TO_STAGE,self.start,self);return self;}__extends(FixtureMain,eui.UILayer);
+ FixtureMain.prototype.start=function(){
+  var panel=new eui.Component;panel.width=720;panel.height=1280;this.addChild(panel);window.fixturePanel=panel;
+  if(location.hash==='#auto'){
+   panel.skinName='AutoFishingPanelSkin';panel.validateNow();panel._AddClick=function(){};panel.updateViewUI=function(){};
+   eval('('+funcs.autoChildren+')').call(panel);panel.commonwin.validateNow();panel.commonwin.titleLabel.text='Ủy thác tự động';
+   // Native CommonWindowBg transcludes its viewport; the isolated wrapper reproduces that parenting.
+   panel.commonwin.addChild(panel.baseGroup);panel.baseGroup.validateNow();
+   panel.qualityCheckBox.label='Thần thoại trở lên';panel.fishTypeCheckBox.label='Tùy ý';panel.fastModeLab.text='Tăng tốc câu cá (1,11×)';panel.fastModeBox.selected=true;panel.mutlFishBox.selected=true;panel.silentModeCheckBox.selected=true;panel.autoPowerFishBox.selected=true;
+  }else{
+   panel.model={fishInfo:{scene:1},fishRoomError:()=>'',changeFishRoom:function(map,id){window.lastRoomSelected=id;return true;},Rpc:function(tag,p,cb){setTimeout(()=>cb({result:0,roomProtocol:1,page:0,totalPages:2,currentRoomId:1,rooms:[{id:1,count:2,players:[{name:'Thanh Vân'},{name:'Linh Nhi'}]},{id:2,count:4,players:[{name:'Tiêu Phong'},{name:'Nguyệt Cầm'},{name:'Bạch Hồ'},{name:'Đông Phương Bất Bại'}]},{id:3,count:1,players:[{name:'Vân Du'}]},{id:4,count:0,players:[]}]}),30);}};
+   for(var key in funcs.room)panel[key]=eval('('+funcs.room[key]+')');panel.openFishRoomPicker();
+  }
+  setTimeout(function(){window.fixtureReady=true;},2000);
+ };window.FixtureMain=FixtureMain;egret.runEgret({renderMode:'webgl',audioType:0});
+});
+</script></body></html>

@@ -1,0 +1,2259 @@
+{
+  "_table": "DoubleTowerHaloConfig",
+  "_rows": 178,
+  "_type": "object",
+  "_firstKeys": "id,type,conditionType,target,buffList,haloCount,sourceSkillId,sameHalo",
+  "_sample": [
+    {
+      "1000001": {
+        "id": 1000001,
+        "type": 1,
+        "conditionType": 0,
+        "target": 170200020,
+        "buffList": [
+          100120101
+        ],
+        "haloCount": 1,
+        "sourceSkillId": 1001201,
+        "sameHalo": []
+      }
+    },
+    {
+      "1000002": {
+        "id": 1000002,
+        "type": 1,
+        "conditionType": 0,
+        "target": 170200020,
+        "buffList": [
+          100120201
+        ],
+        "haloCount": 1,
+        "sourceSkillId": 1001202,
+        "sameHalo": []
+      }
+    },
+    {
+      "1001001": {
+        "id": 1001001,
+        "type": 1,
+        "conditionType": 1,
+        "conditionValues": [
+          3,
+          1
+        ],
+        "target": 190100020,
+        "buffList": [
+          100320101
+        ],
+        "haloCount": 1,
+        "sourceSkillId": 1003201,
+        "sameHalo": []
+      }
+    }
+  ],
+  "data": {
+    "1000001": {
+      "id": 1000001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 170200020,
+      "buffList": [
+        100120101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1001201,
+      "sameHalo": []
+    },
+    "1000002": {
+      "id": 1000002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 170200020,
+      "buffList": [
+        100120201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1001202,
+      "sameHalo": []
+    },
+    "1001001": {
+      "id": 1001001,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        1
+      ],
+      "target": 190100020,
+      "buffList": [
+        100320101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1003201,
+      "sameHalo": []
+    },
+    "1001002": {
+      "id": 1001002,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        1
+      ],
+      "target": 190200020,
+      "buffList": [
+        100320102
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1001003": {
+      "id": 1001003,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        1
+      ],
+      "target": 190100020,
+      "buffList": [
+        100320201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1003202,
+      "sameHalo": []
+    },
+    "1001004": {
+      "id": 1001004,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        1
+      ],
+      "target": 190200020,
+      "buffList": [
+        100320202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1002001": {
+      "id": 1002001,
+      "type": 1,
+      "conditionType": 2,
+      "target": 190100020,
+      "buffList": [
+        100620101,
+        100620102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1006201,
+      "sameHalo": []
+    },
+    "1002002": {
+      "id": 1002002,
+      "type": 1,
+      "conditionType": 2,
+      "target": 190100020,
+      "buffList": [
+        100620201,
+        100620202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1006202,
+      "sameHalo": []
+    },
+    "1003001": {
+      "id": 1003001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        200120101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2001201,
+      "sameHalo": []
+    },
+    "1003002": {
+      "id": 1003002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        200120201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2001202,
+      "sameHalo": []
+    },
+    "1004001": {
+      "id": 1004001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        200220101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2002201,
+      "sameHalo": []
+    },
+    "1004002": {
+      "id": 1004002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        200220201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2002202,
+      "sameHalo": []
+    },
+    "1005001": {
+      "id": 1005001,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        2
+      ],
+      "target": 190100020,
+      "buffList": [
+        200320101,
+        200320102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2003201,
+      "sameHalo": []
+    },
+    "1005002": {
+      "id": 1005002,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        2
+      ],
+      "target": 190100020,
+      "buffList": [
+        200320201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2003202,
+      "sameHalo": []
+    },
+    "1005003": {
+      "id": 1005003,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        2
+      ],
+      "target": 190200020,
+      "buffList": [
+        200320202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1006001": {
+      "id": 1006001,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        3
+      ],
+      "target": 190100020,
+      "buffList": [
+        300320101,
+        300320102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 3003201,
+      "sameHalo": []
+    },
+    "1006002": {
+      "id": 1006002,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        3
+      ],
+      "target": 190100020,
+      "buffList": [
+        300320201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 3003202,
+      "sameHalo": []
+    },
+    "1006003": {
+      "id": 1006003,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        3
+      ],
+      "target": 190200020,
+      "buffList": [
+        300320202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1007001": {
+      "id": 1007001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 170100020,
+      "buffList": [
+        300620101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 3006201,
+      "sameHalo": []
+    },
+    "1007002": {
+      "id": 1007002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 170100020,
+      "buffList": [
+        300620201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 3006202,
+      "sameHalo": []
+    },
+    "1008001": {
+      "id": 1008001,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        4
+      ],
+      "target": 180100020,
+      "buffList": [
+        400120101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 4001201,
+      "sameHalo": []
+    },
+    "1008002": {
+      "id": 1008002,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        4
+      ],
+      "target": 180100020,
+      "buffList": [
+        400120201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1008003": {
+      "id": 1008003,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        4
+      ],
+      "target": 110104020,
+      "buffList": [
+        400120202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 4001202,
+      "sameHalo": []
+    },
+    "1009001": {
+      "id": 1009001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        400220101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 4002201,
+      "sameHalo": []
+    },
+    "1009002": {
+      "id": 1009002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        400220201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 4002202,
+      "sameHalo": []
+    },
+    "1010001": {
+      "id": 1010001,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        5
+      ],
+      "target": 230100020,
+      "buffList": [
+        500320101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5003201,
+      "sameHalo": []
+    },
+    "1010002": {
+      "id": 1010002,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        3,
+        5
+      ],
+      "target": 190200020,
+      "buffList": [
+        500320102
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1010003": {
+      "id": 1010003,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        5
+      ],
+      "target": 230100020,
+      "buffList": [
+        500320201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5003202,
+      "sameHalo": []
+    },
+    "1010004": {
+      "id": 1010004,
+      "type": 1,
+      "conditionType": 1,
+      "conditionValues": [
+        5,
+        5
+      ],
+      "target": 190200020,
+      "buffList": [
+        500320202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "1011001": {
+      "id": 1011001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        500420101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5004201,
+      "sameHalo": []
+    },
+    "1011002": {
+      "id": 1011002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        500420201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5004202,
+      "sameHalo": []
+    },
+    "1012001": {
+      "id": 1012001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110100020,
+      "buffList": [
+        400720101
+      ],
+      "sameHalo": []
+    },
+    "1012002": {
+      "id": 1012002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110100020,
+      "buffList": [
+        400720201
+      ],
+      "sameHalo": []
+    },
+    "1013001": {
+      "id": 1013001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500120101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5001201,
+      "sameHalo": []
+    },
+    "1013002": {
+      "id": 1013002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500120201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5001202,
+      "sameHalo": []
+    },
+    "1014001": {
+      "id": 1014001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500220101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5002201,
+      "sameHalo": []
+    },
+    "1014002": {
+      "id": 1014002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500220201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5002202,
+      "sameHalo": []
+    },
+    "1015001": {
+      "id": 1015001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        500520101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5005201,
+      "sameHalo": []
+    },
+    "1015002": {
+      "id": 1015002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        500520201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5005202,
+      "sameHalo": []
+    },
+    "1016001": {
+      "id": 1016001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500620101,
+        500620102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5006201,
+      "sameHalo": []
+    },
+    "1016002": {
+      "id": 1016002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500620201,
+        500620202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5006202,
+      "sameHalo": []
+    },
+    "1017001": {
+      "id": 1017001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        400620101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 4006201,
+      "sameHalo": []
+    },
+    "1017002": {
+      "id": 1017002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        400620201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 4006202,
+      "sameHalo": []
+    },
+    "1018001": {
+      "id": 1018001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        170320103
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1703201,
+      "sameHalo": [
+        1018003,
+        1018004
+      ]
+    },
+    "1018002": {
+      "id": 1018002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        170320103
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1703202,
+      "sameHalo": [
+        1018003,
+        1018004
+      ]
+    },
+    "1018003": {
+      "id": 1018003,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        180320103
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1803201,
+      "sameHalo": [
+        1018001,
+        1018002
+      ]
+    },
+    "1018004": {
+      "id": 1018004,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        180320103
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1803202,
+      "sameHalo": [
+        1018001,
+        1018002
+      ]
+    },
+    "1018005": {
+      "id": 1018005,
+      "type": 1,
+      "conditionType": 0,
+      "target": 200300020,
+      "buffList": [
+        170320101
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        1018006
+      ]
+    },
+    "1018006": {
+      "id": 1018006,
+      "type": 1,
+      "conditionType": 0,
+      "target": 200300020,
+      "buffList": [
+        180320101
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        1018005
+      ]
+    },
+    "1019001": {
+      "id": 1019001,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        370120102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 3701201,
+      "sameHalo": [
+        1019002
+      ]
+    },
+    "1019002": {
+      "id": 1019002,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        380120102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 3801201,
+      "sameHalo": [
+        1019001
+      ]
+    },
+    "1702201": {
+      "id": 1702201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 180200020,
+      "buffList": [
+        170220102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1702201,
+      "sameHalo": [
+        1802201,
+        1802202
+      ]
+    },
+    "1702202": {
+      "id": 1702202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 180200020,
+      "buffList": [
+        170220202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1702202,
+      "sameHalo": [
+        1802201,
+        1802202
+      ]
+    },
+    "1802201": {
+      "id": 1802201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 180200020,
+      "buffList": [
+        180220102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1802201,
+      "sameHalo": [
+        1702201,
+        1702202
+      ]
+    },
+    "1802202": {
+      "id": 1802202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 180200020,
+      "buffList": [
+        180220202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 1802202,
+      "sameHalo": [
+        1702201,
+        1702202
+      ]
+    },
+    "2001001": {
+      "id": 2001001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1010101
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2002001": {
+      "id": 2002001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1010201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2003001": {
+      "id": 2003001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1010301
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2004001": {
+      "id": 2004001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1010401,
+        1010402
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2004002": {
+      "id": 2004002,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190200020,
+      "buffList": [
+        1010403
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2005001": {
+      "id": 2005001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1020101
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2006001": {
+      "id": 2006001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1020201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2007001": {
+      "id": 2007001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1020301
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2008001": {
+      "id": 2008001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1020401,
+        1020402
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2009001": {
+      "id": 2009001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1030101
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2010001": {
+      "id": 2010001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1030201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2011001": {
+      "id": 2011001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1030301
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2012001": {
+      "id": 2012001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1030401
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2012002": {
+      "id": 2012002,
+      "type": 2,
+      "conditionType": 0,
+      "target": 110102020,
+      "buffList": [
+        1030402
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2013001": {
+      "id": 2013001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1040101
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2014001": {
+      "id": 2014001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1040201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2015001": {
+      "id": 2015001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1040301
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2016001": {
+      "id": 2016001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1040401,
+        1040402
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2017001": {
+      "id": 2017001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1050101
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2018001": {
+      "id": 2018001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1050201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2019001": {
+      "id": 2019001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1050301
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2020001": {
+      "id": 2020001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1050401
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2020002": {
+      "id": 2020002,
+      "type": 2,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        1050402
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2021001": {
+      "id": 2021001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1060101
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2022001": {
+      "id": 2022001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1060201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2023001": {
+      "id": 2023001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1060301
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2024001": {
+      "id": 2024001,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        1060401,
+        1060402
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2024002": {
+      "id": 2024002,
+      "type": 2,
+      "conditionType": 0,
+      "target": 190200020,
+      "buffList": [
+        1060403
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "2624301": {
+      "id": 2624301,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        2624320101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26243201,
+      "sameHalo": []
+    },
+    "2624302": {
+      "id": 2624302,
+      "type": 1,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        2624320201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26243202,
+      "sameHalo": []
+    },
+    "2653201": {
+      "id": 2653201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500720101
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5007201,
+      "sameHalo": []
+    },
+    "2653202": {
+      "id": 2653202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        500720201
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5007202,
+      "sameHalo": []
+    },
+    "2654301": {
+      "id": 2654301,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        2654320101,
+        2654320102,
+        2654320103
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26543201,
+      "sameHalo": []
+    },
+    "2654302": {
+      "id": 2654302,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        2654320201,
+        2654320202,
+        2654320203
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26543202,
+      "sameHalo": []
+    },
+    "2655201": {
+      "id": 2655201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        2655220102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26552201,
+      "sameHalo": [
+        2656201,
+        2656202
+      ]
+    },
+    "2655202": {
+      "id": 2655202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        2655220202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26552202,
+      "sameHalo": [
+        2656201,
+        2656202
+      ]
+    },
+    "2656201": {
+      "id": 2656201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        2656220102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26562201,
+      "sameHalo": [
+        2655201,
+        2655202
+      ]
+    },
+    "2656202": {
+      "id": 2656202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        2656220202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 26562202,
+      "sameHalo": [
+        2655201,
+        2655202
+      ]
+    },
+    "2701201": {
+      "id": 2701201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110200020,
+      "buffList": [
+        270120102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2701201,
+      "sameHalo": [
+        2801201,
+        2801202
+      ]
+    },
+    "2701202": {
+      "id": 2701202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110200020,
+      "buffList": [
+        270120202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2701202,
+      "sameHalo": [
+        2801201,
+        2801202
+      ]
+    },
+    "2801201": {
+      "id": 2801201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110200020,
+      "buffList": [
+        280120102,
+        280120103
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2801201,
+      "sameHalo": [
+        2701201,
+        2701202
+      ]
+    },
+    "2801202": {
+      "id": 2801202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110200020,
+      "buffList": [
+        280120202,
+        280120203
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 2801202,
+      "sameHalo": [
+        2701201,
+        2701202
+      ]
+    },
+    "5702201": {
+      "id": 5702201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        570220102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5702201,
+      "sameHalo": [
+        5802201,
+        5802202
+      ]
+    },
+    "5702202": {
+      "id": 5702202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        570220202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5702202,
+      "sameHalo": [
+        5802201,
+        5802202
+      ]
+    },
+    "5702301": {
+      "id": 5702301,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        570230101
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        5802301,
+        5802302
+      ]
+    },
+    "5702302": {
+      "id": 5702302,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        570230201
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        5802301,
+        5802302
+      ]
+    },
+    "5802201": {
+      "id": 5802201,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        580220102
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5802201,
+      "sameHalo": [
+        5702201,
+        5702202
+      ]
+    },
+    "5802202": {
+      "id": 5802202,
+      "type": 1,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        580220202
+      ],
+      "haloCount": 1,
+      "sourceSkillId": 5802202,
+      "sameHalo": [
+        5702201,
+        5702202
+      ]
+    },
+    "5802301": {
+      "id": 5802301,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        580230101
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        5702301,
+        5702302
+      ]
+    },
+    "5802302": {
+      "id": 5802302,
+      "type": 1,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        580230201
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        5702301,
+        5702302
+      ]
+    },
+    "5802401": {
+      "id": 5802401,
+      "type": 1,
+      "conditionType": 0,
+      "target": 200300020,
+      "buffList": [
+        580240101
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        5702201,
+        5702202
+      ]
+    },
+    "5802402": {
+      "id": 5802402,
+      "type": 1,
+      "conditionType": 0,
+      "target": 200300020,
+      "buffList": [
+        580240201
+      ],
+      "haloCount": 0,
+      "sameHalo": [
+        5702201,
+        5702202
+      ]
+    },
+    "9010201": {
+      "id": 9010201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9010201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9010202": {
+      "id": 9010202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9010202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9010203": {
+      "id": 9010203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9010203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9010204": {
+      "id": 9010204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9010204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9010205": {
+      "id": 9010205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9010205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9011201": {
+      "id": 9011201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110204020,
+      "buffList": [
+        9011201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9011202": {
+      "id": 9011202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110204020,
+      "buffList": [
+        9011202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9011203": {
+      "id": 9011203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110204020,
+      "buffList": [
+        9011203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9011204": {
+      "id": 9011204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110204020,
+      "buffList": [
+        9011204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9011205": {
+      "id": 9011205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110204020,
+      "buffList": [
+        9011205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9012201": {
+      "id": 9012201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110205020,
+      "buffList": [
+        9012201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9012202": {
+      "id": 9012202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110205020,
+      "buffList": [
+        9012202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9012203": {
+      "id": 9012203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110205020,
+      "buffList": [
+        9012203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9012204": {
+      "id": 9012204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110205020,
+      "buffList": [
+        9012204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9012205": {
+      "id": 9012205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110205020,
+      "buffList": [
+        9012205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9013201": {
+      "id": 9013201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110203020,
+      "buffList": [
+        9013201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9013202": {
+      "id": 9013202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110203020,
+      "buffList": [
+        9013202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9013203": {
+      "id": 9013203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110203020,
+      "buffList": [
+        9013203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9013204": {
+      "id": 9013204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110203020,
+      "buffList": [
+        9013204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9013205": {
+      "id": 9013205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110203020,
+      "buffList": [
+        9013205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9014201": {
+      "id": 9014201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110201020,
+      "buffList": [
+        9014201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9014202": {
+      "id": 9014202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110201020,
+      "buffList": [
+        9014202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9014203": {
+      "id": 9014203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110201020,
+      "buffList": [
+        9014203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9014204": {
+      "id": 9014204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110201020,
+      "buffList": [
+        9014204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9014205": {
+      "id": 9014205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110201020,
+      "buffList": [
+        9014205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9015201": {
+      "id": 9015201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110202020,
+      "buffList": [
+        9015201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9015202": {
+      "id": 9015202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110202020,
+      "buffList": [
+        9015202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9015203": {
+      "id": 9015203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110202020,
+      "buffList": [
+        9015203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9015204": {
+      "id": 9015204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110202020,
+      "buffList": [
+        9015204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9015205": {
+      "id": 9015205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110202020,
+      "buffList": [
+        9015205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9020201": {
+      "id": 9020201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9020201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9020202": {
+      "id": 9020202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9020202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9020203": {
+      "id": 9020203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9020203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9020204": {
+      "id": 9020204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9020204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9020205": {
+      "id": 9020205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 120100020,
+      "buffList": [
+        9020205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9030201": {
+      "id": 9030201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        9030201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9030202": {
+      "id": 9030202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        9030202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9030203": {
+      "id": 9030203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        9030203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9030204": {
+      "id": 9030204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        9030204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9030205": {
+      "id": 9030205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 190100020,
+      "buffList": [
+        9030205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9031201": {
+      "id": 9031201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        9031201,
+        90312011
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9031202": {
+      "id": 9031202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        9031202,
+        90312021
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9031203": {
+      "id": 9031203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        9031203,
+        90312031
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9031204": {
+      "id": 9031204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        9031204,
+        90312041
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9031205": {
+      "id": 9031205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110101020,
+      "buffList": [
+        9031205,
+        90312051
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9032201": {
+      "id": 9032201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 180100020,
+      "buffList": [
+        9032201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9032202": {
+      "id": 9032202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 180100020,
+      "buffList": [
+        9032202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9032203": {
+      "id": 9032203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 180100020,
+      "buffList": [
+        9032203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9032204": {
+      "id": 9032204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 180100020,
+      "buffList": [
+        9032204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9032205": {
+      "id": 9032205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 180100020,
+      "buffList": [
+        9032205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9032206": {
+      "id": 9032206,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110104020,
+      "buffList": [
+        9032206
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9033201": {
+      "id": 9033201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110102020,
+      "buffList": [
+        9033201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9033202": {
+      "id": 9033202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110102020,
+      "buffList": [
+        9033202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9033203": {
+      "id": 9033203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110102020,
+      "buffList": [
+        9033203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9033204": {
+      "id": 9033204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110102020,
+      "buffList": [
+        9033204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9033205": {
+      "id": 9033205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110102020,
+      "buffList": [
+        9033205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9034201": {
+      "id": 9034201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        9034201,
+        90342015
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9034202": {
+      "id": 9034202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        9034202,
+        90342025
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9034203": {
+      "id": 9034203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        9034203,
+        90342035
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9034204": {
+      "id": 9034204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        9034204,
+        90342045
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9034205": {
+      "id": 9034205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110103020,
+      "buffList": [
+        9034205,
+        90342055
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9035201": {
+      "id": 9035201,
+      "type": 3,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        90352011,
+        90352012
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9035202": {
+      "id": 9035202,
+      "type": 3,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        90352021,
+        90352022
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9035203": {
+      "id": 9035203,
+      "type": 3,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        90352031,
+        90352032
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9035204": {
+      "id": 9035204,
+      "type": 3,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        90352041,
+        90352042
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "9035205": {
+      "id": 9035205,
+      "type": 3,
+      "conditionType": 0,
+      "target": 230100020,
+      "buffList": [
+        90352051,
+        90352052
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "90352011": {
+      "id": 90352011,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        9035201
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "90352021": {
+      "id": 90352021,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        9035202
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "90352031": {
+      "id": 90352031,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        9035203
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "90352041": {
+      "id": 90352041,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        9035204
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    },
+    "90352051": {
+      "id": 90352051,
+      "type": 3,
+      "conditionType": 0,
+      "target": 110105020,
+      "buffList": [
+        9035205
+      ],
+      "haloCount": 0,
+      "sameHalo": []
+    }
+  }
+}

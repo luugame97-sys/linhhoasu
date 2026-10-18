@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chan doan tu choi cau ca 06/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-th-ng-b-o-t-ch-i-c-u-c">Session Report — thông báo từ chối câu cá</h1>
+<p>Ngày 06/09/2026, snapshot 06:41:41 UTC+7. <strong>Đã xác nhận thiếu sót trong luồng mồi/câu nhiều con sau bản sửa vừa triển khai. Phiên này chỉ kiểm tra, không sửa source hoặc dữ liệu production.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đọc ảnh người dùng: chế độ câu3, biểu tượng mồi đang lắp còn2, tài nguyên ở nút câu là1485, tiền câu cá98448; thông báo chung “Thao tác chưa hoàn tất…”.</li>
+<li>Đọc báo cáo release trước, kiểm source hiện hành và truy vấn trạng thái nhân vật trong ảnh chỉ đọc. Cả5 file source server khớp local; main hiện hành đúng bản fishing_integrity_v1.</li>
+<li>Source <code>consumeFishBait</code> yêu cầu đủ toàn bộ count ở mồi đang chọn, không chuyển sang mồi kế tiếp khi thiếu. Client <code>getAutoMutlFishCount</code> gửi3 khi bật fishing_mutl; client kiểm resource65, còn server lúc này kiểm5512. Client chỉ tự loại mồi khỏi foodBag khi số lượng bằng0, không xử lý trường hợp còn2 nhưng cần3.</li>
+<li>Vì vậy đây là lỗi luồng chọn mồi/hiển thị điều kiện, không phải cá pending hay khu bị khóa và không có bằng chứng lỗi mất stat mới trong ảnh này. Việc từ chối trừ quá số mồi đang có là đúng; phần thiếu là xử lý batch/fallback nhất quán và thông báo rõ.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Tool hỗ trợ mới: <code>_ai_workbench/tools/audit_fishing_rejection_20260906.py</code>, <code>_ai_workbench/tools/probe_fishing_rejection_20260906.js</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/fishing_rejection_20260905T234141Z/snapshot.json</code>, <code>probes.json</code>. Snapshot/log chỉ dùng nội bộ, không public.</li>
+<li>Báo cáo MD/HTML này và session_report.md/.html. Backup report trước cập nhật ở <code>_ai_workbench/backups/fishing_rejection_reports_20260906/</code>.</li>
+<li>Không sửa source, client, config, inventory, cá hoặc trạng thái game. Không gọi gameplay RPC production, không restart và không phát bù.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Kiểm tra / hướng xử lý</th>
+<th>Tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Bấm câu3 bị từ chối dù hiện1485</td>
+<td>food5512 chỉ còn2;1485 là item65 khác; server không chuyển qua5514</td>
+<td>Clone cùng state: count3 thất bại, count1 thành công; chuyển5514 rồi count3 thành công</td>
+<td>Test batch tại ranh giới0/1/2/3 và nhiều loại mồi</td>
+</tr>
+<tr>
+<td>Thông báo nói chung về pending/vật phẩm/khu</td>
+<td>Nhánh thiếu mồi trảresult=-1, không có reason cụ thể;24 callback dùng chungtext</td>
+<td>Thêm reason/đủ-cần theo loại mồi khi được yêu cầu sửa</td>
+<td>Test nội dung lỗi khớp nguyên nhân server</td>
+</tr>
+<tr>
+<td>Bỏ hết mồi báo success nhưng server vẫn giữ mồi cũ</td>
+<td>handleFishBaitBagUpdate chỉ gánfoodBag khi length&gt;0, fallback vẫn chọnfood cũ</td>
+<td>Probe foodBag=[] trả0 nhưng còn[5512,5514]</td>
+<td>Phải test mảng rỗng và sync client/server sau unequip</td>
+</tr>
+<tr>
+<td>Test trước bỏ sót ranh giới2/3</td>
+<td>Test thiếu mồi trước đó dùng tồn kho0, QA thật dùng mồi mặc định65</td>
+<td>Bổ sung fixture đúng ảnh và so no-consume/no-save</td>
+<td>QA cần mồi phụ, chuyển mồi và batch, không chỉ defaultbait</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Badge số mồi đang lắp khác số tài nguyên trên nút câu; không kết luận “còn1485 mà lỗi pending” chỉ từ một con số.</li>
+<li>Chặn tiêu hao vượt tồn là cần thiết, nhưng không được loại đường fallback cũ rồi coi toàn bộ flow đã hoàn chỉnh. Thay mồi phải đồng thời đổi loại được server xác nhận, không giả vờ hưởng thuộc tính mồi cũ.</li>
+<li>Khi đang chơi live, replay phải trên bản sao, stub save và cấm network. Không thử câu thật trên tài khoản người dùng để chẩn đoán.</li>
+<li>Log hiện tại cótag/msgUid nhưng không lưu params/result của mỗi lượt. count3 tại thời điểm ảnh được đối chiếu bằng ảnh + native getAutoMutlFishCount + exact-state replay, không gọi đó là packet capture đầy đủ.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="snapshot-kh-p-nh">Snapshot khớp ảnh</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Trường</th>
+<th>Giá trị</th>
+</tr></thead><tbody>
+<tr>
+<td>Cấp nhân vật / câu cá</td>
+<td>116 /3</td>
+</tr>
+<tr>
+<td>Khu câu</td>
+<td>1, yêu cầu cấp1/ngày1; nhân vật đủ điều kiện</td>
+</tr>
+<tr>
+<td>Pending cá thường / linh hồn</td>
+<td>0 /0</td>
+</tr>
+<tr>
+<td>Mồi đang chọn</td>
+<td>5512×2</td>
+</tr>
+<tr>
+<td>FoodBag</td>
+<td>[5512,5514]</td>
+</tr>
+<tr>
+<td>Mồi kế tiếp</td>
+<td>5514×90</td>
+</tr>
+<tr>
+<td>Tài nguyên65</td>
+<td>1485</td>
+</tr>
+<tr>
+<td>Coin68 / crystal69</td>
+<td>98448 /0</td>
+</tr>
+</tbody></table></div>
+<h3 id="k-t-qu-probe-kh-ng-ghi-production">Kết quả probe không ghi production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Probe</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Cùngstate, count3</td>
+<td>result=-1, không reason, save0, item không đổi</td>
+</tr>
+<tr>
+<td>Cùngstate, count2</td>
+<td>result0, mồi5512 còn0 trên clone; native nút chỉ dùng1 hoặc3</td>
+</tr>
+<tr>
+<td>Cùngstate, count1</td>
+<td>result0, mồi5512 còn1 trên clone</td>
+</tr>
+<tr>
+<td>ChọnfoodBag[5514], count3</td>
+<td>result0, mồi5514 còn87 trên clone</td>
+</tr>
+<tr>
+<td>Unequip toàn bộfoodBag[]</td>
+<td>result0 nhưngfood/foodBag server không xóa — lỗi riêng đã tái hiện</td>
+</tr>
+</tbody></table></div>
+<p>S1/S2 ready200, PID/restart count không đổi so release. Log tài khoản có nhiều request4000 liên tiếp nhưng không có exception liên quan trong error tail. Không xác nhận mọi lời gọi4000 đều cùng params vì log không lưu params.</p>
+<p><strong>Kết luận:</strong> lỗi/thiếu sót ở flow mồi được đưa ra ánh sáng bởi chốt kiểm tra mới. Bản sửa vừa rồi chưa xử lý đủ tình huống mồi còn2 khi câu3 và bỏ hết mồi. Không phải lỗi mất cá sau relog. Chưa triển khai fix trong phiên chẩn đoán này.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Cách dùng tạm đã kiểm trên clone: tắt câu3 để câu1, hoặc bỏ mồi5512 đang thiếu để dùng5514 còn90. Không dùng “bỏ hết” vì nhánh đó đang lỗi.</li>
+<li>Khi được yêu cầu sửa: xác định cơ chế tài nguyên65 và mồi phụ/batch, chọn mồi theofoodBag một cách server-authoritative; không mất mồi dư và không hưởng sai loại mồi.</li>
+<li>Sửa empty-foodBag/unequip về mồi mặc định, phản hồi trạng thái chính xác và thông báo thiếu đúng loại mồi.</li>
+<li>Regression thêm tồn0/1/2/3, mồi kế tiếp, hết toàn bộ, chế độ1/3, disconnect/relog. Không bỏ chốt chống mất pending, không phát bù.</li>
+</ol></main></body></html>

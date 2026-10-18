@@ -1,0 +1,74 @@
+{
+  "_table": "HomelandSkinConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,name,miniMap,map,resource",
+  "_sample": [
+    {
+      "0": {
+        "id": 0,
+        "name": 190050,
+        "miniMap": "minimap_homeland_001",
+        "map": "map_homeland_001",
+        "resource": "hzg_bg_homeland001_wjs"
+      }
+    },
+    {
+      "190051": {
+        "id": 190051,
+        "name": 190051,
+        "miniMap": "minimap_homeland_002",
+        "map": "map_homeland_002",
+        "unlock": 13190051,
+        "attrs": {
+          "703": 1000
+        },
+        "resource": "hzg_bg_homeland002_wjs"
+      }
+    },
+    {
+      "190052": {
+        "id": 190052,
+        "name": 190052,
+        "miniMap": "minimap_homeland_003",
+        "map": "map_homeland_003",
+        "unlock": 13190052,
+        "attrs": {
+          "703": 1000
+        },
+        "resource": "hzg_bg_homeland003_wjs"
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "id": 0,
+      "name": 190050,
+      "miniMap": "minimap_homeland_001",
+      "map": "map_homeland_001",
+      "resource": "hzg_bg_homeland001_wjs"
+    },
+    "190051": {
+      "id": 190051,
+      "name": 190051,
+      "miniMap": "minimap_homeland_002",
+      "map": "map_homeland_002",
+      "unlock": 13190051,
+      "attrs": {
+        "703": 1000
+      },
+      "resource": "hzg_bg_homeland002_wjs"
+    },
+    "190052": {
+      "id": 190052,
+      "name": 190052,
+      "miniMap": "minimap_homeland_003",
+      "map": "map_homeland_003",
+      "unlock": 13190052,
+      "attrs": {
+        "703": 1000
+      },
+      "resource": "hzg_bg_homeland003_wjs"
+    }
+  }
+}

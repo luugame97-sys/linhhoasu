@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fishing v2 - Moi, don va linh hon</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-s-a-m-i-m-l-i-n-v-x-l-linh-h-n">Session Report — sửa mồi, mở lại đơn và xử lý linh hồn</h1>
+<p>Ngày 06/09/2026, hậu kiểm 07:00:54 UTC+7. <strong>Đã triển khai sửa mồi/câu3, làm mới đơn có vé và xử lý ô linh hồn đã có cá trên S1/S2. Tẩy thuộc tính cần và hộp kho báu vẫn cần dữ liệu gốc hoặc phê duyệt bảng cân bằng mới, không giả vờ đã mở lại. Không bù hoặc repair cá lịch sử.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đọc báo cáo phiên trước, lấy snapshot production mới149 artifact tại <code>temp/fishing_audit_20260905T234528Z/</code>. Làm candidate riêng, không ghi cây tham chiếu hoặc giải nén đè source từ gói cũ.</li>
+<li>Mồi được dùng theo thứ tự túi trên từng lần thả câu. Ví dụ câu3 với5512×2 và5514×90: dùng2 mồi5512 +1 mồi5514, còn5514×89; không từ chối cả lượt vì mồi đầu chỉ còn2. Hết mồi phụ thì tự dùng mồi mặc định5501.</li>
+<li>Tách rõ Đùi Gà65 là năng lượng câu và mồi phụ là vật phẩm khác. Một lượt3 cần3 Đùi Gà, mồi phụ dùng riêng; kiểm đủ năng lượng trước mọi tiêu hao. Quy tắc này căn cứ help30033014/30033060 và nút client getPowerId=65, không coi mồi phụ thay thế năng lượng.</li>
+<li>Bỏ hết mồi <code>foodBag=[]</code> lưu đúng danh sách rỗng và chọn5501. Client nhận danh sách chuẩn từ server; giới hạn túi5 loại theo native MaxFiahBaitBagCount.</li>
+<li>Mở lại làm mới đơn với item70×1 theo native FishOrderItem. Đơn đã nhận thưởng không được refresh. Native gửi expectedId để chống click/retry trừ vé khi đơn đã đổi. Chọn đơn khác trong cấu hình, tối đa5 sao hoặc6 nếu sở hữu bè6205.</li>
+<li>Mở xử lý cá linh hồn vào ô có cá: so phẩm chất trước, cùng phẩm chất so multi theo native checkIsPowerUp. Không đè ô khóa; không thay cá mạnh bằng cá yếu.</li>
+<li>Mọi linh hồn bị thay ra/không được chọn được giữ nguyên entity trong <code>fishSoulReserve</code> phía server, không tự bán/xóa/phát bạc. Cập nhật đồ giám tất cả cá vừa xử lý, xóa pending chỉ sau xử lý đã lập kế hoạch và save xác nhận. Có thể câu tiếp sau khi xử lý pending.</li>
+<li>Dự phòng giới hạn4096 entry để tránh document tăng vô hạn. Đầy thì từ chối cả giao dịch và giữ pending, không cắt/xóa cá cũ. Đây là kho phục hồi nội bộ, chưa có UI rút cá hoặc quy tắc bán/recycle.</li>
+<li>Sửa pool cá đã mở: help30033014 xác nhận cá thuộc mọi khu đã mở có thể câu ở mọi ngư trường thường, chỉ di vật theo khu. Bản audit/release trước đã hiểu sai khi chỉ lấy pool khu đang đứng; nay lấy hợp các khu đủ cấp/ngày, vẫn loại khu khóa/event chưa hỗ trợ.</li>
+<li>Client thông báo rõ lỗi thiếu Đùi Gà, thiếu vé, đơn đã nhận/đổi, dữ liệu linh hồn lỗi, kho dự phòng đầy. Giữ các chốt save/cost/pending/full-entity của bản trước.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-local-v-production">Source chính, local và production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Nội dung</th>
+</tr></thead><tbody>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish.js</code></td>
+<td>FIFO mồi, năng lượng, emptybag, refresh vé70, pool khu đã mở</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish-soul.js</code></td>
+<td>Chọn linh hồn tốt hơn/giữ khóa, reserve, ledger đồ giám, pending/replay</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/playerPayload.js</code></td>
+<td>Chỉ gửi số lượng reserve, không gửi archive nội bộ qua login</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></td>
+<td>4 hàm native sửa dữ liệu +24 nơi thông báo lỗi</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/index.html</code></td>
+<td>Cache key20260906_fishing_bait_order_soul_v2</td>
+</tr>
+</tbody></table></div>
+<p>Không đổi config, WebGM, logic ngoại quan, PlayerService, WSServer, Redis/Mongo schema hoặc bot worker.</p>
+<h3 id="tool-evidence-v-backup">Tool, evidence và backup</h3>
+<ul>
+<li>Tools mới trong <code>_ai_workbench/tools/</code>: inspect_fishing_complete_20260906.js, build_fishing_complete_client_20260906.js, extend_fishing_complete_tests_20260906.js, test_fishing_complete_20260906.js, release_fishing_complete_20260906.py, qa_fishing_complete_live_20260906.js, run_fishing_complete_live_20260906.py, check_fishing_complete_runtime_20260906.py, sync_fishing_complete_local_20260906.py, sync_fishing_complete_followup_20260906.py, final_fishing_complete_20260906.py.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_complete_20260906/</code>. <code>tests.json</code>, <code>stage-v2.json</code>, <code>deploy-v2.json</code>, <code>stage.json</code>, <code>deploy.json</code>, <code>live-qa.json</code>, <code>runtime-check.json</code>, <code>unverified-contracts.json</code>, <code>final-check.json</code>.</li>
+<li>Backup production lượt1: <code>/linhhoasu/_ai_workbench/backups/fishing_complete_20260905_235151/</code>; follow-up: <code>/linhhoasu/_ai_workbench/backups/fishing_complete_20260905_235750/</code>.</li>
+<li>Backup local: <code>backups/fishing_complete_local_20260906/</code>, <code>backups/fishing_complete_followup_local_20260906/</code>. Backup report: <code>backups/fishing_complete_reports_20260906/</code>.</li>
+<li>Gói source-only <code>temp/fishing_complete_20260906/fishing_bait_order_soul_v2_20260906.zip</code>,6 entry,2.188.212 bytes; yêu cầu bản fishing_integrity_v1 đã có. SHA256 <code>ed51be1667cdcfedfbbe1a3cad0f52dca2c462c75af60c7a92106c64251d8503</code>.</li>
+<li>Gói không chứa config, credential, DB hoặc runtime snapshot. Evidence log/snapshot chỉ dùng nội bộ, không đưa lênweb.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Mồi2/câu3 bị chặn</td>
+<td>Chỉ kiểm một loại mồi cho cả batch</td>
+<td>Lập kế hoạch theo từng cast/FIFO, fallback5501</td>
+<td>Test tồn0/1/2/3/4 và túi1+1+default</td>
+</tr>
+<tr>
+<td>Mồi phụ thay năng lượng</td>
+<td>Code chọn costId là65 hoặc mồi</td>
+<td>Luôn kiểm/trừ năng lượng65; mồi phụ độc lập</td>
+<td>Đọc help/getPowerId, test thiếu65 nhưng nhiều mồi</td>
+</tr>
+<tr>
+<td>Bỏ hết mồi không lưu</td>
+<td>Bỏ qua mảngrỗng</td>
+<td>Lưu[] vàdefault, syncserver bag</td>
+<td>ACK+payload relog thật</td>
+</tr>
+<tr>
+<td>Refresh đơn bị khóa hoặc mở quà lặp</td>
+<td>Audit chưa đọc chi phí70 và điều kiện received</td>
+<td>Vé70×1, không refresh đơn đã nhận, kiểm expectedId</td>
+<td>Test thiếu vé, replay stale, giới hạn sao</td>
+</tr>
+<tr>
+<td>Linh hồn ô có cá bị khóa hoặc mất cá</td>
+<td>Thay mù hoặc chặn toàn bộ</td>
+<td>So quality/multi như native, lưu nguyên entity dự phòng</td>
+<td>Test mạnh/yếu/khóa/trùngUID/đầy dự phòng/relog</td>
+</tr>
+<tr>
+<td>Pool khu bị thu hẹp sai</td>
+<td>Hiểu fishes như danh sách độc quyền của khu</td>
+<td>Hợp các khu đã mở theo help30033014</td>
+<td>Cấp3 đứng khu1 vẫn có cá khu2, không có cá khu3</td>
+</tr>
+<tr>
+<td>Archive làm nặng login</td>
+<td>Spread fishInfo gửi toàn bộ reserve</td>
+<td>Chỉ gửi reserveCount, DB vẫn giữ archive</td>
+<td>Test payload không có archive, player gốc không bị xóa</td>
+</tr>
+<tr>
+<td>QA websocket handshake timeout</td>
+<td>Có nhiều kết nối lại sau restart; chưa chứng minh nguyên nhân duy nhất</td>
+<td>Kiểm HTTP/WS ready,101/listener, không restart bot; thử QA lại sau khi ổn</td>
+<td>Không dùng HTTP ready thay cho WS QA</td>
+</tr>
+<tr>
+<td>Lang decode EOF</td>
+<td>lang.bin là container LanguageConfig, không phải raw zlib JSON</td>
+<td>Dùng ConfigService.reload(lang.bin)</td>
+<td>Không sửa encoding bằng đoán</td>
+</tr>
+<tr>
+<td>Regex log lỗi escape Python</td>
+<td>Chuỗi JS regex không phải raw bị xuống dòng</td>
+<td>Dùng chuỗi r cho đoạn JS</td>
+<td>Kiểm cú pháp tool, không quy lỗi cho server</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Native/UI help là bằng chứng để hiệu chỉnh hợp đồng: foodBag30035898, energy30033014, wash30033060, soul30033154, refreshUI ID70×1. Không chỉ suy tênfield.</li>
+<li><code>FishSoulPrivilegeConfig.privRewardShow</code> là danh sách hiển thị, không chứaweight. Không chiađều xácsuất hoặc phát tấtcả chỉ vì cólist.</li>
+<li><code>FishLevelConfig.washCount</code> cho sốdòng vàweight sốdòng, không chophép suy giátrị/qualityweight từngthuộctính. <code>FishWashAttrDescConfig</code> chỉ mô tả/type/isWash.</li>
+<li>Kho dự phòng server giữ tính phục hồi nhưng chưa thaythế UI quảnlý/kịchbản recycle; đầykho phảiholdkhôngdrop.</li>
+<li>Múi giờ máy/VPS+0700, logger+0800, tênstageUTC. Không nhầm07:xx logger với07:xx giờuser.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="t">Đã đạt</h3>
+<ul>
+<li>50 tests in-memory PASS trên Windows và staging Node20: FIFO, emptybag, thiếu năng lượng, chi phí/nhận lặp, native callbacks, soul reserve, full entity/relog, save null/throw, pool đã mở và các chốt v1.</li>
+<li>Core gameplay contract PASS trên staging và source local,714 bảng; cú pháp3 source và main PASS.</li>
+<li>Live WS QA cuối PASS cả1001/1002: nhận/giữ cá fixture đầy đủ stat, câu3 dùng mồi2+1, emptybag, refresh vé/expectedId, nâng cấp linh hồn và lưu dự phòng, nhận thưởng lặp và2 lần disconnect/relog. QA có thể tự lên117 do template/task; không dựa vào level đó để so người thật.</li>
+<li>Các lần QA đầu timeout đều cleanup đúng UID; final qaRemaining0. Không gọi RPC hoặc sửa inventory/cá tài khoản người chơi; không compensation.</li>
+<li>150 hash PASS;5 file release đúng,145 artifact khác giữ nguyên. Local3 source khớp candidate; main/index phục vụ ở cổng81 đúng hash.</li>
+<li>S1 PID17992/restart1370, S2 PID17937/restart34. Có2 lần triển khai trong phiên (lượt đầu mồi/đơn/soul, lượt sau pool/payload), mỗi lượt restart chỉS1/S2. Dist/admin/2 bot worker giữ PID và restart count.</li>
+<li>Ready8080/8083=200; WS ready9200/9201=200 và HTTP101 upgrade. Error tail không có TypeError/ReferenceError/Unhandled/FATAL/SyntaxError. Chưa chẩn đoán sâu đợt kết nối lại; không tự sửa WSServer hoặc bot worker.</li>
+</ul>
+<h3 id="ch-a-m-c-n-quy-t-nh">Chưa mở / cần quyết định</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Phần</th>
+<th>Điều còn thiếu</th>
+</tr></thead><tbody>
+<tr>
+<td>Tẩy thuộc tính cần4012</td>
+<td>Chưa có bảng min/max, trọng số phẩm chất và thuộc tính. Đã xác minh cost135×10 và washCount, nhưng chưa đủ sinh thuộc tính đúng. Vẫn khóa, không trừ đá</td>
+</tr>
+<tr>
+<td>Mở hộp94821–94825/tag4063</td>
+<td>Có5 dòng quà hiển thị mỗi hộp, thiếu tỉ lệ rơi, cơ chế bảo đảm và contract cấp quà190001..190005. Vẫn khóa, không trừ hộp</td>
+</tr>
+<tr>
+<td>Hiệu ứng/tỷ lệ mồi, RNG/di vật/event, soul RNG</td>
+<td>Chưa xác minh tương đương bản gốc. Phiên này sửa tiêu hao/routing và tính toàn vẹn, không hứa hiệu ứng mọi loại mồi đã chuẩn. Thuật toán soul first-N cũ chưa thay</td>
+</tr>
+<tr>
+<td>Dự phòng linh hồn</td>
+<td>Chỉ là backup server, chưa có UI rút/lựa lại/recycle. Đầy4096 giữ pending và cần quản trị, không tự cắt dữ liệu</td>
+</tr>
+<tr>
+<td>UI game trực tiếp / save xuyên restart</td>
+<td>Callback thật và live WS đã kiểm; chưa nghiệm thu hình ảnh native hoặc giữ cá QA xuyên thêm một lần restart</td>
+</tr>
+</tbody></table></div>
+<p>Đã tìm trong714 bảng production,22 bảng Fish* của resource tham chiếu (khớp hiện hành), archive1server.zip/server.zip và globalconfig keys liên quan (không có). Gói cũ chứa JS đơn giản hóa và dump client; chưa tìm được bảng server-only chuẩn. Không được gọi2 phần đang khóa là “fix xong”.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>User tải lại game để nhận clientv2; thử câu3 khi mồi còn2, bỏ hết mồi, refresh đơn chưa nhận bằng vé70 và xử lý linh hồn.</li>
+<li>Để mở tẩy/hộp: cần user cung cấp bảng/source gốc hoặc cho phép thiết lập bảng cân bằng riêng. Khi được tự thiết lập phải công khai tỉ lệ/giá trị và test ngoại quan190001..190005 trước khi mở hộp.</li>
+<li>Ưu tiên sửa hiệu ứng mồi/RNG soul và quản lý reserve tiếp theo, không bỏ chốt hoặc phát quà tạm để test.</li>
+<li>Nếu rollback: chỉ source có hash guard; không xóa reserve, không rollback document người đang chơi từ snapshot cũ. Backup235750 làv2 trước follow-up; muốn vềv1 cần preimage235151 và payloadv1.</li>
+<li>Không chạy compensation, reroll/backfill cá theo yêu cầu hiện tại.</li>
+</ol></main></body></html>

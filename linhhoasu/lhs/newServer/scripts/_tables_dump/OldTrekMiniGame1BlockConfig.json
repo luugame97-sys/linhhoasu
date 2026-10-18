@@ -1,0 +1,94 @@
+{
+  "_table": "OldTrekMiniGame1BlockConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,res,hitScore,zoom,isVanish,extraAbility",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "res": "hgmh_sj01_bm_yun",
+        "hitScore": 10,
+        "zoom": 1,
+        "isVanish": 1,
+        "extraAbility": []
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "res": "hgmh_sj01_bm_zaw_1",
+        "hitScore": 0,
+        "zoom": 0,
+        "isVanish": 0,
+        "extraAbility": []
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "res": "hgmh_sj01_bm_zaw_2",
+        "hitScore": 0,
+        "zoom": 1,
+        "isVanish": 1,
+        "extraAbility": {
+          "1": [
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "res": "hgmh_sj01_bm_yun",
+      "hitScore": 10,
+      "zoom": 1,
+      "isVanish": 1,
+      "extraAbility": []
+    },
+    "2": {
+      "id": 2,
+      "res": "hgmh_sj01_bm_zaw_1",
+      "hitScore": 0,
+      "zoom": 0,
+      "isVanish": 0,
+      "extraAbility": []
+    },
+    "3": {
+      "id": 3,
+      "res": "hgmh_sj01_bm_zaw_2",
+      "hitScore": 0,
+      "zoom": 1,
+      "isVanish": 1,
+      "extraAbility": {
+        "1": [
+          1
+        ]
+      }
+    },
+    "4": {
+      "id": 4,
+      "res": "hgmh_sj01_bm_zaw_3",
+      "hitScore": 0,
+      "zoom": 1,
+      "isVanish": 1,
+      "extraAbility": {
+        "2": [
+          2
+        ]
+      }
+    },
+    "5": {
+      "id": 5,
+      "res": "hgmh_sj01_bm_zaw_4",
+      "hitScore": 0,
+      "zoom": 1,
+      "isVanish": 1,
+      "extraAbility": {
+        "3": []
+      }
+    }
+  }
+}

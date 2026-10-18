@@ -1,0 +1,118 @@
+{
+  "_table": "DungeonRefreshConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "1,2",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "floor": 1,
+          "id": 1,
+          "timeRange": [
+            36000,
+            64800
+          ],
+          "monsterRefreshTime": {
+            "1": 10,
+            "2": 30
+          }
+        },
+        "2": {
+          "floor": 1,
+          "id": 2,
+          "timeRange": [
+            64800,
+            82800
+          ],
+          "monsterRefreshTime": {
+            "1": 8,
+            "2": 24
+          }
+        }
+      }
+    },
+    {
+      "2": {
+        "1": {
+          "floor": 2,
+          "id": 1,
+          "timeRange": [
+            36000,
+            64800
+          ],
+          "monsterRefreshTime": {
+            "1": 30,
+            "2": 60
+          }
+        },
+        "2": {
+          "floor": 2,
+          "id": 2,
+          "timeRange": [
+            64800,
+            82800
+          ],
+          "monsterRefreshTime": {
+            "1": 25,
+            "2": 45
+          }
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "floor": 1,
+        "id": 1,
+        "timeRange": [
+          36000,
+          64800
+        ],
+        "monsterRefreshTime": {
+          "1": 10,
+          "2": 30
+        }
+      },
+      "2": {
+        "floor": 1,
+        "id": 2,
+        "timeRange": [
+          64800,
+          82800
+        ],
+        "monsterRefreshTime": {
+          "1": 8,
+          "2": 24
+        }
+      }
+    },
+    "2": {
+      "1": {
+        "floor": 2,
+        "id": 1,
+        "timeRange": [
+          36000,
+          64800
+        ],
+        "monsterRefreshTime": {
+          "1": 30,
+          "2": 60
+        }
+      },
+      "2": {
+        "floor": 2,
+        "id": 2,
+        "timeRange": [
+          64800,
+          82800
+        ],
+        "monsterRefreshTime": {
+          "1": 25,
+          "2": 45
+        }
+      }
+    }
+  }
+}

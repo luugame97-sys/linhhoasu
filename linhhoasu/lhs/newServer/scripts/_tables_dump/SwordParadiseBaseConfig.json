@@ -1,0 +1,40 @@
+{
+  "_table": "SwordParadiseBaseConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "(obj)[dailyChallengeNum|mailId|bossId|rewardShow]",
+  "_sample": [
+    {
+      "dailyChallengeNum": 5
+    },
+    {
+      "mailId": 3
+    },
+    {
+      "bossId": 200101
+    }
+  ],
+  "data": {
+    "dailyChallengeNum": 5,
+    "mailId": 3,
+    "bossId": 200101,
+    "rewardShow": [
+      {
+        "id": 21,
+        "count": 0
+      },
+      {
+        "id": 1,
+        "count": 0
+      },
+      {
+        "id": 4,
+        "count": 0
+      },
+      {
+        "id": 20,
+        "count": 0
+      }
+    ]
+  }
+}

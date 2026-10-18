@@ -1,0 +1,203 @@
+{
+  "_table": "SpecialTaskConfig",
+  "_rows": 14,
+  "_type": "object",
+  "_firstKeys": "id,conditions,rank",
+  "_sample": [
+    {
+      "90002": {
+        "id": 90002,
+        "conditions": [
+          {
+            "type": 7,
+            "value": 313,
+            "cond": 4
+          }
+        ],
+        "rank": 21
+      }
+    },
+    {
+      "90010": {
+        "id": 90010,
+        "conditions": [
+          {
+            "type": 7,
+            "value": 317,
+            "cond": 4
+          }
+        ],
+        "rank": 22
+      }
+    },
+    {
+      "90020": {
+        "id": 90020,
+        "conditions": [
+          {
+            "type": 7,
+            "value": 311,
+            "cond": 4
+          }
+        ],
+        "rank": 23
+      }
+    }
+  ],
+  "data": {
+    "90002": {
+      "id": 90002,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 313,
+          "cond": 4
+        }
+      ],
+      "rank": 21
+    },
+    "90010": {
+      "id": 90010,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 317,
+          "cond": 4
+        }
+      ],
+      "rank": 22
+    },
+    "90020": {
+      "id": 90020,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 311,
+          "cond": 4
+        }
+      ],
+      "rank": 23
+    },
+    "90030": {
+      "id": 90030,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 219,
+          "cond": 4
+        }
+      ],
+      "rank": 24
+    },
+    "90040": {
+      "id": 90040,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 220,
+          "cond": 4
+        }
+      ],
+      "rank": 25
+    },
+    "90050": {
+      "id": 90050,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 210,
+          "cond": 4
+        }
+      ],
+      "rank": 26
+    },
+    "90060": {
+      "id": 90060,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 321,
+          "cond": 4
+        }
+      ],
+      "rank": 100
+    },
+    "90070": {
+      "id": 90070,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 222,
+          "cond": 4
+        }
+      ],
+      "rank": 99
+    },
+    "90080": {
+      "id": 90080,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 123,
+          "cond": 4
+        }
+      ],
+      "rank": 27
+    },
+    "90090": {
+      "id": 90090,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 226,
+          "cond": 4
+        }
+      ],
+      "rank": 28
+    },
+    "90100": {
+      "id": 90100,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 230,
+          "cond": 4
+        }
+      ],
+      "rank": 31
+    },
+    "90110": {
+      "id": 90110,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 228,
+          "cond": 4
+        }
+      ],
+      "rank": 1
+    },
+    "90120": {
+      "id": 90120,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 231,
+          "cond": 4
+        }
+      ],
+      "rank": 101
+    },
+    "90130": {
+      "id": 90130,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 232,
+          "cond": 4
+        }
+      ],
+      "rank": 10
+    }
+  }
+}

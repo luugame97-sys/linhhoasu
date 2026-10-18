@@ -1,0 +1,46 @@
+{
+  "_table": "RebornSimConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "area,timeType,startTime,endTime,limitStartTime,limitEndTime",
+  "_sample": [
+    {
+      "1": {
+        "area": 1,
+        "timeType": 2,
+        "startTime": 1726243200000,
+        "endTime": 1767110400000,
+        "limitStartTime": 1706630400000,
+        "limitEndTime": 1767110400000
+      }
+    },
+    {
+      "2": {
+        "area": 2,
+        "timeType": 2,
+        "startTime": 1726156800000,
+        "endTime": 1767110400000,
+        "limitStartTime": 1706630400000,
+        "limitEndTime": 1767110400000
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "area": 1,
+      "timeType": 2,
+      "startTime": 1726243200000,
+      "endTime": 1767110400000,
+      "limitStartTime": 1706630400000,
+      "limitEndTime": 1767110400000
+    },
+    "2": {
+      "area": 2,
+      "timeType": 2,
+      "startTime": 1726156800000,
+      "endTime": 1767110400000,
+      "limitStartTime": 1706630400000,
+      "limitEndTime": 1767110400000
+    }
+  }
+}

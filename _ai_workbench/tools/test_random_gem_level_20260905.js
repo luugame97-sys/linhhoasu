@@ -1,0 +1,9 @@
+'use strict';
+throw new Error('WITHDRAWN: 100084 is level 4; use test_gem_family_corrected_20260905.js');
+const assert=require('node:assert/strict'),path=require('node:path');
+const app=process.env.LHS_APP_ROOT||path.resolve(__dirname,'../../linhhoasu/lhs/newServer');
+process.env.CONFIG_BIN_PATH=process.env.LHS_CONFIG_PATH||path.resolve(__dirname,'../../linhhoasu/webgame/game/update/resource/assets/excel/config_e5ac72c2.bin');
+const c=require(path.join(app,'src/services/ConfigService')),item=require(path.join(app,'src/handlers/item')),ps=require(path.join(app,'src/services/PlayerService'));
+ps.savePlayer=async(_u,p)=>p;const cfg=c.loadAllTables();
+function p(id){return {userId:'gem5-qa',playerId:'gem5-qa',level:99,roleInfo:{kungfuId:4,stage:999},items:{[id]:1},currencies:{diamond:0,silver:0,gold:0},other_attr_info:{},artifactInfo:{},fashionInfo:{},petInfo:{},swordInfo:{},spiritInfo:{},formationInfo:{},equipInfo:{},rechargeInfo:{},shopInfo:{},activityInfo:{},itemUseRecords:{}};}
+(async()=>{const targets=[25041,25042,25043,25044],seen=new Set();let seed=19;Math.random=()=>{seed=seed*48271%2147483647;return seed/2147483647;};for(let i=0;i<40;i++){const pl=p(100084),out=await item.handleUseItem({index:100084,count:1},{userId:pl.userId,player:pl},90100+i);const r=(Array.isArray(out)?out:[out]).find(x=>x.tag===1300);assert.equal(r.data.result,0);assert.equal(pl.items[100084],undefined);assert.equal(r.data.rewardInfo.gems.length,1);const gemId=r.data.rewardInfo.gems[0].id;assert(targets.includes(gemId));assert.equal(cfg.GemLevelConfig[gemId].level,5);seen.add(gemId);}assert.equal(seen.size,4);console.log(JSON.stringify({result:'PASS',source:100084,level:5,sampled:40,types:[...seen].sort(),consume:40,nativeGem:true}));})().catch(e=>{console.error(e.stack);process.exitCode=1;});

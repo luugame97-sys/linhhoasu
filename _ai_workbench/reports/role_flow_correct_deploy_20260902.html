@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Role flow deploy 02/09/2026</title>
+<style>
+body{font:16px/1.6 Segoe UI,Arial,sans-serif;max-width:980px;margin:32px auto;padding:0 22px;color:#24352e;background:#f5f8f6}
+main{background:#fff;padding:28px 34px;border-radius:16px;box-shadow:0 8px 30px #193b2618}
+h1{color:#174434}h2{margin-top:30px;color:#1d6a4e;border-bottom:1px solid #dce9e0;padding-bottom:6px}
+code{background:#eef4ef;padding:2px 5px;border-radius:4px}pre{background:#18231e;color:#e6f3ea;padding:16px;border-radius:10px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px;border-bottom:1px solid #e3ece5}th{background:#edf5ef}
+</style>
+</head>
+<body><main>
+<h1>Triển khai đúng luồng đăng ký và tạo nhân vật — 02/09/2026</h1>
+<h2>1. Kết quả</h2>
+<p>Đã triển khai thành công trên VPS <code>103.116.105.154</code>.</p>
+<pre>2818 → account
+2820 → role nháp + auth token
+WS tag 1 → đăng nhập role nháp
+RoleCreateView → chọn hệ/pháp tướng
+3100 → lưu lựa chọn và vào game</pre>
+<p>Role nháp có <code>roleInfo.kungfuId=0</code>, đúng điều kiện để client native mở <code>RoleCreateView</code>.</p>
+<h2>2. Thay đổi</h2>
+<ul>
+<li><code>2818</code> account-only khi payload chỉ có account/password.</li>
+<li>Web register chỉ tạo account; login role hiện hữu vẫn cấp token.</li>
+<li>Thêm fallback tên entropy khi pool tên mặc định đã dùng hết.</li>
+</ul>
+<h2>3. Backup</h2>
+<ul>
+<li><code>/linhhoasu/_ai_workbench/backups/role_flow_correct_pre_20260902_015924/</code></li>
+<li><code>/linhhoasu/_ai_workbench/backups/role_flow_correct_pre_20260902_015753/</code></li>
+</ul>
+<h2>4. Kiểm thử</h2>
+<table>
+<tr><th>Kiểm tra</th><th>Kết quả</th></tr>
+<tr><td>Syntax 5 file</td><td>PASS</td></tr>
+<tr><td>Core contract 714 bảng</td><td>PASS</td></tr>
+<tr><td>Clone/staging</td><td>PASS</td></tr>
+<tr><td>E2E production 2818 → 2820 → WS → 3100</td><td>PASS</td></tr>
+<tr><td>Web register account-only</td><td>HTTP 201, roleCount 0, needCreateRole=true</td></tr>
+<tr><td>QA cleanup</td><td>PASS, không còn account thử</td></tr>
+<tr><td>Ready/watch</td><td>HTTP 200, ổn định 20 giây</td></tr>
+<tr><td>Smoke account đã có role</td><td>HTTP 200, roleCount 1, needCreateRole=0, token cấp thành công</td></tr>
+</table>
+<h2>5. Runtime</h2>
+<ul>
+<li><code>lhs-s1001</code>: PID 31284, online.</li>
+<li>Các process <code>lhs-dist</code>, <code>lhs-admin</code>, <code>lhs-real-bots</code> không restart.</li>
+</ul>
+<h2>6. Lưu ý</h2>
+<p>Account mới sẽ đi qua màn hình chọn hệ native sau khi đăng nhập/chọn S1. RoleCreateView hiện không có ô nhập tên tự do; tên được sinh từ pool chuẩn.</p>
+<h2>7. Xác minh client native</h2>
+<ul><li>Bundle <code>main.min_a6195824.js</code> có đầy đủ RegistUI, 2818, 2820, RoleCreateView, nhánh <code>roleInfo.kungfuId=0</code> và RPC 3100.</li><li>Contract scan client: 5/5 điều kiện PASS; không cần thay đổi binary/client.</li></ul>
+</main></body>
+</html>

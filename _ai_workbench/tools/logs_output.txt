@@ -1,0 +1,69 @@
+=== lhs-s1001 ===
+[TAILING] Tailing last 20 lines for [lhs-s1001] process (change the value with --lines option)
+/root/.pm2/logs/lhs-s1001-error.log last 20 lines:
+0|lhs-s100 | (node:19844) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:19903) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:19954) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:19991) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:20038) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:20123) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:20246) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:20381) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:20462) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+0|lhs-s100 | (node:20522) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+0|lhs-s100 | (Use `node --trace-warnings ...` to show where the warning was created)
+
+/root/.pm2/logs/lhs-s1001-out.log last 20 lines:
+0|lhs-s100 | [2026-08-27 08:44:29] [INFO] [App] starting... (长安一区 #1001)
+0|lhs-s100 | [2026-08-27 08:44:34] [ERROR] [MongoDB] 连接失败: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | [2026-08-27 08:44:34] [ERROR] [App] startup failed: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | ◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+0|lhs-s100 | [2026-08-27 08:44:35] [INFO] [App] starting... (长安一区 #1001)
+0|lhs-s100 | [2026-08-27 08:44:40] [ERROR] [MongoDB] 连接失败: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | [2026-08-27 08:44:40] [ERROR] [App] startup failed: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | ◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+0|lhs-s100 | [2026-08-27 08:44:41] [INFO] [App] starting... (长安一区 #1001)
+0|lhs-s100 | [2026-08-27 08:44:46] [ERROR] [MongoDB] 连接失败: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | [2026-08-27 08:44:46] [ERROR] [App] startup failed: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | ◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+0|lhs-s100 | [2026-08-27 08:44:47] [INFO] [App] starting... (长安一区 #1001)
+0|lhs-s100 | [2026-08-27 08:44:52] [ERROR] [MongoDB] 连接失败: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | [2026-08-27 08:44:52] [ERROR] [App] startup failed: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | ◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+0|lhs-s100 | [2026-08-27 08:44:54] [INFO] [App] starting... (长安一区 #1001)
+0|lhs-s100 | [2026-08-27 08:44:59] [ERROR] [MongoDB] 连接失败: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | [2026-08-27 08:44:59] [ERROR] [App] startup failed: Server at localhost:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+0|lhs-s100 | ◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+
+
+=== lhs-dist ===
+[TAILING] Tailing last 20 lines for [lhs-dist] process (change the value with --lines option)
+/root/.pm2/logs/lhs-dist-out.log last 20 lines:
+/root/.pm2/logs/lhs-dist-error.log last 20 lines:
+1|lhs-dist | (node:19593) [MONGOOSE] Warning: Duplicate schema index on {"username":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (Use `node --trace-warnings ...` to show where the warning was created)
+1|lhs-dist | (node:19593) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:19593) [MONGOOSE] Warning: Duplicate schema index on {"inviteCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:19593) [MONGOOSE] Warning: Duplicate schema index on {"playerId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | MongoDB 连接失败: Server at 127.0.0.1:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+1|lhs-dist | (node:19880) [MONGOOSE] Warning: Duplicate schema index on {"username":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (Use `node --trace-warnings ...` to show where the warning was created)
+1|lhs-dist | (node:19880) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:19880) [MONGOOSE] Warning: Duplicate schema index on {"inviteCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:19880) [MONGOOSE] Warning: Duplicate schema index on {"playerId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | MongoDB 连接失败: Server at 127.0.0.1:27017 reports maximum wire version 6, but this version of the Node.js Driver requires at least 8 (MongoDB 4.2)
+1|lhs-dist | (node:20212) [MONGOOSE] Warning: Duplicate schema index on {"username":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (Use `node --trace-warnings ...` to show where the warning was created)
+1|lhs-dist | (node:20212) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:20212) [MONGOOSE] Warning: Duplicate schema index on {"inviteCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+1|lhs-dist | (node:20212) [MONGOOSE] Warning: Duplicate schema index on {"playerId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+

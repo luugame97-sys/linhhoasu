@@ -1,0 +1,1675 @@
+{
+  "generatedAt": "2026-09-14T02:31:15.397Z",
+  "readOnly": true,
+  "catalog": {
+    "freeShopConfigRows": 43,
+    "freeShopConfigRowsWithValidRewards": 37,
+    "freeShopConfigRowsWithEmptyOrInvalidRewards": [
+      11003000,
+      11003100,
+      11004001,
+      11010001,
+      11010101,
+      11013000
+    ],
+    "activityLinkedFreeRows": 140,
+    "activityLinkedFreeDailyRows": 113,
+    "activityLinkedFreeRowsByLimitType": {
+      "1": 113,
+      "4": 27
+    },
+    "chainSteps": {
+      "total": 24,
+      "byType": {
+        "1": 7,
+        "2": 8,
+        "3": 9
+      },
+      "invalidRewardSteps": []
+    }
+  },
+  "sourceGates": {
+    "genericActivityPolicy": true,
+    "fishingLedgerExcluded": true,
+    "genericFreePurchaseLock": true,
+    "emptyRewardFailClosed": true,
+    "chainAdGuard": true,
+    "chainFreeGuard": true
+  },
+  "rows": {
+    "freeShopRows": [
+      {
+        "shopId": 10901,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 1,
+        "shopLimitType": 1
+      },
+      {
+        "shopId": 11103,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 1,
+        "shopLimitType": 1
+      },
+      {
+        "shopId": 4000001,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 1,
+        "shopLimitType": 1
+      },
+      {
+        "shopId": 5000001,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 1,
+        "shopLimitType": 1
+      },
+      {
+        "shopId": 11001000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11001100,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11001200,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11001300,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11001400,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11001500,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11001600,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11003000,
+        "rewards": [],
+        "rewardValid": false,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11003100,
+        "rewards": [],
+        "rewardValid": false,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11004000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          },
+          {
+            "id": 6,
+            "count": 1
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11004001,
+        "rewards": [],
+        "rewardValid": false,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11005000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11007000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11008000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          },
+          {
+            "id": 105,
+            "count": 1,
+            "give": 1
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11008100,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          },
+          {
+            "id": 105,
+            "count": 1,
+            "give": 1
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009000,
+        "rewards": [
+          {
+            "id": 108,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009010,
+        "rewards": [
+          {
+            "id": 108,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009020,
+        "rewards": [
+          {
+            "id": 111,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009030,
+        "rewards": [
+          {
+            "id": 112,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009100,
+        "rewards": [
+          {
+            "id": 108,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009120,
+        "rewards": [
+          {
+            "id": 111,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11009130,
+        "rewards": [
+          {
+            "id": 112,
+            "count": 5
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11010001,
+        "rewards": [],
+        "rewardValid": false,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11010101,
+        "rewards": [],
+        "rewardValid": false,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11013000,
+        "rewards": [],
+        "rewardValid": false,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11014000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11015000,
+        "rewards": [
+          {
+            "id": 158,
+            "count": 1
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11016000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11017000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11018000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11019000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11020000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11021000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11026001,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 1,
+        "shopLimitType": 1
+      },
+      {
+        "shopId": 11027000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11027100,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          },
+          {
+            "id": 6,
+            "count": 1
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11028000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11029000,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 10
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      },
+      {
+        "shopId": 11030000,
+        "rewards": [
+          {
+            "id": 290,
+            "count": 1
+          }
+        ],
+        "rewardValid": true,
+        "shopLimit": 0,
+        "shopLimitType": 0
+      }
+    ],
+    "activityLinkedFreeRows": [
+      {
+        "activityId": 6001,
+        "shopId": 11001000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6002,
+        "shopId": 11001100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6004,
+        "shopId": 11001200,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6005,
+        "shopId": 11001300,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6006,
+        "shopId": 11001400,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6007,
+        "shopId": 11001500,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6008,
+        "shopId": 11001600,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6051,
+        "shopId": 11001000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6052,
+        "shopId": 11001100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6054,
+        "shopId": 11001200,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6055,
+        "shopId": 11001300,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6056,
+        "shopId": 11001400,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6057,
+        "shopId": 11001500,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6058,
+        "shopId": 11001600,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6101,
+        "shopId": 11001000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6151,
+        "shopId": 11001000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6201,
+        "shopId": 11001100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 6251,
+        "shopId": 11001100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 18001,
+        "shopId": 11005000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 18002,
+        "shopId": 11005000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 18051,
+        "shopId": 11005000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 18052,
+        "shopId": 11005000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 18999,
+        "shopId": 11005000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21001,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21002,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21003,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21051,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21052,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21053,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 21999,
+        "shopId": 11007000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23001,
+        "shopId": 11008000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23002,
+        "shopId": 11008000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23051,
+        "shopId": 11008000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23052,
+        "shopId": 11008000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23101,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23102,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23103,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23151,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23152,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23153,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23951,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 23952,
+        "shopId": 11008100,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26001,
+        "shopId": 11009000,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26002,
+        "shopId": 11009020,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26003,
+        "shopId": 11009030,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26051,
+        "shopId": 11009000,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26052,
+        "shopId": 11009020,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26053,
+        "shopId": 11009030,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26101,
+        "shopId": 11009100,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26102,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26103,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26104,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26105,
+        "shopId": 11009100,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26106,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26151,
+        "shopId": 11009100,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26152,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26153,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26154,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26155,
+        "shopId": 11009100,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26156,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26951,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26952,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26953,
+        "shopId": 11009100,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26954,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26955,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26956,
+        "shopId": 11009100,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26957,
+        "shopId": 11009130,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26958,
+        "shopId": 11009120,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 26999,
+        "shopId": 11009030,
+        "limit": 1,
+        "limitType": 4,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38001,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38002,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38051,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38052,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38951,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38952,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38953,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 38999,
+        "shopId": 11014000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40001,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40002,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40003,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40004,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40005,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40006,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40007,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40008,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40009,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40051,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40052,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40053,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40059,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40101,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40102,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40103,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 40153,
+        "shopId": 11015000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41001,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41002,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41003,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41004,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41005,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41006,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41007,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41051,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41052,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41053,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41054,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41055,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41056,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41057,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 41951,
+        "shopId": 11016000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 42001,
+        "shopId": 11017000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 42051,
+        "shopId": 11017000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 42999,
+        "shopId": 11017000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 43001,
+        "shopId": 11018000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 43002,
+        "shopId": 11018000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 43051,
+        "shopId": 11018000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 43052,
+        "shopId": 11018000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46001,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46002,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46003,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46051,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46052,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46053,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 46951,
+        "shopId": 11019000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49001,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49002,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49003,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49004,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49051,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49052,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49053,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 49054,
+        "shopId": 11020000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 52001,
+        "shopId": 11021000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 56001,
+        "shopId": 11027000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 56051,
+        "shopId": 11027000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 57001,
+        "shopId": 11028000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 59001,
+        "shopId": 11030000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 59051,
+        "shopId": 11030000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 60001,
+        "shopId": 11029000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 60002,
+        "shopId": 11029000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      },
+      {
+        "activityId": 60052,
+        "shopId": 11029000,
+        "limit": 1,
+        "limitType": 1,
+        "rewardValid": true
+      }
+    ],
+    "chainSteps": [
+      {
+        "packageId": 50001,
+        "index": 1,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 2,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 3,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 4,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 5,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 6,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 7,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 8,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 9,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50001,
+        "index": 10,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 1,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 2,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 3,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 4,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 5,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 6,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 7,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 8,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 9,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 10,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 11,
+        "type": 2,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 12,
+        "type": 1,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 13,
+        "type": 3,
+        "rewardValid": true
+      },
+      {
+        "packageId": 50010,
+        "index": 14,
+        "type": 2,
+        "rewardValid": true
+      }
+    ]
+  }
+}

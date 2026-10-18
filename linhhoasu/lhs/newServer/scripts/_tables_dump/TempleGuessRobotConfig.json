@@ -1,0 +1,4856 @@
+{
+  "_table": "TempleGuessRobotConfig",
+  "_rows": 437,
+  "_type": "object",
+  "_firstKeys": "id,robotPair,appearance",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "robotPair": [
+          1,
+          501
+        ],
+        "appearance": [
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "robotPair": [
+          2,
+          502
+        ],
+        "appearance": [
+          1,
+          9
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "robotPair": [
+          4,
+          504
+        ],
+        "appearance": [
+          4,
+          9
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "robotPair": [
+        1,
+        501
+      ],
+      "appearance": [
+        4,
+        6
+      ]
+    },
+    "2": {
+      "id": 2,
+      "robotPair": [
+        2,
+        502
+      ],
+      "appearance": [
+        1,
+        9
+      ]
+    },
+    "3": {
+      "id": 3,
+      "robotPair": [
+        4,
+        504
+      ],
+      "appearance": [
+        4,
+        9
+      ]
+    },
+    "4": {
+      "id": 4,
+      "robotPair": [
+        5,
+        505
+      ],
+      "appearance": [
+        9,
+        17
+      ]
+    },
+    "5": {
+      "id": 5,
+      "robotPair": [
+        6,
+        506
+      ],
+      "appearance": [
+        6,
+        20
+      ]
+    },
+    "6": {
+      "id": 6,
+      "robotPair": [
+        7,
+        507
+      ],
+      "appearance": [
+        20,
+        16
+      ]
+    },
+    "7": {
+      "id": 7,
+      "robotPair": [
+        8,
+        508
+      ],
+      "appearance": [
+        3,
+        14
+      ]
+    },
+    "8": {
+      "id": 8,
+      "robotPair": [
+        9,
+        509
+      ],
+      "appearance": [
+        4,
+        7
+      ]
+    },
+    "9": {
+      "id": 9,
+      "robotPair": [
+        10,
+        510
+      ],
+      "appearance": [
+        24,
+        5
+      ]
+    },
+    "10": {
+      "id": 10,
+      "robotPair": [
+        11,
+        511
+      ],
+      "appearance": [
+        13,
+        10
+      ]
+    },
+    "11": {
+      "id": 11,
+      "robotPair": [
+        12,
+        512
+      ],
+      "appearance": [
+        9,
+        17
+      ]
+    },
+    "12": {
+      "id": 12,
+      "robotPair": [
+        13,
+        513
+      ],
+      "appearance": [
+        19,
+        4
+      ]
+    },
+    "13": {
+      "id": 13,
+      "robotPair": [
+        14,
+        514
+      ],
+      "appearance": [
+        4,
+        12
+      ]
+    },
+    "14": {
+      "id": 14,
+      "robotPair": [
+        15,
+        515
+      ],
+      "appearance": [
+        23,
+        11
+      ]
+    },
+    "15": {
+      "id": 15,
+      "robotPair": [
+        16,
+        516
+      ],
+      "appearance": [
+        1,
+        5
+      ]
+    },
+    "16": {
+      "id": 16,
+      "robotPair": [
+        17,
+        517
+      ],
+      "appearance": [
+        5,
+        24
+      ]
+    },
+    "17": {
+      "id": 17,
+      "robotPair": [
+        18,
+        518
+      ],
+      "appearance": [
+        23,
+        18
+      ]
+    },
+    "18": {
+      "id": 18,
+      "robotPair": [
+        19,
+        519
+      ],
+      "appearance": [
+        12,
+        18
+      ]
+    },
+    "19": {
+      "id": 19,
+      "robotPair": [
+        20,
+        520
+      ],
+      "appearance": [
+        4,
+        19
+      ]
+    },
+    "20": {
+      "id": 20,
+      "robotPair": [
+        21,
+        521
+      ],
+      "appearance": [
+        14,
+        8
+      ]
+    },
+    "21": {
+      "id": 21,
+      "robotPair": [
+        22,
+        522
+      ],
+      "appearance": [
+        2,
+        14
+      ]
+    },
+    "22": {
+      "id": 22,
+      "robotPair": [
+        23,
+        523
+      ],
+      "appearance": [
+        9,
+        16
+      ]
+    },
+    "23": {
+      "id": 23,
+      "robotPair": [
+        24,
+        524
+      ],
+      "appearance": [
+        6,
+        20
+      ]
+    },
+    "24": {
+      "id": 24,
+      "robotPair": [
+        26,
+        526
+      ],
+      "appearance": [
+        23,
+        17
+      ]
+    },
+    "25": {
+      "id": 25,
+      "robotPair": [
+        27,
+        527
+      ],
+      "appearance": [
+        23,
+        2
+      ]
+    },
+    "26": {
+      "id": 26,
+      "robotPair": [
+        28,
+        528
+      ],
+      "appearance": [
+        1,
+        10
+      ]
+    },
+    "27": {
+      "id": 27,
+      "robotPair": [
+        29,
+        529
+      ],
+      "appearance": [
+        8,
+        23
+      ]
+    },
+    "28": {
+      "id": 28,
+      "robotPair": [
+        30,
+        530
+      ],
+      "appearance": [
+        18,
+        6
+      ]
+    },
+    "29": {
+      "id": 29,
+      "robotPair": [
+        31,
+        531
+      ],
+      "appearance": [
+        9,
+        24
+      ]
+    },
+    "30": {
+      "id": 30,
+      "robotPair": [
+        32,
+        532
+      ],
+      "appearance": [
+        15,
+        17
+      ]
+    },
+    "31": {
+      "id": 31,
+      "robotPair": [
+        33,
+        533
+      ],
+      "appearance": [
+        21,
+        2
+      ]
+    },
+    "32": {
+      "id": 32,
+      "robotPair": [
+        34,
+        534
+      ],
+      "appearance": [
+        16,
+        10
+      ]
+    },
+    "33": {
+      "id": 33,
+      "robotPair": [
+        35,
+        535
+      ],
+      "appearance": [
+        3,
+        16
+      ]
+    },
+    "34": {
+      "id": 34,
+      "robotPair": [
+        36,
+        536
+      ],
+      "appearance": [
+        14,
+        5
+      ]
+    },
+    "35": {
+      "id": 35,
+      "robotPair": [
+        37,
+        537
+      ],
+      "appearance": [
+        3,
+        6
+      ]
+    },
+    "36": {
+      "id": 36,
+      "robotPair": [
+        38,
+        538
+      ],
+      "appearance": [
+        3,
+        8
+      ]
+    },
+    "37": {
+      "id": 37,
+      "robotPair": [
+        40,
+        540
+      ],
+      "appearance": [
+        4,
+        22
+      ]
+    },
+    "38": {
+      "id": 38,
+      "robotPair": [
+        41,
+        541
+      ],
+      "appearance": [
+        11,
+        20
+      ]
+    },
+    "39": {
+      "id": 39,
+      "robotPair": [
+        42,
+        542
+      ],
+      "appearance": [
+        13,
+        14
+      ]
+    },
+    "40": {
+      "id": 40,
+      "robotPair": [
+        43,
+        543
+      ],
+      "appearance": [
+        2,
+        19
+      ]
+    },
+    "41": {
+      "id": 41,
+      "robotPair": [
+        44,
+        544
+      ],
+      "appearance": [
+        23,
+        14
+      ]
+    },
+    "42": {
+      "id": 42,
+      "robotPair": [
+        45,
+        545
+      ],
+      "appearance": [
+        4,
+        24
+      ]
+    },
+    "43": {
+      "id": 43,
+      "robotPair": [
+        46,
+        546
+      ],
+      "appearance": [
+        7,
+        20
+      ]
+    },
+    "44": {
+      "id": 44,
+      "robotPair": [
+        47,
+        547
+      ],
+      "appearance": [
+        2,
+        1
+      ]
+    },
+    "45": {
+      "id": 45,
+      "robotPair": [
+        48,
+        548
+      ],
+      "appearance": [
+        5,
+        24
+      ]
+    },
+    "46": {
+      "id": 46,
+      "robotPair": [
+        50,
+        550
+      ],
+      "appearance": [
+        14,
+        23
+      ]
+    },
+    "47": {
+      "id": 47,
+      "robotPair": [
+        51,
+        551
+      ],
+      "appearance": [
+        14,
+        12
+      ]
+    },
+    "48": {
+      "id": 48,
+      "robotPair": [
+        53,
+        553
+      ],
+      "appearance": [
+        1,
+        12
+      ]
+    },
+    "49": {
+      "id": 49,
+      "robotPair": [
+        54,
+        554
+      ],
+      "appearance": [
+        24,
+        23
+      ]
+    },
+    "50": {
+      "id": 50,
+      "robotPair": [
+        55,
+        555
+      ],
+      "appearance": [
+        14,
+        20
+      ]
+    },
+    "51": {
+      "id": 51,
+      "robotPair": [
+        56,
+        556
+      ],
+      "appearance": [
+        24,
+        3
+      ]
+    },
+    "52": {
+      "id": 52,
+      "robotPair": [
+        58,
+        558
+      ],
+      "appearance": [
+        17,
+        15
+      ]
+    },
+    "53": {
+      "id": 53,
+      "robotPair": [
+        59,
+        559
+      ],
+      "appearance": [
+        8,
+        20
+      ]
+    },
+    "54": {
+      "id": 54,
+      "robotPair": [
+        60,
+        560
+      ],
+      "appearance": [
+        21,
+        5
+      ]
+    },
+    "55": {
+      "id": 55,
+      "robotPair": [
+        61,
+        561
+      ],
+      "appearance": [
+        1,
+        21
+      ]
+    },
+    "56": {
+      "id": 56,
+      "robotPair": [
+        62,
+        562
+      ],
+      "appearance": [
+        23,
+        12
+      ]
+    },
+    "57": {
+      "id": 57,
+      "robotPair": [
+        63,
+        563
+      ],
+      "appearance": [
+        10,
+        24
+      ]
+    },
+    "58": {
+      "id": 58,
+      "robotPair": [
+        64,
+        564
+      ],
+      "appearance": [
+        18,
+        4
+      ]
+    },
+    "59": {
+      "id": 59,
+      "robotPair": [
+        65,
+        565
+      ],
+      "appearance": [
+        7,
+        20
+      ]
+    },
+    "60": {
+      "id": 60,
+      "robotPair": [
+        66,
+        566
+      ],
+      "appearance": [
+        23,
+        1
+      ]
+    },
+    "61": {
+      "id": 61,
+      "robotPair": [
+        67,
+        567
+      ],
+      "appearance": [
+        6,
+        11
+      ]
+    },
+    "62": {
+      "id": 62,
+      "robotPair": [
+        68,
+        568
+      ],
+      "appearance": [
+        12,
+        10
+      ]
+    },
+    "63": {
+      "id": 63,
+      "robotPair": [
+        70,
+        570
+      ],
+      "appearance": [
+        12,
+        16
+      ]
+    },
+    "64": {
+      "id": 64,
+      "robotPair": [
+        71,
+        571
+      ],
+      "appearance": [
+        19,
+        9
+      ]
+    },
+    "65": {
+      "id": 65,
+      "robotPair": [
+        72,
+        572
+      ],
+      "appearance": [
+        2,
+        18
+      ]
+    },
+    "66": {
+      "id": 66,
+      "robotPair": [
+        73,
+        573
+      ],
+      "appearance": [
+        21,
+        15
+      ]
+    },
+    "67": {
+      "id": 67,
+      "robotPair": [
+        74,
+        574
+      ],
+      "appearance": [
+        10,
+        21
+      ]
+    },
+    "68": {
+      "id": 68,
+      "robotPair": [
+        75,
+        575
+      ],
+      "appearance": [
+        1,
+        15
+      ]
+    },
+    "69": {
+      "id": 69,
+      "robotPair": [
+        76,
+        576
+      ],
+      "appearance": [
+        24,
+        15
+      ]
+    },
+    "70": {
+      "id": 70,
+      "robotPair": [
+        78,
+        578
+      ],
+      "appearance": [
+        1,
+        21
+      ]
+    },
+    "71": {
+      "id": 71,
+      "robotPair": [
+        79,
+        579
+      ],
+      "appearance": [
+        15,
+        10
+      ]
+    },
+    "72": {
+      "id": 72,
+      "robotPair": [
+        80,
+        580
+      ],
+      "appearance": [
+        21,
+        18
+      ]
+    },
+    "73": {
+      "id": 73,
+      "robotPair": [
+        81,
+        581
+      ],
+      "appearance": [
+        15,
+        21
+      ]
+    },
+    "74": {
+      "id": 74,
+      "robotPair": [
+        82,
+        582
+      ],
+      "appearance": [
+        21,
+        22
+      ]
+    },
+    "75": {
+      "id": 75,
+      "robotPair": [
+        83,
+        583
+      ],
+      "appearance": [
+        13,
+        3
+      ]
+    },
+    "76": {
+      "id": 76,
+      "robotPair": [
+        84,
+        584
+      ],
+      "appearance": [
+        7,
+        10
+      ]
+    },
+    "77": {
+      "id": 77,
+      "robotPair": [
+        85,
+        585
+      ],
+      "appearance": [
+        10,
+        24
+      ]
+    },
+    "78": {
+      "id": 78,
+      "robotPair": [
+        86,
+        586
+      ],
+      "appearance": [
+        19,
+        18
+      ]
+    },
+    "79": {
+      "id": 79,
+      "robotPair": [
+        87,
+        587
+      ],
+      "appearance": [
+        7,
+        9
+      ]
+    },
+    "80": {
+      "id": 80,
+      "robotPair": [
+        88,
+        588
+      ],
+      "appearance": [
+        12,
+        3
+      ]
+    },
+    "81": {
+      "id": 81,
+      "robotPair": [
+        89,
+        589
+      ],
+      "appearance": [
+        13,
+        12
+      ]
+    },
+    "82": {
+      "id": 82,
+      "robotPair": [
+        90,
+        590
+      ],
+      "appearance": [
+        5,
+        12
+      ]
+    },
+    "83": {
+      "id": 83,
+      "robotPair": [
+        92,
+        592
+      ],
+      "appearance": [
+        20,
+        6
+      ]
+    },
+    "84": {
+      "id": 84,
+      "robotPair": [
+        93,
+        593
+      ],
+      "appearance": [
+        19,
+        15
+      ]
+    },
+    "85": {
+      "id": 85,
+      "robotPair": [
+        94,
+        594
+      ],
+      "appearance": [
+        14,
+        6
+      ]
+    },
+    "86": {
+      "id": 86,
+      "robotPair": [
+        95,
+        595
+      ],
+      "appearance": [
+        23,
+        9
+      ]
+    },
+    "87": {
+      "id": 87,
+      "robotPair": [
+        96,
+        596
+      ],
+      "appearance": [
+        8,
+        22
+      ]
+    },
+    "88": {
+      "id": 88,
+      "robotPair": [
+        98,
+        598
+      ],
+      "appearance": [
+        6,
+        12
+      ]
+    },
+    "89": {
+      "id": 89,
+      "robotPair": [
+        99,
+        599
+      ],
+      "appearance": [
+        19,
+        24
+      ]
+    },
+    "90": {
+      "id": 90,
+      "robotPair": [
+        100,
+        600
+      ],
+      "appearance": [
+        18,
+        16
+      ]
+    },
+    "91": {
+      "id": 91,
+      "robotPair": [
+        101,
+        601
+      ],
+      "appearance": [
+        23,
+        12
+      ]
+    },
+    "92": {
+      "id": 92,
+      "robotPair": [
+        102,
+        602
+      ],
+      "appearance": [
+        8,
+        1
+      ]
+    },
+    "93": {
+      "id": 93,
+      "robotPair": [
+        103,
+        603
+      ],
+      "appearance": [
+        8,
+        24
+      ]
+    },
+    "94": {
+      "id": 94,
+      "robotPair": [
+        104,
+        604
+      ],
+      "appearance": [
+        24,
+        21
+      ]
+    },
+    "95": {
+      "id": 95,
+      "robotPair": [
+        105,
+        605
+      ],
+      "appearance": [
+        2,
+        10
+      ]
+    },
+    "96": {
+      "id": 96,
+      "robotPair": [
+        106,
+        606
+      ],
+      "appearance": [
+        1,
+        24
+      ]
+    },
+    "97": {
+      "id": 97,
+      "robotPair": [
+        109,
+        609
+      ],
+      "appearance": [
+        5,
+        23
+      ]
+    },
+    "98": {
+      "id": 98,
+      "robotPair": [
+        110,
+        610
+      ],
+      "appearance": [
+        17,
+        13
+      ]
+    },
+    "99": {
+      "id": 99,
+      "robotPair": [
+        111,
+        611
+      ],
+      "appearance": [
+        2,
+        3
+      ]
+    },
+    "100": {
+      "id": 100,
+      "robotPair": [
+        112,
+        612
+      ],
+      "appearance": [
+        3,
+        7
+      ]
+    },
+    "101": {
+      "id": 101,
+      "robotPair": [
+        113,
+        613
+      ],
+      "appearance": [
+        7,
+        2
+      ]
+    },
+    "102": {
+      "id": 102,
+      "robotPair": [
+        114,
+        614
+      ],
+      "appearance": [
+        24,
+        23
+      ]
+    },
+    "103": {
+      "id": 103,
+      "robotPair": [
+        115,
+        615
+      ],
+      "appearance": [
+        12,
+        16
+      ]
+    },
+    "104": {
+      "id": 104,
+      "robotPair": [
+        116,
+        616
+      ],
+      "appearance": [
+        5,
+        24
+      ]
+    },
+    "105": {
+      "id": 105,
+      "robotPair": [
+        117,
+        617
+      ],
+      "appearance": [
+        1,
+        24
+      ]
+    },
+    "106": {
+      "id": 106,
+      "robotPair": [
+        118,
+        618
+      ],
+      "appearance": [
+        20,
+        10
+      ]
+    },
+    "107": {
+      "id": 107,
+      "robotPair": [
+        119,
+        619
+      ],
+      "appearance": [
+        19,
+        15
+      ]
+    },
+    "108": {
+      "id": 108,
+      "robotPair": [
+        120,
+        620
+      ],
+      "appearance": [
+        13,
+        6
+      ]
+    },
+    "109": {
+      "id": 109,
+      "robotPair": [
+        121,
+        621
+      ],
+      "appearance": [
+        24,
+        23
+      ]
+    },
+    "110": {
+      "id": 110,
+      "robotPair": [
+        124,
+        624
+      ],
+      "appearance": [
+        23,
+        8
+      ]
+    },
+    "111": {
+      "id": 111,
+      "robotPair": [
+        125,
+        625
+      ],
+      "appearance": [
+        2,
+        8
+      ]
+    },
+    "112": {
+      "id": 112,
+      "robotPair": [
+        126,
+        626
+      ],
+      "appearance": [
+        18,
+        3
+      ]
+    },
+    "113": {
+      "id": 113,
+      "robotPair": [
+        127,
+        627
+      ],
+      "appearance": [
+        10,
+        20
+      ]
+    },
+    "114": {
+      "id": 114,
+      "robotPair": [
+        128,
+        628
+      ],
+      "appearance": [
+        4,
+        20
+      ]
+    },
+    "115": {
+      "id": 115,
+      "robotPair": [
+        129,
+        629
+      ],
+      "appearance": [
+        3,
+        15
+      ]
+    },
+    "116": {
+      "id": 116,
+      "robotPair": [
+        130,
+        630
+      ],
+      "appearance": [
+        2,
+        23
+      ]
+    },
+    "117": {
+      "id": 117,
+      "robotPair": [
+        131,
+        631
+      ],
+      "appearance": [
+        21,
+        15
+      ]
+    },
+    "118": {
+      "id": 118,
+      "robotPair": [
+        132,
+        632
+      ],
+      "appearance": [
+        11,
+        10
+      ]
+    },
+    "119": {
+      "id": 119,
+      "robotPair": [
+        133,
+        633
+      ],
+      "appearance": [
+        7,
+        1
+      ]
+    },
+    "120": {
+      "id": 120,
+      "robotPair": [
+        134,
+        634
+      ],
+      "appearance": [
+        20,
+        10
+      ]
+    },
+    "121": {
+      "id": 121,
+      "robotPair": [
+        136,
+        636
+      ],
+      "appearance": [
+        19,
+        4
+      ]
+    },
+    "122": {
+      "id": 122,
+      "robotPair": [
+        137,
+        637
+      ],
+      "appearance": [
+        8,
+        11
+      ]
+    },
+    "123": {
+      "id": 123,
+      "robotPair": [
+        138,
+        638
+      ],
+      "appearance": [
+        12,
+        20
+      ]
+    },
+    "124": {
+      "id": 124,
+      "robotPair": [
+        139,
+        639
+      ],
+      "appearance": [
+        23,
+        20
+      ]
+    },
+    "125": {
+      "id": 125,
+      "robotPair": [
+        140,
+        640
+      ],
+      "appearance": [
+        22,
+        23
+      ]
+    },
+    "126": {
+      "id": 126,
+      "robotPair": [
+        141,
+        641
+      ],
+      "appearance": [
+        1,
+        10
+      ]
+    },
+    "127": {
+      "id": 127,
+      "robotPair": [
+        143,
+        643
+      ],
+      "appearance": [
+        11,
+        15
+      ]
+    },
+    "128": {
+      "id": 128,
+      "robotPair": [
+        144,
+        644
+      ],
+      "appearance": [
+        10,
+        9
+      ]
+    },
+    "129": {
+      "id": 129,
+      "robotPair": [
+        145,
+        645
+      ],
+      "appearance": [
+        19,
+        15
+      ]
+    },
+    "130": {
+      "id": 130,
+      "robotPair": [
+        147,
+        647
+      ],
+      "appearance": [
+        23,
+        21
+      ]
+    },
+    "131": {
+      "id": 131,
+      "robotPair": [
+        148,
+        648
+      ],
+      "appearance": [
+        13,
+        4
+      ]
+    },
+    "132": {
+      "id": 132,
+      "robotPair": [
+        149,
+        649
+      ],
+      "appearance": [
+        16,
+        3
+      ]
+    },
+    "133": {
+      "id": 133,
+      "robotPair": [
+        151,
+        651
+      ],
+      "appearance": [
+        23,
+        7
+      ]
+    },
+    "134": {
+      "id": 134,
+      "robotPair": [
+        152,
+        652
+      ],
+      "appearance": [
+        24,
+        19
+      ]
+    },
+    "135": {
+      "id": 135,
+      "robotPair": [
+        153,
+        653
+      ],
+      "appearance": [
+        14,
+        11
+      ]
+    },
+    "136": {
+      "id": 136,
+      "robotPair": [
+        154,
+        654
+      ],
+      "appearance": [
+        20,
+        2
+      ]
+    },
+    "137": {
+      "id": 137,
+      "robotPair": [
+        155,
+        655
+      ],
+      "appearance": [
+        3,
+        12
+      ]
+    },
+    "138": {
+      "id": 138,
+      "robotPair": [
+        156,
+        656
+      ],
+      "appearance": [
+        22,
+        10
+      ]
+    },
+    "139": {
+      "id": 139,
+      "robotPair": [
+        157,
+        657
+      ],
+      "appearance": [
+        2,
+        20
+      ]
+    },
+    "140": {
+      "id": 140,
+      "robotPair": [
+        158,
+        658
+      ],
+      "appearance": [
+        10,
+        18
+      ]
+    },
+    "141": {
+      "id": 141,
+      "robotPair": [
+        159,
+        659
+      ],
+      "appearance": [
+        15,
+        22
+      ]
+    },
+    "142": {
+      "id": 142,
+      "robotPair": [
+        160,
+        660
+      ],
+      "appearance": [
+        20,
+        17
+      ]
+    },
+    "143": {
+      "id": 143,
+      "robotPair": [
+        161,
+        661
+      ],
+      "appearance": [
+        2,
+        15
+      ]
+    },
+    "144": {
+      "id": 144,
+      "robotPair": [
+        163,
+        663
+      ],
+      "appearance": [
+        5,
+        16
+      ]
+    },
+    "145": {
+      "id": 145,
+      "robotPair": [
+        164,
+        664
+      ],
+      "appearance": [
+        16,
+        13
+      ]
+    },
+    "146": {
+      "id": 146,
+      "robotPair": [
+        165,
+        665
+      ],
+      "appearance": [
+        24,
+        17
+      ]
+    },
+    "147": {
+      "id": 147,
+      "robotPair": [
+        166,
+        666
+      ],
+      "appearance": [
+        9,
+        12
+      ]
+    },
+    "148": {
+      "id": 148,
+      "robotPair": [
+        167,
+        667
+      ],
+      "appearance": [
+        24,
+        13
+      ]
+    },
+    "149": {
+      "id": 149,
+      "robotPair": [
+        168,
+        668
+      ],
+      "appearance": [
+        7,
+        18
+      ]
+    },
+    "150": {
+      "id": 150,
+      "robotPair": [
+        169,
+        669
+      ],
+      "appearance": [
+        17,
+        7
+      ]
+    },
+    "151": {
+      "id": 151,
+      "robotPair": [
+        171,
+        671
+      ],
+      "appearance": [
+        6,
+        13
+      ]
+    },
+    "152": {
+      "id": 152,
+      "robotPair": [
+        172,
+        672
+      ],
+      "appearance": [
+        6,
+        2
+      ]
+    },
+    "153": {
+      "id": 153,
+      "robotPair": [
+        173,
+        673
+      ],
+      "appearance": [
+        12,
+        15
+      ]
+    },
+    "154": {
+      "id": 154,
+      "robotPair": [
+        174,
+        674
+      ],
+      "appearance": [
+        14,
+        5
+      ]
+    },
+    "155": {
+      "id": 155,
+      "robotPair": [
+        175,
+        675
+      ],
+      "appearance": [
+        10,
+        2
+      ]
+    },
+    "156": {
+      "id": 156,
+      "robotPair": [
+        177,
+        677
+      ],
+      "appearance": [
+        23,
+        16
+      ]
+    },
+    "157": {
+      "id": 157,
+      "robotPair": [
+        178,
+        678
+      ],
+      "appearance": [
+        20,
+        19
+      ]
+    },
+    "158": {
+      "id": 158,
+      "robotPair": [
+        179,
+        679
+      ],
+      "appearance": [
+        20,
+        2
+      ]
+    },
+    "159": {
+      "id": 159,
+      "robotPair": [
+        180,
+        680
+      ],
+      "appearance": [
+        6,
+        14
+      ]
+    },
+    "160": {
+      "id": 160,
+      "robotPair": [
+        181,
+        681
+      ],
+      "appearance": [
+        6,
+        16
+      ]
+    },
+    "161": {
+      "id": 161,
+      "robotPair": [
+        183,
+        683
+      ],
+      "appearance": [
+        21,
+        6
+      ]
+    },
+    "162": {
+      "id": 162,
+      "robotPair": [
+        184,
+        684
+      ],
+      "appearance": [
+        20,
+        3
+      ]
+    },
+    "163": {
+      "id": 163,
+      "robotPair": [
+        185,
+        685
+      ],
+      "appearance": [
+        24,
+        8
+      ]
+    },
+    "164": {
+      "id": 164,
+      "robotPair": [
+        186,
+        686
+      ],
+      "appearance": [
+        3,
+        17
+      ]
+    },
+    "165": {
+      "id": 165,
+      "robotPair": [
+        187,
+        687
+      ],
+      "appearance": [
+        22,
+        6
+      ]
+    },
+    "166": {
+      "id": 166,
+      "robotPair": [
+        188,
+        688
+      ],
+      "appearance": [
+        3,
+        8
+      ]
+    },
+    "167": {
+      "id": 167,
+      "robotPair": [
+        189,
+        689
+      ],
+      "appearance": [
+        17,
+        6
+      ]
+    },
+    "168": {
+      "id": 168,
+      "robotPair": [
+        190,
+        690
+      ],
+      "appearance": [
+        11,
+        13
+      ]
+    },
+    "169": {
+      "id": 169,
+      "robotPair": [
+        191,
+        691
+      ],
+      "appearance": [
+        6,
+        18
+      ]
+    },
+    "170": {
+      "id": 170,
+      "robotPair": [
+        192,
+        692
+      ],
+      "appearance": [
+        13,
+        5
+      ]
+    },
+    "171": {
+      "id": 171,
+      "robotPair": [
+        193,
+        693
+      ],
+      "appearance": [
+        11,
+        9
+      ]
+    },
+    "172": {
+      "id": 172,
+      "robotPair": [
+        194,
+        694
+      ],
+      "appearance": [
+        14,
+        7
+      ]
+    },
+    "173": {
+      "id": 173,
+      "robotPair": [
+        195,
+        695
+      ],
+      "appearance": [
+        14,
+        21
+      ]
+    },
+    "174": {
+      "id": 174,
+      "robotPair": [
+        196,
+        696
+      ],
+      "appearance": [
+        9,
+        24
+      ]
+    },
+    "175": {
+      "id": 175,
+      "robotPair": [
+        197,
+        697
+      ],
+      "appearance": [
+        16,
+        6
+      ]
+    },
+    "176": {
+      "id": 176,
+      "robotPair": [
+        198,
+        698
+      ],
+      "appearance": [
+        19,
+        3
+      ]
+    },
+    "177": {
+      "id": 177,
+      "robotPair": [
+        200,
+        700
+      ],
+      "appearance": [
+        22,
+        10
+      ]
+    },
+    "178": {
+      "id": 178,
+      "robotPair": [
+        201,
+        701
+      ],
+      "appearance": [
+        21,
+        4
+      ]
+    },
+    "179": {
+      "id": 179,
+      "robotPair": [
+        202,
+        702
+      ],
+      "appearance": [
+        10,
+        1
+      ]
+    },
+    "180": {
+      "id": 180,
+      "robotPair": [
+        203,
+        703
+      ],
+      "appearance": [
+        9,
+        22
+      ]
+    },
+    "181": {
+      "id": 181,
+      "robotPair": [
+        204,
+        704
+      ],
+      "appearance": [
+        2,
+        8
+      ]
+    },
+    "182": {
+      "id": 182,
+      "robotPair": [
+        205,
+        705
+      ],
+      "appearance": [
+        8,
+        20
+      ]
+    },
+    "183": {
+      "id": 183,
+      "robotPair": [
+        206,
+        706
+      ],
+      "appearance": [
+        13,
+        5
+      ]
+    },
+    "184": {
+      "id": 184,
+      "robotPair": [
+        207,
+        707
+      ],
+      "appearance": [
+        16,
+        14
+      ]
+    },
+    "185": {
+      "id": 185,
+      "robotPair": [
+        208,
+        708
+      ],
+      "appearance": [
+        17,
+        23
+      ]
+    },
+    "186": {
+      "id": 186,
+      "robotPair": [
+        209,
+        709
+      ],
+      "appearance": [
+        2,
+        13
+      ]
+    },
+    "187": {
+      "id": 187,
+      "robotPair": [
+        210,
+        710
+      ],
+      "appearance": [
+        9,
+        2
+      ]
+    },
+    "188": {
+      "id": 188,
+      "robotPair": [
+        211,
+        711
+      ],
+      "appearance": [
+        21,
+        18
+      ]
+    },
+    "189": {
+      "id": 189,
+      "robotPair": [
+        212,
+        712
+      ],
+      "appearance": [
+        12,
+        21
+      ]
+    },
+    "190": {
+      "id": 190,
+      "robotPair": [
+        213,
+        713
+      ],
+      "appearance": [
+        20,
+        12
+      ]
+    },
+    "191": {
+      "id": 191,
+      "robotPair": [
+        214,
+        714
+      ],
+      "appearance": [
+        16,
+        17
+      ]
+    },
+    "192": {
+      "id": 192,
+      "robotPair": [
+        215,
+        715
+      ],
+      "appearance": [
+        6,
+        17
+      ]
+    },
+    "193": {
+      "id": 193,
+      "robotPair": [
+        216,
+        716
+      ],
+      "appearance": [
+        23,
+        22
+      ]
+    },
+    "194": {
+      "id": 194,
+      "robotPair": [
+        217,
+        717
+      ],
+      "appearance": [
+        7,
+        17
+      ]
+    },
+    "195": {
+      "id": 195,
+      "robotPair": [
+        218,
+        718
+      ],
+      "appearance": [
+        16,
+        23
+      ]
+    },
+    "196": {
+      "id": 196,
+      "robotPair": [
+        219,
+        719
+      ],
+      "appearance": [
+        12,
+        13
+      ]
+    },
+    "197": {
+      "id": 197,
+      "robotPair": [
+        220,
+        720
+      ],
+      "appearance": [
+        14,
+        3
+      ]
+    },
+    "198": {
+      "id": 198,
+      "robotPair": [
+        221,
+        721
+      ],
+      "appearance": [
+        20,
+        6
+      ]
+    },
+    "199": {
+      "id": 199,
+      "robotPair": [
+        223,
+        723
+      ],
+      "appearance": [
+        13,
+        6
+      ]
+    },
+    "200": {
+      "id": 200,
+      "robotPair": [
+        225,
+        725
+      ],
+      "appearance": [
+        4,
+        8
+      ]
+    },
+    "201": {
+      "id": 201,
+      "robotPair": [
+        226,
+        726
+      ],
+      "appearance": [
+        20,
+        13
+      ]
+    },
+    "202": {
+      "id": 202,
+      "robotPair": [
+        227,
+        727
+      ],
+      "appearance": [
+        8,
+        6
+      ]
+    },
+    "203": {
+      "id": 203,
+      "robotPair": [
+        228,
+        728
+      ],
+      "appearance": [
+        6,
+        17
+      ]
+    },
+    "204": {
+      "id": 204,
+      "robotPair": [
+        229,
+        729
+      ],
+      "appearance": [
+        8,
+        2
+      ]
+    },
+    "205": {
+      "id": 205,
+      "robotPair": [
+        230,
+        730
+      ],
+      "appearance": [
+        15,
+        16
+      ]
+    },
+    "206": {
+      "id": 206,
+      "robotPair": [
+        231,
+        731
+      ],
+      "appearance": [
+        21,
+        11
+      ]
+    },
+    "207": {
+      "id": 207,
+      "robotPair": [
+        233,
+        733
+      ],
+      "appearance": [
+        8,
+        19
+      ]
+    },
+    "208": {
+      "id": 208,
+      "robotPair": [
+        234,
+        734
+      ],
+      "appearance": [
+        24,
+        18
+      ]
+    },
+    "209": {
+      "id": 209,
+      "robotPair": [
+        235,
+        735
+      ],
+      "appearance": [
+        9,
+        15
+      ]
+    },
+    "210": {
+      "id": 210,
+      "robotPair": [
+        236,
+        736
+      ],
+      "appearance": [
+        12,
+        19
+      ]
+    },
+    "211": {
+      "id": 211,
+      "robotPair": [
+        237,
+        737
+      ],
+      "appearance": [
+        22,
+        17
+      ]
+    },
+    "212": {
+      "id": 212,
+      "robotPair": [
+        126,
+        626
+      ],
+      "appearance": [
+        12,
+        17
+      ]
+    },
+    "213": {
+      "id": 213,
+      "robotPair": [
+        239,
+        739
+      ],
+      "appearance": [
+        9,
+        5
+      ]
+    },
+    "214": {
+      "id": 214,
+      "robotPair": [
+        240,
+        740
+      ],
+      "appearance": [
+        11,
+        18
+      ]
+    },
+    "215": {
+      "id": 215,
+      "robotPair": [
+        241,
+        741
+      ],
+      "appearance": [
+        12,
+        10
+      ]
+    },
+    "216": {
+      "id": 216,
+      "robotPair": [
+        243,
+        743
+      ],
+      "appearance": [
+        10,
+        9
+      ]
+    },
+    "217": {
+      "id": 217,
+      "robotPair": [
+        245,
+        745
+      ],
+      "appearance": [
+        13,
+        11
+      ]
+    },
+    "218": {
+      "id": 218,
+      "robotPair": [
+        246,
+        746
+      ],
+      "appearance": [
+        12,
+        7
+      ]
+    },
+    "219": {
+      "id": 219,
+      "robotPair": [
+        247,
+        747
+      ],
+      "appearance": [
+        19,
+        4
+      ]
+    },
+    "220": {
+      "id": 220,
+      "robotPair": [
+        248,
+        748
+      ],
+      "appearance": [
+        5,
+        13
+      ]
+    },
+    "221": {
+      "id": 221,
+      "robotPair": [
+        249,
+        749
+      ],
+      "appearance": [
+        23,
+        7
+      ]
+    },
+    "222": {
+      "id": 222,
+      "robotPair": [
+        250,
+        750
+      ],
+      "appearance": [
+        12,
+        11
+      ]
+    },
+    "223": {
+      "id": 223,
+      "robotPair": [
+        251,
+        751
+      ],
+      "appearance": [
+        16,
+        14
+      ]
+    },
+    "224": {
+      "id": 224,
+      "robotPair": [
+        252,
+        752
+      ],
+      "appearance": [
+        6,
+        17
+      ]
+    },
+    "225": {
+      "id": 225,
+      "robotPair": [
+        140,
+        640
+      ],
+      "appearance": [
+        3,
+        17
+      ]
+    },
+    "226": {
+      "id": 226,
+      "robotPair": [
+        254,
+        754
+      ],
+      "appearance": [
+        14,
+        18
+      ]
+    },
+    "227": {
+      "id": 227,
+      "robotPair": [
+        255,
+        755
+      ],
+      "appearance": [
+        1,
+        9
+      ]
+    },
+    "228": {
+      "id": 228,
+      "robotPair": [
+        256,
+        756
+      ],
+      "appearance": [
+        6,
+        14
+      ]
+    },
+    "229": {
+      "id": 229,
+      "robotPair": [
+        257,
+        757
+      ],
+      "appearance": [
+        19,
+        18
+      ]
+    },
+    "230": {
+      "id": 230,
+      "robotPair": [
+        258,
+        758
+      ],
+      "appearance": [
+        6,
+        12
+      ]
+    },
+    "231": {
+      "id": 231,
+      "robotPair": [
+        259,
+        759
+      ],
+      "appearance": [
+        22,
+        12
+      ]
+    },
+    "232": {
+      "id": 232,
+      "robotPair": [
+        260,
+        760
+      ],
+      "appearance": [
+        4,
+        23
+      ]
+    },
+    "233": {
+      "id": 233,
+      "robotPair": [
+        262,
+        762
+      ],
+      "appearance": [
+        16,
+        6
+      ]
+    },
+    "234": {
+      "id": 234,
+      "robotPair": [
+        263,
+        763
+      ],
+      "appearance": [
+        14,
+        15
+      ]
+    },
+    "235": {
+      "id": 235,
+      "robotPair": [
+        264,
+        764
+      ],
+      "appearance": [
+        9,
+        6
+      ]
+    },
+    "236": {
+      "id": 236,
+      "robotPair": [
+        265,
+        765
+      ],
+      "appearance": [
+        1,
+        9
+      ]
+    },
+    "237": {
+      "id": 237,
+      "robotPair": [
+        266,
+        766
+      ],
+      "appearance": [
+        5,
+        3
+      ]
+    },
+    "238": {
+      "id": 238,
+      "robotPair": [
+        267,
+        767
+      ],
+      "appearance": [
+        19,
+        11
+      ]
+    },
+    "239": {
+      "id": 239,
+      "robotPair": [
+        268,
+        768
+      ],
+      "appearance": [
+        5,
+        21
+      ]
+    },
+    "240": {
+      "id": 240,
+      "robotPair": [
+        269,
+        769
+      ],
+      "appearance": [
+        5,
+        14
+      ]
+    },
+    "241": {
+      "id": 241,
+      "robotPair": [
+        270,
+        770
+      ],
+      "appearance": [
+        17,
+        3
+      ]
+    },
+    "242": {
+      "id": 242,
+      "robotPair": [
+        271,
+        771
+      ],
+      "appearance": [
+        21,
+        6
+      ]
+    },
+    "243": {
+      "id": 243,
+      "robotPair": [
+        272,
+        772
+      ],
+      "appearance": [
+        19,
+        5
+      ]
+    },
+    "244": {
+      "id": 244,
+      "robotPair": [
+        274,
+        774
+      ],
+      "appearance": [
+        3,
+        12
+      ]
+    },
+    "245": {
+      "id": 245,
+      "robotPair": [
+        275,
+        775
+      ],
+      "appearance": [
+        22,
+        16
+      ]
+    },
+    "246": {
+      "id": 246,
+      "robotPair": [
+        276,
+        776
+      ],
+      "appearance": [
+        4,
+        11
+      ]
+    },
+    "247": {
+      "id": 247,
+      "robotPair": [
+        277,
+        777
+      ],
+      "appearance": [
+        21,
+        22
+      ]
+    },
+    "248": {
+      "id": 248,
+      "robotPair": [
+        278,
+        778
+      ],
+      "appearance": [
+        19,
+        3
+      ]
+    },
+    "249": {
+      "id": 249,
+      "robotPair": [
+        279,
+        779
+      ],
+      "appearance": [
+        7,
+        23
+      ]
+    },
+    "250": {
+      "id": 250,
+      "robotPair": [
+        280,
+        780
+      ],
+      "appearance": [
+        6,
+        9
+      ]
+    },
+    "251": {
+      "id": 251,
+      "robotPair": [
+        281,
+        781
+      ],
+      "appearance": [
+        2,
+        17
+      ]
+    },
+    "252": {
+      "id": 252,
+      "robotPair": [
+        282,
+        782
+      ],
+      "appearance": [
+        13,
+        17
+      ]
+    },
+    "253": {
+      "id": 253,
+      "robotPair": [
+        283,
+        783
+      ],
+      "appearance": [
+        17,
+        15
+      ]
+    },
+    "254": {
+      "id": 254,
+      "robotPair": [
+        284,
+        784
+      ],
+      "appearance": [
+        5,
+        16
+      ]
+    },
+    "255": {
+      "id": 255,
+      "robotPair": [
+        285,
+        785
+      ],
+      "appearance": [
+        1,
+        20
+      ]
+    },
+    "256": {
+      "id": 256,
+      "robotPair": [
+        286,
+        786
+      ],
+      "appearance": [
+        6,
+        1
+      ]
+    },
+    "257": {
+      "id": 257,
+      "robotPair": [
+        287,
+        787
+      ],
+      "appearance": [
+        22,
+        4
+      ]
+    },
+    "258": {
+      "id": 258,
+      "robotPair": [
+        288,
+        788
+      ],
+      "appearance": [
+        3,
+        6
+      ]
+    },
+    "259": {
+      "id": 259,
+      "robotPair": [
+        289,
+        789
+      ],
+      "appearance": [
+        23,
+        16
+      ]
+    },
+    "260": {
+      "id": 260,
+      "robotPair": [
+        290,
+        790
+      ],
+      "appearance": [
+        5,
+        10
+      ]
+    },
+    "261": {
+      "id": 261,
+      "robotPair": [
+        291,
+        791
+      ],
+      "appearance": [
+        24,
+        13
+      ]
+    },
+    "262": {
+      "id": 262,
+      "robotPair": [
+        293,
+        793
+      ],
+      "appearance": [
+        20,
+        6
+      ]
+    },
+    "263": {
+      "id": 263,
+      "robotPair": [
+        294,
+        794
+      ],
+      "appearance": [
+        14,
+        16
+      ]
+    },
+    "264": {
+      "id": 264,
+      "robotPair": [
+        295,
+        795
+      ],
+      "appearance": [
+        13,
+        20
+      ]
+    },
+    "265": {
+      "id": 265,
+      "robotPair": [
+        296,
+        796
+      ],
+      "appearance": [
+        10,
+        14
+      ]
+    },
+    "266": {
+      "id": 266,
+      "robotPair": [
+        297,
+        797
+      ],
+      "appearance": [
+        12,
+        7
+      ]
+    },
+    "267": {
+      "id": 267,
+      "robotPair": [
+        299,
+        799
+      ],
+      "appearance": [
+        22,
+        21
+      ]
+    },
+    "268": {
+      "id": 268,
+      "robotPair": [
+        300,
+        800
+      ],
+      "appearance": [
+        3,
+        15
+      ]
+    },
+    "269": {
+      "id": 269,
+      "robotPair": [
+        301,
+        801
+      ],
+      "appearance": [
+        12,
+        17
+      ]
+    },
+    "270": {
+      "id": 270,
+      "robotPair": [
+        302,
+        802
+      ],
+      "appearance": [
+        16,
+        8
+      ]
+    },
+    "271": {
+      "id": 271,
+      "robotPair": [
+        303,
+        803
+      ],
+      "appearance": [
+        13,
+        21
+      ]
+    },
+    "272": {
+      "id": 272,
+      "robotPair": [
+        304,
+        804
+      ],
+      "appearance": [
+        9,
+        21
+      ]
+    },
+    "273": {
+      "id": 273,
+      "robotPair": [
+        305,
+        805
+      ],
+      "appearance": [
+        11,
+        1
+      ]
+    },
+    "274": {
+      "id": 274,
+      "robotPair": [
+        306,
+        806
+      ],
+      "appearance": [
+        3,
+        1
+      ]
+    },
+    "275": {
+      "id": 275,
+      "robotPair": [
+        308,
+        808
+      ],
+      "appearance": [
+        3,
+        22
+      ]
+    },
+    "276": {
+      "id": 276,
+      "robotPair": [
+        309,
+        809
+      ],
+      "appearance": [
+        3,
+        15
+      ]
+    },
+    "277": {
+      "id": 277,
+      "robotPair": [
+        310,
+        810
+      ],
+      "appearance": [
+        3,
+        8
+      ]
+    },
+    "278": {
+      "id": 278,
+      "robotPair": [
+        311,
+        811
+      ],
+      "appearance": [
+        9,
+        4
+      ]
+    },
+    "279": {
+      "id": 279,
+      "robotPair": [
+        312,
+        812
+      ],
+      "appearance": [
+        17,
+        12
+      ]
+    },
+    "280": {
+      "id": 280,
+      "robotPair": [
+        313,
+        813
+      ],
+      "appearance": [
+        5,
+        7
+      ]
+    },
+    "281": {
+      "id": 281,
+      "robotPair": [
+        314,
+        814
+      ],
+      "appearance": [
+        6,
+        14
+      ]
+    },
+    "282": {
+      "id": 282,
+      "robotPair": [
+        315,
+        815
+      ],
+      "appearance": [
+        14,
+        9
+      ]
+    },
+    "283": {
+      "id": 283,
+      "robotPair": [
+        317,
+        817
+      ],
+      "appearance": [
+        1,
+        3
+      ]
+    },
+    "284": {
+      "id": 284,
+      "robotPair": [
+        318,
+        818
+      ],
+      "appearance": [
+        15,
+        23
+      ]
+    },
+    "285": {
+      "id": 285,
+      "robotPair": [
+        319,
+        819
+      ],
+      "appearance": [
+        18,
+        7
+      ]
+    },
+    "286": {
+      "id": 286,
+      "robotPair": [
+        320,
+        820
+      ],
+      "appearance": [
+        2,
+        9
+      ]
+    },
+    "287": {
+      "id": 287,
+      "robotPair": [
+        321,
+        821
+      ],
+      "appearance": [
+        15,
+        10
+      ]
+    },
+    "288": {
+      "id": 288,
+      "robotPair": [
+        322,
+        822
+      ],
+      "appearance": [
+        4,
+        15
+      ]
+    },
+    "289": {
+      "id": 289,
+      "robotPair": [
+        323,
+        823
+      ],
+      "appearance": [
+        18,
+        11
+      ]
+    },
+    "290": {
+      "id": 290,
+      "robotPair": [
+        324,
+        824
+      ],
+      "appearance": [
+        16,
+        6
+      ]
+    },
+    "291": {
+      "id": 291,
+      "robotPair": [
+        325,
+        825
+      ],
+      "appearance": [
+        11,
+        13
+      ]
+    },
+    "292": {
+      "id": 292,
+      "robotPair": [
+        326,
+        826
+      ],
+      "appearance": [
+        2,
+        19
+      ]
+    },
+    "293": {
+      "id": 293,
+      "robotPair": [
+        327,
+        827
+      ],
+      "appearance": [
+        19,
+        13
+      ]
+    },
+    "294": {
+      "id": 294,
+      "robotPair": [
+        329,
+        829
+      ],
+      "appearance": [
+        6,
+        21
+      ]
+    },
+    "295": {
+      "id": 295,
+      "robotPair": [
+        330,
+        830
+      ],
+      "appearance": [
+        11,
+        10
+      ]
+    },
+    "296": {
+      "id": 296,
+      "robotPair": [
+        331,
+        831
+      ],
+      "appearance": [
+        22,
+        3
+      ]
+    },
+    "297": {
+      "id": 297,
+      "robotPair": [
+        332,
+        832
+      ],
+      "appearance": [
+        21,
+        7
+      ]
+    },
+    "298": {
+      "id": 298,
+      "robotPair": [
+        333,
+        833
+      ],
+      "appearance": [
+        17,
+        6
+      ]
+    },
+    "299": {
+      "id": 299,
+      "robotPair": [
+        334,
+        834
+      ],
+      "appearance": [
+        2,
+        14
+      ]
+    },
+    "300": {
+      "id": 300,
+      "robotPair": [
+        336,
+        836
+      ],
+      "appearance": [
+        8,
+        13
+      ]
+    },
+    "301": {
+      "id": 301,
+      "robotPair": [
+        337,
+        837
+      ],
+      "appearance": [
+        2,
+        15
+      ]
+    },
+    "302": {
+      "id": 302,
+      "robotPair": [
+        339,
+        839
+      ],
+      "appearance": [
+        14,
+        17
+      ]
+    },
+    "303": {
+      "id": 303,
+      "robotPair": [
+        340,
+        840
+      ],
+      "appearance": [
+        21,
+        12
+      ]
+    },
+    "304": {
+      "id": 304,
+      "robotPair": [
+        341,
+        841
+      ],
+      "appearance": [
+        21,
+        12
+      ]
+    },
+    "305": {
+      "id": 305,
+      "robotPair": [
+        342,
+        842
+      ],
+      "appearance": [
+        18,
+        21
+      ]
+    },
+    "306": {
+      "id": 306,
+      "robotPair": [
+        343,
+        843
+      ],
+      "appearance": [
+        19,
+        22
+      ]
+    },
+    "307": {
+      "id": 307,
+      "robotPair": [
+        344,
+        844
+      ],
+      "appearance": [
+        8,
+        24
+      ]
+    },
+    "308": {
+      "id": 308,
+      "robotPair": [
+        345,
+        845
+      ],
+      "appearance": [
+        19,
+        1
+      ]
+    },
+    "309": {
+      "id": 309,
+      "robotPair": [
+        347,
+        847
+      ],
+      "appearance": [
+        8,
+        11
+      ]
+    },
+    "310": {
+      "id": 310,
+      "robotPair": [
+        348,
+        848
+      ],
+      "appearance": [
+        24,
+        4
+      ]
+    },
+    "311": {
+      "id": 311,
+      "robotPair": [
+        349,
+        849
+      ],
+      "appearance": [
+        7,
+        6
+      ]
+    },
+    "312": {
+      "id": 312,
+      "robotPair": [
+        352,
+        852
+      ],
+      "appearance": [
+        1,
+        22
+      ]
+    },
+    "313": {
+      "id": 313,
+      "robotPair": [
+        353,
+        853
+      ],
+      "appearance": [
+        14,
+        21
+      ]
+    },
+    "314": {
+      "id": 314,
+      "robotPair": [
+        354,
+        854
+      ],
+      "appearance": [
+        3,
+        2
+      ]
+    },
+    "315": {
+      "id": 315,
+      "robotPair": [
+        355,
+        855
+      ],
+      "appearance": [
+        23,
+        20
+      ]
+    },
+    "316": {
+      "id": 316,
+      "robotPair": [
+        356,
+        856
+      ],
+      "appearance": [
+        8,
+        9
+      ]
+    },
+    "317": {
+      "id": 317,
+      "robotPair": [
+        359,
+        859
+      ],
+      "appearance": [
+        8,
+        2
+      ]
+    },
+    "318": {
+      "id": 318,
+      "robotPair": [
+        360,
+        860
+      ],
+      "appearance": [
+        8,
+        4
+      ]
+    },
+    "319": {
+      "id": 319,
+      "robotPair": [
+        362,
+        862
+      ],
+      "appearance": [
+        14,
+        3
+      ]
+    },
+    "320": {
+      "id": 320,
+      "robotPair": [
+        363,
+        863
+      ],
+      "appearance": [
+        13,
+        20
+      ]
+    },
+    "321": {
+      "id": 321,
+      "robotPair": [
+        364,
+        864
+      ],
+      "appearance": [
+        8,
+        7
+      ]
+    },
+    "322": {
+      "id": 322,
+      "robotPair": [
+        365,
+        865
+      ],
+      "appearance": [
+        14,
+        10
+      ]
+    },
+    "323": {
+      "id": 323,
+      "robotPair": [
+        366,
+        866
+      ],
+      "appearance": [
+        2,
+        12
+      ]
+    },
+    "324": {
+      "id": 324,
+      "robotPair": [
+        367,
+        867
+      ],
+      "appearance": [
+        16,
+        1
+      ]
+    },
+    "325": {
+      "id": 325,
+      "robotPair": [
+        369,
+        869
+      ],
+      "appearance": [
+        12,
+        11
+      ]
+    },
+    "326": {
+      "id": 326,
+      "robotPair": [
+        370,
+        870
+      ],
+      "appearance": [
+        5,
+        19
+      ]
+    },
+    "327": {
+      "id": 327,
+      "robotPair": [
+        371,
+        871
+      ],
+      "appearance": [
+        12,
+        7
+      ]
+    },
+    "328": {
+      "id": 328,
+      "robotPair": [
+        372,
+        872
+      ],
+      "appearance": [
+        22,
+        15
+      ]
+    },
+    "329": {
+      "id": 329,
+      "robotPair": [
+        373,
+        873
+      ],
+      "appearance": [
+        21,
+        11
+      ]
+    },
+    "330": {
+      "id": 330,
+      "robotPair": [
+        375,
+        875
+      ],
+      "appearance": [
+        11,
+        6
+      ]
+    },
+    "331": {
+      "id": 331,
+      "robotPair": [
+        377,
+        877
+      ],
+      "appearance": [
+        9,
+        3
+      ]
+    },
+    "332": {
+      "id": 332,
+      "robotPair": [
+        378,
+        878
+      ],
+      "appearance": [
+        7,
+        24
+      ]
+    },
+    "333": {
+      "id": 333,
+      "robotPair": [
+        379,
+        879
+      ],
+      "appearance": [
+        12,
+        8
+      ]
+    },
+    "334": {
+      "id": 334,
+      "robotPair": [
+        381,
+        881
+      ],
+      "appearance": [
+        16,
+        2
+      ]
+    },
+    "335": {
+      "id": 335,
+      "robotPair": [
+        382,
+        882
+      ],
+      "appearance": [
+        22,
+        18
+      ]
+    },
+    "336": {
+      "id": 336,
+      "robotPair": [
+        383,
+        883
+      ],
+      "appearance": [
+        24,
+        7
+      ]
+    },
+    "337": {
+      "id": 337,
+      "robotPair": [
+        384,
+        884
+      ],
+      "appearance": [
+        6,
+        12
+      ]
+    },
+    "338": {
+      "id": 338,
+      "robotPair": [
+        385,
+        885
+      ],
+      "appearance": [
+        17,
+        20
+      ]
+    },
+    "339": {
+      "id": 339,
+      "robotPair": [
+        387,
+        887
+      ],
+      "appearance": [
+        15,
+        13
+      ]
+    },
+    "340": {
+      "id": 340,
+      "robotPair": [
+        388,
+        888
+      ],
+      "appearance": [
+        16,
+        2
+      ]
+    },
+    "341": {
+      "id": 341,
+      "robotPair": [
+        389,
+        889
+      ],
+      "appearance": [
+        22,
+        8
+      ]
+    },
+    "342": {
+      "id": 342,
+      "robotPair": [
+        390,
+        890
+      ],
+      "appearance": [
+        10,
+        22
+      ]
+    },
+    "343": {
+      "id": 343,
+      "robotPair": [
+        391,
+        891
+      ],
+      "appearance": [
+        19,
+        16
+      ]
+    },
+    "344": {
+      "id": 344,
+      "robotPair": [
+        392,
+        892
+      ],
+      "appearance": [
+        16,
+        9
+      ]
+    },
+    "345": {
+      "id": 345,
+      "robotPair": [
+        393,
+        893
+      ],
+      "appearance": [
+        18,
+        1
+      ]
+    },
+    "346": {
+      "id": 346,
+      "robotPair": [
+        395,
+        895
+      ],
+      "appearance": [
+        7,
+        14
+      ]
+    },
+    "347": {
+      "id": 347,
+      "robotPair": [
+        396,
+        896
+      ],
+      "appearance": [
+        2,
+        24
+      ]
+    },
+    "348": {
+      "id": 348,
+      "robotPair": [
+        398,
+        898
+      ],
+      "appearance": [
+        19,
+        7
+      ]
+    },
+    "349": {
+      "id": 349,
+      "robotPair": [
+        399,
+        899
+      ],
+      "appearance": [
+        1,
+        3
+      ]
+    },
+    "350": {
+      "id": 350,
+      "robotPair": [
+        400,
+        900
+      ],
+      "appearance": [
+        17,
+        15
+      ]
+    },
+    "351": {
+      "id": 351,
+      "robotPair": [
+        401,
+        901
+      ],
+      "appearance": [
+        13,
+        21
+      ]
+    },
+    "352": {
+      "id": 352,
+      "robotPair": [
+        402,
+        902
+      ],
+      "appearance": [
+        17,
+        10
+      ]
+    },
+    "353": {
+      "id": 353,
+      "robotPair": [
+        403,
+        903
+      ],
+      "appearance": [
+        18,
+        20
+      ]
+    },
+    "354": {
+      "id": 354,
+      "robotPair": [
+        404,
+        904
+      ],
+      "appearance": [
+        5,
+        3
+      ]
+    },
+    "355": {
+      "id": 355,
+      "robotPair": [
+        405,
+        905
+      ],
+      "appearance": [
+        16,
+        24
+      ]
+    },
+    "356": {
+      "id": 356,
+      "robotPair": [
+        406,
+        906
+      ],
+      "appearance": [
+        2,
+        17
+      ]
+    },
+    "357": {
+      "id": 357,
+      "robotPair": [
+        407,
+        907
+      ],
+      "appearance": [
+        3,
+        16
+      ]
+    },
+    "358": {
+      "id": 358,
+      "robotPair": [
+        408,
+        908
+      ],
+      "appearance": [
+        13,
+        17
+      ]
+    },
+    "359": {
+      "id": 359,
+      "robotPair": [
+        409,
+        909
+      ],
+      "appearance": [
+        2,
+        19
+      ]
+    },
+    "360": {
+      "id": 360,
+      "robotPair": [
+        410,
+        910
+      ],
+      "appearance": [
+        1,
+        23
+      ]
+    },
+    "361": {
+      "id": 361,
+      "robotPair": [
+        412,
+        912
+      ],
+      "appearance": [
+        13,
+        12
+      ]
+    },
+    "362": {
+      "id": 362,
+      "robotPair": [
+        413,
+        913
+      ],
+      "appearance": [
+        6,
+        12
+      ]
+    },
+    "363": {
+      "id": 363,
+      "robotPair": [
+        414,
+        914
+      ],
+      "appearance": [
+        19,
+        18
+      ]
+    },
+    "364": {
+      "id": 364,
+      "robotPair": [
+        415,
+        915
+      ],
+      "appearance": [
+        7,
+        13
+      ]
+    },
+    "365": {
+      "id": 365,
+      "robotPair": [
+        416,
+        916
+      ],
+      "appearance": [
+        14,
+        15
+      ]
+    },
+    "366": {
+      "id": 366,
+      "robotPair": [
+        417,
+        917
+      ],
+      "appearance": [
+        6,
+        11
+      ]
+    },
+    "367": {
+      "id": 367,
+      "robotPair": [
+        420,
+        920
+      ],
+      "appearance": [
+        23,
+        13
+      ]
+    },
+    "368": {
+      "id": 368,
+      "robotPair": [
+        422,
+        922
+      ],
+      "appearance": [
+        9,
+        17
+      ]
+    },
+    "369": {
+      "id": 369,
+      "robotPair": [
+        423,
+        923
+      ],
+      "appearance": [
+        10,
+        3
+      ]
+    },
+    "370": {
+      "id": 370,
+      "robotPair": [
+        424,
+        924
+      ],
+      "appearance": [
+        4,
+        24
+      ]
+    },
+    "371": {
+      "id": 371,
+      "robotPair": [
+        425,
+        925
+      ],
+      "appearance": [
+        22,
+        1
+      ]
+    },
+    "372": {
+      "id": 372,
+      "robotPair": [
+        426,
+        926
+      ],
+      "appearance": [
+        15,
+        16
+      ]
+    },
+    "373": {
+      "id": 373,
+      "robotPair": [
+        427,
+        927
+      ],
+      "appearance": [
+        18,
+        10
+      ]
+    },
+    "374": {
+      "id": 374,
+      "robotPair": [
+        428,
+        928
+      ],
+      "appearance": [
+        8,
+        24
+      ]
+    },
+    "375": {
+      "id": 375,
+      "robotPair": [
+        308,
+        808
+      ],
+      "appearance": [
+        24,
+        7
+      ]
+    },
+    "376": {
+      "id": 376,
+      "robotPair": [
+        431,
+        931
+      ],
+      "appearance": [
+        7,
+        21
+      ]
+    },
+    "377": {
+      "id": 377,
+      "robotPair": [
+        432,
+        932
+      ],
+      "appearance": [
+        11,
+        5
+      ]
+    },
+    "378": {
+      "id": 378,
+      "robotPair": [
+        433,
+        933
+      ],
+      "appearance": [
+        14,
+        15
+      ]
+    },
+    "379": {
+      "id": 379,
+      "robotPair": [
+        434,
+        934
+      ],
+      "appearance": [
+        13,
+        11
+      ]
+    },
+    "380": {
+      "id": 380,
+      "robotPair": [
+        435,
+        935
+      ],
+      "appearance": [
+        3,
+        9
+      ]
+    },
+    "381": {
+      "id": 381,
+      "robotPair": [
+        436,
+        936
+      ],
+      "appearance": [
+        13,
+        16
+      ]
+    },
+    "382": {
+      "id": 382,
+      "robotPair": [
+        438,
+        938
+      ],
+      "appearance": [
+        5,
+        17
+      ]
+    },
+    "383": {
+      "id": 383,
+      "robotPair": [
+        439,
+        939
+      ],
+      "appearance": [
+        4,
+        19
+      ]
+    },
+    "384": {
+      "id": 384,
+      "robotPair": [
+        440,
+        940
+      ],
+      "appearance": [
+        6,
+        18
+      ]
+    },
+    "385": {
+      "id": 385,
+      "robotPair": [
+        441,
+        941
+      ],
+      "appearance": [
+        19,
+        21
+      ]
+    },
+    "386": {
+      "id": 386,
+      "robotPair": [
+        442,
+        942
+      ],
+      "appearance": [
+        24,
+        6
+      ]
+    },
+    "387": {
+      "id": 387,
+      "robotPair": [
+        443,
+        943
+      ],
+      "appearance": [
+        7,
+        1
+      ]
+    },
+    "388": {
+      "id": 388,
+      "robotPair": [
+        444,
+        944
+      ],
+      "appearance": [
+        15,
+        22
+      ]
+    },
+    "389": {
+      "id": 389,
+      "robotPair": [
+        445,
+        945
+      ],
+      "appearance": [
+        8,
+        9
+      ]
+    },
+    "390": {
+      "id": 390,
+      "robotPair": [
+        447,
+        947
+      ],
+      "appearance": [
+        6,
+        19
+      ]
+    },
+    "391": {
+      "id": 391,
+      "robotPair": [
+        448,
+        948
+      ],
+      "appearance": [
+        23,
+        22
+      ]
+    },
+    "392": {
+      "id": 392,
+      "robotPair": [
+        449,
+        949
+      ],
+      "appearance": [
+        3,
+        14
+      ]
+    },
+    "393": {
+      "id": 393,
+      "robotPair": [
+        451,
+        951
+      ],
+      "appearance": [
+        17,
+        15
+      ]
+    },
+    "394": {
+      "id": 394,
+      "robotPair": [
+        452,
+        952
+      ],
+      "appearance": [
+        10,
+        20
+      ]
+    },
+    "395": {
+      "id": 395,
+      "robotPair": [
+        453,
+        953
+      ],
+      "appearance": [
+        18,
+        9
+      ]
+    },
+    "396": {
+      "id": 396,
+      "robotPair": [
+        455,
+        955
+      ],
+      "appearance": [
+        23,
+        5
+      ]
+    },
+    "397": {
+      "id": 397,
+      "robotPair": [
+        456,
+        956
+      ],
+      "appearance": [
+        15,
+        16
+      ]
+    },
+    "398": {
+      "id": 398,
+      "robotPair": [
+        457,
+        957
+      ],
+      "appearance": [
+        19,
+        14
+      ]
+    },
+    "399": {
+      "id": 399,
+      "robotPair": [
+        458,
+        958
+      ],
+      "appearance": [
+        22,
+        12
+      ]
+    },
+    "400": {
+      "id": 400,
+      "robotPair": [
+        459,
+        959
+      ],
+      "appearance": [
+        20,
+        5
+      ]
+    },
+    "401": {
+      "id": 401,
+      "robotPair": [
+        460,
+        960
+      ],
+      "appearance": [
+        4,
+        1
+      ]
+    },
+    "402": {
+      "id": 402,
+      "robotPair": [
+        461,
+        961
+      ],
+      "appearance": [
+        16,
+        1
+      ]
+    },
+    "403": {
+      "id": 403,
+      "robotPair": [
+        462,
+        962
+      ],
+      "appearance": [
+        11,
+        1
+      ]
+    },
+    "404": {
+      "id": 404,
+      "robotPair": [
+        463,
+        963
+      ],
+      "appearance": [
+        24,
+        5
+      ]
+    },
+    "405": {
+      "id": 405,
+      "robotPair": [
+        464,
+        964
+      ],
+      "appearance": [
+        8,
+        3
+      ]
+    },
+    "406": {
+      "id": 406,
+      "robotPair": [
+        466,
+        966
+      ],
+      "appearance": [
+        23,
+        5
+      ]
+    },
+    "407": {
+      "id": 407,
+      "robotPair": [
+        467,
+        967
+      ],
+      "appearance": [
+        13,
+        12
+      ]
+    },
+    "408": {
+      "id": 408,
+      "robotPair": [
+        468,
+        968
+      ],
+      "appearance": [
+        15,
+        21
+      ]
+    },
+    "409": {
+      "id": 409,
+      "robotPair": [
+        469,
+        969
+      ],
+      "appearance": [
+        1,
+        4
+      ]
+    },
+    "410": {
+      "id": 410,
+      "robotPair": [
+        470,
+        970
+      ],
+      "appearance": [
+        2,
+        11
+      ]
+    },
+    "411": {
+      "id": 411,
+      "robotPair": [
+        471,
+        971
+      ],
+      "appearance": [
+        10,
+        2
+      ]
+    },
+    "412": {
+      "id": 412,
+      "robotPair": [
+        472,
+        972
+      ],
+      "appearance": [
+        22,
+        19
+      ]
+    },
+    "413": {
+      "id": 413,
+      "robotPair": [
+        473,
+        973
+      ],
+      "appearance": [
+        24,
+        7
+      ]
+    },
+    "414": {
+      "id": 414,
+      "robotPair": [
+        474,
+        974
+      ],
+      "appearance": [
+        3,
+        23
+      ]
+    },
+    "415": {
+      "id": 415,
+      "robotPair": [
+        475,
+        975
+      ],
+      "appearance": [
+        10,
+        11
+      ]
+    },
+    "416": {
+      "id": 416,
+      "robotPair": [
+        356,
+        856
+      ],
+      "appearance": [
+        1,
+        5
+      ]
+    },
+    "417": {
+      "id": 417,
+      "robotPair": [
+        477,
+        977
+      ],
+      "appearance": [
+        9,
+        6
+      ]
+    },
+    "418": {
+      "id": 418,
+      "robotPair": [
+        478,
+        978
+      ],
+      "appearance": [
+        3,
+        8
+      ]
+    },
+    "419": {
+      "id": 419,
+      "robotPair": [
+        479,
+        979
+      ],
+      "appearance": [
+        5,
+        3
+      ]
+    },
+    "420": {
+      "id": 420,
+      "robotPair": [
+        480,
+        980
+      ],
+      "appearance": [
+        24,
+        21
+      ]
+    },
+    "421": {
+      "id": 421,
+      "robotPair": [
+        481,
+        981
+      ],
+      "appearance": [
+        1,
+        8
+      ]
+    },
+    "422": {
+      "id": 422,
+      "robotPair": [
+        482,
+        982
+      ],
+      "appearance": [
+        15,
+        20
+      ]
+    },
+    "423": {
+      "id": 423,
+      "robotPair": [
+        484,
+        984
+      ],
+      "appearance": [
+        9,
+        22
+      ]
+    },
+    "424": {
+      "id": 424,
+      "robotPair": [
+        485,
+        985
+      ],
+      "appearance": [
+        18,
+        7
+      ]
+    },
+    "425": {
+      "id": 425,
+      "robotPair": [
+        486,
+        986
+      ],
+      "appearance": [
+        19,
+        7
+      ]
+    },
+    "426": {
+      "id": 426,
+      "robotPair": [
+        487,
+        987
+      ],
+      "appearance": [
+        13,
+        23
+      ]
+    },
+    "427": {
+      "id": 427,
+      "robotPair": [
+        488,
+        988
+      ],
+      "appearance": [
+        5,
+        9
+      ]
+    },
+    "428": {
+      "id": 428,
+      "robotPair": [
+        489,
+        989
+      ],
+      "appearance": [
+        14,
+        8
+      ]
+    },
+    "429": {
+      "id": 429,
+      "robotPair": [
+        490,
+        990
+      ],
+      "appearance": [
+        10,
+        6
+      ]
+    },
+    "430": {
+      "id": 430,
+      "robotPair": [
+        491,
+        991
+      ],
+      "appearance": [
+        24,
+        12
+      ]
+    },
+    "431": {
+      "id": 431,
+      "robotPair": [
+        493,
+        993
+      ],
+      "appearance": [
+        6,
+        18
+      ]
+    },
+    "432": {
+      "id": 432,
+      "robotPair": [
+        494,
+        994
+      ],
+      "appearance": [
+        4,
+        13
+      ]
+    },
+    "433": {
+      "id": 433,
+      "robotPair": [
+        495,
+        995
+      ],
+      "appearance": [
+        21,
+        5
+      ]
+    },
+    "434": {
+      "id": 434,
+      "robotPair": [
+        496,
+        996
+      ],
+      "appearance": [
+        13,
+        21
+      ]
+    },
+    "435": {
+      "id": 435,
+      "robotPair": [
+        497,
+        997
+      ],
+      "appearance": [
+        2,
+        23
+      ]
+    },
+    "436": {
+      "id": 436,
+      "robotPair": [
+        498,
+        998
+      ],
+      "appearance": [
+        8,
+        14
+      ]
+    },
+    "437": {
+      "id": 437,
+      "robotPair": [
+        499,
+        999
+      ],
+      "appearance": [
+        8,
+        18
+      ]
+    }
+  }
+}

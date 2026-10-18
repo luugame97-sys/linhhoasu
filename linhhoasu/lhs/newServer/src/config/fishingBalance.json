@@ -1,0 +1,60 @@
+{
+  "version": "lhs-fishing-custom-20260906-v1",
+  "provenance": "Custom server balance authorized by owner; not official CN odds",
+  "wash": {
+    "cost": {"id": 135, "count": 10},
+    "countTable": "FishLevelConfig.washCount",
+    "qualityRolls": [
+      {"quality": 2, "weight": 4500, "small": [50, 100], "species": [250, 500]},
+      {"quality": 3, "weight": 3000, "small": [101, 180], "species": [501, 900]},
+      {"quality": 4, "weight": 1600, "small": [181, 280], "species": [901, 1400]},
+      {"quality": 6, "weight": 700, "small": [281, 400], "species": [1401, 2000]},
+      {"quality": 7, "weight": 200, "small": [401, 600], "species": [2001, 3000]}
+    ],
+    "attributes": [
+      {"type": 101, "weight": 12, "range": "small", "effect": "all_fish_attributes"},
+      {"type": 9, "weight": 9, "range": "small", "effect": "save_energy"},
+      {"type": 104, "weight": 9, "range": "small", "effect": "save_bait"},
+      {"type": 201, "weight": 3, "range": "species", "effect": "increase_species", "species": 1},
+      {"type": 202, "weight": 3, "range": "species", "effect": "increase_species", "species": 2},
+      {"type": 203, "weight": 3, "range": "species", "effect": "increase_species", "species": 3},
+      {"type": 204, "weight": 3, "range": "species", "effect": "increase_species", "species": 4},
+      {"type": 205, "weight": 3, "range": "species", "effect": "increase_species", "species": 5},
+      {"type": 206, "weight": 3, "range": "species", "effect": "increase_species", "species": 6},
+      {"type": 207, "weight": 3, "range": "species", "effect": "increase_species", "species": 7},
+      {"type": 208, "weight": 3, "range": "species", "effect": "increase_species", "species": 8},
+      {"type": 209, "weight": 3, "range": "species", "effect": "increase_species", "species": 9},
+      {"type": 210, "weight": 3, "range": "species", "effect": "increase_species", "species": 10},
+      {"type": 301, "weight": 3, "range": "species", "effect": "decrease_species", "species": 1},
+      {"type": 302, "weight": 3, "range": "species", "effect": "decrease_species", "species": 2},
+      {"type": 303, "weight": 3, "range": "species", "effect": "decrease_species", "species": 3},
+      {"type": 304, "weight": 3, "range": "species", "effect": "decrease_species", "species": 4},
+      {"type": 305, "weight": 3, "range": "species", "effect": "decrease_species", "species": 5},
+      {"type": 306, "weight": 3, "range": "species", "effect": "decrease_species", "species": 6},
+      {"type": 307, "weight": 3, "range": "species", "effect": "decrease_species", "species": 7},
+      {"type": 308, "weight": 3, "range": "species", "effect": "decrease_species", "species": 8},
+      {"type": 309, "weight": 3, "range": "species", "effect": "decrease_species", "species": 9},
+      {"type": 310, "weight": 3, "range": "species", "effect": "decrease_species", "species": 10}
+    ],
+    "uniqueTypes": true,
+    "excludeOppositeSpecies": true,
+    "energySaveCapBps": 2000,
+    "baitSaveCapBps": 2500,
+    "minSpeciesWeight": 1000,
+    "maxSpeciesWeight": 20000,
+    "historyLimit": 20
+  },
+  "boxes": {
+    "maxPerRequest": 100,
+    "drawsPerBox": 1,
+    "pity": false,
+    "pools": {
+      "94821": [{"id":190001,"count":1,"weight":200},{"id":1,"count":50,"weight":2300},{"id":4,"count":30,"weight":2500},{"id":6,"count":5,"weight":2000},{"id":2,"count":10000,"weight":3000}],
+      "94822": [{"id":190002,"count":1,"weight":200},{"id":1,"count":50,"weight":2300},{"id":4,"count":30,"weight":2500},{"id":6,"count":5,"weight":2000},{"id":2,"count":10000,"weight":3000}],
+      "94823": [{"id":190003,"count":1,"weight":200},{"id":1,"count":50,"weight":2300},{"id":4,"count":30,"weight":2500},{"id":6,"count":5,"weight":2000},{"id":2,"count":10000,"weight":3000}],
+      "94824": [{"id":190004,"count":1,"weight":200},{"id":1,"count":50,"weight":2300},{"id":4,"count":30,"weight":2500},{"id":6,"count":5,"weight":2000},{"id":2,"count":10000,"weight":3000}],
+      "94825": [{"id":190005,"count":1,"weight":200},{"id":1,"count":50,"weight":2300},{"id":4,"count":30,"weight":2500},{"id":6,"count":5,"weight":2000},{"id":2,"count":10000,"weight":3000}]
+    }
+  },
+  "receiptLimit": 64
+}

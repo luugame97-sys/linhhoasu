@@ -1,0 +1,216 @@
+{
+  "_table": "TeamFightRankConfig",
+  "_rows": 9,
+  "_type": "object",
+  "_firstKeys": "id,rankRange,endRange,rankRangeShow,reward",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rankRange": 1,
+        "endRange": 1,
+        "rankRangeShow": "1",
+        "reward": [
+          {
+            "id": 11232,
+            "count": 1
+          },
+          {
+            "id": 173,
+            "count": 20
+          },
+          {
+            "id": 100020,
+            "count": 100
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rankRange": 2,
+        "endRange": 2,
+        "rankRangeShow": "2",
+        "reward": [
+          {
+            "id": 173,
+            "count": 15
+          },
+          {
+            "id": 100020,
+            "count": 75
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rankRange": 3,
+        "endRange": 3,
+        "rankRangeShow": "3",
+        "reward": [
+          {
+            "id": 173,
+            "count": 12
+          },
+          {
+            "id": 100020,
+            "count": 60
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rankRange": 1,
+      "endRange": 1,
+      "rankRangeShow": "1",
+      "reward": [
+        {
+          "id": 11232,
+          "count": 1
+        },
+        {
+          "id": 173,
+          "count": 20
+        },
+        {
+          "id": 100020,
+          "count": 100
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "rankRange": 2,
+      "endRange": 2,
+      "rankRangeShow": "2",
+      "reward": [
+        {
+          "id": 173,
+          "count": 15
+        },
+        {
+          "id": 100020,
+          "count": 75
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "rankRange": 3,
+      "endRange": 3,
+      "rankRangeShow": "3",
+      "reward": [
+        {
+          "id": 173,
+          "count": 12
+        },
+        {
+          "id": 100020,
+          "count": 60
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "rankRange": 4,
+      "endRange": 5,
+      "rankRangeShow": "4-5",
+      "reward": [
+        {
+          "id": 173,
+          "count": 10
+        },
+        {
+          "id": 100020,
+          "count": 50
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "rankRange": 6,
+      "endRange": 10,
+      "rankRangeShow": "6-10",
+      "reward": [
+        {
+          "id": 173,
+          "count": 8
+        },
+        {
+          "id": 100020,
+          "count": 40
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "rankRange": 11,
+      "endRange": 20,
+      "rankRangeShow": "11-20",
+      "reward": [
+        {
+          "id": 173,
+          "count": 6
+        },
+        {
+          "id": 100020,
+          "count": 30
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "rankRange": 21,
+      "endRange": 50,
+      "rankRangeShow": "21-50",
+      "reward": [
+        {
+          "id": 173,
+          "count": 4
+        },
+        {
+          "id": 100020,
+          "count": 20
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "rankRange": 51,
+      "endRange": 500,
+      "rankRangeShow": "51-500",
+      "reward": [
+        {
+          "id": 173,
+          "count": 2
+        },
+        {
+          "id": 100020,
+          "count": 10
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "rankRange": 501,
+      "endRange": 9999,
+      "rankRangeShow": "501-9999",
+      "reward": [
+        {
+          "id": 173,
+          "count": 1
+        },
+        {
+          "id": 100020,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

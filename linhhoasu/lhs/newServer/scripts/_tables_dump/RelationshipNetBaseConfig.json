@@ -1,0 +1,38 @@
+{
+  "_table": "RelationshipNetBaseConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "dailyRewards": [
+        {
+          "id": 4,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "dailyRewardCount": 1
+    },
+    {
+      "upSecond": 60
+    }
+  ],
+  "data": {
+    "dailyRewards": [
+      {
+        "id": 4,
+        "count": 5
+      }
+    ],
+    "dailyRewardCount": 1,
+    "upSecond": 60
+  },
+  "dailyRewards": [
+    {
+      "id": 4,
+      "count": 50
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linh Họa Sư — Audit tính năng câu cá</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-ki-m-t-nh-n-ng-c-u-c">Session Report — kiểm tính năng câu cá</h1>
+<p><strong>Có lỗi thật phía server gây cá mới hiện chỉ số cao nhưng khi vào lại bị trả về chỉ số cũ.</strong> Đã tái hiện bằng handler và hàm client hiện hành. Ngoài lỗi này còn nhiều thiếu sót về dữ liệu, điều kiện và phần thưởng. Phiên này chỉ chẩn đoán, <strong>chưa sửa hoặc bù cá</strong>.</p>
+<p>Snapshot production: 06:10:26 ngày06/09/2026 UTC+7. Nhân vật trong ảnh được đối chiếu theo tên nicky, cấp116; không đăng nhập hoặc thao tác tài khoản đó.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đọc báo cáo phiên trước, lịch sử lỗi animation câu cá và source liên quan. Lỗi đang kiểm là dữ liệu/logic, không tự mở lại điều tra input-freeze đã tạm dừng.</li>
+<li>Lấy148 artifact source/config/mainJS từ production bằng SSH read-only. Không upload, restart hoặc gọi RPC gameplay trên production.</li>
+<li>Mongo chỉ find với projection phần câu cá; dữ liệu định danh trong evidence được băm. S1 có674 profile câu cá của người thật, S2 có68; số profile không đồng nghĩa đã chơi câu cá.</li>
+<li>Đọc toàn bộ handler fish.js/fish-soul.js, login payload, công thức combat liên quan và các hàm native nhận/giữ cá.</li>
+<li>Chạy21 probe chẩn đoán trên source production snapshot, DB/save giả trong bộ nhớ, chặn socket network. Tất cả probe tái hiện được hành vi cần kiểm; <strong>21 probe không phải21 lỗi độc lập và không có nghĩa tính năng PASS</strong>.</li>
+<li>Hậu kiểm7 hash source/config/client không đổi so snapshot.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="kh-ng-thay-i">Không thay đổi</h3>
+<ul>
+<li>Không sửa game/web/client/config/DB; không reset giỏ cá, không reroll, không phát quà, không trừ mồi hoặc tiền.</li>
+<li>Không đăng nhập, câu, bán, thay hoặc nhận cá của người chơi. Không tạo nhân vật QA production trong audit này.</li>
+<li>Không restart S1/S2, PM2, dist/admin, bot hoặc DB.</li>
+</ul>
+<h3 id="artifact-h-tr">Artifact hỗ trợ</h3>
+<ul>
+<li><code>_ai_workbench/tools/snapshot_fishing_audit_20260906.py</code>: lấy source/config và inventory câu cá chỉ đọc.</li>
+<li><code>_ai_workbench/tools/audit_fishing_contracts_20260906.js</code>: probe từng handler, giả lập lỗi save và chạy hàm client/combat thật được trích bằng AST.</li>
+<li><code>_ai_workbench/tools/verify_fishing_audit_readonly_20260906.py</code>: kiểm hash cuối phiên.</li>
+<li>Evidence <code>_ai_workbench/temp/fishing_audit_20260905T231026Z/</code>: <code>manifest.json</code>, <code>runtime.json</code>, <code>findings.json</code>, <code>postcheck.json</code>, source/config/client snapshot. Timestamp tên thư mục là UTC, tương ứng sáng06/09 UTC+7.</li>
+<li>Báo cáo MD/HTML này và session_report.md/.html. Backup report trước cập nhật: <code>_ai_workbench/backups/fishing_audit_reports_20260906/</code>.</li>
+<li>Không nên chia sẻ toàn runtime.json ngoài phạm vi quản trị: đã băm định danh nhưng vẫn chứa state game để đối chiếu.</li>
+</ul>
+<p>Source live <code>fish.js</code> SHA-256 <code>3b3e0b327d904f8e57291587c36aef237eacfe9a11698684fee3c93c78355da3</code>, khác source local <code>d93771bbb85de1e70f2807b723115b62d948304d98c6d9e93e2bfed3018a26d3</code>. Audit dùng source live snapshot, không suy từ cây local cũ.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p-xu-t">3. Lỗi đã gặp &amp; giải pháp đề xuất</h2>
+<h3 id="3-1-nguy-n-nh-n-ch-nh-c-m-i-nh-ng-l-u-ch-s-c-c">3.1 Nguyên nhân chính: cá mới nhưng lưu chỉ số cá cũ</h3>
+<p>Trong <code>fish.js</code>, <code>handleFishDealMulti</code> nhánh PUT_IN/tag4008 lấy slot cũ rồi chỉ gán lại <code>id</code>, <code>uid</code>, <code>quality</code>, <code>dead</code>. Các field <code>multi</code>, <code>attrs</code>, <code>skills</code>, <code>tempSkills</code> không được thay bằng cá mới.</p>
+<p>Client <code>sendDealFishMutl</code> lại deep-copy toàn bộ cá mới vào slot khi nhận phản hồi. Vì vậy hai phía lệch nhau ngay sau thao tác:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Mốc</th>
+<th>ID/UID</th>
+<th>Chỉ số trong fixture</th>
+</tr></thead><tbody>
+<tr>
+<td>Cá mới trước giữ</td>
+<td>5018 /2001</td>
+<td>9000, multi19000</td>
+</tr>
+<tr>
+<td>Client ngay sau PUT_IN</td>
+<td>5018 /2001</td>
+<td>9000, multi19000</td>
+</tr>
+<tr>
+<td>Snapshot server đã save</td>
+<td>5018 /2001</td>
+<td>1000, multi10000 — giữ từ cá5011 cũ</td>
+</tr>
+<tr>
+<td>Payload đăng nhập lại</td>
+<td>5018 /2001</td>
+<td>1000, multi10000</td>
+</tr>
+</tbody></table></div>
+<p>Giá trị fixture được chọn khác biệt rõ để nhận diện field bị bỏ sót, không phải kết quả reroll trên người thật. Probe cuối gọi <strong>hàm client thực</strong> và <strong>buildPlayer500Data thực</strong>, không chỉ mô phỏng lời giải thích.</p>
+<p>Đây là <strong>lỗi lưu nội dung cá sai ngay khi giữ/thay</strong>, không nhất thiết là MongoDB mất cả document. Cá vẫn có ID mới nhưng stat của cá mới không được lưu; relog chỉ làm lộ dữ liệu sai đó.</p>
+<p>Hướng sửa khi được yêu cầu: lưu toàn bộ entity đã câu, trả đúng entity bị thay ra nếu contract quy định, không lấy field cá cũ trộn với cá mới. Test lần đầu, thay slot có cá, multi-put, relog và lỗi save.</p>
+<h3 id="3-2-b-ng-ch-ng-d-li-u-hi-n-t-i-c-a-nicky">3.2 Bằng chứng dữ liệu hiện tại của nicky</h3>
+<ul>
+<li>Giỏ có10 slot, pending còn3 cá, level câu cá3; pics và fishTypeQualityPic đều rỗng dù đã có nhiều cá.</li>
+<li>Năm slot có chỉ số đầu tiên không khớp công thức <code>floor(FishConfig.minAttrs[0][1] × multi /10000)</code> đang dùng trong generator/client hiện tại:</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>Fish ID</th>
+<th>Multi đang lưu</th>
+<th>Stat đầu đang lưu</th>
+<th>Theo minAttrs×multi hiện tại</th>
+</tr></thead><tbody>
+<tr>
+<td>5018</td>
+<td>11157</td>
+<td>4462</td>
+<td>11157</td>
+</tr>
+<tr>
+<td>5028</td>
+<td>11236</td>
+<td>898</td>
+<td>1123</td>
+</tr>
+<tr>
+<td>5045</td>
+<td>11081</td>
+<td>332</td>
+<td>443</td>
+</tr>
+<tr>
+<td>5056</td>
+<td>10147</td>
+<td>1948</td>
+<td>2435</td>
+</tr>
+<tr>
+<td>5098</td>
+<td>11482</td>
+<td>2204</td>
+<td>2755</td>
+</tr>
+</tbody></table></div>
+<p>Đây là dấu hiệu phù hợp với lỗi trộn field cá cũ/cá mới. <strong>Không đủ để suy ngược chính xác multi/attrs của mọi con cá từng mất</strong>, vì multi hiện tại cũng có thể là giá trị cũ. Không tự thay bằng giá trị tính lại rồi gọi là hoàn đúng cá gốc.</p>
+<h3 id="3-3-c-c-nh-m-l-i-v-thi-u-s-t-c-n-l-i">3.3 Các nhóm lỗi và thiếu sót còn lại</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Ưu tiên</th>
+<th>Nhóm</th>
+<th>Bằng chứng / tác động</th>
+<th>Phạm vi chắc chắn</th>
+</tr></thead><tbody>
+<tr>
+<td>P1</td>
+<td>Giữ/thay cá</td>
+<td>Không lưu multi/attrs/skills mới; relog trả stat cũ</td>
+<td>Đã tái hiện handler+native callback+login payload</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Cá bị thay ra</td>
+<td>PUT_IN không trả lại entity cũ mà tạo cá ngẫu nhiên cùngtype/UID mới; slot trống cũng sinh cá thêm</td>
+<td>Hành vi đã tái hiện; cần giữ đúng contract đổi cá, không random thay thế</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Cá chờ xử lý</td>
+<td>Gọi catch tiếp ghi đè toànfishResult, mất cá pending trước</td>
+<td>Backend thiếu guard; UI có thể chặn nhưng RPC không bảo vệ</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Sổ cá/kỷ lục</td>
+<td>Client unlockPic khi xử lý, server không cập nhật pics/fishTypeQualityPic</td>
+<td>Relog mất nhận diện cá/kỷ lục;51 người có giỏ nhưng picsrỗng</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Save failure</td>
+<td>save trảnull vẫnACKsuccess; save throw để session đã trừmồi/thêmcá tồn tại</td>
+<td>Có nguy cơ mất/ghi bền mutation không xác nhận ở lần save sau; đã fault-inject</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Sưu tầm/fetter4004</td>
+<td>Không kiểm các cá cần có, ID hợp lệ hay đãclaim; gọi lại tiếp tục cộng5Nguyên bảo+50Bạc</td>
+<td>Configfetter1 yêu cầu4cá, rewardscònrỗng nhưnghandler tự phátquà; không test trênngười thật</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Nhật ký4005/4006</td>
+<td>Nângexp không trừcost, không cap đúngmốc; reward sai item128 và nhậnlặp</td>
+<td>Confignhật ký101 cost6013, rewards65/5514/5535/29133; handler không dùngbảng đó</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Thưởng phụ4022</td>
+<td>extraPrice rỗng vẫn cộng1xu cá mỗi lần</td>
+<td>Đã tái hiện2lần, delta2; chưa suy ai đã khai thác</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Kỹ năng cá4030/4031</td>
+<td>Không kiểmfishUID, slot/cá có thật, skillhợp lệ hoặcitem338; tạo cá khi slotrỗng, chấp nhận skill từrequest</td>
+<td>Backendserver-authoritative còn thiếu, clientkhông phải nguồnủy quyền</td>
+</tr>
+<tr>
+<td>P1</td>
+<td>Mở hộp cá linh hồn4063</td>
+<td>Bỏqua itemId/inventory, chỉ tínhcount và phátBạc</td>
+<td>Requestboxkhông tồn tại vẫnsuccess; không gọi lênproduction</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Tẩy cần4012</td>
+<td>Không trừFishBaseConfig.washCost135×10; trả{id,value} thay{type,value,level}</td>
+<td>Client đọctype/level nên tên/phẩmchất/chỉsố có thể hiển thị sai; fieldmismatch chắcchắn</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Ngư cụ/mồi/bãi câu</td>
+<td>Rod/raftswitch nhậnIDchưa mua; mồi chưa có vẫnđược chọn; đổi scene khôngkiểmlevel/openDay</td>
+<td>Fixturelevel1 vào bãi yêu cầulevel2; không kết luận UI cho bấm tất cả</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Pool cá</td>
+<td>Generator chọnngẫu nhiên toànFishConfigtype1–10, không theo FishSceneConfig.fishes</td>
+<td>Bãi1 ra cátype10 ngoài pool đã định; chưa xác minh phânphối gốc/bait/tide/rod đầyđủ</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Giới hạn ngư cụ</td>
+<td>Rankmax10 vẫn nângthành11 bằng fallbackcost</td>
+<td>Không cóconfig11; consumecrystal vàstatevượt bảng đã tái hiện</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Đơn hàng ngày</td>
+<td>Không có xửlýdayboundary; received/progress cũ vẫn tồn tại sauensure/login</td>
+<td>Đường refresh thủ công chỉreset3IDcốđịnh; cần lịch/mốc reset chính thức</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Kỹ năng tạm relog</td>
+<td>playerPayload.normalizeFishEntity bỏtempSkills</td>
+<td>DBcòn lựa chọn tẩy nhưng login không gửi lại; không đồng nghĩa DBđã xóa</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Cá linh hồn xử lý</td>
+<td>Deal thay tất cả theo thứ tự, cá yếughiđè cá mạnh/lock; catchlầnmới cũngghiđèpending</td>
+<td>Overwrite đã tái hiện; cần đốichiếuchínhsách giữ/bán khi auto/manual trước fix</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Chỉ số combat</td>
+<td>BattleService cộngattrs thô nhưng client nhân thêmfishSoulAdd/đặcquyền/bonus khác</td>
+<td>Probe fishSoul7011:server1000,client1040 cho cùngslot; chưa audittoànPVP/PVE</td>
+</tr>
+</tbody></table></div>
+<p>Không cộng sốprobe thành sốnhân vật bị lỗi. Các probe gọi trực tiếp handler âm tính nhằm kiểm bảo vệ server, không chứng minh người chơi có nút UI để thực hiện hoặc đã lợi dụng lỗi thưởng.</p>
+<h3 id="3-4-nh-ng-i-m-ch-a-k-t-lu-n">3.4 Những điểm chưa đủ kết luận</h3>
+<ul>
+<li>Chưa xác minh toàn bộ tỷ lệ cá hiếm, dị chủng, đồ rơi, thủy triều, event-bãi đặc biệt hay đặc quyền câu cá theo bản gốc. Source hiện có dấu hiệu chọn pool chung và nhiều nhánh simplified; cần contract/gốc trước sửa.</li>
+<li>Chưa xác định con cá cụ thể nào trong screenshot là con mới vừa bị mất hoặc thời điểm giữ chính xác. Ảnh không cung cấp UID/multi trước đó; không thể khôi phục RNG lịch sử bằng suy đoán.</li>
+<li>Chưa test native UI live, relog nhân vật thật, restart server hoặc DBwrite. Đã dùng hàm client trích và payload login trong bộ nhớ để chứng minh luồng dữ liệu.</li>
+<li>Lock ordinary basket: source không dùnglock làmguardPUT_IN, nhưng chưa kết luậnchínhsách “khóa” phải chặnmọi thay thủcông; cần kiểmcontractUI trước sửa.</li>
+</ul>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Khi “mất sau relog”, so cá mới client, slot saved và login payload theoUID/multi/attrs/skills. Chỉ kiểm fishID hoặc awaitsave tồn tại là không đủ.</li>
+<li>Normalizer không nên tự random hoặc bỏ field quan trọng; hiện nhiều nhánh ensure có thể tái tạo entity thiếufield, chelỗi dữ liệu gốc.</li>
+<li>Client tự cậpnhật local ownership/kỷlục không thaycho server persistence. Giỏ cócá nhưngpicsrỗng là dấu hiệu cần đốichiếu luồngdeal.</li>
+<li>Với quà/consume phải reject trướcmutation, saveđãxácnhận trướcsuccess, có replayguard. UIgate không thay backendvalidation.</li>
+<li>Giữ separate lanes: statstorage, catalogprogress, gearcost, economyreward, nativepayload và combatformula; tránh sửa tấtcả bằng mộtwrapper hoặc đặt lại DB.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>-21 probe chạy không lỗi harness, đều ghi evidence hành vi bất thường; chức năng <strong>chưa được sửa</strong>.</p>
+<ul>
+<li>Lỗi chính đã đốichiếu trực tiếp sourceproduction và actual client callback, payload login. Snapshot nicky phù hợp dấuhiệu stat cũ.</li>
+</ul>
+<p>-51 profile có giỏcá (43S1,8S2) đều cópicsrỗng tại snapshot; không phải tấtcả742profile câu cá đềuđãchơi. -7hash hậukiểm khôngđổi. Local/livefish.js khác hash nên candidatefix sau phải bắtđầu từproductionbaseline, khôngcopytoànlocal.</p>
+<ul>
+<li>Khôngphátbù,khôngtiêuquà,khôngDBmutation/restart. Lịch sửWebGM/ngoạiquan và input-freeze đangtạmdừng giữ nguyên.</li>
+<li>Mongoose warningisNewreserved phát sinh lúc importfixture, khônglàmprobe fail; khôngsửaschema vì auditnày.</li>
+<li>BáocáoUTF-8 gồmMDvàHTML; log/source snapshot khôngđược đónggói để public.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo-xu-t">6. Bước tiếp theo đề xuất</h2>
+<ol>
+<li>Khi được yêu cầu sửa: P0/P1 đầu tiên là PUT_IN giữ đủentity, trảlại đúngcá cũ, bảo vệpendingfish và savenull/throw. Test UID/multi/fullattrs trước-sau qua handler→client→DB/relog/restart.</li>
+<li>Đồng thời chặn các nhánh thưởng nhậnlặp/freegrant đã chứngminh; không đổilại pool/giá trị bằng mặcđịnh tùyđoán.</li>
+<li>Sửa sổcá và kỹnăngtemporary persistence; thống nhất côngthức combat/client và gatecost/gear/rank/scene.</li>
+<li>Cá linhhồn/đơnngày/tỷlệcá và event cần contractconfig/gốc, regression riêng; không gộp nhẹ như lỗiUI.</li>
+<li>Repair chỉ sau fixnguồn, cópreview/preimage: chỉ có thể bảo toàncá cònstateđủ. Muốn bùcá đã mất cầnreceipt/backup cụthể; không tựreroll hoặc nânghàngloạt để “chođúng”.</li>
+</ol>
+<p><strong>Kết luận bàn giao: lỗi “cá mạnh vào lại mất chỉ số” là lỗi server đã xác nhận; cần sửa tính năng câu cá theo các nhóm trên, không chỉ xóa cache client.</strong></p></main></body></html>

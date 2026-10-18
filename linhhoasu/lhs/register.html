@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>用户注册 - LHS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      color: #1f2a24;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255, 216, 136, .85), transparent 30%),
+        radial-gradient(circle at 88% 20%, rgba(111, 178, 137, .8), transparent 28%),
+        linear-gradient(135deg, #f7efe1 0%, #e5f0e6 45%, #dce9ef 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .panel {
+      width: min(960px, 100%);
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      overflow: hidden;
+      border: 1px solid rgba(31, 42, 36, .12);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .78);
+      box-shadow: 0 26px 80px rgba(31, 42, 36, .18);
+      backdrop-filter: blur(14px);
+    }
+    .hero {
+      min-height: 560px;
+      padding: 44px;
+      color: #fff;
+      background:
+        linear-gradient(160deg, rgba(23, 60, 48, .92), rgba(30, 91, 81, .82)),
+        url("update/resource/assets/game_start/login_ld_bg_7abdeeb9.jpg") center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hero h1 { margin: 0 0 14px; font-size: 42px; letter-spacing: .06em; }
+    .hero p { margin: 0; line-height: 1.9; opacity: .88; }
+    .badge { width: max-content; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.16); }
+    .form-area { padding: 36px; background: rgba(255, 255, 255, .9); }
+    .tabs { display: flex; gap: 10px; margin-bottom: 24px; }
+    .tab {
+      flex: 1;
+      border: 0;
+      border-radius: 16px;
+      padding: 12px;
+      background: #edf3ee;
+      color: #4b5c51;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .tab.active { background: #174434; color: #fff; }
+    .field { margin-bottom: 16px; }
+    label { display: block; margin-bottom: 7px; font-weight: 700; }
+    input {
+      width: 100%;
+      box-sizing: content-box;
+      border: 1px solid #ccd8d0;
+      border-radius: 14px;
+      padding: 13px 14px;
+      font-size: 15px;
+      outline: none;
+      background: #fbfdfb;
+    }
+    input:focus { border-color: #1d6a4e; box-shadow: 0 0 0 4px rgba(29, 106, 78, .12); }
+    .hint { margin-top: 6px; min-height: 18px; color: #718076; font-size: 12px; }
+    .hint.error { color: #ba3a2f; }
+    .hint.ok { color: #26794d; }
+    .submit {
+      width: 100%;
+      margin-top: 8px;
+      border: 0;
+      border-radius: 16px;
+      padding: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, #174434, #2d7d58);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .submit:disabled { opacity: .55; cursor: not-allowed; }
+    .message { min-height: 22px; margin-top: 14px; font-size: 14px; }
+    .message.error { color: #ba3a2f; }
+    .message.ok { color: #26794d; }
+    .links { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 13px; }
+    .links a { color: #174434; text-decoration: none; font-weight: 700; }
+    @media (max-width: 820px) {
+      .panel { grid-template-columns: 1fr; }
+      .hero { min-height: 260px; padding: 30px; }
+      .hero h1 { font-size: 32px; }
+      .form-area { padding: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <section class="hero">
+      <div>
+        <div class="badge"> 灵画师用户中心</div>
+        <h1>创建你的修行账号</h1>
+        <p>注册后请记住账号和密码。上线环境已开启用户端校验，未注册账号或密码错误将无法通过登录校验。</p>
+      </div>
+      <p>账号规则：4-20位，字母开头，只能包含字母、数字、下划线。</p>
+    </section>
+    <section class="form-area">
+      <div class="tabs">
+        <button class="tab active" id="registerTab" type="button">注册</button>
+        <button class="tab" id="loginTab" type="button">登录</button>
+      </div>
+
+      <form id="registerForm">
+        <div class="field">
+          <label for="regAccount">账号</label>
+          <input id="regAccount" autocomplete="username" maxlength="20" placeholder="例如 lhs_user01">
+          <div class="hint" id="regAccountHint">4-20位，字母开头，可含数字和下划线</div>
+        </div>
+        <div class="field" id="inviteCodeField" style="display:none">
+          <label for="inviteCode">代理邀请码</label>
+          <input id="inviteCode" maxlength="6" readonly>
+          <div class="hint ok" id="inviteCodeHint"></div>
+        </div>
+        <div class="field">
+          <label for="regPassword">密码</label>
+          <input id="regPassword" type="password" autocomplete="new-password" maxlength="32" placeholder="至少8位，包含字母和数字">
+          <div class="hint" id="regPasswordHint">不要使用简单密码，也不要包含账号</div>
+        </div>
+        <div class="field">
+          <label for="regConfirm">确认密码</label>
+          <input id="regConfirm" type="password" autocomplete="new-password" maxlength="32" placeholder="再次输入密码">
+          <div class="hint" id="regConfirmHint"></div>
+        </div>
+        <button class="submit" id="registerSubmit" type="submit">立即注册</button>
+      </form>
+
+      <form id="loginForm" style="display:none">
+        <div class="field">
+          <label for="loginAccount">账号</label>
+          <input id="loginAccount" autocomplete="username" maxlength="20" placeholder="请输入账号">
+          <div class="hint" id="loginAccountHint"></div>
+        </div>
+        <div class="field">
+          <label for="loginPassword">密码</label>
+          <input id="loginPassword" type="password" autocomplete="current-password" maxlength="32" placeholder="请输入密码">
+          <div class="hint" id="loginPasswordHint"></div>
+        </div>
+        <button class="submit" id="loginSubmit" type="submit">登录并进入游戏</button>
+      </form>
+
+      <div class="message" id="message"></div>
+      <div class="links">
+        <a href="index.html" id="backToGameLink">返回游戏</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    var ACCOUNT_PATTERN = /^[a-zA-Z][a-zA-Z0-9_]{3,19}$/;
+    var INVITE_CODE_PATTERN = /^[A-Za-z0-9]{6}$/;
+    var WEAK_PASSWORDS = ['12345678', '123456789', 'password', 'password123', 'qwerty123', 'abc123456'];
+    var activeMode = 'register';
+    var query = new URLSearchParams(window.location.search);
+    var inviteCodeFromUrl = normalizeInviteCode(query.get('inviteCode') || query.get('invite') || query.get('code') || '');
+    var backendHost = query.get('backendHost') || window.location.hostname || '127.0.0.1';
+    var httpPort = query.get('httpPort') || '18080';
+    var wsPort = query.get('wsPort') || '9200';
+    var shellv = query.get('shellv') || '';
+
+    function $(id) { return document.getElementById(id); }
+    function setHint(id, text, type) {
+      var node = $(id);
+      node.textContent = text || '';
+      node.className = 'hint' + (type ? ' ' + type : '');
+    }
+    function setMessage(text, type) {
+      var node = $('message');
+      node.textContent = text || '';
+      node.className = 'message' + (type ? ' ' + type : '');
+    }
+    function normalizeAccount(value) { return String(value || '').trim().toLowerCase(); }
+    function normalizeInviteCode(value) { return String(value || '').trim().toUpperCase(); }
+    function buildRuntimeQueryString() {
+      var runtimeQuery = new URLSearchParams();
+      if (backendHost) runtimeQuery.set('backendHost', backendHost);
+      if (httpPort) runtimeQuery.set('httpPort', httpPort);
+      if (wsPort) runtimeQuery.set('wsPort', wsPort);
+      if (shellv) runtimeQuery.set('shellv', shellv);
+      return runtimeQuery.toString();
+    }
+    function resolveRuntimePage(page) {
+      var runtimeQuery = buildRuntimeQueryString();
+      return runtimeQuery ? (page + '?' + runtimeQuery) : page;
+    }
+    function resolveApiUrl(path) {
+      if (window.location.protocol === 'file:' || window.location.protocol === 'http:') {
+        return 'http://' + backendHost + ':' + httpPort + path;
+      }
+      return path;
+    }
+    function validateAccount(value) {
+      var account = normalizeAccount(value);
+      if (!account) return '请输入账号';
+      if (!ACCOUNT_PATTERN.test(account)) return '账号格式不正确';
+      return '';
+    }
+    function validateInviteCode(value) {
+      var inviteCode = normalizeInviteCode(value);
+      if (!inviteCode) return '';
+      if (!INVITE_CODE_PATTERN.test(inviteCode)) return '代理邀请码必须为6位字母或数字';
+      return '';
+    }
+    function validatePassword(password, account) {
+      password = String(password || '');
+      account = normalizeAccount(account);
+      if (!password) return '请输入密码';
+      if (password.length < 8 || password.length > 32) return '密码需为8-32位';
+      if (/\s/.test(password)) return '密码不能包含空格';
+      if (!/[A-Za-z]/.test(password) || !/\d/.test(password)) return '密码需同时包含字母和数字';
+      if (WEAK_PASSWORDS.indexOf(password.toLowerCase()) !== -1) return '密码过于简单';
+      if (account && password.toLowerCase().indexOf(account) !== -1) return '密码不能包含账号';
+      return '';
+    }
+    function saveLogin(account, password, inviteCode) {
+      localStorage.setItem('lhs_user_account', account);
+      localStorage.setItem('lhs_user_password', password);
+      if (inviteCode) localStorage.setItem('lhs_invite_code', inviteCode);
+    }
+    function initInviteCode() {
+      if (!inviteCodeFromUrl) return;
+      $('inviteCodeField').style.display = '';
+      $('inviteCode').value = inviteCodeFromUrl;
+      var inviteError = validateInviteCode(inviteCodeFromUrl);
+      setHint(
+        'inviteCodeHint',
+        inviteError || ('已识别代理邀请码：' + inviteCodeFromUrl),
+        inviteError ? 'error' : 'ok'
+      );
+    }
+    function initRuntimeLinks() {
+      $('backToGameLink').href = resolveRuntimePage('index.html');
+      if (window.location.protocol === 'file:') {
+        $('agentEntryLink').style.display = 'none';
+      }
+    }
+    function switchMode(mode) {
+      activeMode = mode;
+      $('registerTab').classList.toggle('active', mode === 'register');
+      $('loginTab').classList.toggle('active', mode === 'login');
+      $('registerForm').style.display = mode === 'register' ? '' : 'none';
+      $('loginForm').style.display = mode === 'login' ? '' : 'none';
+      setMessage('', '');
+    }
+    async function postJson(url, body) {
+      var res = await fetch(resolveApiUrl(url), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      var data = await res.json().catch(function () { return {}; });
+      if (!res.ok || data.success === false) throw new Error(data.message || '请求失败');
+      return data;
+    }
+    function validateRegisterForm() {
+      var account = normalizeAccount($('regAccount').value);
+      var password = $('regPassword').value;
+      var confirm = $('regConfirm').value;
+      var accountError = validateAccount(account);
+      var passwordError = validatePassword(password, account);
+      var confirmError = confirm && confirm !== password ? '两次输入的密码不一致' : '';
+      setHint('regAccountHint', accountError || '账号格式正确', accountError ? 'error' : 'ok');
+      setHint('regPasswordHint', passwordError || '密码强度可用', passwordError ? 'error' : 'ok');
+      setHint('regConfirmHint', confirmError || (confirm ? '两次密码一致' : ''), confirmError ? 'error' : (confirm ? 'ok' : ''));
+      return !accountError && !passwordError && !confirmError && confirm;
+    }
+    ['regAccount', 'regPassword', 'regConfirm'].forEach(function (id) {
+      $(id).addEventListener('input', validateRegisterForm);
+    });
+    $('registerTab').addEventListener('click', function () { switchMode('register'); });
+    $('loginTab').addEventListener('click', function () { switchMode('login'); });
+    initInviteCode();
+    initRuntimeLinks();
+    $('registerForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (!validateRegisterForm()) return setMessage('请先修正表单错误', 'error');
+      var account = normalizeAccount($('regAccount').value);
+      var password = $('regPassword').value;
+      var inviteCode = normalizeInviteCode($('inviteCode').value || inviteCodeFromUrl);
+      var inviteError = validateInviteCode(inviteCode);
+      if (inviteError) return setMessage(inviteError, 'error');
+      $('registerSubmit').disabled = true;
+      setMessage('正在注册...', '');
+      try {
+        var payload = { accountId: account, password: password, confirmPassword: $('regConfirm').value };
+        if (inviteCode) payload.inviteCode = inviteCode;
+        await postJson('/api/user/register', payload);
+        saveLogin(account, password, inviteCode);
+        setMessage('注册成功，已保存到本机，即将进入游戏', 'ok');
+        setTimeout(function () { location.href = resolveRuntimePage('index.html'); }, 800);
+      } catch (error) {
+        setMessage(error.message, 'error');
+      } finally {
+        $('registerSubmit').disabled = false;
+      }
+    });
+    $('loginForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      var account = normalizeAccount($('loginAccount').value);
+      var password = $('loginPassword').value;
+      var accountError = validateAccount(account);
+      if (accountError) return setHint('loginAccountHint', accountError, 'error');
+      if (!password) return setHint('loginPasswordHint', '请输入密码', 'error');
+      $('loginSubmit').disabled = true;
+      setMessage('正在登录...', '');
+      try {
+        await postJson('/api/user/login', { accountId: account, password: password });
+        saveLogin(account, password, localStorage.getItem('lhs_invite_code'));
+        setMessage('登录成功，即将进入游戏', 'ok');
+        setTimeout(function () { location.href = resolveRuntimePage('index.html'); }, 800);
+      } catch (error) {
+        setMessage(error.message, 'error');
+      } finally {
+        $('loginSubmit').disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

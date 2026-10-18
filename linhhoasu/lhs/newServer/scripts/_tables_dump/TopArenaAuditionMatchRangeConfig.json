@@ -1,0 +1,70 @@
+{
+  "_table": "TopArenaAuditionMatchRangeConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,rankMin,rankMax,rankGap",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rankMin": 1,
+        "rankMax": 64,
+        "rankGap": 15
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rankMin": 65,
+        "rankMax": 128,
+        "rankGap": 50
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rankMin": 129,
+        "rankMax": 256,
+        "rankGap": 100
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rankMin": 1,
+      "rankMax": 64,
+      "rankGap": 15
+    },
+    "2": {
+      "id": 2,
+      "rankMin": 65,
+      "rankMax": 128,
+      "rankGap": 50
+    },
+    "3": {
+      "id": 3,
+      "rankMin": 129,
+      "rankMax": 256,
+      "rankGap": 100
+    },
+    "4": {
+      "id": 4,
+      "rankMin": 257,
+      "rankMax": 512,
+      "rankGap": 200
+    },
+    "5": {
+      "id": 5,
+      "rankMin": 513,
+      "rankMax": 768,
+      "rankGap": 250
+    },
+    "6": {
+      "id": 6,
+      "rankMin": 769,
+      "rankMax": 999,
+      "rankGap": 300
+    }
+  }
+}

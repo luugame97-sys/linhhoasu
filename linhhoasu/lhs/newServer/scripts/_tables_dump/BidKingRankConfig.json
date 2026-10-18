@@ -1,0 +1,662 @@
+{
+  "_table": "BidKingRankConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4,11,21,51,101",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "type": 1,
+          "rankRange": 1,
+          "endRange": 1,
+          "rankRangeShow": "1",
+          "reward": [
+            {
+              "id": 344,
+              "count": 10
+            },
+            {
+              "id": 474,
+              "count": 5
+            },
+            {
+              "id": 2,
+              "count": 8888888
+            }
+          ]
+        },
+        "2": {
+          "type": 1,
+          "rankRange": 2,
+          "endRange": 2,
+          "rankRangeShow": "2",
+          "reward": [
+            {
+              "id": 344,
+              "count": 8
+            },
+            {
+              "id": 474,
+              "count": 4
+            },
+            {
+              "id": 2,
+              "count": 6888888
+            }
+          ]
+        },
+        "3": {
+          "type": 1,
+          "rankRange": 3,
+          "endRange": 3,
+          "rankRangeShow": "3",
+          "reward": [
+            {
+              "id": 344,
+              "count": 6
+            },
+            {
+              "id": 474,
+              "count": 3
+            },
+            {
+              "id": 2,
+              "count": 3888888
+            }
+          ]
+        },
+        "4": {
+          "type": 1,
+          "rankRange": 4,
+          "endRange": 10,
+          "rankRangeShow": "4-10",
+          "reward": [
+            {
+              "id": 344,
+              "count": 5
+            },
+            {
+              "id": 474,
+              "count": 2
+            },
+            {
+              "id": 2,
+              "count": 1888888
+            }
+          ]
+        },
+        "11": {
+          "type": 1,
+          "rankRange": 11,
+          "endRange": 20,
+          "rankRangeShow": "11-20",
+          "reward": [
+            {
+              "id": 344,
+              "count": 4
+            },
+            {
+              "id": 475,
+              "count": 5
+            },
+            {
+              "id": 2,
+              "count": 888888
+            }
+          ]
+        },
+        "21": {
+          "type": 1,
+          "rankRange": 21,
+          "endRange": 50,
+          "rankRangeShow": "21-50",
+          "reward": [
+            {
+              "id": 344,
+              "count": 3
+            },
+            {
+              "id": 475,
+              "count": 4
+            },
+            {
+              "id": 2,
+              "count": 488888
+            }
+          ]
+        },
+        "51": {
+          "type": 1,
+          "rankRange": 51,
+          "endRange": 100,
+          "rankRangeShow": "51-100",
+          "reward": [
+            {
+              "id": 344,
+              "count": 2
+            },
+            {
+              "id": 475,
+              "count": 3
+            },
+            {
+              "id": 2,
+              "count": 288888
+            }
+          ]
+        },
+        "101": {
+          "type": 1,
+          "rankRange": 101,
+          "endRange": 9999,
+          "rankRangeShow": "100+",
+          "reward": [
+            {
+              "id": 344,
+              "count": 1
+            },
+            {
+              "id": 475,
+              "count": 2
+            },
+            {
+              "id": 2,
+              "count": 88888
+            }
+          ]
+        }
+      }
+    },
+    {
+      "2": {
+        "1": {
+          "type": 2,
+          "rankRange": 1,
+          "endRange": 1,
+          "rankRangeShow": "1",
+          "reward": [
+            {
+              "id": 344,
+              "count": 10
+            },
+            {
+              "id": 474,
+              "count": 5
+            },
+            {
+              "id": 2,
+              "count": 6666666
+            }
+          ]
+        },
+        "2": {
+          "type": 2,
+          "rankRange": 2,
+          "endRange": 2,
+          "rankRangeShow": "2",
+          "reward": [
+            {
+              "id": 344,
+              "count": 8
+            },
+            {
+              "id": 474,
+              "count": 4
+            },
+            {
+              "id": 2,
+              "count": 4666666
+            }
+          ]
+        },
+        "3": {
+          "type": 2,
+          "rankRange": 3,
+          "endRange": 3,
+          "rankRangeShow": "3",
+          "reward": [
+            {
+              "id": 344,
+              "count": 6
+            },
+            {
+              "id": 474,
+              "count": 3
+            },
+            {
+              "id": 2,
+              "count": 2666666
+            }
+          ]
+        },
+        "4": {
+          "type": 2,
+          "rankRange": 4,
+          "endRange": 10,
+          "rankRangeShow": "4-10",
+          "reward": [
+            {
+              "id": 344,
+              "count": 5
+            },
+            {
+              "id": 474,
+              "count": 2
+            },
+            {
+              "id": 2,
+              "count": 1666666
+            }
+          ]
+        },
+        "11": {
+          "type": 2,
+          "rankRange": 11,
+          "endRange": 20,
+          "rankRangeShow": "11-20",
+          "reward": [
+            {
+              "id": 344,
+              "count": 4
+            },
+            {
+              "id": 475,
+              "count": 5
+            },
+            {
+              "id": 2,
+              "count": 666666
+            }
+          ]
+        },
+        "21": {
+          "type": 2,
+          "rankRange": 21,
+          "endRange": 50,
+          "rankRangeShow": "21-50",
+          "reward": [
+            {
+              "id": 344,
+              "count": 3
+            },
+            {
+              "id": 475,
+              "count": 4
+            },
+            {
+              "id": 2,
+              "count": 366666
+            }
+          ]
+        },
+        "51": {
+          "type": 2,
+          "rankRange": 51,
+          "endRange": 100,
+          "rankRangeShow": "51-100",
+          "reward": [
+            {
+              "id": 344,
+              "count": 2
+            },
+            {
+              "id": 475,
+              "count": 3
+            },
+            {
+              "id": 2,
+              "count": 166666
+            }
+          ]
+        },
+        "101": {
+          "type": 2,
+          "rankRange": 101,
+          "endRange": 9999,
+          "rankRangeShow": "100+",
+          "reward": [
+            {
+              "id": 344,
+              "count": 1
+            },
+            {
+              "id": 475,
+              "count": 2
+            },
+            {
+              "id": 2,
+              "count": 66666
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "type": 1,
+        "rankRange": 1,
+        "endRange": 1,
+        "rankRangeShow": "1",
+        "reward": [
+          {
+            "id": 344,
+            "count": 10
+          },
+          {
+            "id": 474,
+            "count": 5
+          },
+          {
+            "id": 2,
+            "count": 8888888
+          }
+        ]
+      },
+      "2": {
+        "type": 1,
+        "rankRange": 2,
+        "endRange": 2,
+        "rankRangeShow": "2",
+        "reward": [
+          {
+            "id": 344,
+            "count": 8
+          },
+          {
+            "id": 474,
+            "count": 4
+          },
+          {
+            "id": 2,
+            "count": 6888888
+          }
+        ]
+      },
+      "3": {
+        "type": 1,
+        "rankRange": 3,
+        "endRange": 3,
+        "rankRangeShow": "3",
+        "reward": [
+          {
+            "id": 344,
+            "count": 6
+          },
+          {
+            "id": 474,
+            "count": 3
+          },
+          {
+            "id": 2,
+            "count": 3888888
+          }
+        ]
+      },
+      "4": {
+        "type": 1,
+        "rankRange": 4,
+        "endRange": 10,
+        "rankRangeShow": "4-10",
+        "reward": [
+          {
+            "id": 344,
+            "count": 5
+          },
+          {
+            "id": 474,
+            "count": 2
+          },
+          {
+            "id": 2,
+            "count": 1888888
+          }
+        ]
+      },
+      "11": {
+        "type": 1,
+        "rankRange": 11,
+        "endRange": 20,
+        "rankRangeShow": "11-20",
+        "reward": [
+          {
+            "id": 344,
+            "count": 4
+          },
+          {
+            "id": 475,
+            "count": 5
+          },
+          {
+            "id": 2,
+            "count": 888888
+          }
+        ]
+      },
+      "21": {
+        "type": 1,
+        "rankRange": 21,
+        "endRange": 50,
+        "rankRangeShow": "21-50",
+        "reward": [
+          {
+            "id": 344,
+            "count": 3
+          },
+          {
+            "id": 475,
+            "count": 4
+          },
+          {
+            "id": 2,
+            "count": 488888
+          }
+        ]
+      },
+      "51": {
+        "type": 1,
+        "rankRange": 51,
+        "endRange": 100,
+        "rankRangeShow": "51-100",
+        "reward": [
+          {
+            "id": 344,
+            "count": 2
+          },
+          {
+            "id": 475,
+            "count": 3
+          },
+          {
+            "id": 2,
+            "count": 288888
+          }
+        ]
+      },
+      "101": {
+        "type": 1,
+        "rankRange": 101,
+        "endRange": 9999,
+        "rankRangeShow": "100+",
+        "reward": [
+          {
+            "id": 344,
+            "count": 1
+          },
+          {
+            "id": 475,
+            "count": 2
+          },
+          {
+            "id": 2,
+            "count": 88888
+          }
+        ]
+      }
+    },
+    "2": {
+      "1": {
+        "type": 2,
+        "rankRange": 1,
+        "endRange": 1,
+        "rankRangeShow": "1",
+        "reward": [
+          {
+            "id": 344,
+            "count": 10
+          },
+          {
+            "id": 474,
+            "count": 5
+          },
+          {
+            "id": 2,
+            "count": 6666666
+          }
+        ]
+      },
+      "2": {
+        "type": 2,
+        "rankRange": 2,
+        "endRange": 2,
+        "rankRangeShow": "2",
+        "reward": [
+          {
+            "id": 344,
+            "count": 8
+          },
+          {
+            "id": 474,
+            "count": 4
+          },
+          {
+            "id": 2,
+            "count": 4666666
+          }
+        ]
+      },
+      "3": {
+        "type": 2,
+        "rankRange": 3,
+        "endRange": 3,
+        "rankRangeShow": "3",
+        "reward": [
+          {
+            "id": 344,
+            "count": 6
+          },
+          {
+            "id": 474,
+            "count": 3
+          },
+          {
+            "id": 2,
+            "count": 2666666
+          }
+        ]
+      },
+      "4": {
+        "type": 2,
+        "rankRange": 4,
+        "endRange": 10,
+        "rankRangeShow": "4-10",
+        "reward": [
+          {
+            "id": 344,
+            "count": 5
+          },
+          {
+            "id": 474,
+            "count": 2
+          },
+          {
+            "id": 2,
+            "count": 1666666
+          }
+        ]
+      },
+      "11": {
+        "type": 2,
+        "rankRange": 11,
+        "endRange": 20,
+        "rankRangeShow": "11-20",
+        "reward": [
+          {
+            "id": 344,
+            "count": 4
+          },
+          {
+            "id": 475,
+            "count": 5
+          },
+          {
+            "id": 2,
+            "count": 666666
+          }
+        ]
+      },
+      "21": {
+        "type": 2,
+        "rankRange": 21,
+        "endRange": 50,
+        "rankRangeShow": "21-50",
+        "reward": [
+          {
+            "id": 344,
+            "count": 3
+          },
+          {
+            "id": 475,
+            "count": 4
+          },
+          {
+            "id": 2,
+            "count": 366666
+          }
+        ]
+      },
+      "51": {
+        "type": 2,
+        "rankRange": 51,
+        "endRange": 100,
+        "rankRangeShow": "51-100",
+        "reward": [
+          {
+            "id": 344,
+            "count": 2
+          },
+          {
+            "id": 475,
+            "count": 3
+          },
+          {
+            "id": 2,
+            "count": 166666
+          }
+        ]
+      },
+      "101": {
+        "type": 2,
+        "rankRange": 101,
+        "endRange": 9999,
+        "rankRangeShow": "100+",
+        "reward": [
+          {
+            "id": 344,
+            "count": 1
+          },
+          {
+            "id": 475,
+            "count": 2
+          },
+          {
+            "id": 2,
+            "count": 66666
+          }
+        ]
+      }
+    }
+  }
+}

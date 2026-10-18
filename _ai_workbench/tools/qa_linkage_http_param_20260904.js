@@ -1,0 +1,5 @@
+'use strict';
+const assert=require('node:assert/strict'),http=require('node:http'),{packRequest,unpackResponse}=require('/linhhoasu/lhs/newServer/src/protocol/ReqCodec');
+const START=1788517080000,END=1820053080000;
+function post(port){return new Promise((resolve,reject)=>{const body=packRequest(2565,{keyList:['linkage']}),req=http.request({host:'127.0.0.1',port,path:'/gameMsg.do',method:'POST',headers:{'Content-Type':'application/octet-stream','Content-Length':body.length}},res=>{const chunks=[];res.on('data',d=>chunks.push(d));res.on('end',()=>{try{resolve({status:res.statusCode,data:unpackResponse(Buffer.concat(chunks))})}catch(e){reject(e)}})});req.on('error',reject);req.end(body)})}
+(async()=>{const rows=[];for(const port of [8080,8083]){const r=await post(port);assert.equal(r.status,200);assert.equal(r.data.ret,0);const x=JSON.parse(r.data.param.linkage);assert.deepEqual(x,{index:7,start:START,end:END});assert.ok(x.start<=Date.now()&&Date.now()<x.end);rows.push({port,status:r.status,linkage:x})}console.log(JSON.stringify({result:'PASS',checks:8,rows,durationDays:(END-START)/86400000}))})().catch(e=>{console.error(e.stack);process.exitCode=1});

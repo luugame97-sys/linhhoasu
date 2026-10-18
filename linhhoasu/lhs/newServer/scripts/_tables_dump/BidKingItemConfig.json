@@ -1,0 +1,610 @@
+{
+  "_table": "BidKingItemConfig",
+  "_rows": 63,
+  "_type": "object",
+  "_firstKeys": "id,quality,column,row,systemValue,name,desc",
+  "_sample": [
+    {
+      "302101": {
+        "id": 302101,
+        "quality": 1,
+        "column": 1,
+        "row": 1,
+        "systemValue": 3000,
+        "name": 302101,
+        "desc": 10302101
+      }
+    },
+    {
+      "302102": {
+        "id": 302102,
+        "quality": 1,
+        "column": 1,
+        "row": 1,
+        "systemValue": 3000,
+        "name": 302102,
+        "desc": 10302102
+      }
+    },
+    {
+      "302103": {
+        "id": 302103,
+        "quality": 1,
+        "column": 1,
+        "row": 1,
+        "systemValue": 2000,
+        "name": 302103,
+        "desc": 10302103
+      }
+    }
+  ],
+  "data": {
+    "302101": {
+      "id": 302101,
+      "quality": 1,
+      "column": 1,
+      "row": 1,
+      "systemValue": 3000,
+      "name": 302101,
+      "desc": 10302101
+    },
+    "302102": {
+      "id": 302102,
+      "quality": 1,
+      "column": 1,
+      "row": 1,
+      "systemValue": 3000,
+      "name": 302102,
+      "desc": 10302102
+    },
+    "302103": {
+      "id": 302103,
+      "quality": 1,
+      "column": 1,
+      "row": 1,
+      "systemValue": 2000,
+      "name": 302103,
+      "desc": 10302103
+    },
+    "302104": {
+      "id": 302104,
+      "quality": 1,
+      "column": 1,
+      "row": 1,
+      "systemValue": 2000,
+      "name": 302104,
+      "desc": 10302104
+    },
+    "302105": {
+      "id": 302105,
+      "quality": 1,
+      "column": 1,
+      "row": 1,
+      "systemValue": 2000,
+      "name": 302105,
+      "desc": 10302105
+    },
+    "302201": {
+      "id": 302201,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 6000,
+      "name": 302201,
+      "desc": 10302201
+    },
+    "302202": {
+      "id": 302202,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 6000,
+      "name": 302202,
+      "desc": 10302202
+    },
+    "302203": {
+      "id": 302203,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 5000,
+      "name": 302203,
+      "desc": 10302203
+    },
+    "302204": {
+      "id": 302204,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 4000,
+      "name": 302204,
+      "desc": 10302204
+    },
+    "302205": {
+      "id": 302205,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 4000,
+      "name": 302205,
+      "desc": 10302205
+    },
+    "302206": {
+      "id": 302206,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 4000,
+      "name": 302206,
+      "desc": 10302206
+    },
+    "302207": {
+      "id": 302207,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 4000,
+      "name": 302207,
+      "desc": 10302207
+    },
+    "302208": {
+      "id": 302208,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 4000,
+      "name": 302208,
+      "desc": 10302208
+    },
+    "302209": {
+      "id": 302209,
+      "quality": 2,
+      "column": 1,
+      "row": 1,
+      "systemValue": 4000,
+      "name": 302209,
+      "desc": 10302209
+    },
+    "302301": {
+      "id": 302301,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 50000,
+      "name": 302301,
+      "desc": 10302301
+    },
+    "302302": {
+      "id": 302302,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302302,
+      "desc": 10302302
+    },
+    "302303": {
+      "id": 302303,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302303,
+      "desc": 10302303
+    },
+    "302304": {
+      "id": 302304,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302304,
+      "desc": 10302304
+    },
+    "302305": {
+      "id": 302305,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302305,
+      "desc": 10302305
+    },
+    "302306": {
+      "id": 302306,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 50000,
+      "name": 302306,
+      "desc": 10302306
+    },
+    "302307": {
+      "id": 302307,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 10000,
+      "name": 302307,
+      "desc": 10302307
+    },
+    "302308": {
+      "id": 302308,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302308,
+      "desc": 10302308
+    },
+    "302309": {
+      "id": 302309,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302309,
+      "desc": 10302309
+    },
+    "302310": {
+      "id": 302310,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302310,
+      "desc": 10302310
+    },
+    "302311": {
+      "id": 302311,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 15000,
+      "name": 302311,
+      "desc": 10302311
+    },
+    "302312": {
+      "id": 302312,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302312,
+      "desc": 10302312
+    },
+    "302313": {
+      "id": 302313,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302313,
+      "desc": 10302313
+    },
+    "302314": {
+      "id": 302314,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302314,
+      "desc": 10302314
+    },
+    "302315": {
+      "id": 302315,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302315,
+      "desc": 10302315
+    },
+    "302316": {
+      "id": 302316,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302316,
+      "desc": 10302316
+    },
+    "302317": {
+      "id": 302317,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302317,
+      "desc": 10302317
+    },
+    "302318": {
+      "id": 302318,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302318,
+      "desc": 10302318
+    },
+    "302319": {
+      "id": 302319,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302319,
+      "desc": 10302319
+    },
+    "302320": {
+      "id": 302320,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302320,
+      "desc": 10302320
+    },
+    "302321": {
+      "id": 302321,
+      "quality": 3,
+      "column": 1,
+      "row": 1,
+      "systemValue": 30000,
+      "name": 302321,
+      "desc": 10302321
+    },
+    "302401": {
+      "id": 302401,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302401,
+      "desc": 10302401
+    },
+    "302402": {
+      "id": 302402,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302402,
+      "desc": 10302402
+    },
+    "302403": {
+      "id": 302403,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302403,
+      "desc": 10302403
+    },
+    "302404": {
+      "id": 302404,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302404,
+      "desc": 10302404
+    },
+    "302405": {
+      "id": 302405,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302405,
+      "desc": 10302405
+    },
+    "302406": {
+      "id": 302406,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302406,
+      "desc": 10302406
+    },
+    "302407": {
+      "id": 302407,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302407,
+      "desc": 10302407
+    },
+    "302408": {
+      "id": 302408,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 80000,
+      "name": 302408,
+      "desc": 10302408
+    },
+    "302409": {
+      "id": 302409,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 65000,
+      "name": 302409,
+      "desc": 10302409
+    },
+    "302410": {
+      "id": 302410,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 80000,
+      "name": 302410,
+      "desc": 10302410
+    },
+    "302411": {
+      "id": 302411,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 50000,
+      "name": 302411,
+      "desc": 10302411
+    },
+    "302412": {
+      "id": 302412,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 50000,
+      "name": 302412,
+      "desc": 10302412
+    },
+    "302413": {
+      "id": 302413,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 50000,
+      "name": 302413,
+      "desc": 10302413
+    },
+    "302414": {
+      "id": 302414,
+      "quality": 4,
+      "column": 1,
+      "row": 1,
+      "systemValue": 50000,
+      "name": 302414,
+      "desc": 10302414
+    },
+    "302601": {
+      "id": 302601,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302601,
+      "desc": 10302601
+    },
+    "302602": {
+      "id": 302602,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302602,
+      "desc": 10302602
+    },
+    "302603": {
+      "id": 302603,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302603,
+      "desc": 10302603
+    },
+    "302604": {
+      "id": 302604,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 120000,
+      "name": 302604,
+      "desc": 10302604
+    },
+    "302605": {
+      "id": 302605,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302605,
+      "desc": 10302605
+    },
+    "302606": {
+      "id": 302606,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 100000,
+      "name": 302606,
+      "desc": 10302606
+    },
+    "302607": {
+      "id": 302607,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 80000,
+      "name": 302607,
+      "desc": 10302607
+    },
+    "302608": {
+      "id": 302608,
+      "quality": 6,
+      "column": 1,
+      "row": 1,
+      "systemValue": 120000,
+      "name": 302608,
+      "desc": 10302608
+    },
+    "302701": {
+      "id": 302701,
+      "quality": 7,
+      "column": 1,
+      "row": 1,
+      "systemValue": 1000000,
+      "name": 302701,
+      "desc": 10302701
+    },
+    "302702": {
+      "id": 302702,
+      "quality": 7,
+      "column": 1,
+      "row": 1,
+      "systemValue": 500000,
+      "name": 302702,
+      "desc": 10302702
+    },
+    "302703": {
+      "id": 302703,
+      "quality": 7,
+      "column": 1,
+      "row": 1,
+      "systemValue": 800000,
+      "name": 302703,
+      "desc": 10302703
+    },
+    "302704": {
+      "id": 302704,
+      "quality": 7,
+      "column": 1,
+      "row": 1,
+      "systemValue": 200000,
+      "name": 302704,
+      "desc": 10302704
+    },
+    "302705": {
+      "id": 302705,
+      "quality": 7,
+      "column": 1,
+      "row": 1,
+      "systemValue": 150000,
+      "name": 302705,
+      "desc": 10302705
+    },
+    "302706": {
+      "id": 302706,
+      "quality": 7,
+      "column": 1,
+      "row": 1,
+      "systemValue": 500000,
+      "name": 302706,
+      "desc": 10302706
+    }
+  }
+}

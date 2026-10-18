@@ -1,0 +1,241 @@
+{
+  "_table": "TowerBaseConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "(obj)[mailId|attrQualityWeight|attrCount|attrCond|addAttr]",
+  "_sample": [
+    {
+      "mailId": 10
+    },
+    {
+      "attrQualityWeight": {
+        "1": [
+          {
+            "id": 2,
+            "weight": 4500
+          },
+          {
+            "id": 3,
+            "weight": 4500
+          },
+          {
+            "id": 4,
+            "weight": 500
+          },
+          {
+            "id": 6,
+            "weight": 500
+          }
+        ],
+        "101": [
+          {
+            "id": 2,
+            "weight": 4000
+          },
+          {
+            "id": 3,
+            "weight": 5000
+          },
+          {
+            "id": 4,
+            "weight": 500
+          },
+          {
+            "id": 6,
+            "weight": 500
+          }
+        ],
+        "201": [
+          {
+            "id": 2,
+            "weight": 3500
+          },
+          {
+            "id": 3,
+            "weight": 5000
+          },
+          {
+            "id": 4,
+            "weight": 1000
+          },
+          {
+            "id": 6,
+            "weight": 500
+          }
+        ],
+        "301": [
+          {
+            "id": 2,
+            "weight": 3000
+          },
+          {
+            "id": 3,
+            "weight": 5000
+          },
+          {
+            "id": 4,
+            "weight": 1000
+          },
+          {
+            "id": 6,
+            "weight": 1000
+          }
+        ],
+        "401": [
+          {
+            "id": 2,
+            "weight": 3000
+          },
+          {
+            "id": 3,
+            "weight": 4500
+          },
+          {
+            "id": 4,
+            "weight": 1500
+          },
+          {
+            "id": 6,
+            "weight": 1000
+          }
+        ]
+      }
+    },
+    {
+      "attrCount": 8
+    }
+  ],
+  "data": {
+    "mailId": 10,
+    "attrQualityWeight": {
+      "1": [
+        {
+          "id": 2,
+          "weight": 4500
+        },
+        {
+          "id": 3,
+          "weight": 4500
+        },
+        {
+          "id": 4,
+          "weight": 500
+        },
+        {
+          "id": 6,
+          "weight": 500
+        }
+      ],
+      "101": [
+        {
+          "id": 2,
+          "weight": 4000
+        },
+        {
+          "id": 3,
+          "weight": 5000
+        },
+        {
+          "id": 4,
+          "weight": 500
+        },
+        {
+          "id": 6,
+          "weight": 500
+        }
+      ],
+      "201": [
+        {
+          "id": 2,
+          "weight": 3500
+        },
+        {
+          "id": 3,
+          "weight": 5000
+        },
+        {
+          "id": 4,
+          "weight": 1000
+        },
+        {
+          "id": 6,
+          "weight": 500
+        }
+      ],
+      "301": [
+        {
+          "id": 2,
+          "weight": 3000
+        },
+        {
+          "id": 3,
+          "weight": 5000
+        },
+        {
+          "id": 4,
+          "weight": 1000
+        },
+        {
+          "id": 6,
+          "weight": 1000
+        }
+      ],
+      "401": [
+        {
+          "id": 2,
+          "weight": 3000
+        },
+        {
+          "id": 3,
+          "weight": 4500
+        },
+        {
+          "id": 4,
+          "weight": 1500
+        },
+        {
+          "id": 6,
+          "weight": 1000
+        }
+      ]
+    },
+    "attrCount": 8,
+    "attrCond": [
+      1,
+      1,
+      1,
+      31,
+      61,
+      91,
+      121,
+      151
+    ],
+    "addAttr": 10,
+    "selectAttr": [
+      51,
+      52,
+      53,
+      54,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      202,
+      203,
+      204,
+      222,
+      223,
+      224,
+      241,
+      242
+    ]
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "_table": "TeamFightScoreConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,scoreLeft,scoreRight,icon,name,firstRewards,rewards,multipleNum",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "scoreLeft": 0,
+        "scoreRight": 200,
+        "icon": "doubleTower_icon_dw01",
+        "name": 30036332,
+        "firstRewards": [
+          {
+            "id": 173,
+            "count": 5
+          },
+          {
+            "id": 172,
+            "count": 1
+          },
+          {
+            "id": 100020,
+            "count": 5
+          }
+        ],
+        "rewards": [
+          {
+            "id": 173,
+            "count": 1
+          },
+          {
+            "id": 100020,
+            "count": 5
+          },
+          {
+            "id": 175,
+            "count": 100
+          }
+        ],
+        "multipleNum": 2
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "scoreLeft": 200,
+        "scoreRight": 400,
+        "icon": "doubleTower_icon_dw02",
+        "name": 30036333,
+        "firstRewards": [
+          {
+            "id": 173,
+            "count": 5
+          },
+          {
+            "id": 172,
+            "count": 2
+          },
+          {
+            "id": 100020,
+            "count": 10
+          }
+        ],
+        "rewards": [
+          {
+            "id": 173,
+            "count": 2
+          },
+          {
+            "id": 100020,
+            "count": 10
+          },
+          {
+            "id": 175,
+            "count": 200
+          }
+        ],
+        "multipleNum": 2
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "scoreLeft": 400,
+        "scoreRight": 700,
+        "icon": "doubleTower_icon_dw03",
+        "name": 30036334,
+        "firstRewards": [
+          {
+            "id": 173,
+            "count": 5
+          },
+          {
+            "id": 172,
+            "count": 2
+          },
+          {
+            "id": 100020,
+            "count": 20
+          }
+        ],
+        "rewards": [
+          {
+            "id": 173,
+            "count": 3
+          },
+          {
+            "id": 100020,
+            "count": 20
+          },
+          {
+            "id": 175,
+            "count": 300
+          }
+        ],
+        "multipleNum": 2
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "scoreLeft": 0,
+      "scoreRight": 200,
+      "icon": "doubleTower_icon_dw01",
+      "name": 30036332,
+      "firstRewards": [
+        {
+          "id": 173,
+          "count": 5
+        },
+        {
+          "id": 172,
+          "count": 1
+        },
+        {
+          "id": 100020,
+          "count": 5
+        }
+      ],
+      "rewards": [
+        {
+          "id": 173,
+          "count": 1
+        },
+        {
+          "id": 100020,
+          "count": 5
+        },
+        {
+          "id": 175,
+          "count": 100
+        }
+      ],
+      "multipleNum": 2
+    },
+    "2": {
+      "id": 2,
+      "scoreLeft": 200,
+      "scoreRight": 400,
+      "icon": "doubleTower_icon_dw02",
+      "name": 30036333,
+      "firstRewards": [
+        {
+          "id": 173,
+          "count": 5
+        },
+        {
+          "id": 172,
+          "count": 2
+        },
+        {
+          "id": 100020,
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "id": 173,
+          "count": 2
+        },
+        {
+          "id": 100020,
+          "count": 10
+        },
+        {
+          "id": 175,
+          "count": 200
+        }
+      ],
+      "multipleNum": 2
+    },
+    "3": {
+      "id": 3,
+      "scoreLeft": 400,
+      "scoreRight": 700,
+      "icon": "doubleTower_icon_dw03",
+      "name": 30036334,
+      "firstRewards": [
+        {
+          "id": 173,
+          "count": 5
+        },
+        {
+          "id": 172,
+          "count": 2
+        },
+        {
+          "id": 100020,
+          "count": 20
+        }
+      ],
+      "rewards": [
+        {
+          "id": 173,
+          "count": 3
+        },
+        {
+          "id": 100020,
+          "count": 20
+        },
+        {
+          "id": 175,
+          "count": 300
+        }
+      ],
+      "multipleNum": 2
+    },
+    "4": {
+      "id": 4,
+      "scoreLeft": 700,
+      "scoreRight": 1100,
+      "icon": "doubleTower_icon_dw04",
+      "name": 30036335,
+      "firstRewards": [
+        {
+          "id": 173,
+          "count": 5
+        },
+        {
+          "id": 172,
+          "count": 3
+        },
+        {
+          "id": 100020,
+          "count": 30
+        }
+      ],
+      "rewards": [
+        {
+          "id": 173,
+          "count": 5
+        },
+        {
+          "id": 100020,
+          "count": 30
+        },
+        {
+          "id": 175,
+          "count": 500
+        }
+      ],
+      "multipleNum": 2
+    },
+    "5": {
+      "id": 5,
+      "scoreLeft": 1100,
+      "scoreRight": 1500,
+      "icon": "doubleTower_icon_dw05",
+      "name": 30036336,
+      "firstRewards": [
+        {
+          "id": 173,
+          "count": 5
+        },
+        {
+          "id": 172,
+          "count": 3
+        },
+        {
+          "id": 100020,
+          "count": 40
+        }
+      ],
+      "rewards": [
+        {
+          "id": 173,
+          "count": 8
+        },
+        {
+          "id": 100020,
+          "count": 40
+        },
+        {
+          "id": 175,
+          "count": 800
+        }
+      ],
+      "multipleNum": 2
+    },
+    "6": {
+      "id": 6,
+      "scoreLeft": 1500,
+      "scoreRight": -1,
+      "icon": "doubleTower_icon_dw06",
+      "name": 30036337,
+      "firstRewards": [
+        {
+          "id": 100034,
+          "count": 1
+        },
+        {
+          "id": 173,
+          "count": 10
+        },
+        {
+          "id": 100020,
+          "count": 50
+        }
+      ],
+      "rewards": [
+        {
+          "id": 173,
+          "count": 10
+        },
+        {
+          "id": 100020,
+          "count": 50
+        },
+        {
+          "id": 175,
+          "count": 1000
+        }
+      ],
+      "multipleNum": 3
+    }
+  }
+}

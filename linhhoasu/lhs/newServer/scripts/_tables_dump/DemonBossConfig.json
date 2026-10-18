@@ -1,0 +1,1304 @@
+{
+  "_table": "DemonBossConfig",
+  "_rows": 43,
+  "_type": "object",
+  "_firstKeys": "roleStageId,monsterId,rewards,cleanoutRewards,cleanoutCost",
+  "_sample": [
+    {
+      "3": {
+        "roleStageId": 3,
+        "monsterId": 200003,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 15
+          },
+          {
+            "id": 1,
+            "count": 20
+          }
+        ],
+        "cleanoutRewards": [
+          {
+            "id": 4,
+            "count": 30
+          }
+        ],
+        "cleanoutCost": [
+          0,
+          15,
+          30,
+          45,
+          60,
+          75
+        ]
+      }
+    },
+    {
+      "4": {
+        "roleStageId": 4,
+        "monsterId": 200004,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 20
+          },
+          {
+            "id": 1,
+            "count": 20
+          }
+        ],
+        "cleanoutRewards": [
+          {
+            "id": 4,
+            "count": 40
+          }
+        ],
+        "cleanoutCost": [
+          0,
+          20,
+          40,
+          60,
+          80,
+          100
+        ]
+      }
+    },
+    {
+      "5": {
+        "roleStageId": 5,
+        "monsterId": 200005,
+        "rewards": [
+          {
+            "id": 4,
+            "count": 24
+          },
+          {
+            "id": 1,
+            "count": 30
+          }
+        ],
+        "cleanoutRewards": [
+          {
+            "id": 4,
+            "count": 50
+          }
+        ],
+        "cleanoutCost": [
+          0,
+          25,
+          50,
+          75,
+          100,
+          125
+        ]
+      }
+    }
+  ],
+  "data": {
+    "3": {
+      "roleStageId": 3,
+      "monsterId": 200003,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 15
+        },
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 30
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        15,
+        30,
+        45,
+        60,
+        75
+      ]
+    },
+    "4": {
+      "roleStageId": 4,
+      "monsterId": 200004,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 20
+        },
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 40
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        20,
+        40,
+        60,
+        80,
+        100
+      ]
+    },
+    "5": {
+      "roleStageId": 5,
+      "monsterId": 200005,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 24
+        },
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 50
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        25,
+        50,
+        75,
+        100,
+        125
+      ]
+    },
+    "6": {
+      "roleStageId": 6,
+      "monsterId": 200006,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 30
+        },
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 60
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        30,
+        60,
+        90,
+        120,
+        150
+      ]
+    },
+    "7": {
+      "roleStageId": 7,
+      "monsterId": 200007,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 30
+        },
+        {
+          "id": 30,
+          "count": 1
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 70
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        35,
+        70,
+        105,
+        140,
+        175
+      ]
+    },
+    "8": {
+      "roleStageId": 8,
+      "monsterId": 200008,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 36
+        },
+        {
+          "id": 30,
+          "count": 1
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 80
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        40,
+        80,
+        120,
+        160,
+        200
+      ]
+    },
+    "9": {
+      "roleStageId": 9,
+      "monsterId": 200009,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 45
+        },
+        {
+          "id": 30,
+          "count": 1
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 90
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        45,
+        90,
+        135,
+        180,
+        225
+      ]
+    },
+    "10": {
+      "roleStageId": 10,
+      "monsterId": 200010,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 40
+        },
+        {
+          "id": 30,
+          "count": 3
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 100
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        50,
+        100,
+        150,
+        200,
+        250
+      ]
+    },
+    "11": {
+      "roleStageId": 11,
+      "monsterId": 200011,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 48
+        },
+        {
+          "id": 30,
+          "count": 3
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 110
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        55,
+        110,
+        165,
+        220,
+        275
+      ]
+    },
+    "12": {
+      "roleStageId": 12,
+      "monsterId": 200012,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 60
+        },
+        {
+          "id": 30,
+          "count": 3
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 120
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        60,
+        120,
+        180,
+        240,
+        300
+      ]
+    },
+    "13": {
+      "roleStageId": 13,
+      "monsterId": 200013,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 50
+        },
+        {
+          "id": 30,
+          "count": 5
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 130
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        65,
+        130,
+        195,
+        260,
+        325
+      ]
+    },
+    "14": {
+      "roleStageId": 14,
+      "monsterId": 200014,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 60
+        },
+        {
+          "id": 30,
+          "count": 5
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 140
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        70,
+        140,
+        210,
+        280,
+        350
+      ]
+    },
+    "15": {
+      "roleStageId": 15,
+      "monsterId": 200015,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 75
+        },
+        {
+          "id": 30,
+          "count": 5
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 150
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        75,
+        150,
+        225,
+        300,
+        375
+      ]
+    },
+    "16": {
+      "roleStageId": 16,
+      "monsterId": 200016,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 60
+        },
+        {
+          "id": 30,
+          "count": 6
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 160
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        80,
+        160,
+        240,
+        320,
+        400
+      ]
+    },
+    "17": {
+      "roleStageId": 17,
+      "monsterId": 200017,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 72
+        },
+        {
+          "id": 30,
+          "count": 6
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 170
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        85,
+        170,
+        255,
+        340,
+        425
+      ]
+    },
+    "18": {
+      "roleStageId": 18,
+      "monsterId": 200018,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 90
+        },
+        {
+          "id": 30,
+          "count": 6
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 180
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        90,
+        180,
+        270,
+        360,
+        450
+      ]
+    },
+    "19": {
+      "roleStageId": 19,
+      "monsterId": 200019,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 70
+        },
+        {
+          "id": 30,
+          "count": 8
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 190
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        95,
+        190,
+        285,
+        380,
+        475
+      ]
+    },
+    "20": {
+      "roleStageId": 20,
+      "monsterId": 200020,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 84
+        },
+        {
+          "id": 30,
+          "count": 8
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 200
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500
+      ]
+    },
+    "21": {
+      "roleStageId": 21,
+      "monsterId": 200021,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 105
+        },
+        {
+          "id": 30,
+          "count": 8
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 210
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        105,
+        210,
+        315,
+        420,
+        525
+      ]
+    },
+    "22": {
+      "roleStageId": 22,
+      "monsterId": 200022,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 80
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 220
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        110,
+        220,
+        330,
+        440,
+        550
+      ]
+    },
+    "23": {
+      "roleStageId": 23,
+      "monsterId": 200023,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 96
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 230
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        115,
+        230,
+        345,
+        460,
+        575
+      ]
+    },
+    "24": {
+      "roleStageId": 24,
+      "monsterId": 200024,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 120
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 240
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        120,
+        240,
+        360,
+        480,
+        600
+      ]
+    },
+    "25": {
+      "roleStageId": 25,
+      "monsterId": 200025,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 90
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 250
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        125,
+        250,
+        375,
+        500,
+        625
+      ]
+    },
+    "26": {
+      "roleStageId": 26,
+      "monsterId": 200026,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 108
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 260
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        130,
+        260,
+        390,
+        520,
+        650
+      ]
+    },
+    "27": {
+      "roleStageId": 27,
+      "monsterId": 200027,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 135
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 270
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        135,
+        270,
+        405,
+        540,
+        675
+      ]
+    },
+    "28": {
+      "roleStageId": 28,
+      "monsterId": 200028,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 100
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 280
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        140,
+        280,
+        420,
+        560,
+        700
+      ]
+    },
+    "29": {
+      "roleStageId": 29,
+      "monsterId": 200029,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 120
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 290
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        145,
+        290,
+        435,
+        580,
+        725
+      ]
+    },
+    "30": {
+      "roleStageId": 30,
+      "monsterId": 200030,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 150
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 300
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        150,
+        300,
+        450,
+        600,
+        750
+      ]
+    },
+    "31": {
+      "roleStageId": 31,
+      "monsterId": 200031,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 100
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 310
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        155,
+        310,
+        465,
+        620,
+        775
+      ]
+    },
+    "32": {
+      "roleStageId": 32,
+      "monsterId": 200032,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 150
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 320
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        160,
+        320,
+        480,
+        640,
+        800
+      ]
+    },
+    "33": {
+      "roleStageId": 33,
+      "monsterId": 200033,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 250
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 330
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        165,
+        330,
+        495,
+        660,
+        825
+      ]
+    },
+    "34": {
+      "roleStageId": 34,
+      "monsterId": 200034,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 150
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 340
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        170,
+        340,
+        510,
+        680,
+        850
+      ]
+    },
+    "35": {
+      "roleStageId": 35,
+      "monsterId": 200035,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 200
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 350
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        175,
+        350,
+        525,
+        700,
+        875
+      ]
+    },
+    "36": {
+      "roleStageId": 36,
+      "monsterId": 200036,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 300
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 360
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        180,
+        360,
+        540,
+        720,
+        900
+      ]
+    },
+    "37": {
+      "roleStageId": 37,
+      "monsterId": 200037,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 200
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 370
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        185,
+        370,
+        555,
+        740,
+        925
+      ]
+    },
+    "38": {
+      "roleStageId": 38,
+      "monsterId": 200038,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 250
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 380
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        190,
+        380,
+        570,
+        760,
+        950
+      ]
+    },
+    "39": {
+      "roleStageId": 39,
+      "monsterId": 200039,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 350
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 390
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        195,
+        390,
+        585,
+        780,
+        975
+      ]
+    },
+    "40": {
+      "roleStageId": 40,
+      "monsterId": 200040,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 250
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 400
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        200,
+        400,
+        600,
+        800,
+        1000
+      ]
+    },
+    "41": {
+      "roleStageId": 41,
+      "monsterId": 200041,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 300
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 410
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        205,
+        410,
+        615,
+        820,
+        1025
+      ]
+    },
+    "42": {
+      "roleStageId": 42,
+      "monsterId": 200042,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 400
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 420
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        210,
+        420,
+        630,
+        840,
+        1050
+      ]
+    },
+    "43": {
+      "roleStageId": 43,
+      "monsterId": 200043,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 300
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 430
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        215,
+        430,
+        645,
+        860,
+        1075
+      ]
+    },
+    "44": {
+      "roleStageId": 44,
+      "monsterId": 200044,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 350
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 440
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        220,
+        440,
+        660,
+        880,
+        1100
+      ]
+    },
+    "45": {
+      "roleStageId": 45,
+      "monsterId": 200045,
+      "rewards": [
+        {
+          "id": 4,
+          "count": 450
+        },
+        {
+          "id": 30,
+          "count": 10
+        }
+      ],
+      "cleanoutRewards": [
+        {
+          "id": 4,
+          "count": 450
+        }
+      ],
+      "cleanoutCost": [
+        0,
+        225,
+        450,
+        675,
+        900,
+        1125
+      ]
+    }
+  }
+}

@@ -1,0 +1,996 @@
+{
+  "_table": "SurviveMonsterConfig",
+  "_rows": 38,
+  "_type": "object",
+  "_firstKeys": "id,nameRes,icon,resId,sizeScale,collisionRadius,hp,atk,moveSp,dodge,colliderCd,skillCd,followCd,isBoss,skillId,animaId,text,score",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "nameRes": "",
+        "icon": "",
+        "resId": "gc_dungeonMonster_10404",
+        "sizeScale": 0.2,
+        "collisionRadius": 30,
+        "hp": 40,
+        "atk": 5,
+        "moveSp": 4.2,
+        "dodge": 0,
+        "colliderCd": 1000,
+        "skillCd": 0,
+        "followCd": 700,
+        "isBoss": 0,
+        "skillId": [],
+        "animaId": 1,
+        "text": "",
+        "score": 1
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "nameRes": "",
+        "icon": "",
+        "resId": "gc_dungeonMonster_10405",
+        "sizeScale": 0.3,
+        "collisionRadius": 32,
+        "hp": 50,
+        "atk": 4,
+        "moveSp": 3.6,
+        "dodge": 0,
+        "colliderCd": 1000,
+        "skillCd": 0,
+        "followCd": 1000,
+        "isBoss": 0,
+        "skillId": [],
+        "animaId": 1,
+        "text": "",
+        "score": 1
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "nameRes": "",
+        "icon": "",
+        "resId": "gc_sp_mapMonster_10111",
+        "sizeScale": 0.2,
+        "collisionRadius": 30,
+        "hp": 35,
+        "atk": 7,
+        "moveSp": 5,
+        "dodge": 0,
+        "colliderCd": 1000,
+        "skillCd": 0,
+        "followCd": 500,
+        "isBoss": 0,
+        "skillId": [],
+        "animaId": 1,
+        "text": "",
+        "score": 1
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_dungeonMonster_10404",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 40,
+      "atk": 5,
+      "moveSp": 4.2,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 700,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 1,
+      "text": "",
+      "score": 1
+    },
+    "2": {
+      "id": 2,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_dungeonMonster_10405",
+      "sizeScale": 0.3,
+      "collisionRadius": 32,
+      "hp": 50,
+      "atk": 4,
+      "moveSp": 3.6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 1000,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 1,
+      "text": "",
+      "score": 1
+    },
+    "3": {
+      "id": 3,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10111",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 35,
+      "atk": 7,
+      "moveSp": 5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 500,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 1,
+      "text": "",
+      "score": 1
+    },
+    "11": {
+      "id": 11,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_mapMonster_10003",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 45,
+      "atk": 5,
+      "moveSp": 4.2,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 700,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 2,
+      "text": "",
+      "score": 1
+    },
+    "12": {
+      "id": 12,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_dungeonMonster_10419",
+      "sizeScale": 0.3,
+      "collisionRadius": 32,
+      "hp": 57,
+      "atk": 4,
+      "moveSp": 3.6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 1000,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 2,
+      "text": "",
+      "score": 1
+    },
+    "13": {
+      "id": 13,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10112",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 44,
+      "atk": 7,
+      "moveSp": 5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 500,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 2,
+      "text": "",
+      "score": 1
+    },
+    "21": {
+      "id": 21,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_dungeonMonster_10420",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 50,
+      "atk": 5,
+      "moveSp": 4.2,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 700,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 3,
+      "text": "",
+      "score": 1
+    },
+    "22": {
+      "id": 22,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10001",
+      "sizeScale": 0.3,
+      "collisionRadius": 32,
+      "hp": 64,
+      "atk": 4,
+      "moveSp": 3.6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 1000,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 3,
+      "text": "",
+      "score": 1
+    },
+    "23": {
+      "id": 23,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_mapMonster_10041",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 49,
+      "atk": 7,
+      "moveSp": 5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 500,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 3,
+      "text": "",
+      "score": 1
+    },
+    "31": {
+      "id": 31,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_dungeonMonster_10434",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 55,
+      "atk": 5,
+      "moveSp": 4.2,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 700,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 4,
+      "text": "",
+      "score": 1
+    },
+    "32": {
+      "id": 32,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10002",
+      "sizeScale": 0.3,
+      "collisionRadius": 32,
+      "hp": 71,
+      "atk": 4,
+      "moveSp": 3.6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 1000,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 4,
+      "text": "",
+      "score": 1
+    },
+    "33": {
+      "id": 33,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_mapMonster_10081",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 54,
+      "atk": 7,
+      "moveSp": 5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 500,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 4,
+      "text": "",
+      "score": 1
+    },
+    "41": {
+      "id": 41,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_dungeonMonster_10435",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 60,
+      "atk": 5,
+      "moveSp": 4.2,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 700,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 5,
+      "text": "",
+      "score": 1
+    },
+    "42": {
+      "id": 42,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10091",
+      "sizeScale": 0.3,
+      "collisionRadius": 32,
+      "hp": 78,
+      "atk": 4,
+      "moveSp": 3.6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 1000,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 5,
+      "text": "",
+      "score": 1
+    },
+    "43": {
+      "id": 43,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_mapMonster_10082",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 59,
+      "atk": 7,
+      "moveSp": 5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 500,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 5,
+      "text": "",
+      "score": 1
+    },
+    "51": {
+      "id": 51,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10092",
+      "sizeScale": 0.2,
+      "collisionRadius": 30,
+      "hp": 65,
+      "atk": 5,
+      "moveSp": 4.2,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 700,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 6,
+      "text": "",
+      "score": 1
+    },
+    "52": {
+      "id": 52,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_sp_mapMonster_10093",
+      "sizeScale": 0.3,
+      "collisionRadius": 32,
+      "hp": 85,
+      "atk": 4,
+      "moveSp": 3.6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 1000,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 6,
+      "text": "",
+      "score": 1
+    },
+    "53": {
+      "id": 53,
+      "nameRes": "",
+      "icon": "",
+      "resId": "gc_mapMonster_10083",
+      "sizeScale": 0.5,
+      "collisionRadius": 30,
+      "hp": 64,
+      "atk": 7,
+      "moveSp": 5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 0,
+      "followCd": 500,
+      "isBoss": 0,
+      "skillId": [],
+      "animaId": 6,
+      "text": "",
+      "score": 1
+    },
+    "10001": {
+      "id": 10001,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_010",
+      "resId": "gc_sp_towerMonster_010",
+      "sizeScale": 0.7,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20001,
+          "lv": 1
+        }
+      ],
+      "animaId": 101,
+      "text": "",
+      "score": 25
+    },
+    "10002": {
+      "id": 10002,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1003,
+          "lv": 1
+        }
+      ],
+      "animaId": 102,
+      "text": "",
+      "score": 25
+    },
+    "10003": {
+      "id": 10003,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20002,
+          "lv": 1
+        }
+      ],
+      "animaId": 103,
+      "text": "",
+      "score": 25
+    },
+    "10004": {
+      "id": 10004,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_010",
+      "resId": "gc_sp_towerMonster_010",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1006,
+          "lv": 1
+        }
+      ],
+      "animaId": 104,
+      "text": "",
+      "score": 25
+    },
+    "10005": {
+      "id": 10005,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1007,
+          "lv": 1
+        }
+      ],
+      "animaId": 105,
+      "text": "",
+      "score": 25
+    },
+    "10006": {
+      "id": 10006,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20001,
+          "lv": 1
+        },
+        {
+          "id": 1006,
+          "lv": 1
+        }
+      ],
+      "animaId": 106,
+      "text": "",
+      "score": 25
+    },
+    "10007": {
+      "id": 10007,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_010",
+      "resId": "gc_sp_towerMonster_010",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1003,
+          "lv": 1
+        },
+        {
+          "id": 1007,
+          "lv": 1
+        }
+      ],
+      "animaId": 106,
+      "text": "",
+      "score": 25
+    },
+    "10008": {
+      "id": 10008,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20003,
+          "lv": 1
+        },
+        {
+          "id": 1003,
+          "lv": 1
+        }
+      ],
+      "animaId": 107,
+      "text": "",
+      "score": 25
+    },
+    "10009": {
+      "id": 10009,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1006,
+          "lv": 1
+        },
+        {
+          "id": 20003,
+          "lv": 1
+        }
+      ],
+      "animaId": 107,
+      "text": "",
+      "score": 25
+    },
+    "10010": {
+      "id": 10010,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_010",
+      "resId": "gc_sp_towerMonster_010",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1007,
+          "lv": 1
+        },
+        {
+          "id": 20001,
+          "lv": 1
+        }
+      ],
+      "animaId": 107,
+      "text": "",
+      "score": 25
+    },
+    "10011": {
+      "id": 10011,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20001,
+          "lv": 1
+        },
+        {
+          "id": 1003,
+          "lv": 1
+        }
+      ],
+      "animaId": 108,
+      "text": "",
+      "score": 25
+    },
+    "10012": {
+      "id": 10012,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1003,
+          "lv": 1
+        },
+        {
+          "id": 1006,
+          "lv": 1
+        }
+      ],
+      "animaId": 108,
+      "text": "",
+      "score": 25
+    },
+    "10013": {
+      "id": 10013,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_010",
+      "resId": "gc_sp_towerMonster_010",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20002,
+          "lv": 1
+        },
+        {
+          "id": 20001,
+          "lv": 1
+        }
+      ],
+      "animaId": 108,
+      "text": "",
+      "score": 25
+    },
+    "10014": {
+      "id": 10014,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20001,
+          "lv": 1
+        },
+        {
+          "id": 20002,
+          "lv": 1
+        }
+      ],
+      "animaId": 108,
+      "text": "",
+      "score": 25
+    },
+    "10015": {
+      "id": 10015,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1007,
+          "lv": 1
+        },
+        {
+          "id": 20002,
+          "lv": 1
+        }
+      ],
+      "animaId": 109,
+      "text": "",
+      "score": 25
+    },
+    "10016": {
+      "id": 10016,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_010",
+      "resId": "gc_sp_towerMonster_010",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20001,
+          "lv": 1
+        },
+        {
+          "id": 1006,
+          "lv": 1
+        }
+      ],
+      "animaId": 109,
+      "text": "",
+      "score": 25
+    },
+    "10017": {
+      "id": 10017,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1003,
+          "lv": 1
+        },
+        {
+          "id": 1007,
+          "lv": 1
+        }
+      ],
+      "animaId": 109,
+      "text": "",
+      "score": 25
+    },
+    "10018": {
+      "id": 10018,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 7.5,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1800,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 20002,
+          "lv": 1
+        },
+        {
+          "id": 1003,
+          "lv": 1
+        }
+      ],
+      "animaId": 109,
+      "text": "",
+      "score": 25
+    },
+    "10019": {
+      "id": 10019,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009_006",
+      "resId": "gc_sp_towerMonster_006",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 6,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 1500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1006,
+          "lv": 1
+        },
+        {
+          "id": 20002,
+          "lv": 1
+        }
+      ],
+      "animaId": 109,
+      "text": "",
+      "score": 25
+    },
+    "10020": {
+      "id": 10020,
+      "nameRes": "",
+      "icon": "gc_bm_bosshead_009",
+      "resId": "gc_sp_towerMonster_009",
+      "sizeScale": 0.8,
+      "collisionRadius": 60,
+      "hp": 1000,
+      "atk": 8,
+      "moveSp": 12,
+      "dodge": 0,
+      "colliderCd": 1000,
+      "skillCd": 4000,
+      "followCd": 2500,
+      "isBoss": 1,
+      "skillId": [
+        {
+          "id": 1007,
+          "lv": 1
+        },
+        {
+          "id": 20001,
+          "lv": 1
+        }
+      ],
+      "animaId": 109,
+      "text": "",
+      "score": 25
+    }
+  }
+}

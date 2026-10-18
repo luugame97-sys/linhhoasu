@@ -1,0 +1,616 @@
+{
+  "_table": "Activity37RewardConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "activityId,consumes,qualityWeights,succeed",
+  "_sample": [
+    {
+      "37001": {
+        "activityId": 37001,
+        "consumes": [
+          {
+            "id": 2,
+            "count": 1000
+          },
+          {
+            "id": 155,
+            "count": 1
+          },
+          {
+            "id": 156,
+            "count": 1
+          }
+        ],
+        "qualityWeights": [
+          {
+            "id": 118005,
+            "weight": 600
+          },
+          {
+            "id": 118004,
+            "weight": 900
+          },
+          {
+            "id": 118003,
+            "weight": 2000
+          },
+          {
+            "id": 118002,
+            "weight": 3500
+          },
+          {
+            "id": 118001,
+            "weight": 3000
+          }
+        ],
+        "succeed": 8000
+      }
+    },
+    {
+      "37002": {
+        "activityId": 37002,
+        "consumes": [
+          {
+            "id": 2,
+            "count": 1000
+          },
+          {
+            "id": 155,
+            "count": 1
+          },
+          {
+            "id": 156,
+            "count": 1
+          }
+        ],
+        "qualityWeights": [
+          {
+            "id": 118005,
+            "weight": 600
+          },
+          {
+            "id": 118004,
+            "weight": 900
+          },
+          {
+            "id": 118003,
+            "weight": 2000
+          },
+          {
+            "id": 118002,
+            "weight": 3500
+          },
+          {
+            "id": 118001,
+            "weight": 3000
+          }
+        ],
+        "succeed": 8000
+      }
+    },
+    {
+      "37003": {
+        "activityId": 37003,
+        "consumes": [
+          {
+            "id": 2,
+            "count": 1000
+          },
+          {
+            "id": 155,
+            "count": 1
+          },
+          {
+            "id": 156,
+            "count": 1
+          }
+        ],
+        "qualityWeights": [
+          {
+            "id": 118005,
+            "weight": 600
+          },
+          {
+            "id": 118004,
+            "weight": 900
+          },
+          {
+            "id": 118003,
+            "weight": 2000
+          },
+          {
+            "id": 118002,
+            "weight": 3500
+          },
+          {
+            "id": 118001,
+            "weight": 3000
+          }
+        ],
+        "succeed": 8000
+      }
+    }
+  ],
+  "data": {
+    "37001": {
+      "activityId": 37001,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37002": {
+      "activityId": 37002,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37003": {
+      "activityId": 37003,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37051": {
+      "activityId": 37051,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37052": {
+      "activityId": 37052,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37053": {
+      "activityId": 37053,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37101": {
+      "activityId": 37101,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37151": {
+      "activityId": 37151,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37951": {
+      "activityId": 37951,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37952": {
+      "activityId": 37952,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37953": {
+      "activityId": 37953,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    },
+    "37999": {
+      "activityId": 37999,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 155,
+          "count": 1
+        },
+        {
+          "id": 156,
+          "count": 1
+        }
+      ],
+      "qualityWeights": [
+        {
+          "id": 118005,
+          "weight": 600
+        },
+        {
+          "id": 118004,
+          "weight": 900
+        },
+        {
+          "id": 118003,
+          "weight": 2000
+        },
+        {
+          "id": 118002,
+          "weight": 3500
+        },
+        {
+          "id": 118001,
+          "weight": 3000
+        }
+      ],
+      "succeed": 8000
+    }
+  }
+}

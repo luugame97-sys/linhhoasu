@@ -1,0 +1,45 @@
+{
+  "_table": "FateBaseConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "transferCost": {
+        "id": 64,
+        "count": 1
+      }
+    },
+    {
+      "resetCost": {
+        "id": 63,
+        "count": 1
+      }
+    },
+    {
+      "transgenderCost": {
+        "id": 106,
+        "count": 1
+      }
+    }
+  ],
+  "data": {
+    "transferCost": {
+      "id": 64,
+      "count": 1
+    },
+    "resetCost": {
+      "id": 63,
+      "count": 1
+    },
+    "transgenderCost": {
+      "id": 106,
+      "count": 1
+    },
+    "subSkillNum": 2,
+    "mainSkillNum": 5,
+    "skillLimit": [
+      90
+    ]
+  }
+}

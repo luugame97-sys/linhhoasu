@@ -1,0 +1,23 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs');
+const source=fs.readFileSync(process.argv[2],'utf8'),index=fs.readFileSync(process.argv[3],'utf8');
+const once=(m)=>assert.equal(source.split(m).length-1,1,'marker count: '+m);
+once('autoEquipPowerUpgrade=function');
+once('Tự động mặc trang bị mạnh hơn');
+once('autoDelegate:!!(U9.isOpen&&U9.autoConfig.enoughPower)');
+once('[LHS] AutoEquip protected equips');
+assert.ok(source.includes('U9.autoConfig.enoughPower=!1;try{var s=e.slice(),o=x9.CheckAutoStop(s)}finally{U9.autoConfig.enoughPower=a}'));
+assert.ok(source.includes('p>u&&(!f||p>YV.calPower(f))'));
+assert.ok(source.includes('autoDelegate:!0'));
+assert.ok(source.includes('Number(o.afterPower)>Number(o.beforePower)'));
+assert.ok(source.includes('U9.isOpen=!1,i.openHeroReplaceView(t,s)'));
+assert.ok(source.includes('for(;0<v.length;)s.push(v.shift())'));
+assert.ok(source.includes('for(;0<l.length;)s.push(l.shift())'));
+assert.ok(source.includes('t.addSaleList(l),t.addSaleList(v)'));
+assert.ok(source.includes('this.powerCheckBox.selected=e.enoughPower'));
+assert.ok(source.includes('t.writeBoolean(e.enoughPower)'));
+assert.ok(source.includes('i.enoughPower=e.readBoolean()'));
+assert.ok(index.includes('main.min_a6195824.js?v=20260904_auto_equip_upgrade1'));
+// Silent reward patch from the preceding release must survive this edit.
+assert.ok(source.includes('_.onSilentMode=function(){U9.autoConfig.isSilentMode=!U9.autoConfig.isSilentMode}'));
+console.log(JSON.stringify({result:'PASS',checks:17,bytes:Buffer.byteLength(source)}));

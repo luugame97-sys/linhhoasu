@@ -1,0 +1,65 @@
+{
+  "_table": "Activity3RewardConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "activityId,reward",
+  "_sample": [
+    {
+      "3001": {
+        "activityId": 3001,
+        "reward": {
+          "id": 4,
+          "count": 10
+        }
+      }
+    },
+    {
+      "3002": {
+        "activityId": 3002,
+        "reward": {
+          "id": 4,
+          "count": 10
+        }
+      }
+    },
+    {
+      "3051": {
+        "activityId": 3051,
+        "reward": {
+          "id": 4,
+          "count": 10
+        }
+      }
+    }
+  ],
+  "data": {
+    "3001": {
+      "activityId": 3001,
+      "reward": {
+        "id": 4,
+        "count": 10
+      }
+    },
+    "3002": {
+      "activityId": 3002,
+      "reward": {
+        "id": 4,
+        "count": 10
+      }
+    },
+    "3051": {
+      "activityId": 3051,
+      "reward": {
+        "id": 4,
+        "count": 10
+      }
+    },
+    "3052": {
+      "activityId": 3052,
+      "reward": {
+        "id": 4,
+        "count": 10
+      }
+    }
+  }
+}

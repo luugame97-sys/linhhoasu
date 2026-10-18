@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login background inventory - 02/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ki-m-k-n-n-m-n-h-nh-ng-nh-p-02-09-2026">Kiểm kê nền màn hình đăng nhập (02/09/2026)</h1>
+<h2 id="n-n-t-nh-c-th-c-ch-n">Nền tĩnh có thể được chọn</h2>
+<p>Client hiện có 3 nền tĩnh trong <code>assets/game_start</code>:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Tên logic</th>
+<th>File</th>
+<th>Mô tả</th>
+</tr></thead><tbody>
+<tr>
+<td><code>login_bg</code></td>
+<td><code>login_bg_4f696aaa.jpg</code></td>
+<td>Nền trắng/mây, tháp sáng, nhân vật ngồi thiền; nền mặc định hiện tại</td>
+</tr>
+<tr>
+<td><code>login_bg_tw</code></td>
+<td><code>login_bg_tw_8d2e3139.jpg</code></td>
+<td>Nền xanh đậm, mặt trăng và nhân vật; dùng khi nhánh <code>inChina=false</code></td>
+</tr>
+<tr>
+<td><code>login_ld_bg</code></td>
+<td><code>login_ld_bg_fa5c6746.jpg</code></td>
+<td>Nền sự kiện/liên động; được chọn trong khoảng linkage theo lịch</td>
+</tr>
+</tbody></table></div>
+<h2 id="b-animation-loading-li-n-quan">Bộ animation loading liên quan</h2>
+<p>Ngoài nền tĩnh, client còn có các bộ Spine dùng cho màn loading/intro: <code>loading</code>, <code>loading_dhxy</code>, <code>loading_dzz</code>, <code>loading_mxtdy</code>, <code>loading_new</code>, <code>loading_qnyh</code>, <code>loading_shsd</code>, <code>loading_xinbai</code>. Đây là animation/asset ghép, không phải thêm nền tĩnh độc lập trong login.</p>
+<h2 id="l-ch-i-n-n">Lịch đổi nền</h2>
+<p><code>start.min_52ac8d58.js</code> chọn <code>login_ld_bg</code> trong khoảng 14/07/2026 23:00 đến 01/09/2026 23:00 (GMT+7), sau đó chuyển về <code>login_bg</code> hoặc <code>login_bg_tw</code>.</p>
+<h2 id="i-chi-u">Đối chiếu</h2>
+<ul>
+<li>3 file nền tĩnh VPS/local khớp SHA-256.</li>
+<li>Không upload, thay thế hoặc chỉnh sửa nền trong phiên này.</li>
+</ul></main></body></html>

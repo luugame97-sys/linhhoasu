@@ -1,0 +1,256 @@
+{
+  "_table": "PlantMagicConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "id,reward,growTime,stealTime,mouseMax,resources,resourcesType",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "reward": {
+          "id": 2,
+          "count": 1000
+        },
+        "growTime": 3600,
+        "stealTime": 300,
+        "mouseMax": 2,
+        "resources": [
+          "icon_100",
+          "ltzz_bm_jtongqian2",
+          "ltzz_bm_jtongqian3"
+        ],
+        "resourcesType": 4
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "reward": {
+          "id": 2,
+          "count": 1500
+        },
+        "growTime": 5400,
+        "stealTime": 450,
+        "mouseMax": 2,
+        "resources": [
+          "icon_100",
+          "ltzz_bm_jtongqian2",
+          "ltzz_bm_jtongqian3"
+        ],
+        "resourcesType": 6
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "reward": {
+          "id": 2,
+          "count": 2000
+        },
+        "growTime": 7200,
+        "stealTime": 600,
+        "mouseMax": 2,
+        "resources": [
+          "icon_100",
+          "ltzz_bm_jtongqian2",
+          "ltzz_bm_jtongqian3"
+        ],
+        "resourcesType": 9
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "reward": {
+        "id": 2,
+        "count": 1000
+      },
+      "growTime": 3600,
+      "stealTime": 300,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jtongqian2",
+        "ltzz_bm_jtongqian3"
+      ],
+      "resourcesType": 4
+    },
+    "2": {
+      "id": 2,
+      "reward": {
+        "id": 2,
+        "count": 1500
+      },
+      "growTime": 5400,
+      "stealTime": 450,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jtongqian2",
+        "ltzz_bm_jtongqian3"
+      ],
+      "resourcesType": 6
+    },
+    "3": {
+      "id": 3,
+      "reward": {
+        "id": 2,
+        "count": 2000
+      },
+      "growTime": 7200,
+      "stealTime": 600,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jtongqian2",
+        "ltzz_bm_jtongqian3"
+      ],
+      "resourcesType": 9
+    },
+    "4": {
+      "id": 4,
+      "reward": {
+        "id": 1,
+        "count": 5
+      },
+      "growTime": 3600,
+      "stealTime": 300,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jxianyu2",
+        "ltzz_bm_jxianyu3"
+      ],
+      "resourcesType": 4
+    },
+    "5": {
+      "id": 5,
+      "reward": {
+        "id": 1,
+        "count": 10
+      },
+      "growTime": 5400,
+      "stealTime": 450,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jxianyu2",
+        "ltzz_bm_jxianyu3"
+      ],
+      "resourcesType": 6
+    },
+    "6": {
+      "id": 6,
+      "reward": {
+        "id": 1,
+        "count": 15
+      },
+      "growTime": 7200,
+      "stealTime": 600,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jxianyu2",
+        "ltzz_bm_jxianyu3"
+      ],
+      "resourcesType": 9
+    },
+    "7": {
+      "id": 7,
+      "reward": {
+        "id": 4,
+        "count": 5
+      },
+      "growTime": 3600,
+      "stealTime": 300,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jbaozi2",
+        "ltzz_bm_jbaozi3"
+      ],
+      "resourcesType": 4
+    },
+    "8": {
+      "id": 8,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "growTime": 5400,
+      "stealTime": 450,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jbaozi2",
+        "ltzz_bm_jbaozi3"
+      ],
+      "resourcesType": 6
+    },
+    "9": {
+      "id": 9,
+      "reward": {
+        "id": 4,
+        "count": 15
+      },
+      "growTime": 7200,
+      "stealTime": 600,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jbaozi2",
+        "ltzz_bm_jbaozi3"
+      ],
+      "resourcesType": 9
+    },
+    "10": {
+      "id": 10,
+      "reward": {
+        "id": 101,
+        "count": 1
+      },
+      "growTime": 3600,
+      "stealTime": 300,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jyumi2",
+        "ltzz_bm_jyumi3"
+      ],
+      "resourcesType": 4
+    },
+    "11": {
+      "id": 11,
+      "reward": {
+        "id": 101,
+        "count": 2
+      },
+      "growTime": 5400,
+      "stealTime": 450,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jyumi2",
+        "ltzz_bm_jyumi3"
+      ],
+      "resourcesType": 6
+    },
+    "12": {
+      "id": 12,
+      "reward": {
+        "id": 101,
+        "count": 3
+      },
+      "growTime": 7200,
+      "stealTime": 600,
+      "mouseMax": 2,
+      "resources": [
+        "icon_100",
+        "ltzz_bm_jyumi2",
+        "ltzz_bm_jyumi3"
+      ],
+      "resourcesType": 9
+    }
+  }
+}

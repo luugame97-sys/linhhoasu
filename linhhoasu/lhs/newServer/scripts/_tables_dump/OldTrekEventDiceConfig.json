@@ -1,0 +1,495 @@
+{
+  "_table": "OldTrekEventDiceConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "id": 1,
+          "difficulty": 1,
+          "dice": [
+            6
+          ],
+          "checkFloat": 1
+        },
+        "2": {
+          "id": 1,
+          "difficulty": 2,
+          "dice": [
+            6
+          ],
+          "checkFloat": 2
+        },
+        "3": {
+          "id": 1,
+          "difficulty": 3,
+          "dice": [
+            6
+          ],
+          "checkFloat": 3
+        },
+        "4": {
+          "id": 1,
+          "difficulty": 4,
+          "dice": [
+            6,
+            6
+          ],
+          "checkFloat": 8
+        }
+      }
+    },
+    {
+      "2": {
+        "1": {
+          "id": 2,
+          "difficulty": 1,
+          "dice": [
+            6
+          ],
+          "checkFloat": 2
+        },
+        "2": {
+          "id": 2,
+          "difficulty": 2,
+          "dice": [
+            6
+          ],
+          "checkFloat": 3
+        },
+        "3": {
+          "id": 2,
+          "difficulty": 3,
+          "dice": [
+            6
+          ],
+          "checkFloat": 5
+        },
+        "4": {
+          "id": 2,
+          "difficulty": 4,
+          "dice": [
+            6,
+            6
+          ],
+          "checkFloat": 11
+        }
+      }
+    },
+    {
+      "3": {
+        "1": {
+          "id": 3,
+          "difficulty": 1,
+          "dice": [
+            6
+          ],
+          "checkFloat": 3
+        },
+        "2": {
+          "id": 3,
+          "difficulty": 2,
+          "dice": [
+            6
+          ],
+          "checkFloat": 4
+        },
+        "3": {
+          "id": 3,
+          "difficulty": 3,
+          "dice": [
+            6
+          ],
+          "checkFloat": 7
+        },
+        "4": {
+          "id": 3,
+          "difficulty": 4,
+          "dice": [
+            6,
+            6
+          ],
+          "checkFloat": 13
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "id": 1,
+        "difficulty": 1,
+        "dice": [
+          6
+        ],
+        "checkFloat": 1
+      },
+      "2": {
+        "id": 1,
+        "difficulty": 2,
+        "dice": [
+          6
+        ],
+        "checkFloat": 2
+      },
+      "3": {
+        "id": 1,
+        "difficulty": 3,
+        "dice": [
+          6
+        ],
+        "checkFloat": 3
+      },
+      "4": {
+        "id": 1,
+        "difficulty": 4,
+        "dice": [
+          6,
+          6
+        ],
+        "checkFloat": 8
+      }
+    },
+    "2": {
+      "1": {
+        "id": 2,
+        "difficulty": 1,
+        "dice": [
+          6
+        ],
+        "checkFloat": 2
+      },
+      "2": {
+        "id": 2,
+        "difficulty": 2,
+        "dice": [
+          6
+        ],
+        "checkFloat": 3
+      },
+      "3": {
+        "id": 2,
+        "difficulty": 3,
+        "dice": [
+          6
+        ],
+        "checkFloat": 5
+      },
+      "4": {
+        "id": 2,
+        "difficulty": 4,
+        "dice": [
+          6,
+          6
+        ],
+        "checkFloat": 11
+      }
+    },
+    "3": {
+      "1": {
+        "id": 3,
+        "difficulty": 1,
+        "dice": [
+          6
+        ],
+        "checkFloat": 3
+      },
+      "2": {
+        "id": 3,
+        "difficulty": 2,
+        "dice": [
+          6
+        ],
+        "checkFloat": 4
+      },
+      "3": {
+        "id": 3,
+        "difficulty": 3,
+        "dice": [
+          6
+        ],
+        "checkFloat": 7
+      },
+      "4": {
+        "id": 3,
+        "difficulty": 4,
+        "dice": [
+          6,
+          6
+        ],
+        "checkFloat": 13
+      }
+    },
+    "4": {
+      "1": {
+        "id": 4,
+        "difficulty": 1,
+        "dice": [
+          6
+        ],
+        "checkFloat": 4
+      },
+      "2": {
+        "id": 4,
+        "difficulty": 2,
+        "dice": [
+          6
+        ],
+        "checkFloat": 5
+      },
+      "3": {
+        "id": 4,
+        "difficulty": 3,
+        "dice": [
+          12
+        ],
+        "checkFloat": 11
+      },
+      "4": {
+        "id": 4,
+        "difficulty": 4,
+        "dice": [
+          12,
+          6
+        ],
+        "checkFloat": 19
+      }
+    },
+    "5": {
+      "1": {
+        "id": 5,
+        "difficulty": 1,
+        "dice": [
+          6
+        ],
+        "checkFloat": 6
+      },
+      "2": {
+        "id": 5,
+        "difficulty": 2,
+        "dice": [
+          6
+        ],
+        "checkFloat": 8
+      },
+      "3": {
+        "id": 5,
+        "difficulty": 3,
+        "dice": [
+          12,
+          6
+        ],
+        "checkFloat": 17
+      },
+      "4": {
+        "id": 5,
+        "difficulty": 4,
+        "dice": [
+          12,
+          12
+        ],
+        "checkFloat": 25
+      }
+    },
+    "6": {
+      "1": {
+        "id": 6,
+        "difficulty": 1,
+        "dice": [
+          12
+        ],
+        "checkFloat": 10
+      },
+      "2": {
+        "id": 6,
+        "difficulty": 2,
+        "dice": [
+          12
+        ],
+        "checkFloat": 11
+      },
+      "3": {
+        "id": 6,
+        "difficulty": 3,
+        "dice": [
+          12,
+          12
+        ],
+        "checkFloat": 21
+      },
+      "4": {
+        "id": 6,
+        "difficulty": 4,
+        "dice": [
+          12,
+          12,
+          6
+        ],
+        "checkFloat": 29
+      }
+    },
+    "7": {
+      "1": {
+        "id": 7,
+        "difficulty": 1,
+        "dice": [
+          12
+        ],
+        "checkFloat": 11
+      },
+      "2": {
+        "id": 7,
+        "difficulty": 2,
+        "dice": [
+          12,
+          6
+        ],
+        "checkFloat": 16
+      },
+      "3": {
+        "id": 7,
+        "difficulty": 3,
+        "dice": [
+          12,
+          12,
+          6
+        ],
+        "checkFloat": 28
+      },
+      "4": {
+        "id": 7,
+        "difficulty": 4,
+        "dice": [
+          20,
+          12,
+          6
+        ],
+        "checkFloat": 34
+      }
+    },
+    "8": {
+      "1": {
+        "id": 8,
+        "difficulty": 1,
+        "dice": [
+          12,
+          6
+        ],
+        "checkFloat": 15
+      },
+      "2": {
+        "id": 8,
+        "difficulty": 2,
+        "dice": [
+          12,
+          12
+        ],
+        "checkFloat": 21
+      },
+      "3": {
+        "id": 8,
+        "difficulty": 3,
+        "dice": [
+          20,
+          12,
+          6
+        ],
+        "checkFloat": 34
+      },
+      "4": {
+        "id": 8,
+        "difficulty": 4,
+        "dice": [
+          20,
+          12,
+          6
+        ],
+        "checkFloat": 36
+      }
+    },
+    "9": {
+      "1": {
+        "id": 9,
+        "difficulty": 1,
+        "dice": [
+          12,
+          6
+        ],
+        "checkFloat": 15
+      },
+      "2": {
+        "id": 9,
+        "difficulty": 2,
+        "dice": [
+          12,
+          12
+        ],
+        "checkFloat": 21
+      },
+      "3": {
+        "id": 9,
+        "difficulty": 3,
+        "dice": [
+          20,
+          12,
+          6
+        ],
+        "checkFloat": 34
+      },
+      "4": {
+        "id": 9,
+        "difficulty": 4,
+        "dice": [
+          20,
+          12,
+          12
+        ],
+        "checkFloat": 44
+      }
+    },
+    "10": {
+      "1": {
+        "id": 10,
+        "difficulty": 1,
+        "dice": [
+          12,
+          12,
+          6
+        ],
+        "checkFloat": 21
+      },
+      "2": {
+        "id": 10,
+        "difficulty": 2,
+        "dice": [
+          12,
+          12,
+          12
+        ],
+        "checkFloat": 27
+      },
+      "3": {
+        "id": 10,
+        "difficulty": 3,
+        "dice": [
+          20,
+          12,
+          6
+        ],
+        "checkFloat": 34
+      },
+      "4": {
+        "id": 10,
+        "difficulty": 4,
+        "dice": [
+          20,
+          12,
+          12
+        ],
+        "checkFloat": 45
+      }
+    }
+  }
+}

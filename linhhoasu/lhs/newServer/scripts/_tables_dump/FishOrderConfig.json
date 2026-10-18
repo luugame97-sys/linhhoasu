@@ -1,0 +1,2266 @@
+{
+  "_table": "FishOrderConfig",
+  "_rows": 147,
+  "_type": "object",
+  "_firstKeys": "id,type,count,fishType,rewards,name,desc,star",
+  "_sample": [
+    {
+      "80001": {
+        "id": 80001,
+        "type": 43,
+        "count": 5,
+        "fishType": 2,
+        "rewards": [
+          {
+            "id": 69,
+            "count": 2
+          }
+        ],
+        "name": 30011001,
+        "desc": 30012001,
+        "star": 1
+      }
+    },
+    {
+      "80002": {
+        "id": 80002,
+        "type": 43,
+        "count": 7,
+        "fishType": 2,
+        "rewards": [
+          {
+            "id": 69,
+            "count": 4
+          }
+        ],
+        "name": 30011002,
+        "desc": 30012002,
+        "star": 2
+      }
+    },
+    {
+      "80003": {
+        "id": 80003,
+        "type": 43,
+        "count": 8,
+        "fishType": 2,
+        "rewards": [
+          {
+            "id": 69,
+            "count": 6
+          }
+        ],
+        "name": 30011003,
+        "desc": 30012003,
+        "star": 3
+      }
+    }
+  ],
+  "data": {
+    "80001": {
+      "id": 80001,
+      "type": 43,
+      "count": 5,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011001,
+      "desc": 30012001,
+      "star": 1
+    },
+    "80002": {
+      "id": 80002,
+      "type": 43,
+      "count": 7,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011002,
+      "desc": 30012002,
+      "star": 2
+    },
+    "80003": {
+      "id": 80003,
+      "type": 43,
+      "count": 8,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011003,
+      "desc": 30012003,
+      "star": 3
+    },
+    "80004": {
+      "id": 80004,
+      "type": 43,
+      "count": 9,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011004,
+      "desc": 30012004,
+      "star": 4
+    },
+    "80005": {
+      "id": 80005,
+      "type": 43,
+      "count": 10,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011005,
+      "desc": 30012005,
+      "star": 5
+    },
+    "80006": {
+      "id": 80006,
+      "type": 43,
+      "count": 3,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011006,
+      "desc": 30012006,
+      "star": 1
+    },
+    "80007": {
+      "id": 80007,
+      "type": 43,
+      "count": 5,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011007,
+      "desc": 30012007,
+      "star": 2
+    },
+    "80008": {
+      "id": 80008,
+      "type": 43,
+      "count": 6,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011008,
+      "desc": 30012008,
+      "star": 3
+    },
+    "80009": {
+      "id": 80009,
+      "type": 43,
+      "count": 7,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011009,
+      "desc": 30012009,
+      "star": 4
+    },
+    "80010": {
+      "id": 80010,
+      "type": 43,
+      "count": 8,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011010,
+      "desc": 30012010,
+      "star": 5
+    },
+    "80011": {
+      "id": 80011,
+      "type": 43,
+      "count": 1,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011011,
+      "desc": 30012011,
+      "star": 2
+    },
+    "80012": {
+      "id": 80012,
+      "type": 43,
+      "count": 2,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011012,
+      "desc": 30012012,
+      "star": 3
+    },
+    "80013": {
+      "id": 80013,
+      "type": 43,
+      "count": 3,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011013,
+      "desc": 30012013,
+      "star": 4
+    },
+    "80014": {
+      "id": 80014,
+      "type": 43,
+      "count": 4,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011014,
+      "desc": 30012014,
+      "star": 5
+    },
+    "80015": {
+      "id": 80015,
+      "type": 41,
+      "count": 1,
+      "fishType": 1,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011015,
+      "desc": 30012015,
+      "star": 1
+    },
+    "80016": {
+      "id": 80016,
+      "type": 41,
+      "count": 2,
+      "fishType": 1,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011016,
+      "desc": 30012016,
+      "star": 2
+    },
+    "80017": {
+      "id": 80017,
+      "type": 41,
+      "count": 3,
+      "fishType": 1,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011017,
+      "desc": 30012017,
+      "star": 3
+    },
+    "80018": {
+      "id": 80018,
+      "type": 41,
+      "count": 1,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011018,
+      "desc": 30012018,
+      "star": 1
+    },
+    "80019": {
+      "id": 80019,
+      "type": 41,
+      "count": 2,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011019,
+      "desc": 30012019,
+      "star": 2
+    },
+    "80020": {
+      "id": 80020,
+      "type": 41,
+      "count": 3,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011020,
+      "desc": 30012020,
+      "star": 3
+    },
+    "80021": {
+      "id": 80021,
+      "type": 41,
+      "count": 1,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011021,
+      "desc": 30012021,
+      "star": 1
+    },
+    "80022": {
+      "id": 80022,
+      "type": 41,
+      "count": 2,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011022,
+      "desc": 30012022,
+      "star": 2
+    },
+    "80023": {
+      "id": 80023,
+      "type": 41,
+      "count": 3,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011023,
+      "desc": 30012023,
+      "star": 3
+    },
+    "80024": {
+      "id": 80024,
+      "type": 41,
+      "count": 1,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011024,
+      "desc": 30012024,
+      "star": 1
+    },
+    "80025": {
+      "id": 80025,
+      "type": 41,
+      "count": 2,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011025,
+      "desc": 30012025,
+      "star": 2
+    },
+    "80026": {
+      "id": 80026,
+      "type": 41,
+      "count": 3,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011026,
+      "desc": 30012026,
+      "star": 3
+    },
+    "80027": {
+      "id": 80027,
+      "type": 41,
+      "count": 1,
+      "fishType": 5,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011027,
+      "desc": 30012027,
+      "star": 1
+    },
+    "80028": {
+      "id": 80028,
+      "type": 41,
+      "count": 2,
+      "fishType": 5,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011028,
+      "desc": 30012028,
+      "star": 2
+    },
+    "80029": {
+      "id": 80029,
+      "type": 41,
+      "count": 3,
+      "fishType": 5,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011029,
+      "desc": 30012029,
+      "star": 3
+    },
+    "80030": {
+      "id": 80030,
+      "type": 41,
+      "count": 1,
+      "fishType": 6,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011030,
+      "desc": 30012030,
+      "star": 1
+    },
+    "80031": {
+      "id": 80031,
+      "type": 41,
+      "count": 2,
+      "fishType": 6,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011031,
+      "desc": 30012031,
+      "star": 2
+    },
+    "80032": {
+      "id": 80032,
+      "type": 41,
+      "count": 3,
+      "fishType": 6,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011032,
+      "desc": 30012032,
+      "star": 3
+    },
+    "80033": {
+      "id": 80033,
+      "type": 41,
+      "count": 1,
+      "fishType": 7,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011033,
+      "desc": 30012033,
+      "star": 1
+    },
+    "80034": {
+      "id": 80034,
+      "type": 41,
+      "count": 2,
+      "fishType": 7,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011034,
+      "desc": 30012034,
+      "star": 2
+    },
+    "80035": {
+      "id": 80035,
+      "type": 41,
+      "count": 3,
+      "fishType": 7,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011035,
+      "desc": 30012035,
+      "star": 3
+    },
+    "80036": {
+      "id": 80036,
+      "type": 41,
+      "count": 1,
+      "fishType": 8,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011036,
+      "desc": 30012036,
+      "star": 1
+    },
+    "80037": {
+      "id": 80037,
+      "type": 41,
+      "count": 2,
+      "fishType": 8,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011037,
+      "desc": 30012037,
+      "star": 2
+    },
+    "80038": {
+      "id": 80038,
+      "type": 41,
+      "count": 3,
+      "fishType": 8,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011038,
+      "desc": 30012038,
+      "star": 3
+    },
+    "80039": {
+      "id": 80039,
+      "type": 41,
+      "count": 1,
+      "fishType": 9,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011039,
+      "desc": 30012039,
+      "star": 1
+    },
+    "80040": {
+      "id": 80040,
+      "type": 41,
+      "count": 2,
+      "fishType": 9,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011040,
+      "desc": 30012040,
+      "star": 2
+    },
+    "80041": {
+      "id": 80041,
+      "type": 41,
+      "count": 3,
+      "fishType": 9,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011041,
+      "desc": 30012041,
+      "star": 3
+    },
+    "80042": {
+      "id": 80042,
+      "type": 41,
+      "count": 1,
+      "fishType": 10,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 2
+        }
+      ],
+      "name": 30011042,
+      "desc": 30012042,
+      "star": 1
+    },
+    "80043": {
+      "id": 80043,
+      "type": 41,
+      "count": 2,
+      "fishType": 10,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011043,
+      "desc": 30012043,
+      "star": 2
+    },
+    "80044": {
+      "id": 80044,
+      "type": 41,
+      "count": 3,
+      "fishType": 10,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011044,
+      "desc": 30012044,
+      "star": 3
+    },
+    "80045": {
+      "id": 80045,
+      "type": 42,
+      "count": 1,
+      "fishType": 5011,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011045,
+      "desc": 30012045,
+      "star": 2
+    },
+    "80046": {
+      "id": 80046,
+      "type": 42,
+      "count": 2,
+      "fishType": 5011,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011046,
+      "desc": 30012046,
+      "star": 3
+    },
+    "80047": {
+      "id": 80047,
+      "type": 42,
+      "count": 3,
+      "fishType": 5011,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011047,
+      "desc": 30012047,
+      "star": 4
+    },
+    "80048": {
+      "id": 80048,
+      "type": 42,
+      "count": 4,
+      "fishType": 5011,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011048,
+      "desc": 30012048,
+      "star": 5
+    },
+    "80049": {
+      "id": 80049,
+      "type": 42,
+      "count": 1,
+      "fishType": 5012,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011049,
+      "desc": 30012049,
+      "star": 2
+    },
+    "80050": {
+      "id": 80050,
+      "type": 42,
+      "count": 2,
+      "fishType": 5012,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011050,
+      "desc": 30012050,
+      "star": 3
+    },
+    "80051": {
+      "id": 80051,
+      "type": 42,
+      "count": 3,
+      "fishType": 5012,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011051,
+      "desc": 30012051,
+      "star": 4
+    },
+    "80052": {
+      "id": 80052,
+      "type": 42,
+      "count": 4,
+      "fishType": 5012,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011052,
+      "desc": 30012052,
+      "star": 5
+    },
+    "80053": {
+      "id": 80053,
+      "type": 42,
+      "count": 1,
+      "fishType": 5021,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011053,
+      "desc": 30012053,
+      "star": 2
+    },
+    "80054": {
+      "id": 80054,
+      "type": 42,
+      "count": 2,
+      "fishType": 5021,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011054,
+      "desc": 30012054,
+      "star": 3
+    },
+    "80055": {
+      "id": 80055,
+      "type": 42,
+      "count": 3,
+      "fishType": 5021,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011055,
+      "desc": 30012055,
+      "star": 4
+    },
+    "80056": {
+      "id": 80056,
+      "type": 42,
+      "count": 4,
+      "fishType": 5021,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011056,
+      "desc": 30012056,
+      "star": 5
+    },
+    "80057": {
+      "id": 80057,
+      "type": 42,
+      "count": 1,
+      "fishType": 5022,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011057,
+      "desc": 30012057,
+      "star": 2
+    },
+    "80058": {
+      "id": 80058,
+      "type": 42,
+      "count": 2,
+      "fishType": 5022,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011058,
+      "desc": 30012058,
+      "star": 3
+    },
+    "80059": {
+      "id": 80059,
+      "type": 42,
+      "count": 3,
+      "fishType": 5022,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011059,
+      "desc": 30012059,
+      "star": 4
+    },
+    "80060": {
+      "id": 80060,
+      "type": 42,
+      "count": 4,
+      "fishType": 5022,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011060,
+      "desc": 30012060,
+      "star": 5
+    },
+    "80061": {
+      "id": 80061,
+      "type": 42,
+      "count": 1,
+      "fishType": 5031,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011061,
+      "desc": 30012061,
+      "star": 2
+    },
+    "80062": {
+      "id": 80062,
+      "type": 42,
+      "count": 2,
+      "fishType": 5031,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011062,
+      "desc": 30012062,
+      "star": 3
+    },
+    "80063": {
+      "id": 80063,
+      "type": 42,
+      "count": 3,
+      "fishType": 5031,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011063,
+      "desc": 30012063,
+      "star": 4
+    },
+    "80064": {
+      "id": 80064,
+      "type": 42,
+      "count": 4,
+      "fishType": 5031,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011064,
+      "desc": 30012064,
+      "star": 5
+    },
+    "80065": {
+      "id": 80065,
+      "type": 42,
+      "count": 1,
+      "fishType": 5032,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011065,
+      "desc": 30012065,
+      "star": 2
+    },
+    "80066": {
+      "id": 80066,
+      "type": 42,
+      "count": 2,
+      "fishType": 5032,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011066,
+      "desc": 30012066,
+      "star": 3
+    },
+    "80067": {
+      "id": 80067,
+      "type": 42,
+      "count": 3,
+      "fishType": 5032,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011067,
+      "desc": 30012067,
+      "star": 4
+    },
+    "80068": {
+      "id": 80068,
+      "type": 42,
+      "count": 4,
+      "fishType": 5032,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011068,
+      "desc": 30012068,
+      "star": 5
+    },
+    "80069": {
+      "id": 80069,
+      "type": 42,
+      "count": 1,
+      "fishType": 5041,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011069,
+      "desc": 30012069,
+      "star": 2
+    },
+    "80070": {
+      "id": 80070,
+      "type": 42,
+      "count": 2,
+      "fishType": 5041,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011070,
+      "desc": 30012070,
+      "star": 3
+    },
+    "80071": {
+      "id": 80071,
+      "type": 42,
+      "count": 3,
+      "fishType": 5041,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011071,
+      "desc": 30012071,
+      "star": 4
+    },
+    "80072": {
+      "id": 80072,
+      "type": 42,
+      "count": 4,
+      "fishType": 5041,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011072,
+      "desc": 30012072,
+      "star": 5
+    },
+    "80073": {
+      "id": 80073,
+      "type": 42,
+      "count": 1,
+      "fishType": 5042,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011073,
+      "desc": 30012073,
+      "star": 2
+    },
+    "80074": {
+      "id": 80074,
+      "type": 42,
+      "count": 2,
+      "fishType": 5042,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011074,
+      "desc": 30012074,
+      "star": 3
+    },
+    "80075": {
+      "id": 80075,
+      "type": 42,
+      "count": 3,
+      "fishType": 5042,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011075,
+      "desc": 30012075,
+      "star": 4
+    },
+    "80076": {
+      "id": 80076,
+      "type": 42,
+      "count": 4,
+      "fishType": 5042,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011076,
+      "desc": 30012076,
+      "star": 5
+    },
+    "80077": {
+      "id": 80077,
+      "type": 42,
+      "count": 1,
+      "fishType": 5051,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011077,
+      "desc": 30012077,
+      "star": 2
+    },
+    "80078": {
+      "id": 80078,
+      "type": 42,
+      "count": 2,
+      "fishType": 5051,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011078,
+      "desc": 30012078,
+      "star": 3
+    },
+    "80079": {
+      "id": 80079,
+      "type": 42,
+      "count": 3,
+      "fishType": 5051,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011079,
+      "desc": 30012079,
+      "star": 4
+    },
+    "80080": {
+      "id": 80080,
+      "type": 42,
+      "count": 4,
+      "fishType": 5051,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011080,
+      "desc": 30012080,
+      "star": 5
+    },
+    "80081": {
+      "id": 80081,
+      "type": 42,
+      "count": 1,
+      "fishType": 5052,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011081,
+      "desc": 30012081,
+      "star": 2
+    },
+    "80082": {
+      "id": 80082,
+      "type": 42,
+      "count": 2,
+      "fishType": 5052,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011082,
+      "desc": 30012082,
+      "star": 3
+    },
+    "80083": {
+      "id": 80083,
+      "type": 42,
+      "count": 3,
+      "fishType": 5052,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011083,
+      "desc": 30012083,
+      "star": 4
+    },
+    "80084": {
+      "id": 80084,
+      "type": 42,
+      "count": 4,
+      "fishType": 5052,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011084,
+      "desc": 30012084,
+      "star": 5
+    },
+    "80085": {
+      "id": 80085,
+      "type": 42,
+      "count": 1,
+      "fishType": 5061,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011085,
+      "desc": 30012085,
+      "star": 2
+    },
+    "80086": {
+      "id": 80086,
+      "type": 42,
+      "count": 2,
+      "fishType": 5061,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011086,
+      "desc": 30012086,
+      "star": 3
+    },
+    "80087": {
+      "id": 80087,
+      "type": 42,
+      "count": 3,
+      "fishType": 5061,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011087,
+      "desc": 30012087,
+      "star": 4
+    },
+    "80088": {
+      "id": 80088,
+      "type": 42,
+      "count": 4,
+      "fishType": 5061,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011088,
+      "desc": 30012088,
+      "star": 5
+    },
+    "80089": {
+      "id": 80089,
+      "type": 42,
+      "count": 1,
+      "fishType": 5062,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011089,
+      "desc": 30012089,
+      "star": 2
+    },
+    "80090": {
+      "id": 80090,
+      "type": 42,
+      "count": 2,
+      "fishType": 5062,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011090,
+      "desc": 30012090,
+      "star": 3
+    },
+    "80091": {
+      "id": 80091,
+      "type": 42,
+      "count": 3,
+      "fishType": 5062,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011091,
+      "desc": 30012091,
+      "star": 4
+    },
+    "80092": {
+      "id": 80092,
+      "type": 42,
+      "count": 4,
+      "fishType": 5062,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011092,
+      "desc": 30012092,
+      "star": 5
+    },
+    "80093": {
+      "id": 80093,
+      "type": 42,
+      "count": 1,
+      "fishType": 5071,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011093,
+      "desc": 30012093,
+      "star": 2
+    },
+    "80094": {
+      "id": 80094,
+      "type": 42,
+      "count": 2,
+      "fishType": 5071,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011094,
+      "desc": 30012094,
+      "star": 3
+    },
+    "80095": {
+      "id": 80095,
+      "type": 42,
+      "count": 3,
+      "fishType": 5071,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011095,
+      "desc": 30012095,
+      "star": 4
+    },
+    "80096": {
+      "id": 80096,
+      "type": 42,
+      "count": 4,
+      "fishType": 5071,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011096,
+      "desc": 30012096,
+      "star": 5
+    },
+    "80097": {
+      "id": 80097,
+      "type": 42,
+      "count": 1,
+      "fishType": 5072,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011097,
+      "desc": 30012097,
+      "star": 2
+    },
+    "80098": {
+      "id": 80098,
+      "type": 42,
+      "count": 2,
+      "fishType": 5072,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011098,
+      "desc": 30012098,
+      "star": 3
+    },
+    "80099": {
+      "id": 80099,
+      "type": 42,
+      "count": 3,
+      "fishType": 5072,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011099,
+      "desc": 30012099,
+      "star": 4
+    },
+    "80100": {
+      "id": 80100,
+      "type": 42,
+      "count": 4,
+      "fishType": 5072,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011100,
+      "desc": 30012100,
+      "star": 5
+    },
+    "80101": {
+      "id": 80101,
+      "type": 42,
+      "count": 1,
+      "fishType": 5081,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011101,
+      "desc": 30012101,
+      "star": 2
+    },
+    "80102": {
+      "id": 80102,
+      "type": 42,
+      "count": 2,
+      "fishType": 5081,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011102,
+      "desc": 30012102,
+      "star": 3
+    },
+    "80103": {
+      "id": 80103,
+      "type": 42,
+      "count": 3,
+      "fishType": 5081,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011103,
+      "desc": 30012103,
+      "star": 4
+    },
+    "80104": {
+      "id": 80104,
+      "type": 42,
+      "count": 4,
+      "fishType": 5081,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011104,
+      "desc": 30012104,
+      "star": 5
+    },
+    "80105": {
+      "id": 80105,
+      "type": 42,
+      "count": 1,
+      "fishType": 5082,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011105,
+      "desc": 30012105,
+      "star": 2
+    },
+    "80106": {
+      "id": 80106,
+      "type": 42,
+      "count": 2,
+      "fishType": 5082,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011106,
+      "desc": 30012106,
+      "star": 3
+    },
+    "80107": {
+      "id": 80107,
+      "type": 42,
+      "count": 3,
+      "fishType": 5082,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011107,
+      "desc": 30012107,
+      "star": 4
+    },
+    "80108": {
+      "id": 80108,
+      "type": 42,
+      "count": 4,
+      "fishType": 5082,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011108,
+      "desc": 30012108,
+      "star": 5
+    },
+    "80109": {
+      "id": 80109,
+      "type": 42,
+      "count": 1,
+      "fishType": 5091,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011109,
+      "desc": 30012109,
+      "star": 2
+    },
+    "80110": {
+      "id": 80110,
+      "type": 42,
+      "count": 2,
+      "fishType": 5091,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011110,
+      "desc": 30012110,
+      "star": 3
+    },
+    "80111": {
+      "id": 80111,
+      "type": 42,
+      "count": 3,
+      "fishType": 5091,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011111,
+      "desc": 30012111,
+      "star": 4
+    },
+    "80112": {
+      "id": 80112,
+      "type": 42,
+      "count": 4,
+      "fishType": 5091,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011112,
+      "desc": 30012112,
+      "star": 5
+    },
+    "80113": {
+      "id": 80113,
+      "type": 42,
+      "count": 1,
+      "fishType": 5092,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011113,
+      "desc": 30012113,
+      "star": 2
+    },
+    "80114": {
+      "id": 80114,
+      "type": 42,
+      "count": 2,
+      "fishType": 5092,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011114,
+      "desc": 30012114,
+      "star": 3
+    },
+    "80115": {
+      "id": 80115,
+      "type": 42,
+      "count": 3,
+      "fishType": 5092,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011115,
+      "desc": 30012115,
+      "star": 4
+    },
+    "80116": {
+      "id": 80116,
+      "type": 42,
+      "count": 4,
+      "fishType": 5092,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011116,
+      "desc": 30012116,
+      "star": 5
+    },
+    "80117": {
+      "id": 80117,
+      "type": 42,
+      "count": 1,
+      "fishType": 5101,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011117,
+      "desc": 30012117,
+      "star": 2
+    },
+    "80118": {
+      "id": 80118,
+      "type": 42,
+      "count": 2,
+      "fishType": 5101,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011118,
+      "desc": 30012118,
+      "star": 3
+    },
+    "80119": {
+      "id": 80119,
+      "type": 42,
+      "count": 3,
+      "fishType": 5101,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011119,
+      "desc": 30012119,
+      "star": 4
+    },
+    "80120": {
+      "id": 80120,
+      "type": 42,
+      "count": 4,
+      "fishType": 5101,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011120,
+      "desc": 30012120,
+      "star": 5
+    },
+    "80121": {
+      "id": 80121,
+      "type": 42,
+      "count": 1,
+      "fishType": 5102,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 4
+        }
+      ],
+      "name": 30011121,
+      "desc": 30012121,
+      "star": 2
+    },
+    "80122": {
+      "id": 80122,
+      "type": 42,
+      "count": 2,
+      "fishType": 5102,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 6
+        }
+      ],
+      "name": 30011122,
+      "desc": 30012122,
+      "star": 3
+    },
+    "80123": {
+      "id": 80123,
+      "type": 42,
+      "count": 3,
+      "fishType": 5102,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 8
+        }
+      ],
+      "name": 30011123,
+      "desc": 30012123,
+      "star": 4
+    },
+    "80124": {
+      "id": 80124,
+      "type": 42,
+      "count": 4,
+      "fishType": 5102,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 10
+        }
+      ],
+      "name": 30011124,
+      "desc": 30012124,
+      "star": 5
+    },
+    "80125": {
+      "id": 80125,
+      "type": 43,
+      "count": 12,
+      "fishType": 2,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011125,
+      "desc": 30012125,
+      "star": 6
+    },
+    "80126": {
+      "id": 80126,
+      "type": 43,
+      "count": 10,
+      "fishType": 3,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011126,
+      "desc": 30012126,
+      "star": 6
+    },
+    "80127": {
+      "id": 80127,
+      "type": 43,
+      "count": 6,
+      "fishType": 4,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011127,
+      "desc": 30012127,
+      "star": 6
+    },
+    "80128": {
+      "id": 80128,
+      "type": 42,
+      "count": 5,
+      "fishType": 5011,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011128,
+      "desc": 30012128,
+      "star": 6
+    },
+    "80129": {
+      "id": 80129,
+      "type": 42,
+      "count": 5,
+      "fishType": 5012,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011129,
+      "desc": 30012129,
+      "star": 6
+    },
+    "80130": {
+      "id": 80130,
+      "type": 42,
+      "count": 5,
+      "fishType": 5021,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011130,
+      "desc": 30012130,
+      "star": 6
+    },
+    "80131": {
+      "id": 80131,
+      "type": 42,
+      "count": 5,
+      "fishType": 5022,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011131,
+      "desc": 30012131,
+      "star": 6
+    },
+    "80132": {
+      "id": 80132,
+      "type": 42,
+      "count": 5,
+      "fishType": 5031,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011132,
+      "desc": 30012132,
+      "star": 6
+    },
+    "80133": {
+      "id": 80133,
+      "type": 42,
+      "count": 5,
+      "fishType": 5032,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011133,
+      "desc": 30012133,
+      "star": 6
+    },
+    "80134": {
+      "id": 80134,
+      "type": 42,
+      "count": 5,
+      "fishType": 5041,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011134,
+      "desc": 30012134,
+      "star": 6
+    },
+    "80135": {
+      "id": 80135,
+      "type": 42,
+      "count": 5,
+      "fishType": 5042,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011135,
+      "desc": 30012135,
+      "star": 6
+    },
+    "80136": {
+      "id": 80136,
+      "type": 42,
+      "count": 5,
+      "fishType": 5051,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011136,
+      "desc": 30012136,
+      "star": 6
+    },
+    "80137": {
+      "id": 80137,
+      "type": 42,
+      "count": 5,
+      "fishType": 5052,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011137,
+      "desc": 30012137,
+      "star": 6
+    },
+    "80138": {
+      "id": 80138,
+      "type": 42,
+      "count": 5,
+      "fishType": 5061,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011138,
+      "desc": 30012138,
+      "star": 6
+    },
+    "80139": {
+      "id": 80139,
+      "type": 42,
+      "count": 5,
+      "fishType": 5062,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011139,
+      "desc": 30012139,
+      "star": 6
+    },
+    "80140": {
+      "id": 80140,
+      "type": 42,
+      "count": 5,
+      "fishType": 5071,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011140,
+      "desc": 30012140,
+      "star": 6
+    },
+    "80141": {
+      "id": 80141,
+      "type": 42,
+      "count": 5,
+      "fishType": 5072,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011141,
+      "desc": 30012141,
+      "star": 6
+    },
+    "80142": {
+      "id": 80142,
+      "type": 42,
+      "count": 5,
+      "fishType": 5081,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011142,
+      "desc": 30012142,
+      "star": 6
+    },
+    "80143": {
+      "id": 80143,
+      "type": 42,
+      "count": 5,
+      "fishType": 5082,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011143,
+      "desc": 30012143,
+      "star": 6
+    },
+    "80144": {
+      "id": 80144,
+      "type": 42,
+      "count": 5,
+      "fishType": 5091,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011144,
+      "desc": 30012144,
+      "star": 6
+    },
+    "80145": {
+      "id": 80145,
+      "type": 42,
+      "count": 5,
+      "fishType": 5092,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011145,
+      "desc": 30012145,
+      "star": 6
+    },
+    "80146": {
+      "id": 80146,
+      "type": 42,
+      "count": 5,
+      "fishType": 5101,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011146,
+      "desc": 30012146,
+      "star": 6
+    },
+    "80147": {
+      "id": 80147,
+      "type": 42,
+      "count": 5,
+      "fishType": 5102,
+      "rewards": [
+        {
+          "id": 69,
+          "count": 12
+        }
+      ],
+      "name": 30011147,
+      "desc": 30012147,
+      "star": 6
+    }
+  }
+}

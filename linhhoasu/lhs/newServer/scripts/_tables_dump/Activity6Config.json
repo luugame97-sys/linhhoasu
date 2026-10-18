@@ -1,0 +1,799 @@
+{
+  "_table": "Activity6Config",
+  "_rows": 18,
+  "_type": "object",
+  "_firstKeys": "activityId,taskIds,rewards,turns,type,banner,text,name,icon,shopIds",
+  "_sample": [
+    {
+      "6001": {
+        "activityId": 6001,
+        "taskIds": [
+          60101,
+          60102,
+          60103,
+          60104,
+          60105,
+          60106,
+          60107,
+          60108
+        ],
+        "rewards": [
+          {
+            "id": 31,
+            "count": 2
+          },
+          {
+            "id": 30,
+            "count": 5
+          },
+          {
+            "id": 28,
+            "count": 6
+          }
+        ],
+        "turns": 4,
+        "type": 1,
+        "banner": "ui_ycxh_bm_banner",
+        "text": "ui_ycxh_txt_ltbj",
+        "name": 30061001,
+        "icon": "main_icon_yangchengxunhuan01",
+        "shopIds": [
+          21109,
+          22003,
+          24109
+        ]
+      }
+    },
+    {
+      "6002": {
+        "activityId": 6002,
+        "taskIds": [
+          60201,
+          60202,
+          60203,
+          60204,
+          60205,
+          60206,
+          60207,
+          60208
+        ],
+        "rewards": [
+          {
+            "id": 37,
+            "count": 400
+          },
+          {
+            "id": 100004,
+            "count": 2
+          },
+          {
+            "id": 36,
+            "count": 1500
+          }
+        ],
+        "turns": 4,
+        "type": 2,
+        "banner": "ui_ycxh_bm_banner2",
+        "text": "ui_ycxh_txt_ysbj",
+        "name": 30061002,
+        "icon": "main_icon_yangchengxunhuan02",
+        "shopIds": [
+          21109
+        ]
+      }
+    },
+    {
+      "6004": {
+        "activityId": 6004,
+        "taskIds": [
+          60401,
+          60402,
+          60403,
+          60404,
+          60405,
+          60406,
+          60407,
+          60408
+        ],
+        "rewards": [
+          {
+            "id": 90005,
+            "count": 1
+          },
+          {
+            "id": 20,
+            "count": 1000
+          }
+        ],
+        "turns": 4,
+        "type": 4,
+        "banner": "ui_ycxh_bm_banner4",
+        "text": "ui_ycxh_txt_zjbj",
+        "name": 30061004,
+        "icon": "main_icon_yangchengxunhuan04",
+        "shopIds": [
+          21109,
+          22003
+        ]
+      }
+    }
+  ],
+  "data": {
+    "6001": {
+      "activityId": 6001,
+      "taskIds": [
+        60101,
+        60102,
+        60103,
+        60104,
+        60105,
+        60106,
+        60107,
+        60108
+      ],
+      "rewards": [
+        {
+          "id": 31,
+          "count": 2
+        },
+        {
+          "id": 30,
+          "count": 5
+        },
+        {
+          "id": 28,
+          "count": 6
+        }
+      ],
+      "turns": 4,
+      "type": 1,
+      "banner": "ui_ycxh_bm_banner",
+      "text": "ui_ycxh_txt_ltbj",
+      "name": 30061001,
+      "icon": "main_icon_yangchengxunhuan01",
+      "shopIds": [
+        21109,
+        22003,
+        24109
+      ]
+    },
+    "6002": {
+      "activityId": 6002,
+      "taskIds": [
+        60201,
+        60202,
+        60203,
+        60204,
+        60205,
+        60206,
+        60207,
+        60208
+      ],
+      "rewards": [
+        {
+          "id": 37,
+          "count": 400
+        },
+        {
+          "id": 100004,
+          "count": 2
+        },
+        {
+          "id": 36,
+          "count": 1500
+        }
+      ],
+      "turns": 4,
+      "type": 2,
+      "banner": "ui_ycxh_bm_banner2",
+      "text": "ui_ycxh_txt_ysbj",
+      "name": 30061002,
+      "icon": "main_icon_yangchengxunhuan02",
+      "shopIds": [
+        21109
+      ]
+    },
+    "6004": {
+      "activityId": 6004,
+      "taskIds": [
+        60401,
+        60402,
+        60403,
+        60404,
+        60405,
+        60406,
+        60407,
+        60408
+      ],
+      "rewards": [
+        {
+          "id": 90005,
+          "count": 1
+        },
+        {
+          "id": 20,
+          "count": 1000
+        }
+      ],
+      "turns": 4,
+      "type": 4,
+      "banner": "ui_ycxh_bm_banner4",
+      "text": "ui_ycxh_txt_zjbj",
+      "name": 30061004,
+      "icon": "main_icon_yangchengxunhuan04",
+      "shopIds": [
+        21109,
+        22003
+      ]
+    },
+    "6005": {
+      "activityId": 6005,
+      "taskIds": [
+        60501,
+        60502,
+        60503,
+        60504,
+        60505,
+        60506,
+        60507,
+        60508
+      ],
+      "rewards": [
+        {
+          "id": 53,
+          "count": 3
+        },
+        {
+          "id": 100043,
+          "count": 1
+        }
+      ],
+      "turns": 4,
+      "type": 5,
+      "banner": "ui_ycxh_bm_banner6",
+      "text": "ui_ycxh_txt_sbbj",
+      "name": 30061005,
+      "icon": "main_icon_yangchengxunhuan05",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001,
+        23003
+      ]
+    },
+    "6006": {
+      "activityId": 6006,
+      "taskIds": [
+        60601,
+        60602,
+        60603,
+        60604,
+        60605,
+        60606,
+        60607,
+        60608
+      ],
+      "rewards": [
+        {
+          "id": 65,
+          "count": 100
+        },
+        {
+          "id": 69,
+          "count": 15
+        },
+        {
+          "id": 70,
+          "count": 10
+        }
+      ],
+      "turns": 4,
+      "type": 6,
+      "banner": "ui_ycxh_bm_banner7",
+      "text": "ui_ycxh_txt_dybj",
+      "name": 30061006,
+      "icon": "main_icon_yangchengxunhuan06",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001
+      ],
+      "giftIds": [
+        11000101
+      ]
+    },
+    "6007": {
+      "activityId": 6007,
+      "taskIds": [
+        60701,
+        60702,
+        60703,
+        60704,
+        60705,
+        60706,
+        60707,
+        60708
+      ],
+      "rewards": [
+        {
+          "id": 100144,
+          "count": 1
+        },
+        {
+          "id": 2,
+          "count": 50000
+        }
+      ],
+      "turns": 4,
+      "type": 7,
+      "banner": "ui_ycxh_bm_banner8",
+      "text": "ui_ycxh_txt_xmbj",
+      "name": 30061007,
+      "icon": "main_icon_xuemaidabi",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001,
+        23003,
+        11404,
+        11504
+      ]
+    },
+    "6008": {
+      "activityId": 6008,
+      "taskIds": [
+        60801,
+        60802,
+        60803,
+        60804,
+        60805,
+        60806,
+        60807,
+        60808
+      ],
+      "rewards": [
+        {
+          "id": 100115,
+          "count": 1
+        },
+        {
+          "id": 72,
+          "count": 200
+        }
+      ],
+      "turns": 4,
+      "type": 8,
+      "banner": "ui_ycxh_bm_banner9",
+      "text": "ui_ycxh_txt_whbj",
+      "name": 30061008,
+      "icon": "main_icon_wuhundabi",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001,
+        23003,
+        11404
+      ]
+    },
+    "6051": {
+      "activityId": 6051,
+      "taskIds": [
+        60101,
+        60102,
+        60103,
+        60104,
+        60105,
+        60106,
+        60107,
+        60108
+      ],
+      "rewards": [
+        {
+          "id": 31,
+          "count": 2
+        },
+        {
+          "id": 30,
+          "count": 5
+        },
+        {
+          "id": 28,
+          "count": 6
+        }
+      ],
+      "turns": 4,
+      "type": 1,
+      "banner": "ui_ycxh_bm_banner",
+      "text": "ui_ycxh_txt_ltbj",
+      "name": 30061001,
+      "icon": "main_icon_yangchengxunhuan01",
+      "shopIds": [
+        21109,
+        22003,
+        24109
+      ]
+    },
+    "6052": {
+      "activityId": 6052,
+      "taskIds": [
+        60201,
+        60202,
+        60203,
+        60204,
+        60205,
+        60206,
+        60207,
+        60208
+      ],
+      "rewards": [
+        {
+          "id": 37,
+          "count": 400
+        },
+        {
+          "id": 100004,
+          "count": 2
+        },
+        {
+          "id": 36,
+          "count": 1500
+        }
+      ],
+      "turns": 4,
+      "type": 2,
+      "banner": "ui_ycxh_bm_banner2",
+      "text": "ui_ycxh_txt_ysbj",
+      "name": 30061002,
+      "icon": "main_icon_yangchengxunhuan02",
+      "shopIds": [
+        21109
+      ]
+    },
+    "6054": {
+      "activityId": 6054,
+      "taskIds": [
+        60401,
+        60402,
+        60403,
+        60404,
+        60405,
+        60406,
+        60407,
+        60408
+      ],
+      "rewards": [
+        {
+          "id": 90005,
+          "count": 1
+        },
+        {
+          "id": 20,
+          "count": 1000
+        }
+      ],
+      "turns": 4,
+      "type": 4,
+      "banner": "ui_ycxh_bm_banner4",
+      "text": "ui_ycxh_txt_zjbj",
+      "name": 30061004,
+      "icon": "main_icon_yangchengxunhuan04",
+      "shopIds": [
+        21109,
+        22003
+      ]
+    },
+    "6055": {
+      "activityId": 6055,
+      "taskIds": [
+        60501,
+        60502,
+        60503,
+        60504,
+        60505,
+        60506,
+        60507,
+        60508
+      ],
+      "rewards": [
+        {
+          "id": 53,
+          "count": 3
+        },
+        {
+          "id": 100043,
+          "count": 1
+        }
+      ],
+      "turns": 4,
+      "type": 5,
+      "banner": "ui_ycxh_bm_banner6",
+      "text": "ui_ycxh_txt_sbbj",
+      "name": 30061005,
+      "icon": "main_icon_yangchengxunhuan05",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001,
+        23003
+      ]
+    },
+    "6056": {
+      "activityId": 6056,
+      "taskIds": [
+        60601,
+        60602,
+        60603,
+        60604,
+        60605,
+        60606,
+        60607,
+        60608
+      ],
+      "rewards": [
+        {
+          "id": 65,
+          "count": 100
+        },
+        {
+          "id": 69,
+          "count": 15
+        },
+        {
+          "id": 70,
+          "count": 10
+        }
+      ],
+      "turns": 4,
+      "type": 6,
+      "banner": "ui_ycxh_bm_banner7",
+      "text": "ui_ycxh_txt_dybj",
+      "name": 30061006,
+      "icon": "main_icon_yangchengxunhuan06",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001
+      ],
+      "giftIds": [
+        11000101
+      ]
+    },
+    "6057": {
+      "activityId": 6057,
+      "taskIds": [
+        60701,
+        60702,
+        60703,
+        60704,
+        60705,
+        60706,
+        60707,
+        60708
+      ],
+      "rewards": [
+        {
+          "id": 100144,
+          "count": 1
+        },
+        {
+          "id": 2,
+          "count": 50000
+        }
+      ],
+      "turns": 4,
+      "type": 7,
+      "banner": "ui_ycxh_bm_banner8",
+      "text": "ui_ycxh_txt_xmbj",
+      "name": 30061007,
+      "icon": "main_icon_xuemaidabi",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001,
+        23003,
+        11404,
+        11504
+      ]
+    },
+    "6058": {
+      "activityId": 6058,
+      "taskIds": [
+        60801,
+        60802,
+        60803,
+        60804,
+        60805,
+        60806,
+        60807,
+        60808
+      ],
+      "rewards": [
+        {
+          "id": 100115,
+          "count": 1
+        },
+        {
+          "id": 72,
+          "count": 200
+        }
+      ],
+      "turns": 4,
+      "type": 8,
+      "banner": "ui_ycxh_bm_banner9",
+      "text": "ui_ycxh_txt_whbj",
+      "name": 30061008,
+      "icon": "main_icon_wuhundabi",
+      "shopIds": [
+        21109,
+        22003,
+        24109,
+        12001,
+        23003,
+        11404
+      ]
+    },
+    "6101": {
+      "activityId": 6101,
+      "taskIds": [
+        60101,
+        60102,
+        60103,
+        60104,
+        60105,
+        60106,
+        60107,
+        60108
+      ],
+      "rewards": [
+        {
+          "id": 31,
+          "count": 2
+        },
+        {
+          "id": 30,
+          "count": 5
+        },
+        {
+          "id": 28,
+          "count": 6
+        }
+      ],
+      "turns": 4,
+      "type": 1,
+      "banner": "ui_ycxh_bm_banner",
+      "text": "ui_ycxh_txt_ltbj",
+      "name": 30061001,
+      "icon": "main_icon_yangchengxunhuan01",
+      "shopIds": [
+        1101,
+        22001,
+        23001,
+        24107
+      ]
+    },
+    "6151": {
+      "activityId": 6151,
+      "taskIds": [
+        60101,
+        60102,
+        60103,
+        60104,
+        60105,
+        60106,
+        60107,
+        60108
+      ],
+      "rewards": [
+        {
+          "id": 31,
+          "count": 2
+        },
+        {
+          "id": 30,
+          "count": 5
+        },
+        {
+          "id": 28,
+          "count": 6
+        }
+      ],
+      "turns": 4,
+      "type": 1,
+      "banner": "ui_ycxh_bm_banner",
+      "text": "ui_ycxh_txt_ltbj",
+      "name": 30061001,
+      "icon": "main_icon_yangchengxunhuan01",
+      "shopIds": [
+        1101,
+        22001,
+        23001,
+        24107
+      ]
+    },
+    "6201": {
+      "activityId": 6201,
+      "taskIds": [
+        60201,
+        60202,
+        60203,
+        60204,
+        60205,
+        60206,
+        60207,
+        60208
+      ],
+      "rewards": [
+        {
+          "id": 37,
+          "count": 400
+        },
+        {
+          "id": 100004,
+          "count": 2
+        },
+        {
+          "id": 36,
+          "count": 1500
+        }
+      ],
+      "turns": 4,
+      "type": 2,
+      "banner": "ui_ycxh_bm_banner2",
+      "text": "ui_ycxh_txt_ysbj",
+      "name": 30061002,
+      "icon": "main_icon_yangchengxunhuan02",
+      "shopIds": [
+        1101,
+        22001,
+        23001,
+        24107
+      ]
+    },
+    "6251": {
+      "activityId": 6251,
+      "taskIds": [
+        60201,
+        60202,
+        60203,
+        60204,
+        60205,
+        60206,
+        60207,
+        60208
+      ],
+      "rewards": [
+        {
+          "id": 37,
+          "count": 400
+        },
+        {
+          "id": 100004,
+          "count": 2
+        },
+        {
+          "id": 36,
+          "count": 1500
+        }
+      ],
+      "turns": 4,
+      "type": 2,
+      "banner": "ui_ycxh_bm_banner2",
+      "text": "ui_ycxh_txt_ysbj",
+      "name": 30061002,
+      "icon": "main_icon_yangchengxunhuan02",
+      "shopIds": [
+        1101,
+        22001,
+        23001,
+        24107
+      ]
+    }
+  }
+}

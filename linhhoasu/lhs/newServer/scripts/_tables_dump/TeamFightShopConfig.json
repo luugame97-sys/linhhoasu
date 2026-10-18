@@ -1,0 +1,207 @@
+{
+  "_table": "TeamFightShopConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,exp,totalCostWeight,population,refreshNum",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "exp": 10,
+        "totalCostWeight": [
+          {
+            "weight": 4600,
+            "id": 1
+          },
+          {
+            "weight": 3800,
+            "id": 2
+          },
+          {
+            "weight": 1600,
+            "id": 3
+          },
+          {
+            "weight": 0,
+            "id": 4
+          }
+        ],
+        "population": 2,
+        "refreshNum": 4
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "exp": 20,
+        "totalCostWeight": [
+          {
+            "weight": 3600,
+            "id": 1
+          },
+          {
+            "weight": 3600,
+            "id": 2
+          },
+          {
+            "weight": 1800,
+            "id": 3
+          },
+          {
+            "weight": 1000,
+            "id": 4
+          }
+        ],
+        "population": 3,
+        "refreshNum": 5
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "exp": 30,
+        "totalCostWeight": [
+          {
+            "weight": 1900,
+            "id": 1
+          },
+          {
+            "weight": 3500,
+            "id": 2
+          },
+          {
+            "weight": 3000,
+            "id": 3
+          },
+          {
+            "weight": 1600,
+            "id": 4
+          }
+        ],
+        "population": 4,
+        "refreshNum": 6
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "exp": 10,
+      "totalCostWeight": [
+        {
+          "weight": 4600,
+          "id": 1
+        },
+        {
+          "weight": 3800,
+          "id": 2
+        },
+        {
+          "weight": 1600,
+          "id": 3
+        },
+        {
+          "weight": 0,
+          "id": 4
+        }
+      ],
+      "population": 2,
+      "refreshNum": 4
+    },
+    "2": {
+      "id": 2,
+      "exp": 20,
+      "totalCostWeight": [
+        {
+          "weight": 3600,
+          "id": 1
+        },
+        {
+          "weight": 3600,
+          "id": 2
+        },
+        {
+          "weight": 1800,
+          "id": 3
+        },
+        {
+          "weight": 1000,
+          "id": 4
+        }
+      ],
+      "population": 3,
+      "refreshNum": 5
+    },
+    "3": {
+      "id": 3,
+      "exp": 30,
+      "totalCostWeight": [
+        {
+          "weight": 1900,
+          "id": 1
+        },
+        {
+          "weight": 3500,
+          "id": 2
+        },
+        {
+          "weight": 3000,
+          "id": 3
+        },
+        {
+          "weight": 1600,
+          "id": 4
+        }
+      ],
+      "population": 4,
+      "refreshNum": 6
+    },
+    "4": {
+      "id": 4,
+      "exp": 40,
+      "totalCostWeight": [
+        {
+          "weight": 1900,
+          "id": 1
+        },
+        {
+          "weight": 3200,
+          "id": 2
+        },
+        {
+          "weight": 2700,
+          "id": 3
+        },
+        {
+          "weight": 2200,
+          "id": 4
+        }
+      ],
+      "population": 5,
+      "refreshNum": 7
+    },
+    "5": {
+      "id": 5,
+      "totalCostWeight": [
+        {
+          "weight": 1000,
+          "id": 1
+        },
+        {
+          "weight": 2300,
+          "id": 2
+        },
+        {
+          "weight": 3500,
+          "id": 3
+        },
+        {
+          "weight": 3200,
+          "id": 4
+        }
+      ],
+      "population": 6,
+      "refreshNum": 8
+    }
+  }
+}

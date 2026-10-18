@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Server đang mở — chấm xanh</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ch-m-server-ang-m-m-u-xanh-05-09-2026">Chấm server đang mở màu xanh — 05/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Đã triển khai chấm xanh cho server đang mở; server đóng/bảo trì/chưa tới giờ mở giữ chấm đỏ. Áp dụng chấm cạnh tên server trên màn hình đăng nhập và chấm chỉ báo trong danh sách máy chủ.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Client <code>linhhoasu/webgame/game/js/main.min_a6195824.js</code>: thêm helper màu, hook SetCurServerName và renderer danh sách server. Duyệt ảnh redpoint trong serverBg nên không phụ thuộc private skin part _Image8.</li>
+<li><code>linhhoasu/webgame/game/index.html</code>: cache key riêng main <code>20260905_server_status_color_v1</code>.</li>
+<li>Không sửa bitmap gốc, config.bin/EUI, state/status/isNew, lịch mở, quyền login hoặc server đang chọn.</li>
+<li>Tool: prepare_server_status_color.py, patch_server_status_color.js, test_server_status_color.js, deploy_server_status_color.py trong workbench/tools.</li>
+<li>Snapshot/test/deploy: <code>_ai_workbench/temp/server_status_color_20260905/</code>.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/server_status_color_20260905_115625/</code>; local <code>_ai_workbench/backups/server_status_color_local_20260905/</code>.</li>
+</ul>
+<h2 id="3-l-i-v-gi-i-ph-p">3. Lỗi và giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Phát hiện</th>
+<th>Nguyên nhân</th>
+<th>Sửa</th>
+<th>Tránh lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Server mở vẫn chấm đỏ</td>
+<td>Skin đặt ảnh login_bm_redpoint cố định</td>
+<td>Filter đổi kênh đỏ/xanh theo trạng thái server khi refresh</td>
+<td>Không đổi ảnh toàn cục vì server đóng vẫn cần đỏ</td>
+</tr>
+<tr>
+<td>Danh sách dùng nhãn mới/đầy thay vì trạng thái mở</td>
+<td>Cờ isNew và running có ý nghĩa khác</td>
+<td>Thêm chấm độc lập, giữ nhãn mới/đầy</td>
+<td>Không đổi state backend để tô màu</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Server mở: running không false/0, status dương, state không0/4/5, openTime đã tới theo đồng hồ server client.</li>
+<li>Dùng ColorMatrixFilter hoán đổi R/G giữ alpha và hình ảnh tròn gốc. Server đỏ dùng ảnh không filter.</li>
+<li>Indicator mới không bắt touch, không ảnh hưởng click chọn server. LoginUI và LoginUINew dùng chung refresh tên.</li>
+</ul>
+<h2 id="5-ki-m-tra-v-tr-ng-th-i">5. Kiểm tra và trạng thái</h2>
+<ul>
+<li>18assertions PASS: state1/2/3 mở xanh, đóng0/4/5 đỏ, status0/runningfalse đỏ, chưa tới giờ đỏ, ranh giới giờ xanh; không mutate row, không đổi ảnh nền khác.</li>
+<li>Hồi quy menuỦy thác27checks PASS; node --check bundlePASS.</li>
+<li>Haiartifacthashproduction khớp candidate; main trả quaHTTP đúnghash521721e7…; cachekey mới. PM2 trước/sau không thay, khôngrestartdịch vụ.</li>
+<li>Chưa nghiệm thu hình ảnh trên client thực tế của người dùng; người dùng tự test theo yêu cầu trước.</li>
+</ul>
+<h2 id="6-h-ng-d-n-test">6. Hướng dẫn test</h2>
+<p>Ctrl+F5 rồi đăng nhập lại: chấm cạnh S1/S2 đang mở phải xanh. Mở danh sách máy chủ xem chấm tương ứng. Nếu sau này server bị đóng/chưa tới giờ mở, chấm đỏ khi danh sách/trạng thái được tải lại. Không tự khóa server để thử màu.</p></main></body></html>

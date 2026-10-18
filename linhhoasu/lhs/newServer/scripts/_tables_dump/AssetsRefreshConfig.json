@@ -1,0 +1,82 @@
+{
+  "_table": "AssetsRefreshConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,time,count,countMax",
+  "_sample": [
+    {
+      "24": {
+        "id": 24,
+        "time": 21600,
+        "count": 1,
+        "countMax": 5
+      }
+    },
+    {
+      "27": {
+        "id": 27,
+        "time": 3600,
+        "count": 1,
+        "countMax": 20
+      }
+    },
+    {
+      "55": {
+        "id": 55,
+        "time": 600,
+        "count": 1,
+        "countMax": 60
+      }
+    }
+  ],
+  "data": {
+    "24": {
+      "id": 24,
+      "time": 21600,
+      "count": 1,
+      "countMax": 5
+    },
+    "27": {
+      "id": 27,
+      "time": 3600,
+      "count": 1,
+      "countMax": 20
+    },
+    "55": {
+      "id": 55,
+      "time": 600,
+      "count": 1,
+      "countMax": 60
+    },
+    "65": {
+      "id": 65,
+      "time": 300,
+      "count": 1,
+      "countMax": 160
+    },
+    "110": {
+      "id": 110,
+      "time": 7200,
+      "count": 1,
+      "countMax": 10
+    },
+    "113": {
+      "id": 113,
+      "time": 86400,
+      "count": 1,
+      "countMax": 5
+    },
+    "137": {
+      "id": 137,
+      "time": 7200,
+      "count": 1,
+      "countMax": 10
+    },
+    "215": {
+      "id": 215,
+      "time": 14400,
+      "count": 1,
+      "countMax": 5
+    }
+  }
+}

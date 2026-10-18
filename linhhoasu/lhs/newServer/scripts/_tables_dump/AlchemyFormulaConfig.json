@@ -1,0 +1,4648 @@
+{
+  "_table": "AlchemyFormulaConfig",
+  "_rows": 148,
+  "_type": "object",
+  "_firstKeys": "id,stageId,consumes,qualityWeights,succeed,shopId,type,priority",
+  "_sample": [
+    {
+      "120101": {
+        "id": 120101,
+        "stageId": 1,
+        "consumes": [
+          {
+            "id": 2,
+            "count": 25
+          },
+          {
+            "id": 2001,
+            "count": 2
+          }
+        ],
+        "qualityWeights": {
+          "2": {
+            "id": 110102,
+            "weight": 4000
+          },
+          "3": {
+            "id": 110103,
+            "weight": 3000
+          },
+          "4": {
+            "id": 110104,
+            "weight": 2000
+          },
+          "6": {
+            "id": 110106,
+            "weight": 700
+          },
+          "7": {
+            "id": 110107,
+            "weight": 300
+          }
+        },
+        "succeed": 10000,
+        "shopId": 120101,
+        "type": 1,
+        "priority": 1
+      }
+    },
+    {
+      "120111": {
+        "id": 120111,
+        "stageId": 1,
+        "consumes": [
+          {
+            "id": 2,
+            "count": 25
+          },
+          {
+            "id": 2001,
+            "count": 5
+          }
+        ],
+        "qualityWeights": {
+          "2": {
+            "id": 110112,
+            "weight": 4000
+          },
+          "3": {
+            "id": 110113,
+            "weight": 3000
+          },
+          "4": {
+            "id": 110114,
+            "weight": 2000
+          },
+          "6": {
+            "id": 110116,
+            "weight": 700
+          },
+          "7": {
+            "id": 110117,
+            "weight": 300
+          }
+        },
+        "succeed": 10000,
+        "shopId": 120111,
+        "type": 1,
+        "priority": 2
+      }
+    },
+    {
+      "120121": {
+        "id": 120121,
+        "stageId": 1,
+        "consumes": [
+          {
+            "id": 2,
+            "count": 25
+          },
+          {
+            "id": 2001,
+            "count": 1
+          }
+        ],
+        "qualityWeights": {
+          "2": {
+            "id": 110122,
+            "weight": 4000
+          },
+          "3": {
+            "id": 110123,
+            "weight": 3000
+          },
+          "4": {
+            "id": 110124,
+            "weight": 2000
+          },
+          "6": {
+            "id": 110126,
+            "weight": 700
+          },
+          "7": {
+            "id": 110127,
+            "weight": 300
+          }
+        },
+        "succeed": 8500,
+        "shopId": 120121,
+        "type": 1,
+        "priority": 3
+      }
+    }
+  ],
+  "data": {
+    "120101": {
+      "id": 120101,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2001,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110102,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110103,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110104,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110106,
+          "weight": 700
+        },
+        "7": {
+          "id": 110107,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120101,
+      "type": 1,
+      "priority": 1
+    },
+    "120111": {
+      "id": 120111,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2001,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110112,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110113,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110114,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110116,
+          "weight": 700
+        },
+        "7": {
+          "id": 110117,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120111,
+      "type": 1,
+      "priority": 2
+    },
+    "120121": {
+      "id": 120121,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2001,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110122,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110123,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110124,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110126,
+          "weight": 700
+        },
+        "7": {
+          "id": 110127,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120121,
+      "type": 1,
+      "priority": 3
+    },
+    "120131": {
+      "id": 120131,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2101,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110131,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120131,
+      "type": 1,
+      "priority": 5
+    },
+    "120132": {
+      "id": 120132,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2101,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110132,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120132,
+      "type": 1,
+      "priority": 6
+    },
+    "120133": {
+      "id": 120133,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2101,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110133,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120133,
+      "type": 1,
+      "priority": 7
+    },
+    "120134": {
+      "id": 120134,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2101,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110134,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120134,
+      "type": 1,
+      "priority": 8
+    },
+    "120141": {
+      "id": 120141,
+      "stageId": 1,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 25
+        },
+        {
+          "id": 2201,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110142,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110143,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110144,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110146,
+          "weight": 700
+        },
+        "7": {
+          "id": 110147,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120141,
+      "type": 1,
+      "priority": 4
+    },
+    "120201": {
+      "id": 120201,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2002,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110202,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110203,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110204,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110206,
+          "weight": 700
+        },
+        "7": {
+          "id": 110207,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120201,
+      "type": 2,
+      "priority": 1
+    },
+    "120211": {
+      "id": 120211,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2002,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110212,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110213,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110214,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110216,
+          "weight": 700
+        },
+        "7": {
+          "id": 110217,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120211,
+      "type": 2,
+      "priority": 2
+    },
+    "120221": {
+      "id": 120221,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2002,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110222,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110223,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110224,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110226,
+          "weight": 700
+        },
+        "7": {
+          "id": 110227,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120221,
+      "type": 2,
+      "priority": 3
+    },
+    "120231": {
+      "id": 120231,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2102,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110231,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120231,
+      "type": 2,
+      "priority": 5
+    },
+    "120232": {
+      "id": 120232,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2102,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110232,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120232,
+      "type": 2,
+      "priority": 6
+    },
+    "120233": {
+      "id": 120233,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2102,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110233,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120233,
+      "type": 2,
+      "priority": 7
+    },
+    "120234": {
+      "id": 120234,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2102,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110234,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120234,
+      "type": 2,
+      "priority": 8
+    },
+    "120235": {
+      "id": 120235,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2102,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110235,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120235,
+      "type": 2,
+      "priority": 9
+    },
+    "120236": {
+      "id": 120236,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2102,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110236,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120236,
+      "type": 2,
+      "priority": 10
+    },
+    "120241": {
+      "id": 120241,
+      "stageId": 4,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 50
+        },
+        {
+          "id": 2202,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110242,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110243,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110244,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110246,
+          "weight": 700
+        },
+        "7": {
+          "id": 110247,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120241,
+      "type": 2,
+      "priority": 4
+    },
+    "120301": {
+      "id": 120301,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2003,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110302,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110303,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110304,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110306,
+          "weight": 700
+        },
+        "7": {
+          "id": 110307,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120301,
+      "type": 3,
+      "priority": 1
+    },
+    "120311": {
+      "id": 120311,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2003,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110312,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110313,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110314,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110316,
+          "weight": 700
+        },
+        "7": {
+          "id": 110317,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120311,
+      "type": 3,
+      "priority": 2
+    },
+    "120321": {
+      "id": 120321,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2003,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110322,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110323,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110324,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110326,
+          "weight": 700
+        },
+        "7": {
+          "id": 110327,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120321,
+      "type": 3,
+      "priority": 3
+    },
+    "120331": {
+      "id": 120331,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2103,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110331,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120331,
+      "type": 3,
+      "priority": 5
+    },
+    "120332": {
+      "id": 120332,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2103,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110332,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120332,
+      "type": 3,
+      "priority": 6
+    },
+    "120333": {
+      "id": 120333,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2103,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110333,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120333,
+      "type": 3,
+      "priority": 7
+    },
+    "120334": {
+      "id": 120334,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2103,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110334,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120334,
+      "type": 3,
+      "priority": 8
+    },
+    "120335": {
+      "id": 120335,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2103,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110335,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120335,
+      "type": 3,
+      "priority": 9
+    },
+    "120336": {
+      "id": 120336,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2103,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110336,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120336,
+      "type": 3,
+      "priority": 10
+    },
+    "120341": {
+      "id": 120341,
+      "stageId": 7,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 75
+        },
+        {
+          "id": 2203,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110342,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110343,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110344,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110346,
+          "weight": 700
+        },
+        "7": {
+          "id": 110347,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120341,
+      "type": 3,
+      "priority": 4
+    },
+    "120401": {
+      "id": 120401,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2004,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110402,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110403,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110404,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110406,
+          "weight": 700
+        },
+        "7": {
+          "id": 110407,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120401,
+      "type": 4,
+      "priority": 1
+    },
+    "120411": {
+      "id": 120411,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2004,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110412,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110413,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110414,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110416,
+          "weight": 700
+        },
+        "7": {
+          "id": 110417,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120411,
+      "type": 4,
+      "priority": 2
+    },
+    "120421": {
+      "id": 120421,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2004,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110422,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110423,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110424,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110426,
+          "weight": 700
+        },
+        "7": {
+          "id": 110427,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120421,
+      "type": 4,
+      "priority": 3
+    },
+    "120431": {
+      "id": 120431,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2104,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110431,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120431,
+      "type": 4,
+      "priority": 5
+    },
+    "120432": {
+      "id": 120432,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2104,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110432,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120432,
+      "type": 4,
+      "priority": 6
+    },
+    "120433": {
+      "id": 120433,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2104,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110433,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120433,
+      "type": 4,
+      "priority": 7
+    },
+    "120434": {
+      "id": 120434,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2104,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110434,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120434,
+      "type": 4,
+      "priority": 8
+    },
+    "120435": {
+      "id": 120435,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2104,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110435,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120435,
+      "type": 4,
+      "priority": 9
+    },
+    "120436": {
+      "id": 120436,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2104,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110436,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120436,
+      "type": 4,
+      "priority": 10
+    },
+    "120441": {
+      "id": 120441,
+      "stageId": 10,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 100
+        },
+        {
+          "id": 2204,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110442,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110443,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110444,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110446,
+          "weight": 700
+        },
+        "7": {
+          "id": 110447,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120441,
+      "type": 4,
+      "priority": 4
+    },
+    "120501": {
+      "id": 120501,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2005,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110502,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110503,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110504,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110506,
+          "weight": 700
+        },
+        "7": {
+          "id": 110507,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120501,
+      "type": 5,
+      "priority": 1
+    },
+    "120511": {
+      "id": 120511,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2005,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110512,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110513,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110514,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110516,
+          "weight": 700
+        },
+        "7": {
+          "id": 110517,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120511,
+      "type": 5,
+      "priority": 2
+    },
+    "120521": {
+      "id": 120521,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2005,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110522,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110523,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110524,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110526,
+          "weight": 700
+        },
+        "7": {
+          "id": 110527,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120521,
+      "type": 5,
+      "priority": 3
+    },
+    "120531": {
+      "id": 120531,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2105,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110531,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120531,
+      "type": 5,
+      "priority": 5
+    },
+    "120532": {
+      "id": 120532,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2105,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110532,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120532,
+      "type": 5,
+      "priority": 6
+    },
+    "120533": {
+      "id": 120533,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2105,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110533,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120533,
+      "type": 5,
+      "priority": 7
+    },
+    "120534": {
+      "id": 120534,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2105,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110534,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120534,
+      "type": 5,
+      "priority": 8
+    },
+    "120535": {
+      "id": 120535,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2105,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110535,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120535,
+      "type": 5,
+      "priority": 9
+    },
+    "120536": {
+      "id": 120536,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2105,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110536,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120536,
+      "type": 5,
+      "priority": 10
+    },
+    "120541": {
+      "id": 120541,
+      "stageId": 13,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 150
+        },
+        {
+          "id": 2205,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110542,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110543,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110544,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110546,
+          "weight": 700
+        },
+        "7": {
+          "id": 110547,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120541,
+      "type": 5,
+      "priority": 4
+    },
+    "120601": {
+      "id": 120601,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2006,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110602,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110603,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110604,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110606,
+          "weight": 700
+        },
+        "7": {
+          "id": 110607,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120601,
+      "type": 6,
+      "priority": 1
+    },
+    "120611": {
+      "id": 120611,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2006,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110612,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110613,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110614,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110616,
+          "weight": 700
+        },
+        "7": {
+          "id": 110617,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120611,
+      "type": 6,
+      "priority": 2
+    },
+    "120621": {
+      "id": 120621,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2006,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110622,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110623,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110624,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110626,
+          "weight": 700
+        },
+        "7": {
+          "id": 110627,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120621,
+      "type": 6,
+      "priority": 3
+    },
+    "120631": {
+      "id": 120631,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2106,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110631,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120631,
+      "type": 6,
+      "priority": 5
+    },
+    "120632": {
+      "id": 120632,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2106,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110632,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120632,
+      "type": 6,
+      "priority": 6
+    },
+    "120633": {
+      "id": 120633,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2106,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110633,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120633,
+      "type": 6,
+      "priority": 7
+    },
+    "120634": {
+      "id": 120634,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2106,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110634,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120634,
+      "type": 6,
+      "priority": 8
+    },
+    "120635": {
+      "id": 120635,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2106,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110635,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120635,
+      "type": 6,
+      "priority": 9
+    },
+    "120636": {
+      "id": 120636,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2106,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110636,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120636,
+      "type": 6,
+      "priority": 10
+    },
+    "120641": {
+      "id": 120641,
+      "stageId": 16,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 200
+        },
+        {
+          "id": 2206,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110642,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110643,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110644,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110646,
+          "weight": 700
+        },
+        "7": {
+          "id": 110647,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120641,
+      "type": 6,
+      "priority": 4
+    },
+    "120701": {
+      "id": 120701,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2007,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110702,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110703,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110704,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110706,
+          "weight": 700
+        },
+        "7": {
+          "id": 110707,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120701,
+      "type": 7,
+      "priority": 1
+    },
+    "120711": {
+      "id": 120711,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2007,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110712,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110713,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110714,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110716,
+          "weight": 700
+        },
+        "7": {
+          "id": 110717,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120711,
+      "type": 7,
+      "priority": 2
+    },
+    "120721": {
+      "id": 120721,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2007,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110722,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110723,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110724,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110726,
+          "weight": 700
+        },
+        "7": {
+          "id": 110727,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120721,
+      "type": 7,
+      "priority": 3
+    },
+    "120731": {
+      "id": 120731,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2107,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110731,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120731,
+      "type": 7,
+      "priority": 5
+    },
+    "120732": {
+      "id": 120732,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2107,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110732,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120732,
+      "type": 7,
+      "priority": 6
+    },
+    "120733": {
+      "id": 120733,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2107,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110733,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120733,
+      "type": 7,
+      "priority": 7
+    },
+    "120734": {
+      "id": 120734,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2107,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110734,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120734,
+      "type": 7,
+      "priority": 8
+    },
+    "120735": {
+      "id": 120735,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2107,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110735,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120735,
+      "type": 7,
+      "priority": 9
+    },
+    "120736": {
+      "id": 120736,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2107,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110736,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120736,
+      "type": 7,
+      "priority": 10
+    },
+    "120741": {
+      "id": 120741,
+      "stageId": 19,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 250
+        },
+        {
+          "id": 2207,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110742,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110743,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110744,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110746,
+          "weight": 700
+        },
+        "7": {
+          "id": 110747,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120741,
+      "type": 7,
+      "priority": 4
+    },
+    "120801": {
+      "id": 120801,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2008,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110802,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110803,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110804,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110806,
+          "weight": 700
+        },
+        "7": {
+          "id": 110807,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120801,
+      "type": 8,
+      "priority": 1
+    },
+    "120811": {
+      "id": 120811,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2008,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110812,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110813,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110814,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110816,
+          "weight": 700
+        },
+        "7": {
+          "id": 110817,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120811,
+      "type": 8,
+      "priority": 2
+    },
+    "120821": {
+      "id": 120821,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2008,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110822,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110823,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110824,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110826,
+          "weight": 700
+        },
+        "7": {
+          "id": 110827,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120821,
+      "type": 8,
+      "priority": 3
+    },
+    "120831": {
+      "id": 120831,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2108,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110831,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120831,
+      "type": 8,
+      "priority": 5
+    },
+    "120832": {
+      "id": 120832,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2108,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110832,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120832,
+      "type": 8,
+      "priority": 6
+    },
+    "120833": {
+      "id": 120833,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2108,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110833,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120833,
+      "type": 8,
+      "priority": 7
+    },
+    "120834": {
+      "id": 120834,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2108,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110834,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120834,
+      "type": 8,
+      "priority": 8
+    },
+    "120835": {
+      "id": 120835,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2108,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110835,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120835,
+      "type": 8,
+      "priority": 9
+    },
+    "120836": {
+      "id": 120836,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2108,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110836,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120836,
+      "type": 8,
+      "priority": 10
+    },
+    "120841": {
+      "id": 120841,
+      "stageId": 22,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 300
+        },
+        {
+          "id": 2208,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110842,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110843,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110844,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110846,
+          "weight": 700
+        },
+        "7": {
+          "id": 110847,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120841,
+      "type": 8,
+      "priority": 4
+    },
+    "120901": {
+      "id": 120901,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2009,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110902,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110903,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110904,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110906,
+          "weight": 700
+        },
+        "7": {
+          "id": 110907,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120901,
+      "type": 9,
+      "priority": 1
+    },
+    "120911": {
+      "id": 120911,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2009,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110912,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110913,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110914,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110916,
+          "weight": 700
+        },
+        "7": {
+          "id": 110917,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 120911,
+      "type": 9,
+      "priority": 2
+    },
+    "120921": {
+      "id": 120921,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2009,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110922,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110923,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110924,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110926,
+          "weight": 700
+        },
+        "7": {
+          "id": 110927,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120921,
+      "type": 9,
+      "priority": 3
+    },
+    "120931": {
+      "id": 120931,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2109,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110931,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120931,
+      "type": 9,
+      "priority": 5
+    },
+    "120932": {
+      "id": 120932,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2109,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110932,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120932,
+      "type": 9,
+      "priority": 6
+    },
+    "120933": {
+      "id": 120933,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2109,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110933,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120933,
+      "type": 9,
+      "priority": 7
+    },
+    "120934": {
+      "id": 120934,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2109,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110934,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 120934,
+      "type": 9,
+      "priority": 8
+    },
+    "120935": {
+      "id": 120935,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2109,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110935,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120935,
+      "type": 9,
+      "priority": 9
+    },
+    "120936": {
+      "id": 120936,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2109,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 110936,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 120936,
+      "type": 9,
+      "priority": 10
+    },
+    "120941": {
+      "id": 120941,
+      "stageId": 25,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 400
+        },
+        {
+          "id": 2209,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 110942,
+          "weight": 4000
+        },
+        "3": {
+          "id": 110943,
+          "weight": 3000
+        },
+        "4": {
+          "id": 110944,
+          "weight": 2000
+        },
+        "6": {
+          "id": 110946,
+          "weight": 700
+        },
+        "7": {
+          "id": 110947,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 120941,
+      "type": 9,
+      "priority": 4
+    },
+    "121001": {
+      "id": 121001,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2010,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111002,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111003,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111004,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111006,
+          "weight": 700
+        },
+        "7": {
+          "id": 111007,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121001,
+      "type": 10,
+      "priority": 1
+    },
+    "121011": {
+      "id": 121011,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2010,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111012,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111013,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111014,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111016,
+          "weight": 700
+        },
+        "7": {
+          "id": 111017,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121011,
+      "type": 10,
+      "priority": 2
+    },
+    "121021": {
+      "id": 121021,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2010,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111022,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111023,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111024,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111026,
+          "weight": 700
+        },
+        "7": {
+          "id": 111027,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121021,
+      "type": 10,
+      "priority": 3
+    },
+    "121031": {
+      "id": 121031,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2110,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111031,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121031,
+      "type": 10,
+      "priority": 5
+    },
+    "121032": {
+      "id": 121032,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2110,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111032,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121032,
+      "type": 10,
+      "priority": 6
+    },
+    "121033": {
+      "id": 121033,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2110,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111033,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121033,
+      "type": 10,
+      "priority": 7
+    },
+    "121034": {
+      "id": 121034,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2110,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111034,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121034,
+      "type": 10,
+      "priority": 8
+    },
+    "121035": {
+      "id": 121035,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2110,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111035,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121035,
+      "type": 10,
+      "priority": 9
+    },
+    "121036": {
+      "id": 121036,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2110,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111036,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121036,
+      "type": 10,
+      "priority": 10
+    },
+    "121041": {
+      "id": 121041,
+      "stageId": 28,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 500
+        },
+        {
+          "id": 2210,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111042,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111043,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111044,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111046,
+          "weight": 700
+        },
+        "7": {
+          "id": 111047,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121041,
+      "type": 10,
+      "priority": 4
+    },
+    "121101": {
+      "id": 121101,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2011,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111102,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111103,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111104,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111106,
+          "weight": 700
+        },
+        "7": {
+          "id": 111107,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121101,
+      "type": 11,
+      "priority": 1
+    },
+    "121111": {
+      "id": 121111,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2011,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111112,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111113,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111114,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111116,
+          "weight": 700
+        },
+        "7": {
+          "id": 111117,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121111,
+      "type": 11,
+      "priority": 2
+    },
+    "121121": {
+      "id": 121121,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2011,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111122,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111123,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111124,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111126,
+          "weight": 700
+        },
+        "7": {
+          "id": 111127,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121121,
+      "type": 11,
+      "priority": 3
+    },
+    "121131": {
+      "id": 121131,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2111,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111131,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121131,
+      "type": 11,
+      "priority": 5
+    },
+    "121132": {
+      "id": 121132,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2111,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111132,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121132,
+      "type": 11,
+      "priority": 6
+    },
+    "121133": {
+      "id": 121133,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2111,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111133,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121133,
+      "type": 11,
+      "priority": 7
+    },
+    "121134": {
+      "id": 121134,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2111,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111134,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121134,
+      "type": 11,
+      "priority": 8
+    },
+    "121135": {
+      "id": 121135,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2111,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111135,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121135,
+      "type": 11,
+      "priority": 9
+    },
+    "121136": {
+      "id": 121136,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2111,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111136,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121136,
+      "type": 11,
+      "priority": 10
+    },
+    "121141": {
+      "id": 121141,
+      "stageId": 31,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 600
+        },
+        {
+          "id": 2211,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111142,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111143,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111144,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111146,
+          "weight": 700
+        },
+        "7": {
+          "id": 111147,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121141,
+      "type": 11,
+      "priority": 4
+    },
+    "121201": {
+      "id": 121201,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2012,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111202,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111203,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111204,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111206,
+          "weight": 700
+        },
+        "7": {
+          "id": 111207,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121201,
+      "type": 12,
+      "priority": 1
+    },
+    "121211": {
+      "id": 121211,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2012,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111212,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111213,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111214,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111216,
+          "weight": 700
+        },
+        "7": {
+          "id": 111217,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121211,
+      "type": 12,
+      "priority": 2
+    },
+    "121221": {
+      "id": 121221,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2012,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111222,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111223,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111224,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111226,
+          "weight": 700
+        },
+        "7": {
+          "id": 111227,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121221,
+      "type": 12,
+      "priority": 3
+    },
+    "121231": {
+      "id": 121231,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2112,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111231,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121231,
+      "type": 12,
+      "priority": 5
+    },
+    "121232": {
+      "id": 121232,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2112,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111232,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121232,
+      "type": 12,
+      "priority": 6
+    },
+    "121233": {
+      "id": 121233,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2112,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111233,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121233,
+      "type": 12,
+      "priority": 7
+    },
+    "121234": {
+      "id": 121234,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2112,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111234,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121234,
+      "type": 12,
+      "priority": 8
+    },
+    "121235": {
+      "id": 121235,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2112,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111235,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121235,
+      "type": 12,
+      "priority": 9
+    },
+    "121236": {
+      "id": 121236,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2112,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111236,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121236,
+      "type": 12,
+      "priority": 10
+    },
+    "121241": {
+      "id": 121241,
+      "stageId": 34,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 700
+        },
+        {
+          "id": 2212,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111242,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111243,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111244,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111246,
+          "weight": 700
+        },
+        "7": {
+          "id": 111247,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121241,
+      "type": 12,
+      "priority": 4
+    },
+    "121301": {
+      "id": 121301,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2013,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111302,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111303,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111304,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111306,
+          "weight": 700
+        },
+        "7": {
+          "id": 111307,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121301,
+      "type": 13,
+      "priority": 1
+    },
+    "121311": {
+      "id": 121311,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2013,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111312,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111313,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111314,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111316,
+          "weight": 700
+        },
+        "7": {
+          "id": 111317,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121311,
+      "type": 13,
+      "priority": 2
+    },
+    "121321": {
+      "id": 121321,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2013,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111322,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111323,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111324,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111326,
+          "weight": 700
+        },
+        "7": {
+          "id": 111327,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121321,
+      "type": 13,
+      "priority": 3
+    },
+    "121331": {
+      "id": 121331,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2113,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111331,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121331,
+      "type": 13,
+      "priority": 5
+    },
+    "121332": {
+      "id": 121332,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2113,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111332,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121332,
+      "type": 13,
+      "priority": 6
+    },
+    "121333": {
+      "id": 121333,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2113,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111333,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121333,
+      "type": 13,
+      "priority": 7
+    },
+    "121334": {
+      "id": 121334,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2113,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111334,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121334,
+      "type": 13,
+      "priority": 8
+    },
+    "121335": {
+      "id": 121335,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2113,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111335,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121335,
+      "type": 13,
+      "priority": 9
+    },
+    "121336": {
+      "id": 121336,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2113,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111336,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121336,
+      "type": 13,
+      "priority": 10
+    },
+    "121341": {
+      "id": 121341,
+      "stageId": 37,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 800
+        },
+        {
+          "id": 2213,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111342,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111343,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111344,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111346,
+          "weight": 700
+        },
+        "7": {
+          "id": 111347,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121341,
+      "type": 13,
+      "priority": 4
+    },
+    "121401": {
+      "id": 121401,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2014,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111402,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111403,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111404,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111406,
+          "weight": 700
+        },
+        "7": {
+          "id": 111407,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121401,
+      "type": 14,
+      "priority": 1
+    },
+    "121411": {
+      "id": 121411,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2014,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111412,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111413,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111414,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111416,
+          "weight": 700
+        },
+        "7": {
+          "id": 111417,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121411,
+      "type": 14,
+      "priority": 2
+    },
+    "121421": {
+      "id": 121421,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2014,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111422,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111423,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111424,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111426,
+          "weight": 700
+        },
+        "7": {
+          "id": 111427,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121421,
+      "type": 14,
+      "priority": 3
+    },
+    "121431": {
+      "id": 121431,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2114,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111431,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121431,
+      "type": 14,
+      "priority": 5
+    },
+    "121432": {
+      "id": 121432,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2114,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111432,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121432,
+      "type": 14,
+      "priority": 6
+    },
+    "121433": {
+      "id": 121433,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2114,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111433,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121433,
+      "type": 14,
+      "priority": 7
+    },
+    "121434": {
+      "id": 121434,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2114,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111434,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121434,
+      "type": 14,
+      "priority": 8
+    },
+    "121435": {
+      "id": 121435,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2114,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111435,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121435,
+      "type": 14,
+      "priority": 9
+    },
+    "121436": {
+      "id": 121436,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2114,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111436,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121436,
+      "type": 14,
+      "priority": 10
+    },
+    "121441": {
+      "id": 121441,
+      "stageId": 40,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 900
+        },
+        {
+          "id": 2214,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111442,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111443,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111444,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111446,
+          "weight": 700
+        },
+        "7": {
+          "id": 111447,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121441,
+      "type": 14,
+      "priority": 4
+    },
+    "121501": {
+      "id": 121501,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2015,
+          "count": 2
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111502,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111503,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111504,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111506,
+          "weight": 700
+        },
+        "7": {
+          "id": 111507,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121501,
+      "type": 15,
+      "priority": 1
+    },
+    "121511": {
+      "id": 121511,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2015,
+          "count": 5
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111512,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111513,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111514,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111516,
+          "weight": 700
+        },
+        "7": {
+          "id": 111517,
+          "weight": 300
+        }
+      },
+      "succeed": 10000,
+      "shopId": 121511,
+      "type": 15,
+      "priority": 2
+    },
+    "121521": {
+      "id": 121521,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2015,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111522,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111523,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111524,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111526,
+          "weight": 700
+        },
+        "7": {
+          "id": 111527,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121521,
+      "type": 15,
+      "priority": 3
+    },
+    "121531": {
+      "id": 121531,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2115,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111531,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121531,
+      "type": 15,
+      "priority": 5
+    },
+    "121532": {
+      "id": 121532,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2115,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111532,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121532,
+      "type": 15,
+      "priority": 6
+    },
+    "121533": {
+      "id": 121533,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2115,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111533,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121533,
+      "type": 15,
+      "priority": 7
+    },
+    "121534": {
+      "id": 121534,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2115,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111534,
+          "weight": 10000
+        }
+      },
+      "succeed": 4500,
+      "shopId": 121534,
+      "type": 15,
+      "priority": 8
+    },
+    "121535": {
+      "id": 121535,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2115,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111535,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121535,
+      "type": 15,
+      "priority": 9
+    },
+    "121536": {
+      "id": 121536,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2115,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "6": {
+          "id": 111536,
+          "weight": 10000
+        }
+      },
+      "succeed": 2500,
+      "shopId": 121536,
+      "type": 15,
+      "priority": 10
+    },
+    "121541": {
+      "id": 121541,
+      "stageId": 43,
+      "consumes": [
+        {
+          "id": 2,
+          "count": 1000
+        },
+        {
+          "id": 2215,
+          "count": 1
+        }
+      ],
+      "qualityWeights": {
+        "2": {
+          "id": 111542,
+          "weight": 4000
+        },
+        "3": {
+          "id": 111543,
+          "weight": 3000
+        },
+        "4": {
+          "id": 111544,
+          "weight": 2000
+        },
+        "6": {
+          "id": 111546,
+          "weight": 700
+        },
+        "7": {
+          "id": 111547,
+          "weight": 300
+        }
+      },
+      "succeed": 8500,
+      "shopId": 121541,
+      "type": 15,
+      "priority": 4
+    }
+  }
+}

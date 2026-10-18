@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tự động mặc trang bị mạnh hơn</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-t-ng-m-c-trang-b-m-nh-h-n">Session Report — Tự động mặc trang bị mạnh hơn</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã triển khai tùy chọn opt-in <code>Tự động mặc trang bị mạnh hơn</code> trong màn <code>Ủy thác tự động</code>.</li>
+<li>Tái sử dụng đúng checkbox native trước đây là <code>Dừng khi lực chiến cao hơn</code>, nhưng dùng cờ mới <code>autoEquipUpgrade</code>, mặc định tắt; không kế thừa lựa chọn cũ.</li>
+<li>Khi bật: client lọc điều kiện giữ, chọn món tăng lực mạnh nhất cho từng slot, gọi <code>2200</code> tuần tự; sau ACK thành công mới cập nhật model và đưa đồ cũ/yếu vào sale <code>2201</code>.</li>
+<li>Server tự tính lại power bằng <code>AttrConfig.power</code>, chỉ cho auto-equip khi <code>afterPower &gt; beforePower</code>; auto-sale chỉ bán món yếu hơn đồ đang mặc và bảo vệ tất cả preset.</li>
+<li>Nếu RPC từ chối, món bằng/không tăng lực, món được giữ bởi phẩm chất/thuộc tính hoặc UID đang ở preset khác: ủy thác dừng và mở xử lý thủ công.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Production <code>/linhhoasu/lhs/newServer/src/services/EquipService.js</code>: power calculator, strict auto-upgrade, protected auto-sale.</li>
+<li>Production <code>/linhhoasu/lhs/newServer/src/handlers/item.js</code>: truyền/đáp cờ <code>autoDelegate</code>, power trước/sau và <code>ignoredUids</code> cho 2200/2201.</li>
+<li>Production <code>/linhhoasu/webgame/game/js/main.min_a6195824.js</code>: FSM auto-equip + sale/fallback và flag opt-in mới.</li>
+<li>Production <code>/linhhoasu/webgame/game/index.html</code>: cache marker <code>20260904_auto_equip_upgrade2</code>.</li>
+<li>Candidate: <code>_ai_workbench/temp/auto_equip_candidate_20260904/</code>, <code>_ai_workbench/temp/auto_equip_optin_v2/</code>.</li>
+<li>Tools/contracts: <code>_ai_workbench/tools/patch_auto_equip_upgrade_client.py</code>, <code>patch_auto_equip_optin_v2.py</code>, <code>test_auto_delegate_contract.js</code>, <code>test_auto_equip_handlers.js</code>, <code>test_auto_equip_upgrade_client.js</code>, <code>test_auto_equip_optin_v2.js</code>, <code>qa_auto_equip_live.js</code>, <code>deploy_auto_equip_upgrade_20260904.py</code>, <code>deploy_auto_equip_optin_v2.py</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/auto_equip_upgrade_deploy_20260904_051709.json</code>, <code>_ai_workbench/temp/auto_equip_optin_v2_deploy_20260904_052636.json</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Stage <code>.js.auto-equip-*</code> không được Node 20 syntax-check</td>
+<td>Đuôi cuối không phải <code>.js</code></td>
+<td>Stage dạng <code>name.auto-equip-*.js</code></td>
+<td>Giữ extension thật ở cuối filename</td>
+</tr>
+<tr>
+<td>Live QA login timeout lần 1</td>
+<td>Fixture tạo <code>userId</code> không theo suffix <code>_s1001</code></td>
+<td>Dùng <code>platformuid</code> ở client và Player <code>platformuid_s1001</code>; cleanup prefix</td>
+<td>E2E phải mô phỏng đúng identity contract</td>
+</tr>
+<tr>
+<td>Sót một Player QA suffix sau lần đầu</td>
+<td>Cleanup chỉ nhắm UID đầu vào</td>
+<td>Cleanup theo prefix <code>^qa_auto_equip_</code> ở cả DB; readback 0</td>
+<td>Fixture cleanup phải phủ ID được server chuẩn hóa</td>
+</tr>
+<tr>
+<td>Live QA timeout lần 2/3</td>
+<td>Harness cắt ArrayBuffer bằng offset của buffer cũ; lần sau chạy khi bot login burst</td>
+<td>Sửa decode dùng đúng buffer/offset và chờ 580/580 bot trước QA</td>
+<td>Test harness phải được kiểm chứng login-only trên baseline</td>
+</tr>
+<tr>
+<td>Cờ checkbox cũ có thể auto-bật ngoài ý muốn</td>
+<td>Tái sử dụng <code>enoughPower</code> đã có dữ liệu người chơi</td>
+<td>Thêm <code>autoEquipUpgrade</code> ở cuối setting blob, default false; ép <code>enoughPower=false</code></td>
+<td>Tính năng đổi ý nghĩa phải có flag mới và migration fail-closed</td>
+</tr>
+<tr>
+<td>Đồ giữ bởi phẩm chất có thể bị auto-mặc</td>
+<td>Bản candidate đầu lấy tất cả món mạnh trước policy filter</td>
+<td>Chạy <code>CheckAutoStop</code> với enoughPower tạm tắt; chỉ auto-mặc nhóm vốn là sale candidate</td>
+<td>Policy giữ phải có ưu tiên trước power automation</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Power server parity với client cơ bản: tổng <code>attrValue * AttrConfig.power</code>, bỏ weight <code>-1</code>, làm tròn lên.</li>
+<li>Auto replace phải validate trước khi remove khỏi open list; rejection không mutation.</li>
+<li>Fallback RPC phải đưa cả món chưa xử lý, món sale candidate và đồ cũ đã thay vào popup, rồi tắt ủy thác.</li>
+<li>Setting mới append cuối ByteArray và đọc có guard <code>position &lt; length</code>, giữ tương thích blob cũ.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Service contract PASS: mạnh được mặc; bằng/yếu bị từ chối không mutation; slot trống nhận món power dương; manual replace tương thích; đồ cũ/yếu bán; món mạnh và UID preset khác được bảo vệ.</li>
+<li>Handler contract PASS 10 checks: auto/manual flags, before/after power và ignoredUids đúng.</li>
+<li>Client v1 contract PASS 17 checks; opt-in v2 PASS 10 checks; core gameplay PASS 714 bảng.</li>
+<li>Live WebSocket E2E PASS 12 checks: power <code>200 → 400</code>, mặc món mạnh, bán đồ cũ và món bằng/nhỏ hơn, giữ nguyên UID preset khác, Mongo readback đúng.</li>
+<li>Player QA cleanup PASS; hậu kiểm hai DB không còn <code>qa_auto_equip_*</code>.</li>
+<li>S1/S2 bot đều <code>580/580</code>, virtual 580, invalid 0; worker bot không restart.</li>
+<li><code>/ready</code> cả hai node PASS; error audit không có lỗi mới liên quan auto-equip.</li>
+<li>Hash production: EquipService <code>6da1b8c26a616c3e933a72b6b80d36ee732dfafbd49a12af9be6be6acc818539</code>; item.js <code>9965c53ad2e797348a9e8bd733db56f8c5ed085070c9cb18dcdf19386dcf7473</code>; main JS v2 <code>4eebd64544284a207bd8614fca576bbc689b90f53e06dcbc42d8f2a13e0479bd</code>; index v2 <code>24ad042e4a26fd57706d1f78e823f2fe62a761b2f4e08a02bf48f4b9aa8f8bf9</code>.</li>
+<li>Backup server/v1: <code>/linhhoasu/_ai_workbench/backups/auto_equip_upgrade_20260904_051709/</code>; backup client trước v2: <code>/linhhoasu/_ai_workbench/backups/auto_equip_optin_v2_20260904_052636/</code>.</li>
+<li>Chưa QA click/quan sát popup trực quan bằng session người chơi thật; server E2E và client native static/served contract đã PASS.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Ctrl+F5/xóa cache game một lần.</li>
+<li>Mở <code>Ủy thác tự động</code>, tick <code>Tự động mặc trang bị mạnh hơn</code>, rồi bấm <code>Bắt đầu</code>.</li>
+<li>Quan sát một lần: đồ mạnh tự mặc, đồ cũ/yếu tự bán, ủy thác tiếp tục; đồ thỏa điều kiện giữ vẫn mở popup.</li>
+<li>Nếu muốn trở về hành vi cũ, bỏ tick; vì mặc định tắt nên người chơi khác không bị thay đổi hành vi.</li>
+</ol></main></body></html>

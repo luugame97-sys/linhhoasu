@@ -1,0 +1,593 @@
+{
+  "_table": "ConstConfig",
+  "_rows": 70,
+  "_type": "object",
+  "_firstKeys": "(obj)[initAnger|maxAnger|atkAnger|hitAnger|angerConvertParam]",
+  "_sample": [
+    {
+      "initAnger": 0
+    },
+    {
+      "maxAnger": 1000
+    },
+    {
+      "atkAnger": 200
+    }
+  ],
+  "data": {
+    "initAnger": 0,
+    "maxAnger": 1000,
+    "atkAnger": 200,
+    "hitAnger": 600,
+    "angerConvertParam": 0.05,
+    "angerConvertMaxParam": 0.3,
+    "skillPointLvGet": 5,
+    "kungFuSkillMaxNum": 5,
+    "kungfuSkillLevelReset": {
+      "id": 1,
+      "count": 10
+    },
+    "kungfuResetCost": {
+      "id": 11,
+      "count": 1
+    },
+    "kungfuResetCostDiamond": {
+      "id": 1,
+      "count": 100
+    },
+    "initBoxNum": 60,
+    "energyExp": 10,
+    "maxEquipLv": 1305,
+    "randomEquipLv": [
+      -1,
+      0,
+      1
+    ],
+    "initMainTaskId": 10001,
+    "fightMaxRound": 15,
+    "fightSkipRound": 5,
+    "fightLogUpload": 3,
+    "fightLogLevel": 100,
+    "skillEffectId": {
+      "106": 2010000,
+      "161": 2010001,
+      "162": 2010002,
+      "163": 2010003,
+      "164": 2010004,
+      "165": 2010005,
+      "231": 2010006,
+      "233": 2010007
+    },
+    "skillStateShows": [
+      1
+    ],
+    "skillStackShows": [
+      18,
+      19,
+      20,
+      26,
+      27,
+      29,
+      36,
+      38,
+      39,
+      42,
+      43,
+      41,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      54
+    ],
+    "initArenaTicket": 3,
+    "arenaTicketMax": 3,
+    "itemLimitRate": 5,
+    "rmbDiamond": 10,
+    "dailyReward": {
+      "20": {
+        "id": 1,
+        "count": 50
+      },
+      "40": {
+        "id": 62,
+        "count": 1
+      },
+      "60": {
+        "id": 1,
+        "count": 100
+      },
+      "80": {
+        "id": 37,
+        "count": 100
+      },
+      "100": {
+        "id": 21,
+        "count": 20
+      }
+    },
+    "dailyRewardMailId": 4,
+    "changeNameCost": {
+      "id": 22,
+      "count": 1
+    },
+    "emojiTabIcon": {
+      "1": "emoji_tab_bamboo",
+      "2": "emoji_tab_bread",
+      "3": "emoji_tab_panda",
+      "4": "emoji_tab_dog"
+    },
+    "qualityName": {
+      "1": 30070101,
+      "2": 30070102,
+      "3": 30070103,
+      "4": 30070104,
+      "5": 30070105,
+      "6": 30070106,
+      "7": 30070107,
+      "8": 30070108,
+      "9": 30070109,
+      "10": 30070110,
+      "11": 30070111,
+      "12": 30070112,
+      "13": 30070113,
+      "14": 30070114,
+      "15": 30070115,
+      "16": 30070116,
+      "17": 30070117,
+      "18": 30070118,
+      "19": 30070119,
+      "20": 30070120
+    },
+    "taskPet": {
+      "24": 10,
+      "25": 20,
+      "26": 30
+    },
+    "mapMonsterBubble": [
+      30060101,
+      30060102,
+      30060103,
+      30060104,
+      30060105,
+      30060106,
+      30060107,
+      30060108,
+      30060109,
+      30060110,
+      30060111,
+      30060112,
+      30060113,
+      30060114,
+      30060115,
+      30060116,
+      30060117,
+      30060118
+    ],
+    "mapBossCallCost": 1000,
+    "mapBossMaxNum": 10,
+    "mapBossFreeNum": 1,
+    "mapBossShout": [
+      30060108,
+      30060115,
+      30060117
+    ],
+    "mapBossShoutLink": [
+      30060140
+    ],
+    "mapBossShoutSound": "boss_tianxieshen",
+    "opinionRewards": [
+      {
+        "id": 1,
+        "count": 100
+      },
+      {
+        "id": 4,
+        "count": 20
+      },
+      {
+        "id": 6,
+        "count": 10
+      }
+    ],
+    "opinionMail": 103,
+    "fbRewards": {
+      "1": [
+        {
+          "id": 1,
+          "count": 100
+        },
+        {
+          "id": 25,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 2
+        }
+      ],
+      "2": [
+        {
+          "id": 1,
+          "count": 100
+        },
+        {
+          "id": 4,
+          "count": 10
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ],
+      "3": [
+        {
+          "id": 1,
+          "count": 10
+        },
+        {
+          "id": 4,
+          "count": 10
+        },
+        {
+          "id": 6,
+          "count": 1
+        }
+      ]
+    },
+    "fbShareCount": 30,
+    "playerJob": 4,
+    "playerGender": 0,
+    "desktopReward": [
+      {
+        "id": 1,
+        "count": 100
+      }
+    ],
+    "myAppReward": [
+      {
+        "id": 1,
+        "count": 100
+      }
+    ],
+    "tiktokDesktopReward": {
+      "1": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "2": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 4,
+          "count": 25
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ],
+      "3": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 4,
+          "count": 25
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ],
+      "5": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 4,
+          "count": 25
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ],
+      "7": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 4,
+          "count": 25
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ]
+    },
+    "tiktokMyAppReward": [
+      {
+        "id": 1,
+        "count": 100
+      }
+    ],
+    "tiktokPcReward": [
+      {
+        "id": 1,
+        "count": 50
+      },
+      {
+        "id": 4,
+        "count": 20
+      },
+      {
+        "id": 2,
+        "count": 5000
+      }
+    ],
+    "phoneNumRewards": [
+      {
+        "id": 1,
+        "count": 100
+      }
+    ],
+    "zfbPcLoginRewards": [
+      {
+        "id": 1,
+        "count": 100
+      }
+    ],
+    "skipBattleCondition": [
+      {
+        "type": 5,
+        "value": 15,
+        "cond": 4
+      }
+    ],
+    "skipBattleCondition2": [
+      {
+        "type": 5,
+        "value": 57,
+        "cond": 4
+      }
+    ],
+    "playerCreateSexWeight": [
+      {
+        "weight": 6600,
+        "id": 0
+      },
+      {
+        "weight": 3400,
+        "id": 1
+      }
+    ],
+    "playerCreateJobWeight": [
+      {
+        "weight": 1000,
+        "id": 1
+      },
+      {
+        "weight": 1500,
+        "id": 3
+      },
+      {
+        "weight": 2700,
+        "id": 4
+      },
+      {
+        "weight": 2800,
+        "id": 5
+      },
+      {
+        "weight": 1000,
+        "id": 6
+      },
+      {
+        "weight": 1000,
+        "id": 8
+      }
+    ],
+    "hitFlyAnimRate": 3000,
+    "presetControl": {
+      "1": 123,
+      "2": 124
+    },
+    "chatShieldCountLimit": 100,
+    "silenceDealOpenDay": 29,
+    "powerSavingTime": 300,
+    "silencePrivilege": [
+      {
+        "type": 5,
+        "value": 30,
+        "cond": 4
+      }
+    ],
+    "itemQixiText": [
+      30031361,
+      30031362,
+      30031363,
+      30031364,
+      30031365,
+      30031366,
+      30031367,
+      30031368,
+      30031369,
+      30031370,
+      30031371,
+      30031372,
+      30031373,
+      30031374,
+      30031375
+    ],
+    "weWanyouFestival": "ttHuYr8WY4pnFTJaeFV37cSwMw-l90BsDGA6WyIqGcdRlFJ6Ny5qSjorcGWPd71UW2eXeZ6sCeYHribWXbCBtFthPVpyn-liMpsn05xu5ADkTULps0hfMoGgQK3aOYo0nGlNRI5An5kMWwqU_0G_rLRGOVPiJPi4NHqJTTbh4_Vuhb3NXRHqqJx99H9zBSIZTkN7kXrbshn-V2WVmcJbhJ1FxH8gehV9Z2XRGSagO7FZvQmQECDr7MOhRSu1I7gjHRwhzv2pijqMM9gklIHTp6zvGuhXxLiU_Ry7DABhlXuByRXVeN5djmxlEV1luzgDsoJ1vPjtl_T_ZSUrfZF77fs9clL-xzr7SuTBCpKajAiug9AZ5obb39zEWcuvefXetdmIp9sRJEBBYfs-BQ75qmlyngo88NNXSTjFCerI_hRbGSemVtzMTI2v5gy4-3E6gxiDUWXkFhlAVI6mUvJWwQPdED-bIPA2L6EZeUpJZaCgL1OW3jioaVw3gFAA0SbwvL_QmTKt1zvVGdvGxXlnHsOUKlE8BgNWZvsGVarmCy92yejTjwZidx5lEPqIUVJP6zKaWVpu96QIJR19SjrDGZ_vo39hlOXoBA0cUvfSprOnXWrJCnLWZL-q27Am620XSwTmdRo8JxgTxju-g6xxACp4C5z7CAy4ibg-9VWYLyIHmytSqhFD_OwU8Zzz22nhT4He-i5yO2ugJnBALOK9HJTA39P8oF_9es8SJjzc5j418FsnAdCktscrQpN-kJ4ZsooGaLCtV9QGgZVs0qiKK-Xg4t6RMUDXBUyjSEMSdF0-f5Xn0yjSv7DYjHIUt6ub8NdwHxH13rOZDSAl1T3CXzdvW5zkS0kA3dwlh6U7GfhAJXoaEWKOH2dWz73by5K6Q0uPVHnQ9vQLutX67Kz72rBmn9MxLWFaSu9ubKvvroTxyeijG9NN4pSQ4cE5HZnnsWzY6WArHFzX5jKDaDlR9MKJGLWIhY0eJkEND36JIX1_B6rXG5QJfmOXD5-CU0tNTSYYBrCrKiccCjr7Hf3q5PGiE2t2zaDUhtdr6MSJvmd1GsdFL8YtCqsCddKg8TGQIfp3HTeu3-Vj7bOXUhw2rguYzEWXB-Jo3OADykfvvOiag0AjTz25Ufv97qYWBxtLFgnzvuKFToNsDhiRNmN-lalCV30kGP0DciZK1hTk5Bd9zuBMzbehWNL-Kezfc0pUqt1Qsagj7_e814pgY74Fd4Udd17v5frUNt73PNBp5kOgzA8hRljTDYJrzO1d4kjaGvgggq0mTCh-JrhaKlIneUGjK2QtUj0u2S-r82oNaAU",
+    "whoIsTheLuckyDog": [
+      {
+        "id": 101307,
+        "count": 1
+      },
+      {
+        "id": 11286,
+        "count": 1
+      },
+      {
+        "id": 11455,
+        "count": 1
+      }
+    ],
+    "birthdayReward": [
+      [
+        {
+          "id": 11242,
+          "count": 1
+        },
+        {
+          "id": 1,
+          "count": 500
+        },
+        {
+          "id": 4,
+          "count": 200
+        },
+        {
+          "id": 65,
+          "count": 50
+        }
+      ],
+      [
+        {
+          "id": 11243,
+          "count": 1
+        },
+        {
+          "id": 1,
+          "count": 500
+        },
+        {
+          "id": 4,
+          "count": 200
+        },
+        {
+          "id": 65,
+          "count": 50
+        }
+      ],
+      [
+        {
+          "id": 11244,
+          "count": 1
+        },
+        {
+          "id": 1,
+          "count": 500
+        },
+        {
+          "id": 4,
+          "count": 200
+        },
+        {
+          "id": 65,
+          "count": 50
+        }
+      ]
+    ],
+    "birthdayGiftLimitation": 14,
+    "regMailTw": {
+      "131": {
+        "6": 10
+      },
+      "132": {
+        "100": 5
+      },
+      "133": {
+        "80429991": 1
+      },
+      "134": {
+        "62": 10
+      },
+      "135": {
+        "22044": 1
+      }
+    },
+    "zfbDesktopReward": {
+      "1": [
+        {
+          "id": 1,
+          "count": 100
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ],
+      "2": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 6,
+          "count": 5
+        },
+        {
+          "id": 100,
+          "count": 1
+        }
+      ],
+      "3": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 6,
+          "count": 5
+        },
+        {
+          "id": 37,
+          "count": 20
+        }
+      ],
+      "5": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 6,
+          "count": 5
+        },
+        {
+          "id": 100012,
+          "count": 1
+        }
+      ],
+      "7": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 6,
+          "count": 5
+        },
+        {
+          "id": 37,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

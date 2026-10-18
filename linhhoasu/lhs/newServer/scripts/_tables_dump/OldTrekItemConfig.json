@@ -1,0 +1,816 @@
+{
+  "_table": "OldTrekItemConfig",
+  "_rows": 42,
+  "_type": "object",
+  "_firstKeys": "Id,score,transRewards,stackNum,priority",
+  "_sample": [
+    {
+      "322": {
+        "Id": 322,
+        "score": 0,
+        "transRewards": [],
+        "stackNum": 999999,
+        "priority": 2
+      }
+    },
+    {
+      "331": {
+        "Id": 331,
+        "score": 0,
+        "transRewards": [],
+        "stackNum": 999999,
+        "priority": 1
+      }
+    },
+    {
+      "301401": {
+        "Id": 301401,
+        "score": 300,
+        "transRewards": [
+          {
+            "id": 327,
+            "count": 40
+          },
+          {
+            "id": 380,
+            "count": 1
+          },
+          {
+            "id": 101353,
+            "count": 1
+          }
+        ],
+        "stackNum": 5,
+        "priority": 301
+      }
+    }
+  ],
+  "data": {
+    "322": {
+      "Id": 322,
+      "score": 0,
+      "transRewards": [],
+      "stackNum": 999999,
+      "priority": 2
+    },
+    "331": {
+      "Id": 331,
+      "score": 0,
+      "transRewards": [],
+      "stackNum": 999999,
+      "priority": 1
+    },
+    "301401": {
+      "Id": 301401,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 40
+        },
+        {
+          "id": 380,
+          "count": 1
+        },
+        {
+          "id": 101353,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 301
+    },
+    "301402": {
+      "Id": 301402,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 80
+        },
+        {
+          "id": 101353,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 302
+    },
+    "301403": {
+      "Id": 301403,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 40
+        },
+        {
+          "id": 327,
+          "count": 20
+        },
+        {
+          "id": 101352,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 303
+    },
+    "301404": {
+      "Id": 301404,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 40
+        },
+        {
+          "id": 381,
+          "count": 1
+        },
+        {
+          "id": 101363,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 301
+    },
+    "301405": {
+      "Id": 301405,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 80
+        },
+        {
+          "id": 101363,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 302
+    },
+    "301406": {
+      "Id": 301406,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 40
+        },
+        {
+          "id": 327,
+          "count": 20
+        },
+        {
+          "id": 101362,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 303
+    },
+    "301407": {
+      "Id": 301407,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 40
+        },
+        {
+          "id": 382,
+          "count": 1
+        },
+        {
+          "id": 101373,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 301
+    },
+    "301408": {
+      "Id": 301408,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 80
+        },
+        {
+          "id": 101373,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 302
+    },
+    "301409": {
+      "Id": 301409,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 40
+        },
+        {
+          "id": 327,
+          "count": 20
+        },
+        {
+          "id": 101372,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 303
+    },
+    "301410": {
+      "Id": 301410,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 40
+        },
+        {
+          "id": 383,
+          "count": 1
+        },
+        {
+          "id": 101403,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 301
+    },
+    "301411": {
+      "Id": 301411,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 80
+        },
+        {
+          "id": 101403,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 302
+    },
+    "301412": {
+      "Id": 301412,
+      "score": 300,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 40
+        },
+        {
+          "id": 327,
+          "count": 20
+        },
+        {
+          "id": 101402,
+          "count": 1
+        }
+      ],
+      "stackNum": 5,
+      "priority": 303
+    },
+    "301501": {
+      "Id": 301501,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 50
+        },
+        {
+          "id": 370,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 201
+    },
+    "301502": {
+      "Id": 301502,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 100
+        },
+        {
+          "id": 101354,
+          "count": 1
+        },
+        {
+          "id": 101352,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 203
+    },
+    "301503": {
+      "Id": 301503,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 50
+        },
+        {
+          "id": 371,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 201
+    },
+    "301504": {
+      "Id": 301504,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 100
+        },
+        {
+          "id": 101364,
+          "count": 1
+        },
+        {
+          "id": 101362,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 203
+    },
+    "301505": {
+      "Id": 301505,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 50
+        },
+        {
+          "id": 372,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 201
+    },
+    "301506": {
+      "Id": 301506,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 100
+        },
+        {
+          "id": 101374,
+          "count": 1
+        },
+        {
+          "id": 101372,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 203
+    },
+    "301507": {
+      "Id": 301507,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 50
+        },
+        {
+          "id": 373,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 201
+    },
+    "301508": {
+      "Id": 301508,
+      "score": 500,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 100
+        },
+        {
+          "id": 101404,
+          "count": 1
+        },
+        {
+          "id": 101402,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 203
+    },
+    "301601": {
+      "Id": 301601,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 120
+        },
+        {
+          "id": 370,
+          "count": 1
+        },
+        {
+          "id": 380,
+          "count": 2
+        },
+        {
+          "id": 101352,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 101
+    },
+    "301602": {
+      "Id": 301602,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 60
+        },
+        {
+          "id": 327,
+          "count": 30
+        },
+        {
+          "id": 101356,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 102
+    },
+    "301603": {
+      "Id": 301603,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 60
+        },
+        {
+          "id": 101354,
+          "count": 1
+        },
+        {
+          "id": 101353,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 103
+    },
+    "301604": {
+      "Id": 301604,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 120
+        },
+        {
+          "id": 371,
+          "count": 1
+        },
+        {
+          "id": 381,
+          "count": 2
+        },
+        {
+          "id": 101362,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 101
+    },
+    "301605": {
+      "Id": 301605,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 60
+        },
+        {
+          "id": 327,
+          "count": 30
+        },
+        {
+          "id": 101366,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 102
+    },
+    "301606": {
+      "Id": 301606,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 60
+        },
+        {
+          "id": 101364,
+          "count": 1
+        },
+        {
+          "id": 101363,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 103
+    },
+    "301607": {
+      "Id": 301607,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 120
+        },
+        {
+          "id": 372,
+          "count": 1
+        },
+        {
+          "id": 382,
+          "count": 2
+        },
+        {
+          "id": 101372,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 101
+    },
+    "301608": {
+      "Id": 301608,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 60
+        },
+        {
+          "id": 327,
+          "count": 30
+        },
+        {
+          "id": 101376,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 102
+    },
+    "301609": {
+      "Id": 301609,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 60
+        },
+        {
+          "id": 101374,
+          "count": 1
+        },
+        {
+          "id": 101373,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 103
+    },
+    "301610": {
+      "Id": 301610,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 120
+        },
+        {
+          "id": 373,
+          "count": 1
+        },
+        {
+          "id": 383,
+          "count": 2
+        },
+        {
+          "id": 101402,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 101
+    },
+    "301611": {
+      "Id": 301611,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 331,
+          "count": 60
+        },
+        {
+          "id": 327,
+          "count": 30
+        },
+        {
+          "id": 101406,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 102
+    },
+    "301612": {
+      "Id": 301612,
+      "score": 600,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 60
+        },
+        {
+          "id": 101404,
+          "count": 1
+        },
+        {
+          "id": 101403,
+          "count": 1
+        }
+      ],
+      "stackNum": 2,
+      "priority": 103
+    },
+    "301701": {
+      "Id": 301701,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 332,
+          "count": 1
+        },
+        {
+          "id": 360,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 3
+    },
+    "301702": {
+      "Id": 301702,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 80
+        },
+        {
+          "id": 101357,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 4
+    },
+    "301703": {
+      "Id": 301703,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 332,
+          "count": 1
+        },
+        {
+          "id": 361,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 3
+    },
+    "301704": {
+      "Id": 301704,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 80
+        },
+        {
+          "id": 101367,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 4
+    },
+    "301705": {
+      "Id": 301705,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 332,
+          "count": 1
+        },
+        {
+          "id": 362,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 3
+    },
+    "301706": {
+      "Id": 301706,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 80
+        },
+        {
+          "id": 101377,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 4
+    },
+    "301707": {
+      "Id": 301707,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 332,
+          "count": 1
+        },
+        {
+          "id": 363,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 3
+    },
+    "301708": {
+      "Id": 301708,
+      "score": 1000,
+      "transRewards": [
+        {
+          "id": 327,
+          "count": 80
+        },
+        {
+          "id": 101407,
+          "count": 1
+        }
+      ],
+      "stackNum": 1,
+      "priority": 4
+    }
+  }
+}

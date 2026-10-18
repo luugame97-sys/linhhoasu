@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fishing Integrity Fix 20260906</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-s-a-t-nh-to-n-v-n-c-u-c">Session Report — sửa tính toàn vẹn câu cá</h1>
+<p>Ngày 06/09/2026, hoàn tất kiểm tra lúc 06:38 UTC+7. <strong>Đã triển khai bản sửa dữ liệu và các chốt an toàn lên S1/S2. Không phát bù, không chạy repair/reroll cá người chơi. Chưa tuyên bố toàn bộ tính năng câu cá hoàn chỉnh.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Tiếp tục audit trước từ snapshot production <code>_ai_workbench/temp/fishing_audit_20260905T232035Z/</code>, không dùng source local cũ làm baseline deploy.</li>
+<li>Sửa PUT_IN lưu toàn bộ cá mới: ID, UID, multi, attrs, skills, tempSkills, lock và dead. Khi thay, cá cũ thật quay về danh sách chờ; không sinh cá ngẫu nhiên thế chỗ.</li>
+<li>Bảo vệ cá chưa xử lý, giỏ khóa, UID trùng/không hợp lệ và multi-put. Client nhận cá bị thay theo replaceUid, sau callback đối chiếu lại state server. Client cũ chưa có integrityVersion không được multi-put nhiều cá trong một request.</li>
+<li>Sổ cá/pics và kỷ lục chất lượng được ghi cho giao dịch mới hoàn tất. Không backfill lịch sử hay tự tính lại stat của cá cũ.</li>
+<li>Tất cả save trong hai handler câu cá đều đợi xác nhận. Save null hoặc exception vô hiệu state phiên, không ACK thành công và không giữ state chưa xác nhận cho save lúc disconnect.</li>
+<li>Sửa điều kiện/thưởng fetter, nhật ký, extraPrice; chặn nhận lặp; nhật ký tiêu hao đúng cấu hình và mốc cuối cấp thời trang bằng native ownership + push1800.</li>
+<li>Kiểm sở hữu cần/bè, hạn thẻ đặc quyền, mồi đang chọn, cấp/ngày mở khu và giới hạn rank. Pool câu thường chỉ lấy cá thuộc khu đang câu.</li>
+<li>Kỹ năng kiểm cá thật/UID/chất lượng/chỉ số ô, tốn338 theo cấu hình, random phía server từ danh mục skill hợp lệ; giữ preview qua relog, replace chỉ lấy preview server. Native panel gửi skill hiện tại để kiểm stale-state, không gửi skill preview.</li>
+<li>Giữ vị trí skills có giá trị0; trả tempSkills ở login. Combat tính phần cộng từ linh hồn, cần/bè và thẻ theo đúng thứ tự phép tính native.</li>
+<li>Thêm chốt phản hồi thất bại cho24 callback câu cá native. Lỗi không còn bị client tự xử lý như thành công; auto-fish dừng và có thông báo.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-production-v-local-ng-b">Source chính — production và local đã đồng bộ</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Vai trò</th>
+</tr></thead><tbody>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/services/FishingIntegrityService.js</code></td>
+<td>Mới: persistence, validation, ngày, scene, collection, multiplier, native reward</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish.js</code></td>
+<td>Giữ/thay/câu cá, thưởng, gear, mồi, đơn và chốt an toàn</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish-soul.js</code></td>
+<td>Kỹ năng, bảo vệ pending linh hồn, chặn hộp chưa có pool</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/playerPayload.js</code></td>
+<td>Giữ skill theo ô/tempSkills, không tái sinh attrs rỗng, reset đơn theo ngày khi login</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/services/BattleService.js</code></td>
+<td>Áp multiplier cá tương ứng client</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></td>
+<td>Callback native: reject lỗi, swap theo UID, đồng bộ state</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/index.html</code></td>
+<td>Cache key <code>20260906_fishing_integrity_v1</code></td>
+</tr>
+</tbody></table></div>
+<p>Local fish.js khác live chỉ một dòng trống; fish-soul.js khác tùy chọn returnSaved. Đã kiểm diff và backup trước khi áp patch, không chép đè toàn bộ cây source.</p>
+<h3 id="tool-h-tr-v-evidence">Tool hỗ trợ và evidence</h3>
+<ul>
+<li>Tools trong <code>_ai_workbench/tools/</code>: <code>inspect_fishing_fix_contracts_20260906.js</code>, <code>build_fishing_client_integrity_20260906.js</code>, <code>test_fishing_integrity_20260906.js</code>, <code>release_fishing_integrity_20260906.py</code>, <code>qa_fishing_integrity_live_20260906.js</code>, <code>run_fishing_integrity_live_20260906.py</code>, <code>sync_fishing_integrity_local_20260906.py</code>, <code>final_fishing_integrity_check_20260906.py</code>.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_fix_20260906/</code>. <code>tests.json</code>, <code>stage.json</code>, <code>client-build.json</code>, <code>deploy.json</code>, <code>live-qa.json</code>, <code>final-check.json</code>, <code>local-sync.json</code>.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/fishing_integrity_20260905_233511/</code>. Có6 preimage và1 file helper mới; rollback source không rollback DB gameplay đang diễn ra.</li>
+<li>Backup local: <code>_ai_workbench/backups/fishing_integrity_local_20260906/</code>. Backup report: <code>_ai_workbench/backups/fishing_integrity_reports_20260906/</code>.</li>
+<li>Gói source-only: <code>_ai_workbench/temp/fishing_fix_20260906/fishing_integrity_release_20260906.zip</code>,8 entry, khoảng2,2MB. SHA trong <code>final-check.json</code>; không có credential, snapshot người chơi, config hoặc DB. Không upload đè mù gói này lên bản production mới hơn.</li>
+<li>Báo cáo này và <code>session_report.md</code> đều có bản HTML đầy đủ. Evidence runtime chỉ dùng nội bộ quản trị, không public.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Cá mới nhưng stat cũ sau relog</td>
+<td>PUT_IN chỉ chép ID/UID/quality</td>
+<td>Lưu full entity, trả cá cũ thật</td>
+<td>So native callback, snapshot save và login payload theo UID</td>
+</tr>
+<tr>
+<td>Mất cá pending</td>
+<td>Lượt câu mới ghi đè result</td>
+<td>Reject trước consume, giữ nguyên pending</td>
+<td>Test gọi catch lần hai và disconnect</td>
+</tr>
+<tr>
+<td>Multi-put trả nhầm cá</td>
+<td>Client dùng fishInfos[0] cho mọi UID</td>
+<td>replaceUid + state authoritative</td>
+<td>Test mixed empty/full và version guard client cũ</td>
+</tr>
+<tr>
+<td>Thưởng free/lặp</td>
+<td>Fetter/nhật ký/extraPrice bỏ điều kiện</td>
+<td>Prerequisite, cost, cap, record, không fallback quà</td>
+<td>Test replay và native fashion ownership</td>
+</tr>
+<tr>
+<td>Save không xác nhận vẫn success</td>
+<td>Bỏ return null/throw-state</td>
+<td>Shared awaited save, invalidate state khi uncertain</td>
+<td>Test null/throw; không fake rollback sau timeout</td>
+</tr>
+<tr>
+<td>Tẩy skill tạo cá/nhận skill client tùy ý</td>
+<td>ensure tự tạo slot, tin tham số</td>
+<td>Kiểm ownership/UID/pool/cost, lưu preview</td>
+<td>Actual native panel gửi old skill; test stale/invalid/replay</td>
+</tr>
+<tr>
+<td>Stat combat không khớp hiển thị</td>
+<td>Thiếu bonus linh hồn/gear/card</td>
+<td>Công thức và thứ tự làm tròn tương ứng native</td>
+<td>AST native function + BattleService thật</td>
+</tr>
+<tr>
+<td>Làm mới đơn mở lại quà</td>
+<td>Không có cost/gate xác minh</td>
+<td>Tạm chặn; thêm ngày và cap index0..2</td>
+<td>Không dùng client gate làm xác thực</td>
+</tr>
+<tr>
+<td>Tẩy cần/hộp/swap linh hồn chưa có contract</td>
+<td>Source đơn giản hóa, config thiếu bảng chuẩn</td>
+<td>Tạm chặn nhánh nguy hiểm, giữ cá/item</td>
+<td>Không phát bạc hay random giá trị tự đoán</td>
+</tr>
+<tr>
+<td>Staging thiếu acorn</td>
+<td>VPS chỉ có production dependencies</td>
+<td>Đưa parser vào tools của staging</td>
+<td>Không npm install/đổi dependencies production</td>
+</tr>
+<tr>
+<td>Fixture compare false-positive</td>
+<td>UID sequence chưa normalize trước before-snapshot</td>
+<td>Normalize fixture trước đo</td>
+<td>Phân biệt bookkeeping với biến đổi cá/item</td>
+</tr>
+<tr>
+<td>Probe HTTP404</td>
+<td>Game ở cổng81, không phải80/88</td>
+<td>Đọc lại deploy client cũ, verify served hash ở81</td>
+<td>Dùng URL đã kiểm chứng</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Client optimistic callback có thể bỏ qua result; sửa server mà không sửa callback vẫn khiến UI lệch. Một số tag soul dùng cùng số với push bản đồ, chỉ sửa callback RPC liên quan.</li>
+<li>Tên bảng skill không phải FishSkillConfig. Hai ô dùng FishAttrsConfig/FishSoulAttrsConfig rồi lookup SkillConfig. Panel replace gửi skill cũ, không phải preview.</li>
+<li>Hai binary config server/client khác hash tổng thể nhưng22 bảng Fish* giống nhau; không thay config.</li>
+<li>Mốc ngày theo timezone runtime thực tế +0700. Logger hiển thị +0800; tên thư mục staging là UTC. Không dùng giờ logger để suy giờ deploy.</li>
+<li>Không lấy state screenshot hiện tại làm oracle bất biến: trong lúc xử lý, state tài khoản đó thay đổi qua hoạt động game; final-check ghi rõ false cho full-state comparison. Tool chỉ đọc tài khoản này; mọi write trực tiếp của QA chỉ vào hai UID qa_fish_integrity riêng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="x-c-minh">Đã xác minh</h3>
+<p>-27 test in-memory PASS trên Windows và staging Node20 của VPS; socket network bị chặn trong harness. Test callback từ native main.fixed.js, không chỉ mock mô tả.</p>
+<ul>
+<li>Core gameplay contract PASS trên staging và source local sau đồng bộ;714 bảng. Syntax5 file source và main client PASS.</li>
+<li>Live QA cả S1/S2 PASS: login → blocked pending catch → thay cá fixture9000stat/multi19000 → DBsave → disconnect/relog → bán cá cũ → câu thật → giữ → DB → disconnect/relog lần hai. Kiểm reward replay và các nhánh bị hold.</li>
+<li>QA không phải nhân vật người chơi;2 nhân vật QA đã xóa đúng UID/playerId, cuối check còn0. Không gửi thư bù, không trả tiền, không sửa/reroll/backfill cá lịch sử.</li>
+<li>Chỉ restart lhs-s1002 và lhs-s1001 một lần. PID S1=3727, S2=3088;4 tiến trình dist/admin/bot-worker giữ nguyên PID/restart count. Ready8080/8083 đều200.</li>
+</ul>
+<p>-150 artifact tracked đã kiểm hash;7 file của release đúng,143 artifact còn lại không đổi. Main/index served HTTP cổng81 đúng hash;22 bảng Fish* server/client giống nhau.</p>
+<ul>
+<li>Error tail không có TypeError/ReferenceError/Unhandled/FATAL/SyntaxError; vẫn có warning Mongoose lịch sử isNew/new-option, không refactor ngoài scope.</li>
+</ul>
+<h3 id="ch-a-ho-n-t-t-ang-t-m-ch-n">Chưa hoàn tất / đang tạm chặn</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Phần</th>
+<th>Trạng thái thực tế</th>
+</tr></thead><tbody>
+<tr>
+<td>Tẩy thuộc tính cần câu</td>
+<td>Tạm khóa: chưa có value-range/weight chuẩn; không trừ135</td>
+</tr>
+<tr>
+<td>Làm mới đơn</td>
+<td>Tạm khóa: chưa xác minh cost/limit; đơn hiện có vẫn nộp/nhận theo điều kiện, ngày mới reset</td>
+</tr>
+<tr>
+<td>Hộp cá linh hồn94821–94825</td>
+<td>Tạm khóa: AssetsUse type102 rewards rỗng; không trừ hộp, không phát bạc giả</td>
+</tr>
+<tr>
+<td>Thay linh hồn vào ô đã có cá</td>
+<td>Giữ nguyên cả hai và chặn; chưa có chính sách swap/recycle chuẩn, pending này sẽ chặn câu mới đến khi hoàn thiện</td>
+</tr>
+<tr>
+<td>Random cá linh hồn</td>
+<td>Chưa sửa: thuật toán first-N/deterministic cũ vẫn còn; không gọi đây là RNG chuẩn</td>
+</tr>
+<tr>
+<td>Tỷ lệ rơi cá thường/skill/di vật/event</td>
+<td>Chưa đạt parity gốc. Cá thường giữ random uniform trong pool khu và multi10000–11999 cũ; skill mới uniform theo pool hợp lệ; thiếu weight gốc. Event scene không có pool được chặn</td>
+</tr>
+<tr>
+<td>UI native trực tiếp</td>
+<td>Chưa mở giao diện người chơi để nghiệm thu hình ảnh/chuyển cảnh; đã test callback thật và WS, không thay thế được UI acceptance</td>
+</tr>
+<tr>
+<td>Persistence qua restart mới sau QA</td>
+<td>QA chạy sau deploy/restart và kiểm relog; không restart lần nữa chỉ để thử một cá mới. Chưa có bài test cá QA sống xuyên thêm một lần restart</td>
+</tr>
+</tbody></table></div>
+<p><strong>Kết luận:</strong> lỗi giữ cá mạnh rồi relog mất stat đã sửa và qua live QA. Các chốt chống mất dữ liệu/lạm dụng đã đưa lên; các phần thiếu contract đang hold hoặc ghi rõ chưa hoàn thiện, không tuyên bố “fix hết câu cá”.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng tải lại trang game/đăng nhập lại để nhận client mới; thử giữ/thay một cá mới và vào lại. Cá đã sai từ trước không tự được nâng hoặc phát lại.</li>
+<li>Hoàn thiện contract recycle/swap cá linh hồn trước, vì pending đang bảo toàn có thể chặn câu tiếp; tuyệt đối không xóa pending để vượt chốt.</li>
+<li>Lấy source/config chuẩn cho wash range, refresh cost/limit, soul-box pool, RNG và sự kiện. Test server-authoritative + native callback trước khi mở lại từng nhánh.</li>
+<li>Nghiệm thu UI câu cá trực tiếp và kiểm qua restart trong cửa sổ riêng khi phù hợp. Không chạy lại deploy/QA cũ mù, không rollback DB từ snapshot cũ.</li>
+<li>Theo yêu cầu hiện tại: không triển khai đền bù. Báo cáo chỉ lưu tình trạng lỗi lịch sử để tránh lặp lại.</li>
+</ol></main></body></html>

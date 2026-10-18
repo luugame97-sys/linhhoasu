@@ -1,0 +1,5766 @@
+{
+  "_table": "ValhallaConfig",
+  "_rows": 70,
+  "_type": "object",
+  "_firstKeys": "id,name,appearId,quality,type,minStar,maxStar,attrs,levelUpAttrs,skills,atlasReward,openDay,showType",
+  "_sample": [
+    {
+      "26111": {
+        "id": 26111,
+        "name": 26111,
+        "appearId": 26111,
+        "quality": 3,
+        "type": 1,
+        "minStar": 0,
+        "maxStar": 5,
+        "attrs": [
+          {
+            "id": 1,
+            "value": 3448
+          },
+          {
+            "id": 5,
+            "value": 283
+          },
+          {
+            "id": 6,
+            "value": 50
+          },
+          {
+            "id": 4,
+            "value": 9
+          },
+          {
+            "id": 161,
+            "value": 100
+          },
+          {
+            "id": 172,
+            "value": 60
+          }
+        ],
+        "levelUpAttrs": [
+          {
+            "id": 1,
+            "value": 575
+          },
+          {
+            "id": 5,
+            "value": 47
+          },
+          {
+            "id": 6,
+            "value": 8
+          },
+          {
+            "id": 4,
+            "value": 2
+          },
+          {
+            "id": 161,
+            "value": 10
+          },
+          {
+            "id": 172,
+            "value": 6
+          }
+        ],
+        "skills": [
+          2611101,
+          2611102,
+          2611103,
+          2611104,
+          2611105,
+          2611106
+        ],
+        "atlasReward": {
+          "id": 1,
+          "count": 100
+        },
+        "openDay": 1,
+        "showType": 1
+      }
+    },
+    {
+      "26121": {
+        "id": 26121,
+        "name": 26121,
+        "appearId": 26121,
+        "quality": 4,
+        "type": 1,
+        "minStar": 0,
+        "maxStar": 5,
+        "attrs": [
+          {
+            "id": 1,
+            "value": 4612
+          },
+          {
+            "id": 5,
+            "value": 366
+          },
+          {
+            "id": 6,
+            "value": 65
+          },
+          {
+            "id": 4,
+            "value": 11
+          },
+          {
+            "id": 161,
+            "value": 150
+          },
+          {
+            "id": 172,
+            "value": 90
+          }
+        ],
+        "levelUpAttrs": [
+          {
+            "id": 1,
+            "value": 769
+          },
+          {
+            "id": 5,
+            "value": 61
+          },
+          {
+            "id": 6,
+            "value": 11
+          },
+          {
+            "id": 4,
+            "value": 2
+          },
+          {
+            "id": 161,
+            "value": 15
+          },
+          {
+            "id": 172,
+            "value": 9
+          }
+        ],
+        "skills": [
+          2612101,
+          2612102,
+          2612103,
+          2612104,
+          2612105,
+          2612106
+        ],
+        "atlasReward": {
+          "id": 1,
+          "count": 150
+        },
+        "openDay": 1,
+        "showType": 1
+      }
+    },
+    {
+      "26131": {
+        "id": 26131,
+        "name": 26131,
+        "appearId": 26131,
+        "quality": 5,
+        "type": 1,
+        "minStar": 0,
+        "maxStar": 5,
+        "attrs": [
+          {
+            "id": 1,
+            "value": 5743
+          },
+          {
+            "id": 5,
+            "value": 451
+          },
+          {
+            "id": 6,
+            "value": 86
+          },
+          {
+            "id": 4,
+            "value": 15
+          },
+          {
+            "id": 161,
+            "value": 200
+          },
+          {
+            "id": 172,
+            "value": 120
+          }
+        ],
+        "levelUpAttrs": [
+          {
+            "id": 1,
+            "value": 957
+          },
+          {
+            "id": 5,
+            "value": 75
+          },
+          {
+            "id": 6,
+            "value": 14
+          },
+          {
+            "id": 4,
+            "value": 3
+          },
+          {
+            "id": 161,
+            "value": 20
+          },
+          {
+            "id": 172,
+            "value": 12
+          }
+        ],
+        "skills": [
+          2613101,
+          2613102,
+          2613103,
+          2613104,
+          2613105,
+          2613106
+        ],
+        "atlasReward": {
+          "id": 1,
+          "count": 200
+        },
+        "openDay": 1,
+        "showType": 1
+      }
+    }
+  ],
+  "data": {
+    "26111": {
+      "id": 26111,
+      "name": 26111,
+      "appearId": 26111,
+      "quality": 3,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 3448
+        },
+        {
+          "id": 5,
+          "value": 283
+        },
+        {
+          "id": 6,
+          "value": 50
+        },
+        {
+          "id": 4,
+          "value": 9
+        },
+        {
+          "id": 161,
+          "value": 100
+        },
+        {
+          "id": 172,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 575
+        },
+        {
+          "id": 5,
+          "value": 47
+        },
+        {
+          "id": 6,
+          "value": 8
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 161,
+          "value": 10
+        },
+        {
+          "id": 172,
+          "value": 6
+        }
+      ],
+      "skills": [
+        2611101,
+        2611102,
+        2611103,
+        2611104,
+        2611105,
+        2611106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26121": {
+      "id": 26121,
+      "name": 26121,
+      "appearId": 26121,
+      "quality": 4,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 4612
+        },
+        {
+          "id": 5,
+          "value": 366
+        },
+        {
+          "id": 6,
+          "value": 65
+        },
+        {
+          "id": 4,
+          "value": 11
+        },
+        {
+          "id": 161,
+          "value": 150
+        },
+        {
+          "id": 172,
+          "value": 90
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 769
+        },
+        {
+          "id": 5,
+          "value": 61
+        },
+        {
+          "id": 6,
+          "value": 11
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 161,
+          "value": 15
+        },
+        {
+          "id": 172,
+          "value": 9
+        }
+      ],
+      "skills": [
+        2612101,
+        2612102,
+        2612103,
+        2612104,
+        2612105,
+        2612106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26131": {
+      "id": 26131,
+      "name": 26131,
+      "appearId": 26131,
+      "quality": 5,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5743
+        },
+        {
+          "id": 5,
+          "value": 451
+        },
+        {
+          "id": 6,
+          "value": 86
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 161,
+          "value": 200
+        },
+        {
+          "id": 172,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 957
+        },
+        {
+          "id": 5,
+          "value": 75
+        },
+        {
+          "id": 6,
+          "value": 14
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 161,
+          "value": 20
+        },
+        {
+          "id": 172,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2613101,
+        2613102,
+        2613103,
+        2613104,
+        2613105,
+        2613106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26132": {
+      "id": 26132,
+      "name": 26132,
+      "appearId": 26132,
+      "quality": 5,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5936
+        },
+        {
+          "id": 5,
+          "value": 477
+        },
+        {
+          "id": 6,
+          "value": 85
+        },
+        {
+          "id": 4,
+          "value": 14
+        },
+        {
+          "id": 161,
+          "value": 200
+        },
+        {
+          "id": 172,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 989
+        },
+        {
+          "id": 5,
+          "value": 80
+        },
+        {
+          "id": 6,
+          "value": 14
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 161,
+          "value": 20
+        },
+        {
+          "id": 172,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2613201,
+        2613202,
+        2613203,
+        2613204,
+        2613205,
+        2613206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26133": {
+      "id": 26133,
+      "name": 26133,
+      "appearId": 26133,
+      "quality": 5,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5970
+        },
+        {
+          "id": 5,
+          "value": 477
+        },
+        {
+          "id": 6,
+          "value": 83
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 161,
+          "value": 200
+        },
+        {
+          "id": 172,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 995
+        },
+        {
+          "id": 5,
+          "value": 80
+        },
+        {
+          "id": 6,
+          "value": 14
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 161,
+          "value": 20
+        },
+        {
+          "id": 172,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2613301,
+        2613302,
+        2613303,
+        2613304,
+        2613305,
+        2613306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26141": {
+      "id": 26141,
+      "name": 26141,
+      "appearId": 26141,
+      "quality": 6,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7335
+        },
+        {
+          "id": 5,
+          "value": 603
+        },
+        {
+          "id": 6,
+          "value": 107
+        },
+        {
+          "id": 4,
+          "value": 18
+        },
+        {
+          "id": 161,
+          "value": 250
+        },
+        {
+          "id": 172,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1223
+        },
+        {
+          "id": 5,
+          "value": 101
+        },
+        {
+          "id": 6,
+          "value": 18
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 161,
+          "value": 25
+        },
+        {
+          "id": 172,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2614101,
+        2614102,
+        2614103,
+        2614104,
+        2614105,
+        2614106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26142": {
+      "id": 26142,
+      "name": 26142,
+      "appearId": 26142,
+      "quality": 6,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7423
+        },
+        {
+          "id": 5,
+          "value": 617
+        },
+        {
+          "id": 6,
+          "value": 111
+        },
+        {
+          "id": 4,
+          "value": 19
+        },
+        {
+          "id": 161,
+          "value": 250
+        },
+        {
+          "id": 172,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1237
+        },
+        {
+          "id": 5,
+          "value": 103
+        },
+        {
+          "id": 6,
+          "value": 19
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 161,
+          "value": 25
+        },
+        {
+          "id": 172,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2614201,
+        2614202,
+        2614203,
+        2614204,
+        2614205,
+        2614206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26143": {
+      "id": 26143,
+      "name": 26143,
+      "appearId": 26143,
+      "quality": 6,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7626
+        },
+        {
+          "id": 5,
+          "value": 617
+        },
+        {
+          "id": 6,
+          "value": 107
+        },
+        {
+          "id": 4,
+          "value": 18
+        },
+        {
+          "id": 161,
+          "value": 250
+        },
+        {
+          "id": 172,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1271
+        },
+        {
+          "id": 5,
+          "value": 103
+        },
+        {
+          "id": 6,
+          "value": 18
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 161,
+          "value": 25
+        },
+        {
+          "id": 172,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2614301,
+        2614302,
+        2614303,
+        2614304,
+        2614305,
+        2614306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26151": {
+      "id": 26151,
+      "name": 26151,
+      "appearId": 26151,
+      "quality": 7,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9563
+        },
+        {
+          "id": 5,
+          "value": 722
+        },
+        {
+          "id": 6,
+          "value": 130
+        },
+        {
+          "id": 4,
+          "value": 23
+        },
+        {
+          "id": 161,
+          "value": 325
+        },
+        {
+          "id": 172,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1594
+        },
+        {
+          "id": 5,
+          "value": 120
+        },
+        {
+          "id": 6,
+          "value": 22
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 161,
+          "value": 33
+        },
+        {
+          "id": 172,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2615101,
+        2615102,
+        2615103,
+        2615104,
+        2615105,
+        2615106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 1,
+      "showType": 1,
+      "promoteId": 26161
+    },
+    "26152": {
+      "id": 26152,
+      "name": 26152,
+      "appearId": 26152,
+      "quality": 7,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9262
+        },
+        {
+          "id": 5,
+          "value": 741
+        },
+        {
+          "id": 6,
+          "value": 131
+        },
+        {
+          "id": 4,
+          "value": 23
+        },
+        {
+          "id": 161,
+          "value": 325
+        },
+        {
+          "id": 172,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1544
+        },
+        {
+          "id": 5,
+          "value": 124
+        },
+        {
+          "id": 6,
+          "value": 22
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 161,
+          "value": 33
+        },
+        {
+          "id": 172,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2615201,
+        2615202,
+        2615203,
+        2615204,
+        2615205,
+        2615206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26162,
+      "special": 1
+    },
+    "26153": {
+      "id": 26153,
+      "name": 26153,
+      "appearId": 26153,
+      "quality": 7,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9481
+        },
+        {
+          "id": 5,
+          "value": 744
+        },
+        {
+          "id": 6,
+          "value": 129
+        },
+        {
+          "id": 4,
+          "value": 22
+        },
+        {
+          "id": 161,
+          "value": 325
+        },
+        {
+          "id": 172,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1580
+        },
+        {
+          "id": 5,
+          "value": 124
+        },
+        {
+          "id": 6,
+          "value": 22
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 161,
+          "value": 33
+        },
+        {
+          "id": 172,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2615301,
+        2615302,
+        2615303,
+        2615304,
+        2615305,
+        2615306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 36,
+      "showType": 3,
+      "promoteId": 26163,
+      "special": 1
+    },
+    "26161": {
+      "id": 26161,
+      "name": 26161,
+      "appearId": 26161,
+      "quality": 9,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 83312
+        },
+        {
+          "id": 5,
+          "value": 6339
+        },
+        {
+          "id": 6,
+          "value": 1155
+        },
+        {
+          "id": 4,
+          "value": 208
+        },
+        {
+          "id": 161,
+          "value": 2012
+        },
+        {
+          "id": 172,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 28
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 161,
+          "value": 40
+        },
+        {
+          "id": 172,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2616101,
+        2616102,
+        2616103,
+        2616104,
+        2616105,
+        2616106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26162": {
+      "id": 26162,
+      "name": 26162,
+      "appearId": 26162,
+      "quality": 9,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 81010
+        },
+        {
+          "id": 5,
+          "value": 6512
+        },
+        {
+          "id": 6,
+          "value": 1152
+        },
+        {
+          "id": 4,
+          "value": 208
+        },
+        {
+          "id": 161,
+          "value": 2012
+        },
+        {
+          "id": 172,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 28
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 161,
+          "value": 40
+        },
+        {
+          "id": 172,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2616201,
+        2616202,
+        2616203,
+        2616204,
+        2616205,
+        2616206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26163": {
+      "id": 26163,
+      "name": 26163,
+      "appearId": 26163,
+      "quality": 9,
+      "type": 1,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 82435
+        },
+        {
+          "id": 5,
+          "value": 6498
+        },
+        {
+          "id": 6,
+          "value": 1156
+        },
+        {
+          "id": 4,
+          "value": 207
+        },
+        {
+          "id": 161,
+          "value": 2012
+        },
+        {
+          "id": 172,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 28
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 161,
+          "value": 40
+        },
+        {
+          "id": 172,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2616301,
+        2616302,
+        2616303,
+        2616304,
+        2616305,
+        2616306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 36,
+      "showType": 3,
+      "special": 1
+    },
+    "26211": {
+      "id": 26211,
+      "name": 26211,
+      "appearId": 26211,
+      "quality": 3,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 3746
+        },
+        {
+          "id": 5,
+          "value": 276
+        },
+        {
+          "id": 6,
+          "value": 42
+        },
+        {
+          "id": 4,
+          "value": 9
+        },
+        {
+          "id": 162,
+          "value": 100
+        },
+        {
+          "id": 175,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 624
+        },
+        {
+          "id": 5,
+          "value": 46
+        },
+        {
+          "id": 6,
+          "value": 7
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 162,
+          "value": 10
+        },
+        {
+          "id": 175,
+          "value": 6
+        }
+      ],
+      "skills": [
+        2621101,
+        2621102,
+        2621103,
+        2621104,
+        2621105,
+        2621106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26221": {
+      "id": 26221,
+      "name": 26221,
+      "appearId": 26221,
+      "quality": 4,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 4919
+        },
+        {
+          "id": 5,
+          "value": 361
+        },
+        {
+          "id": 6,
+          "value": 59
+        },
+        {
+          "id": 4,
+          "value": 13
+        },
+        {
+          "id": 162,
+          "value": 150
+        },
+        {
+          "id": 175,
+          "value": 90
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 820
+        },
+        {
+          "id": 5,
+          "value": 60
+        },
+        {
+          "id": 6,
+          "value": 10
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 162,
+          "value": 15
+        },
+        {
+          "id": 175,
+          "value": 9
+        }
+      ],
+      "skills": [
+        2622101,
+        2622102,
+        2622103,
+        2622104,
+        2622105,
+        2622106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26231": {
+      "id": 26231,
+      "name": 26231,
+      "appearId": 26231,
+      "quality": 5,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 6217
+        },
+        {
+          "id": 5,
+          "value": 475
+        },
+        {
+          "id": 6,
+          "value": 73
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 162,
+          "value": 200
+        },
+        {
+          "id": 175,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1036
+        },
+        {
+          "id": 5,
+          "value": 79
+        },
+        {
+          "id": 6,
+          "value": 12
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 162,
+          "value": 20
+        },
+        {
+          "id": 175,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2623101,
+        2623102,
+        2623103,
+        2623104,
+        2623105,
+        2623106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26232": {
+      "id": 26232,
+      "name": 26232,
+      "appearId": 26232,
+      "quality": 5,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 6280
+        },
+        {
+          "id": 5,
+          "value": 476
+        },
+        {
+          "id": 6,
+          "value": 72
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 162,
+          "value": 200
+        },
+        {
+          "id": 175,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1047
+        },
+        {
+          "id": 5,
+          "value": 79
+        },
+        {
+          "id": 6,
+          "value": 12
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 162,
+          "value": 20
+        },
+        {
+          "id": 175,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2623201,
+        2623202,
+        2623203,
+        2623204,
+        2623205,
+        2623206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26233": {
+      "id": 26233,
+      "name": 26233,
+      "appearId": 26233,
+      "quality": 5,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 6421
+        },
+        {
+          "id": 5,
+          "value": 474
+        },
+        {
+          "id": 6,
+          "value": 71
+        },
+        {
+          "id": 4,
+          "value": 16
+        },
+        {
+          "id": 162,
+          "value": 200
+        },
+        {
+          "id": 175,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1070
+        },
+        {
+          "id": 5,
+          "value": 79
+        },
+        {
+          "id": 6,
+          "value": 12
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 162,
+          "value": 20
+        },
+        {
+          "id": 175,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2623301,
+        2623302,
+        2623303,
+        2623304,
+        2623305,
+        2623306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26241": {
+      "id": 26241,
+      "name": 26241,
+      "appearId": 26241,
+      "quality": 6,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 8027
+        },
+        {
+          "id": 5,
+          "value": 603
+        },
+        {
+          "id": 6,
+          "value": 91
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 162,
+          "value": 250
+        },
+        {
+          "id": 175,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1338
+        },
+        {
+          "id": 5,
+          "value": 101
+        },
+        {
+          "id": 6,
+          "value": 15
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 162,
+          "value": 25
+        },
+        {
+          "id": 175,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2624101,
+        2624102,
+        2624103,
+        2624104,
+        2624105,
+        2624106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26242": {
+      "id": 26242,
+      "name": 26242,
+      "appearId": 26242,
+      "quality": 6,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 8008
+        },
+        {
+          "id": 5,
+          "value": 607
+        },
+        {
+          "id": 6,
+          "value": 93
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 162,
+          "value": 250
+        },
+        {
+          "id": 175,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1335
+        },
+        {
+          "id": 5,
+          "value": 101
+        },
+        {
+          "id": 6,
+          "value": 16
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 162,
+          "value": 25
+        },
+        {
+          "id": 175,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2624201,
+        2624202,
+        2624203,
+        2624204,
+        2624205,
+        2624206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26243": {
+      "id": 26243,
+      "name": 26243,
+      "appearId": 26243,
+      "quality": 6,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 8187
+        },
+        {
+          "id": 5,
+          "value": 591
+        },
+        {
+          "id": 6,
+          "value": 93
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 162,
+          "value": 250
+        },
+        {
+          "id": 175,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1365
+        },
+        {
+          "id": 5,
+          "value": 99
+        },
+        {
+          "id": 6,
+          "value": 16
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 162,
+          "value": 25
+        },
+        {
+          "id": 175,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2624301,
+        2624302,
+        2624303,
+        2624304,
+        2624305,
+        2624306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26251": {
+      "id": 26251,
+      "name": 26251,
+      "appearId": 26251,
+      "quality": 7,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 10289
+        },
+        {
+          "id": 5,
+          "value": 736
+        },
+        {
+          "id": 6,
+          "value": 114
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 162,
+          "value": 325
+        },
+        {
+          "id": 175,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1715
+        },
+        {
+          "id": 5,
+          "value": 123
+        },
+        {
+          "id": 6,
+          "value": 19
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 162,
+          "value": 33
+        },
+        {
+          "id": 175,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2625101,
+        2625102,
+        2625103,
+        2625104,
+        2625105,
+        2625106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 1,
+      "showType": 1,
+      "promoteId": 26261
+    },
+    "26252": {
+      "id": 26252,
+      "name": 26252,
+      "appearId": 26252,
+      "quality": 7,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9849
+        },
+        {
+          "id": 5,
+          "value": 754
+        },
+        {
+          "id": 6,
+          "value": 117
+        },
+        {
+          "id": 4,
+          "value": 24
+        },
+        {
+          "id": 162,
+          "value": 325
+        },
+        {
+          "id": 175,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1642
+        },
+        {
+          "id": 5,
+          "value": 126
+        },
+        {
+          "id": 6,
+          "value": 20
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 162,
+          "value": 33
+        },
+        {
+          "id": 175,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2625201,
+        2625202,
+        2625203,
+        2625204,
+        2625205,
+        2625206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26262,
+      "special": 1
+    },
+    "26253": {
+      "id": 26253,
+      "name": 26253,
+      "appearId": 26253,
+      "quality": 7,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 10081
+        },
+        {
+          "id": 5,
+          "value": 745
+        },
+        {
+          "id": 6,
+          "value": 117
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 162,
+          "value": 325
+        },
+        {
+          "id": 175,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1680
+        },
+        {
+          "id": 5,
+          "value": 124
+        },
+        {
+          "id": 6,
+          "value": 20
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 162,
+          "value": 33
+        },
+        {
+          "id": 175,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2625301,
+        2625302,
+        2625303,
+        2625304,
+        2625305,
+        2625306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26263,
+      "special": 1
+    },
+    "26261": {
+      "id": 26261,
+      "name": 26261,
+      "appearId": 26261,
+      "quality": 9,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 90017
+        },
+        {
+          "id": 5,
+          "value": 6472
+        },
+        {
+          "id": 6,
+          "value": 999
+        },
+        {
+          "id": 4,
+          "value": 212
+        },
+        {
+          "id": 162,
+          "value": 2012
+        },
+        {
+          "id": 175,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 2083
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 24
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 162,
+          "value": 40
+        },
+        {
+          "id": 175,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2626101,
+        2626102,
+        2626103,
+        2626104,
+        2626105,
+        2626106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26262": {
+      "id": 26262,
+      "name": 26262,
+      "appearId": 26262,
+      "quality": 9,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 86646
+        },
+        {
+          "id": 5,
+          "value": 6600
+        },
+        {
+          "id": 6,
+          "value": 1042
+        },
+        {
+          "id": 4,
+          "value": 210
+        },
+        {
+          "id": 162,
+          "value": 2012
+        },
+        {
+          "id": 175,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 2083
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 24
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 162,
+          "value": 40
+        },
+        {
+          "id": 175,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2626201,
+        2626202,
+        2626203,
+        2626204,
+        2626205,
+        2626206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26263": {
+      "id": 26263,
+      "name": 26263,
+      "appearId": 26263,
+      "quality": 9,
+      "type": 2,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 87912
+        },
+        {
+          "id": 5,
+          "value": 6496
+        },
+        {
+          "id": 6,
+          "value": 1040
+        },
+        {
+          "id": 4,
+          "value": 212
+        },
+        {
+          "id": 162,
+          "value": 2012
+        },
+        {
+          "id": 175,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 2083
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 24
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 162,
+          "value": 40
+        },
+        {
+          "id": 175,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2626301,
+        2626302,
+        2626303,
+        2626304,
+        2626305,
+        2626306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26311": {
+      "id": 26311,
+      "name": 26311,
+      "appearId": 26311,
+      "quality": 3,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 3486
+        },
+        {
+          "id": 5,
+          "value": 284
+        },
+        {
+          "id": 6,
+          "value": 47
+        },
+        {
+          "id": 4,
+          "value": 9
+        },
+        {
+          "id": 163,
+          "value": 100
+        },
+        {
+          "id": 174,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 581
+        },
+        {
+          "id": 5,
+          "value": 47
+        },
+        {
+          "id": 6,
+          "value": 8
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 163,
+          "value": 10
+        },
+        {
+          "id": 174,
+          "value": 6
+        }
+      ],
+      "skills": [
+        2631101,
+        2631102,
+        2631103,
+        2631104,
+        2631105,
+        2631106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26321": {
+      "id": 26321,
+      "name": 26321,
+      "appearId": 26321,
+      "quality": 4,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 4710
+        },
+        {
+          "id": 5,
+          "value": 374
+        },
+        {
+          "id": 6,
+          "value": 62
+        },
+        {
+          "id": 4,
+          "value": 12
+        },
+        {
+          "id": 163,
+          "value": 150
+        },
+        {
+          "id": 174,
+          "value": 90
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 785
+        },
+        {
+          "id": 5,
+          "value": 62
+        },
+        {
+          "id": 6,
+          "value": 10
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 163,
+          "value": 15
+        },
+        {
+          "id": 174,
+          "value": 9
+        }
+      ],
+      "skills": [
+        2632101,
+        2632102,
+        2632103,
+        2632104,
+        2632105,
+        2632106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26331": {
+      "id": 26331,
+      "name": 26331,
+      "appearId": 26331,
+      "quality": 5,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5899
+        },
+        {
+          "id": 5,
+          "value": 457
+        },
+        {
+          "id": 6,
+          "value": 76
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 163,
+          "value": 200
+        },
+        {
+          "id": 174,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 983
+        },
+        {
+          "id": 5,
+          "value": 76
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 163,
+          "value": 20
+        },
+        {
+          "id": 174,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2633101,
+        2633102,
+        2633103,
+        2633104,
+        2633105,
+        2633106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26332": {
+      "id": 26332,
+      "name": 26332,
+      "appearId": 26332,
+      "quality": 5,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5702
+        },
+        {
+          "id": 5,
+          "value": 472
+        },
+        {
+          "id": 6,
+          "value": 78
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 163,
+          "value": 200
+        },
+        {
+          "id": 174,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 950
+        },
+        {
+          "id": 5,
+          "value": 79
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 163,
+          "value": 20
+        },
+        {
+          "id": 174,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2633201,
+        2633202,
+        2633203,
+        2633204,
+        2633205,
+        2633206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26333": {
+      "id": 26333,
+      "name": 26333,
+      "appearId": 26333,
+      "quality": 5,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5784
+        },
+        {
+          "id": 5,
+          "value": 474
+        },
+        {
+          "id": 6,
+          "value": 76
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 163,
+          "value": 200
+        },
+        {
+          "id": 174,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 964
+        },
+        {
+          "id": 5,
+          "value": 79
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 163,
+          "value": 20
+        },
+        {
+          "id": 174,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2633301,
+        2633302,
+        2633303,
+        2633304,
+        2633305,
+        2633306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26341": {
+      "id": 26341,
+      "name": 26341,
+      "appearId": 26341,
+      "quality": 6,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7664
+        },
+        {
+          "id": 5,
+          "value": 592
+        },
+        {
+          "id": 6,
+          "value": 100
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 163,
+          "value": 250
+        },
+        {
+          "id": 174,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1277
+        },
+        {
+          "id": 5,
+          "value": 99
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 163,
+          "value": 25
+        },
+        {
+          "id": 174,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2634101,
+        2634102,
+        2634103,
+        2634104,
+        2634105,
+        2634106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26342": {
+      "id": 26342,
+      "name": 26342,
+      "appearId": 26342,
+      "quality": 6,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7414
+        },
+        {
+          "id": 5,
+          "value": 614
+        },
+        {
+          "id": 6,
+          "value": 99
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 163,
+          "value": 250
+        },
+        {
+          "id": 174,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1236
+        },
+        {
+          "id": 5,
+          "value": 102
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 163,
+          "value": 25
+        },
+        {
+          "id": 174,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2634201,
+        2634202,
+        2634203,
+        2634204,
+        2634205,
+        2634206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26343": {
+      "id": 26343,
+      "name": 26343,
+      "appearId": 26343,
+      "quality": 6,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7590
+        },
+        {
+          "id": 5,
+          "value": 612
+        },
+        {
+          "id": 6,
+          "value": 100
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 163,
+          "value": 250
+        },
+        {
+          "id": 174,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1265
+        },
+        {
+          "id": 5,
+          "value": 102
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 163,
+          "value": 25
+        },
+        {
+          "id": 174,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2634301,
+        2634302,
+        2634303,
+        2634304,
+        2634305,
+        2634306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26351": {
+      "id": 26351,
+      "name": 26351,
+      "appearId": 26351,
+      "quality": 7,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9044
+        },
+        {
+          "id": 5,
+          "value": 743
+        },
+        {
+          "id": 6,
+          "value": 126
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 163,
+          "value": 325
+        },
+        {
+          "id": 174,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1507
+        },
+        {
+          "id": 5,
+          "value": 124
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 163,
+          "value": 33
+        },
+        {
+          "id": 174,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2635101,
+        2635102,
+        2635103,
+        2635104,
+        2635105,
+        2635106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 1,
+      "showType": 1,
+      "promoteId": 26361
+    },
+    "26352": {
+      "id": 26352,
+      "name": 26352,
+      "appearId": 26352,
+      "quality": 7,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9387
+        },
+        {
+          "id": 5,
+          "value": 747
+        },
+        {
+          "id": 6,
+          "value": 127
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 163,
+          "value": 325
+        },
+        {
+          "id": 174,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1565
+        },
+        {
+          "id": 5,
+          "value": 125
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 163,
+          "value": 33
+        },
+        {
+          "id": 174,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2635201,
+        2635202,
+        2635203,
+        2635204,
+        2635205,
+        2635206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26362,
+      "special": 1
+    },
+    "26353": {
+      "id": 26353,
+      "name": 26353,
+      "appearId": 26353,
+      "quality": 7,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9145
+        },
+        {
+          "id": 5,
+          "value": 723
+        },
+        {
+          "id": 6,
+          "value": 122
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 163,
+          "value": 325
+        },
+        {
+          "id": 174,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1524
+        },
+        {
+          "id": 5,
+          "value": 121
+        },
+        {
+          "id": 6,
+          "value": 20
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 163,
+          "value": 33
+        },
+        {
+          "id": 174,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2635301,
+        2635302,
+        2635303,
+        2635304,
+        2635305,
+        2635306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 36,
+      "showType": 3,
+      "promoteId": 26363,
+      "special": 1
+    },
+    "26361": {
+      "id": 26361,
+      "name": 26361,
+      "appearId": 26361,
+      "quality": 9,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 79569
+        },
+        {
+          "id": 5,
+          "value": 6482
+        },
+        {
+          "id": 6,
+          "value": 1104
+        },
+        {
+          "id": 4,
+          "value": 213
+        },
+        {
+          "id": 163,
+          "value": 2012
+        },
+        {
+          "id": 174,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 163,
+          "value": 40
+        },
+        {
+          "id": 174,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2636101,
+        2636102,
+        2636103,
+        2636104,
+        2636105,
+        2636106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26362": {
+      "id": 26362,
+      "name": 26362,
+      "appearId": 26362,
+      "quality": 9,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 81843
+        },
+        {
+          "id": 5,
+          "value": 6558
+        },
+        {
+          "id": 6,
+          "value": 1105
+        },
+        {
+          "id": 4,
+          "value": 212
+        },
+        {
+          "id": 163,
+          "value": 2012
+        },
+        {
+          "id": 174,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 163,
+          "value": 40
+        },
+        {
+          "id": 174,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2636201,
+        2636202,
+        2636203,
+        2636204,
+        2636205,
+        2636206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26363": {
+      "id": 26363,
+      "name": 26363,
+      "appearId": 26363,
+      "quality": 9,
+      "type": 3,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 79912
+        },
+        {
+          "id": 5,
+          "value": 6359
+        },
+        {
+          "id": 6,
+          "value": 1057
+        },
+        {
+          "id": 4,
+          "value": 211
+        },
+        {
+          "id": 163,
+          "value": 2012
+        },
+        {
+          "id": 174,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 155
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 163,
+          "value": 40
+        },
+        {
+          "id": 174,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2636301,
+        2636302,
+        2636303,
+        2636304,
+        2636305,
+        2636306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 36,
+      "showType": 3,
+      "special": 1
+    },
+    "26411": {
+      "id": 26411,
+      "name": 26411,
+      "appearId": 26411,
+      "quality": 3,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 3183
+        },
+        {
+          "id": 5,
+          "value": 297
+        },
+        {
+          "id": 6,
+          "value": 45
+        },
+        {
+          "id": 4,
+          "value": 9
+        },
+        {
+          "id": 164,
+          "value": 100
+        },
+        {
+          "id": 171,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 531
+        },
+        {
+          "id": 5,
+          "value": 50
+        },
+        {
+          "id": 6,
+          "value": 8
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 164,
+          "value": 10
+        },
+        {
+          "id": 171,
+          "value": 6
+        }
+      ],
+      "skills": [
+        2641101,
+        2641102,
+        2641103,
+        2641104,
+        2641105,
+        2641106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26421": {
+      "id": 26421,
+      "name": 26421,
+      "appearId": 26421,
+      "quality": 4,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 4419
+        },
+        {
+          "id": 5,
+          "value": 403
+        },
+        {
+          "id": 6,
+          "value": 64
+        },
+        {
+          "id": 4,
+          "value": 12
+        },
+        {
+          "id": 164,
+          "value": 150
+        },
+        {
+          "id": 171,
+          "value": 90
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 737
+        },
+        {
+          "id": 5,
+          "value": 67
+        },
+        {
+          "id": 6,
+          "value": 11
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 164,
+          "value": 15
+        },
+        {
+          "id": 171,
+          "value": 9
+        }
+      ],
+      "skills": [
+        2642101,
+        2642102,
+        2642103,
+        2642104,
+        2642105,
+        2642106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26431": {
+      "id": 26431,
+      "name": 26431,
+      "appearId": 26431,
+      "quality": 5,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5448
+        },
+        {
+          "id": 5,
+          "value": 506
+        },
+        {
+          "id": 6,
+          "value": 79
+        },
+        {
+          "id": 4,
+          "value": 16
+        },
+        {
+          "id": 164,
+          "value": 200
+        },
+        {
+          "id": 171,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 908
+        },
+        {
+          "id": 5,
+          "value": 84
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 164,
+          "value": 20
+        },
+        {
+          "id": 171,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2643101,
+        2643102,
+        2643103,
+        2643104,
+        2643105,
+        2643106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26432": {
+      "id": 26432,
+      "name": 26432,
+      "appearId": 26432,
+      "quality": 5,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5416
+        },
+        {
+          "id": 5,
+          "value": 499
+        },
+        {
+          "id": 6,
+          "value": 77
+        },
+        {
+          "id": 4,
+          "value": 16
+        },
+        {
+          "id": 164,
+          "value": 200
+        },
+        {
+          "id": 171,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 903
+        },
+        {
+          "id": 5,
+          "value": 83
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 164,
+          "value": 20
+        },
+        {
+          "id": 171,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2643201,
+        2643202,
+        2643203,
+        2643204,
+        2643205,
+        2643206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26433": {
+      "id": 26433,
+      "name": 26433,
+      "appearId": 26433,
+      "quality": 5,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5313
+        },
+        {
+          "id": 5,
+          "value": 485
+        },
+        {
+          "id": 6,
+          "value": 76
+        },
+        {
+          "id": 4,
+          "value": 15
+        },
+        {
+          "id": 164,
+          "value": 200
+        },
+        {
+          "id": 171,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 886
+        },
+        {
+          "id": 5,
+          "value": 81
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 164,
+          "value": 20
+        },
+        {
+          "id": 171,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2643301,
+        2643302,
+        2643303,
+        2643304,
+        2643305,
+        2643306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26441": {
+      "id": 26441,
+      "name": 26441,
+      "appearId": 26441,
+      "quality": 6,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7040
+        },
+        {
+          "id": 5,
+          "value": 668
+        },
+        {
+          "id": 6,
+          "value": 103
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 164,
+          "value": 250
+        },
+        {
+          "id": 171,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1173
+        },
+        {
+          "id": 5,
+          "value": 111
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 164,
+          "value": 25
+        },
+        {
+          "id": 171,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2644101,
+        2644102,
+        2644103,
+        2644104,
+        2644105,
+        2644106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26442": {
+      "id": 26442,
+      "name": 26442,
+      "appearId": 26442,
+      "quality": 6,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7159
+        },
+        {
+          "id": 5,
+          "value": 653
+        },
+        {
+          "id": 6,
+          "value": 98
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 164,
+          "value": 250
+        },
+        {
+          "id": 171,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1193
+        },
+        {
+          "id": 5,
+          "value": 109
+        },
+        {
+          "id": 6,
+          "value": 16
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 164,
+          "value": 25
+        },
+        {
+          "id": 171,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2644201,
+        2644202,
+        2644203,
+        2644204,
+        2644205,
+        2644206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26443": {
+      "id": 26443,
+      "name": 26443,
+      "appearId": 26443,
+      "quality": 6,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7111
+        },
+        {
+          "id": 5,
+          "value": 658
+        },
+        {
+          "id": 6,
+          "value": 100
+        },
+        {
+          "id": 4,
+          "value": 20
+        },
+        {
+          "id": 164,
+          "value": 250
+        },
+        {
+          "id": 171,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1185
+        },
+        {
+          "id": 5,
+          "value": 110
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 164,
+          "value": 25
+        },
+        {
+          "id": 171,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2644301,
+        2644302,
+        2644303,
+        2644304,
+        2644305,
+        2644306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26451": {
+      "id": 26451,
+      "name": 26451,
+      "appearId": 26451,
+      "quality": 7,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 8634
+        },
+        {
+          "id": 5,
+          "value": 816
+        },
+        {
+          "id": 6,
+          "value": 126
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 164,
+          "value": 325
+        },
+        {
+          "id": 171,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1439
+        },
+        {
+          "id": 5,
+          "value": 136
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 164,
+          "value": 33
+        },
+        {
+          "id": 171,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2645101,
+        2645102,
+        2645103,
+        2645104,
+        2645105,
+        2645106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 1,
+      "showType": 1,
+      "promoteId": 26461
+    },
+    "26452": {
+      "id": 26452,
+      "name": 26452,
+      "appearId": 26452,
+      "quality": 7,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 8417
+        },
+        {
+          "id": 5,
+          "value": 805
+        },
+        {
+          "id": 6,
+          "value": 128
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 164,
+          "value": 325
+        },
+        {
+          "id": 171,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1403
+        },
+        {
+          "id": 5,
+          "value": 134
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 164,
+          "value": 33
+        },
+        {
+          "id": 171,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2645201,
+        2645202,
+        2645203,
+        2645204,
+        2645205,
+        2645206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26462,
+      "special": 1
+    },
+    "26453": {
+      "id": 26453,
+      "name": 26453,
+      "appearId": 26453,
+      "quality": 7,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 8803
+        },
+        {
+          "id": 5,
+          "value": 800
+        },
+        {
+          "id": 6,
+          "value": 123
+        },
+        {
+          "id": 4,
+          "value": 25
+        },
+        {
+          "id": 164,
+          "value": 325
+        },
+        {
+          "id": 171,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1467
+        },
+        {
+          "id": 5,
+          "value": 133
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 164,
+          "value": 33
+        },
+        {
+          "id": 171,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2645301,
+        2645302,
+        2645303,
+        2645304,
+        2645305,
+        2645306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26463,
+      "special": 1
+    },
+    "26461": {
+      "id": 26461,
+      "name": 26461,
+      "appearId": 26461,
+      "quality": 9,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 75517
+        },
+        {
+          "id": 5,
+          "value": 7094
+        },
+        {
+          "id": 6,
+          "value": 1103
+        },
+        {
+          "id": 4,
+          "value": 213
+        },
+        {
+          "id": 164,
+          "value": 2012
+        },
+        {
+          "id": 171,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1792
+        },
+        {
+          "id": 5,
+          "value": 167
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 164,
+          "value": 40
+        },
+        {
+          "id": 171,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2646101,
+        2646102,
+        2646103,
+        2646104,
+        2646105,
+        2646106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26462": {
+      "id": 26462,
+      "name": 26462,
+      "appearId": 26462,
+      "quality": 9,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 73649
+        },
+        {
+          "id": 5,
+          "value": 7050
+        },
+        {
+          "id": 6,
+          "value": 1105
+        },
+        {
+          "id": 4,
+          "value": 212
+        },
+        {
+          "id": 164,
+          "value": 2012
+        },
+        {
+          "id": 171,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1792
+        },
+        {
+          "id": 5,
+          "value": 167
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 164,
+          "value": 40
+        },
+        {
+          "id": 171,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2646201,
+        2646202,
+        2646203,
+        2646204,
+        2646205,
+        2646206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26463": {
+      "id": 26463,
+      "name": 26463,
+      "appearId": 26463,
+      "quality": 9,
+      "type": 4,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 76616
+        },
+        {
+          "id": 5,
+          "value": 6973
+        },
+        {
+          "id": 6,
+          "value": 1101
+        },
+        {
+          "id": 4,
+          "value": 213
+        },
+        {
+          "id": 164,
+          "value": 2012
+        },
+        {
+          "id": 171,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1792
+        },
+        {
+          "id": 5,
+          "value": 167
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 164,
+          "value": 40
+        },
+        {
+          "id": 171,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2646301,
+        2646302,
+        2646303,
+        2646304,
+        2646305,
+        2646306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26511": {
+      "id": 26511,
+      "name": 26511,
+      "appearId": 26511,
+      "quality": 3,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 3412
+        },
+        {
+          "id": 5,
+          "value": 264
+        },
+        {
+          "id": 6,
+          "value": 46
+        },
+        {
+          "id": 4,
+          "value": 10
+        },
+        {
+          "id": 165,
+          "value": 100
+        },
+        {
+          "id": 173,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 569
+        },
+        {
+          "id": 5,
+          "value": 44
+        },
+        {
+          "id": 6,
+          "value": 8
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 165,
+          "value": 10
+        },
+        {
+          "id": 173,
+          "value": 6
+        }
+      ],
+      "skills": [
+        2651101,
+        2651102,
+        2651103,
+        2651104,
+        2651105,
+        2651106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26521": {
+      "id": 26521,
+      "name": 26521,
+      "appearId": 26521,
+      "quality": 4,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 4567
+        },
+        {
+          "id": 5,
+          "value": 354
+        },
+        {
+          "id": 6,
+          "value": 64
+        },
+        {
+          "id": 4,
+          "value": 14
+        },
+        {
+          "id": 165,
+          "value": 150
+        },
+        {
+          "id": 173,
+          "value": 90
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 761
+        },
+        {
+          "id": 5,
+          "value": 59
+        },
+        {
+          "id": 6,
+          "value": 11
+        },
+        {
+          "id": 4,
+          "value": 2
+        },
+        {
+          "id": 165,
+          "value": 15
+        },
+        {
+          "id": 173,
+          "value": 9
+        }
+      ],
+      "skills": [
+        2652101,
+        2652102,
+        2652103,
+        2652104,
+        2652105,
+        2652106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26531": {
+      "id": 26531,
+      "name": 26531,
+      "appearId": 26531,
+      "quality": 5,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5667
+        },
+        {
+          "id": 5,
+          "value": 438
+        },
+        {
+          "id": 6,
+          "value": 76
+        },
+        {
+          "id": 4,
+          "value": 17
+        },
+        {
+          "id": 165,
+          "value": 200
+        },
+        {
+          "id": 173,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 945
+        },
+        {
+          "id": 5,
+          "value": 73
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 165,
+          "value": 20
+        },
+        {
+          "id": 173,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2653101,
+        2653102,
+        2653103,
+        2653104,
+        2653105,
+        2653106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26532": {
+      "id": 26532,
+      "name": 26532,
+      "appearId": 26532,
+      "quality": 5,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5698
+        },
+        {
+          "id": 5,
+          "value": 430
+        },
+        {
+          "id": 6,
+          "value": 77
+        },
+        {
+          "id": 4,
+          "value": 16
+        },
+        {
+          "id": 165,
+          "value": 200
+        },
+        {
+          "id": 173,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 950
+        },
+        {
+          "id": 5,
+          "value": 72
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 165,
+          "value": 20
+        },
+        {
+          "id": 173,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2653201,
+        2653202,
+        2653203,
+        2653204,
+        2653205,
+        2653206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26533": {
+      "id": 26533,
+      "name": 26533,
+      "appearId": 26533,
+      "quality": 5,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 5638
+        },
+        {
+          "id": 5,
+          "value": 426
+        },
+        {
+          "id": 6,
+          "value": 77
+        },
+        {
+          "id": 4,
+          "value": 16
+        },
+        {
+          "id": 165,
+          "value": 200
+        },
+        {
+          "id": 173,
+          "value": 120
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 940
+        },
+        {
+          "id": 5,
+          "value": 71
+        },
+        {
+          "id": 6,
+          "value": 13
+        },
+        {
+          "id": 4,
+          "value": 3
+        },
+        {
+          "id": 165,
+          "value": 20
+        },
+        {
+          "id": 173,
+          "value": 12
+        }
+      ],
+      "skills": [
+        2653301,
+        2653302,
+        2653303,
+        2653304,
+        2653305,
+        2653306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26541": {
+      "id": 26541,
+      "name": 26541,
+      "appearId": 26541,
+      "quality": 6,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7404
+        },
+        {
+          "id": 5,
+          "value": 551
+        },
+        {
+          "id": 6,
+          "value": 103
+        },
+        {
+          "id": 4,
+          "value": 21
+        },
+        {
+          "id": 165,
+          "value": 250
+        },
+        {
+          "id": 173,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1234
+        },
+        {
+          "id": 5,
+          "value": 92
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 165,
+          "value": 25
+        },
+        {
+          "id": 173,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2654101,
+        2654102,
+        2654103,
+        2654104,
+        2654105,
+        2654106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26542": {
+      "id": 26542,
+      "name": 26542,
+      "appearId": 26542,
+      "quality": 6,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7420
+        },
+        {
+          "id": 5,
+          "value": 574
+        },
+        {
+          "id": 6,
+          "value": 102
+        },
+        {
+          "id": 4,
+          "value": 22
+        },
+        {
+          "id": 165,
+          "value": 250
+        },
+        {
+          "id": 173,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1237
+        },
+        {
+          "id": 5,
+          "value": 96
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 165,
+          "value": 25
+        },
+        {
+          "id": 173,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2654201,
+        2654202,
+        2654203,
+        2654204,
+        2654205,
+        2654206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26543": {
+      "id": 26543,
+      "name": 26543,
+      "appearId": 26543,
+      "quality": 6,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 7588
+        },
+        {
+          "id": 5,
+          "value": 542
+        },
+        {
+          "id": 6,
+          "value": 99
+        },
+        {
+          "id": 4,
+          "value": 22
+        },
+        {
+          "id": 165,
+          "value": 250
+        },
+        {
+          "id": 173,
+          "value": 150
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1265
+        },
+        {
+          "id": 5,
+          "value": 90
+        },
+        {
+          "id": 6,
+          "value": 17
+        },
+        {
+          "id": 4,
+          "value": 4
+        },
+        {
+          "id": 165,
+          "value": 25
+        },
+        {
+          "id": 173,
+          "value": 15
+        }
+      ],
+      "skills": [
+        2654301,
+        2654302,
+        2654303,
+        2654304,
+        2654305,
+        2654306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26551": {
+      "id": 26551,
+      "name": 26551,
+      "appearId": 26551,
+      "quality": 7,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9447
+        },
+        {
+          "id": 5,
+          "value": 680
+        },
+        {
+          "id": 6,
+          "value": 122
+        },
+        {
+          "id": 4,
+          "value": 27
+        },
+        {
+          "id": 165,
+          "value": 325
+        },
+        {
+          "id": 173,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1575
+        },
+        {
+          "id": 5,
+          "value": 113
+        },
+        {
+          "id": 6,
+          "value": 20
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 165,
+          "value": 33
+        },
+        {
+          "id": 173,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2655101,
+        2655102,
+        2655103,
+        2655104,
+        2655105,
+        2655106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 1,
+      "showType": 1,
+      "promoteId": 26561
+    },
+    "26552": {
+      "id": 26552,
+      "name": 26552,
+      "appearId": 26552,
+      "quality": 7,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9331
+        },
+        {
+          "id": 5,
+          "value": 696
+        },
+        {
+          "id": 6,
+          "value": 123
+        },
+        {
+          "id": 4,
+          "value": 27
+        },
+        {
+          "id": 165,
+          "value": 325
+        },
+        {
+          "id": 173,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1555
+        },
+        {
+          "id": 5,
+          "value": 116
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 165,
+          "value": 33
+        },
+        {
+          "id": 173,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2655201,
+        2655202,
+        2655203,
+        2655204,
+        2655205,
+        2655206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26562,
+      "special": 1
+    },
+    "26553": {
+      "id": 26553,
+      "name": 26553,
+      "appearId": 26553,
+      "quality": 7,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 9395
+        },
+        {
+          "id": 5,
+          "value": 693
+        },
+        {
+          "id": 6,
+          "value": 124
+        },
+        {
+          "id": 4,
+          "value": 27
+        },
+        {
+          "id": 165,
+          "value": 325
+        },
+        {
+          "id": 173,
+          "value": 195
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1566
+        },
+        {
+          "id": 5,
+          "value": 116
+        },
+        {
+          "id": 6,
+          "value": 21
+        },
+        {
+          "id": 4,
+          "value": 5
+        },
+        {
+          "id": 165,
+          "value": 33
+        },
+        {
+          "id": 173,
+          "value": 20
+        }
+      ],
+      "skills": [
+        2655301,
+        2655302,
+        2655303,
+        2655304,
+        2655305,
+        2655306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "openDay": 57,
+      "showType": 3,
+      "promoteId": 26563,
+      "special": 1
+    },
+    "26561": {
+      "id": 26561,
+      "name": 26561,
+      "appearId": 26561,
+      "quality": 9,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 82715
+        },
+        {
+          "id": 5,
+          "value": 5954
+        },
+        {
+          "id": 6,
+          "value": 1057
+        },
+        {
+          "id": 4,
+          "value": 254
+        },
+        {
+          "id": 165,
+          "value": 2012
+        },
+        {
+          "id": 173,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 143
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 6
+        },
+        {
+          "id": 165,
+          "value": 40
+        },
+        {
+          "id": 173,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2656101,
+        2656102,
+        2656103,
+        2656104,
+        2656105,
+        2656106
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 1,
+      "showType": 1
+    },
+    "26562": {
+      "id": 26562,
+      "name": 26562,
+      "appearId": 26562,
+      "quality": 9,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 81537
+        },
+        {
+          "id": 5,
+          "value": 6068
+        },
+        {
+          "id": 6,
+          "value": 1097
+        },
+        {
+          "id": 4,
+          "value": 256
+        },
+        {
+          "id": 165,
+          "value": 2012
+        },
+        {
+          "id": 173,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 143
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 6
+        },
+        {
+          "id": 165,
+          "value": 40
+        },
+        {
+          "id": 173,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2656201,
+        2656202,
+        2656203,
+        2656204,
+        2656205,
+        2656206
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    },
+    "26563": {
+      "id": 26563,
+      "name": 26563,
+      "appearId": 26563,
+      "quality": 9,
+      "type": 5,
+      "minStar": 0,
+      "maxStar": 5,
+      "attrs": [
+        {
+          "id": 1,
+          "value": 81960
+        },
+        {
+          "id": 5,
+          "value": 6059
+        },
+        {
+          "id": 6,
+          "value": 1095
+        },
+        {
+          "id": 4,
+          "value": 256
+        },
+        {
+          "id": 165,
+          "value": 2012
+        },
+        {
+          "id": 173,
+          "value": 1215
+        },
+        {
+          "id": 257,
+          "value": 100
+        },
+        {
+          "id": 258,
+          "value": 60
+        }
+      ],
+      "levelUpAttrs": [
+        {
+          "id": 1,
+          "value": 1938
+        },
+        {
+          "id": 5,
+          "value": 143
+        },
+        {
+          "id": 6,
+          "value": 26
+        },
+        {
+          "id": 4,
+          "value": 6
+        },
+        {
+          "id": 165,
+          "value": 40
+        },
+        {
+          "id": 173,
+          "value": 24
+        },
+        {
+          "id": 257,
+          "value": 40
+        },
+        {
+          "id": 258,
+          "value": 24
+        }
+      ],
+      "skills": [
+        2656301,
+        2656302,
+        2656303,
+        2656304,
+        2656305,
+        2656306
+      ],
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "openDay": 57,
+      "showType": 3,
+      "special": 1
+    }
+  }
+}

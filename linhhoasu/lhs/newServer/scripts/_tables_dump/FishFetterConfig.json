@@ -1,0 +1,509 @@
+{
+  "_table": "FishFetterConfig",
+  "_rows": 27,
+  "_type": "object",
+  "_firstKeys": "id,name,banner,fishes,attrs,rewards,priority",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "name": 30030251,
+        "banner": "dy_bm_handbook_1",
+        "fishes": [
+          5011,
+          5012,
+          5021,
+          5022
+        ],
+        "attrs": {
+          "51": 150
+        },
+        "rewards": [],
+        "priority": 1
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "name": 30030252,
+        "banner": "dy_bm_handbook_2",
+        "fishes": [
+          5031,
+          5032,
+          5041,
+          5042
+        ],
+        "attrs": {
+          "52": 150
+        },
+        "rewards": [],
+        "priority": 2
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "name": 30030253,
+        "banner": "dy_bm_handbook_3",
+        "fishes": [
+          5051,
+          5052,
+          5061,
+          5062
+        ],
+        "attrs": {
+          "53": 150
+        },
+        "rewards": [],
+        "priority": 3
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "name": 30030251,
+      "banner": "dy_bm_handbook_1",
+      "fishes": [
+        5011,
+        5012,
+        5021,
+        5022
+      ],
+      "attrs": {
+        "51": 150
+      },
+      "rewards": [],
+      "priority": 1
+    },
+    "2": {
+      "id": 2,
+      "name": 30030252,
+      "banner": "dy_bm_handbook_2",
+      "fishes": [
+        5031,
+        5032,
+        5041,
+        5042
+      ],
+      "attrs": {
+        "52": 150
+      },
+      "rewards": [],
+      "priority": 2
+    },
+    "3": {
+      "id": 3,
+      "name": 30030253,
+      "banner": "dy_bm_handbook_3",
+      "fishes": [
+        5051,
+        5052,
+        5061,
+        5062
+      ],
+      "attrs": {
+        "53": 150
+      },
+      "rewards": [],
+      "priority": 3
+    },
+    "4": {
+      "id": 4,
+      "name": 30030254,
+      "banner": "dy_bm_handbook_4",
+      "fishes": [
+        5071,
+        5072,
+        5081,
+        5082
+      ],
+      "attrs": {
+        "51": 150,
+        "53": 150
+      },
+      "rewards": [],
+      "priority": 4
+    },
+    "5": {
+      "id": 5,
+      "name": 30030255,
+      "banner": "dy_bm_handbook_5",
+      "fishes": [
+        5091,
+        5092,
+        5101,
+        5102
+      ],
+      "attrs": {
+        "52": 150,
+        "54": 150
+      },
+      "rewards": [],
+      "priority": 5
+    },
+    "6": {
+      "id": 6,
+      "name": 30030256,
+      "banner": "dy_bm_handbook_1",
+      "fishes": [
+        5013,
+        5014,
+        5023,
+        5024
+      ],
+      "attrs": {
+        "51": 250,
+        "53": 250
+      },
+      "rewards": [],
+      "priority": 6
+    },
+    "7": {
+      "id": 7,
+      "name": 30030257,
+      "banner": "dy_bm_handbook_2",
+      "fishes": [
+        5033,
+        5034,
+        5043,
+        5044
+      ],
+      "attrs": {
+        "52": 250,
+        "54": 250
+      },
+      "rewards": [],
+      "priority": 7
+    },
+    "8": {
+      "id": 8,
+      "name": 30030258,
+      "banner": "dy_bm_handbook_3",
+      "fishes": [
+        5053,
+        5054,
+        5063,
+        5064
+      ],
+      "attrs": {
+        "101": 300,
+        "102": 300
+      },
+      "rewards": [],
+      "priority": 8
+    },
+    "9": {
+      "id": 9,
+      "name": 30030259,
+      "banner": "dy_bm_handbook_4",
+      "fishes": [
+        5073,
+        5074,
+        5083,
+        5084
+      ],
+      "attrs": {
+        "103": 300,
+        "104": 300
+      },
+      "rewards": [],
+      "priority": 9
+    },
+    "10": {
+      "id": 10,
+      "name": 30030260,
+      "banner": "dy_bm_handbook_5",
+      "fishes": [
+        5093,
+        5094,
+        5103,
+        5104
+      ],
+      "attrs": {
+        "105": 300,
+        "106": 300
+      },
+      "rewards": [],
+      "priority": 10
+    },
+    "11": {
+      "id": 11,
+      "name": 30030261,
+      "banner": "dy_bm_handbook_1",
+      "fishes": [
+        5015,
+        5025
+      ],
+      "attrs": {
+        "51": 500,
+        "53": 500
+      },
+      "rewards": [],
+      "priority": 11
+    },
+    "12": {
+      "id": 12,
+      "name": 30030262,
+      "banner": "dy_bm_handbook_2",
+      "fishes": [
+        5035,
+        5045
+      ],
+      "attrs": {
+        "52": 500,
+        "54": 500
+      },
+      "rewards": [],
+      "priority": 12
+    },
+    "13": {
+      "id": 13,
+      "name": 30030263,
+      "banner": "dy_bm_handbook_3",
+      "fishes": [
+        5055,
+        5065
+      ],
+      "attrs": {
+        "101": 600,
+        "102": 600
+      },
+      "rewards": [],
+      "priority": 13
+    },
+    "14": {
+      "id": 14,
+      "name": 30030264,
+      "banner": "dy_bm_handbook_4",
+      "fishes": [
+        5075,
+        5085
+      ],
+      "attrs": {
+        "103": 600,
+        "104": 600
+      },
+      "rewards": [],
+      "priority": 14
+    },
+    "15": {
+      "id": 15,
+      "name": 30030265,
+      "banner": "dy_bm_handbook_5",
+      "fishes": [
+        5095,
+        5105
+      ],
+      "attrs": {
+        "105": 600,
+        "106": 600
+      },
+      "rewards": [],
+      "priority": 15
+    },
+    "16": {
+      "id": 16,
+      "name": 30030266,
+      "banner": "dy_bm_handbook_1",
+      "fishes": [
+        5301,
+        5302,
+        5303
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 101
+    },
+    "17": {
+      "id": 17,
+      "name": 30030267,
+      "banner": "dy_bm_handbook_2",
+      "fishes": [
+        5304,
+        5305,
+        5306
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 102
+    },
+    "18": {
+      "id": 18,
+      "name": 30030268,
+      "banner": "dy_bm_handbook_3",
+      "fishes": [
+        5307,
+        5308,
+        5309
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 103
+    },
+    "19": {
+      "id": 19,
+      "name": 30030269,
+      "banner": "dy_bm_handbook_4",
+      "fishes": [
+        5310,
+        5311,
+        5312
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 104
+    },
+    "20": {
+      "id": 20,
+      "name": 30030270,
+      "banner": "dy_bm_handbook_5",
+      "fishes": [
+        5313,
+        5314,
+        5315
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 105
+    },
+    "21": {
+      "id": 21,
+      "name": 30030271,
+      "banner": "dy_bm_handbook_6",
+      "fishes": [
+        5016,
+        5026
+      ],
+      "attrs": {
+        "51": 750,
+        "53": 750
+      },
+      "rewards": [],
+      "priority": 16
+    },
+    "22": {
+      "id": 22,
+      "name": 30030272,
+      "banner": "dy_bm_handbook_6",
+      "fishes": [
+        5036,
+        5046
+      ],
+      "attrs": {
+        "52": 750,
+        "54": 750
+      },
+      "rewards": [],
+      "priority": 17
+    },
+    "23": {
+      "id": 23,
+      "name": 30030273,
+      "banner": "dy_bm_handbook_7",
+      "fishes": [
+        5056,
+        5066
+      ],
+      "attrs": {
+        "151": 900,
+        "152": 900
+      },
+      "rewards": [],
+      "priority": 18
+    },
+    "24": {
+      "id": 24,
+      "name": 30030274,
+      "banner": "dy_bm_handbook_7",
+      "fishes": [
+        5076,
+        5086
+      ],
+      "attrs": {
+        "153": 900,
+        "154": 900
+      },
+      "rewards": [],
+      "priority": 19
+    },
+    "25": {
+      "id": 25,
+      "name": 30030275,
+      "banner": "dy_bm_handbook_7",
+      "fishes": [
+        5096,
+        5106
+      ],
+      "attrs": {
+        "155": 900,
+        "156": 900
+      },
+      "rewards": [],
+      "priority": 20
+    },
+    "26": {
+      "id": 26,
+      "name": 30030276,
+      "banner": "dy_bm_handbook_6",
+      "fishes": [
+        5316,
+        5317,
+        5318,
+        5319
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 106
+    },
+    "27": {
+      "id": 27,
+      "name": 30030277,
+      "banner": "dy_bm_handbook_7",
+      "fishes": [
+        5320,
+        5321,
+        5322,
+        5323
+      ],
+      "attrs": [],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 500
+        }
+      ],
+      "priority": 107
+    }
+  }
+}

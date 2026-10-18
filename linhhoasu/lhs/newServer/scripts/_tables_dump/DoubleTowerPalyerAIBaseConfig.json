@@ -1,0 +1,79 @@
+{
+  "_table": "DoubleTowerPalyerAIBaseConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "(obj)[upgradeValue|haloGetValue|haloUpgradeValue|coreHaloGetValue|coreHaloUpgradeValue]",
+  "_sample": [
+    {
+      "upgradeValue": [
+        120,
+        160,
+        260
+      ]
+    },
+    {
+      "haloGetValue": [
+        6,
+        8,
+        12,
+        20
+      ]
+    },
+    {
+      "haloUpgradeValue": [
+        0.2,
+        0.3,
+        1
+      ]
+    }
+  ],
+  "data": {
+    "upgradeValue": [
+      120,
+      160,
+      260
+    ],
+    "haloGetValue": [
+      6,
+      8,
+      12,
+      20
+    ],
+    "haloUpgradeValue": [
+      0.2,
+      0.3,
+      1
+    ],
+    "coreHaloGetValue": [
+      60,
+      210,
+      210,
+      210,
+      360,
+      360
+    ],
+    "coreHaloUpgradeValue": [
+      0,
+      0,
+      0,
+      0,
+      100,
+      100
+    ],
+    "coreHaloActivationValue": [
+      100,
+      250,
+      0,
+      0,
+      0,
+      0
+    ],
+    "coinOutputValue": [
+      2,
+      2,
+      2,
+      5
+    ],
+    "extendDecisionValue": 20
+  }
+}

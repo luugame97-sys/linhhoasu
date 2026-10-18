@@ -1,0 +1,4032 @@
+{
+  "_table": "DoubleTowerHeroConfig",
+  "_rows": 70,
+  "_type": "object",
+  "_firstKeys": "id,nameDesc,quality,minStar,maxStar,group,weight,starParam,attackSpeed,trajectorySpeed,damageType,starSellPrice,skill,starPassiveSkill1,starPassiveSkill2,haloOwn,attackRange,upStar,unlock,occupation",
+  "_sample": [
+    {
+      "26111": {
+        "id": 26111,
+        "nameDesc": 26111,
+        "quality": 3,
+        "minStar": 1,
+        "maxStar": 4,
+        "group": 26111,
+        "weight": [
+          100,
+          95,
+          90,
+          85
+        ],
+        "starParam": [
+          10000,
+          30000,
+          80000,
+          160000
+        ],
+        "attackSpeed": 54,
+        "trajectorySpeed": 15,
+        "damageType": 1,
+        "starSellPrice": [
+          5,
+          20,
+          40,
+          65
+        ],
+        "skill": 3001101,
+        "starPassiveSkill1": 3001201,
+        "starPassiveSkill2": 3001202,
+        "haloOwn": 0,
+        "attackRange": 4,
+        "upStar": 1,
+        "unlock": 1,
+        "occupation": 3,
+        "occupationSuggest": [
+          3
+        ],
+        "starProb": [
+          10000,
+          10000,
+          10000,
+          10000
+        ],
+        "heroType": 1,
+        "itemId": 26111,
+        "skillSound": "effect_dt_attk_zhanshi",
+        "heroDesc": 99626111,
+        "skillDesc": 99926111,
+        "passiveDesc": 99826111,
+        "passiveDesc2": 99726111,
+        "headRefreshBm": "hk_icon_bsx_26111",
+        "modelId": 26111,
+        "lifeStealEffect": ""
+      }
+    },
+    {
+      "26121": {
+        "id": 26121,
+        "nameDesc": 26121,
+        "quality": 4,
+        "minStar": 1,
+        "maxStar": 4,
+        "group": 26121,
+        "weight": [
+          100,
+          95,
+          90,
+          85
+        ],
+        "starParam": [
+          10000,
+          30000,
+          80000,
+          160000
+        ],
+        "attackSpeed": 54,
+        "trajectorySpeed": 15,
+        "damageType": 1,
+        "starSellPrice": [
+          5,
+          20,
+          40,
+          65
+        ],
+        "skill": 3002101,
+        "starPassiveSkill1": 3002201,
+        "starPassiveSkill2": 3002202,
+        "haloOwn": 0,
+        "attackRange": 4,
+        "upStar": 1,
+        "unlock": 1,
+        "occupation": 3,
+        "occupationSuggest": [
+          3
+        ],
+        "starProb": [
+          10000,
+          10000,
+          10000,
+          10000
+        ],
+        "heroType": 1,
+        "itemId": 26121,
+        "skillSound": "effect_dt_attk_zhanshi",
+        "heroDesc": 99626121,
+        "skillDesc": 99926121,
+        "passiveDesc": 99826121,
+        "passiveDesc2": 99726121,
+        "headRefreshBm": "hk_icon_bsx_26121",
+        "modelId": 26121,
+        "lifeStealEffect": ""
+      }
+    },
+    {
+      "26131": {
+        "id": 26131,
+        "nameDesc": 26131,
+        "quality": 5,
+        "minStar": 1,
+        "maxStar": 4,
+        "group": 26131,
+        "weight": [
+          100,
+          95,
+          90,
+          85
+        ],
+        "starParam": [
+          10000,
+          30000,
+          80000,
+          160000
+        ],
+        "attackSpeed": 54,
+        "trajectorySpeed": 15,
+        "damageType": 1,
+        "starSellPrice": [
+          5,
+          20,
+          40,
+          65
+        ],
+        "skill": 3003101,
+        "starPassiveSkill1": 3003201,
+        "starPassiveSkill2": 3003202,
+        "haloOwn": 1,
+        "attackRange": 4,
+        "upStar": 1,
+        "unlock": 1,
+        "occupation": 3,
+        "occupationSuggest": [
+          3
+        ],
+        "starProb": [
+          10000,
+          10000,
+          10000,
+          10000
+        ],
+        "heroType": 1,
+        "itemId": 26131,
+        "skillSound": "effect_dt_attk_zhanshi",
+        "heroDesc": 99626131,
+        "skillDesc": 99926131,
+        "passiveDesc": 99826131,
+        "passiveDesc2": 99726131,
+        "headRefreshBm": "hk_icon_bsx_26131",
+        "modelId": 26131,
+        "lifeStealEffect": ""
+      }
+    }
+  ],
+  "data": {
+    "26111": {
+      "id": 26111,
+      "nameDesc": 26111,
+      "quality": 3,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26111,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3001101,
+      "starPassiveSkill1": 3001201,
+      "starPassiveSkill2": 3001202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [
+        3
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26111,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626111,
+      "skillDesc": 99926111,
+      "passiveDesc": 99826111,
+      "passiveDesc2": 99726111,
+      "headRefreshBm": "hk_icon_bsx_26111",
+      "modelId": 26111,
+      "lifeStealEffect": ""
+    },
+    "26121": {
+      "id": 26121,
+      "nameDesc": 26121,
+      "quality": 4,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26121,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3002101,
+      "starPassiveSkill1": 3002201,
+      "starPassiveSkill2": 3002202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [
+        3
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26121,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626121,
+      "skillDesc": 99926121,
+      "passiveDesc": 99826121,
+      "passiveDesc2": 99726121,
+      "headRefreshBm": "hk_icon_bsx_26121",
+      "modelId": 26121,
+      "lifeStealEffect": ""
+    },
+    "26131": {
+      "id": 26131,
+      "nameDesc": 26131,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26131,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3003101,
+      "starPassiveSkill1": 3003201,
+      "starPassiveSkill2": 3003202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [
+        3
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26131,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626131,
+      "skillDesc": 99926131,
+      "passiveDesc": 99826131,
+      "passiveDesc2": 99726131,
+      "headRefreshBm": "hk_icon_bsx_26131",
+      "modelId": 26131,
+      "lifeStealEffect": ""
+    },
+    "26132": {
+      "id": 26132,
+      "nameDesc": 26132,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26132,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3014101,
+      "starPassiveSkill1": 3014201,
+      "starPassiveSkill2": 3014202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26132,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626132,
+      "skillDesc": 99926132,
+      "passiveDesc": 99826132,
+      "passiveDesc2": 99726132,
+      "headRefreshBm": "hk_icon_bsx_26132",
+      "modelId": 26132,
+      "lifeStealEffect": ""
+    },
+    "26133": {
+      "id": 26133,
+      "nameDesc": 26133,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26133,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 180,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3004101,
+      "starPassiveSkill1": 3004201,
+      "starPassiveSkill2": 3004202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26133,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626133,
+      "skillDesc": 99926133,
+      "passiveDesc": 99826133,
+      "passiveDesc2": 99726133,
+      "headRefreshBm": "hk_icon_bsx_26133",
+      "modelId": 26133,
+      "lifeStealEffect": ""
+    },
+    "26141": {
+      "id": 26141,
+      "nameDesc": 26141,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26141,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3006101,
+      "starPassiveSkill1": 3006201,
+      "starPassiveSkill2": 3006202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26141,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626141,
+      "skillDesc": 99926141,
+      "passiveDesc": 99826141,
+      "passiveDesc2": 99726141,
+      "headRefreshBm": "hk_icon_bsx_26141",
+      "modelId": 26141,
+      "lifeStealEffect": ""
+    },
+    "26142": {
+      "id": 26142,
+      "nameDesc": 26142,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26142,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3005101,
+      "starPassiveSkill1": 3005201,
+      "starPassiveSkill2": 3005202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26142,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626142,
+      "skillDesc": 99926142,
+      "passiveDesc": 99826142,
+      "passiveDesc2": 99726142,
+      "headRefreshBm": "hk_icon_bsx_26142",
+      "modelId": 26142,
+      "lifeStealEffect": ""
+    },
+    "26143": {
+      "id": 26143,
+      "nameDesc": 26143,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26143,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 54,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3011101,
+      "starPassiveSkill1": 3011201,
+      "starPassiveSkill2": 3011202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26143,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626143,
+      "skillDesc": 99926143,
+      "passiveDesc": 99826143,
+      "passiveDesc2": 99726143,
+      "headRefreshBm": "hk_icon_bsx_26143",
+      "modelId": 26143,
+      "lifeStealEffect": ""
+    },
+    "26151": {
+      "id": 26151,
+      "nameDesc": 26151,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26151,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3701101,
+      "starPassiveSkill1": 3701201,
+      "starPassiveSkill2": 3701202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [
+        3
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26151,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626151,
+      "skillDesc": 99926151,
+      "passiveDesc": 99826151,
+      "passiveDesc2": 99726151,
+      "headRefreshBm": "hk_icon_bsx_26151",
+      "modelId": 26151,
+      "lifeStealEffect": ""
+    },
+    "26152": {
+      "id": 26152,
+      "nameDesc": 26152,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26152,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 180,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3702101,
+      "starPassiveSkill1": 3702201,
+      "starPassiveSkill2": 3702202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26152,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626152,
+      "skillDesc": 99926152,
+      "passiveDesc": 99826152,
+      "passiveDesc2": 99726152,
+      "headRefreshBm": "hk_icon_bsx_26152",
+      "modelId": 26152,
+      "lifeStealEffect": ""
+    },
+    "26153": {
+      "id": 26153,
+      "nameDesc": 26153,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26153,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 102,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3703101,
+      "starPassiveSkill1": 3703201,
+      "starPassiveSkill2": 3703202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26153,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626153,
+      "skillDesc": 99926153,
+      "passiveDesc": 99826153,
+      "passiveDesc2": 99726153,
+      "headRefreshBm": "hk_icon_bsx_26153",
+      "modelId": 26153,
+      "lifeStealEffect": ""
+    },
+    "26161": {
+      "id": 26161,
+      "nameDesc": 26161,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26151,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3801101,
+      "starPassiveSkill1": 3801201,
+      "starPassiveSkill2": 3801202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [
+        3
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26161,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626161,
+      "skillDesc": 99926161,
+      "passiveDesc": 99826161,
+      "passiveDesc2": 99726161,
+      "headRefreshBm": "hk_icon_bsx_26161",
+      "modelId": 26161,
+      "lifeStealEffect": ""
+    },
+    "26162": {
+      "id": 26162,
+      "nameDesc": 26162,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26152,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 180,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3802101,
+      "starPassiveSkill1": 3802201,
+      "starPassiveSkill2": 3802202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26162,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626162,
+      "skillDesc": 99926162,
+      "passiveDesc": 99826162,
+      "passiveDesc2": 99726162,
+      "headRefreshBm": "hk_icon_bsx_26162",
+      "modelId": 26162,
+      "lifeStealEffect": ""
+    },
+    "26163": {
+      "id": 26163,
+      "nameDesc": 26163,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26153,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 102,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 3803101,
+      "starPassiveSkill1": 3803201,
+      "starPassiveSkill2": 3803202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 3,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26163,
+      "skillSound": "effect_dt_attk_zhanshi",
+      "heroDesc": 99626163,
+      "skillDesc": 99926163,
+      "passiveDesc": 99826163,
+      "passiveDesc2": 99726163,
+      "headRefreshBm": "hk_icon_bsx_26163",
+      "modelId": 26163,
+      "lifeStealEffect": ""
+    },
+    "26211": {
+      "id": 26211,
+      "nameDesc": 26211,
+      "quality": 3,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26211,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 150,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4005101,
+      "starPassiveSkill1": 4005201,
+      "starPassiveSkill2": 4005202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [
+        4
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26211,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626211,
+      "skillDesc": 99926211,
+      "passiveDesc": 99826211,
+      "passiveDesc2": 99726211,
+      "headRefreshBm": "hk_icon_bsx_26211",
+      "modelId": 26211,
+      "lifeStealEffect": ""
+    },
+    "26221": {
+      "id": 26221,
+      "nameDesc": 26221,
+      "quality": 4,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26221,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 150,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4006101,
+      "starPassiveSkill1": 4006201,
+      "starPassiveSkill2": 4006202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [
+        4
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26221,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626221,
+      "skillDesc": 99926221,
+      "passiveDesc": 99826221,
+      "passiveDesc2": 99726221,
+      "headRefreshBm": "hk_icon_bsx_26221",
+      "modelId": 26221,
+      "lifeStealEffect": ""
+    },
+    "26231": {
+      "id": 26231,
+      "nameDesc": 26231,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26231,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 150,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4001101,
+      "starPassiveSkill1": 4001201,
+      "starPassiveSkill2": 4001202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [
+        4
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26231,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626231,
+      "skillDesc": 99926231,
+      "passiveDesc": 99826231,
+      "passiveDesc2": 99726231,
+      "headRefreshBm": "hk_icon_bsx_26231",
+      "modelId": 26231,
+      "lifeStealEffect": ""
+    },
+    "26232": {
+      "id": 26232,
+      "nameDesc": 26232,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26232,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 150,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4002101,
+      "starPassiveSkill1": 4002201,
+      "starPassiveSkill2": 4002202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26232,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626232,
+      "skillDesc": 99926232,
+      "passiveDesc": 99826232,
+      "passiveDesc2": 99726232,
+      "headRefreshBm": "hk_icon_bsx_26232",
+      "modelId": 26232,
+      "lifeStealEffect": ""
+    },
+    "26233": {
+      "id": 26233,
+      "nameDesc": 26233,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26233,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 150,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4007101,
+      "starPassiveSkill1": 4007201,
+      "starPassiveSkill2": 4007202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26233,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626233,
+      "skillDesc": 99926233,
+      "passiveDesc": 99826233,
+      "passiveDesc2": 99726233,
+      "headRefreshBm": "hk_icon_bsx_26233",
+      "modelId": 26233,
+      "lifeStealEffect": ""
+    },
+    "26241": {
+      "id": 26241,
+      "nameDesc": 26241,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26241,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4004101,
+      "starPassiveSkill1": 4004201,
+      "starPassiveSkill2": 4004202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26241,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626241,
+      "skillDesc": 99926241,
+      "passiveDesc": 99826241,
+      "passiveDesc2": 99726241,
+      "headRefreshBm": "hk_icon_bsx_26241",
+      "modelId": 26241,
+      "lifeStealEffect": ""
+    },
+    "26242": {
+      "id": 26242,
+      "nameDesc": 26242,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26242,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4003101,
+      "starPassiveSkill1": 4003201,
+      "starPassiveSkill2": 4003202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26242,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626242,
+      "skillDesc": 99926242,
+      "passiveDesc": 99826242,
+      "passiveDesc2": 99726242,
+      "headRefreshBm": "hk_icon_bsx_26242",
+      "modelId": 26242,
+      "lifeStealEffect": ""
+    },
+    "26243": {
+      "id": 26243,
+      "nameDesc": 26243,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26243,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26243101,
+      "starPassiveSkill1": 26243201,
+      "starPassiveSkill2": 26243202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26243,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626243,
+      "skillDesc": 99926243,
+      "passiveDesc": 99826243,
+      "passiveDesc2": 99726243,
+      "headRefreshBm": "hk_icon_bsx_26243",
+      "modelId": 26243,
+      "lifeStealEffect": ""
+    },
+    "26251": {
+      "id": 26251,
+      "nameDesc": 26251,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26251,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4701101,
+      "starPassiveSkill1": 4701201,
+      "starPassiveSkill2": 4701202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26251,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626251,
+      "skillDesc": 99926251,
+      "passiveDesc": 99826251,
+      "passiveDesc2": 99726251,
+      "headRefreshBm": "hk_icon_bsx_26251",
+      "modelId": 26251,
+      "lifeStealEffect": ""
+    },
+    "26252": {
+      "id": 26252,
+      "nameDesc": 26252,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26252,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 600,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26252101,
+      "starPassiveSkill1": 26252201,
+      "starPassiveSkill2": 26252202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26252,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626252,
+      "skillDesc": 99926252,
+      "passiveDesc": 99826252,
+      "passiveDesc2": 99726252,
+      "headRefreshBm": "hk_icon_bsx_26252",
+      "modelId": 26252,
+      "lifeStealEffect": ""
+    },
+    "26253": {
+      "id": 26253,
+      "nameDesc": 26253,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26253,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4702101,
+      "starPassiveSkill1": 4702201,
+      "starPassiveSkill2": 4702202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [
+        4
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26253,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626253,
+      "skillDesc": 99926253,
+      "passiveDesc": 99826253,
+      "passiveDesc2": 99726253,
+      "headRefreshBm": "hk_icon_bsx_26253",
+      "modelId": 26253,
+      "lifeStealEffect": ""
+    },
+    "26261": {
+      "id": 26261,
+      "nameDesc": 26261,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26251,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4801101,
+      "starPassiveSkill1": 4801201,
+      "starPassiveSkill2": 4801202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26261,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626261,
+      "skillDesc": 99926261,
+      "passiveDesc": 99826261,
+      "passiveDesc2": 99726261,
+      "headRefreshBm": "hk_icon_bsx_26261",
+      "modelId": 26261,
+      "lifeStealEffect": ""
+    },
+    "26262": {
+      "id": 26262,
+      "nameDesc": 26262,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26252,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 600,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26262101,
+      "starPassiveSkill1": 26262201,
+      "starPassiveSkill2": 26262202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26262,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626262,
+      "skillDesc": 99926262,
+      "passiveDesc": 99826262,
+      "passiveDesc2": 99726262,
+      "headRefreshBm": "hk_icon_bsx_26262",
+      "modelId": 26262,
+      "lifeStealEffect": ""
+    },
+    "26263": {
+      "id": 26263,
+      "nameDesc": 26263,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26253,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 4,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 4802101,
+      "starPassiveSkill1": 4802201,
+      "starPassiveSkill2": 4802202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 4,
+      "occupationSuggest": [
+        4
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26263,
+      "skillSound": "effect_dt_attk_mushi",
+      "heroDesc": 99626263,
+      "skillDesc": 99926263,
+      "passiveDesc": 99826263,
+      "passiveDesc2": 99726263,
+      "headRefreshBm": "hk_icon_bsx_26263",
+      "modelId": 26263,
+      "lifeStealEffect": ""
+    },
+    "26311": {
+      "id": 26311,
+      "nameDesc": 26311,
+      "quality": 3,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26311,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2001101,
+      "starPassiveSkill1": 2001201,
+      "starPassiveSkill2": 2001202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [
+        2
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26311,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626311,
+      "skillDesc": 99926311,
+      "passiveDesc": 99826311,
+      "passiveDesc2": 99726311,
+      "headRefreshBm": "hk_icon_bsx_26311",
+      "modelId": 26311,
+      "lifeStealEffect": ""
+    },
+    "26321": {
+      "id": 26321,
+      "nameDesc": 26321,
+      "quality": 4,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26321,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2002101,
+      "starPassiveSkill1": 2002201,
+      "starPassiveSkill2": 2002202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [
+        2
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26321,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626321,
+      "skillDesc": 99926321,
+      "passiveDesc": 99826321,
+      "passiveDesc2": 99726321,
+      "headRefreshBm": "hk_icon_bsx_26321",
+      "modelId": 26321,
+      "lifeStealEffect": ""
+    },
+    "26331": {
+      "id": 26331,
+      "nameDesc": 26331,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26331,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2003101,
+      "starPassiveSkill1": 2003201,
+      "starPassiveSkill2": 2003202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [
+        2
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26331,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626331,
+      "skillDesc": 99926331,
+      "passiveDesc": 99826331,
+      "passiveDesc2": 99726331,
+      "headRefreshBm": "hk_icon_bsx_26331",
+      "modelId": 26331,
+      "lifeStealEffect": ""
+    },
+    "26332": {
+      "id": 26332,
+      "nameDesc": 26332,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26332,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2004101,
+      "starPassiveSkill1": 2004201,
+      "starPassiveSkill2": 2004202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26332,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626332,
+      "skillDesc": 99926332,
+      "passiveDesc": 99826332,
+      "passiveDesc2": 99726332,
+      "headRefreshBm": "hk_icon_bsx_26332",
+      "modelId": 26332,
+      "lifeStealEffect": ""
+    },
+    "26333": {
+      "id": 26333,
+      "nameDesc": 26333,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26333,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2017101,
+      "starPassiveSkill1": 2017201,
+      "starPassiveSkill2": 2017202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26333,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626333,
+      "skillDesc": 99926333,
+      "passiveDesc": 99826333,
+      "passiveDesc2": 99726333,
+      "headRefreshBm": "hk_icon_bsx_26333",
+      "modelId": 26333,
+      "lifeStealEffect": ""
+    },
+    "26341": {
+      "id": 26341,
+      "nameDesc": 26341,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26341,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2006101,
+      "starPassiveSkill1": 2006201,
+      "starPassiveSkill2": 2006202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26341,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626341,
+      "skillDesc": 99926341,
+      "passiveDesc": 99826341,
+      "passiveDesc2": 99726341,
+      "headRefreshBm": "hk_icon_bsx_26341",
+      "modelId": 26341,
+      "lifeStealEffect": ""
+    },
+    "26342": {
+      "id": 26342,
+      "nameDesc": 26342,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26342,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2005101,
+      "starPassiveSkill1": 2005201,
+      "starPassiveSkill2": 2005202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26342,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626342,
+      "skillDesc": 99926342,
+      "passiveDesc": 99826342,
+      "passiveDesc2": 99726342,
+      "headRefreshBm": "hk_icon_bsx_26342",
+      "modelId": 26342,
+      "lifeStealEffect": ""
+    },
+    "26343": {
+      "id": 26343,
+      "nameDesc": 26343,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26343,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2018101,
+      "starPassiveSkill1": 2018201,
+      "starPassiveSkill2": 2018202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [
+        2
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26343,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626343,
+      "skillDesc": 99926343,
+      "passiveDesc": 99826343,
+      "passiveDesc2": 99726343,
+      "headRefreshBm": "hk_icon_bsx_26343",
+      "modelId": 26343,
+      "lifeStealEffect": ""
+    },
+    "26351": {
+      "id": 26351,
+      "nameDesc": 26351,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26351,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2702101,
+      "starPassiveSkill1": 2702201,
+      "starPassiveSkill2": 2702202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26351,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626351,
+      "skillDesc": 99926351,
+      "passiveDesc": 99826351,
+      "passiveDesc2": 99726351,
+      "headRefreshBm": "hk_icon_bsx_26351",
+      "modelId": 26351,
+      "lifeStealEffect": ""
+    },
+    "26352": {
+      "id": 26352,
+      "nameDesc": 26352,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26352,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26352101,
+      "starPassiveSkill1": 26352201,
+      "starPassiveSkill2": 26352202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26352,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626352,
+      "skillDesc": 99926352,
+      "passiveDesc": 99826352,
+      "passiveDesc2": 99726352,
+      "headRefreshBm": "hk_icon_bsx_26352",
+      "modelId": 26352,
+      "lifeStealEffect": "sp_skill_buff_26352"
+    },
+    "26353": {
+      "id": 26353,
+      "nameDesc": 26353,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26353,
+      "weight": [
+        65,
+        60,
+        55,
+        50
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2701101,
+      "starPassiveSkill1": 2701201,
+      "starPassiveSkill2": 2701202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26353,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626353,
+      "skillDesc": 99926353,
+      "passiveDesc": 99826353,
+      "passiveDesc2": 99726353,
+      "headRefreshBm": "hk_icon_bsx_26353",
+      "modelId": 26353,
+      "lifeStealEffect": ""
+    },
+    "26361": {
+      "id": 26361,
+      "nameDesc": 26361,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26351,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2802101,
+      "starPassiveSkill1": 2802201,
+      "starPassiveSkill2": 2802202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26361,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626361,
+      "skillDesc": 99926361,
+      "passiveDesc": 99826361,
+      "passiveDesc2": 99726361,
+      "headRefreshBm": "hk_icon_bsx_26361",
+      "modelId": 26361,
+      "lifeStealEffect": ""
+    },
+    "26362": {
+      "id": 26362,
+      "nameDesc": 26362,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26352,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 90,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26362101,
+      "starPassiveSkill1": 26362201,
+      "starPassiveSkill2": 26362202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26362,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626362,
+      "skillDesc": 99926362,
+      "passiveDesc": 99826362,
+      "passiveDesc2": 99726362,
+      "headRefreshBm": "hk_icon_bsx_26362",
+      "modelId": 26362,
+      "lifeStealEffect": "sp_skill_buff_26362"
+    },
+    "26363": {
+      "id": 26363,
+      "nameDesc": 26363,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26353,
+      "weight": [
+        65,
+        60,
+        55,
+        50
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 2801101,
+      "starPassiveSkill1": 2801201,
+      "starPassiveSkill2": 2801202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 2,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26363,
+      "skillSound": "effect_dt_attk_sheshou",
+      "heroDesc": 99626363,
+      "skillDesc": 99926363,
+      "passiveDesc": 99826363,
+      "passiveDesc2": 99726363,
+      "headRefreshBm": "hk_icon_bsx_26363",
+      "modelId": 26363,
+      "lifeStealEffect": ""
+    },
+    "26411": {
+      "id": 26411,
+      "nameDesc": 26411,
+      "quality": 3,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26411,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1001101,
+      "starPassiveSkill1": 1001201,
+      "starPassiveSkill2": 1001202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [
+        1
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26411,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626411,
+      "skillDesc": 99926411,
+      "passiveDesc": 99826411,
+      "passiveDesc2": 99726411,
+      "headRefreshBm": "hk_icon_bsx_26411",
+      "modelId": 26411,
+      "lifeStealEffect": ""
+    },
+    "26421": {
+      "id": 26421,
+      "nameDesc": 26421,
+      "quality": 4,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26421,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1002101,
+      "starPassiveSkill1": 1002201,
+      "starPassiveSkill2": 1002202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [
+        1
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26421,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626421,
+      "skillDesc": 99926421,
+      "passiveDesc": 99826421,
+      "passiveDesc2": 99726421,
+      "headRefreshBm": "hk_icon_bsx_26421",
+      "modelId": 26421,
+      "lifeStealEffect": ""
+    },
+    "26431": {
+      "id": 26431,
+      "nameDesc": 26431,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26431,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 180,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1003101,
+      "starPassiveSkill1": 1003201,
+      "starPassiveSkill2": 1003202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [
+        1
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26431,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626431,
+      "skillDesc": 99926431,
+      "passiveDesc": 99826431,
+      "passiveDesc2": 99726431,
+      "headRefreshBm": "hk_icon_bsx_26431",
+      "modelId": 26431,
+      "lifeStealEffect": ""
+    },
+    "26432": {
+      "id": 26432,
+      "nameDesc": 26432,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26432,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1015101,
+      "starPassiveSkill1": 1015201,
+      "starPassiveSkill2": 1015202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26432,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626432,
+      "skillDesc": 99926432,
+      "passiveDesc": 99826432,
+      "passiveDesc2": 99726432,
+      "headRefreshBm": "hk_icon_bsx_26432",
+      "modelId": 26432,
+      "lifeStealEffect": ""
+    },
+    "26433": {
+      "id": 26433,
+      "nameDesc": 26433,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26433,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 120,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1004101,
+      "starPassiveSkill1": 1004201,
+      "starPassiveSkill2": 1004202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26433,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626433,
+      "skillDesc": 99926433,
+      "passiveDesc": 99826433,
+      "passiveDesc2": 99726433,
+      "headRefreshBm": "hk_icon_bsx_26433",
+      "modelId": 26433,
+      "lifeStealEffect": ""
+    },
+    "26441": {
+      "id": 26441,
+      "nameDesc": 26441,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26441,
+      "weight": [
+        65,
+        60,
+        55,
+        50
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 270,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1006101,
+      "starPassiveSkill1": 1006201,
+      "starPassiveSkill2": 1006202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [
+        1
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26441,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626441,
+      "skillDesc": 99926441,
+      "passiveDesc": 99826441,
+      "passiveDesc2": 99726441,
+      "headRefreshBm": "hk_icon_bsx_26441",
+      "modelId": 26441,
+      "lifeStealEffect": ""
+    },
+    "26442": {
+      "id": 26442,
+      "nameDesc": 26442,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26442,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 210,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1016101,
+      "starPassiveSkill1": 1016201,
+      "starPassiveSkill2": 1016202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26442,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626442,
+      "skillDesc": 99926442,
+      "passiveDesc": 99826442,
+      "passiveDesc2": 99726442,
+      "headRefreshBm": "hk_icon_bsx_26442",
+      "modelId": 26442,
+      "lifeStealEffect": ""
+    },
+    "26443": {
+      "id": 26443,
+      "nameDesc": 26443,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26443,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 270,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1005101,
+      "starPassiveSkill1": 1005201,
+      "starPassiveSkill2": 1005202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26443,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626443,
+      "skillDesc": 99926443,
+      "passiveDesc": 99826443,
+      "passiveDesc2": 99726443,
+      "headRefreshBm": "hk_icon_bsx_26443",
+      "modelId": 26443,
+      "lifeStealEffect": ""
+    },
+    "26451": {
+      "id": 26451,
+      "nameDesc": 26451,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26451,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1703101,
+      "starPassiveSkill1": 1703201,
+      "starPassiveSkill2": 1703202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [
+        1
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26451,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626451,
+      "skillDesc": 99926451,
+      "passiveDesc": 99826451,
+      "passiveDesc2": 99726451,
+      "headRefreshBm": "hk_icon_bsx_26451",
+      "modelId": 26451,
+      "lifeStealEffect": ""
+    },
+    "26452": {
+      "id": 26452,
+      "nameDesc": 26452,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26452,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1701101,
+      "starPassiveSkill1": 1701201,
+      "starPassiveSkill2": 1701202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26452,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626452,
+      "skillDesc": 99926452,
+      "passiveDesc": 99826452,
+      "passiveDesc2": 99726452,
+      "headRefreshBm": "hk_icon_bsx_26452",
+      "modelId": 26452,
+      "lifeStealEffect": ""
+    },
+    "26453": {
+      "id": 26453,
+      "nameDesc": 26453,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26453,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1702101,
+      "starPassiveSkill1": 1702201,
+      "starPassiveSkill2": 1702202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26453,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626453,
+      "skillDesc": 99926453,
+      "passiveDesc": 99826453,
+      "passiveDesc2": 99726453,
+      "headRefreshBm": "hk_icon_bsx_26453",
+      "modelId": 26453,
+      "lifeStealEffect": ""
+    },
+    "26461": {
+      "id": 26461,
+      "nameDesc": 26461,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26451,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1803101,
+      "starPassiveSkill1": 1803201,
+      "starPassiveSkill2": 1803202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [
+        1
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26461,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626461,
+      "skillDesc": 99926461,
+      "passiveDesc": 99826461,
+      "passiveDesc2": 99726461,
+      "headRefreshBm": "hk_icon_bsx_26461",
+      "modelId": 26461,
+      "lifeStealEffect": ""
+    },
+    "26462": {
+      "id": 26462,
+      "nameDesc": 26462,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26452,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1801101,
+      "starPassiveSkill1": 1801201,
+      "starPassiveSkill2": 1801202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26462,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626462,
+      "skillDesc": 99926462,
+      "passiveDesc": 99826462,
+      "passiveDesc2": 99726462,
+      "headRefreshBm": "hk_icon_bsx_26462",
+      "modelId": 26462,
+      "lifeStealEffect": ""
+    },
+    "26463": {
+      "id": 26463,
+      "nameDesc": 26463,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26453,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 240,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 1802101,
+      "starPassiveSkill1": 1802201,
+      "starPassiveSkill2": 1802202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 1,
+      "occupationSuggest": [],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26463,
+      "skillSound": "effect_dt_attk_fashi",
+      "heroDesc": 99626463,
+      "skillDesc": 99926463,
+      "passiveDesc": 99826463,
+      "passiveDesc2": 99726463,
+      "headRefreshBm": "hk_icon_bsx_26463",
+      "modelId": 26463,
+      "lifeStealEffect": ""
+    },
+    "26511": {
+      "id": 26511,
+      "nameDesc": 26511,
+      "quality": 3,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26511,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 720,
+      "trajectorySpeed": 15,
+      "damageType": 3,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5001101,
+      "starPassiveSkill1": 5001201,
+      "starPassiveSkill2": 5001202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26511,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626511,
+      "skillDesc": 99926511,
+      "passiveDesc": 99826511,
+      "passiveDesc2": 99726511,
+      "headRefreshBm": "hk_icon_bsx_26511",
+      "modelId": 26511,
+      "lifeStealEffect": ""
+    },
+    "26521": {
+      "id": 26521,
+      "nameDesc": 26521,
+      "quality": 4,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26521,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 720,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5002101,
+      "starPassiveSkill1": 5002201,
+      "starPassiveSkill2": 5002202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26521,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626521,
+      "skillDesc": 99926521,
+      "passiveDesc": 99826521,
+      "passiveDesc2": 99726521,
+      "headRefreshBm": "hk_icon_bsx_26521",
+      "modelId": 26521,
+      "lifeStealEffect": ""
+    },
+    "26531": {
+      "id": 26531,
+      "nameDesc": 26531,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26531,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 360,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5003101,
+      "starPassiveSkill1": 5003201,
+      "starPassiveSkill2": 5003202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26531,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626531,
+      "skillDesc": 99926531,
+      "passiveDesc": 99826531,
+      "passiveDesc2": 99726531,
+      "headRefreshBm": "hk_icon_bsx_26531",
+      "modelId": 26531,
+      "lifeStealEffect": ""
+    },
+    "26532": {
+      "id": 26532,
+      "nameDesc": 26532,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26532,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5007101,
+      "starPassiveSkill1": 5007201,
+      "starPassiveSkill2": 5007202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26532,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626532,
+      "skillDesc": 99926532,
+      "passiveDesc": 99826532,
+      "passiveDesc2": 99726532,
+      "headRefreshBm": "hk_icon_bsx_26532",
+      "modelId": 26532,
+      "lifeStealEffect": ""
+    },
+    "26533": {
+      "id": 26533,
+      "nameDesc": 26533,
+      "quality": 5,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26533,
+      "weight": [
+        100,
+        95,
+        90,
+        85
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 720,
+      "trajectorySpeed": 15,
+      "damageType": 1,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5004101,
+      "starPassiveSkill1": 5004201,
+      "starPassiveSkill2": 5004202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26533,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626533,
+      "skillDesc": 99926533,
+      "passiveDesc": 99826533,
+      "passiveDesc2": 99726533,
+      "headRefreshBm": "hk_icon_bsx_26533",
+      "modelId": 26533,
+      "lifeStealEffect": ""
+    },
+    "26541": {
+      "id": 26541,
+      "nameDesc": 26541,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26541,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 480,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5005101,
+      "starPassiveSkill1": 5005201,
+      "starPassiveSkill2": 5005202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26541,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626541,
+      "skillDesc": 99926541,
+      "passiveDesc": 99826541,
+      "passiveDesc2": 99726541,
+      "headRefreshBm": "hk_icon_bsx_26541",
+      "modelId": 26541,
+      "lifeStealEffect": ""
+    },
+    "26542": {
+      "id": 26542,
+      "nameDesc": 26542,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26542,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 480,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5006101,
+      "starPassiveSkill1": 5006201,
+      "starPassiveSkill2": 5006202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26542,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626542,
+      "skillDesc": 99926542,
+      "passiveDesc": 99826542,
+      "passiveDesc2": 99726542,
+      "headRefreshBm": "hk_icon_bsx_26542",
+      "modelId": 26542,
+      "lifeStealEffect": ""
+    },
+    "26543": {
+      "id": 26543,
+      "nameDesc": 26543,
+      "quality": 6,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26543,
+      "weight": [
+        80,
+        75,
+        70,
+        65
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26543101,
+      "starPassiveSkill1": 26543201,
+      "starPassiveSkill2": 26543202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26543,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626543,
+      "skillDesc": 99926543,
+      "passiveDesc": 99826543,
+      "passiveDesc2": 99726543,
+      "headRefreshBm": "hk_icon_bsx_26543",
+      "modelId": 26543,
+      "lifeStealEffect": ""
+    },
+    "26551": {
+      "id": 26551,
+      "nameDesc": 26551,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26551,
+      "weight": [
+        60,
+        55,
+        50,
+        45
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5701101,
+      "starPassiveSkill1": 5701201,
+      "starPassiveSkill2": 5701202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26551,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626551,
+      "skillDesc": 99926551,
+      "passiveDesc": 99826551,
+      "passiveDesc2": 99726551,
+      "headRefreshBm": "hk_icon_bsx_26551",
+      "modelId": 26551,
+      "lifeStealEffect": ""
+    },
+    "26552": {
+      "id": 26552,
+      "nameDesc": 26552,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26552,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 450,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26552101,
+      "starPassiveSkill1": 26552201,
+      "starPassiveSkill2": 26552202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26552,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626552,
+      "skillDesc": 99926552,
+      "passiveDesc": 99826552,
+      "passiveDesc2": 99726552,
+      "headRefreshBm": "hk_icon_bsx_26552",
+      "modelId": 26552,
+      "lifeStealEffect": ""
+    },
+    "26553": {
+      "id": 26553,
+      "nameDesc": 26553,
+      "quality": 7,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26553,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 420,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5702101,
+      "starPassiveSkill1": 5702201,
+      "starPassiveSkill2": 5702202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26553,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626553,
+      "skillDesc": 99926553,
+      "passiveDesc": 99826553,
+      "passiveDesc2": 99726553,
+      "headRefreshBm": "hk_icon_bsx_26553",
+      "modelId": 26553,
+      "lifeStealEffect": ""
+    },
+    "26561": {
+      "id": 26561,
+      "nameDesc": 26561,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26551,
+      "weight": [
+        60,
+        55,
+        50,
+        45
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 300,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5801101,
+      "starPassiveSkill1": 5801201,
+      "starPassiveSkill2": 5801202,
+      "haloOwn": 0,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26561,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626561,
+      "skillDesc": 99926561,
+      "passiveDesc": 99826561,
+      "passiveDesc2": 99726561,
+      "headRefreshBm": "hk_icon_bsx_26561",
+      "modelId": 26561,
+      "lifeStealEffect": ""
+    },
+    "26562": {
+      "id": 26562,
+      "nameDesc": 26562,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26552,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 450,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 26562101,
+      "starPassiveSkill1": 26562201,
+      "starPassiveSkill2": 26562202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26562,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626562,
+      "skillDesc": 99926562,
+      "passiveDesc": 99826562,
+      "passiveDesc2": 99726562,
+      "headRefreshBm": "hk_icon_bsx_26562",
+      "modelId": 26562,
+      "lifeStealEffect": ""
+    },
+    "26563": {
+      "id": 26563,
+      "nameDesc": 26563,
+      "quality": 9,
+      "minStar": 1,
+      "maxStar": 4,
+      "group": 26553,
+      "weight": [
+        70,
+        65,
+        60,
+        55
+      ],
+      "starParam": [
+        10000,
+        30000,
+        80000,
+        160000
+      ],
+      "attackSpeed": 420,
+      "trajectorySpeed": 15,
+      "damageType": 2,
+      "starSellPrice": [
+        5,
+        20,
+        40,
+        65
+      ],
+      "skill": 5802101,
+      "starPassiveSkill1": 5802201,
+      "starPassiveSkill2": 5802202,
+      "haloOwn": 1,
+      "attackRange": 4,
+      "upStar": 1,
+      "unlock": 1,
+      "occupation": 5,
+      "occupationSuggest": [
+        5
+      ],
+      "starProb": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "heroType": 1,
+      "itemId": 26563,
+      "skillSound": "effect_dt_attk_zhaohuan",
+      "heroDesc": 99626563,
+      "skillDesc": 99926563,
+      "passiveDesc": 99826563,
+      "passiveDesc2": 99726563,
+      "headRefreshBm": "hk_icon_bsx_26563",
+      "modelId": 26563,
+      "lifeStealEffect": ""
+    }
+  }
+}

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bang can bang cau ca rieng - 06/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-b-ng-c-n-b-ng-c-u-c-ri-ng">Session Report — bảng cân bằng câu cá riêng</h1>
+<p>Ngày 06/09/2026. <strong>Đã thiết lập bảng cân bằng riêng theo yêu cầu của chủ server, mở lại tẩy thuộc tính cần và hộp kho báu trên S1/S2. Đây không phải tỷ lệ gốc bản Trung. Không phát bù hoặc sửa cá/thuộc tính lịch sử của người chơi.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Tạo một bảng JSON có phiên bản để quản lý giá trị, trọng số, chi phí và giới hạn. Server chọn kết quả, không tin thuộc tính hoặc quà do client gửi.</li>
+<li>Mở tẩy thuộc tính: trừ đúng10 Thiên Thanh Thạch, sinh3–6 dòng theo cấp câu, lưu bản xem trước; chỉ khi người chơi chọn thay mới đổi thuộc tính đang dùng. Đăng nhập lại vẫn còn bản xem trước.</li>
+<li>Mở5 hộp94821–94825: mỗi hộp rút1 món theo bảng dưới, tối đa100 hộp/lệnh. Đường mở ở giao diện câu cá và trong túi dùng chung giao dịch.</li>
+<li>Thêm requestId và balanceRevision: replay trả kết quả cũ, không trừ/cấp thêm; yêu cầu sai phiên bản không tiêu hao. Lưu64 biên nhận gần nhất và20 lần lịch sử tẩy ở server, không gửi lịch sử đó trong gói đăng nhập.</li>
+<li>Bổ sung tác dụng thật cho các dòng tẩy được mở: Hải thần101 đã dùng trong combat; Sức sống9 tiết kiệm Đùi Gà; Tinh thông104 tiết kiệm mồi;201–210 tăng và301–310 giảm trọng số từng loài trong pool đã mở.</li>
+<li>Giữ nguyên luồng mồi FIFO, đơn có vé, linh hồn dự phòng và full-entity/relog đã sửa trước. Không đổi RNG linh hồn hoặc tự thêm quà di vật/sự kiện.</li>
+</ul>
+<h3 id="b-ng-t-y-thu-c-t-nh">Bảng tẩy thuộc tính</h3>
+<p>Chi phí: <strong>135×10/lần</strong>. Thay bản xem trước vào cần: <strong>miễn phí</strong>. Tẩy lại thay bản xem trước, không thay thuộc tính đang trang bị.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Phẩm chất dòng — ID</th>
+<th>Tỷ lệ mỗi dòng</th>
+<th>Hải thần / tiết kiệm Đùi Gà / tiết kiệm mồi</th>
+<th>Tăng–giảm trọng số loài</th>
+</tr></thead><tbody>
+<tr>
+<td>2</td>
+<td>45%</td>
+<td>0,50–1,00%</td>
+<td>2,50–5,00%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>30%</td>
+<td>1,01–1,80%</td>
+<td>5,01–9,00%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>16%</td>
+<td>1,81–2,80%</td>
+<td>9,01–14,00%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7%</td>
+<td>2,81–4,00%</td>
+<td>14,01–20,00%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2%</td>
+<td>4,01–6,00%</td>
+<td>20,01–30,00%</td>
+</tr>
+</tbody></table></div>
+<p>Giá trị nguyên bps,100bps=1%; chọn đều trong khoảng min/max bao gồm hai đầu. “Trọng số loài” là thay đổi tương đối khi random, không phải cộng trực tiếp từng đó điểm phần trăm vào xác suất cuối.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Cấp câu cá</th>
+<th>Số dòng / xác suất</th>
+</tr></thead><tbody>
+<tr>
+<td>1–25</td>
+<td>3 dòng,100%</td>
+</tr>
+<tr>
+<td>26</td>
+<td>3 hoặc4 dòng, mỗi loại50%</td>
+</tr>
+<tr>
+<td>27</td>
+<td>3/4/5 dòng, mỗi loại1/3</td>
+</tr>
+<tr>
+<td>28</td>
+<td>3/4/5/6 dòng, mỗi loại25%</td>
+</tr>
+<tr>
+<td>29</td>
+<td>4/5/6 dòng, mỗi loại1/3</td>
+</tr>
+<tr>
+<td>30–40</td>
+<td>5 hoặc6 dòng, mỗi loại50%</td>
+</tr>
+</tbody></table></div>
+<p>Số dòng lấy từ FishLevelConfig.washCount hiện hành. Chọn loại thuộc tính có trọng số, không lặp loại và không đồng thời ra tăng/giảm cho cùng một loài:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>ID</th>
+<th>Trọng số mỗi loại</th>
+</tr></thead><tbody>
+<tr>
+<td>Hải thần: tăng thuộc tính cá</td>
+<td>101</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Sức sống: miễn tiêu hao Đùi Gà</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Tinh thông: miễn tiêu hao mồi phụ</td>
+<td>104</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Thợ săn: tăng trọng số tôm, cá, cua, rùa, sao biển, sứa, bạch tuộc, trai, cá heo, cá mập</td>
+<td>201–210</td>
+<td>3 cho từng ID</td>
+</tr>
+<tr>
+<td>Khắc tinh: giảm trọng số theo cùng thứ tự loài</td>
+<td>301–310</td>
+<td>3 cho từng ID</td>
+</tr>
+</tbody></table></div>
+<p>Tổng trọng số lượt chọn đầu90; sau mỗi dòng loại bỏ ứng viên đã chọn và loại đối nghịch. Tỷ lệ loại ở các dòng sau là xác suất có điều kiện, không cố định như dòng đầu. Phẩm chất từng dòng được chọn độc lập theo45/30/16/7/2.</p>
+<ul>
+<li>Chỉ23 loại trên được đưa vào danh sách tẩy/auto-filter. Các dòng105–109,211–213 chưa hoàn thiện hiệu ứng nên không sinh dòng vô tác dụng.</li>
+<li>Giới hạn hiệu lực tiết kiệm Đùi Gà20%, tiết kiệm mồi25%. Phải đủ năng lượng cho cả lượt trước khi thử miễn phí, không câu với0 Đùi Gà rồi trông chờ xác suất.</li>
+<li>Trọng số loài được chặn trong khoảng1000–20000, nền10000; cá thuộc khu chưa mở vẫn không được đưa vào pool.</li>
+<li>Không tự áp lại bảng lên thuộc tính người chơi đang có; chỉ các lần tẩy mới dùng bảng này.</li>
+</ul>
+<h3 id="b-ng-m-h-p">Bảng mở hộp</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Phần thưởng mỗi lần rút</th>
+<th>Số lượng</th>
+<th>Xác suất</th>
+</tr></thead><tbody>
+<tr>
+<td>Mảnh Thiên Công tương ứng hộp</td>
+<td>1</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>Nguyên bảo — ID1</td>
+<td>50</td>
+<td>23%</td>
+</tr>
+<tr>
+<td>Bánh bao — ID4</td>
+<td>30</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Tăng tốc — ID6</td>
+<td>5</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Bạc — ID2</td>
+<td>10.000</td>
+<td>30%</td>
+</tr>
+</tbody></table></div>
+<p>Tổng100%. Mỗi hộp1 lần rút độc lập; <strong>không có pity/bảo hiểm</strong>, không cấp toàn bộ5 món.100 hộp không bảo đảm có mảnh.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Hộp</th>
+<th>Mảnh tương ứng</th>
+</tr></thead><tbody>
+<tr>
+<td>94821</td>
+<td>190001</td>
+</tr>
+<tr>
+<td>94822</td>
+<td>190002</td>
+</tr>
+<tr>
+<td>94823</td>
+<td>190003</td>
+</tr>
+<tr>
+<td>94824</td>
+<td>190004</td>
+</tr>
+<tr>
+<td>94825</td>
+<td>190005</td>
+</tr>
+</tbody></table></div>
+<p>Quà và số lượng bám danh sách hiển thị FishSoulPrivilegeConfig.privRewardShow; trọng số là bảng tự thiết lập theo ủy quyền, không suy ra từ danh sách đó. Hộp3–5 có thể chọn khi thực sự sở hữu, không tự cấp hộp. Giao diện hộp hiện tỷ lệ thành3 dòng giới hạn kích thước.</p>
+<p>Mảnh190001–190005 là <strong>vật liệu trong túi</strong>, không phải bộ thời trang để tự kích hoạt. Đã kiểm cấp/lưu/sync đúng và chặn đường dùng item chung nuốt mất mảnh. Chưa nghiệm thu chức năng kích hoạt Thiên Công Huyễn Cảnh/bonus10% của Tranh Trung Các; việc mở hộp không tự mở chức năng đó.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-ng-b-local-production">Source chính đã đồng bộ local/production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Nội dung</th>
+</tr></thead><tbody>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/config/fishingBalance.json</code></td>
+<td>Bảng cân bằng mới, phiên bản lhs-fishing-custom-20260906-v1</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/services/FishingBalanceService.js</code></td>
+<td>Validate bảng, random trọng số, hiệu ứng tẩy, giao dịch/biên nhận và lịch sử</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish.js</code></td>
+<td>Tẩy/thay, tiêu hao có tiết kiệm và trọng số loài</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish-soul.js</code></td>
+<td>Mở hộp có trừ vật phẩm, cấp quà và chống replay</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/item.js</code></td>
+<td>Mở hộp trong túi dùng cùng ledger; không tiêu hủy mảnh vật liệu qua generic use</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/playerPayload.js</code></td>
+<td>Ẩn lịch sử/biên nhận nội bộ khỏi login</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></td>
+<td>requestId/revision, kết quả tẩy authoritative, danh sách auto, hộp có tỷ lệ và lỗi đúng</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/index.html</code></td>
+<td>Cache key20260906_fishing_custom_balance_v1_layout</td>
+</tr>
+</tbody></table></div>
+<p>Không sửa bin config gốc, dữ liệu nhân vật thật, DB schema, WebGM, WSServer, PlayerService hoặc bot worker. Source dùng snapshot production149 artifact mới tại <code>temp/fishing_audit_20260906T000508Z/</code>.</p>
+<h3 id="h-tr-v-backup">Hỗ trợ và backup</h3>
+<ul>
+<li>Tools mới trong <code>_ai_workbench/tools/</code>: build_fishing_balance_client_20260906.js, extend_fishing_balance_tests_20260906.js, test_fishing_balance_20260906.js, release_fishing_balance_20260906.py, qa_fishing_balance_live_20260906.js, run_fishing_balance_live_20260906.py, sync_fishing_balance_local_20260906.py, publish_fishing_balance_layout_20260906.py, final_fishing_balance_20260906.py.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_balance_20260906/</code>: tests.json, stage.json, deploy.json, live-qa.json, final-staging-tests.json, final-check.json, client-build.json, local-sync.json.</li>
+<li>Backup source production: <code>/linhhoasu/_ai_workbench/backups/fishing_balance_20260906_001504/</code>.</li>
+<li>Backup client layout: <code>/linhhoasu/_ai_workbench/backups/fishing_balance_layout_20260906_001925/</code>; không restart cho lượt layout.</li>
+<li>Backup local: <code>backups/fishing_balance_local_20260906/</code>, <code>backups/fishing_balance_layout_local_20260906/</code>; backup report: <code>backups/fishing_balance_reports_20260906/</code>.</li>
+<li>Gói source-only <code>temp/fishing_balance_20260906/fishing_custom_balance_v1_20260906.zip</code>,9 entry, yêu cầu bản fishing_bait_order_soul_v2. Hash chính xác trong final-check.json. Không chứa credential, runtime người chơi hoặc DB snapshot.</li>
+<li>Báo cáo này và session_report.md đều có bản HTML đầy đủ. Không tạo tool/file tạm ở root.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Tránh lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Tẩy/hộp bị khóa</td>
+<td>Thiếu bảng server-only</td>
+<td>Tạo bảng riêng có phiên bản và tỷ lệ công khai theo yêu cầu</td>
+<td>Không gắn nhãn tỷ lệ chính thức</td>
+</tr>
+<tr>
+<td>Thuộc tính sinh ra nhưng không tác dụng</td>
+<td>Handler chưa dùng các hiệu ứng</td>
+<td>Chỉ mở23 loại có code thực thi; giới hạn loại auto-filter</td>
+<td>Test tác dụng tiêu hao/trọng số/combat</td>
+</tr>
+<tr>
+<td>Retry trừ/cấp lặp</td>
+<td>Thiếu định danh giao dịch bền vững</td>
+<td>requestId + revision +64 receipt, lookup trước consume</td>
+<td>Test replay cùng key, stale, xung đột key và sau relog</td>
+</tr>
+<tr>
+<td>Mutate dở rồi save lỗi</td>
+<td>Trừ/cấp trực tiếp trên player</td>
+<td>Lập kế hoạch/grant trên clone, await save; null/throw vô hiệu session</td>
+<td>Test durable unchanged và không save rollback giả</td>
+</tr>
+<tr>
+<td>Mảnh bị nuốt qua dùng item chung</td>
+<td>Vật liệu không có AssetsUseConfig</td>
+<td>Chặn generic use190001–190005, giữ trong túi</td>
+<td>Test vật liệu sau cấp và use reject</td>
+</tr>
+<tr>
+<td>Thông báo cụ thể vẫn thành câu chung/tạm khóa</td>
+<td>Sai ưu tiên toán tử OR và điều kiện ba ngôi ở patchv2</td>
+<td>Thay lookup lỗi có fallback rõ ràng</td>
+<td>VM native kiểm đúng chuỗi hiển thị</td>
+</tr>
+<tr>
+<td>Mô tả tỷ lệ có nguy cơ tràn màn</td>
+<td>Skin label không có width</td>
+<td>Chia3 dòng, width540/height66/font18, căn giữa</td>
+<td>VM updateUI + kiểm skin và owned box gating</td>
+</tr>
+<tr>
+<td>Final WS ready có lần timeout</td>
+<td>Trạng thái tải/kết nối dao động đã thấy ở phiên trước</td>
+<td>Không restart thêm; đọc lại và đạt HTTP/WSready, giữ log giới hạn</td>
+<td>Không coi HTTP readiness là bằng chứng gameplay</td>
+</tr>
+<tr>
+<td>Patch item nhầm anchor ban đầu</td>
+<td><code>const count = parsedCount.count</code> xuất hiện nhiều chỗ</td>
+<td>Phát hiện bằng diff, chuyển vào đúng handleUseItem trước deploy</td>
+<td>Anchor theo tên hàm + unit đường genericuse</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Vật phẩm52 là mảnh kiến trúc, không phải ngoại quan. Phát vào túi đúng không đồng nghĩa bonus kiến trúc đã được kích hoạt.</li>
+<li>Trạng thái bản tẩy chờ thay cần lưu; không dùng client copy làm nguồn sự thật khi nhận replay sau khi đã thay.</li>
+<li>Khi lịch sử receipt quá64, expectedRevision cũ vẫn phải ngăn giao dịch lịch sử chạy lại. Không dựa duy nhất vào bộ nhớ response cache của WebSocket.</li>
+<li>JSON mới là cấu hình gameplay thực sự, phải validate trọng số, giới hạn, item và khớp chi phí client trước tiêu hao. Sửa JSON đòi hỏi test/restart có phạm vi, không hot-edit tùy ý trên production.</li>
+<li><code>ID6</code> được hệ thống hiện tại lưu ở currencies.gold, không phải items6. Sync/replay phải lấy đúng nguồn số dư này.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>-70 tests PASS trên Windows và staging Node20. Bao gồm duyệt đủ50.000 điểm trọng số hộp (5×10.000),10.000 điểm trọng số phẩm chất,2.000 lượt tẩy seeded qua40 cấp,25 nhánh quà, trường hợp thiếu/vượt số lượng, replay, lỗi save và native callback/layout.</p>
+<ul>
+<li>Core gameplay contract PASS local/staging với714 bảng; syntax các source/JS và JSON parse PASS. Staging độc lập, không mở socket từ bộ test in-memory.</li>
+<li>Live WS QA PASS S1/S2: hồi quy mồi/đơn/linh hồn/full entity, tẩy tốn10 đá, giữ preview qua relog, thay/relog, mở100 hộp mỗi loại (500/server), replay sau relog, generic1300 dùng chung4063.</li>
+<li>Các nhân vật QA đã xóa đúng UID/playerId, còn0. Không dùng vật phẩm hoặc tiền người chơi, không gửi bù. Không sửa cá đang có hoặc tẩy sẵn của người chơi.</li>
+</ul>
+<p>-152 artifact tracked hash đúng:8 file release và144 artifact ngoài release không đổi. Source local khớp candidate; served main/index đúng hash. Ready8080/8083 và WS9200/9201 đạt200/ok ở hậu kiểm cuối.</p>
+<ul>
+<li>Chỉ restart S1/S2 một lần cho backend. PID S1=15246/restart1371, S2=15191/restart35. Dist/admin/2 bot worker giữ PID/restart count. Lượt chỉnh layout client không restart.</li>
+<li>Error tail không TypeError/ReferenceError/Unhandled/FATAL/SyntaxError. Một lần final WSready timeout rồi kiểm lại đạt; không tuyên bố đã giải quyết tải/reconnect ngoài phạm vi.</li>
+<li>Chưa nghiệm thu hình ảnh UI bằng phiên người chơi thật hoặc thêm một lần restart sau khi tạo dữ liệu QA. Đã chạy actual native functions trong VM và WS/DB/relog thật.</li>
+</ul>
+<p><strong>Hai chức năng tẩy và mở hộp đã mở lại với bảng riêng. Không có tuyên bố toàn bộ hiệu ứng câu cá, RNG linh hồn, di vật/sự kiện hoặc Thiên Công Huyễn Cảnh đã hoàn thiện.</strong></p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng tải lại trang game/đăng nhập lại để nhận client có requestId/revision và bảng tỷ lệ. Client cũ bị từ chối hai thao tác mới, không trừ vật phẩm.</li>
+<li>File chỉnh cân bằng chính là <code>src/config/fishingBalance.json</code>: qualityRolls, attributes, boxes.pools. Khi đổi tỷ lệ hộp phải chạy lại builderclient để văn bản tỷ lệ được cập nhật theo JSON rồi test và deploy cùng lượt.</li>
+<li>Chi phí135×10 đang kiểm khớp FishBaseConfig. Muốn đổi giá phải cập nhật contract chi phí client/server có chủ đích, không chỉ sửa một phía. Số dòng theo bảng FishLevelConfig hiện hành.</li>
+<li>Thay đổi tiếp theo nên dựa trên số liệu nhận thưởng/tẩy thực tế. Không tự đặt lịch giám sát hoặc đổi tỷ lệ đang chạy nếu user chưa yêu cầu.</li>
+<li>Nếu tiếp tục Thiên Công Huyễn Cảnh: kiểm/hoàn thiện activation của mảnh190001–190005 riêng, không tiêu hủy mảnh thử trên tài khoản người chơi.</li>
+<li>Rollback source phải bảo toàn balanceRevision, receipts, lịch sử tẩy và reserve trong DB; không restore player snapshot cũ. Không chạy compensation/reroll lịch sử.</li>
+</ol></main></body></html>

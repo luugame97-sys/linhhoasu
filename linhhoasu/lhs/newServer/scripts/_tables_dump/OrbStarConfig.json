@@ -1,0 +1,2760 @@
+{
+  "_table": "OrbStarConfig",
+  "_rows": 46,
+  "_type": "object",
+  "_firstKeys": "0,1,2,3,4,5",
+  "_sample": [
+    {
+      "9101": {
+        "0": {
+          "id": 9101,
+          "star": 0,
+          "exp": 1,
+          "fetterAttrs": {
+            "254": 10
+          },
+          "specialAttrRate": 2000
+        },
+        "1": {
+          "id": 9101,
+          "star": 1,
+          "exp": 2,
+          "fetterAttrs": {
+            "254": 10
+          },
+          "specialAttrRate": 4000
+        },
+        "2": {
+          "id": 9101,
+          "star": 2,
+          "exp": 4,
+          "fetterAttrs": {
+            "254": 20
+          },
+          "specialAttrRate": 6000
+        },
+        "3": {
+          "id": 9101,
+          "star": 3,
+          "exp": 8,
+          "fetterAttrs": {
+            "254": 30
+          },
+          "specialAttrRate": 8000
+        },
+        "4": {
+          "id": 9101,
+          "star": 4,
+          "exp": 12,
+          "fetterAttrs": {
+            "254": 40
+          },
+          "specialAttrRate": 10000
+        },
+        "5": {
+          "id": 9101,
+          "star": 5,
+          "exp": 0,
+          "fetterAttrs": {
+            "254": 50
+          },
+          "specialAttrRate": 10000
+        }
+      }
+    },
+    {
+      "9111": {
+        "0": {
+          "id": 9111,
+          "star": 0,
+          "exp": 1,
+          "fetterAttrs": {
+            "254": 15
+          },
+          "specialAttrRate": 2000
+        },
+        "1": {
+          "id": 9111,
+          "star": 1,
+          "exp": 2,
+          "fetterAttrs": {
+            "254": 15
+          },
+          "specialAttrRate": 4000
+        },
+        "2": {
+          "id": 9111,
+          "star": 2,
+          "exp": 4,
+          "fetterAttrs": {
+            "254": 30
+          },
+          "specialAttrRate": 6000
+        },
+        "3": {
+          "id": 9111,
+          "star": 3,
+          "exp": 8,
+          "fetterAttrs": {
+            "254": 45
+          },
+          "specialAttrRate": 8000
+        },
+        "4": {
+          "id": 9111,
+          "star": 4,
+          "exp": 12,
+          "fetterAttrs": {
+            "254": 60
+          },
+          "specialAttrRate": 10000
+        },
+        "5": {
+          "id": 9111,
+          "star": 5,
+          "exp": 0,
+          "fetterAttrs": {
+            "254": 75
+          },
+          "specialAttrRate": 10000
+        }
+      }
+    },
+    {
+      "9112": {
+        "0": {
+          "id": 9112,
+          "star": 0,
+          "exp": 1,
+          "fetterAttrs": {
+            "254": 15
+          },
+          "specialAttrRate": 2000
+        },
+        "1": {
+          "id": 9112,
+          "star": 1,
+          "exp": 2,
+          "fetterAttrs": {
+            "254": 15
+          },
+          "specialAttrRate": 4000
+        },
+        "2": {
+          "id": 9112,
+          "star": 2,
+          "exp": 4,
+          "fetterAttrs": {
+            "254": 30
+          },
+          "specialAttrRate": 6000
+        },
+        "3": {
+          "id": 9112,
+          "star": 3,
+          "exp": 8,
+          "fetterAttrs": {
+            "254": 45
+          },
+          "specialAttrRate": 8000
+        },
+        "4": {
+          "id": 9112,
+          "star": 4,
+          "exp": 12,
+          "fetterAttrs": {
+            "254": 60
+          },
+          "specialAttrRate": 10000
+        },
+        "5": {
+          "id": 9112,
+          "star": 5,
+          "exp": 0,
+          "fetterAttrs": {
+            "254": 75
+          },
+          "specialAttrRate": 10000
+        }
+      }
+    }
+  ],
+  "data": {
+    "9101": {
+      "0": {
+        "id": 9101,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 10
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9101,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 10
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9101,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9101,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9101,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9101,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 50
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9111": {
+      "0": {
+        "id": 9111,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9111,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9111,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9111,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9111,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9111,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9112": {
+      "0": {
+        "id": 9112,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9112,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9112,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9112,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9112,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9112,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9113": {
+      "0": {
+        "id": 9113,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9113,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9113,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9113,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9113,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9113,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9121": {
+      "0": {
+        "id": 9121,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9121,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9121,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9121,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9121,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9121,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9122": {
+      "0": {
+        "id": 9122,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9122,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9122,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9122,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9122,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9122,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9123": {
+      "0": {
+        "id": 9123,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9123,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9123,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9123,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9123,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9123,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9131": {
+      "0": {
+        "id": 9131,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9131,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9131,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9131,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9131,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9131,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9132": {
+      "0": {
+        "id": 9132,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9132,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9132,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9132,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9132,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9132,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9133": {
+      "0": {
+        "id": 9133,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9133,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9133,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9133,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9133,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9133,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9134": {
+      "0": {
+        "id": 9134,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9134,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9134,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9134,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9134,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9134,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9135": {
+      "0": {
+        "id": 9135,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9135,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9135,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9135,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9135,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9135,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9136": {
+      "0": {
+        "id": 9136,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9136,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9136,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9136,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9136,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9136,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9141": {
+      "0": {
+        "id": 9141,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9141,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9141,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9141,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9141,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9141,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9142": {
+      "0": {
+        "id": 9142,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9142,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9142,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9142,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9142,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9142,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9143": {
+      "0": {
+        "id": 9143,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9143,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9143,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9143,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9143,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9143,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9151": {
+      "0": {
+        "id": 9151,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9151,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9151,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9151,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9151,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9151,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9152": {
+      "0": {
+        "id": 9152,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9152,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9152,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9152,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9152,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9152,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9153": {
+      "0": {
+        "id": 9153,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9153,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9153,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9153,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9153,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9153,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9161": {
+      "0": {
+        "id": 9161,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9161,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9161,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9161,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9161,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9161,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9162": {
+      "0": {
+        "id": 9162,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9162,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9162,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9162,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9162,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9162,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9163": {
+      "0": {
+        "id": 9163,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9163,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9163,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9163,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9163,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9163,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9164": {
+      "0": {
+        "id": 9164,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9164,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9164,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9164,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9164,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9164,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9165": {
+      "0": {
+        "id": 9165,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9165,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9165,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9165,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9165,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9165,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9166": {
+      "0": {
+        "id": 9166,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9166,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 15
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9166,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 30
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9166,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 45
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9166,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9166,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 75
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9211": {
+      "0": {
+        "id": 9211,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9211,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9211,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9211,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9211,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9211,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9212": {
+      "0": {
+        "id": 9212,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9212,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9212,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9212,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9212,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9212,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9213": {
+      "0": {
+        "id": 9213,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9213,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9213,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9213,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9213,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9213,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9221": {
+      "0": {
+        "id": 9221,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9221,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9221,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9221,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9221,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9221,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9222": {
+      "0": {
+        "id": 9222,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9222,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9222,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9222,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9222,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9222,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9223": {
+      "0": {
+        "id": 9223,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9223,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9223,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9223,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9223,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9223,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9224": {
+      "0": {
+        "id": 9224,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9224,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9224,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9224,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9224,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9224,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9225": {
+      "0": {
+        "id": 9225,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9225,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9225,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9225,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9225,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9225,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9226": {
+      "0": {
+        "id": 9226,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9226,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9226,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9226,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9226,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "254": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9226,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9231": {
+      "0": {
+        "id": 9231,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9231,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9231,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9231,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9231,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9231,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9232": {
+      "0": {
+        "id": 9232,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9232,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9232,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9232,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9232,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9232,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9233": {
+      "0": {
+        "id": 9233,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9233,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9233,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9233,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9233,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9233,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9241": {
+      "0": {
+        "id": 9241,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9241,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9241,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9241,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9241,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9241,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9242": {
+      "0": {
+        "id": 9242,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9242,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9242,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9242,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9242,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9242,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9243": {
+      "0": {
+        "id": 9243,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9243,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9243,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9243,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9243,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9243,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9244": {
+      "0": {
+        "id": 9244,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9244,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9244,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9244,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9244,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9244,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9245": {
+      "0": {
+        "id": 9245,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9245,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9245,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9245,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9245,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9245,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9246": {
+      "0": {
+        "id": 9246,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9246,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9246,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9246,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "253": 60
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9246,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 80
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9246,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9251": {
+      "0": {
+        "id": 9251,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9251,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9251,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9251,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9251,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9251,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9252": {
+      "0": {
+        "id": 9252,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9252,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9252,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9252,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9252,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9252,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    },
+    "9253": {
+      "0": {
+        "id": 9253,
+        "star": 0,
+        "exp": 1,
+        "fetterAttrs": {
+          "253": 20
+        },
+        "specialAttrRate": 2000
+      },
+      "1": {
+        "id": 9253,
+        "star": 1,
+        "exp": 2,
+        "fetterAttrs": {
+          "254": 20
+        },
+        "specialAttrRate": 4000
+      },
+      "2": {
+        "id": 9253,
+        "star": 2,
+        "exp": 4,
+        "fetterAttrs": {
+          "253": 40
+        },
+        "specialAttrRate": 6000
+      },
+      "3": {
+        "id": 9253,
+        "star": 3,
+        "exp": 8,
+        "fetterAttrs": {
+          "254": 40
+        },
+        "specialAttrRate": 8000
+      },
+      "4": {
+        "id": 9253,
+        "star": 4,
+        "exp": 12,
+        "fetterAttrs": {
+          "253": 100
+        },
+        "specialAttrRate": 10000
+      },
+      "5": {
+        "id": 9253,
+        "star": 5,
+        "exp": 0,
+        "fetterAttrs": {
+          "254": 100
+        },
+        "specialAttrRate": 10000
+      }
+    }
+  }
+}

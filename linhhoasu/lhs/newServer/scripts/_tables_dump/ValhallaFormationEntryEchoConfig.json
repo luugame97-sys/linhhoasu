@@ -1,0 +1,124 @@
+{
+  "_table": "ValhallaFormationEntryEchoConfig",
+  "_rows": 9,
+  "_type": "object",
+  "_firstKeys": "id,maxTrigger,trigger,name,desc",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "maxTrigger": 3,
+        "trigger": 3,
+        "name": 30104950,
+        "desc": 30104975
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "maxTrigger": 3,
+        "trigger": 3,
+        "name": 30104951,
+        "desc": 30104976
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "maxTrigger": 9,
+        "trigger": 3,
+        "args": [
+          100
+        ],
+        "name": 30104952,
+        "desc": 30104977
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "maxTrigger": 3,
+      "trigger": 3,
+      "name": 30104950,
+      "desc": 30104975
+    },
+    "2": {
+      "id": 2,
+      "maxTrigger": 3,
+      "trigger": 3,
+      "name": 30104951,
+      "desc": 30104976
+    },
+    "3": {
+      "id": 3,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "args": [
+        100
+      ],
+      "name": 30104952,
+      "desc": 30104977
+    },
+    "4": {
+      "id": 4,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "args": [
+        -3
+      ],
+      "name": 30104953,
+      "desc": 30104978
+    },
+    "11": {
+      "id": 11,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "extraAttrs": {
+        "301": 1000
+      },
+      "name": 30104954,
+      "desc": 30104979
+    },
+    "12": {
+      "id": 12,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "extraAttrs": {
+        "302": 1000
+      },
+      "name": 30104955,
+      "desc": 30104980
+    },
+    "13": {
+      "id": 13,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "extraAttrs": {
+        "303": 1000
+      },
+      "name": 30104956,
+      "desc": 30104981
+    },
+    "14": {
+      "id": 14,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "extraAttrs": {
+        "304": 1000
+      },
+      "name": 30104957,
+      "desc": 30104982
+    },
+    "15": {
+      "id": 15,
+      "maxTrigger": 9,
+      "trigger": 3,
+      "extraAttrs": {
+        "305": 1000
+      },
+      "name": 30104958,
+      "desc": 30104983
+    }
+  }
+}

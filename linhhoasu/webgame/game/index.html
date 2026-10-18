@@ -1,0 +1,2009 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Linh Họa Sư</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#0f172a">
+	<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+	<link rel="shortcut icon" href="/icon-192.png">
+
+
+	<!--防止index.html被浏览器缓存--begin-->
+
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+
+	<!--防止index.html被浏览器缓存--over-->
+
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<meta name="full-screen" content="true" />
+
+	<meta name="screen-orientation" content="portrait" />
+
+	<meta name="x5-fullscreen" content="true" />
+
+	<meta name="360-fullscreen" content="true" />
+
+	<link rel="preload" href="/gothich.ttf" as="font" type="font/ttf" crossorigin>
+
+	<style>
+
+
+
+/* Gán file gothich.ttf đè lên từng tên font hệ thống */
+
+@font-face {
+
+    font-family: 'SimSun';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'NSimSun';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'Microsoft YaHei';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'SimHei';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'Arial';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+/* Áp dụng toàn trang */
+
+* {
+
+    font-family: 'SimSun', 'Microsoft YaHei', 'Arial', sans-serif !important;
+
+}
+
+    
+
+
+
+        html, body {
+
+            -ms-touch-action: none;
+
+            background: #000000;
+
+            padding: 0;
+
+            border: 0;
+
+            margin: 0;
+
+            height: 100%;
+
+			overflow: hidden;
+
+        }
+
+    </style>
+
+	<link href="./icon.png" rel="apple-touch-icon">
+
+</head>
+
+<body onunload="closeSocket()" ondragstart="return false" >
+
+<button
+
+	id="lhs-web-popup"
+
+	type="button"
+
+	aria-label="Mở cổng web Linh Họa Sư"
+
+	title="Mở cổng web"
+
+>
+
+	<img class="lhs-web-popup__image" src="./icon-web.png?v=20260829" alt="">
+
+	<span class="lhs-web-popup__label">WEB</span>
+	<span class="lhs-web-popup__notice" aria-live="polite">Có giftcode mới, bấm để nhập</span>
+
+</button>
+
+<div id="lhs-web-modal" class="lhs-web-modal" hidden aria-hidden="true">
+
+	<div class="lhs-web-modal__backdrop" data-lhs-web-close></div>
+
+	<section class="lhs-web-modal__panel" role="dialog" aria-modal="true" aria-label="Cổng web">
+
+		<header class="lhs-web-modal__header">
+
+			<strong>CỔNG WEB</strong>
+
+			<button type="button" class="lhs-web-modal__close" data-lhs-web-close aria-label="Đóng">×</button>
+
+		</header>
+
+		<iframe
+
+			id="lhs-web-modal-frame"
+
+			class="lhs-web-modal__frame"
+
+			data-src="/web-panel/?is_popup=1&tab=tab-giftcode"
+
+			src="about:blank"
+
+			title="Cổng web Linh Họa Sư"
+
+			loading="lazy"
+
+			referrerpolicy="no-referrer"
+
+		></iframe>
+
+	</section>
+
+</div>
+
+<script>
+
+	(function () {
+
+		var trigger = document.getElementById('lhs-web-popup');
+
+		var modal = document.getElementById('lhs-web-modal');
+
+		var frame = document.getElementById('lhs-web-modal-frame');
+
+		if (!trigger || !modal) return;
+
+		var giftcodeNoticeKey = 'lhs_public_giftcode_notice_v1';
+		var applyGiftcodeNotice = function (hasUnclaimed) {
+			var active = hasUnclaimed === true;
+			trigger.classList.toggle('lhs-web-popup--giftcode-alert', active);
+			trigger.setAttribute('title', active ? 'Có giftcode mới, bấm để nhập' : 'Mở cổng web');
+			trigger.setAttribute('aria-label', active ? 'Có giftcode mới, bấm để nhập' : 'Mở cổng web Linh Họa Sư');
+		};
+		var readGiftcodeNotice = function () {
+			try {
+				var saved = JSON.parse(localStorage.getItem(giftcodeNoticeKey) || 'null');
+				if (saved && typeof saved.hasUnclaimed === 'boolean') applyGiftcodeNotice(saved.hasUnclaimed);
+			} catch (_error) {}
+		};
+		var pollGiftcodeAvailability = function () {
+			fetch('/web-panel/api/public_giftcode_status.php', { credentials: 'include', cache: 'no-store' })
+				.then(function (response) { return response.ok ? response.json() : null; })
+				.then(function (remote) {
+					if (!remote || remote.ok !== true) return;
+					var saved = null;
+					try { saved = JSON.parse(localStorage.getItem(giftcodeNoticeKey) || 'null'); } catch (_error) {}
+					var revision = Number(remote.revision || 0);
+					if (!saved || Number(saved.revision || 0) !== revision) {
+						var next = { type: 'lhs-giftcode-status', revision: revision, hasUnclaimed: remote.available === true };
+						try { localStorage.setItem(giftcodeNoticeKey, JSON.stringify(next)); } catch (_error) {}
+						applyGiftcodeNotice(next.hasUnclaimed);
+					}
+				});
+		};
+		readGiftcodeNotice();
+		pollGiftcodeAvailability();
+		window.setInterval(pollGiftcodeAvailability, 60000);
+		window.addEventListener('message', function (event) {
+			if (event.origin !== window.location.origin || !event.data || event.data.type !== 'lhs-giftcode-status') return;
+			var status = { type: event.data.type, revision: Number(event.data.revision || 0), hasUnclaimed: event.data.hasUnclaimed === true };
+			try { localStorage.setItem(giftcodeNoticeKey, JSON.stringify(status)); } catch (_error) {}
+			applyGiftcodeNotice(status.hasUnclaimed);
+		});
+
+		var dragged = false;
+
+		var moving = false;
+
+		var startX = 0;
+
+		var startY = 0;
+
+		var originLeft = 0;
+
+		var originTop = 0;
+
+		var idleTimer = null;
+
+		var idleDelay = 8000;
+
+		var clearIdle = function () {
+
+			trigger.classList.remove('lhs-web-popup--idle-left', 'lhs-web-popup--idle-right');
+
+		};
+
+		var scheduleIdle = function () {
+
+			if (idleTimer) window.clearTimeout(idleTimer);
+
+			idleTimer = window.setTimeout(function () {
+
+				if (moving || !modal.hidden) return scheduleIdle();
+
+				var rect = trigger.getBoundingClientRect();
+
+				clearIdle();
+
+				trigger.classList.add(rect.left + rect.width / 2 < window.innerWidth / 2
+
+					? 'lhs-web-popup--idle-left' : 'lhs-web-popup--idle-right');
+
+			}, idleDelay);
+
+		};
+
+		var clampPosition = function (left, top) {
+
+			var maxLeft = Math.max(0, window.innerWidth - trigger.offsetWidth);
+
+			var maxTop = Math.max(0, window.innerHeight - trigger.offsetHeight);
+
+			return {
+
+				left: Math.min(maxLeft, Math.max(0, left)),
+
+				top: Math.min(maxTop, Math.max(0, top))
+
+			};
+
+		};
+
+		var setPosition = function (left, top, save) {
+
+			clearIdle();
+
+			var position = clampPosition(left, top);
+
+			trigger.style.left = position.left + 'px';
+
+			trigger.style.top = position.top + 'px';
+
+			trigger.style.right = 'auto';
+
+			trigger.style.bottom = 'auto';
+
+			if (save) {
+
+				try { localStorage.setItem('lhs_web_icon_position', JSON.stringify(position)); } catch (_error) {}
+
+			}
+
+		};
+
+		try {
+
+			var storedPosition = JSON.parse(localStorage.getItem('lhs_web_icon_position') || 'null');
+
+			if (storedPosition && Number.isFinite(storedPosition.left) && Number.isFinite(storedPosition.top)) {
+
+				setPosition(storedPosition.left, storedPosition.top, false);
+
+			}
+
+		} catch (_error) {}
+
+		trigger.addEventListener('pointerdown', function (event) {
+
+			clearIdle();
+
+			scheduleIdle();
+
+			moving = true;
+
+			dragged = false;
+
+			startX = event.clientX;
+
+			startY = event.clientY;
+
+			var rect = trigger.getBoundingClientRect();
+
+			originLeft = rect.left;
+
+			originTop = rect.top;
+
+			trigger.setPointerCapture(event.pointerId);
+
+		});
+
+		trigger.addEventListener('pointermove', function (event) {
+
+			if (!moving) return;
+
+			var dx = event.clientX - startX;
+
+			var dy = event.clientY - startY;
+
+			if (Math.abs(dx) + Math.abs(dy) > 5) dragged = true;
+
+			if (dragged) {
+
+				event.preventDefault();
+
+				setPosition(originLeft + dx, originTop + dy, false);
+
+			}
+
+		});
+
+		var stopMoving = function (event) {
+
+			if (!moving) return;
+
+			moving = false;
+
+			if (dragged) {
+
+				var rect = trigger.getBoundingClientRect();
+
+				setPosition(rect.left, rect.top, true);
+
+				event.preventDefault();
+
+			}
+
+		};
+
+		trigger.addEventListener('pointerup', stopMoving);
+
+		trigger.addEventListener('pointercancel', stopMoving);
+
+		trigger.addEventListener('pointerenter', function () {
+
+			clearIdle();
+
+			scheduleIdle();
+
+		});
+
+		trigger.addEventListener('focus', function () {
+
+			clearIdle();
+
+			scheduleIdle();
+
+		});
+
+		window.addEventListener('resize', function () {
+
+			var rect = trigger.getBoundingClientRect();
+
+			setPosition(rect.left, rect.top, true);
+
+		});
+
+		var close = function () {
+
+			modal.hidden = true;
+
+			modal.setAttribute('aria-hidden', 'true');
+
+			document.body.classList.remove('lhs-web-modal-open');
+
+			trigger.focus();
+
+		};
+
+		var open = function () {
+
+			clearIdle();
+
+			scheduleIdle();
+
+			if (dragged) { dragged = false; return; }
+
+			if (frame && frame.src === 'about:blank') frame.src = frame.getAttribute('data-src');
+
+			modal.hidden = false;
+
+			modal.setAttribute('aria-hidden', 'false');
+
+			document.body.classList.add('lhs-web-modal-open');
+
+			var closeButton = modal.querySelector('.lhs-web-modal__close');
+
+			if (closeButton) closeButton.focus();
+
+		};
+
+		trigger.addEventListener('click', open);
+
+		scheduleIdle();
+
+		modal.querySelectorAll('[data-lhs-web-close]').forEach(function (node) {
+
+			node.addEventListener('click', close);
+
+		});
+
+		document.addEventListener('keydown', function (event) {
+
+			if (!modal.hidden && event.key === 'Escape') close();
+
+		});
+
+	}());
+
+</script>
+
+<div
+
+	style="margin: auto;width: 100%;height: 100%;" 
+
+	class="egret-player" 
+
+	data-entry-class="Main" 
+
+	data-orientation="auto" 
+
+	data-scale-mode="showAll" 
+
+	data-frame-rate="60" 
+
+	data-show-paint-rect="false"
+
+	data-content-width="720" 
+
+	data-content-height="1280" 
+
+	data-multi-fingered="2" 
+
+	data-show-fps="false" 
+
+	data-show-log="false"
+
+	data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.2">
+
+
+
+<div id="bgimgbg">
+
+<div id="bgimg">
+
+<div id="loader">
+
+        <div class="loader-inner ball-spin-fade-loader">
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+          <div></div>
+
+        </div>
+
+		<div id="load_text">Đang tải...</div>	
+
+   </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<style>
+
+
+
+	/* Nút truy cập web nổi, tách khỏi canvas game và không chặn thao tác chơi. */
+
+	#lhs-web-popup{
+
+		position:fixed;
+
+		right:clamp(12px, 2.5vw, 28px);
+
+		bottom:clamp(14px, 3vh, 34px);
+
+		z-index:10000;
+
+		display:flex;
+
+		align-items:center;
+
+		gap:0;
+
+		width:74px;
+
+		height:74px;
+
+		padding:0;
+
+		border:2px solid rgba(204,177,255,.9);
+
+		border-radius:22px;
+
+		background:#1b1238;
+
+		box-shadow:0 5px 18px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.28);
+
+		color:#fff;
+
+		font:700 12px/1 "Segoe UI",Arial,sans-serif;
+
+		letter-spacing:.04em;
+
+		text-decoration:none;
+
+		touch-action:none;
+
+		user-select:none;
+
+		cursor:grab;
+
+		-webkit-tap-highlight-color:transparent;
+
+		transition:transform .16s ease,filter .16s ease,box-shadow .16s ease;
+
+	}
+
+	#lhs-web-popup:hover,#lhs-web-popup:focus-visible{
+
+		filter:brightness(1.12);
+
+		box-shadow:0 7px 22px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.35);
+
+		transform:translateY(-2px);
+
+		outline:none;
+
+	}
+
+	#lhs-web-popup.lhs-web-popup--idle-left{transform:translateX(calc(-100% + 18px));opacity:.78}
+
+	#lhs-web-popup.lhs-web-popup--idle-right{transform:translateX(calc(100% - 18px));opacity:.78}
+
+	#lhs-web-popup.lhs-web-popup--idle-left:hover,#lhs-web-popup.lhs-web-popup--idle-left:focus-visible,
+
+	#lhs-web-popup.lhs-web-popup--idle-right:hover,#lhs-web-popup.lhs-web-popup--idle-right:focus-visible{
+
+		transform:translateX(0) translateY(-2px);opacity:1
+
+	}
+
+	#lhs-web-popup:active{transform:translateY(0) scale(.97);cursor:grabbing}
+
+	.lhs-web-popup__image{display:block;width:100%;height:100%;border-radius:19px;object-fit:cover;pointer-events:none}
+
+	.lhs-web-popup__label{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);padding:3px 8px;border-radius:999px;background:#35206e;color:#fff;box-shadow:0 2px 8px #0009;white-space:nowrap;pointer-events:none}
+	.lhs-web-popup__notice{display:none;position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);width:max-content;max-width:min(260px,calc(100vw - 92px));padding:8px 12px;border:1px solid #f59e0b;border-radius:12px;background:linear-gradient(135deg,#fff7ed,#fffbeb);color:#9a3412;box-shadow:0 8px 24px #0003;font:700 13px/1.25 Arial,sans-serif;pointer-events:none;white-space:normal}
+	#lhs-web-popup.lhs-web-popup--giftcode-alert{animation:lhsGiftcodeShake 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px rgba(245,158,11,.75))}
+	#lhs-web-popup.lhs-web-popup--giftcode-alert .lhs-web-popup__notice{display:block}
+	@keyframes lhsGiftcodeShake{0%,65%,100%{transform:translateY(0) rotate(0)}68%{transform:translateY(-2px) rotate(-5deg)}71%{transform:translateY(1px) rotate(5deg)}74%{transform:translateY(-1px) rotate(-4deg)}77%{transform:translateY(0) rotate(0)}}
+	@media (prefers-reduced-motion:reduce){#lhs-web-popup.lhs-web-popup--giftcode-alert{animation:none}}
+
+		.lhs-web-modal[hidden]{display:none}
+	.lhs-web-modal{
+		position:fixed;
+		inset:0;
+		z-index:10001;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		padding:clamp(6px, 1.8vw, 24px);
+	}
+	.lhs-web-modal__backdrop{
+		position:absolute;
+		inset:0;
+		background:rgba(0,0,0,.68);
+		backdrop-filter:blur(3px);
+	}
+	.lhs-web-modal__panel{
+		position:relative;
+		width:min(1240px, 96vw);
+		height:min(860px, 94vh);
+		display:flex;
+		flex-direction:column;
+		overflow:hidden;
+		border:1px solid rgba(255,255,255,.35);
+		border-radius:16px;
+		background:#0f172a;
+		box-shadow:0 24px 64px rgba(0,0,0,.65);
+	}
+	.lhs-web-modal__header{
+		flex:0 0 42px;
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+		padding:0 12px 0 16px;
+		background:linear-gradient(135deg,#0284c7,#0369a1);
+		color:#fff;
+		font:800 13px/1 "Segoe UI",Arial,sans-serif;
+		letter-spacing:.04em;
+	}
+	.lhs-web-modal__close{
+		width:30px;height:30px;padding:0;border:0;border-radius:50%;
+		background:rgba(0,0,0,.25);color:#fff;cursor:pointer;font-size:22px;line-height:28px;
+		display:flex;align-items:center;justify-content:center;
+		transition:background .2s;
+	}
+	.lhs-web-modal__close:hover,.lhs-web-modal__close:focus-visible{background:rgba(239,68,68,.85);outline:none}
+	.lhs-web-modal__frame{flex:1;width:100%;height:100%;border:0;background:#f8fafc}
+	body.lhs-web-modal-open{overflow:hidden}
+	@media (max-width: 900px){
+		.lhs-web-modal{padding:6px}
+		.lhs-web-modal__panel{width:100%;height:100%;border-radius:12px}
+	}
+	@media (max-width: 576px){
+		#lhs-web-popup{width:56px;height:56px;border-radius:16px}
+		.lhs-web-popup__image{border-radius:14px}
+		.lhs-web-modal{padding:0}
+		.lhs-web-modal__panel{width:100%;height:100%;border-radius:0;border:0}
+	}
+
+
+
+/* Gán file gothich.ttf đè lên từng tên font hệ thống */
+
+@font-face {
+
+    font-family: 'SimSun';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'NSimSun';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'Microsoft YaHei';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'SimHei';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+@font-face {
+
+    font-family: 'Arial';
+
+    src: url('/gothich.ttf') format('truetype');
+
+}
+
+
+
+/* Áp dụng toàn trang */
+
+* {
+
+    font-family: 'SimSun', 'Microsoft YaHei', 'Arial', sans-serif !important;
+
+}
+
+
+
+    
+
+
+
+	#bgimgbg{
+
+		height: 100%;
+
+		width: 100%;
+
+	}
+
+
+
+	#bgimg{
+
+		overflow: hidden;
+
+		background-position:top center;
+
+		background-size:100% 100%;  
+
+		height: 100%;
+
+		width: 100%;
+
+		position: absolute;
+
+		display: flex;
+
+		display: -webkit-flex;
+
+		-webkit-justify-content:center;
+
+		justify-content:center;
+
+		-webkit-align-items:center;
+
+		align-items:center;
+
+	}
+
+
+
+    .loader-inner{
+
+		left: 50%;
+
+		height: 5rem;
+
+	}
+
+	#load_text{
+
+        width: 100%;
+
+		text-align: center;
+
+		color: #ffffff;
+
+		font-size:1rem;
+
+		text-shadow:#000000 1px 1px;
+
+	}
+
+	@-webkit-keyframes ball-spin-fade-loader {
+
+	50% {
+
+		opacity: 0.3;
+
+		-webkit-transform: scale(0.4);
+
+				transform: scale(0.4); }
+
+
+
+	100% {
+
+		opacity: 1;
+
+		-webkit-transform: scale(1);
+
+				transform: scale(1); } }
+
+
+
+	@keyframes ball-spin-fade-loader {
+
+	50% {
+
+		opacity: 0.3;
+
+		-webkit-transform: scale(0.4);
+
+				transform: scale(0.4); }
+
+
+
+	100% {
+
+		opacity: 1;
+
+		-webkit-transform: scale(1);
+
+				transform: scale(1); } }
+
+
+
+	.ball-spin-fade-loader {
+
+	position: relative; }
+
+	.ball-spin-fade-loader > div:nth-child(1) {
+
+		top: 25px;
+
+		left: 0;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(2) {
+
+		top: 17.04545px;
+
+		left: 17.04545px;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.12s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.12s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(3) {
+
+		top: 0;
+
+		left: 25px;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.24s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.24s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(4) {
+
+		top: -17.04545px;
+
+		left: 17.04545px;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.36s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.36s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(5) {
+
+		top: -25px;
+
+		left: 0;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.48s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.48s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(6) {
+
+		top: -17.04545px;
+
+		left: -17.04545px;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.6s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.6s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(7) {
+
+		top: 0;
+
+		left: -25px;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.72s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.72s infinite linear; }
+
+	.ball-spin-fade-loader > div:nth-child(8) {
+
+		top: 17.04545px;
+
+		left: -17.04545px;
+
+		-webkit-animation: ball-spin-fade-loader 1s 0.84s infinite linear;
+
+				animation: ball-spin-fade-loader 1s 0.84s infinite linear; }
+
+	.ball-spin-fade-loader > div {
+
+		background-color: #fff;
+
+		width: 15px;
+
+		height: 15px;
+
+		border-radius: 100%;
+
+		margin: 2px;
+
+		-webkit-animation-fill-mode: both;
+
+				animation-fill-mode: both;
+
+		position: absolute; }
+
+
+
+</style>
+
+
+
+<!--SDK REPLACE-->
+
+
+
+<script type="text/javascript">
+
+	(function () {
+
+		var query = new URLSearchParams(window.location.search || '');
+
+		var securePage = window.location.protocol === 'https:';
+
+		var pageOrigin = window.location.origin || ((securePage ? 'https://' : 'http://') + window.location.host);
+
+		var isDomainHost = !/^\d{1,3}(?:\.\d{1,3}){3}$/.test(window.location.hostname) && window.location.hostname !== 'localhost';
+
+		if ((securePage || isDomainHost) && (query.get('httpPort') === '81' || query.get('wsPort') === '81' || query.get('backendHost') === window.location.hostname)) {
+			query.delete('backendHost');
+			query.delete('httpPort');
+			query.delete('wsPort');
+			try {
+				var cleanSearch = query.toString();
+				var cleanUrl = window.location.pathname + (cleanSearch ? ('?' + cleanSearch) : '') + window.location.hash;
+				window.history.replaceState(null, document.title, cleanUrl);
+			} catch (_e) {}
+		}
+
+		var backendHost = query.get('backendHost') || window.location.hostname || '127.0.0.1';
+
+		var customBackend = query.has('backendHost') || query.has('httpPort') || query.has('wsPort');
+
+		var httpPort = String(query.get('httpPort') || window.location.port || (securePage ? '443' : '81'));
+
+		var wsPort = String(query.get('wsPort') || window.location.port || (securePage ? '443' : '81'));
+
+		var translationVersion = '20260930_pet_cap1000_v1';
+		var httpScheme = securePage ? 'https://' : 'http://';
+
+		var wsScheme = securePage ? 'wss://' : 'ws://';
+
+		var apiBase = customBackend
+
+			? httpScheme + backendHost + ':' + httpPort
+
+			: pageOrigin;
+
+		var wsUrl = customBackend
+
+			? wsScheme + backendHost + ':' + wsPort + '/ws'
+
+			: wsScheme + window.location.host + '/ws';
+
+
+
+		window.LHS_API_BASE = apiBase;
+
+		window.LHS_PAY_BASE_URL = apiBase;
+
+		window.__LHS_GAME_MSG_URL__ = apiBase + '/gameMsg.do';
+
+		window.__LHS_WS_URL__ = wsUrl;
+
+
+
+		function rewriteRuntimeUrl(url) {
+
+			if (typeof url !== 'string') return url;
+
+
+
+			var gameApiMatch = url.match(/(?:^|\/)(?:binGameMsg|gameMsg|gameMsq)\.do(?=[?#]|$)/i);
+
+			if (gameApiMatch) {
+
+				var suffixAt = gameApiMatch.index + gameApiMatch[0].length;
+
+				return apiBase + '/gameMsg.do' + url.substring(suffixAt);
+
+			}
+
+
+
+			try {
+
+				var parsed = new URL(url, window.location.href);
+
+				if (/(?:config_lang_c2fa8585|config_e5ac72c2|config_fashion_20260909|gameEui_18e11b8e|code_bdbbacd8)\.bin$|(?:login_ld_logo|loading_dzz_1)/i.test(parsed.pathname)) {
+					parsed.searchParams.set('v', translationVersion);
+
+					url = parsed.href;
+
+				}
+
+				var host = parsed.hostname.toLowerCase();
+
+				var updateHosts = [
+
+					'lhsupdate.guangzhougy.com',
+
+					'lhsupdatetest.guangzhougy.com',
+
+					'lhshwbupdate.ccjh.cc',
+
+					'updatetest.lhsafk.com'
+
+				];
+
+				var updateAt = parsed.pathname.indexOf('/update/');
+
+				if (updateHosts.indexOf(host) !== -1 && updateAt !== -1) {
+
+					return './update/' + parsed.pathname.substring(updateAt + 8) + parsed.search + parsed.hash;
+
+				}
+
+			} catch (_e) {}
+
+
+
+			return url;
+
+		}
+
+
+
+		var rawXhrOpen = XMLHttpRequest.prototype.open;
+
+		XMLHttpRequest.prototype.open = function (method, url) {
+
+			arguments[1] = rewriteRuntimeUrl(url);
+
+			return rawXhrOpen.apply(this, arguments);
+
+		};
+
+
+
+		if (window.fetch) {
+
+			var rawFetch = window.fetch.bind(window);
+
+			window.fetch = function (input, init) {
+
+				var sourceUrl = typeof input === 'string' ? input : (input && input.url ? input.url : '');
+
+				var rewritten = rewriteRuntimeUrl(sourceUrl);
+
+				if (typeof input === 'string') return rawFetch(rewritten, init);
+
+				if (rewritten !== sourceUrl) return rawFetch(new Request(rewritten, input), init);
+
+				return rawFetch(input, init);
+
+			};
+
+		}
+
+
+
+	})();
+
+
+
+	//publish的时候会被自动替换成正式/测试域名
+
+	var JS_URL_PREFIX = "./";
+
+	var RES_URL_PREFIX = "./update/";
+
+
+
+	var TEST_MODE = false;
+
+
+
+	var nativeJsMap;
+
+	var loadScript = function (list, threadNum, callback) {
+
+		if (list.length < 1) {
+
+			callback()
+
+			return
+
+		}
+
+		var loaded = 0;
+
+		var startLen = 0
+
+		var loadNext = function () {
+
+			for (var i = 0; i < threadNum; ++i) {
+
+				var url = list[loaded++]
+
+				if (url) {
+
+					var root = JS_URL_PREFIX;
+
+					var basename = url.split("/").pop();
+
+					if (basename in nativeJsMap.files) {
+
+						root = nativeJsMap.root;
+
+						url = basename;
+
+					}
+
+					loadSingleScript(root + url, function () {
+
+						startLen++;
+
+						if (startLen >= list.length) {
+
+							callback();
+
+						} else {
+
+							loadNext();
+
+						}
+
+					})
+
+				}
+
+			}
+
+		};
+
+		loadNext();
+
+	};
+
+
+
+	var installLhsActionCompletionGuards = function () {
+
+		var install = function (name, ActionType, remote) {
+
+			if (!ActionType || !ActionType.prototype || ActionType.prototype.__lhsCompletionGuard) {
+
+				return;
+
+			}
+
+			var prototype = ActionType.prototype;
+
+			var originalInit = prototype.Init;
+
+			var originalUpdate = prototype.OnUpdate;
+
+			if (typeof originalInit !== 'function' || typeof originalUpdate !== 'function') {
+
+				return;
+
+			}
+
+			prototype.__lhsCompletionGuard = true;
+
+			prototype.Init = function () {
+
+				this.__lhsReadyElapsed = 0;
+
+				this.__lhsLoadingElapsed = 0;
+
+				this.__lhsCompletionWarned = false;
+
+				return originalInit.apply(this, arguments);
+
+			};
+
+			prototype.OnUpdate = function (elapsed) {
+
+				var result = originalUpdate.apply(this, arguments);
+
+				if (result) {
+
+					return result;
+
+				}
+
+				var manager = window.W || window.GlobalManager;
+
+				var boxLayer = manager && manager.BoxLayerModel;
+
+				if (!boxLayer || typeof boxLayer.isInState !== 'function'
+
+					|| (!boxLayer.isInState(5) && !boxLayer.isInState(7))) {
+
+					return result;
+
+				}
+
+
+
+				if (typeof document !== 'undefined' && document.hidden) {
+
+					return result;
+
+				}
+
+				var delta = Math.min(100, Math.max(0, Number(elapsed) || 0));
+
+				var raid = manager && manager.RaidMgr && manager.RaidMgr.mMapRaid;
+
+				var entity = raid && raid.GetEntity ? raid.GetEntity(this.atkId) : null;
+
+				var body = entity && entity.m_Model && entity.m_Model.mHeroBody;
+
+				if (body && body.canPlayAnim === false) {
+
+					this.__lhsLoadingElapsed += delta;
+
+				} else {
+
+					this.__lhsReadyElapsed += delta;
+
+				}
+
+
+
+				// Normal actions complete well below five seconds. Resource loading keeps
+
+				// its own longer budget, matching the existing global state watchdog.
+
+				if (this.__lhsReadyElapsed < 5000 && this.__lhsLoadingElapsed < 15000) {
+
+					return result;
+
+				}
+
+
+
+				if (!this.__lhsCompletionWarned) {
+
+					this.__lhsCompletionWarned = true;
+
+					console.warn('[LHS] ' + name + ' completion callback fallback');
+
+				}
+
+				if (name === 'DashAction' && raid && raid.GetMoveTeamByHandle) {
+
+					var moveTeam = raid.GetMoveTeamByHandle(this.atkId);
+
+					if (moveTeam) {
+
+						moveTeam.StopMove(false);
+
+					}
+
+				}
+
+				this.isEnd = true;
+
+				if (remote) {
+
+					this.isFlyEnd = true;
+
+				}
+
+				return originalUpdate.apply(this, arguments) || 1;
+
+			};
+
+		};
+
+
+
+		install('DashAction', window.DashAction, false);
+
+		install('AtkAction', window.AtkAction, false);
+
+		install('RemoteAtkAction', window.RemoteAtkAction, true);
+
+	};
+
+
+
+	var installLhsSocketSendGuard = function () {
+		if (window.LhsSocketSendV3 && typeof window.LhsSocketSendV3.install === 'function') {
+			return window.LhsSocketSendV3.install();
+		}
+		var SocketType = window.egret && window.egret.web && window.egret.web.HTML5WebSocket;
+		if (!SocketType || !SocketType.prototype || SocketType.prototype.__lhsNativeSendGuardV2) {
+
+			return !!(SocketType && SocketType.prototype);
+
+		}
+
+		var prototype = SocketType.prototype;
+		var nativeSendDescriptor = window.WebSocket && window.WebSocket.prototype
+			&& Object.getOwnPropertyDescriptor(window.WebSocket.prototype, 'send');
+		var nativeSend = nativeSendDescriptor && nativeSendDescriptor.value;
+		prototype.__lhsNativeSendGuardV2 = true;
+		prototype.send = function (data) {
+			var socket = this._nativeSocket || this.socket;
+			if (!socket) {
+				throw new Error('WebSocket connection is not initialized');
+			}
+			// Always invoke the real browser method with its branded socket. This
+			// remains safe even when egretex supplied an unbound _nativeSend.
+			if (typeof nativeSend === 'function') return Reflect.apply(nativeSend, socket, [data]);
+			if (typeof this._nativeSend === 'function') return this._nativeSend(data);
+			throw new Error('WebSocket native send is unavailable');
+		};
+		return true;
+
+	};
+
+
+
+	var installLhsTopCombatProtocolGuard = function () {
+
+		var manager = window.W || window.GlobalManager;
+
+		var model = manager && manager.TopCombatModel;
+
+		var ModelType = window.TopCombatModel;
+
+		var prototype = ModelType && ModelType.prototype;
+
+		if (!prototype && model) prototype = Object.getPrototypeOf(model);
+
+		if (!prototype || prototype.__lhsTopCombatProtocolGuardV1) return !!prototype;
+
+		if (typeof prototype.Rpc !== 'function' || typeof prototype.updateChallengeInfo !== 'function') return false;
+
+
+
+		prototype.__lhsTopCombatProtocolGuardV1 = true;
+
+		prototype.sendUpdateChallengeInfo = function (playAnimation) {
+
+			var self = this;
+
+			if (playAnimation === undefined) playAnimation = false;
+
+			this.Rpc(4600, null, function (payload) {
+
+				payload = payload || {};
+
+				var previous = self.info && typeof self.info === 'object' ? self.info : {};
+
+				self.info = {
+
+					...previous,
+
+					maxRank: Number.isFinite(Number(payload.maxRank)) ? Number(payload.maxRank) : Number(previous.maxRank || -1),
+
+					records: Array.isArray(payload.records) ? payload.records : (Array.isArray(previous.records) ? previous.records : []),
+
+					loglist: Array.isArray(payload.loglist) ? payload.loglist : (Array.isArray(previous.loglist) ? previous.loglist : [])
+
+				};
+
+				self.matchStatus = Number(payload.matchStatus) || 0;
+
+				self.matchEndTime = Number(payload.matchEndTime) || 0;
+
+				self.updateChallengeInfo(payload.challengeInfo || {
+
+					rank: self.info.maxRank > 0 ? self.info.maxRank : 1,
+
+					refreshtime: 0,
+
+					challengeList: [],
+
+					infoMap: {}
+
+				}, playAnimation);
+
+			});
+
+		};
+
+		return true;
+
+	};
+
+
+
+	var getScriptLoadUrl = function (src) {
+		if (/js\/(egretex\.min_37b3ee13|start\.min_52ac8d58|main\.min_a6195824)\.js$/.test(src)) {
+			return src + '?v=20260831_tien_duyen_fix_v1';
+		}
+		return src;
+	};
+
+	// Fetch ahead without executing scripts out of order or changing cache keys.
+	var preloadStartupScripts = function (manifest) {
+		if (window.egret_native || !document.head) return;
+		try {
+			var probe = document.createElement('link');
+			if (!probe.relList || !probe.relList.supports || !probe.relList.supports('preload')) return;
+			var initial = manifest.initial || [];
+			// Warm only the critical head of the queue. Preloading every optional
+			// feature bundle competes with the first screen on slower connections.
+			var scripts = initial.concat((manifest.game || []).slice(0, 4));
+			var seen = Object.create(null);
+			for (var i = 0; i < scripts.length; i++) {
+				var src = getScriptLoadUrl(JS_URL_PREFIX + scripts[i]);
+				if (seen[src]) continue;
+				seen[src] = true;
+				var link = document.createElement('link');
+				link.rel = 'preload';
+				link.as = 'script';
+				link.href = src;
+				link.fetchPriority = i < initial.length ? 'high' : 'auto';
+				document.head.appendChild(link);
+			}
+		} catch (_preloadError) {
+			// Preload is optional; the existing sequential loader remains authoritative.
+		}
+	};
+
+	var loadSingleScript = function (src, callback) {
+
+		var isMainScript = /js\/main\.min_a6195824\.js$/.test(src);
+
+		var isEgretexScript = /js\/egretex\.min_37b3ee13\.js$/.test(src);
+
+		var s = document.createElement('script');
+
+		s.async = false;
+
+		s.src = getScriptLoadUrl(src);
+
+		s.addEventListener('load', function () {
+
+			if (isEgretexScript) {
+
+				installLhsSocketSendGuard();
+
+			}
+
+			if (isMainScript) {
+
+				installLhsActionCompletionGuards();
+
+				if (!installLhsTopCombatProtocolGuard()) {
+
+					var topCombatGuardRetry = 0;
+
+					var topCombatGuardTimer = setInterval(function () {
+
+						topCombatGuardRetry++;
+
+						if (installLhsTopCombatProtocolGuard() || topCombatGuardRetry >= 60) {
+
+							clearInterval(topCombatGuardTimer);
+
+						}
+
+					}, 100);
+
+				}
+
+			}
+
+			s.parentNode.removeChild(s);
+
+			s.removeEventListener('load', arguments.callee, false);
+
+			callback();
+
+		}, false);
+
+		document.body.appendChild(s);
+
+	};
+
+	
+
+	var hashed_default_json;
+
+	var __JSVERSION__;
+
+	var delay_js = [];
+
+	function ready() {
+
+		var onManifestLoaded = function(response){
+
+			var manifest = response;
+			preloadStartupScripts(manifest);
+
+			hashed_default_json = manifest.hashed_default_json || {};
+
+			__JSVERSION__ = manifest.version;
+
+			var list = manifest.initial;
+
+			window.loadScript(list, 1, function () {
+
+                //platform placeholder
+
+				list = manifest.game;
+
+				for(var i = 0; i < list.length; ++i){
+
+					if(list[i].indexOf("default.thm") != -1 && list[i].indexOf("default.thm.start") == -1){
+
+						delay_js.push(list.splice(i--, 1)[0]);
+
+					}else if(/main[^/]*?\.js$/.test(list[i])){
+
+						delay_js.push(list.splice(i--, 1)[0]);
+
+					}
+
+				}
+
+				window.loadScript(manifest.game, 1, function () {
+
+					egret.runEgret({ renderMode: "webgl", audioType: 0 });
+
+					//nativeSplash超时强制关闭
+
+					//setTimeout(function(){platform.closeSplash()}, 2000);
+
+				});
+
+			});
+
+		}
+
+		var getJSResFinish = function(res) {
+
+			if (!nativeJsMap) {
+
+				nativeJsMap = res || {};
+
+				nativeJsMap.files = nativeJsMap.files || {};
+
+				if (manifestContent) {
+
+					onManifestLoaded(manifestContent);
+
+				}
+
+			}
+
+		};
+
+		var manifestContent;
+
+		if (window.egret_native) {
+
+			egret_native.receivedPluginInfo = function (info) {
+
+            	var data = JSON.parse(info);
+
+				if (data.functionName == "getJSResReturn" && data.value) {
+
+					console.log(data.value);
+
+					getJSResFinish(JSON.parse(data.value));
+
+				}
+
+			};
+
+			egret_native.sendInfoToPlugin(JSON.stringify({
+
+				functionName :"getJSRes",
+
+				value: "",
+
+			}));
+
+		}
+
+		function loadManifest(callback) {
+
+	        callback({
+
+	"initial": [
+		"js/egret.min_7d668222.js",
+		"js/egret.web.min_587897e9.js",
+		"js/lhs-socket-send-v3.js?v=20260913_socket_send_v3",
+		"js/egretex.min_37b3ee13.js",
+		"js/thirds.min_b052d442.js",
+		"js/lhs-login-clean-v1.js?v=20260920_login_clean_v1"
+
+	],
+
+	"game": [
+
+		"js/start.min_52ac8d58.js?v=20260914_minigame_open_v1",
+		"js/lhs-mainline-infinite-data-v1.js?v=mainline_infinite_v1",
+		"js/lhs-mainline-infinite-v1.js?v=mainline_infinite_v1",
+		"js/lhs-role-level2000-data-v1.js?v=cultivation_2000_v2",
+		"js/lhs-role-level2000-v1.js?v=cultivation_2000_v2",
+		"js/lhs-plant-level100-v1.js?v=plant_level100_candidate_v1",
+		"js/main.min_drop200.js?v=20261016_server_parity_v1",
+		"js/lhs-homeland-guard-v1.js?v=20261003_homeland_guard_v1",
+		"js/lhs-petsoul-fix-v1.js?v=20261002_petsoul_box_star_v2",
+		"js/lhs-pet-grid48-v1.js?v=20261005_pet_auto_continuous_v3",
+		"js/lhs-feature-day1-v1.js?v=20261009_level_unlock_v2",
+		"js/lhs-artifact-quench-v1.js?v=20261010_quench_v1",
+		"js/lhs-giftcode-mail-notice-v1.js?v=20261010_giftcode_mail_notice_v1",
+		"js/lhs-gem-choice-shop-v1.js?v=20261006_gem_choice_shop_v2",
+		"js/lhs-select-legacy-boxes-v1.js?v=20261014_legacy_boxes_v2",
+		"js/lhs-fishing-leave-stop-v1.js?v=20260926_fishing_leave_stop_v2",
+		"js/lhs-theme2-fallback-v1.js?v=20260922_theme2_fallback_v2",
+		"js/lhs-box-tier100-v1.js?v=20261007_box_tier200_v1",
+		"js/lhs-demon-boss-task-text-v1.js?v=20261005_demon_boss_task_text_v2",
+		"js/lhs-avatar-default-fix-v1.js?v=20260922_avatar_default_fix_v1",
+		"js/lhs-avatar-layout-fix-v1.js?v=20261016_avatar_layout_fix_v1",
+		"js/lhs-auto-sale-reconcile-v1.js?v=20260915_auto_sale_reconcile_v1",
+		"js/lhs-arena-v1.js?v=20260917_competitions_contract_v3",
+		"js/lhs-cross-events-v2.js?v=20261003_toparena_v3",
+		"js/lhs-toparena-v3.js?v=20261003_toparena_v3",
+		"js/lhs-oldtrek-errors-v1.js?v=20261016_minigame_guard_v6",
+		"js/lhs-oldtrek-minigames-v1.js?v=20260921_v1",
+		"js/lhs-bidking-compat-v1.js?v=20260921_bidking_compat_v1",
+		"js/lhs-item-quantity-v1.js?v=20260907_item_quantity_v2",
+		"js/lhs-power-relogin-v1.js?v=20260927_power_relogin_v5",
+		"js/lhs-formation-fix-v1.js?v=20260915_formation_singleflight_v3",
+		"js/lhs-mount-fix-v1.js?v=20260915_mount_singleflight_v2",
+		"js/lhs-alchemy-v1.js?v=20260907_alchemy_v1",
+		"js/lhs-farm-alchemy-v2.js?v=20261017_auth_guard_v1",
+
+		"js/lhs-farm-social-offline-v1.js?v=20260910_social_only_v1",
+		"js/lhs-fashion-gear-v1.js?v=20260909_fashion_gear_v7",
+		"js/lhs-fashion-content-v1.js?v=20260927_fashion_content_v3",
+		"js/lhs-fashion-choice-v1.js?v=20260912_fashion_choice_v7",
+		"js/lhs-fashion-day1-v1.js?v=20260911_fashion_day1_v1",
+		"js/lhs-fashion-box-v1.js?v=20260927_fashion_box_v4",
+		"js/lhs-player-healthbar-v1.js?v=20260917_player_healthbar_reanchor_v8",
+		"js/lhs-hud-power-full-v1.js?v=20260927_hud_power_full_v3",
+		"js/lhs-power-cells-full-v1.js?v=20260917_power_cells_full_v1",
+		"js/lhs-power-authoritative-v1.js?v=20260927_power_authoritative_v4",
+		"js/lhs-ranged-action-v1.js?v=20260908_ranged_action_v1",
+		"js/lhs-login-clean-v1.js?v=20260920_login_clean_v1"
+	],
+
+	"hashed_default_json": {
+
+		"start": "default.res_326514c1.bin",
+
+		"main": "default.res_main_c669f2c0_pet_vusa_20260929.bin",
+		"cn_main": "default.res_cn_main_f70d4753_pet_vusa_20260929.bin",
+
+		"tw_main": "default.res_tw_main_2ff8859f.bin",
+
+		"en_main": "default.res_en_main_e8c1a527.bin",
+
+		"jp_main": "default.res_jp_main_d7496194.bin",
+
+		"kr_main": "default.res_kr_main_7255ded2.bin"
+
+	}
+
+})
+
+		}
+
+		loadManifest(function(res){
+
+			manifestContent = res;
+
+			if (window.egret_native) {
+
+				if (nativeJsMap) {
+
+					//已经返回
+
+					onManifestLoaded(manifestContent);
+
+				} else {
+
+					//500毫秒未返回，则认为是老版本native，不会再返回了
+
+					setTimeout(getJSResFinish, 500);
+
+				}
+
+			} else {
+
+				getJSResFinish();
+
+			}
+
+		});
+
+	}
+
+
+
+	function closeSocket() {
+
+		if (window.Main && Main.Instance && Main.Instance.closesocket) {
+
+			Main.Instance.closesocket();
+
+		} else {
+
+			console.error("not Main.closesocket")
+
+		}
+
+	}
+
+
+
+	function __StartLoading(callback) {
+
+		var list = delay_js;
+
+		window.loadScript(list, 1, callback);
+
+	}
+
+   
+
+	function __RemoveLoading() {
+
+		var myloading = document.getElementById("loader");
+
+		if (!myloading) {
+
+			return
+
+		}
+
+		myloading.parentNode.removeChild(myloading)
+
+	}
+
+
+
+	ready()
+
+</script>
+
+
+
+
+
+<!-- LHS_MAIN_HIT_ROUTE_V6_START -->
+
+<script>
+
+(function () {
+
+  'use strict';
+
+  if (window.__lhsMainHitRouteV6Bootstrap === true) return;
+
+  window.__lhsMainHitRouteV6Bootstrap = true; window.__lhsMainLayerPriorityV8 = true;
+
+
+
+  function className(value) {
+
+    try {
+
+      return window.egret && window.egret.getQualifiedClassName
+
+        ? window.egret.getQualifiedClassName(value)
+
+        : value && value.constructor && value.constructor.name;
+
+    } catch (_) {
+
+      return value && value.constructor && value.constructor.name || '';
+
+    }
+
+  }
+
+
+
+  function isDescendantOf(candidate, owner) {
+
+    for (var current = candidate, depth = 0; current && depth < 128; current = current.parent, depth += 1) {
+
+      if (current === owner) return true;
+
+    }
+
+    return false;
+
+  }
+
+
+
+  function uiLayerIndex(node, uiLayer) {
+
+    for (var current = node, depth = 0; current && depth < 128; current = current.parent, depth += 1) {
+
+      if (current.parent === uiLayer && typeof uiLayer.getChildIndex === 'function') {
+
+        return uiLayer.getChildIndex(current);
+
+      }
+
+    }
+
+    return -1;
+
+  }
+
+
+
+  function install() {
+
+    var MainClass = typeof Main !== 'undefined' ? Main : window.Main;
+
+    var root = MainClass && MainClass.Instance;
+
+    if (!root || typeof root.$hitTest !== 'function') return false;
+
+    if (root.__lhsMainHitRouteV6 === true) return true;
+
+    if (root._lhsEquipHitRouteOwner) return false;
+
+    if (root.__lhsMainHitRouteOwner && root.__lhsMainHitRouteOwner !== 'v6') return false;
+
+
+
+    var original = root.$hitTest;
+
+    var wrapper = function (stageX, stageY) {
+
+      var originalHit = original.call(this, stageX, stageY);
+
+      if (this !== root) return originalHit;
+
+      try {
+
+        var uiLayer = null;
+
+        for (var rootIndex = Number(this.numChildren || 0) - 1; rootIndex >= 0; rootIndex -= 1) {
+
+          var rootChild = this.getChildAt(rootIndex);
+
+          if (rootChild && className(rootChild) === 'eui.UILayer') {
+
+            uiLayer = rootChild;
+
+            break;
+
+          }
+
+        }
+
+        if (!uiLayer || typeof uiLayer.getChildAt !== 'function') return originalHit;
+
+        var originalLayerIndex = originalHit === this ? -1 : uiLayerIndex(originalHit, uiLayer);
+
+        if (originalHit !== this && originalLayerIndex < 0) return originalHit;
+
+        for (var layerIndex = Number(uiLayer.numChildren || 0) - 1; layerIndex > originalLayerIndex; layerIndex -= 1) {
+
+          var layer = uiLayer.getChildAt(layerIndex);
+
+          if (!layer || layer.visible === false || Number(layer.alpha) === 0 || typeof layer.$hitTest !== 'function') continue;
+
+          var candidate = layer.$hitTest(stageX, stageY);
+
+          if (candidate && candidate !== layer && isDescendantOf(candidate, layer)) return candidate;
+
+        }
+
+      } catch (error) {
+
+        console.warn('[LHS] Main layer-priority route V8 fallback failed', error);
+
+      }
+
+      return originalHit;
+
+    };
+
+
+
+    root.__lhsMainHitRouteOwner = 'v6';
+
+    root.__lhsMainHitRouteOriginal = original;
+
+    root.__lhsMainHitRouteWrapper = wrapper;
+
+    root.$hitTest = wrapper;
+
+    root.__lhsMainHitRouteV6 = true;
+
+    return true;
+
+  }
+
+
+
+  window.__installLhsMainHitRouteV6 = install;
+
+  var attempts = 0;
+
+  var timer = setInterval(function () {
+
+    attempts += 1;
+
+    if (install() || attempts >= 240) clearInterval(timer);
+
+  }, 250);
+
+  install();
+
+}());
+
+</script>
+
+<!-- LHS_MAIN_HIT_ROUTE_V6_END -->
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').catch(function() {});
+  });
+}
+</script>
+</body>
+
+
+
+</html>
+

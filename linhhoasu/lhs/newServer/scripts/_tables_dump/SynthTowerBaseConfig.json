@@ -1,0 +1,33 @@
+{
+  "_table": "SynthTowerBaseConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "(obj)[addSwapCount|initPlayerHp|playerHpMax|dailyRewardTimes|levelStepsBonus]",
+  "_sample": [
+    {
+      "addSwapCount": 5
+    },
+    {
+      "initPlayerHp": 5
+    },
+    {
+      "playerHpMax": 10
+    }
+  ],
+  "data": {
+    "addSwapCount": 5,
+    "initPlayerHp": 5,
+    "playerHpMax": 10,
+    "dailyRewardTimes": 1,
+    "levelStepsBonus": {
+      "0": 1,
+      "1": 3,
+      "2": 9,
+      "3": 27,
+      "4": 81
+    },
+    "restartCD": 30,
+    "dailyLoseAdsLimit": 5,
+    "monsterBloodAdd": 1000
+  }
+}

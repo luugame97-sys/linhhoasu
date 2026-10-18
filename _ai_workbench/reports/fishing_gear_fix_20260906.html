@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sua cuong hoa can cau va be - Da trien khai</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-s-a-c-ng-h-a-c-n-c-u-v-b">Session Report — đã sửa cường hóa cần câu và bè</h1>
+<p>Ngày 06/09/2026. <strong>Đã triển khai S2 trước, S1 sau; mỗi server được kiểm qua WebSocket/DB/relog trước khi hoàn tất. Đã sửa chuyển bậc/chi phí, cấp mới, MAX và hiệu ứng tiết kiệm mồi của bè. Không phát bù hoặc chuyển đổi cấp/chỉ số lịch sử.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Tiếp tục kế hoạch đã được người dùng duyệt. Lấy source/config/client mới từ production tại snapshot07:34:29 UTC+7, không dựa vào source local chưa kiểm chứng.</li>
+<li>Thay hai bộ tính chi phí/tiến độ cần và bè bằng helper chung FishingGearService. Bỏ7 hàm cũ dùng level-only để tự chọn nâng bậc và giá fallback.</li>
+<li>Client gửi rõ <code>level</code>, <code>fast</code>, <code>grade</code>, boolean upgradeAll, expectedState và mã giao dịch. Server không chuyển yêu cầu nâng bằng Ngư Tệ thành nâng bậc bằng tinh thể.</li>
+<li>Đạt cấp trần nhưng thanh exp chưa đầy: vẫn nạp exp bằng Ngư Tệ68, giữ cấp hiện tại. Khi đầy thanh, dừng và chờ người chơi chủ động chọn nâng bậc.</li>
+<li>Nâng bậc thành công: dùng đúng gradeUpCost69, tăng rank, bắt đầu cấp1/exp0. Chỉ số sau nâng khớp preview và công thức combat; không cộng cấp cũ hai lần.</li>
+<li>Rank cuối/cấp1400: hoàn thành thanh exp cuối thì MAX; UI ẩn các nút nâng, server không trừ thêm. Không có profile người thật nào ở rank10/cấp1400 trong baseline cần ngoại lệ chuyển đổi.</li>
+<li>Bổ sung bonus104 của bè vào xác suất tiết kiệm mồi phụ, cộng với dòng tẩy104 và giữ cap25%. Chỉ hưởng khi đã mở hệ thống223 và có ID/bậc bè hợp lệ, không dựa riêng vào ID6201 mà normalizer từng tự điền.</li>
+<li>Tái sử dụng requestId/balanceRevision/receipt của luồng tẩy/hộp. Tính trên clone, save một lần xác nhận, chỉ sau đó trả success; retry không nâng/trừ lần hai. Request cũ/sai thao tác/sai kiểu không tiêu hao.</li>
+<li>ACK4010 đi trước push4010 để callback so rank cũ chính xác khi phát hiệu ứng nâng bậc. Không đổi đường queue/save chung của server.</li>
+</ul>
+<h3 id="quy-t-c-sau-s-a">Quy tắc sau sửa</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Trạng thái</th>
+<th>Nút/thao tác</th>
+<th>Tài nguyên</th>
+</tr></thead><tbody>
+<tr>
+<td>Cấp dưới trần, exp chưa đầy</td>
+<td>Nâng thường hoặc nhanh</td>
+<td>68 theo levelUpCost; đủ thanh tăng1 cấp và exp về0</td>
+</tr>
+<tr>
+<td>Cấp đạt trần, exp chưa đầy</td>
+<td>Nâng thường hoặc nhanh để đầy thanh cuối</td>
+<td>Vẫn68, không tự trừ69</td>
+</tr>
+<tr>
+<td>Cấp trần và exp đầy, còn bậc sau</td>
+<td>Nâng bậc chủ động</td>
+<td>69 theo gradeUpCost; bậc mới cấp1/exp0</td>
+</tr>
+<tr>
+<td>Bậc10/cấp1400/exp cuối đầy</td>
+<td>MAX</td>
+<td>Không trừ, không nâng thêm</td>
+</tr>
+</tbody></table></div>
+<p>Nâng nhanh chỉ hoàn thành thanh kế tiếp hoặc dùng phần Ngư Tệ có thể chi trả, không chạy xuyên sang nâng bậc. Không đổi giá cấu hình hoặc bảng cân bằng tẩy/hộp.</p>
+<h3 id="v-d-ng-m-c-t-ng-b-k-t">Ví dụ đúng mốc từng bị kẹt</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Đồ</th>
+<th>Bắt đầu</th>
+<th>Hoàn thành thanh</th>
+<th>Nâng bậc riêng</th>
+</tr></thead><tbody>
+<tr>
+<td>Cần</td>
+<td>Bậc2/cấp20/exp0</td>
+<td>200 Ngư Tệ →exp200, không trừ tinh thể</td>
+<td>30 tinh thể →bậc3/cấp1/exp0</td>
+</tr>
+<tr>
+<td>Bè</td>
+<td>Bậc1/cấp10/exp0</td>
+<td>100 Ngư Tệ →exp100, không trừ tinh thể</td>
+<td>15 tinh thể →bậc2/cấp1/exp0</td>
+</tr>
+</tbody></table></div>
+<p>Ví dụ đã kiểm bằng nhân vật QA, <strong>không phải đã nâng giúp nicky</strong>. Đồ hiện có của người chơi không đổi khi đăng nhập lại. Cấp1 là cấp trong bậc mới, không phải giảm bậc;54 phép so thuộc tính qua9 mốc của2 loại đều không giảm tổng chỉ số.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-local-production">Source chính local/production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Vai trò</th>
+</tr></thead><tbody>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/services/FishingGearService.js</code></td>
+<td>Mới: state/plan/apply/response dùng chung, chi phí và bonus bè</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/services/FishingBalanceService.js</code></td>
+<td>Cộng bonus bè104 vào tiết kiệm mồi, giữ cap25%</td>
+</tr>
+<tr>
+<td><code>linhhoasu/lhs/newServer/src/handlers/fish.js</code></td>
+<td>Handler nâng chung, mã giao dịch/state, clone+save, truyền player để kiểm bonus bè</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code></td>
+<td>6 hàm native: gửi thao tác, nútgrade, preview cap; thêm thông báo lỗi vào24 bảng lỗi</td>
+</tr>
+<tr>
+<td><code>linhhoasu/webgame/game/index.html</code></td>
+<td>Cache key20260906_fishing_gear_v1</td>
+</tr>
+</tbody></table></div>
+<p>BattleService/playerPayload không cần đổi: công thức và payload đã đúng nếu đầu vào rank/level/exp được tạo đúng. Không đổi bin config, giá, WebGM, DB schema, PlayerService, WSServer hoặc bot worker.</p>
+<h3 id="c-ng-c-evidence-backup">Công cụ, evidence, backup</h3>
+<ul>
+<li>Tools mới: <code>build_fishing_gear_client_20260906.js</code>, <code>prepare_fishing_gear_tests_20260906.js</code>, <code>test_fishing_gear_fix_20260906.js</code>, <code>check_fishing_gear_unlock_20260906.py</code>, <code>release_fishing_gear_20260906.py</code>, <code>qa_fishing_gear_live_20260906.js</code>, <code>sync_fishing_gear_local_20260906.py</code>, <code>final_fishing_gear_20260906.py</code>; tất cả dưới <code>_ai_workbench/tools/</code>.</li>
+<li>Baseline bất biến: <code>_ai_workbench/temp/fishing_audit_20260906T003428Z/</code>.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_gear_fix_20260906/</code>: manifest.json, unlocks.json, gear-fixtures.json, gear-tests.json, stage.json, final-staging-tests.json, canary-progress.json, deploy.json, final-check.json, local-sync.json.</li>
+<li>Remote staging cuối: <code>/linhhoasu/_ai_workbench/temp/fishing_gear_20260906_004412/</code>.</li>
+<li>Remote backup: <code>/linhhoasu/_ai_workbench/backups/fishing_gear_20260906_004412/</code>. Có preimage4 file cũ; helper là file mới. Rollback chỉ source có kiểm hash, không rollback dữ liệu người chơi.</li>
+<li>Local backup: <code>_ai_workbench/backups/fishing_gear_local_20260906/</code>; report backup: <code>_ai_workbench/backups/fishing_gear_fix_reports_20260906/</code>.</li>
+<li>Gói source-only: <code>temp/fishing_gear_fix_20260906/fishing_gear_fix_v1_20260906.zip</code>,6 entry, yêu cầu bản fishing_custom_balance_v1. SHA-256 cuối cùng nằm trong final-check.json. Không đóng gói credential, runtime người chơi hoặc DB snapshot.</li>
+<li>Đã cập nhật báo cáo MD/HTML này và session_report.md/.html; không tạo tool rác ở root.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Đã sửa</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Kẹt ở trần hoặc trừ69 khi nút báo68</td>
+<td>Server chỉ xét level rồi tự chọn grade</td>
+<td>Thao tác rõ ràng và state kỳ vọng; cấp+exp đầy mới grade</td>
+<td>Ma trận mọi bậc,0/thiếu1/vừa đủ/dư</td>
+</tr>
+<tr>
+<td>Cấp sau grade/chỉ số vượt preview</td>
+<td>Giữ cấp cũ khi fullLevelAttrs đã cộng tích lũy</td>
+<td>Bậc mới cấp1/exp0, preview/combat khớp</td>
+<td>9 mốc×2 loại,54 thuộc tính không giảm</td>
+</tr>
+<tr>
+<td>MAX vẫn có nút nâng</td>
+<td>Server dừng ở trần/exp0 nhưng native cần exp đầy</td>
+<td>Cho hoàn thành thanh cuối rồi trạng thái tối đa chung</td>
+<td>Test lần nâng cuối và mọi thao tác sau MAX</td>
+</tr>
+<tr>
+<td>Bè không miễn mồi theo104</td>
+<td>Chỉ đọc tẩy cần</td>
+<td>Cộng attrs104 của bậc bè khi mở223, cap25%</td>
+<td>RNG cố định tại biên1500/2100/2500bps</td>
+</tr>
+<tr>
+<td>Bè mặc định gây mở khóa giả</td>
+<td>Normalizer luôn điền6201</td>
+<td>Bonus và nâng kiểm ledger mở khóa, không chỉ raftId</td>
+<td>Probe người chưa mở và ID sai</td>
+</tr>
+<tr>
+<td>Request chậm thành giao dịch khác</td>
+<td>Không có action/expectedState</td>
+<td>Validate thao tác+state+revision trước tiêu hao</td>
+<td>Retry, stale, conflict, receipt đã bị đẩy khỏi danh sách</td>
+</tr>
+<tr>
+<td>Sai âm/hiệu ứng tăng bậc cần</td>
+<td>Push4010 cập nhật rank trước ACK</td>
+<td>Đưa ACK trước push; giữ push native</td>
+<td>Native callback và thứ tự packet</td>
+</tr>
+<tr>
+<td>Save lỗi giữ mutation dở</td>
+<td>Mutation trước save</td>
+<td>Clone, save xác nhận, session null khi chưa rõ commit</td>
+<td>12 ca save null/throw cho2 loại×3 thao tác</td>
+</tr>
+<tr>
+<td>Patch nhiều hàm để thừa dòng trống</td>
+<td>Xóa hàm bằng AST giữ newline</td>
+<td>Dọn đúng vùng vừa sửa trước staging cuối</td>
+<td>Review diff, không refactor ngoài phạm vi</td>
+</tr>
+<tr>
+<td>Một lần WS ready timeout</td>
+<td>Readiness WebSocket dao động đã thấy trước đây</td>
+<td>Kiểm lại đạt, không restart hoặc đổi dịch vụ khác</td>
+<td>Không dùng HTTP ready thay live QA</td>
+</tr>
+</tbody></table></div>
+<p>Giữ nguyên audit RED trước làm lịch sử; suite fix mới có điều kiện PASS theo kết quả đúng, không đổi probe cũ để che lỗi.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Native model isUnlockRaft chỉ đọc raftId; trong backend này không đủ vì ensureFishInfo/playerPayload điền mặc định cả trước khi mở. Ledger systemUnlockInfo.unlockedSystem là bằng chứng server đang dùng; nicky đã có215/223 dù cấp câu6, không ép lại ngày/cấp mở khóa gốc và làm mất quyền đã có.</li>
+<li>Phải so loại thao tác và tài nguyên trước khi trừ, không chỉ kiểm đủ số dư. Retry với expectedRevision cũ không được trở thành một lần nâng khác sau chuyển bậc.</li>
+<li>Nâng nhanh không cần lặp tới10.000 lần; tính trực tiếp số bước đủ thanh/đủ tiền, giữ cùng kết quả nhưng tránh lặp mutation.</li>
+<li>Chốt max-rank là một phần, không thay thế trạng thái MAX đầy đủ. Snapshot mới có0 profile ở rank10/cấp1400 nên không cần chuyển đổi ngoại lệ lịch sử.</li>
+<li>Bậc mới về cấp1 không hạ chỉ số: fullLevelAttrs của bậc mới đã chứa phần tích lũy trước. Giữ cấp cũ mới là cộng thừa.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="ki-m-th">Kiểm thử</h3>
+<ul>
+<li><strong>39 nhóm kiểm thử PASS</strong>, gồm <strong>1.800 tổ hợp</strong>2 loại×10 bậc×5 state×3 thao tác×6 mức số dư, nút/preview/MAX native, replay/relog/state-invalid/unlock, save failure và bonus bè.</li>
+<li><strong>70 kiểm thử hồi quy PASS</strong> cho mồi FIFO, tẩy/hộp, đơn, linh hồn dự phòng, full entity, thông báo lỗi và layout hộp native.</li>
+<li>Core gameplay contract PASS local/staging với714 bảng; cú pháp3 source và main PASS.</li>
+<li>Các hàm native chạy trong VM dùng chính main đã sửa: nút Nâng bậc gửi action grade, khi exp tại trần chưa đầy chi phí vẫn68, nút MAX ẩn, ACK/state/preview khớp. Không chỉ mô phỏng lại lời mô tả.</li>
+<li>39 test cuối được chạy lại trên staging Node20 với fixture tối giản đã bỏ định danh người chơi. Stage đầu38 nhóm, sau bổ sung1 nhóm nút grade native; source candidate không đổi vì bổ sung test.</li>
+</ul>
+<h3 id="qa-th-c-t-v-an-to-n-tri-n-khai">QA thực tế và an toàn triển khai</h3>
+<ul>
+<li>S2 restart →QA PASS rồi mới S1 restart →QA PASS. Cả hai: bắt đầu cần2/20/0 và bè1/10/0; nạp tổng300 Ngư Tệ, không trừ69; relog giữ exp đầy; bấm grade dùng30+15 tinh thể; bậc mới3/2,cấp1/exp0; nâng thường thêm2 Ngư Tệ/2exp; relog lần2 đúng.</li>
+<li>Replay trước/sau relog không trừ lặp; request từ client cũ và stale bị chặn. Thuộc tính cá fixture không bị reroll. Tẩy và mở hộp vẫn dùng chung revision/ledger đúng.</li>
+<li>Hai nhân vật QA đã xóa đúng userId/playerId, cuối qaRemaining0. Không đăng nhập hoặc gọi RPC trên nicky/người thật; không phát bù, không hạ cấp/thu hồi chỉ số.</li>
+<li>153 artifact đã kiểm hash PASS;5 file của release đúng,148 artifact khác giữ nguyên.3 source local khớp candidate; main/index HTTP cổng81 đúng hash.</li>
+<li>PID cuối S1=3592/restart1372,S2=870/restart36. Mỗi tiến trình game chỉ restart1 lần trong phiên; dist30824,admin30856,bot1600/1576 giữ nguyên PID/restart count.</li>
+<li>HTTP ready8080/8083=200,WS ready9200/9201=ok ở hậu kiểm cuối. Error tail không có TypeError/ReferenceError/Unhandled/FATAL/SyntaxError. Có1 lần WS readiness6 giây timeout rồi đạt ở lần kiểm tiếp; không tuyên bố đã sửa mọi vấn đề tải/kết nối lại.</li>
+<li>Chưa nghiệm thu hình ảnh UI trên phiên người thật hoặc giữ dữ liệu QA xuyên thêm một lần restart sau khi tạo. Đã kiểm hàm native thật và WS/DB/relog thật; không ghi PASS những bước chưa làm.</li>
+</ul>
+<h3 id="ph-m-vi-c-n-l-i">Phạm vi còn lại</h3>
+<ul>
+<li>Không đổi giá/đền bù, không chỉnh dữ liệu đã tăng sai trong quá khứ. Nếu cần chuyển đổi lịch sử phải có yêu cầu riêng và preview.</li>
+<li>RNG linh hồn, di vật/sự kiện, tập trung/cá lớn/hiệu suất mồi và kích hoạt mảnh Thiên Công vẫn là phần chưa nghiệm thu của các phiên trước; release này không tuyên bố hoàn thiện toàn bộ câu cá.</li>
+<li>Dòng tẩy104+bè104 dùng cap25% hiện hành; không tăng cap trong phiên này.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Tải lại game/đăng nhập lại để nhận client20260906_fishing_gear_v1. Client cũ thiếu action/requestId sẽ được yêu cầu cập nhật, không tiêu hao.</li>
+<li>Với đồ đang kẹt: nâng thường/nhanh để đầy exp bằng Ngư Tệ, sau đó mới dùng nút Nâng bậc khi đủ tinh thể. Không cộng tiền hoặc nâng hộ ngẫu nhiên.</li>
+<li>Kiểm tra trực tiếp UI cần/bè, chi phí và chỉ số sau nâng; báo lại nếu có trạng thái không khớp. Không dùng tài khoản người thật để chạy QA.</li>
+<li>Nếu cần audit ảnh hưởng quá khứ: làm preview chỉ đọc từ receipt/log/backup, không hạ cấp/thu hồi hoặc phát bù tự động.</li>
+<li>Rollback dùng preimage đúng hash, chỉ restart game được chỉ định; giữ nguyên giao dịch/receipt và dữ liệu DB mới, không restore players từ baseline cũ.</li>
+</ol></main></body></html>

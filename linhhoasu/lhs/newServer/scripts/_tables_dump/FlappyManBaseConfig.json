@@ -1,0 +1,29 @@
+{
+  "_table": "FlappyManBaseConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "(obj)[baseSpeed|maxHealth|countDown|respawnNBDis|flashDis]",
+  "_sample": [
+    {
+      "baseSpeed": 360
+    },
+    {
+      "maxHealth": 3
+    },
+    {
+      "countDown": 3
+    }
+  ],
+  "data": {
+    "baseSpeed": 360,
+    "maxHealth": 3,
+    "countDown": 3,
+    "respawnNBDis": 1080,
+    "flashDis": 720,
+    "hurtNBDis": 720,
+    "adsTime": 3,
+    "forwardLevel": 50,
+    "endDis": 450,
+    "initialHealth": 1
+  }
+}

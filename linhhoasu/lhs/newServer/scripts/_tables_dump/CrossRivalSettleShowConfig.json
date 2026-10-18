@@ -1,0 +1,64 @@
+{
+  "_table": "CrossRivalSettleShowConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "Id,scoreMin,scoreMax,res",
+  "_sample": [
+    {
+      "1": {
+        "Id": 1,
+        "scoreMin": 0,
+        "scoreMax": 5000,
+        "res": "dtjc_bm_ch05"
+      }
+    },
+    {
+      "2": {
+        "Id": 2,
+        "scoreMin": 5000,
+        "scoreMax": 10000,
+        "res": "dtjc_bm_ch04"
+      }
+    },
+    {
+      "3": {
+        "Id": 3,
+        "scoreMin": 10000,
+        "scoreMax": 15000,
+        "res": "dtjc_bm_ch03"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "Id": 1,
+      "scoreMin": 0,
+      "scoreMax": 5000,
+      "res": "dtjc_bm_ch05"
+    },
+    "2": {
+      "Id": 2,
+      "scoreMin": 5000,
+      "scoreMax": 10000,
+      "res": "dtjc_bm_ch04"
+    },
+    "3": {
+      "Id": 3,
+      "scoreMin": 10000,
+      "scoreMax": 15000,
+      "res": "dtjc_bm_ch03"
+    },
+    "4": {
+      "Id": 4,
+      "scoreMin": 15000,
+      "scoreMax": 20000,
+      "res": "dtjc_bm_ch02"
+    },
+    "5": {
+      "Id": 5,
+      "scoreMin": 20000,
+      "scoreMax": 9999999,
+      "res": "xyzf_js_bm_ch01"
+    }
+  }
+}

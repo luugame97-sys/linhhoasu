@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linh Họa Sư — Chẩn đoán áo 28043</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-o28043-hi-n-nguy-n-b-o-v-kh-ng-th-y-trong-ngo-i-quan">Session Report — áo28043 hiện Nguyên bảo và không thấy trong ngoại quan</h1>
+<p><strong>Kết luận: trường hợp ảnh gửi có lỗi/không phù hợp ở phần hiển thị và khả dụng khi cấp lẻ component. Không phải WebGM đổi28043 thành Nguyên bảo, cũng không phải lần này mất quyền sở hữu.</strong> Phiên này chỉ chẩn đoán, chưa sửa game/client hoặc phát bù.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đọc bốn ảnh người dùng: chọn28043 — Phượng Cầu Hoàng Bào; thư GM hiện hình Nguyên bảo; popup vẫn nhận diện tên áo; mục áo choàng không thấy áo tương ứng.</li>
+<li>Đọc source và báo cáo release trước để xác định phần đã kiểm/chưa kiểm. Kết luận “đã ổn” trước đó quá rộng đối với trải nghiệm native UI; kiểm backend và WS không bảo đảm mọi item thành phần đều xuất hiện trong danh sách.</li>
+<li>Mongo production chỉ đọc lúc21:50:07 UTC+7: tìm thấy thư S1 gửi21:43:28.760, cập nhật nhận21:43:57.875, attachments chính xác28043×1, claimed=true, read=true, mailClaimLedger khớp. Nhân vật đã sở hữu28043, bag28043=0.</li>
+<li>Lấy source client/config hiện tại, trích và chạy riêng các hàm native để chứng minh ownership có nhưng danh sách loại bỏ.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Không sửa source game, WebGM, client, DB, ví hoặc item; không restart, login thay, claim thư, gửi thử hay bù quà.</li>
+<li>Tool mới trong <code>_ai_workbench/tools/</code>: <code>audit_28043_mail_20260905.py</code>, <code>test_28043_client_visibility_20260905.js</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/mail_28043_20260905T145006Z/</code> gồm <code>audit.json</code>, <code>client_visibility.json</code>, main.js/client.bin và source đường gửi mail đã lấy chỉ đọc.</li>
+<li>Report MD/HTML này và cập nhật session_report.md/.html. Backup report: <code>_ai_workbench/backups/28043_diagnosis_reports_20260905/</code>.</li>
+<li>Các ảnh gốc do người dùng cung cấp nằm trong Temp; không chỉnh sửa ảnh.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<h3 id="k-t-qu-c-th">Kết quả cụ thể</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Lớp kiểm tra</th>
+<th>Bằng chứng</th>
+<th>Kết luận</th>
+</tr></thead><tbody>
+<tr>
+<td>WebGM→mail DB</td>
+<td>attachments28043×1, titleGM Linh Họa Sư, đã claimed và ledger khớp</td>
+<td>Không bị đổi thành item1 tại đường gửi đã tìm thấy</td>
+</tr>
+<tr>
+<td>Player DB</td>
+<td>Fashion ownership28043=true, bag=0</td>
+<td>Quà đã thành quyền sở hữu, không cần bù thêm áo</td>
+</tr>
+<tr>
+<td>Config client</td>
+<td>Fashion28043.type303, dressId28040, showType0/showTypeTw0</td>
+<td>Đây là áo thành phần thuộc bộ28040; bị ẩn khỏi danh sách lẻ</td>
+</tr>
+<tr>
+<td>Hàm native GetFashionList</td>
+<td>Gọi checkShowType; checkShowTypeOpenDay trảfalse ngay khi showType0, trước điều kiện owned</td>
+<td>Ngay cả đã sở hữu vẫn không xuất hiện trong tab áo choàng</td>
+</tr>
+<tr>
+<td>VM thực thi hàm native hiện tại</td>
+<td>IsFashionActive(28043)=true, GetFashionList(303) không có28043 ở cả inChina=true/false</td>
+<td>Lỗi/giới hạn khả dụng được tái hiện, không phải suy từ screenshot</td>
+</tr>
+<tr>
+<td>Icon thư</td>
+<td>ID đúng; hàm client trảicon_28043. ItemIconSkin local mặc địnhicon_1</td>
+<td>Hình Nguyên bảo không chứng minh server gửi tiền; còn thiếu trace tải texture để chốt nguyên nhân icon</td>
+</tr>
+</tbody></table></div>
+<h3 id="ph-n-bi-t-o-l-v-b">Phân biệt áo lẻ và bộ đồ</h3>
+<p>-28043 là <strong>áo lẻ</strong> của bộ28040 — Phượng Cầu Hoàng. -28040 là item bộ có useType105, mở bốn phần28041/28042/28043/28049.</p>
+<ul>
+<li>Nhân vật tương ứng thư tìm thấy hiện có28043 và28049, chưa có28041/28042. Gửi riêng áo không tự cấp quyền sở hữu cả bộ. Điều này khác với việc mất quà.</li>
+<li>Không tự gửi28040 để chữa vì đó là cấp thêm hai phần ngoài quà người dùng đã chọn; cần chốt gửi bộ hay cho phép mặc lẻ.</li>
+</ul>
+<h3 id="bi-u-t-ng-nguy-n-b-o-m-c-ch-c-ch-n">Biểu tượng Nguyên bảo: mức chắc chắn</h3>
+<p>Ảnh thể hiện icon không phù hợp với áo. Cấu hình asset đúng làicon_28043, không phảiicon_1. Skin ItemIcon local khởi tạoicon_1; đây là đầu mối cho khả năng texture áo chưa được tải/không resolve, nhưng phiên này <strong>chưa có resource load trace hoặc snapshot renderer đang chạy để khẳng định fallback chính là nguyên nhân</strong>. Không biến suy đoán thành kết luận mất asset hoặc tự thay ảnh.</p>
+<h3 id="l-i-c-ng-c">Lỗi công cụ</h3>
+<ul>
+<li>Đọc file đuôi<code>.bin.json</code> bằng JSON.parse thất bại: nội dung thực là binary resource format, không phải JSON văn bản. Không sửa/convert file; bỏ cách đọc sai và chỉ dùng decoder phù hợp cho gameEui.</li>
+<li>Tìm substring MailData ban đầu gặp updateMailData: khi trích hàm dùng tên/anchor chính xác và AST FunctionExpression, không lấy substring gần giống làm nguồn kết luận.</li>
+<li>Không có lỗi encoding mới trong file nguồn; report mới UTF-8.</li>
+</ul>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Một component được backend cấp ownership đúng vẫn có thể bị client chủ động ẩn vì chỉ thiết kế dùng qua bộ. Muốn hỗ trợ GM gửi lẻ phải kiểm cả list filter và cách mặc, không chỉ grant.</li>
+<li>showType0 khác với showType2: điều kiện0 được kiểm trước owned nên ownership không vượt gate.</li>
+<li>Icon mặc định của skin có thể gây hiểu nhầm giá trị quà; luôn kiểm attachments server trước khi kết luận sai ID hoặc phát bù.</li>
+<li>Không được gọi toàn bộ ngoại quan đã “OK” khi gate native visual chưa đạt. Trường hợp28043 chưa được khép kín bởi release backend trước.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Đã xác nhận thư gửi đúng item, player ownership có thật và danh sách native ẩn28043.</li>
+<li>Test VM trên hàm client vừa tải: PASS hai khu vực, owned=true/listed=false; không sửa config để ép kết quả.</li>
+<li>Chưa xác minh tận gốc lỗi icon; chưa kiểm packet/texture trong đúng phiên UI người dùng.</li>
+<li>Không phát bù, không thêm áo/bộ, không thay dữ liệu. Không lấy trạng thái ownership này để phủ định phản ánh không dùng/không nhìn thấy của người dùng.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Nếu người dùng yêu cầu fix: chốt hỗ trợ component đã sở hữu trong danh sách/mặc lẻ hoặc chuyển workflow GM/Webshop sang bán/gửi item bộ28040; không tự cấp cả bộ khi chỉ mua áo.</li>
+<li>Trace native icon28043/atlas/resource tại màn thư, xử lý mapping/asset đúng nguồn; không dùng icon Nguyên bảo thay thế để che lỗi.</li>
+<li>Bổ sung regression native list/render + thao tác mặc cho các component cóshowType0, không chỉ ownership/packet.</li>
+<li>Kiểm lại bằng chính item28043 ở tài khoản đã có quyền sở hữu; không cần mua/gửi lại hoặc bù trùng.</li>
+</ol></main></body></html>

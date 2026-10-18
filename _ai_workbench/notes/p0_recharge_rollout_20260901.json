@@ -1,0 +1,53 @@
+{
+  "host": "103.116.105.154",
+  "readOnlyAuditBefore": true,
+  "checkpoint1": {
+    "name": "block_paid_goods_on_1202_1210",
+    "status": "DEPLOYED",
+    "deployedAtUtc": "2026-09-01T03:59:00.878209+00:00",
+    "remote": "/linhhoasu/lhs/newServer/src/handlers/item.js",
+    "beforeSha256": "7974be6f52e1c70e1acaa37254715880816ccb76f6427560a21e2127e7a34f1f",
+    "afterSha256": "e1c9f84faee5152dbf667ee89a45f35c46f379fef68714384a3ce03543c1720d",
+    "backup": "/linhhoasu/_ai_workbench/backups/p0_checkpoint1_paid_route_pre_20260901_035848",
+    "contract": "remote 8/8 PASS; network=false; persistence=false",
+    "restart": "lhs-s1001 only",
+    "postReady": 200,
+    "postHealth": 200
+  },
+  "checkpoint2": {
+    "name": "authoritative_month_card_daily_claim_1211",
+    "status": "DEPLOYED",
+    "deployedAtUtc": "2026-09-01T04:09:13.289309+00:00",
+    "remote": "/linhhoasu/lhs/newServer/src/handlers/commerce-compat.js",
+    "beforeSha256": "77893f6e064e43c8ce6f02356211f968a11197612f7f2177bb27a2341198abb2",
+    "afterSha256": "d510c6be42adaeb70c9a12033712f15362e71313ebca1a7aacd8ff817fc2526b",
+    "checkpoint1ItemSha256": "e1c9f84faee5152dbf667ee89a45f35c46f379fef68714384a3ce03543c1720d",
+    "backup": "/linhhoasu/_ai_workbench/backups/p0_checkpoint2_month_pre_20260901_040902",
+    "contract": "remote 13/13 PASS; local combined 51/51 PASS; network=false; persistence=false",
+    "restart": "lhs-s1001 only",
+    "postReady": 200,
+    "postHealth": 200
+  },
+  "checkpoint3": {
+    "name": "chain_1240_1241",
+    "status": "HOLD_FOR_CHAIN_PURCHASE_AND_AD_ENTITLEMENT_RESOLVER",
+    "reason": "A standalone 1241 patch would leave paid type=1 chain steps unable to advance through tag1230/cash, while type=2 requires authoritative ad entitlement. The chain fix must ship atomically with the purchase/activation resolver."
+  },
+  "finalPostCheck": {
+    "checkedAtServerLocal": "2026-09-01 11:20:05 +0700",
+    "itemSha256": "e1c9f84faee5152dbf667ee89a45f35c46f379fef68714384a3ce03543c1720d",
+    "commerceSha256": "d510c6be42adaeb70c9a12033712f15362e71313ebca1a7aacd8ff817fc2526b",
+    "lhsS1001Pid": 7686,
+    "lhsS1001RestartCount": 1312,
+    "readyHttp": 200,
+    "healthHttp": 200,
+    "clientsAfterReconnect": 303,
+    "newSyntaxReferenceTypeErrors": 0,
+    "observedPreExistingOnly": [
+      "AUTH_SESSION_MISMATCH on rejected login sessions",
+      "EPIPE on disconnected sockets"
+    ]
+  },
+  "productionDbMutated": false,
+  "otherPm2ProcessesRestarted": false
+}

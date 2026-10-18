@@ -1,0 +1,168 @@
+{
+  "_table": "GuildDonateConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,costs,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "costs": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ],
+        "rewards": [
+          {
+            "id": 18,
+            "count": 10
+          },
+          {
+            "id": 16,
+            "count": 100
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "costs": [
+          {
+            "id": 1,
+            "count": 20
+          }
+        ],
+        "rewards": [
+          {
+            "id": 18,
+            "count": 10
+          },
+          {
+            "id": 16,
+            "count": 100
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "costs": [
+          {
+            "id": 1,
+            "count": 30
+          }
+        ],
+        "rewards": [
+          {
+            "id": 18,
+            "count": 10
+          },
+          {
+            "id": 16,
+            "count": 100
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "costs": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "rewards": [
+        {
+          "id": 18,
+          "count": 10
+        },
+        {
+          "id": 16,
+          "count": 100
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "costs": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "rewards": [
+        {
+          "id": 18,
+          "count": 10
+        },
+        {
+          "id": 16,
+          "count": 100
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "costs": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "rewards": [
+        {
+          "id": 18,
+          "count": 10
+        },
+        {
+          "id": 16,
+          "count": 100
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "costs": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ],
+      "rewards": [
+        {
+          "id": 18,
+          "count": 10
+        },
+        {
+          "id": 16,
+          "count": 100
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "costs": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "rewards": [
+        {
+          "id": 18,
+          "count": 10
+        },
+        {
+          "id": 16,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

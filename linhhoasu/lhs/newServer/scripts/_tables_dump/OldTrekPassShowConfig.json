@@ -1,0 +1,667 @@
+{
+  "_table": "OldTrekPassShowConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,payId,advancedPayId,fundReward,advancedReward,fundPrivilege,advancedPrivilege,res,name,sailor,desc,introduce",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "payId": 11121,
+        "advancedPayId": 11122,
+        "fundReward": [
+          {
+            "id": 360101,
+            "count": 1,
+            "show": 1
+          },
+          {
+            "id": 1,
+            "count": 1680
+          },
+          {
+            "id": 360,
+            "count": 40
+          },
+          {
+            "id": 332,
+            "count": 24
+          },
+          {
+            "id": 329,
+            "count": 4
+          },
+          {
+            "id": 321,
+            "count": 80
+          },
+          {
+            "id": 331,
+            "count": 4000
+          }
+        ],
+        "advancedReward": [
+          {
+            "id": 370101,
+            "count": 1,
+            "show": 1
+          },
+          {
+            "id": 303701,
+            "count": 1
+          },
+          {
+            "id": 350,
+            "count": 40
+          },
+          {
+            "id": 1,
+            "count": 6480
+          },
+          {
+            "id": 332,
+            "count": 80
+          },
+          {
+            "id": 329,
+            "count": 16
+          },
+          {
+            "id": 321,
+            "count": 320
+          },
+          {
+            "id": 331,
+            "count": 16000
+          }
+        ],
+        "fundPrivilege": {
+          "1": 5,
+          "221": -1000
+        },
+        "advancedPrivilege": {
+          "1": 5,
+          "201": 20
+        },
+        "res": "mhjj_btn_yeqian_101",
+        "name": 30109500,
+        "sailor": [
+          370101,
+          360101
+        ],
+        "desc": [
+          30109132,
+          30109133
+        ],
+        "introduce": [
+          30109130,
+          30109131
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "payId": 11123,
+        "advancedPayId": 11124,
+        "fundReward": [
+          {
+            "id": 360201,
+            "count": 1,
+            "show": 1
+          },
+          {
+            "id": 1,
+            "count": 1680
+          },
+          {
+            "id": 361,
+            "count": 40
+          },
+          {
+            "id": 332,
+            "count": 24
+          },
+          {
+            "id": 329,
+            "count": 4
+          },
+          {
+            "id": 321,
+            "count": 80
+          },
+          {
+            "id": 331,
+            "count": 4000
+          }
+        ],
+        "advancedReward": [
+          {
+            "id": 370201,
+            "count": 1,
+            "show": 1
+          },
+          {
+            "id": 303702,
+            "count": 1
+          },
+          {
+            "id": 351,
+            "count": 40
+          },
+          {
+            "id": 1,
+            "count": 6480
+          },
+          {
+            "id": 332,
+            "count": 80
+          },
+          {
+            "id": 329,
+            "count": 16
+          },
+          {
+            "id": 321,
+            "count": 320
+          },
+          {
+            "id": 331,
+            "count": 16000
+          }
+        ],
+        "fundPrivilege": {
+          "1": 5,
+          "222": -1000
+        },
+        "advancedPrivilege": {
+          "1": 5,
+          "202": 20
+        },
+        "res": "mhjj_btn_yeqian_102",
+        "name": 30109501,
+        "sailor": [
+          370201,
+          360201
+        ],
+        "desc": [
+          30109132,
+          30109133
+        ],
+        "introduce": [
+          30109388,
+          30109389
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "payId": 11125,
+        "advancedPayId": 11126,
+        "fundReward": [
+          {
+            "id": 360301,
+            "count": 1,
+            "show": 1
+          },
+          {
+            "id": 1,
+            "count": 1680
+          },
+          {
+            "id": 362,
+            "count": 40
+          },
+          {
+            "id": 332,
+            "count": 24
+          },
+          {
+            "id": 329,
+            "count": 4
+          },
+          {
+            "id": 321,
+            "count": 80
+          },
+          {
+            "id": 331,
+            "count": 4000
+          }
+        ],
+        "advancedReward": [
+          {
+            "id": 370301,
+            "count": 1,
+            "show": 1
+          },
+          {
+            "id": 303703,
+            "count": 1
+          },
+          {
+            "id": 352,
+            "count": 40
+          },
+          {
+            "id": 1,
+            "count": 6480
+          },
+          {
+            "id": 332,
+            "count": 80
+          },
+          {
+            "id": 329,
+            "count": 16
+          },
+          {
+            "id": 321,
+            "count": 320
+          },
+          {
+            "id": 331,
+            "count": 16000
+          }
+        ],
+        "fundPrivilege": {
+          "1": 5,
+          "223": -1000
+        },
+        "advancedPrivilege": {
+          "1": 5,
+          "203": 20
+        },
+        "res": "mhjj_btn_yeqian_201",
+        "name": 30109502,
+        "sailor": [
+          370301,
+          360301
+        ],
+        "desc": [
+          30109132,
+          30109133
+        ],
+        "introduce": [
+          30109390,
+          30109391
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "payId": 11121,
+      "advancedPayId": 11122,
+      "fundReward": [
+        {
+          "id": 360101,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 360,
+          "count": 40
+        },
+        {
+          "id": 332,
+          "count": 24
+        },
+        {
+          "id": 329,
+          "count": 4
+        },
+        {
+          "id": 321,
+          "count": 80
+        },
+        {
+          "id": 331,
+          "count": 4000
+        }
+      ],
+      "advancedReward": [
+        {
+          "id": 370101,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 303701,
+          "count": 1
+        },
+        {
+          "id": 350,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 332,
+          "count": 80
+        },
+        {
+          "id": 329,
+          "count": 16
+        },
+        {
+          "id": 321,
+          "count": 320
+        },
+        {
+          "id": 331,
+          "count": 16000
+        }
+      ],
+      "fundPrivilege": {
+        "1": 5,
+        "221": -1000
+      },
+      "advancedPrivilege": {
+        "1": 5,
+        "201": 20
+      },
+      "res": "mhjj_btn_yeqian_101",
+      "name": 30109500,
+      "sailor": [
+        370101,
+        360101
+      ],
+      "desc": [
+        30109132,
+        30109133
+      ],
+      "introduce": [
+        30109130,
+        30109131
+      ]
+    },
+    "2": {
+      "id": 2,
+      "payId": 11123,
+      "advancedPayId": 11124,
+      "fundReward": [
+        {
+          "id": 360201,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 361,
+          "count": 40
+        },
+        {
+          "id": 332,
+          "count": 24
+        },
+        {
+          "id": 329,
+          "count": 4
+        },
+        {
+          "id": 321,
+          "count": 80
+        },
+        {
+          "id": 331,
+          "count": 4000
+        }
+      ],
+      "advancedReward": [
+        {
+          "id": 370201,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 303702,
+          "count": 1
+        },
+        {
+          "id": 351,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 332,
+          "count": 80
+        },
+        {
+          "id": 329,
+          "count": 16
+        },
+        {
+          "id": 321,
+          "count": 320
+        },
+        {
+          "id": 331,
+          "count": 16000
+        }
+      ],
+      "fundPrivilege": {
+        "1": 5,
+        "222": -1000
+      },
+      "advancedPrivilege": {
+        "1": 5,
+        "202": 20
+      },
+      "res": "mhjj_btn_yeqian_102",
+      "name": 30109501,
+      "sailor": [
+        370201,
+        360201
+      ],
+      "desc": [
+        30109132,
+        30109133
+      ],
+      "introduce": [
+        30109388,
+        30109389
+      ]
+    },
+    "3": {
+      "id": 3,
+      "payId": 11125,
+      "advancedPayId": 11126,
+      "fundReward": [
+        {
+          "id": 360301,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 362,
+          "count": 40
+        },
+        {
+          "id": 332,
+          "count": 24
+        },
+        {
+          "id": 329,
+          "count": 4
+        },
+        {
+          "id": 321,
+          "count": 80
+        },
+        {
+          "id": 331,
+          "count": 4000
+        }
+      ],
+      "advancedReward": [
+        {
+          "id": 370301,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 303703,
+          "count": 1
+        },
+        {
+          "id": 352,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 332,
+          "count": 80
+        },
+        {
+          "id": 329,
+          "count": 16
+        },
+        {
+          "id": 321,
+          "count": 320
+        },
+        {
+          "id": 331,
+          "count": 16000
+        }
+      ],
+      "fundPrivilege": {
+        "1": 5,
+        "223": -1000
+      },
+      "advancedPrivilege": {
+        "1": 5,
+        "203": 20
+      },
+      "res": "mhjj_btn_yeqian_201",
+      "name": 30109502,
+      "sailor": [
+        370301,
+        360301
+      ],
+      "desc": [
+        30109132,
+        30109133
+      ],
+      "introduce": [
+        30109390,
+        30109391
+      ]
+    },
+    "4": {
+      "id": 4,
+      "payId": 11127,
+      "advancedPayId": 11128,
+      "fundReward": [
+        {
+          "id": 360401,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 363,
+          "count": 40
+        },
+        {
+          "id": 332,
+          "count": 24
+        },
+        {
+          "id": 329,
+          "count": 4
+        },
+        {
+          "id": 321,
+          "count": 80
+        },
+        {
+          "id": 331,
+          "count": 4000
+        }
+      ],
+      "advancedReward": [
+        {
+          "id": 370401,
+          "count": 1,
+          "show": 1
+        },
+        {
+          "id": 303704,
+          "count": 1
+        },
+        {
+          "id": 353,
+          "count": 40
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 332,
+          "count": 80
+        },
+        {
+          "id": 329,
+          "count": 16
+        },
+        {
+          "id": 321,
+          "count": 320
+        },
+        {
+          "id": 331,
+          "count": 16000
+        }
+      ],
+      "fundPrivilege": {
+        "1": 5,
+        "224": -1000
+      },
+      "advancedPrivilege": {
+        "1": 5,
+        "204": 20
+      },
+      "res": "mhjj_btn_yeqian_202",
+      "name": 30109503,
+      "sailor": [
+        370401,
+        360401
+      ],
+      "desc": [
+        30109132,
+        30109133
+      ],
+      "introduce": [
+        30109397,
+        30109398
+      ]
+    }
+  }
+}

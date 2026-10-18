@@ -1,0 +1,742 @@
+{
+  "_table": "FashionChangeColorConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "0,1,2,3,4",
+  "_sample": [
+    {
+      "28240": {
+        "0": {
+          "id": 28240,
+          "colorId": 0,
+          "name": 28240,
+          "icon": "head_rs_28240",
+          "colorIcon": "yr_bm_yanse1",
+          "color": 16747136,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "star": 5,
+          "fashionIds": [
+            28241,
+            28242,
+            28243,
+            28249
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 57,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "1": {
+          "id": 28240,
+          "colorId": 1,
+          "name": 80128240,
+          "icon": "head_rs_28240",
+          "colorIcon": "yr_bm_yanse2",
+          "color": 6811112,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "star": 5,
+          "fashionIds": [
+            80128241,
+            80128242,
+            80128243,
+            80128249
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 57,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "2": {
+          "id": 28240,
+          "colorId": 2,
+          "name": 80228240,
+          "icon": "head_rs_28240",
+          "colorIcon": "yr_bm_yanse3",
+          "color": 16769656,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "star": 5,
+          "fashionIds": [
+            80228241,
+            80228242,
+            80228243,
+            80228249
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 57,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "3": {
+          "id": 28240,
+          "colorId": 3,
+          "name": 80328240,
+          "icon": "head_rs_28240",
+          "colorIcon": "yr_bm_yanse4",
+          "color": 6678783,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "star": 5,
+          "fashionIds": [
+            80328241,
+            80328242,
+            80328243,
+            80328249
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 57,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "4": {
+          "id": 28240,
+          "colorId": 4,
+          "name": 80428240,
+          "icon": "head_rs_28240",
+          "colorIcon": "yr_bm_yanse5",
+          "color": 16777215,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "star": 5,
+          "fashionIds": [
+            80428241,
+            80428242,
+            80428243,
+            80428249
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 57,
+          "showTypeTw": 0,
+          "area": 0
+        }
+      }
+    },
+    {
+      "28340": {
+        "0": {
+          "id": 28340,
+          "colorId": 0,
+          "name": 28340,
+          "icon": "head_rs_28340",
+          "colorIcon": "yr_bm_yanse2",
+          "color": 6811112,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "costReplace": {
+            "id": 472,
+            "count": 1
+          },
+          "star": 5,
+          "fashionIds": [
+            28341,
+            28342,
+            28343,
+            28349
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 8,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "1": {
+          "id": 28340,
+          "colorId": 1,
+          "name": 80128340,
+          "icon": "head_rs_28340",
+          "colorIcon": "yr_bm_yanse3",
+          "color": 16769656,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "costReplace": {
+            "id": 472,
+            "count": 1
+          },
+          "star": 5,
+          "fashionIds": [
+            80128341,
+            80128342,
+            80128343,
+            80128349
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 8,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "2": {
+          "id": 28340,
+          "colorId": 2,
+          "name": 80228340,
+          "icon": "head_rs_28340",
+          "colorIcon": "yr_bm_yanse6",
+          "color": 13041547,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "costReplace": {
+            "id": 472,
+            "count": 1
+          },
+          "star": 5,
+          "fashionIds": [
+            80228341,
+            80228342,
+            80228343,
+            80228349
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 8,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "3": {
+          "id": 28340,
+          "colorId": 3,
+          "name": 80328340,
+          "icon": "head_rs_28340",
+          "colorIcon": "yr_bm_yanse1",
+          "color": 16747136,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "costReplace": {
+            "id": 472,
+            "count": 1
+          },
+          "star": 5,
+          "fashionIds": [
+            80328341,
+            80328342,
+            80328343,
+            80328349
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 8,
+          "showTypeTw": 0,
+          "area": 0
+        },
+        "4": {
+          "id": 28340,
+          "colorId": 4,
+          "name": 80428340,
+          "icon": "head_rs_28340",
+          "colorIcon": "yr_bm_yanse5",
+          "color": 16777215,
+          "cost": {
+            "id": 118,
+            "count": 50
+          },
+          "costReplace": {
+            "id": 472,
+            "count": 1
+          },
+          "star": 5,
+          "fashionIds": [
+            80428341,
+            80428342,
+            80428343,
+            80428349
+          ],
+          "banTypeIds": [
+            301,
+            302,
+            303,
+            309,
+            2,
+            5,
+            17,
+            305
+          ],
+          "soundEffect": 1,
+          "showType": 3,
+          "openDay": 8,
+          "showTypeTw": 0,
+          "area": 0
+        }
+      }
+    }
+  ],
+  "data": {
+    "28240": {
+      "0": {
+        "id": 28240,
+        "colorId": 0,
+        "name": 28240,
+        "icon": "head_rs_28240",
+        "colorIcon": "yr_bm_yanse1",
+        "color": 16747136,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "star": 5,
+        "fashionIds": [
+          28241,
+          28242,
+          28243,
+          28249
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "1": {
+        "id": 28240,
+        "colorId": 1,
+        "name": 80128240,
+        "icon": "head_rs_28240",
+        "colorIcon": "yr_bm_yanse2",
+        "color": 6811112,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "star": 5,
+        "fashionIds": [
+          80128241,
+          80128242,
+          80128243,
+          80128249
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "2": {
+        "id": 28240,
+        "colorId": 2,
+        "name": 80228240,
+        "icon": "head_rs_28240",
+        "colorIcon": "yr_bm_yanse3",
+        "color": 16769656,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "star": 5,
+        "fashionIds": [
+          80228241,
+          80228242,
+          80228243,
+          80228249
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "3": {
+        "id": 28240,
+        "colorId": 3,
+        "name": 80328240,
+        "icon": "head_rs_28240",
+        "colorIcon": "yr_bm_yanse4",
+        "color": 6678783,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "star": 5,
+        "fashionIds": [
+          80328241,
+          80328242,
+          80328243,
+          80328249
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "4": {
+        "id": 28240,
+        "colorId": 4,
+        "name": 80428240,
+        "icon": "head_rs_28240",
+        "colorIcon": "yr_bm_yanse5",
+        "color": 16777215,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "star": 5,
+        "fashionIds": [
+          80428241,
+          80428242,
+          80428243,
+          80428249
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 57,
+        "showTypeTw": 0,
+        "area": 0
+      }
+    },
+    "28340": {
+      "0": {
+        "id": 28340,
+        "colorId": 0,
+        "name": 28340,
+        "icon": "head_rs_28340",
+        "colorIcon": "yr_bm_yanse2",
+        "color": 6811112,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "costReplace": {
+          "id": 472,
+          "count": 1
+        },
+        "star": 5,
+        "fashionIds": [
+          28341,
+          28342,
+          28343,
+          28349
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 8,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "1": {
+        "id": 28340,
+        "colorId": 1,
+        "name": 80128340,
+        "icon": "head_rs_28340",
+        "colorIcon": "yr_bm_yanse3",
+        "color": 16769656,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "costReplace": {
+          "id": 472,
+          "count": 1
+        },
+        "star": 5,
+        "fashionIds": [
+          80128341,
+          80128342,
+          80128343,
+          80128349
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 8,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "2": {
+        "id": 28340,
+        "colorId": 2,
+        "name": 80228340,
+        "icon": "head_rs_28340",
+        "colorIcon": "yr_bm_yanse6",
+        "color": 13041547,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "costReplace": {
+          "id": 472,
+          "count": 1
+        },
+        "star": 5,
+        "fashionIds": [
+          80228341,
+          80228342,
+          80228343,
+          80228349
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 8,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "3": {
+        "id": 28340,
+        "colorId": 3,
+        "name": 80328340,
+        "icon": "head_rs_28340",
+        "colorIcon": "yr_bm_yanse1",
+        "color": 16747136,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "costReplace": {
+          "id": 472,
+          "count": 1
+        },
+        "star": 5,
+        "fashionIds": [
+          80328341,
+          80328342,
+          80328343,
+          80328349
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 8,
+        "showTypeTw": 0,
+        "area": 0
+      },
+      "4": {
+        "id": 28340,
+        "colorId": 4,
+        "name": 80428340,
+        "icon": "head_rs_28340",
+        "colorIcon": "yr_bm_yanse5",
+        "color": 16777215,
+        "cost": {
+          "id": 118,
+          "count": 50
+        },
+        "costReplace": {
+          "id": 472,
+          "count": 1
+        },
+        "star": 5,
+        "fashionIds": [
+          80428341,
+          80428342,
+          80428343,
+          80428349
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 3,
+        "openDay": 8,
+        "showTypeTw": 0,
+        "area": 0
+      }
+    }
+  }
+}

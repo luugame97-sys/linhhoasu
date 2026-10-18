@@ -1,0 +1,309 @@
+{
+  "_table": "CrossRivalEffectConfig",
+  "_rows": 23,
+  "_type": "object",
+  "_firstKeys": "id,skill,effect,duration,res,desc,color",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "skill": [],
+        "effect": [
+          1
+        ],
+        "duration": 30,
+        "res": "xyzf_buff_1",
+        "desc": 30104531,
+        "color": 1
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "skill": [],
+        "effect": [
+          2,
+          4000
+        ],
+        "duration": 0,
+        "res": "",
+        "desc": 30104532,
+        "color": 1
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "skill": [
+          10500
+        ],
+        "effect": [
+          3,
+          5000
+        ],
+        "duration": 30,
+        "res": "xyzf_buff_2",
+        "desc": 30104533,
+        "color": 1
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "skill": [],
+      "effect": [
+        1
+      ],
+      "duration": 30,
+      "res": "xyzf_buff_1",
+      "desc": 30104531,
+      "color": 1
+    },
+    "2": {
+      "id": 2,
+      "skill": [],
+      "effect": [
+        2,
+        4000
+      ],
+      "duration": 0,
+      "res": "",
+      "desc": 30104532,
+      "color": 1
+    },
+    "3": {
+      "id": 3,
+      "skill": [
+        10500
+      ],
+      "effect": [
+        3,
+        5000
+      ],
+      "duration": 30,
+      "res": "xyzf_buff_2",
+      "desc": 30104533,
+      "color": 1
+    },
+    "4": {
+      "id": 4,
+      "skill": [],
+      "effect": [
+        4,
+        5000
+      ],
+      "duration": 45,
+      "res": "xyzf_buff_3",
+      "desc": 30104534,
+      "color": 1
+    },
+    "5": {
+      "id": 5,
+      "skill": [
+        10511
+      ],
+      "effect": [],
+      "duration": 60,
+      "res": "xyzf_buff_4",
+      "desc": 30104535,
+      "color": 1
+    },
+    "6": {
+      "id": 6,
+      "skill": [],
+      "effect": [
+        6
+      ],
+      "duration": 120,
+      "res": "xyzf_buff_6",
+      "desc": 30104536,
+      "color": 1
+    },
+    "7": {
+      "id": 7,
+      "skill": [],
+      "effect": [
+        7,
+        3000
+      ],
+      "duration": 0,
+      "res": "xyzf_buff_7",
+      "desc": 30104537,
+      "color": 1
+    },
+    "101": {
+      "id": 101,
+      "skill": [
+        10501
+      ],
+      "effect": [
+        3,
+        -2000
+      ],
+      "duration": 0,
+      "res": "xyzf_buff_101",
+      "desc": 30104538,
+      "color": 2
+    },
+    "102": {
+      "id": 102,
+      "skill": [
+        10502
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_102",
+      "desc": 30104539,
+      "color": 2
+    },
+    "103": {
+      "id": 103,
+      "skill": [
+        10503
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_103",
+      "desc": 30104540,
+      "color": 2
+    },
+    "201": {
+      "id": 201,
+      "skill": [
+        10504
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_201",
+      "desc": 30104541,
+      "color": 1
+    },
+    "202": {
+      "id": 202,
+      "skill": [],
+      "effect": [
+        8,
+        -2000
+      ],
+      "duration": 0,
+      "res": "xyzf_buff_202",
+      "desc": 30104542,
+      "color": 1
+    },
+    "203": {
+      "id": 203,
+      "skill": [],
+      "effect": [
+        4,
+        5000
+      ],
+      "duration": 0,
+      "res": "xyzf_buff_3",
+      "desc": 30104543,
+      "color": 1
+    },
+    "211": {
+      "id": 211,
+      "skill": [
+        10504
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_201",
+      "desc": 30104544,
+      "color": 1
+    },
+    "212": {
+      "id": 212,
+      "skill": [],
+      "effect": [
+        8,
+        -2000
+      ],
+      "duration": 0,
+      "res": "xyzf_buff_202",
+      "desc": 30104545,
+      "color": 1
+    },
+    "213": {
+      "id": 213,
+      "skill": [
+        10505
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_213",
+      "desc": 30104546,
+      "color": 1
+    },
+    "301": {
+      "id": 301,
+      "skill": [
+        10513
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": ""
+    },
+    "302": {
+      "id": 302,
+      "skill": [
+        10514
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": ""
+    },
+    "304": {
+      "id": 304,
+      "skill": [
+        10516
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": ""
+    },
+    "1001": {
+      "id": 1001,
+      "skill": [
+        10508
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_1001",
+      "color": 2
+    },
+    "1002": {
+      "id": 1002,
+      "skill": [
+        10509
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "xyzf_buff_1002",
+      "color": 1
+    },
+    "1003": {
+      "id": 1003,
+      "skill": [
+        10510
+      ],
+      "effect": [],
+      "duration": 0,
+      "res": "",
+      "color": 2
+    },
+    "100005": {
+      "id": 100005,
+      "skill": [
+        10512
+      ],
+      "effect": [],
+      "duration": 30,
+      "res": "xyzf_buff_5",
+      "desc": 30104535,
+      "color": 2
+    }
+  }
+}

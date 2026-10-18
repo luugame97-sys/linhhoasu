@@ -1,0 +1,1060 @@
+{
+  "_table": "FashionDressConfig",
+  "_rows": 59,
+  "_type": "object",
+  "_firstKeys": "id,name,desc,banner,getDesc,attrs,priority,isSuit",
+  "_sample": [
+    {
+      "28000": {
+        "id": 28000,
+        "name": 28000,
+        "desc": 10028000,
+        "banner": [
+          "yr_bm_banner_2900",
+          "yr_bm_banner_2900_nv"
+        ],
+        "getDesc": 10028000,
+        "attrs": {
+          "51": 100,
+          "52": 100,
+          "53": 100
+        },
+        "priority": 1,
+        "isSuit": 0
+      }
+    },
+    {
+      "28010": {
+        "id": 28010,
+        "name": 28010,
+        "desc": 10028010,
+        "banner": [
+          "yr_bm_banner_2801",
+          "yr_bm_banner_2801"
+        ],
+        "getDesc": 10028010,
+        "priority": 12,
+        "icon": "",
+        "isSuit": 1,
+        "tag": 1
+      }
+    },
+    {
+      "28020": {
+        "id": 28020,
+        "name": 28020,
+        "desc": 10028020,
+        "banner": [
+          "yr_bm_banner_2802",
+          "yr_bm_banner_2802"
+        ],
+        "getDesc": 10028020,
+        "priority": 13,
+        "icon": "",
+        "isSuit": 1,
+        "tag": 1
+      }
+    }
+  ],
+  "data": {
+    "28000": {
+      "id": 28000,
+      "name": 28000,
+      "desc": 10028000,
+      "banner": [
+        "yr_bm_banner_2900",
+        "yr_bm_banner_2900_nv"
+      ],
+      "getDesc": 10028000,
+      "attrs": {
+        "51": 100,
+        "52": 100,
+        "53": 100
+      },
+      "priority": 1,
+      "isSuit": 0
+    },
+    "28010": {
+      "id": 28010,
+      "name": 28010,
+      "desc": 10028010,
+      "banner": [
+        "yr_bm_banner_2801",
+        "yr_bm_banner_2801"
+      ],
+      "getDesc": 10028010,
+      "priority": 12,
+      "icon": "",
+      "isSuit": 1,
+      "tag": 1
+    },
+    "28020": {
+      "id": 28020,
+      "name": 28020,
+      "desc": 10028020,
+      "banner": [
+        "yr_bm_banner_2802",
+        "yr_bm_banner_2802"
+      ],
+      "getDesc": 10028020,
+      "priority": 13,
+      "icon": "",
+      "isSuit": 1,
+      "tag": 1
+    },
+    "28030": {
+      "id": 28030,
+      "name": 28030,
+      "desc": 10028030,
+      "banner": [
+        "yr_bm_banner_2803",
+        "yr_bm_banner_2803"
+      ],
+      "getDesc": 10028030,
+      "priority": 14,
+      "icon": "",
+      "isSuit": 1,
+      "tag": 1
+    },
+    "28040": {
+      "id": 28040,
+      "name": 28040,
+      "desc": 10028040,
+      "banner": [
+        "yr_bm_banner_2804",
+        "yr_bm_banner_2804"
+      ],
+      "getDesc": 10028040,
+      "priority": 15,
+      "icon": "",
+      "isSuit": 1,
+      "tag": 1,
+      "mineAction": 1
+    },
+    "28050": {
+      "id": 28050,
+      "name": 28050,
+      "desc": 10028050,
+      "banner": [
+        "yr_bm_banner_2805",
+        "yr_bm_banner_2805"
+      ],
+      "getDesc": 10028050,
+      "priority": 16,
+      "icon": "",
+      "isSuit": 1,
+      "tag": 1,
+      "mineAction": 1
+    },
+    "28060": {
+      "id": 28060,
+      "name": 28060,
+      "desc": 10028060,
+      "banner": [
+        "yr_bm_banner_2806",
+        "yr_bm_banner_2806"
+      ],
+      "getDesc": 10028060,
+      "priority": 17,
+      "icon": "tcly_bm_jianyin2",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2806",
+      "mineAction": 1
+    },
+    "28070": {
+      "id": 28070,
+      "name": 28070,
+      "desc": 10028070,
+      "banner": [
+        "yr_bm_banner_2807",
+        "yr_bm_banner_2807"
+      ],
+      "getDesc": 10028070,
+      "priority": 18,
+      "icon": "tcly_bm_jianyin1",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2807",
+      "mineAction": 1
+    },
+    "28080": {
+      "id": 28080,
+      "name": 28080,
+      "desc": 10028080,
+      "banner": [
+        "yr_bm_banner_2808",
+        "yr_bm_banner_2808"
+      ],
+      "getDesc": 10028080,
+      "priority": 19,
+      "icon": "tcly_bm_jianyin4",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2808",
+      "mineAction": 1
+    },
+    "28090": {
+      "id": 28090,
+      "name": 28090,
+      "desc": 10028090,
+      "banner": [
+        "yr_bm_banner_2809",
+        "yr_bm_banner_2809"
+      ],
+      "getDesc": 10028090,
+      "priority": 20,
+      "icon": "tcly_bm_jianyin3",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2809",
+      "mineAction": 1
+    },
+    "28100": {
+      "id": 28100,
+      "name": 28100,
+      "desc": 10028100,
+      "banner": [
+        "yr_bm_banner_2810",
+        "yr_bm_banner_2810"
+      ],
+      "getDesc": 10028100,
+      "priority": 21,
+      "icon": "tcly_bm_jianyin5",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_zhizunbao_stand",
+      "roleBg": "yr_bm_lihui_2810",
+      "mineAction": 1
+    },
+    "28110": {
+      "id": 28110,
+      "name": 28110,
+      "desc": 10028110,
+      "banner": [
+        "yr_bm_banner_2811",
+        "yr_bm_banner_2811"
+      ],
+      "getDesc": 10028110,
+      "priority": 22,
+      "icon": "tcly_bm_jianyin6",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_zixia_stand",
+      "roleBg": "yr_bm_lihui_2811",
+      "mineAction": 1
+    },
+    "28120": {
+      "id": 28120,
+      "name": 28120,
+      "desc": 10028120,
+      "banner": [
+        "yr_bm_banner_2812",
+        "yr_bm_banner_2812"
+      ],
+      "getDesc": 10028120,
+      "priority": 23,
+      "icon": "tcly_bm_jianyin7",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_sunwukong_stand",
+      "roleBg": "yr_bm_lihui_2812",
+      "mineAction": 1
+    },
+    "28130": {
+      "id": 28130,
+      "name": 28130,
+      "desc": 10028130,
+      "banner": [
+        "yr_bm_banner_2813",
+        "yr_bm_banner_2813"
+      ],
+      "getDesc": 10028130,
+      "priority": 24,
+      "icon": "tcly_bm_jianyin8",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_baijingjing_stand",
+      "roleBg": "yr_bm_lihui_2813",
+      "mineAction": 1
+    },
+    "28140": {
+      "id": 28140,
+      "name": 28140,
+      "desc": 10028140,
+      "banner": [
+        "yr_bm_banner_2814",
+        "yr_bm_banner_2814"
+      ],
+      "getDesc": 10028140,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_200w",
+      "sound": "attack_fashion_yingge_stand",
+      "mineAction": 1
+    },
+    "28150": {
+      "id": 28150,
+      "name": 28150,
+      "desc": 10028140,
+      "banner": [
+        "yr_bm_banner_2815",
+        "yr_bm_banner_2815"
+      ],
+      "getDesc": 10028140,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_200w",
+      "sound": "attack_fashion_yingge_stand",
+      "mineAction": 1
+    },
+    "28160": {
+      "id": 28160,
+      "name": 28160,
+      "desc": 10028140,
+      "banner": [
+        "yr_bm_banner_2816",
+        "yr_bm_banner_2816"
+      ],
+      "getDesc": 10028140,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_200w",
+      "sound": "attack_fashion_yingge_stand",
+      "mineAction": 1
+    },
+    "28170": {
+      "id": 28170,
+      "name": 28170,
+      "desc": 10028170,
+      "banner": [
+        "yr_bm_banner_2817",
+        "yr_bm_banner_2817"
+      ],
+      "getDesc": 10028170,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_300w",
+      "sound": "attack_fashion_huoying_stand",
+      "mineAction": 1
+    },
+    "28180": {
+      "id": 28180,
+      "name": 28180,
+      "desc": 10028170,
+      "banner": [
+        "yr_bm_banner_2818",
+        "yr_bm_banner_2818"
+      ],
+      "getDesc": 10028170,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_300w",
+      "sound": "attack_fashion_huoying_stand",
+      "mineAction": 1
+    },
+    "28190": {
+      "id": 28190,
+      "name": 28190,
+      "desc": 10028170,
+      "banner": [
+        "yr_bm_banner_2819",
+        "yr_bm_banner_2819"
+      ],
+      "getDesc": 10028170,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_300w",
+      "sound": "attack_fashion_huoying_stand",
+      "mineAction": 1
+    },
+    "28200": {
+      "id": 28200,
+      "name": 28200,
+      "desc": 10028200,
+      "banner": [
+        "yr_bm_banner_2820",
+        "yr_bm_banner_2820"
+      ],
+      "getDesc": 10028200,
+      "priority": 25,
+      "icon": "tcly_bm_jy_2820",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2820",
+      "mineAction": 1
+    },
+    "28210": {
+      "id": 28210,
+      "name": 28210,
+      "desc": 10028210,
+      "banner": [
+        "yr_bm_banner_2821",
+        "yr_bm_banner_2821"
+      ],
+      "getDesc": 10028210,
+      "priority": 26,
+      "icon": "tcly_bm_jy_2821",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2821",
+      "mineAction": 1
+    },
+    "28220": {
+      "id": 28220,
+      "name": 28220,
+      "desc": 10028220,
+      "banner": [
+        "yr_bm_banner_2822",
+        "yr_bm_banner_2822"
+      ],
+      "getDesc": 10028220,
+      "priority": 27,
+      "icon": "tcly_bm_jy_2822",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2822",
+      "mineAction": 1
+    },
+    "28230": {
+      "id": 28230,
+      "name": 28230,
+      "desc": 10028230,
+      "banner": [
+        "yr_bm_banner_2823",
+        "yr_bm_banner_2823"
+      ],
+      "getDesc": 10028230,
+      "priority": 28,
+      "icon": "tcly_bm_jy_2823",
+      "isSuit": 1,
+      "tag": 1,
+      "roleBg": "yr_bm_lihui_2823",
+      "mineAction": 1
+    },
+    "28240": {
+      "id": 28240,
+      "name": 29998,
+      "desc": 10028000,
+      "banner": [
+        "yr_bm_banner_2998",
+        "yr_bm_banner_2998"
+      ],
+      "getDesc": 10028000,
+      "attrs": {
+        "51": 500,
+        "52": 375,
+        "53": 375
+      },
+      "priority": 3,
+      "isSuit": 2,
+      "mineAction": 1
+    },
+    "28250": {
+      "id": 28250,
+      "name": 28250,
+      "desc": 10028250,
+      "banner": [
+        "yr_bm_banner_2825",
+        "yr_bm_banner_2825"
+      ],
+      "getDesc": 10028250,
+      "priority": 29,
+      "icon": "tcly_bm_jy_2825",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_ningcaichen_stand",
+      "roleBg": "yr_bm_lihui_2825",
+      "mineAction": 1
+    },
+    "28260": {
+      "id": 28260,
+      "name": 28260,
+      "desc": 10028260,
+      "banner": [
+        "yr_bm_banner_2826",
+        "yr_bm_banner_2826"
+      ],
+      "getDesc": 10028260,
+      "priority": 30,
+      "icon": "tcly_bm_jy_2826",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_niexiaoqian_stand",
+      "roleBg": "yr_bm_lihui_2826",
+      "mineAction": 1
+    },
+    "28270": {
+      "id": 28270,
+      "name": 28270,
+      "desc": 10028270,
+      "banner": [
+        "yr_bm_banner_2827",
+        "yr_bm_banner_2827"
+      ],
+      "getDesc": 10028270,
+      "priority": 31,
+      "icon": "tcly_bm_jy_2827",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_yanchixia_stand",
+      "roleBg": "yr_bm_lihui_2827",
+      "mineAction": 1
+    },
+    "28280": {
+      "id": 28280,
+      "name": 28280,
+      "desc": 10028280,
+      "banner": [
+        "yr_bm_banner_2828",
+        "yr_bm_banner_2828"
+      ],
+      "getDesc": 10028280,
+      "priority": 32,
+      "icon": "tcly_bm_jy_2828",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_laolao_stand",
+      "roleBg": "yr_bm_lihui_2828",
+      "mineAction": 1
+    },
+    "28290": {
+      "id": 28290,
+      "name": 28290,
+      "desc": 10028290,
+      "banner": [
+        "yr_bm_banner_2829",
+        "yr_bm_banner_2829"
+      ],
+      "getDesc": 10028290,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_400w",
+      "sound": "attack_fashion_lvbu_stand",
+      "mineAction": 1
+    },
+    "28300": {
+      "id": 28300,
+      "name": 28300,
+      "desc": 10028290,
+      "banner": [
+        "yr_bm_banner_2830",
+        "yr_bm_banner_2830"
+      ],
+      "getDesc": 10028290,
+      "priority": 4,
+      "icon": "",
+      "isSuit": 1,
+      "bg": "yr_bg_400w",
+      "sound": "attack_fashion_lvbu_stand",
+      "mineAction": 1
+    },
+    "28320": {
+      "id": 28320,
+      "name": 28320,
+      "desc": 10012000,
+      "banner": [
+        "yr_bm_banner_2832",
+        "yr_bm_banner_2832"
+      ],
+      "getDesc": 10012000,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 28320,
+      "priority": 33,
+      "icon": "",
+      "isSuit": 4,
+      "tag": 1,
+      "sound": "attack_fashion_kaka1_stand",
+      "mineAction": 1
+    },
+    "28330": {
+      "id": 28330,
+      "name": 28330,
+      "desc": 10012000,
+      "banner": [
+        "yr_bm_banner_2833",
+        "yr_bm_banner_2833"
+      ],
+      "getDesc": 10012000,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 28320,
+      "priority": 34,
+      "icon": "",
+      "isSuit": 4,
+      "tag": 1,
+      "sound": "attack_fashion_kaka2_stand",
+      "mineAction": 1
+    },
+    "28340": {
+      "id": 28340,
+      "name": 29997,
+      "desc": 10028000,
+      "banner": [
+        "yr_bm_banner_2834",
+        "yr_bm_banner_2834"
+      ],
+      "getDesc": 10028000,
+      "attrs": {
+        "51": 500,
+        "52": 375,
+        "53": 375
+      },
+      "priority": 3,
+      "isSuit": 2,
+      "mineAction": 1
+    },
+    "28350": {
+      "id": 28350,
+      "name": 28350,
+      "desc": 10028350,
+      "banner": [
+        "yr_bm_banner_2835",
+        "yr_bm_banner_2835"
+      ],
+      "getDesc": 10028350,
+      "priority": 35,
+      "icon": "tcly_bm_jy_2835",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_muchen_stand",
+      "roleBg": "yr_bm_lihui_2835",
+      "mineAction": 1
+    },
+    "28360": {
+      "id": 28360,
+      "name": 28360,
+      "desc": 10028360,
+      "banner": [
+        "yr_bm_banner_2836",
+        "yr_bm_banner_2836"
+      ],
+      "getDesc": 10028360,
+      "priority": 36,
+      "icon": "tcly_bm_jy_2836",
+      "isSuit": 1,
+      "tag": 1,
+      "sound": "attack_fashion_luoli_stand",
+      "roleBg": "yr_bm_lihui_2836",
+      "mineAction": 1
+    },
+    "28990": {
+      "id": 28990,
+      "name": 28990,
+      "desc": 10028990,
+      "banner": [
+        "yr_bm_banner_2800",
+        "yr_bm_banner_2800"
+      ],
+      "getDesc": 10028990,
+      "priority": 11,
+      "icon": "",
+      "isSuit": 1,
+      "tag": 1
+    },
+    "29000": {
+      "id": 29000,
+      "name": 29000,
+      "desc": 10029000,
+      "banner": [
+        "yr_bm_banner_2900",
+        "yr_bm_banner_2900_nv"
+      ],
+      "getDesc": 10029000,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29000,
+      "priority": 103,
+      "isSuit": 0
+    },
+    "29010": {
+      "id": 29010,
+      "name": 29010,
+      "desc": 10029010,
+      "banner": [
+        "yr_bm_banner_2901",
+        "yr_bm_banner_2901_nv"
+      ],
+      "getDesc": 10029010,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29010,
+      "priority": 105,
+      "isSuit": 0
+    },
+    "29020": {
+      "id": 29020,
+      "name": 29020,
+      "desc": 10029020,
+      "banner": [
+        "yr_bm_banner_2902",
+        "yr_bm_banner_2902_nv"
+      ],
+      "getDesc": 10029020,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29020,
+      "priority": 106,
+      "isSuit": 0
+    },
+    "29030": {
+      "id": 29030,
+      "name": 29030,
+      "desc": 10029030,
+      "banner": [
+        "yr_bm_banner_2903",
+        "yr_bm_banner_2903_nv"
+      ],
+      "getDesc": 10029030,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29030,
+      "priority": 104,
+      "isSuit": 0
+    },
+    "29040": {
+      "id": 29040,
+      "name": 29040,
+      "desc": 10029040,
+      "banner": [
+        "yr_bm_banner_2904",
+        "yr_bm_banner_2904_nv"
+      ],
+      "getDesc": 10029040,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29040,
+      "priority": 107,
+      "isSuit": 0
+    },
+    "29050": {
+      "id": 29050,
+      "name": 29050,
+      "desc": 10029050,
+      "banner": [
+        "yr_bm_banner_2905",
+        "yr_bm_banner_2905_nv"
+      ],
+      "getDesc": 10029050,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29050,
+      "priority": 108,
+      "isSuit": 0
+    },
+    "29060": {
+      "id": 29060,
+      "name": 29060,
+      "desc": 10029060,
+      "banner": [
+        "yr_bm_banner_2906",
+        "yr_bm_banner_2906_nv"
+      ],
+      "getDesc": 10029060,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29060,
+      "priority": 119,
+      "isSuit": 0
+    },
+    "29070": {
+      "id": 29070,
+      "name": 29070,
+      "desc": 10029070,
+      "banner": [
+        "yr_bm_banner_2907",
+        "yr_bm_banner_2907_nv"
+      ],
+      "getDesc": 10029070,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29070,
+      "priority": 113,
+      "isSuit": 0
+    },
+    "29080": {
+      "id": 29080,
+      "name": 29080,
+      "desc": 10029080,
+      "banner": [
+        "yr_bm_banner_2908",
+        "yr_bm_banner_2908_nv"
+      ],
+      "getDesc": 10029080,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29080,
+      "priority": 114,
+      "isSuit": 0
+    },
+    "29090": {
+      "id": 29090,
+      "name": 29090,
+      "desc": 10029090,
+      "banner": [
+        "yr_bm_banner_2909",
+        "yr_bm_banner_2909_nv"
+      ],
+      "getDesc": 10029090,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29090,
+      "priority": 115,
+      "isSuit": 0
+    },
+    "29100": {
+      "id": 29100,
+      "name": 29100,
+      "desc": 10029100,
+      "banner": [
+        "yr_bm_banner_2910",
+        "yr_bm_banner_2910_nv"
+      ],
+      "getDesc": 10029100,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29100,
+      "priority": 118,
+      "isSuit": 0
+    },
+    "29150": {
+      "id": 29150,
+      "name": 29150,
+      "desc": 10029150,
+      "banner": [
+        "yr_bm_banner_2915",
+        "yr_bm_banner_2915_nv"
+      ],
+      "getDesc": 10029150,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29150,
+      "priority": 120,
+      "isSuit": 0
+    },
+    "29160": {
+      "id": 29160,
+      "name": 29160,
+      "desc": 10029160,
+      "banner": [
+        "yr_bm_banner_2916",
+        "yr_bm_banner_2916_nv"
+      ],
+      "getDesc": 10029160,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29160,
+      "priority": 121,
+      "isSuit": 0
+    },
+    "29170": {
+      "id": 29170,
+      "name": 29170,
+      "desc": 10029170,
+      "banner": [
+        "yr_bm_banner_2917",
+        "yr_bm_banner_2917_nv"
+      ],
+      "getDesc": 10029170,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29170,
+      "priority": 122,
+      "isSuit": 0
+    },
+    "29180": {
+      "id": 29180,
+      "name": 29180,
+      "desc": 10029180,
+      "banner": [
+        "yr_bm_banner_2918",
+        "yr_bm_banner_2918_nv"
+      ],
+      "getDesc": 10029180,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29180,
+      "priority": 123,
+      "isSuit": 0
+    },
+    "29240": {
+      "id": 29240,
+      "name": 29240,
+      "desc": 10029240,
+      "banner": [
+        "yr_bm_banner_2924",
+        "yr_bm_banner_2924_nv"
+      ],
+      "getDesc": 10029240,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29240,
+      "priority": 124,
+      "isSuit": 0
+    },
+    "29250": {
+      "id": 29250,
+      "name": 29250,
+      "desc": 10029250,
+      "banner": [
+        "yr_bm_banner_2925",
+        "yr_bm_banner_2925_nv"
+      ],
+      "getDesc": 10029250,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29250,
+      "priority": 125,
+      "isSuit": 0
+    },
+    "29260": {
+      "id": 29260,
+      "name": 29260,
+      "desc": 10029260,
+      "banner": [
+        "yr_bm_banner_2926",
+        "yr_bm_banner_2926_nv"
+      ],
+      "getDesc": 10029260,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29260,
+      "priority": 126,
+      "isSuit": 0
+    },
+    "29270": {
+      "id": 29270,
+      "name": 29270,
+      "desc": 10029270,
+      "banner": [
+        "yr_bm_banner_2927",
+        "yr_bm_banner_2927_nv"
+      ],
+      "getDesc": 10029270,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "skillId": 29270,
+      "priority": 127,
+      "isSuit": 0
+    },
+    "29800": {
+      "id": 29800,
+      "name": 29800,
+      "desc": 10012000,
+      "banner": [
+        "yr_bm_banner_2980",
+        "yr_bm_banner_2980_nv"
+      ],
+      "getDesc": 10012000,
+      "priority": 201,
+      "icon": "",
+      "isSuit": 3
+    },
+    "29810": {
+      "id": 29810,
+      "name": 29810,
+      "desc": 10012000,
+      "banner": [
+        "yr_bm_banner_2981",
+        "yr_bm_banner_2981_nv"
+      ],
+      "getDesc": 10012000,
+      "attrs": {
+        "51": 400,
+        "52": 300,
+        "53": 300
+      },
+      "priority": 201,
+      "icon": "",
+      "isSuit": 3
+    },
+    "29999": {
+      "id": 29999,
+      "name": 29999,
+      "desc": 10028000,
+      "banner": [
+        "yr_bm_banner_2999",
+        "yr_bm_banner_2999_nv"
+      ],
+      "getDesc": 10028000,
+      "attrs": {
+        "51": 100,
+        "52": 100,
+        "53": 100
+      },
+      "priority": 2,
+      "isSuit": 0
+    }
+  }
+}

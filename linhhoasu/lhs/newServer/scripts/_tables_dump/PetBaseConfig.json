@@ -1,0 +1,112 @@
+{
+  "_table": "PetBaseConfig",
+  "_rows": 15,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "pSkillWashConsume": [
+        {
+          "id": 37,
+          "count": 10
+        },
+        {
+          "id": 37,
+          "count": 20
+        },
+        {
+          "id": 37,
+          "count": 60
+        },
+        {
+          "id": 37,
+          "count": 110
+        },
+        {
+          "id": 37,
+          "count": 200
+        }
+      ]
+    },
+    {
+      "pSkillItemConsume": 1000001
+    },
+    {
+      "initialField": 8
+    }
+  ],
+  "data": {
+    "pSkillWashConsume": [
+      {
+        "id": 37,
+        "count": 10
+      },
+      {
+        "id": 37,
+        "count": 20
+      },
+      {
+        "id": 37,
+        "count": 60
+      },
+      {
+        "id": 37,
+        "count": 110
+      },
+      {
+        "id": 37,
+        "count": 200
+      }
+    ],
+    "pSkillItemConsume": 1000001,
+    "initialField": 8,
+    "fieldConsume": [
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450
+    ],
+    "fieldMax": 16,
+    "fightAttrsRate": [
+      10000,
+      7000,
+      3000
+    ],
+    "mailId": 6,
+    "resetConsume": [
+      {
+        "id": 1,
+        "count": 0
+      }
+    ],
+    "returnRate": 10000,
+    "pSkillWashUseCount": 2,
+    "levelMax": 200,
+    "typeDesc": {
+      "0": 30010300,
+      "1": 30010301,
+      "2": 30010302,
+      "3": 30010303,
+      "4": 30010304,
+      "5": 30010305
+    },
+    "breakLimitPetQuality": [
+      7,
+      9
+    ],
+    "speedUpScale": [
+      0,
+      20,
+      40
+    ],
+    "speedUpLevel": [
+      1,
+      5,
+      10
+    ]
+  }
+}

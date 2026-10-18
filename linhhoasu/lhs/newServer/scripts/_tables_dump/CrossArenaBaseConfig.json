@@ -1,0 +1,119 @@
+{
+  "_table": "CrossArenaBaseConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "arenaCost": {
+        "id": 110,
+        "count": 1
+      }
+    },
+    {
+      "arenaRefreshCost": {
+        "id": 1,
+        "count": 10
+      }
+    },
+    {
+      "arenaReward": [
+        [
+          {
+            "id": 89,
+            "count": 10
+          }
+        ],
+        [
+          {
+            "id": 89,
+            "count": 10
+          }
+        ],
+        [
+          {
+            "id": 89,
+            "count": 10
+          }
+        ],
+        [
+          {
+            "id": 89,
+            "count": 10
+          }
+        ]
+      ]
+    }
+  ],
+  "data": {
+    "arenaCost": {
+      "id": 110,
+      "count": 1
+    },
+    "arenaRefreshCost": {
+      "id": 1,
+      "count": 10
+    },
+    "arenaReward": [
+      [
+        {
+          "id": 89,
+          "count": 10
+        }
+      ],
+      [
+        {
+          "id": 89,
+          "count": 10
+        }
+      ],
+      [
+        {
+          "id": 89,
+          "count": 10
+        }
+      ],
+      [
+        {
+          "id": 89,
+          "count": 10
+        }
+      ]
+    ],
+    "arenaFailReward": [
+      [
+        {
+          "id": 89,
+          "count": 5
+        }
+      ],
+      [
+        {
+          "id": 89,
+          "count": 5
+        }
+      ],
+      [
+        {
+          "id": 89,
+          "count": 5
+        }
+      ],
+      [
+        {
+          "id": 89,
+          "count": 5
+        }
+      ]
+    ],
+    "arenaScoreSection": [
+      0,
+      1200,
+      1500,
+      2000
+    ],
+    "arenaScoreDefault": 1000,
+    "arenaRefreshTime": 3,
+    "arenaProtectTime": 30
+  }
+}

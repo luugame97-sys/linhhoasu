@@ -1,0 +1,43 @@
+{
+  "deployedAtUtc": "2026-09-01T02:19:28.791707+00:00",
+  "host": "103.116.105.154",
+  "remote": "/linhhoasu/webgame/game/index.html",
+  "backup": "/linhhoasu/_ai_workbench/backups/prod_hit_route_v6_pre_20260901_021925",
+  "baselineSha256": "970667f4833a439a30d1d42fea61f65c15799ec03ce72d9bd3164b495fd82a18",
+  "candidateSha256": "9ed4b5bc65088c3cd2f178691ef68a547025b4180c8f8e74c6e492e79c3e3af9",
+  "guardScriptSha256": "1e171081a591069243f9260440b7e8163d2bf56a8c82ac169d77ac1645c87678",
+  "mainSha256": "0a83139204f9635db61b166907355e0ecff971569693d0e1a7fe438591b0dfe1",
+  "markerCounts": {
+    "LHS_MAIN_HIT_ROUTE_V6_START": 1,
+    "__lhsMainHitRouteV6Bootstrap": 2,
+    "__lhsMainLayerPriorityV8": 1,
+    "LHS_MAIN_HIT_ROUTE_V6_END": 1
+  },
+  "metadata": {
+    "owner": "root:root",
+    "mode": "644",
+    "selinux": "disabled",
+    "bytesBefore": 27293,
+    "bytesAfter": 30673
+  },
+  "health": {
+    "readyHttp": 200,
+    "mongo": true,
+    "redis": true,
+    "wsHealthHttp": 200,
+    "pm2Restarted": false
+  },
+  "publicVerification": {
+    "indexHttp": 200,
+    "indexSha256": "9ed4b5bc65088c3cd2f178691ef68a547025b4180c8f8e74c6e492e79c3e3af9",
+    "indexBytes": 30673,
+    "mainSha256": "0a83139204f9635db61b166907355e0ecff971569693d0e1a7fe438591b0dfe1",
+    "loginScreenRendered": true,
+    "guardConsoleErrors": 0
+  },
+  "qa": {
+    "staticSmoke": "PASS",
+    "loginScreenSmoke": "PASS",
+    "authenticatedSoak": "PENDING_USER_CONFIRMATION_TO_SUBMIT_SAVED_LOGIN"
+  }
+}

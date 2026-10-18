@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donate điều chỉnh và gửi bù — 07/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-i-u-ch-nh-qu-donate-v-g-i-b">Session Report — Điều chỉnh quà Donate và gửi bù</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Mốc Donate tuần từ <strong>400.000đ đến 5.000.000đ</strong> tăng Bánh Bao x10; mốc thấp hơn giữ nguyên.</li>
+<li>Tất cả mốc Donate đang hoạt động có Điểm kỹ năng (item 5) đổi sang Đùi Gà (item 65) theo tỷ lệ <strong>10:1</strong>.</li>
+<li>Đã xử lý <strong>38 nhân vật / 429 lượt nhận có bằng chứng</strong>: thu 3.825.000 Điểm kỹ năng, gửi 382.500 Đùi Gà và bù 5.400.000 Bánh Bao cho 11 nhân vật.</li>
+<li>Mỗi nhân vật có receipt bất biến, một thư event key duy nhất; retry không thu/gửi lần hai.</li>
+</ul>
+<p>Claim ID 422 (S1) có thư báo đã nhận nhưng không có mailClaimLedger khớp và không còn số điểm trong túi. Claim này được giữ manual review, không thu 10.000 điểm và không gửi bù suy đoán.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Production: cập nhật <code>recharge_milestones.reward_items</code> của 50 mốc; thêm <code>DonateRevisionService.js</code>, <code>donateRevision20260907.json</code> và endpoint HMAC <code>/api/internal/player/donate-revision-20260907</code> trên S1/S2.</li>
+<li>Player đã xử lý có <code>moderation.donateRevision20260907</code>; snapshot trước sửa nằm tại <code>/linhhoasu/_ai_workbench/backups/donate_conversion_20260907/</code>.</li>
+<li>Evidence/snapshot/plan/test tại <code>_ai_workbench/temp/donate_revision_20260907/</code>; tools tại <code>_ai_workbench/tools/</code>. Không đưa secret vào artifact.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Tuần 400k+ ít Bánh Bao</td>
+<td>Cấu hình cũ không tăng theo bậc</td>
+<td>Tăng item 4 đúng x10 từ 400k</td>
+<td>Kiểm boundary 400k/500k/5m</td>
+</tr>
+<tr>
+<td>Điểm skill cần đổi</td>
+<td>Item 5 cũ</td>
+<td>Thu item 5, gửi item 65/10:1</td>
+<td>Receipt native, không sửa túi mù</td>
+</tr>
+<tr>
+<td>Mail cũ đã xóa</td>
+<td>Recipient không còn đủ chứng cứ</td>
+<td>Dùng audit + ledger + mail; mơ hồ giữ lại</td>
+<td>Không dùng claim × cấu hình mới</td>
+</tr>
+<tr>
+<td>Player online/save queue</td>
+<td>Snapshot có thể bị ghi đè</td>
+<td>Mutex, drain save, readback và sync session</td>
+<td>Không dùng deferred save cho reward</td>
+</tr>
+<tr>
+<td>Retry mất phản hồi</td>
+<td>Không có key/snapshot cố định</td>
+<td>Event key duy nhất và receipt trên player</td>
+<td>Retry cùng key, không tạo claim mới</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-ki-m-th-b-ng-ch-ng">4. Kiểm thử / bằng chứng</h2>
+<ul>
+<li>Catalog PHP 7.4.33/MySQL 5.7.44: 153 checks PASS; 50 mốc skill, 15 mốc tuần.</li>
+<li>Native service fixture: 18 tests PASS; allowlist, server, confirmation, mutex, rollback, timeout, mail idempotency và conflict.</li>
+<li>Mongo QA riêng: 9 checks PASS; concurrent convert chỉ một receipt/thư, database QA đã xóa.</li>
+<li>Sau apply: 38 receipt, 38 mail; 36 mail còn trong Mongo, 2 mail đã claim nhưng được chứng minh qua receipt/ledger; 0 mail trùng; 38 backup player.</li>
+<li>S1/S2 ready 8080/8083 = 200, source hash đúng, PM2 online; không restart ngoài hai process game được chỉ định.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Mốc tuần và chuyển đổi/bù đã commit, verify thành công; không có <code>pending_delivery</code>.</li>
+<li>Mốc tháng 12/14/16/18/20 triệu <strong>chưa thêm</strong> vì chưa có bảng quà cụ thể được duyệt.</li>
+<li>Claim 422 giữ manual review; không tự thu, reset hoặc bù.</li>
+<li>Không thể suy luận toàn bộ thư cũ đã tồn tại sau khi người chơi xóa; chỉ xử lý trường hợp có bằng chứng đủ.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Nếu xử lý claim 422, cung cấp mail ID/log hoặc phê duyệt manual riêng.</li>
+<li>Nếu thêm mốc tháng tới 20 triệu, duyệt item/số lượng trước khi tạo row mới, giữ nguyên lịch sử claim.</li>
+<li>Người chơi tải lại game để nhận thư điều chỉnh; không bấm nhận lại thư cùng event key.</li>
+</ol></main></body></html>

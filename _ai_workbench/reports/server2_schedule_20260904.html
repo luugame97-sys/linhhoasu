@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dời lịch mở Server 2 - 04/09/2026 17:00</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-d-i-l-ch-m-server-2">Session Report — Dời lịch mở Server 2</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã dời <code>openTime</code> của S2 (<code>serverId=1002</code>) sang <strong>17:00 ngày 04/09/2026, Asia/Bangkok (UTC+7)</strong>.</li>
+<li>Timestamp lưu trong MongoDB: <code>1788516000000</code>, tương ứng <code>2026-09-04T10:00:00Z</code>.</li>
+<li>Giữ nguyên trạng thái private: <code>running=false</code>, <code>status=0</code>; chưa public server list, chưa thêm route và chưa cho người chơi vào S2.</li>
+<li>Không restart bất kỳ process nào và không thay đổi S1.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Production MongoDB <code>lhs_s1002.gameservers</code>: chỉ đổi trường <code>openTime</code> của bản ghi <code>serverId=1002</code>.</li>
+<li>Tool triển khai: <code>_ai_workbench/tools/deploy_server2_open_time_20260904.py</code>.</li>
+<li>Tool cập nhật DB có guard: <code>_ai_workbench/tools/set_server2_open_time_20260904.js</code>.</li>
+<li>Tool audit backup: <code>_ai_workbench/tools/audit_server2_schedule_backups.py</code>.</li>
+<li>Seed private local đã đồng bộ timestamp mới: <code>_ai_workbench/tools/seed_server2_private.js</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/server2_schedule_20260904_20260903_163915.json</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Verifier báo <code>SERVER2_SCHEDULE_VERIFY_FAILED</code> dù DB đã ghi đúng</td>
+<td>Biểu thức Python <code>status or -1</code> coi số <code>0</code> là falsy</td>
+<td>Sửa verifier phân biệt rõ <code>None</code> và <code>0</code>, sau đó audit/readback lại</td>
+<td>Với enum hợp lệ có giá trị <code>0</code>, không dùng toán tử fallback theo truthiness</td>
+</tr>
+<tr>
+<td>Nguy cơ public S2 trước khi đủ điều kiện</td>
+<td><code>openTime</code> chỉ là metadata; release S2 vẫn cần identity/routing/native E2E/WebGM</td>
+<td>Giữ <code>running=false/status=0</code>; chỉ dời lịch, không bật public</td>
+<td>Release theo gate và thao tác bật public riêng vào đúng thời điểm</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Thay đổi lịch phải dùng compare-and-set trên đúng <code>_id</code>, <code>serverId</code>, <code>running</code>, <code>status</code> và <code>openTime</code> cũ để tránh ghi đè cập nhật đồng thời.</li>
+<li>Backup rollback cần được tạo bằng chế độ độc quyền trước mutation và giữ quyền <code>600</code>.</li>
+<li><code>openTime</code> không tự thay thế gate release; trạng thái private phải được xác minh độc lập.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>S2 hiện có <code>openTime=1788516000000</code>, <code>running=false</code>, <code>status=0</code>.</li>
+<li>Backup trước lần ghi đầu: <code>/linhhoasu/_ai_workbench/backups/server2_schedule_pre_20260903_163836/server_config_before.json</code>; bản này giữ lịch cũ <code>1788084000000</code> và trạng thái private.</li>
+<li>Readback lần cuối: PASS.</li>
+<li>S1 <code>/ready</code>: HTTP 200; S2 <code>/ready</code>: HTTP 200; MongoDB/Redis healthy.</li>
+<li>PID, trạng thái và restart counter của <code>lhs-s1001</code>, <code>lhs-s1002</code>, <code>lhs-real-bots</code>, <code>lhs-dist</code>, <code>lhs-admin</code> không đổi.</li>
+<li>Không dịch vụ nào được restart.</li>
+<li>SHA-256 evidence: <code>ccabcf246ec7aed0af1470ea8d8d6efdaa9ff807ea135a074d0cdeeb87d1ca25</code>.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Trước 17:00 ngày 04/09/2026, hoàn tất identity/auth dùng chung, route <code>/ws-s2</code>, WebGM theo server, native E2E, relog/restart và soak.</li>
+<li>Chỉ khi toàn bộ gate PASS mới bật S2 public bằng thao tác release riêng.</li>
+<li>Nếu gate chưa đạt, tiếp tục giữ <code>running=false/status=0</code>; không mở chỉ vì đã tới <code>openTime</code>.</li>
+</ol></main></body></html>

@@ -1,0 +1,223 @@
+{
+  "_table": "ArtifactQuenchConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,level,consumes,levelmax,attrs1,attrs2,addAttrs1,addAttrs2,returns",
+  "_sample": [
+    {
+      "0": {
+        "id": 0,
+        "level": 20,
+        "consumes": [],
+        "levelmax": 30,
+        "attrs1": [],
+        "attrs2": [],
+        "addAttrs1": [],
+        "addAttrs2": [],
+        "returns": []
+      }
+    },
+    {
+      "1": {
+        "id": 1,
+        "level": 30,
+        "consumes": [
+          {
+            "id": 191,
+            "count": 5
+          },
+          {
+            "id": 193,
+            "count": 5
+          }
+        ],
+        "levelmax": 40,
+        "attrs1": {
+          "255": 1650
+        },
+        "attrs2": {
+          "256": 1550
+        },
+        "addAttrs1": {
+          "255": 150
+        },
+        "addAttrs2": {
+          "256": 50
+        },
+        "returns": [
+          {
+            "id": 191,
+            "count": 4
+          },
+          {
+            "id": 193,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "level": 40,
+        "consumes": [
+          {
+            "id": 191,
+            "count": 20
+          },
+          {
+            "id": 193,
+            "count": 20
+          }
+        ],
+        "levelmax": 50,
+        "attrs1": {
+          "255": 4150
+        },
+        "attrs2": {
+          "256": 2300
+        },
+        "addAttrs1": {
+          "255": 150
+        },
+        "addAttrs2": {
+          "256": 50
+        },
+        "returns": [
+          {
+            "id": 191,
+            "count": 16
+          },
+          {
+            "id": 193,
+            "count": 5
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "id": 0,
+      "level": 20,
+      "consumes": [],
+      "levelmax": 30,
+      "attrs1": [],
+      "attrs2": [],
+      "addAttrs1": [],
+      "addAttrs2": [],
+      "returns": []
+    },
+    "1": {
+      "id": 1,
+      "level": 30,
+      "consumes": [
+        {
+          "id": 191,
+          "count": 5
+        },
+        {
+          "id": 193,
+          "count": 5
+        }
+      ],
+      "levelmax": 40,
+      "attrs1": {
+        "255": 1650
+      },
+      "attrs2": {
+        "256": 1550
+      },
+      "addAttrs1": {
+        "255": 150
+      },
+      "addAttrs2": {
+        "256": 50
+      },
+      "returns": [
+        {
+          "id": 191,
+          "count": 4
+        },
+        {
+          "id": 193,
+          "count": 1
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "level": 40,
+      "consumes": [
+        {
+          "id": 191,
+          "count": 20
+        },
+        {
+          "id": 193,
+          "count": 20
+        }
+      ],
+      "levelmax": 50,
+      "attrs1": {
+        "255": 4150
+      },
+      "attrs2": {
+        "256": 2300
+      },
+      "addAttrs1": {
+        "255": 150
+      },
+      "addAttrs2": {
+        "256": 50
+      },
+      "returns": [
+        {
+          "id": 191,
+          "count": 16
+        },
+        {
+          "id": 193,
+          "count": 5
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "level": 50,
+      "consumes": [
+        {
+          "id": 191,
+          "count": 40
+        },
+        {
+          "id": 193,
+          "count": 40
+        }
+      ],
+      "levelmax": 60,
+      "attrs1": {
+        "255": 8500
+      },
+      "attrs2": {
+        "256": 3500
+      },
+      "addAttrs1": {
+        "255": 150
+      },
+      "addAttrs2": {
+        "256": 50
+      },
+      "returns": [
+        {
+          "id": 191,
+          "count": 32
+        },
+        {
+          "id": 193,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "_table": "TopArenaBaseConfig",
+  "_rows": 26,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "auditionCost": {
+        "id": 180,
+        "count": 1
+      }
+    },
+    {
+      "auditionRefreshCost": {
+        "id": 1,
+        "count": 10
+      }
+    },
+    {
+      "auditionReward": [
+        {
+          "id": 182,
+          "count": 100
+        }
+      ]
+    }
+  ],
+  "data": {
+    "auditionCost": {
+      "id": 180,
+      "count": 1
+    },
+    "auditionRefreshCost": {
+      "id": 1,
+      "count": 10
+    },
+    "auditionReward": [
+      {
+        "id": 182,
+        "count": 100
+      }
+    ],
+    "auditionFailReward": [
+      {
+        "id": 182,
+        "count": 50
+      }
+    ],
+    "auditionRefreshTime": 3,
+    "auditionMatchEnemyNum": 5,
+    "auditionMatchEnemyRange": [
+      2000,
+      2000,
+      2000,
+      2000,
+      2000
+    ],
+    "auditionInitialRank": 999,
+    "initialRobotId": 1,
+    "robotSever": [
+      30036510,
+      30036511,
+      30036512,
+      30036513,
+      30036514,
+      30036515,
+      30036516,
+      30036517,
+      30036518,
+      30036519
+    ],
+    "robotSweepRatio": 5000,
+    "roundFightTime": [
+      72000,
+      72300,
+      72600
+    ],
+    "roundGuessTime": [
+      43200,
+      71700
+    ],
+    "battleLastTime": 10,
+    "guessCut": 3000,
+    "guessFailReturn": 2500,
+    "passGuessFailReturn": 10000,
+    "guessMinBet": 100,
+    "guessMaxBet": 999999,
+    "maxGuessOdds": 30000,
+    "minGuessOdds": 10200,
+    "guessExchange": 1,
+    "supportRewards": [
+      {
+        "id": 182,
+        "count": 200
+      }
+    ],
+    "gamePassMultiple": 200000,
+    "gamePassPrivilegeMultiple": 10000,
+    "guessConfirm": 300
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "_table": "DoubleTowerRankConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,score,icon,name,aiRandom,aiDelay",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "score": 5,
+        "icon": "doubleTower_icon_dw01",
+        "name": 30036332,
+        "aiRandom": 70,
+        "aiDelay": 5
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "score": 10,
+        "icon": "doubleTower_icon_dw02",
+        "name": 30036333,
+        "aiRandom": 40,
+        "aiDelay": 3
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "score": 15,
+        "icon": "doubleTower_icon_dw03",
+        "name": 30036334,
+        "aiRandom": 30,
+        "aiDelay": 2
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "score": 5,
+      "icon": "doubleTower_icon_dw01",
+      "name": 30036332,
+      "aiRandom": 70,
+      "aiDelay": 5
+    },
+    "2": {
+      "id": 2,
+      "score": 10,
+      "icon": "doubleTower_icon_dw02",
+      "name": 30036333,
+      "aiRandom": 40,
+      "aiDelay": 3
+    },
+    "3": {
+      "id": 3,
+      "score": 15,
+      "icon": "doubleTower_icon_dw03",
+      "name": 30036334,
+      "aiRandom": 30,
+      "aiDelay": 2
+    },
+    "4": {
+      "id": 4,
+      "score": 20,
+      "icon": "doubleTower_icon_dw04",
+      "name": 30036335,
+      "aiRandom": 20,
+      "aiDelay": 2
+    },
+    "5": {
+      "id": 5,
+      "score": 25,
+      "icon": "doubleTower_icon_dw05",
+      "name": 30036336,
+      "aiRandom": 10,
+      "aiDelay": 1
+    },
+    "6": {
+      "id": 6,
+      "icon": "doubleTower_icon_dw06",
+      "name": 30036337,
+      "aiRandom": 0,
+      "aiDelay": 1
+    }
+  }
+}

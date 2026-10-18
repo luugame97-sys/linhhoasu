@@ -1,0 +1,942 @@
+{
+  "_table": "FateSkillConfig",
+  "_rows": 47,
+  "_type": "object",
+  "_firstKeys": "id,round,row,pre,position,cost,fatePointCost,skillType,kungfuId,quality",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "round": 1,
+        "row": 1,
+        "pre": [],
+        "position": 3,
+        "cost": [],
+        "fatePointCost": 3,
+        "skillType": 1,
+        "kungfuId": 1,
+        "quality": 3
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "round": 1,
+        "row": 2,
+        "pre": [
+          1
+        ],
+        "position": 1,
+        "cost": [],
+        "fatePointCost": 2,
+        "skillType": 1,
+        "kungfuId": 0,
+        "skillAttrs": {
+          "51": 150
+        },
+        "icon": "fate_attr_1",
+        "title": 10001,
+        "desc": 30035750,
+        "quality": 3
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "round": 1,
+        "row": 2,
+        "pre": [
+          1
+        ],
+        "position": 3,
+        "cost": [],
+        "fatePointCost": 2,
+        "skillType": 1,
+        "kungfuId": 0,
+        "skillAttrs": {
+          "52": 150
+        },
+        "icon": "fate_attr_2",
+        "title": 10002,
+        "desc": 30035751,
+        "quality": 3
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "round": 1,
+      "row": 1,
+      "pre": [],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 1,
+      "quality": 3
+    },
+    "2": {
+      "id": 2,
+      "round": 1,
+      "row": 2,
+      "pre": [
+        1
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "51": 150
+      },
+      "icon": "fate_attr_1",
+      "title": 10001,
+      "desc": 30035750,
+      "quality": 3
+    },
+    "3": {
+      "id": 3,
+      "round": 1,
+      "row": 2,
+      "pre": [
+        1
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "52": 150
+      },
+      "icon": "fate_attr_2",
+      "title": 10002,
+      "desc": 30035751,
+      "quality": 3
+    },
+    "4": {
+      "id": 4,
+      "round": 1,
+      "row": 2,
+      "pre": [
+        1
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "53": 150
+      },
+      "icon": "fate_attr_3",
+      "title": 10003,
+      "desc": 30035752,
+      "quality": 3
+    },
+    "5": {
+      "id": 5,
+      "round": 1,
+      "row": 3,
+      "pre": [
+        2
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 114003,
+      "icon": "jinhong_subFate_3",
+      "quality": 3
+    },
+    "6": {
+      "id": 6,
+      "round": 1,
+      "row": 3,
+      "pre": [
+        3
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 115003,
+      "icon": "zhan_subFate_3",
+      "quality": 3
+    },
+    "7": {
+      "id": 7,
+      "round": 1,
+      "row": 3,
+      "pre": [
+        4
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 116003,
+      "icon": "yu_subFate_3",
+      "quality": 3
+    },
+    "8": {
+      "id": 8,
+      "round": 1,
+      "row": 4,
+      "pre": [
+        5
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "54": 150
+      },
+      "icon": "fate_attr_4",
+      "title": 10004,
+      "desc": 30035753,
+      "quality": 3
+    },
+    "9": {
+      "id": 9,
+      "round": 1,
+      "row": 4,
+      "pre": [
+        6
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "201": 200
+      },
+      "icon": "fate_attr_201",
+      "title": 10201,
+      "desc": 30035758,
+      "quality": 3
+    },
+    "10": {
+      "id": 10,
+      "round": 1,
+      "row": 4,
+      "pre": [
+        7
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "221": 200
+      },
+      "icon": "fate_attr_221",
+      "title": 10221,
+      "desc": 30035759,
+      "quality": 3
+    },
+    "11": {
+      "id": 11,
+      "round": 1,
+      "row": 5,
+      "pre": [
+        8,
+        9
+      ],
+      "position": 2,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "243": 300
+      },
+      "icon": "fate_attr_243",
+      "title": 10243,
+      "desc": 30035754,
+      "quality": 3
+    },
+    "12": {
+      "id": 12,
+      "round": 1,
+      "row": 5,
+      "pre": [
+        9,
+        10
+      ],
+      "position": 4,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "245": 300
+      },
+      "icon": "fate_attr_245",
+      "title": 10245,
+      "desc": 30035756,
+      "quality": 3
+    },
+    "13": {
+      "id": 13,
+      "round": 1,
+      "row": 6,
+      "pre": [
+        11,
+        12
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 1,
+      "quality": 3
+    },
+    "14": {
+      "id": 14,
+      "round": 1,
+      "row": 7,
+      "pre": [
+        13
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 1,
+      "quality": 3
+    },
+    "15": {
+      "id": 15,
+      "round": 1,
+      "row": 8,
+      "pre": [
+        14
+      ],
+      "position": 2,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "244": 300
+      },
+      "icon": "fate_attr_244",
+      "title": 10244,
+      "desc": 30035755,
+      "quality": 3
+    },
+    "16": {
+      "id": 16,
+      "round": 1,
+      "row": 8,
+      "pre": [
+        14
+      ],
+      "position": 4,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "246": 300
+      },
+      "icon": "fate_attr_246",
+      "title": 10246,
+      "desc": 30035757,
+      "quality": 3
+    },
+    "17": {
+      "id": 17,
+      "round": 1,
+      "row": 9,
+      "pre": [
+        15
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "51": 150
+      },
+      "icon": "fate_attr_1",
+      "title": 10001,
+      "desc": 30035750,
+      "quality": 3
+    },
+    "18": {
+      "id": 18,
+      "round": 1,
+      "row": 9,
+      "pre": [
+        15,
+        16
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "52": 150
+      },
+      "icon": "fate_attr_2",
+      "title": 10002,
+      "desc": 30035751,
+      "quality": 3
+    },
+    "19": {
+      "id": 19,
+      "round": 1,
+      "row": 9,
+      "pre": [
+        16
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "53": 150
+      },
+      "icon": "fate_attr_3",
+      "title": 10003,
+      "desc": 30035752,
+      "quality": 3
+    },
+    "20": {
+      "id": 20,
+      "round": 1,
+      "row": 10,
+      "pre": [
+        17
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 111003,
+      "icon": "changsheng_subFate_3",
+      "quality": 3
+    },
+    "21": {
+      "id": 21,
+      "round": 1,
+      "row": 10,
+      "pre": [
+        18
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 112003,
+      "icon": "lingxi_subFate_3",
+      "quality": 3
+    },
+    "22": {
+      "id": 22,
+      "round": 1,
+      "row": 10,
+      "pre": [
+        19
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 113003,
+      "icon": "jingang_subFate_3",
+      "quality": 3
+    },
+    "23": {
+      "id": 23,
+      "round": 1,
+      "row": 11,
+      "pre": [
+        20
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "54": 150
+      },
+      "icon": "fate_attr_4",
+      "title": 10004,
+      "desc": 30035753,
+      "quality": 3
+    },
+    "24": {
+      "id": 24,
+      "round": 1,
+      "row": 11,
+      "pre": [
+        21
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "201": 200
+      },
+      "icon": "fate_attr_201",
+      "title": 10201,
+      "desc": 30035758,
+      "quality": 3
+    },
+    "25": {
+      "id": 25,
+      "round": 1,
+      "row": 11,
+      "pre": [
+        22
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "221": 200
+      },
+      "icon": "fate_attr_221",
+      "title": 10221,
+      "desc": 30035759,
+      "quality": 3
+    },
+    "26": {
+      "id": 26,
+      "round": 1,
+      "row": 12,
+      "pre": [
+        23,
+        24
+      ],
+      "position": 2,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "243": 300
+      },
+      "icon": "fate_attr_243",
+      "title": 10243,
+      "desc": 30035754,
+      "quality": 3
+    },
+    "27": {
+      "id": 27,
+      "round": 1,
+      "row": 12,
+      "pre": [
+        24,
+        25
+      ],
+      "position": 4,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "245": 300
+      },
+      "icon": "fate_attr_245",
+      "title": 10245,
+      "desc": 30035756,
+      "quality": 3
+    },
+    "28": {
+      "id": 28,
+      "round": 1,
+      "row": 13,
+      "pre": [
+        26,
+        27
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 1,
+      "quality": 3
+    },
+    "29": {
+      "id": 29,
+      "round": 1,
+      "row": 14,
+      "pre": [
+        28
+      ],
+      "position": 2,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "244": 300
+      },
+      "icon": "fate_attr_244",
+      "title": 10244,
+      "desc": 30035755,
+      "quality": 3
+    },
+    "30": {
+      "id": 30,
+      "round": 1,
+      "row": 14,
+      "pre": [
+        28
+      ],
+      "position": 4,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "246": 300
+      },
+      "icon": "fate_attr_246",
+      "title": 10246,
+      "desc": 30035757,
+      "quality": 3
+    },
+    "31": {
+      "id": 31,
+      "round": 1,
+      "row": 15,
+      "pre": [
+        29
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "51": 150
+      },
+      "icon": "fate_attr_1",
+      "title": 10001,
+      "desc": 30035750,
+      "quality": 3
+    },
+    "32": {
+      "id": 32,
+      "round": 1,
+      "row": 15,
+      "pre": [
+        29,
+        30
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "52": 150
+      },
+      "icon": "fate_attr_2",
+      "title": 10002,
+      "desc": 30035751,
+      "quality": 3
+    },
+    "33": {
+      "id": 33,
+      "round": 1,
+      "row": 15,
+      "pre": [
+        30
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "53": 150
+      },
+      "icon": "fate_attr_3",
+      "title": 10003,
+      "desc": 30035752,
+      "quality": 3
+    },
+    "34": {
+      "id": 34,
+      "round": 1,
+      "row": 16,
+      "pre": [
+        31
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 111004,
+      "icon": "changsheng_subFate_4",
+      "quality": 3
+    },
+    "35": {
+      "id": 35,
+      "round": 1,
+      "row": 16,
+      "pre": [
+        32
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 112004,
+      "icon": "lingxi_subFate_4",
+      "quality": 3
+    },
+    "36": {
+      "id": 36,
+      "round": 1,
+      "row": 16,
+      "pre": [
+        33
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 113004,
+      "icon": "jingang_subFate_4",
+      "quality": 3
+    },
+    "37": {
+      "id": 37,
+      "round": 1,
+      "row": 17,
+      "pre": [
+        34,
+        35
+      ],
+      "position": 2,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "243": 300
+      },
+      "icon": "fate_attr_243",
+      "title": 10243,
+      "desc": 30035754,
+      "quality": 3
+    },
+    "38": {
+      "id": 38,
+      "round": 1,
+      "row": 17,
+      "pre": [
+        35,
+        36
+      ],
+      "position": 4,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "245": 300
+      },
+      "icon": "fate_attr_245",
+      "title": 10245,
+      "desc": 30035756,
+      "quality": 3
+    },
+    "39": {
+      "id": 39,
+      "round": 1,
+      "row": 18,
+      "pre": [
+        37
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "54": 150
+      },
+      "icon": "fate_attr_4",
+      "title": 10004,
+      "desc": 30035753,
+      "quality": 3
+    },
+    "40": {
+      "id": 40,
+      "round": 1,
+      "row": 18,
+      "pre": [
+        37,
+        38
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "201": 200
+      },
+      "icon": "fate_attr_201",
+      "title": 10201,
+      "desc": 30035758,
+      "quality": 3
+    },
+    "41": {
+      "id": 41,
+      "round": 1,
+      "row": 18,
+      "pre": [
+        38
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 2,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "221": 200
+      },
+      "icon": "fate_attr_221",
+      "title": 10221,
+      "desc": 30035759,
+      "quality": 3
+    },
+    "42": {
+      "id": 42,
+      "round": 1,
+      "row": 19,
+      "pre": [
+        39
+      ],
+      "position": 1,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 114004,
+      "icon": "jinhong_subFate_4",
+      "quality": 3
+    },
+    "43": {
+      "id": 43,
+      "round": 1,
+      "row": 19,
+      "pre": [
+        40
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 115004,
+      "icon": "zhan_subFate_4",
+      "quality": 3
+    },
+    "44": {
+      "id": 44,
+      "round": 1,
+      "row": 19,
+      "pre": [
+        41
+      ],
+      "position": 5,
+      "cost": [],
+      "fatePointCost": 5,
+      "skillType": 2,
+      "kungfuId": 0,
+      "skillId": 116004,
+      "icon": "yu_subFate_4",
+      "quality": 3
+    },
+    "45": {
+      "id": 45,
+      "round": 1,
+      "row": 20,
+      "pre": [
+        42,
+        43
+      ],
+      "position": 2,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "244": 300
+      },
+      "icon": "fate_attr_244",
+      "title": 10244,
+      "desc": 30035755,
+      "quality": 3
+    },
+    "46": {
+      "id": 46,
+      "round": 1,
+      "row": 20,
+      "pre": [
+        43,
+        44
+      ],
+      "position": 4,
+      "cost": [],
+      "fatePointCost": 3,
+      "skillType": 1,
+      "kungfuId": 0,
+      "skillAttrs": {
+        "246": 300
+      },
+      "icon": "fate_attr_246",
+      "title": 10246,
+      "desc": 30035757,
+      "quality": 3
+    },
+    "47": {
+      "id": 47,
+      "round": 1,
+      "row": 21,
+      "pre": [
+        45,
+        46
+      ],
+      "position": 3,
+      "cost": [],
+      "fatePointCost": 6,
+      "skillType": 2,
+      "kungfuId": 1,
+      "quality": 3
+    }
+  }
+}

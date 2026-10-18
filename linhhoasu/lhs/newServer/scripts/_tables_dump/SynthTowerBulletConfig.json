@@ -1,0 +1,58 @@
+{
+  "_table": "SynthTowerBulletConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,spine,isChange,initSize",
+  "_sample": [
+    {
+      "201": {
+        "id": 201,
+        "spine": "sp_skill_sanxiao_fly_201",
+        "isChange": 0,
+        "initSize": 0.5
+      }
+    },
+    {
+      "301": {
+        "id": 301,
+        "spine": "sp_skill_sanxiao_fly_301",
+        "isChange": 0,
+        "initSize": 0.5
+      }
+    },
+    {
+      "401": {
+        "id": 401,
+        "spine": "sp_skill_sanxiao_fly_401",
+        "isChange": 1,
+        "initSize": 0.5
+      }
+    }
+  ],
+  "data": {
+    "201": {
+      "id": 201,
+      "spine": "sp_skill_sanxiao_fly_201",
+      "isChange": 0,
+      "initSize": 0.5
+    },
+    "301": {
+      "id": 301,
+      "spine": "sp_skill_sanxiao_fly_301",
+      "isChange": 0,
+      "initSize": 0.5
+    },
+    "401": {
+      "id": 401,
+      "spine": "sp_skill_sanxiao_fly_401",
+      "isChange": 1,
+      "initSize": 0.5
+    },
+    "501": {
+      "id": 501,
+      "spine": "sp_skill_sanxiao_fly_501",
+      "isChange": 0,
+      "initSize": 0.5
+    }
+  }
+}

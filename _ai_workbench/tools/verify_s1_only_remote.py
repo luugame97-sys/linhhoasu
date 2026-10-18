@@ -1,0 +1,5 @@
+import getpass,paramiko
+ssh=paramiko.SSHClient();ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy());ssh.connect('103.116.105.154',username='root',password=getpass.getpass('VPS password (not logged): '),look_for_keys=False,allow_agent=False,timeout=15)
+try:
+ s=ssh.open_sftp(); p='/linhhoasu/_ai_workbench/temp/verify_s1_only.js'; src="""const mongo=require('/linhhoasu/lhs/newServer/src/db/mongo'); const svc=require('/linhhoasu/lhs/newServer/src/services/ServerConfigService'); const GameServer=require('/linhhoasu/lhs/newServer/src/db/models/GameServer'); (async()=>{await mongo.connect(); const all=await GameServer.countDocuments({}); const pages=await svc.listServerPages(); const rows=await svc.listServersByPage(1); console.log(JSON.stringify({all,pages,rows:rows.map(r=>({serverId:r.serverId,serverName:r.serverName,running:r.running,status:r.status}))}));})().finally(()=>mongo.disconnect());"""; f=s.open(p,'w');f.write(src);f.close(); _,o,e=ssh.exec_command("export MONGO_URI=\"mongodb://localhost:27017/lhs_s1001\"; node "+p);print(o.read().decode('utf-8','replace'));print(e.read().decode('utf-8','replace'));s.close()
+finally:ssh.close()

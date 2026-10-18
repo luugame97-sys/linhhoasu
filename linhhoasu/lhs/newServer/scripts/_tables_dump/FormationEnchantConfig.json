@@ -1,0 +1,3061 @@
+{
+  "_table": "FormationEnchantConfig",
+  "_rows": 200,
+  "_type": "object",
+  "_firstKeys": "level,probability,upgradeCost,attributeParam",
+  "_sample": [
+    {
+      "1": {
+        "level": 1,
+        "probability": 10000,
+        "upgradeCost": [
+          {
+            "id": 89,
+            "count": 10
+          },
+          {
+            "id": 2,
+            "count": 500
+          }
+        ],
+        "attributeParam": 60
+      }
+    },
+    {
+      "2": {
+        "level": 2,
+        "probability": 9286,
+        "upgradeCost": [
+          {
+            "id": 89,
+            "count": 10
+          },
+          {
+            "id": 2,
+            "count": 500
+          }
+        ],
+        "attributeParam": 120
+      }
+    },
+    {
+      "3": {
+        "level": 3,
+        "probability": 8622,
+        "upgradeCost": [
+          {
+            "id": 89,
+            "count": 10
+          },
+          {
+            "id": 2,
+            "count": 500
+          }
+        ],
+        "attributeParam": 180
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "level": 1,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 60
+    },
+    "2": {
+      "level": 2,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 120
+    },
+    "3": {
+      "level": 3,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 180
+    },
+    "4": {
+      "level": 4,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 240
+    },
+    "5": {
+      "level": 5,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 400
+    },
+    "6": {
+      "level": 6,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 460
+    },
+    "7": {
+      "level": 7,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 520
+    },
+    "8": {
+      "level": 8,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 580
+    },
+    "9": {
+      "level": 9,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 640
+    },
+    "10": {
+      "level": 10,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 10
+        },
+        {
+          "id": 2,
+          "count": 500
+        }
+      ],
+      "attributeParam": 800
+    },
+    "11": {
+      "level": 11,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 860
+    },
+    "12": {
+      "level": 12,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 920
+    },
+    "13": {
+      "level": 13,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 980
+    },
+    "14": {
+      "level": 14,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1140
+    },
+    "15": {
+      "level": 15,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1200
+    },
+    "16": {
+      "level": 16,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1260
+    },
+    "17": {
+      "level": 17,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1320
+    },
+    "18": {
+      "level": 18,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1380
+    },
+    "19": {
+      "level": 19,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1540
+    },
+    "20": {
+      "level": 20,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 15
+        },
+        {
+          "id": 2,
+          "count": 750
+        }
+      ],
+      "attributeParam": 1600
+    },
+    "21": {
+      "level": 21,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 1660
+    },
+    "22": {
+      "level": 22,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 1720
+    },
+    "23": {
+      "level": 23,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 1880
+    },
+    "24": {
+      "level": 24,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 1940
+    },
+    "25": {
+      "level": 25,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 2000
+    },
+    "26": {
+      "level": 26,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 2060
+    },
+    "27": {
+      "level": 27,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 2120
+    },
+    "28": {
+      "level": 28,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 2280
+    },
+    "29": {
+      "level": 29,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 2340
+    },
+    "30": {
+      "level": 30,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 25
+        },
+        {
+          "id": 2,
+          "count": 1250
+        }
+      ],
+      "attributeParam": 2400
+    },
+    "31": {
+      "level": 31,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 2460
+    },
+    "32": {
+      "level": 32,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 2620
+    },
+    "33": {
+      "level": 33,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 2680
+    },
+    "34": {
+      "level": 34,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 2740
+    },
+    "35": {
+      "level": 35,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 2800
+    },
+    "36": {
+      "level": 36,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 2860
+    },
+    "37": {
+      "level": 37,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 3020
+    },
+    "38": {
+      "level": 38,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 3080
+    },
+    "39": {
+      "level": 39,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 3140
+    },
+    "40": {
+      "level": 40,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 35
+        },
+        {
+          "id": 2,
+          "count": 1750
+        }
+      ],
+      "attributeParam": 3200
+    },
+    "41": {
+      "level": 41,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3360
+    },
+    "42": {
+      "level": 42,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3420
+    },
+    "43": {
+      "level": 43,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3480
+    },
+    "44": {
+      "level": 44,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3540
+    },
+    "45": {
+      "level": 45,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3600
+    },
+    "46": {
+      "level": 46,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3760
+    },
+    "47": {
+      "level": 47,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3820
+    },
+    "48": {
+      "level": 48,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3880
+    },
+    "49": {
+      "level": 49,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 3940
+    },
+    "50": {
+      "level": 50,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 50
+        },
+        {
+          "id": 2,
+          "count": 2500
+        }
+      ],
+      "attributeParam": 4100
+    },
+    "51": {
+      "level": 51,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4160
+    },
+    "52": {
+      "level": 52,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4220
+    },
+    "53": {
+      "level": 53,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4280
+    },
+    "54": {
+      "level": 54,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4340
+    },
+    "55": {
+      "level": 55,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4500
+    },
+    "56": {
+      "level": 56,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4560
+    },
+    "57": {
+      "level": 57,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4620
+    },
+    "58": {
+      "level": 58,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4680
+    },
+    "59": {
+      "level": 59,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4840
+    },
+    "60": {
+      "level": 60,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 65
+        },
+        {
+          "id": 2,
+          "count": 3250
+        }
+      ],
+      "attributeParam": 4900
+    },
+    "61": {
+      "level": 61,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 4960
+    },
+    "62": {
+      "level": 62,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5020
+    },
+    "63": {
+      "level": 63,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5080
+    },
+    "64": {
+      "level": 64,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5240
+    },
+    "65": {
+      "level": 65,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5300
+    },
+    "66": {
+      "level": 66,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5360
+    },
+    "67": {
+      "level": 67,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5420
+    },
+    "68": {
+      "level": 68,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5580
+    },
+    "69": {
+      "level": 69,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5640
+    },
+    "70": {
+      "level": 70,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 85
+        },
+        {
+          "id": 2,
+          "count": 4250
+        }
+      ],
+      "attributeParam": 5700
+    },
+    "71": {
+      "level": 71,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 5760
+    },
+    "72": {
+      "level": 72,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 5820
+    },
+    "73": {
+      "level": 73,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 5980
+    },
+    "74": {
+      "level": 74,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6040
+    },
+    "75": {
+      "level": 75,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6100
+    },
+    "76": {
+      "level": 76,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6160
+    },
+    "77": {
+      "level": 77,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6320
+    },
+    "78": {
+      "level": 78,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6380
+    },
+    "79": {
+      "level": 79,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6440
+    },
+    "80": {
+      "level": 80,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 105
+        },
+        {
+          "id": 2,
+          "count": 5250
+        }
+      ],
+      "attributeParam": 6500
+    },
+    "81": {
+      "level": 81,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 6560
+    },
+    "82": {
+      "level": 82,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 6720
+    },
+    "83": {
+      "level": 83,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 6780
+    },
+    "84": {
+      "level": 84,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 6840
+    },
+    "85": {
+      "level": 85,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 6900
+    },
+    "86": {
+      "level": 86,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 7060
+    },
+    "87": {
+      "level": 87,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 7120
+    },
+    "88": {
+      "level": 88,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 7180
+    },
+    "89": {
+      "level": 89,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 7240
+    },
+    "90": {
+      "level": 90,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 130
+        },
+        {
+          "id": 2,
+          "count": 6500
+        }
+      ],
+      "attributeParam": 7300
+    },
+    "91": {
+      "level": 91,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7460
+    },
+    "92": {
+      "level": 92,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7520
+    },
+    "93": {
+      "level": 93,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7580
+    },
+    "94": {
+      "level": 94,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7640
+    },
+    "95": {
+      "level": 95,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7800
+    },
+    "96": {
+      "level": 96,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7860
+    },
+    "97": {
+      "level": 97,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7920
+    },
+    "98": {
+      "level": 98,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 7980
+    },
+    "99": {
+      "level": 99,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 8040
+    },
+    "100": {
+      "level": 100,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 155
+        },
+        {
+          "id": 2,
+          "count": 7750
+        }
+      ],
+      "attributeParam": 8200
+    },
+    "101": {
+      "level": 101,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8260
+    },
+    "102": {
+      "level": 102,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8320
+    },
+    "103": {
+      "level": 103,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8380
+    },
+    "104": {
+      "level": 104,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8540
+    },
+    "105": {
+      "level": 105,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8600
+    },
+    "106": {
+      "level": 106,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8660
+    },
+    "107": {
+      "level": 107,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8720
+    },
+    "108": {
+      "level": 108,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8780
+    },
+    "109": {
+      "level": 109,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 8940
+    },
+    "110": {
+      "level": 110,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 180
+        },
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "attributeParam": 9000
+    },
+    "111": {
+      "level": 111,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9060
+    },
+    "112": {
+      "level": 112,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9120
+    },
+    "113": {
+      "level": 113,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9280
+    },
+    "114": {
+      "level": 114,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9340
+    },
+    "115": {
+      "level": 115,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9400
+    },
+    "116": {
+      "level": 116,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9460
+    },
+    "117": {
+      "level": 117,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9520
+    },
+    "118": {
+      "level": 118,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9680
+    },
+    "119": {
+      "level": 119,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9740
+    },
+    "120": {
+      "level": 120,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 210
+        },
+        {
+          "id": 2,
+          "count": 10500
+        }
+      ],
+      "attributeParam": 9800
+    },
+    "121": {
+      "level": 121,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 9860
+    },
+    "122": {
+      "level": 122,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10020
+    },
+    "123": {
+      "level": 123,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10080
+    },
+    "124": {
+      "level": 124,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10140
+    },
+    "125": {
+      "level": 125,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10200
+    },
+    "126": {
+      "level": 126,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10260
+    },
+    "127": {
+      "level": 127,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10420
+    },
+    "128": {
+      "level": 128,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10480
+    },
+    "129": {
+      "level": 129,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10540
+    },
+    "130": {
+      "level": 130,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 240
+        },
+        {
+          "id": 2,
+          "count": 12000
+        }
+      ],
+      "attributeParam": 10600
+    },
+    "131": {
+      "level": 131,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 10760
+    },
+    "132": {
+      "level": 132,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 10820
+    },
+    "133": {
+      "level": 133,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 10880
+    },
+    "134": {
+      "level": 134,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 10940
+    },
+    "135": {
+      "level": 135,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 11000
+    },
+    "136": {
+      "level": 136,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 11160
+    },
+    "137": {
+      "level": 137,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 11220
+    },
+    "138": {
+      "level": 138,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 11280
+    },
+    "139": {
+      "level": 139,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 11340
+    },
+    "140": {
+      "level": 140,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 270
+        },
+        {
+          "id": 2,
+          "count": 13500
+        }
+      ],
+      "attributeParam": 11500
+    },
+    "141": {
+      "level": 141,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 11560
+    },
+    "142": {
+      "level": 142,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 11620
+    },
+    "143": {
+      "level": 143,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 11680
+    },
+    "144": {
+      "level": 144,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 11740
+    },
+    "145": {
+      "level": 145,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 11900
+    },
+    "146": {
+      "level": 146,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 11960
+    },
+    "147": {
+      "level": 147,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 12020
+    },
+    "148": {
+      "level": 148,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 12080
+    },
+    "149": {
+      "level": 149,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 12240
+    },
+    "150": {
+      "level": 150,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 300
+        },
+        {
+          "id": 2,
+          "count": 15000
+        }
+      ],
+      "attributeParam": 12300
+    },
+    "151": {
+      "level": 151,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12360
+    },
+    "152": {
+      "level": 152,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12420
+    },
+    "153": {
+      "level": 153,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12480
+    },
+    "154": {
+      "level": 154,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12640
+    },
+    "155": {
+      "level": 155,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12700
+    },
+    "156": {
+      "level": 156,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12760
+    },
+    "157": {
+      "level": 157,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12820
+    },
+    "158": {
+      "level": 158,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 12980
+    },
+    "159": {
+      "level": 159,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 13040
+    },
+    "160": {
+      "level": 160,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 330
+        },
+        {
+          "id": 2,
+          "count": 16500
+        }
+      ],
+      "attributeParam": 13100
+    },
+    "161": {
+      "level": 161,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13160
+    },
+    "162": {
+      "level": 162,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13220
+    },
+    "163": {
+      "level": 163,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13380
+    },
+    "164": {
+      "level": 164,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13440
+    },
+    "165": {
+      "level": 165,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13500
+    },
+    "166": {
+      "level": 166,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13560
+    },
+    "167": {
+      "level": 167,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13720
+    },
+    "168": {
+      "level": 168,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13780
+    },
+    "169": {
+      "level": 169,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13840
+    },
+    "170": {
+      "level": 170,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 360
+        },
+        {
+          "id": 2,
+          "count": 18000
+        }
+      ],
+      "attributeParam": 13900
+    },
+    "171": {
+      "level": 171,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 13960
+    },
+    "172": {
+      "level": 172,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14120
+    },
+    "173": {
+      "level": 173,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14180
+    },
+    "174": {
+      "level": 174,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14240
+    },
+    "175": {
+      "level": 175,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14300
+    },
+    "176": {
+      "level": 176,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14460
+    },
+    "177": {
+      "level": 177,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14520
+    },
+    "178": {
+      "level": 178,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14580
+    },
+    "179": {
+      "level": 179,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14640
+    },
+    "180": {
+      "level": 180,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 390
+        },
+        {
+          "id": 2,
+          "count": 19500
+        }
+      ],
+      "attributeParam": 14700
+    },
+    "181": {
+      "level": 181,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 14860
+    },
+    "182": {
+      "level": 182,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 14920
+    },
+    "183": {
+      "level": 183,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 14980
+    },
+    "184": {
+      "level": 184,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15040
+    },
+    "185": {
+      "level": 185,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15200
+    },
+    "186": {
+      "level": 186,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15260
+    },
+    "187": {
+      "level": 187,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15320
+    },
+    "188": {
+      "level": 188,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15380
+    },
+    "189": {
+      "level": 189,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15440
+    },
+    "190": {
+      "level": 190,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 420
+        },
+        {
+          "id": 2,
+          "count": 21000
+        }
+      ],
+      "attributeParam": 15600
+    },
+    "191": {
+      "level": 191,
+      "probability": 10000,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 15660
+    },
+    "192": {
+      "level": 192,
+      "probability": 9286,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 15720
+    },
+    "193": {
+      "level": 193,
+      "probability": 8622,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 15780
+    },
+    "194": {
+      "level": 194,
+      "probability": 8007,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 15940
+    },
+    "195": {
+      "level": 195,
+      "probability": 7435,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 16000
+    },
+    "196": {
+      "level": 196,
+      "probability": 6904,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 16060
+    },
+    "197": {
+      "level": 197,
+      "probability": 6410,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 16120
+    },
+    "198": {
+      "level": 198,
+      "probability": 5953,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 16180
+    },
+    "199": {
+      "level": 199,
+      "probability": 5527,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 16340
+    },
+    "200": {
+      "level": 200,
+      "probability": 5133,
+      "upgradeCost": [
+        {
+          "id": 89,
+          "count": 450
+        },
+        {
+          "id": 2,
+          "count": 22500
+        }
+      ],
+      "attributeParam": 16400
+    }
+  }
+}

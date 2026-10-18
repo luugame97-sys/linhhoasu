@@ -1,0 +1,76 @@
+{
+  "_table": "DungeonBossRewardConfig",
+  "_rows": 1,
+  "_type": "object",
+  "_firstKeys": "1,2,6,11,51",
+  "_sample": [
+    {
+      "1": {
+        "1": {
+          "floor": 1,
+          "rankMin": 1,
+          "rankMax": 1,
+          "rewards": 5
+        },
+        "2": {
+          "floor": 1,
+          "rankMin": 2,
+          "rankMax": 5,
+          "rewards": 4
+        },
+        "6": {
+          "floor": 1,
+          "rankMin": 6,
+          "rankMax": 10,
+          "rewards": 3
+        },
+        "11": {
+          "floor": 1,
+          "rankMin": 11,
+          "rankMax": 50,
+          "rewards": 2
+        },
+        "51": {
+          "floor": 1,
+          "rankMin": 51,
+          "rankMax": 9999,
+          "rewards": 1
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "1": {
+        "floor": 1,
+        "rankMin": 1,
+        "rankMax": 1,
+        "rewards": 5
+      },
+      "2": {
+        "floor": 1,
+        "rankMin": 2,
+        "rankMax": 5,
+        "rewards": 4
+      },
+      "6": {
+        "floor": 1,
+        "rankMin": 6,
+        "rankMax": 10,
+        "rewards": 3
+      },
+      "11": {
+        "floor": 1,
+        "rankMin": 11,
+        "rankMax": 50,
+        "rewards": 2
+      },
+      "51": {
+        "floor": 1,
+        "rankMin": 51,
+        "rankMax": 9999,
+        "rewards": 1
+      }
+    }
+  }
+}

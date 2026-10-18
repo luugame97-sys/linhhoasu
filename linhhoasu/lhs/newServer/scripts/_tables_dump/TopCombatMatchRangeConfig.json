@@ -1,0 +1,82 @@
+{
+  "_table": "TopCombatMatchRangeConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,rankMin,rankMax,rankGap",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rankMin": 1,
+        "rankMax": 40,
+        "rankGap": 10
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rankMin": 40,
+        "rankMax": 100,
+        "rankGap": 15
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rankMin": 100,
+        "rankMax": 250,
+        "rankGap": 50
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rankMin": 1,
+      "rankMax": 40,
+      "rankGap": 10
+    },
+    "2": {
+      "id": 2,
+      "rankMin": 40,
+      "rankMax": 100,
+      "rankGap": 15
+    },
+    "3": {
+      "id": 3,
+      "rankMin": 100,
+      "rankMax": 250,
+      "rankGap": 50
+    },
+    "4": {
+      "id": 4,
+      "rankMin": 250,
+      "rankMax": 500,
+      "rankGap": 80
+    },
+    "5": {
+      "id": 5,
+      "rankMin": 500,
+      "rankMax": 1000,
+      "rankGap": 150
+    },
+    "6": {
+      "id": 6,
+      "rankMin": 1000,
+      "rankMax": 2000,
+      "rankGap": 250
+    },
+    "7": {
+      "id": 7,
+      "rankMin": 2000,
+      "rankMax": 5000,
+      "rankGap": 350
+    },
+    "8": {
+      "id": 8,
+      "rankMin": 5000,
+      "rankMax": 9999,
+      "rankGap": 600
+    }
+  }
+}

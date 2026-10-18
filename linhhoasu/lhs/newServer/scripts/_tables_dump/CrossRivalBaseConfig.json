@@ -1,0 +1,157 @@
+{
+  "_table": "CrossRivalBaseConfig",
+  "_rows": 31,
+  "_type": "object",
+  "_firstKeys": "(obj)[baseStayTime|extraStayTime|extraStayTrigger|branchLineCrowdNum|campRankPeopleNum]",
+  "_sample": [
+    {
+      "baseStayTime": 600
+    },
+    {
+      "extraStayTime": 300
+    },
+    {
+      "extraStayTrigger": 3
+    }
+  ],
+  "data": {
+    "baseStayTime": 600,
+    "extraStayTime": 300,
+    "extraStayTrigger": 3,
+    "branchLineCrowdNum": 50,
+    "campRankPeopleNum": 200,
+    "rivalCosts": {
+      "id": 310,
+      "count": 1
+    },
+    "reviveCost": {
+      "id": 1,
+      "count": 50
+    },
+    "reviveTransmitCost": {
+      "id": 1,
+      "count": 100
+    },
+    "reviveTime": 15,
+    "invincibleTime": [
+      20,
+      20,
+      20,
+      15,
+      15,
+      10,
+      10,
+      5
+    ],
+    "transmitCd": 10,
+    "initialSpeed": 2000,
+    "interactiveDistance": 500,
+    "claimDistance": 720,
+    "autoCloseBattle": 30,
+    "coreDefenderNum": 6,
+    "coreDefenderReduce": 1500,
+    "coreDefenderPosition": [
+      {
+        "x": 0,
+        "y": -200
+      },
+      {
+        "x": 173,
+        "y": -100
+      },
+      {
+        "x": 173,
+        "y": 100
+      },
+      {
+        "x": 0,
+        "y": 200
+      },
+      {
+        "x": -173,
+        "y": 100
+      },
+      {
+        "x": -173,
+        "y": -100
+      }
+    ],
+    "initialCoreBlood": 50000,
+    "initialCoreScore": 6000,
+    "defendKillNum": 10,
+    "defendKillRewards": {
+      "id": 101310,
+      "count": 1
+    },
+    "presentEffectAtt": [
+      [
+        5,
+        201,
+        1
+      ],
+      [
+        10,
+        202,
+        2
+      ],
+      [
+        15,
+        203,
+        3
+      ]
+    ],
+    "presentEffectDef": [
+      [
+        5,
+        211,
+        1
+      ],
+      [
+        10,
+        212,
+        2
+      ],
+      [
+        15,
+        213,
+        3
+      ]
+    ],
+    "initialFlagBlood": 200000,
+    "flagRobRate": 5000,
+    "flagBonus": 1000,
+    "headScale": [
+      [
+        5000,
+        0.8
+      ],
+      [
+        12000,
+        1
+      ],
+      [
+        18000,
+        1.2
+      ],
+      [
+        25000,
+        1.5
+      ],
+      [
+        990000,
+        2
+      ]
+    ],
+    "campName": [
+      30030520,
+      30030521,
+      30030522,
+      30030523
+    ],
+    "mapCenter": {
+      "x": 3775,
+      "y": 3775
+    },
+    "moveRadius": 2900
+  }
+}

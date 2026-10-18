@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Câu cá và lịch sự kiện - Bản phát hành 06/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ho-n-thi-n-c-u-c-v-m-l-ch-s-ki-n-06-09-2026">Hoàn thiện câu cá và mở lịch sự kiện — 06/09/2026</h1>
+<p><strong>Đã phát hành trên S2 rồi S1. Bản gộp lên lúc 19:00–19:01; guard hồ sơ thiếu dữ liệu lên lúc 19:12 UTC+7. Hậu kiểm hash, runtime và log sau phát hành đạt.</strong> Đây là bảng cân bằng riêng được chủ dự án đồng ý, không phải phục hồi tỷ lệ RNG chính thức bản Trung. Không đền bù, không reset/reroll vật phẩm hoặc tiến độ lịch sử của người chơi.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="1-1-c-u-th-ng-linh-h-n-v-hi-u-ng-v-t-ph-m">1.1 Câu thường, linh hồn và hiệu ứng vật phẩm</h3>
+<ul>
+<li>Thêm bộ sinh kết quả câu thường/linh hồn phía server: hụt, thoát, cá thường/biến dị, trọng lượng, di vật, kho báu và cá đặc biệt. Pool di vật bám ngư trường; mảnh type104 vào túi và bộ sưu tập.</li>
+<li>Áp dụng hiệu ứng mồi tập trung/sức mạnh/đúng loài/đúng cá/phẩm chất, mồi cao cấp, hiệu suất cần/bè và các passive đã mô tả trong cấu hình. Mồi 5542/5543 bảo đảm phẩm chất ít nhất 7/9, tỷ lệ biến dị 50%; giữ kỷ lục trọng lượng liên quan. 5542 còn không hạ phẩm chất so với cá đang trang bị cùng loại.</li>
+<li>Chu Tước 5905: 10% cá đôi, mỗi cá có UID riêng và cờ <code>isDouble</code> do server cấp. Bạch Hổ 5906: 10% nhân đôi quà đơn hàng. Thanh Long 5907: nhân đôi tỷ lệ biến dị nền. Hiệu lực theo sở hữu đối với các passive này.</li>
+<li>Cần vàng 5904: thêm 10% Ngư Tệ vào sổ <code>extraPrice</code>, giữ phần lẻ; nhận bằng luồng 4022 gốc. Auto đồng bộ số bonus. Không cộng thẳng lần thứ hai vào túi.</li>
+<li>Cá đặc biệt 542x–545x, thưởng bán từ cần/bè, cơ hội mồi thêm từ bè 6203 được xử lý server-side. Bè 6209 tăng 5% tốc độ và trần hồi thể lực: chu kỳ 300 giây / 1,05; trần 168 thay vì 160. Không cấp hồi tố khi mới có mốc hồi.</li>
+<li>Câu, xử lý cá và thao tác sự kiện dùng requestId/revision, lưu xác nhận trước khi trả thành công; chống gửi lại sinh cá hoặc trừ vật phẩm lần nữa. Câu hụt có kết quả rỗng hợp lệ và chi phí được lưu một lần. Cooldown nền câu thường 1.200 ms, linh hồn 1.500 ms; linh hồn tiêu 3 thể lực/lượt.</li>
+</ul>
+<h3 id="1-2-b-ng-t-l-ri-ng-p-d-ng">1.2 Bảng tỷ lệ riêng đã áp dụng</h3>
+<p>Nguồn chỉnh cân bằng: <code>linhhoasu/lhs/newServer/src/config/fishingGameplayBalance.json</code>, phiên bản <code>custom-fishing-20260906-v1</code>.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Cơ chế</th>
+<th>Giá trị nền</th>
+<th>Điều kiện và cách hiểu</th>
+</tr></thead><tbody>
+<tr>
+<td>Câu thường hụt / thoát</td>
+<td>4% / 2%</td>
+<td>Giảm theo hiệu ứng mồi tương ứng; mồi cao cấp đi nhánh bảo đảm cá</td>
+</tr>
+<tr>
+<td>Di vật</td>
+<td>2%</td>
+<td>Cùng khoảng chia kết quả với hụt/thoát; chỉ khi map có pool; thuộc tính di vật có thể tăng</td>
+</tr>
+<tr>
+<td>Kho báu</td>
+<td>1%</td>
+<td>Roll có điều kiện sau khi không rơi vào hụt/thoát/di vật, không phải 1% tuyệt đối mọi lượt</td>
+</tr>
+<tr>
+<td>Biến dị thường</td>
+<td>5%</td>
+<td>Trên pool có biến dị; áp dụng bonus Thanh Long/mồi; mồi 5542/5543 là 50%</td>
+</tr>
+<tr>
+<td>Cá lớn</td>
+<td>10%</td>
+<td>Cộng hiệu ứng mồi; multi thường 10.000–11.999, lớn 12.000–20.000</td>
+</tr>
+<tr>
+<td>Linh hồn hụt / thoát / biến dị</td>
+<td>7% / 3% / 3%</td>
+<td>Cá được chọn ngẫu nhiên theo cấp mở và phẩm chất, không duyệt tuần tự danh mục</td>
+</tr>
+<tr>
+<td>Hộp linh hồn</td>
+<td>3%</td>
+<td>Roll sau lượt thành công; chỉ phát 94821/94822 tương ứng hai skin đã đủ tài nguyên</td>
+</tr>
+<tr>
+<td>Vé mini-game / Ngư Vương</td>
+<td>5% / 2%</td>
+<td>Chỉ tại map của sự kiện đang chạy; không phát vé sự kiện khi câu map thường</td>
+</tr>
+<tr>
+<td>Chai 214 / lưới 215</td>
+<td>5% / 2%</td>
+<td>Hai khoảng rơi riêng khi sự kiện chai trôi đang chạy đúng map</td>
+</tr>
+</tbody></table></div>
+<p>Trọng số phẩm chất thường 2/3/4/6/7/9: <code>4000/3000/1800/800/350/50</code>; linh hồn 2/3/4/6/7: <code>4200/3000/1700/900/200</code>. Đây là trọng số trong tập đủ điều kiện, không phải tỷ lệ tuyệt đối trên mọi lượt câu. Di vật bán 50 Ngư Tệ là giá cân bằng riêng. Các tỷ lệ đã quảng bá sẵn như Chu Tước/Bạch Hổ 10%, Thanh Long x2, mồi cao cấp 50% được giữ nguyên.</p>
+<h3 id="1-3-s-ki-n-qu-v-l-ch-n-i-ti-p">1.3 Sự kiện, quà và lịch nối tiếp</h3>
+<ul>
+<li>Mỗi thời điểm chỉ một sự kiện type33; instance có khóa <code>F{id}_{startTimestamp}</code>. Không mở thêm các bản sao vùng hoặc 14 ID thiếu metadata thành sự kiện mới.</li>
+<li>Cửa sổ 90 ngày: <strong>19:00 06/09/2026 đến trước 19:00 05/12/2026, UTC+7</strong>. Mỗi kỳ 7 ngày; kỳ cuối có 6 ngày để khớp thời hạn. Hết cửa sổ thì ngừng mở kỳ mới, không tự gia hạn.</li>
+<li>Đại hội câu cá 6006 chạy cùng kỳ, yêu cầu cấp nhân vật 55. Nếu có Đại hội type6 khác đang hoạt động, giữ quyền hiển thị của sự kiện đó, không chiếm đầu vào của nó. Ngư trường sự kiện vẫn cần mở hệ thống câu cá 215.</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>Kỳ</th>
+<th>ID</th>
+<th>Nội dung</th>
+<th>Bắt đầu → kết thúc, đều 19:00 UTC+7</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>33001</td>
+<td>Ngư trường xoáy 1</td>
+<td>06/09 → 13/09</td>
+</tr>
+<tr>
+<td>2</td>
+<td>33002</td>
+<td>Ngư trường xoáy 2</td>
+<td>13/09 → 20/09</td>
+</tr>
+<tr>
+<td>3</td>
+<td>33201</td>
+<td>Ngư Vương — Bờ tuyết băng giá</td>
+<td>20/09 → 27/09</td>
+</tr>
+<tr>
+<td>4</td>
+<td>33202</td>
+<td>Ngư Vương — Anh Mộc Hoa Đảo</td>
+<td>27/09 → 04/10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>33203</td>
+<td>Ngư Vương — Bích Hải Tinh Than</td>
+<td>04/10 → 11/10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>33204</td>
+<td>Ngư Vương — Bên dòng sông Lưu Xuyên</td>
+<td>11/10 → 18/10</td>
+</tr>
+<tr>
+<td>7</td>
+<td>33301</td>
+<td>Chai trôi — Bích Hải Tinh Than</td>
+<td>18/10 → 25/10</td>
+</tr>
+<tr>
+<td>8</td>
+<td>33302</td>
+<td>Chai trôi — Bên dòng sông Lưu Xuyên</td>
+<td>25/10 → 01/11</td>
+</tr>
+<tr>
+<td>9</td>
+<td>33303</td>
+<td>Chai trôi — Bờ tuyết băng giá</td>
+<td>01/11 → 08/11</td>
+</tr>
+<tr>
+<td>10</td>
+<td>33304</td>
+<td>Chai trôi — Anh Mộc Hoa Đảo</td>
+<td>08/11 → 15/11</td>
+</tr>
+<tr>
+<td>11</td>
+<td>33001</td>
+<td>Lặp vòng: ngư trường xoáy 1</td>
+<td>15/11 → 22/11</td>
+</tr>
+<tr>
+<td>12</td>
+<td>33002</td>
+<td>Lặp vòng: ngư trường xoáy 2</td>
+<td>22/11 → 29/11</td>
+</tr>
+<tr>
+<td>13</td>
+<td>33201</td>
+<td>Lặp vòng: Ngư Vương băng giá</td>
+<td>29/11 → 05/12</td>
+</tr>
+</tbody></table></div>
+<p>Mở rương/tìm vật dùng vé và bảng quà <code>Activity33RewardConfig</code>. Đánh cá lớn dùng mức sát thương trong config nhưng kết quả do server roll theo bảng riêng, chờ ACK mới chạy kết quả client; không tin sát thương/con trỏ do client khai. Sát thương tích lũy, tiêu vé khi kết thúc một ván. Đại hội có 8 nhiệm vụ 60601–60608, 4 vòng, mỗi vòng 3.000 lượt; ghi sổ nhận riêng và chặn nhận lặp qua cả đường RPC tương thích.</p>
+<p>BXH dùng điểm người chơi thật cùng server, loại bot; top100 và tính thứ hạng cá nhân ngoài top100, phá hòa bằng playerId. Chốt thưởng sau khi kỳ kết thúc ít nhất 60 giây, cấp vào lần đăng nhập/heartbeat kế tiếp và đánh dấu đã cấp cùng lần lưu. <strong>Không có cam kết gửi thư ngay cho toàn bộ người offline.</strong></p>
+<p>Chai trôi dùng Mongo chung theo instance, giữ chỗ nguyên tử và outbox bền vững; không tự vớt chai của mình. Mỗi chai một lượt trả lời/khen từ người giữ; giới hạn 3 khen/ngày và 10 thả/ngày. Dùng lưới 215 vẫn có thể vớt rỗng; đây là kết quả được xử lý riêng. Quà trả chai theo config 216, chống nhận lại. Các giới hạn ngày giữ chuẩn GMT+8 đang dùng của game, không tự đổi múi giờ reset toàn hệ.</p>
+<p>Danh mục gói cần/bè được nối vào native trong cửa sổ sự kiện, giữ giá, thời hạn thẻ và purchase limit. Huyền Vũ là thẻ đặc quyền, không phải một sự kiện type33 độc lập; bản sửa quà ngày trước đây được giữ. Điều kiện ngày 43/57 của một số cần/gói vẫn giữ; không đồng nghĩa đã bỏ mọi điều kiện ngày của mọi vật phẩm.</p>
+<h3 id="1-4-thi-n-c-ng-v-b-c-c-4-ng-i">1.4 Thiên Công và bố cục 4 người</h3>
+<ul>
+<li>Hỗ trợ skin 190051/190052: đổi 100 mảnh 190001/190002 qua shop 13190051/13190052, kiểm sở hữu khi đổi skin 6751. Không tiêu lại khi đã sở hữu. Mỗi skin đủ điều kiện thêm 10% thuộc tính kiến trúc, hai skin là 20%; không phải cộng thẳng 20% toàn bộ lực chiến.</li>
+<li><strong>190053–190055 chưa mở</strong> vì thiếu mapping/config/asset native. Không tự dựng ba skin này và không tiêu mảnh để đổi thành item không dùng được.</li>
+<li>Thu gọn actor trong cảnh câu cá còn 0,76; thời trang lớn fit tối đa 300×300 sau tải. Không thay kích thước nhân vật ở toàn bộ game, quyền sở hữu hoặc chỉ số. Tái sử dụng slot hiệu ứng dây câu khi một lượt Chu Tước tạo nhiều cá.</li>
+<li>Render bằng chính Egret/Spine, FishEntity, bè và skin game: bốn bè 6207–6210, cần 5905–5908, bộ 28010/28020/28030/28040. Ba viewport 360×640, 390×844, 768×1024 đều ready và không báo lỗi runtime. Bộ lớn thứ tư được fit còn 0,6 trong actor 0,76; bốn chỗ tách biệt ở các khung đã chụp.</li>
+<li>Đây là kiểm thử màn hình mô phỏng có runtime/asset native thật, <strong>không phải nghiệm thu trên thiết bị vật lý</strong>, không phủ mọi bộ đồ, mọi frame chuyển động, đầy đủ UI sản phẩm hay tất cả GPU.</li>
+</ul>
+<p>Ảnh kiểm chứng: <a href="../temp/fishing_full_candidate_20260906/four-players-android-small.png">điện thoại nhỏ</a>, <a href="../temp/fishing_full_candidate_20260906/four-players-iphone-tall.png">điện thoại dài</a>, <a href="../temp/fishing_full_candidate_20260906/four-players-tablet.png">tablet</a>.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-20-file-server-v-2-file-client">Source chính: 20 file server và 2 file client</h3>
+<p>Gốc server local: <code>linhhoasu/lhs/newServer/</code>; production: <code>/linhhoasu/lhs/newServer/</code>.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>File</th>
+</tr></thead><tbody>
+<tr>
+<td>Thêm config/model</td>
+<td><code>src/config/fishingGameplayBalance.json</code>, <code>src/db/models/FishingBottle.js</code></td>
+</tr>
+<tr>
+<td>Thêm service</td>
+<td><code>FishingGameplayService.js</code>, <code>FishingEventSchedule.js</code>, <code>FishingEventService.js</code>, <code>FishingEventGateService.js</code>, <code>FishingKnownEffectsService.js</code>, <code>HomelandSkinUnlockService.js</code> trong <code>src/services/</code></td>
+</tr>
+<tr>
+<td>Sửa handler</td>
+<td><code>account.js</code>, <code>activity.js</code>, <code>basic.js</code>, <code>fish-soul.js</code>, <code>fish.js</code>, <code>homeland.js</code>, <code>item.js</code>, <code>playerPayload.js</code>, <code>task.js</code> trong <code>src/handlers/</code></td>
+</tr>
+<tr>
+<td>Sửa service cũ</td>
+<td><code>src/services/BattleService.js</code>, <code>FishingAutoService.js</code>, <code>FishingIntegrityService.js</code></td>
+</tr>
+<tr>
+<td>Client native/cache</td>
+<td><code>linhhoasu/webgame/game/js/main.min_a6195824.js</code>, <code>linhhoasu/webgame/game/index.html</code>; token <code>20260906_fishing_full_v1</code></td>
+</tr>
+</tbody></table></div>
+<p>Guard bổ sung chỉ sửa cách đọc state trong <code>FishingEventSchedule.taskRows</code>, không thay config hoặc bundle client. Manifest đầy đủ đường dẫn và hash nằm ở <a href="../temp/fishing_full_candidate_20260906/changed-files.json">changed-files.json</a>.</p>
+<h3 id="tool-artifact-v-backup">Tool, artifact và backup</h3>
+<ul>
+<li>Tạo/cập nhật tool dưới <code>_ai_workbench/tools/</code>: <code>test_fishing_gameplay_events_20260906.js</code>, <code>test_fishing_mongo_integration_20260906.js</code>, <code>build_fishing_gameplay_client_20260906.js</code>, nhóm <code>prepare/probe_fishing_visual_runtime/assets_20260906</code>, fixture <code>fishing_visual_runtime_20260906.html</code>, <code>fishing_legacy_regression_adapter_20260906.js</code>, <code>stage_fishing_full_20260906.py</code>, <code>deploy_fishing_full_20260906.py</code>, <code>qa_fishing_full_live_20260906.js</code>, <code>sync_fishing_full_local_20260906.py</code>, <code>sync_fishing_full_client_20260906.js</code>.</li>
+<li>Tool cuối phiên: <code>finalize_fishing_full_20260906.js</code>, <code>verify_fishing_full_residue_20260906.py</code>, <code>test_fishing_event_payload_guard_20260906.js</code>, <code>release_fishing_payload_guard_20260906.py</code>. Dùng lại <code>render_session_report.py</code> để sinh đầy đủ bản HTML.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_full_candidate_20260906/</code>. Baseline bất biến: <code>temp/fishing_events_audit_20260906T093353Z/</code>.</li>
+<li>Staging VPS: <code>/linhhoasu/_ai_workbench/temp/fishing_full_20260906_115713</code>, guard trong <code>payload-guard/</code>.</li>
+<li>Backup VPS: <code>/linhhoasu/_ai_workbench/backups/fishing_full_20260906_115713</code>, guard trong <code>payload-guard/</code>. Bản trước khi phát hành và trước khi sửa guard đều còn.</li>
+<li>Backup local: <code>_ai_workbench/backups/fishing_full_release_local_20260906/</code>, <code>fishing_full_release_reports_20260906/</code>, <code>fishing_payload_guard_20260906/</code>.</li>
+<li>Báo cáo chuyên đề MD/HTML này, <code>session_report.md/.html</code>, <code>checkpoint.json</code>, manifest và evidence kiểm thử. Không tạo file hỗ trợ ngoài root, không sửa global memory hoặc các bản tham chiếu.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi / dấu hiệu</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Câu không có hụt, linh hồn duyệt tuần tự, hiệu ứng chỉ ở mô tả</td>
+<td>Thiếu bộ sinh xác suất nền và đọc hiệu ứng</td>
+<td>Tách bảng riêng có provenance, RNG server, pool/gate đúng map/cấp</td>
+<td>Boundary, mô phỏng lớn, đối chiếu tỷ lệ quảng bá</td>
+</tr>
+<tr>
+<td>Bonus vàng thiếu hoặc nguy cơ cộng hai lần</td>
+<td>Luồng bán chưa dùng sổ thưởng 4022</td>
+<td>extraPrice + phần lẻ, đồng bộ auto, claim một lần</td>
+<td>Bán tách/gộp/relog/replay</td>
+</tr>
+<tr>
+<td>Mini-game thành công nhưng quà rỗng, event tự mở từ RPC</td>
+<td>Stub handler và tự seed thời hạn</td>
+<td>Lịch instance cố định, gate, vé/quà/lưu xác nhận</td>
+<td>Inactive RPC phải từ chối; thay kỳ không trùng</td>
+</tr>
+<tr>
+<td>BXH chỉ có bản thân, chai riêng từng người</td>
+<td>Không có truy vấn điểm/kho chai chung</td>
+<td>Mongo rank và bottle atomic/outbox</td>
+<td>Hai người thực, save lỗi/commit-timeout/retry</td>
+</tr>
+<tr>
+<td>Nhiệm vụ nhận lặp, mất quà khi đổi vòng</td>
+<td>Counter/claim chung chưa theo kỳ</td>
+<td>Ledger 8 nhiệm vụ, 4 vòng, chốt thưởng một lần</td>
+<td>Test đủ 4 vòng và đường RPC tương thích</td>
+</tr>
+<tr>
+<td>Thiên Công đổi ID không sở hữu/không có renderer</td>
+<td>Tin client; không kiểm config/map</td>
+<td>Chỉ hai skin đủ điều kiện, guard sở hữu và buff kiến trúc</td>
+<td>Không suy có item là có native skin</td>
+</tr>
+<tr>
+<td>Thời trang lớn đè vùng câu người khác</td>
+<td>Actor/Spine vượt vùng ghế</td>
+<td>Scale tại cảnh câu, fit role sau load</td>
+<td>Render native 4 người trên ba viewport, còn kiểm máy thật</td>
+</tr>
+<tr>
+<td>Core lỗi <code>reading eventStats</code> sau 19:00</td>
+<td><code>taskRows</code> giả định fishInfo đã khởi tạo; trước giờ mở đi nhánh return nên chưa lộ</td>
+<td>Optional access cho fishInfo/eventStats, trả danh sách rỗng không sửa hồ sơ</td>
+<td>6 test thiếu/null/state rỗng và trước/sau mốc lịch; chạy core lúc event active</td>
+</tr>
+<tr>
+<td>Hash local khác candidate nhưng logic giống</td>
+<td>CRLF/LF trộn ở homeland.js và index.html</td>
+<td>So byte và bản chuẩn hóa newline; giữ file local, không copy đè</td>
+<td>Lưu cả hai hash, không báo khác hash là khác logic</td>
+</tr>
+<tr>
+<td>Fixture cũ lỗi revision/alias sau clone-save</td>
+<td>Đổi contract request và thay đối tượng session.player</td>
+<td>Adapter riêng chỉ cho suite cost/storage, đọc state sau commit</td>
+<td>Không dùng adapter để chứng minh RNG mới</td>
+</tr>
+<tr>
+<td>Visual fixture lỗi atlas/lang ở lần đầu</td>
+<td>Asset nén và schema ngôn ngữ không như giả định</td>
+<td>Giải theo định dạng thực, nạp runtime/assets native</td>
+<td>Không thay bằng UI HTML giả hoặc đo screenshot trống</td>
+</tr>
+<tr>
+<td>Lệnh công cụ tìm path/tính lịch sai cú pháp</td>
+<td>Đoán đường dẫn hoặc lỗi one-liner</td>
+<td>Dò đường dẫn thực, chạy lại lệnh đọc với output giới hạn</td>
+<td>Không dùng lỗi tool làm kết luận gameplay</td>
+</tr>
+</tbody></table></div>
+<p>Không có mojibake mới trong các phần thêm; source/report UTF-8. Cảnh báo Mongoose <code>isNew</code> của schema cũ được ghi nhận, không đổi model ngoài phạm vi để giấu warning. Việc đồng bộ newline không phải sửa mã hóa tiếng Việt.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Test trước giờ mở sự kiện không chứng minh nhánh sau giờ mở an toàn. Cần kiểm cả payload thiếu state, ranh giới lịch và relog.</li>
+<li>Tách tỷ lệ nền tự thiết kế với tỷ lệ quảng bá có nguồn; xác suất có điều kiện không được trình bày như tỷ lệ tuyệt đối.</li>
+<li>Cần/bè có thể là gói/entitlement, không phải mỗi món là một sự kiện riêng. Một selector native chỉ chọn một type thì phải lịch nối tiếp.</li>
+<li>Lưu vật phẩm và receipt trước phản hồi; tác động sang collection chai dùng outbox idempotent, không phát thưởng lại khi mất ACK.</li>
+<li>Bộ regression cost/storage có adapter không kiểm chứng phân phối RNG. Kiểm RNG bằng generator thực và mô phỏng riêng; kiểm Mongo bằng DB QA thật.</li>
+<li>Sprite/Spine native render trên viewport emulation hữu ích cho bounds, nhưng không thay nghiệm thu GPU/thiết bị thật hoặc mọi bộ thời trang.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="5-1-ki-m-th">5.1 Kiểm thử</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Bộ kiểm</th>
+<th>Kết quả</th>
+<th>Giới hạn</th>
+</tr></thead><tbody>
+<tr>
+<td>Staging bản gộp</td>
+<td>217 nhóm PASS = 30 gameplay/event + 34 known + 21 auto + 38 gear + 70 balance + 24 daily</td>
+<td>Gear/balance dùng adapter cho contract cũ; không dùng chúng để xác nhận RNG</td>
+</tr>
+<tr>
+<td>Guard payload bổ sung</td>
+<td>6 ca mới PASS; chạy lại 30 nhóm gameplay/event và core trên Linux</td>
+<td>Tổng 223 nhóm phân biệt của đợt; không cộng lại 30 ca rerun thành ca mới</td>
+</tr>
+<tr>
+<td>Core contract cuối phiên</td>
+<td>PASS local và Linux, đọc 714 bảng</td>
+<td>714 là số bảng, không phải 714 ca test; hạ tầng của core được stub</td>
+</tr>
+<tr>
+<td>Đồng bộ local</td>
+<td>22/22 tương đương nội dung chuẩn hóa, 20/22 khớp byte; 20 file JS qua <code>node --check</code></td>
+<td>Hai lệch newline: homeland.js/index.html; main khớp byte</td>
+</tr>
+<tr>
+<td>Mongo integration thật</td>
+<td>PASS trên DB riêng <code>lhs_qa_fishing_5f842f10e504</code></td>
+<td>Catch/relog, chai hai người/outbox, rank/settlement; cleanup player/bottle đều 0, không drop database</td>
+</tr>
+<tr>
+<td>Live QA S2/S1</td>
+<td>PASS cả bản gộp và sau guard: premium, replay, auto, unlock/đổi skin/relog, linh hồn, vé mini-game/quà lặp</td>
+<td>Chỉ nhân vật QA riêng; không test mua trả tiền mới hoặc mọi kỳ event bằng client native</td>
+</tr>
+<tr>
+<td>Native render</td>
+<td>Ba viewport, bốn bè/bộ đồ, ready=true, errors=[]</td>
+<td>Không phải máy thật; chưa mọi frame/bộ đồ/UI</td>
+</tr>
+</tbody></table></div>
+<p>Evidence chính: <a href="../temp/fishing_full_candidate_20260906/stage-full.json">stage-full.json</a>, <a href="../temp/fishing_full_candidate_20260906/stage-payload-guard.json">stage-payload-guard.json</a>, <a href="../temp/fishing_full_candidate_20260906/deploy-full.json">deploy-full.json</a>, <a href="../temp/fishing_full_candidate_20260906/deploy-payload-guard.json">deploy-payload-guard.json</a>, <a href="../temp/fishing_full_candidate_20260906/local-final-checks.json">local-final-checks.json</a>, <a href="../temp/fishing_full_candidate_20260906/visual-runtime-probe.json">visual-runtime-probe.json</a>.</p>
+<h3 id="5-2-h-u-ki-m-production">5.2 Hậu kiểm production</h3>
+<ul>
+<li>19:12:52 UTC+7: <strong>163 artifact khớp expected</strong>, HTTP ready 8080/8083 đều 200; main/index đang được HTTP phục vụ đúng hash.</li>
+<li>S1: PID 13770, restart 1380. S2: PID 13681, restart 48. Mỗi server tăng hai restart trong đợt: bản gộp và guard; không giấu lần restart bổ sung.</li>
+<li>Bốn tiến trình khác giữ nguyên: dist PID 30824, admin 30856, bot S1 1600, bot S2 1576. Không restart Mongo/Nginx hay tác động dịch vụ khác.</li>
+<li>QA prefix <code>qafull_</code>: player/mail/bottle đều 0 ở hai DB. 19:12:55: Redis session QA 0 và process harness 0. Không xóa rank diện rộng; QA đặt arena/tower score bằng 0, playerId ngẫu nhiên nên kiểm prefix không chứng minh rank cleanup.</li>
+<li>Kiểm log bổ sung lúc 19:55:52 UTC+7: đọc tối đa 256 KiB cuối mỗi log PM2 của S1/S2; phần có timestamp sau guard có 1.917/1.820 dòng stdout, 0 dòng lỗi và 0 lỗi eventStats. Stderr không có dòng timestamp mới trong mẫu đọc; đây là kiểm mẫu đuôi log, không chứng minh toàn bộ lịch sử sạch lỗi. Redis QA/process harness vẫn 0.</li>
+<li>Tại thời điểm chụp có 8 profile S1, 3 profile S2 được gán event33001; không suy rằng tất cả người online đã thấy cửa vào native.</li>
+<li>Hậu kiểm xác nhận lại lúc 19:57:09 UTC+7: 163 hash/HTTP main/index vẫn đúng, PID/restart không đổi, ready 2/2 đạt, QA player/mail/bottle vẫn 0. Số profile có event33001 là 13/7 ở S1/S2; đây vẫn chỉ là thống kê dữ liệu, không thay nghiệm thu UI.</li>
+<li>Không có bù hoặc reset dữ liệu người thật. Chỉ QA do phiên tạo đã được dọn; backup source còn phục hồi được. Không chạy lại harness phòng cũ đã WITHDRAWN. Lỗi input-freeze đang pause không bị sửa.</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>Artifact</th>
+<th>SHA-256</th>
+</tr></thead><tbody>
+<tr>
+<td>Main được phục vụ</td>
+<td><code>1bf3dee62af6eb3cf1059c3b9bb6d63475c8380d83d27c7a5ac8940e047d38b6</code></td>
+</tr>
+<tr>
+<td>Index được phục vụ</td>
+<td><code>a718167070f38479b6c70c70677da8188bea522293490765e1fa80eec9a337fd</code></td>
+</tr>
+<tr>
+<td>FishingEventSchedule sau guard</td>
+<td><code>56489f8c255aeb05959541655fa7f85b278c869c568adc999da4a2bedc02b467</code></td>
+</tr>
+</tbody></table></div>
+<h3 id="5-3-ch-a-nghi-m-thu-ho-c-ch-ng-gi-l-i">5.3 Chưa nghiệm thu hoặc chủ động giữ lại</h3>
+<p>Ba skin 190053–190055 thiếu tài nguyên vẫn khóa; toàn bộ 10 kỳ chưa được chơi E2E trên production (ranh giới/gate đã test). Chưa có nghiệm thu thiết bị vật lý, mọi skin/animation, luồng trả tiền mới hoặc mail tức thời cho người offline. Giữ gate ngày của gói/cần riêng. Không tuyên bố toàn hệ câu cá hoặc toàn game hết lỗi 100%.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Reload game một lần để nhận bundle mới; kiểm ngư trường xoáy đang mở, Đại hội nếu đủ cấp và không xung đột type6, phần bonus vàng nhận riêng, bốn người cùng phòng và khung auto.</li>
+<li>Nghiệm thu trên điện thoại/tablet thật với bộ đồ người chơi đang dùng; nếu còn che nhau cần ảnh và tên/ID bộ đồ để chỉnh đúng asset, không scale toàn game.</li>
+<li>Ba skin Thiên Công còn lại chỉ triển khai khi có mapping/config/assets gốc phù hợp hoặc quyết định thiết kế riêng; giữ nguyên mảnh hiện có.</li>
+<li>Khi muốn gia hạn sau 05/12/2026 hoặc thay cân bằng, sửa file bảng riêng và kiểm lại lịch/receipt; không reset instance hay cấp lại quà cũ. Không tạo automation nền theo dõi khi người dùng chưa yêu cầu.</li>
+</ol>
+<p>Trạng thái tiếp tục nằm trong <a href="../temp/fishing_full_candidate_20260906/checkpoint.json">checkpoint.json</a>. Không chạy lại bước <code>deploy</code> của bản gộp trên baseline cũ; hậu kiểm dùng <code>deploy_fishing_full_20260906.py verify</code> với expected sau guard.</p></main></body></html>

@@ -1,0 +1,83 @@
+{
+  "_table": "GuildBattleConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "(obj)[openDay|serverDay|attackCount|playerCount|seasonCycle]",
+  "_sample": [
+    {
+      "openDay": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "serverDay": 3
+    },
+    {
+      "attackCount": 2
+    }
+  ],
+  "data": {
+    "openDay": [
+      2,
+      4,
+      6
+    ],
+    "serverDay": 3,
+    "attackCount": 2,
+    "playerCount": 20,
+    "seasonCycle": 14,
+    "matchingRange": 6,
+    "attributeBonus": [
+      80,
+      100,
+      120
+    ],
+    "announceRank": 3,
+    "victoryReward": [
+      {
+        "id": 1,
+        "count": 50
+      },
+      {
+        "id": 62,
+        "count": 2
+      },
+      {
+        "id": 94801,
+        "count": 2
+      },
+      {
+        "id": 6,
+        "count": 5
+      },
+      {
+        "id": 16,
+        "count": 300
+      }
+    ],
+    "failureReward": [
+      {
+        "id": 1,
+        "count": 40
+      },
+      {
+        "id": 62,
+        "count": 1
+      },
+      {
+        "id": 94801,
+        "count": 1
+      },
+      {
+        "id": 6,
+        "count": 4
+      },
+      {
+        "id": 16,
+        "count": 240
+      }
+    ]
+  }
+}

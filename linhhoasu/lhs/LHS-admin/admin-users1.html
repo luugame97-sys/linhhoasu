@@ -1,0 +1,3076 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Trang quản trị LHS</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0
+			}
+
+			body {
+				font: 14px "Microsoft YaHei", sans-serif;
+				background: #f4f7fb;
+				color: #223
+			}
+
+			button,
+			input {
+				font: inherit
+			}
+
+			.hd {
+				display: flex;
+				gap: 12px;
+				align-items: center;
+				padding: 16px 24px;
+				background: #111827;
+				color: #fff
+			}
+
+			.hd h1 {
+				font-size: 18px
+			}
+
+			.sp {
+				flex: 1
+			}
+
+			.badge {
+				background: #dc2626;
+				border-radius: 999px;
+				padding: 2px 10px;
+				font-size: 12px
+			}
+
+			.tabs {
+				display: flex;
+				background: #fff;
+				border-bottom: 1px solid #dbe3ef
+			}
+
+			.tabs button {
+				border: none;
+				background: none;
+				padding: 14px 22px;
+				cursor: pointer;
+				font-weight: 600;
+				color: #475467;
+				border-bottom: 2px solid transparent
+			}
+
+			.tabs button.on {
+				color: #1459c6;
+				border-bottom-color: #1459c6
+			}
+
+			.module-bar {
+				display: none;
+				align-items: center;
+				gap: 12px;
+				padding: 12px 24px;
+				background: #eef4ff;
+				border-bottom: 1px solid #d7e3fb
+			}
+
+			.module-bar strong {
+				font-size: 15px;
+				color: #17324d
+			}
+
+			.module-bar span {
+				color: #52607a;
+				font-size: 13px
+			}
+
+			.module-links {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+				margin-left: auto
+			}
+
+			.module-links a {
+				text-decoration: none;
+				padding: 8px 12px;
+				border-radius: 999px;
+				background: #fff;
+				border: 1px solid #c7d7f7;
+				color: #17324d
+			}
+
+			body.standalone-module .tabs {
+				position: sticky;
+				top: 0;
+				z-index: 3
+			}
+
+			.panel {
+				display: none
+			}
+
+			.panel.on {
+				display: block
+			}
+
+			.bar {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				align-items: center;
+				padding: 14px 24px;
+				background: #fff;
+				border-bottom: 1px solid #e6edf7
+			}
+
+			.bar input {
+				width: 340px;
+				max-width: 100%;
+				padding: 9px 12px;
+				border: 1px solid #cbd5e1;
+				border-radius: 8px
+			}
+
+			.btn {
+				border: none;
+				border-radius: 8px;
+				padding: 9px 14px;
+				cursor: pointer
+			}
+
+			.p {
+				background: #1459c6;
+				color: #fff
+			}
+
+			.g {
+				background: #fff;
+				border: 1px solid #cbd5e1;
+				color: #334155
+			}
+
+			.w {
+				background: #ea8b1f;
+				color: #fff
+			}
+
+			.r {
+				background: #d92d20;
+				color: #fff
+			}
+
+			.s {
+				background: #16a34a;
+				color: #fff
+			}
+
+			.ct {
+				padding: 20px 24px
+			}
+
+			.stats {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+				gap: 12px;
+				margin-bottom: 16px
+			}
+
+			.stat,
+			.card {
+				background: #fff;
+				border: 1px solid #e6edf7;
+				border-radius: 14px;
+				box-shadow: 0 8px 24px rgba(15, 23, 42, .04)
+			}
+
+			.stat {
+				padding: 15px 18px
+			}
+
+			.stat b {
+				display: block;
+				font-size: 24px;
+				color: #1459c6
+			}
+
+			.stat span {
+				font-size: 12px;
+				color: #667085
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse
+			}
+
+			th,
+			td {
+				padding: 14px 16px;
+				border-bottom: 1px solid #eef3fa;
+				text-align: left;
+				vertical-align: top
+			}
+
+			th {
+				background: #f8fbff;
+				font-size: 12px;
+				color: #667085
+			}
+
+			.sub {
+				display: block;
+				margin-top: 4px;
+				font-size: 12px;
+				color: #667085;
+				line-height: 1.45
+			}
+
+			.acts {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap
+			}
+
+			.batchbar {
+				display: flex;
+				gap: 10px;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-bottom: 10px
+			}
+
+			.pg {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				padding: 16px 0
+			}
+
+			.empty,
+			.loading {
+				padding: 42px 16px;
+				text-align: center;
+				color: #94a3b8
+			}
+
+			.tag {
+				display: inline-block;
+				border-radius: 999px;
+				padding: 2px 8px;
+				font-size: 12px;
+				font-weight: 600
+			}
+
+			.tb {
+				background: #e8f1ff;
+				color: #1459c6
+			}
+
+			.tg {
+				background: #eafaf0;
+				color: #157f3b
+			}
+
+			.to {
+				background: #fff4e8;
+				color: #b75a00
+			}
+
+			.tr {
+				background: #feefee;
+				color: #b42318
+			}
+
+			.overlay {
+				display: none;
+				position: fixed;
+				inset: 0;
+				background: rgba(15, 23, 42, .5);
+				z-index: 50;
+				align-items: center;
+				justify-content: center;
+				padding: 20px
+			}
+
+			.overlay.on {
+				display: flex
+			}
+
+			.modal {
+				width: min(1366PX, 96vw);
+				max-height:87vh;
+				overflow: auto;
+				background: #fff;
+				border-radius: 18px;
+				padding: 24px;
+				box-shadow: 0 24px 80px rgba(15, 23, 42, .28)
+			}
+
+			.sm {
+				width: min(560px, 96vw)
+			}
+
+			.xs {
+				width: min(420px, 96vw)
+			}
+
+			.modal h2 {
+				font-size: 18px;
+				margin-bottom: 16px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #e6edf7
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 12px
+			}
+
+			.full {
+				grid-column: 1/-1
+			}
+
+			.sec {
+				grid-column: 1/-1;
+				font-size: 12px;
+				font-weight: 700;
+				color: #1459c6;
+				margin-top: 6px;
+				padding-top: 6px;
+				border-top: 1px solid #e6edf7
+			}
+
+			.fg {
+				display: flex;
+				flex-direction: column;
+				gap: 6px
+			}
+
+			.fg label {
+				font-size: 12px;
+				color: #667085;
+				font-weight: 600
+			}
+
+			.fg input {
+				padding: 10px 12px;
+				border: 1px solid #cbd5e1;
+				border-radius: 10px
+			}
+
+			.fg textarea,
+			.fg select {
+				padding: 10px 12px;
+				border: 1px solid #cbd5e1;
+				border-radius: 10px;
+				font: inherit
+			}
+
+			.fg textarea {
+				min-height: 96px;
+				resize: vertical;
+				font-family: Consolas, monospace
+			}
+
+			.fg input[disabled] {
+				background: #f8fafc;
+				color: #667085
+			}
+
+			.foot {
+				display: flex;
+				justify-content: flex-end;
+				gap: 10px;
+				margin-top: 18px;
+				padding-top: 12px;
+				border-top: 1px solid #e6edf7
+			}
+
+			.pages {
+				display: flex;
+				flex-direction: column;
+				gap: 16px
+			}
+
+			.ph {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 16px 18px;
+				background: #f8fbff;
+				border-bottom: 1px solid #e6edf7
+			}
+
+			.sg {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 14px;
+				padding: 18px
+			}
+
+			.sc {
+				border: 1px solid #e6edf7;
+				border-radius: 14px;
+				padding: 16px
+			}
+
+			.sc h3 {
+				display: flex;
+				justify-content: space-between;
+				gap: 10px;
+				margin-bottom: 10px;
+				font-size: 15px
+			}
+
+			.meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-bottom: 10px
+			}
+
+			.kv {
+				display: flex;
+				justify-content: space-between;
+				gap: 10px;
+				font-size: 13px;
+				color: #475467;
+				padding: 4px 0
+			}
+
+			.msg {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				padding: 12px 18px;
+				border-radius: 12px;
+				z-index: 99;
+				box-shadow: 0 14px 40px rgba(15, 23, 42, .18)
+			}
+
+			.ok {
+				background: #ecfdf3;
+				color: #157f3b;
+				border: 1px solid #abefc6
+			}
+
+			.err {
+				background: #fef2f2;
+				color: #b42318;
+				border: 1px solid #fecaca
+			}
+
+			.hint {
+				font-size: 12px;
+				color: #667085
+			}
+
+			.inline {
+				display: flex;
+				gap: 16px;
+				flex-wrap: wrap;
+				align-items: center
+			}
+
+			.inline label {
+				display: flex;
+				gap: 6px;
+				align-items: center
+			}
+
+			.logerr {
+				min-height: 18px;
+				margin-top: 8px;
+				font-size: 12px;
+				color: #b42318
+			}
+
+			.task-admin-grid {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 12px
+			}
+
+			.task-admin-card {
+				border: 1px solid #e6edf7;
+				border-radius: 14px;
+				padding: 14px;
+				background: #fbfdff
+			}
+
+			.task-admin-card h3 {
+				margin-bottom: 10px;
+				font-size: 14px;
+				color: #1459c6
+			}
+
+			.task-admin-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				max-height: 58vh;
+				overflow: auto
+			}
+
+			.task-group {
+				border: 1px dashed #d7e3f4;
+				border-radius: 12px;
+				padding: 10px;
+				background: #f8fbff
+			}
+
+			.task-group h4 {
+				font-size: 13px;
+				margin-bottom: 8px;
+				color: #1459c6
+			}
+
+			.task-group-list {
+				display: flex;
+				flex-direction: column;
+				gap: 10px
+			}
+
+			.task-row-edit,
+			.counter-row-edit {
+				border: 1px solid #e6edf7;
+				border-radius: 12px;
+				padding: 10px;
+				background: #fff
+			}
+
+			.task-row-head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 10px;
+				margin-bottom: 8px
+			}
+
+			.task-mini-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 8px
+			}
+
+			.counter-row-edit {
+				display: grid;
+				grid-template-columns: 1fr 140px auto;
+				gap: 8px;
+				align-items: end
+			}
+
+			.quickbar {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+				margin-bottom: 10px
+			}
+
+			.mini-list {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 8px;
+				max-height: 220px;
+				overflow: auto;
+				padding: 10px;
+				border: 1px solid #e6edf7;
+				border-radius: 12px;
+				background: #fbfdff
+			}
+
+			.mini-row {
+				border: 1px solid #e6edf7;
+				border-radius: 10px;
+				padding: 8px 10px;
+				background: #fff;
+				font-size: 12px;
+				line-height: 1.5
+			}
+
+			.mini-row b {
+				display: block;
+				font-size: 13px;
+				color: #223
+			}
+
+			@media (max-width:820px) {
+				.grid {
+					grid-template-columns: 1fr
+				}
+
+				.task-admin-grid,
+				.task-mini-grid,
+				.counter-row-edit {
+					grid-template-columns: 1fr
+				}
+
+				.bar input {
+					width: 100%
+				}
+
+				th:nth-child(2),
+				td:nth-child(2),
+				th:nth-child(5),
+				td:nth-child(5) {
+					display: none
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hd">
+			<h1 id="adminTitle">Trang quản trị LHS</h1><span class="badge" id="totalBadge">-</span><span class="sp"></span><span
+				id="loginStatus"></span><button class="btn g" id="logoutBtn" style="display:none"
+				onclick="logout()">Đăng xuất</button>
+		</div>
+		<div class="tabs"><button id="tp" class="on" onclick="tab('players')">Quản lý dữ liệu người chơi</button><button id="ta"
+				onclick="tab('agents')">Quản lý đại lý</button><button id="trc" onclick="tab('rechargeConfigs')">Cấu hình nạp tiền</button><button id="tredeem" onclick="tab('redeemCodes')">Quản lý GiftCode</button><button id="tm" onclick="tab('mails')">Quản lý thư</button><button id="tc" onclick="tab('chats')">Quản lý chat</button><button id="tl" onclick="tab('logs')">Nhật ký thao tác</button><button id="ts" onclick="tab('servers')">Quản lý máy chủ</button><button id="td" onclick="location.href='dist-admin.html'">Quản lý phân phối</button></div>
+		<div id="moduleBar" class="module-bar"><strong id="moduleTitle"></strong><span id="moduleDesc"></span><div class="module-links"><a href="game-modules.html">trung tâm mô-đun</a><a href="admin-users.html">Trang quản trị đầy đủ</a><a href="index.html">Trang tổng quản</a></div></div>
+
+		<section id="players" class="panel on">
+			<div class="bar"><input id="search"
+					placeholder="Tìm kiếm tên/userId/playerId/accountId/roleId/agentId/mã mời"><button class="btn p"
+					onclick="loadPlayers(1)">Tìm kiếm</button><button class="btn g" onclick="clearSearch()">Xóa bộ lọc</button><button class="btn w" id="batchCreateBtn" onclick="openBatchCreate()">Quản lý hàng loạt</button><span
+					class="hint">Hỗ trợ tìm kiếm theo tài khoản, vai trò, mã mời và ID đại lý</span></div>
+			<div class="ct">
+				<div class="batchbar"><label><input id="checkAllPlayers" type="checkbox" onchange="toggleAllPlayerChecks(this.checked)"> Chọn tất cả trang hiện tại</label><span id="selectedPlayersTip" class="hint">0 người chơi được chọn</span><button class="btn g" id="batchGiveBtn" onclick="batchOpenGive()">Phát thưởng hàng loạt</button><button class="btn s" id="batchUnlockBtn" onclick="batchUnlockAllSystems()">Mở khóa tính năng hàng loạt</button><button class="btn w" id="batchClearSelectedBtn" onclick="clearSelectedGameData()">Xóa dữ liệu người chơi đã chọn</button><button class="btn r" id="batchClearAllBtn" onclick="clearAllGameData()">Xóa dữ liệu toàn server/máy chủ</button><button class="btn r" id="batchDeleteBtn" onclick="batchDeletePlayers()">Xóa hàng loạt</button></div>
+				<div class="stats">
+					<div class="stat"><b id="stTotal">-</b><span>Tổng số người chơi</span></div>
+					<div class="stat"><b id="stPage">-</b><span>Trang hiện tại</span></div>
+					<div class="stat"><b id="stPages">-</b><span>Tổng số trang</span></div>
+				</div>
+				<div class="card" id="tableWrap">
+					<div class="loading">Đang tải dữ liệu người chơi...</div>
+				</div>
+				<div id="pg" class="pg"></div>
+			</div>
+		</section>
+
+		<section id="agents" class="panel">
+			<div class="bar"><input id="agentSearch" placeholder="Tìm kiếm tài khoản đại lý/agentId/tên"><button class="btn p"
+					onclick="loadAgents()">Tìm kiếm</button><button class="btn g" onclick="clearAgentSearch()">Xóa bộ lọc</button><button class="btn w"
+					onclick="openAgentEditor()">Thêm đại lý</button><span class="hint">Mở quyền phân phối và nạp tiền cho đại lý và kết hợp người chơi theo người chơi.agentId</span></div>
+			<div class="ct">
+				<div class="stats">
+					<div class="stat"><b id="agTotal">-</b><span>Số lượng tài khoản đại lý</span></div>
+					<div class="stat"><b id="agGive">-</b><span>Tài khoản có thể được cấp</span></div>
+					<div class="stat"><b id="agRecharge">-</b><span>Tài khoản có thể nạp lại</span></div>
+				</div>
+				<div class="card" id="agentWrap">
+					<div class="loading">Nhấn Tìm kiếm để tải dữ liệu đại lý...</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="logs" class="panel">
+			<div class="bar"><input id="logKeyword" placeholder="Tìm kiếm Toán tử / Người chơi / agentId / Lý do"><select id="logAction"><option value="">Tất cả thao tác</option><option value="give_player">Phát thưởng cá nhân</option><option value="batch_give_players">Phát thưởng hàng loạt</option><option value="send_user_mail">Thư cho người chơi</option><option value="send_server_mail">khối thư</option><option value="clear_player_game_data">xóa dữ liệu game người chơi</option><option value="recharge_player">Nạp tiền thủ công</option></select><select id="logResult"><option value="">Tất cả kết quả</option><option value="success">Thành công</option><option value="rejected">Từ chối</option><option value="failure">Thất bại</option></select><button class="btn p" onclick="loadActionLogs(1)">Tìm kiếm</button><button class="btn g" onclick="clearActionLogSearch()">Xóa bộ lọc</button><span class="hint">Quản trị viên có thể xem mọi thứ, đại lý chỉ có thể xem nhật ký hoạt động của chính họ</span></div>
+			<div class="ct">
+				<div class="stats">
+					<div class="stat"><b id="lgTotal">-</b><span>Tổng số nhật ký</span></div>
+					<div class="stat"><b id="lgPage">-</b><span>Trang hiện tại</span></div>
+					<div class="stat"><b id="lgPages">-</b><span>Tổng số trang</span></div>
+				</div>
+				<div class="card" id="logWrap"><div class="loading">Bấm Tìm kiếm để tải nhật ký thao tác...</div></div>
+				<div id="logPg" class="pg"></div>
+			</div>
+		</section>
+
+		<section id="servers" class="panel">
+			<div class="bar"><button class="btn p" onclick="openServer()">Thêm máy chủ</button><button class="btn g"
+					onclick="loadServers()">Làm mới dữ liệu</button><span class="hint">Trước khi xóa, nó sẽ được kiểm tra xem có còn lưu trữ ký tự trong máy chủ hay không.</span></div>
+			<div class="ct">
+				<div class="stats">
+					<div class="stat"><b id="svTotal">-</b><span>Tất cả các vai trò trong máy chủ</span></div>
+					<div class="stat"><b id="svOn">-</b><span>Hiện đang trực tuyến</span></div>
+					<div class="stat"><b id="svAct">-</b><span>Hoạt động trong 7 ngày qua</span></div>
+					<div class="stat"><b id="svCnt">-</b><span>Số lượng máy chủ khu vực</span></div>
+				</div>
+				<div id="serverWrap">
+					<div class="loading">Nhấp vào Làm mới để tải dữ liệu khu vực...</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="chats" class="panel">
+			<div class="bar"><input id="chatKeyword" placeholder="Tìm kiếm nội dung/tên người chơi/userId"><input id="chatUserId" placeholder="Chỉ định userId/dbid"><select id="chatChannel"><option value="all">Tất cả các kênh</option><option value="0">kênh thế giới</option><option value="1">Kênh hệ thống</option></select><select id="chatLimit"><option value="30">30 vừa qua</option><option value="50" selected>50 cuối cùng</option><option value="100">100 cuối cùng</option></select><select id="chatAutoRefresh" onchange="updateChatAutoRefresh()"><option value="0">Làm mới thủ công</option><option value="5">Làm mới cứ sau 5 giây</option><option value="15">Làm mới sau mỗi 15 giây</option><option value="30">Làm mới sau mỗi 30 giây</option></select><button class="btn p" onclick="loadChats()">Tìm kiếm</button><button class="btn g" onclick="clearChatSearch()">Xóa bộ lọc</button><span class="hint">Hiển thị lịch sử trò chuyện trong bộ nhớ dịch vụ hiện tại, lịch sử này sẽ bị xóa sau khi khởi động lại dịch vụ.</span></div>
+			<div class="ct">
+				<div class="stats">
+					<div class="stat"><b id="chTotal">-</b><span>Tin nhắn trùng khớp</span></div>
+					<div class="stat"><b id="chWorld">-</b><span>kênh thế giới</span></div>
+					<div class="stat"><b id="chSystem">-</b><span>Kênh hệ thống</span></div>
+					<div class="stat"><b id="chUpdated">-</b><span>làm mới lần cuối</span></div>
+				</div>
+				<div class="card" id="chatWrap"><div class="loading">Bấm Tìm kiếm để tải lịch sử trò chuyện...</div></div>
+			</div>
+		</section>
+
+		<section id="rechargeConfigs" class="panel">
+			<div class="bar"><input id="rechargeConfigSearch" placeholder="Tìm kiếm ID sản phẩm/tên/phương thức thanh toán"><button class="btn p"
+					onclick="loadRechargeConfigs()">Tìm kiếm</button><button class="btn g" onclick="clearRechargeConfigSearch()">Xóa bộ lọc</button><button class="btn w"
+					onclick="openRechargeConfigEditor()">Thêm cấu hình</button><span class="hint">Được sử dụng để duy trì thống nhất cấu hình cấp sản phẩm được sử dụng trong các lệnh thanh toán và nạp tiền thủ công ở chế độ nền.</span></div>
+			<div class="ct">
+				<div class="stats">
+					<div class="stat"><b id="rcTotal">-</b><span>Tổng số cấu hình</span></div>
+					<div class="stat"><b id="rcEnabled">-</b><span>kích hoạt cấu hình</span></div>
+					<div class="stat"><b id="rcCustom">-</b><span>Bảo hiểm tùy chỉnh</span></div>
+				</div>
+				<div class="card" id="rechargeConfigWrap"><div class="loading">Bấm tìm kiếm để tải cấu hình nạp tiền...</div></div>
+			</div>
+		</section>
+
+		<section id="redeemCodes" class="panel">
+			<div class="bar"><input id="redeemSearch" placeholder="Tìm kiếm Mã/Tên/Ghi chú đổi thưởng"><select id="redeemStatus"><option value="">Tất cả trạng thái</option><option value="active">Bật</option><option value="disabled">Tắt</option></select><button class="btn p" onclick="loadRedeemCodes()">Tìm kiếm</button><button class="btn g" onclick="clearRedeemSearch()">Xóa bộ lọc</button><button class="btn w" onclick="openRedeemEditor()">Thêm GiftCode</button><span class="hint">Cấu hình phần thưởng phù hợp với việc phân phối cho người chơi và hỗ trợ tiền tệ và đạo cụ.</span></div>
+			<div class="ct">
+				<div class="stats">
+					<div class="stat"><b id="rdTotal">-</b><span>Tổng số GiftCode</span></div>
+					<div class="stat"><b id="rdActive">-</b><span>Kích hoạt số lượng</span></div>
+					<div class="stat"><b id="rdUsed">-</b><span>Sử dụng tích lũy</span></div>
+				</div>
+				<div class="card" id="redeemWrap"><div class="loading">Bấm tìm kiếm để tải mã đổi quà...</div></div>
+			</div>
+		</section>
+
+		<section id="mails" class="panel">
+			<div class="bar"><input id="mailUserFilter" placeholder="Nhấn userId để kiểm tra tin nhắn gần đây"><input id="mailBatchFilter" placeholder="Nhấn batchId để kiểm tra"><button class="btn p" onclick="loadMails()">Truy vấn</button><button class="btn g" onclick="clearMailSearch()">Xóa bộ lọc</button><span class="hint">Hỗ trợ đẩy theo người chơi được chỉ định và đẩy hàng loạt theo vùng serverId</span></div>
+			<div class="ct">
+				<div class="card" style="padding:18px;margin-bottom:16px">
+					<div class="grid">
+						<div class="fg"><label>Phạm vi đẩy</label><select id="mailScope" onchange="updateMailScope()"><option value="users">Người chơi cố định</option><option value="server">Gửi theo máy chủ</option></select></div>
+						<div class="fg"><label>người gửi</label><input id="mailSender" value="Hệ thống"></div>
+						<div class="fg full" id="mailUsersBox"><label>Mục tiêu userId (được phân tách bằng dấu phẩy, dấu cách hoặc dòng mới)</label><textarea id="mailUserIds" placeholder="Ví dụ: u1001, u1002; bạn cũng có thể kiểm tra danh sách người chơi trước rồi nhấp vào nút bên dưới để đưa nó vào"></textarea></div>
+						<div class="fg full" id="mailServerBox" style="display:none"><label>Vùng mục tiêu serverId</label><input id="mailServerId" type="number" min="1" placeholder="Ví dụ 1001"></div>
+						<div class="fg"><label>tiêu đề</label><input id="mailTitle" maxlength="120" placeholder="Tiêu đề email"></div>
+						<div class="fg"><label>Ngày hợp lệ</label><input id="mailExpireDays" type="number" min="1" max="365" value="30"></div>
+						<div class="fg full"><label>Nội dung văn bản</label><textarea id="mailContent" placeholder="Văn bản email"></textarea></div>
+						<div class="fg full"><label>Tệp đính kèm (mỗi dòng một dòng: số lượng ID prop, cũng hỗ trợ 1001:10)</label><textarea id="mailAttachments" placeholder="1001 10&#10;4 20"></textarea></div>
+						<div class="fg"><label>Mức nhận tối thiểu</label><input id="mailMinLevel" type="number" min="0" value="0"></div>
+						<div class="fg"><label>Nhận xét</label><input id="mailReason" placeholder="Viết nhật ký hoạt động"></div>
+					</div>
+					<div class="foot"><button class="btn g" onclick="fillMailTargetsFromSelection()">Đưa những người chơi được chọn vào</button><button class="btn p" onclick="sendMail()">Gửi thư</button></div>
+				</div>
+				<div class="stats">
+					<div class="stat"><b id="mailTotal">-</b><span>thư từ gần đây</span></div>
+					<div class="stat"><b id="mailUnread">-</b><span>chưa đọc</span></div>
+					<div class="stat"><b id="mailClaimed">-</b><span>Đã nhận</span></div>
+				</div>
+				<div class="card" id="mailWrap"><div class="loading">Bấm Truy vấn để tải bản ghi thư...</div></div>
+			</div>
+		</section>
+
+		<div id="editO" class="overlay">
+			<div class="modal">
+				<h2 id="editT">Chỉnh sửa Người chơi</h2><input id="eu" type="hidden">
+				<div class="grid">
+					<div class="sec">Thông tin cơ bản</div>
+					<div class="fg full"><label>tên người chơi</label><input id="f_name" maxlength="16"></div>
+					<div class="fg"><label>cấp</label><input id="f_level" type="number" min="1"></div>
+					<div class="fg"><label>kinh nghiệm</label><input id="f_exp" type="number" min="0"></div>
+					<div class="fg"><label>ID hình đại diện</label><input id="f_avatar" type="number" min="0"></div>
+					<div class="fg"><label>ID khung hình đại diện</label><input id="f_avatarFrame" type="number" min="-1"></div>
+					<div class="fg"><label>ID tiêu đề</label><input id="f_title" type="number" min="-1"></div>
+					<div class="sec">thông tin tiến độ</div>
+					<div class="fg"><label>chương</label><input id="f_chapter" type="number" min="1"></div>
+					<div class="fg"><label>mức độ</label><input id="f_raidLevel" type="number" min="1"></div>
+					<div class="fg"><label>chương trên móc</label><input id="f_hangUpChapter" type="number" min="1"></div>
+					<div class="fg"><label>Thời gian treo máy (mili giây)</label><input id="f_hangUpTime" type="number" min="0"></div>
+					<div class="fg"><label>Tiến độ khen thưởng chương</label><input id="f_rewardChapter" type="number" min="0"></div>
+					<div class="fg"><label>Các chương nhận được (dấu phẩy)</label><input id="f_claimedChapters"></div>
+					<div class="fg"><label>vương quốc</label><input id="f_stage" type="number" min="1"></div>
+					<div class="fg"><label>Vượt qua cấp độ giải thưởng</label><input id="f_rewardedStage" type="number" min="0"></div>
+					<div class="fg"><label>Số lần đột phá thất bại</label><input id="f_stageFailedTime" type="number" min="0"></div>
+					<div class="fg"><label>ID bài tập</label><input id="f_kungfuId" type="number" min="1"></div>
+					<div class="fg"><label>nghề phụ</label><input id="f_subJob" type="number" min="0"></div>
+					<div class="fg"><label>Cấp độ rương kho báu</label><input id="f_boxLevel" type="number" min="1"></div>
+					<div class="fg"><label>VIP</label><input id="f_vip" type="number" min="0"></div>
+					<div class="fg"><label>Nạp tiền tích lũy</label><input id="f_totalRecharge" type="number" min="0"></div>
+					<div class="fg"><label>ID pháp</label><input id="f_spiritId" type="number" min="-1"></div>
+					<div class="fg"><label>Cấp độ pháp giai</label><input id="f_spiritRank" type="number" min="1"></div>
+					<div class="sec">Tiền tệ và đạo cụ</div>
+					<div class="fg"><label>nhân dân tệ</label><input id="f_diamond" type="number" min="0"></div>
+					<div class="fg"><label>máy gia tốc</label><input id="f_gold" type="number" min="0"></div>
+					<div class="fg"><label>bạc</label><input id="f_silver" type="number" min="0"></div>
+					<div class="fg"><label>Bánh bao hấp(item4)</label><input id="f_baozi" type="number" min="0"></div>
+					<div class="fg"><label>Mảnh pháp (mục 7)</label><input id="f_lingyun" type="number" min="0"></div>
+					<div class="fg"><label>Tinh hoa của Pháp (mục 8)</label><input id="f_faxiang" type="number" min="0"></div>
+					<div class="fg"><label>Tian Yan Ling (nhỏ) (item1001)</label><input id="f_tianyanSmall" type="number" min="0"></div>
+					<div class="fg"><label>Lệnh Thiên Diên (Phần 2)(item1002)</label><input id="f_tianyanMedium" type="number" min="0"></div>
+					<div class="fg"><label>Lệnh Tianyan (Lớn)(item1003)</label><input id="f_tianyanLarge" type="number" min="0"></div>
+					<div class="fg"><label>Phiếu mua hàng(item7010)</label><input id="f_coupon" type="number" min="0"></div>
+					<div class="sec">Trang bị/Đội hình/Sức mạnh chiến đấu</div>
+					<div class="fg"><label>Sức mạnh chiến đấu hiện tại (chỉ đọc)</label><input id="f_powerScore" disabled></div>
+					<div class="fg"><label>Số lượng thiết bị (chỉ đọc)</label><input id="f_equipCount" disabled></div>
+					<div class="fg full"><label>Chi tiết thuộc tính (căn chỉnh theo configMap)</label><div id="f_attrRows" class="mini-list"><div class="hint">Hiển thị sau khi mở Người chơi</div></div></div>
+					<div class="fg full"><label>Thiết bị giải pháp hiện tại (căn chỉnh theo configMap)</label><div id="f_equipRows" class="mini-list"><div class="hint">Hiển thị sau khi mở Người chơi</div></div></div>
+					<div class="fg"><label>Id được trang bị đội hình</label><input id="f_formationEquippedId" type="number" min="0"></div>
+					<div class="fg"><label>cấp độ hình thành</label><input id="f_formationLevel" type="number" min="1"></div>
+					<div class="fg"><label>Thứ tự hình thành</label><input id="f_formationGrade" type="number" min="1"></div>
+					<div class="fg"><label>Kinh nghiệm đào tạo</label><input id="f_formationExp" type="number" min="0"></div>
+					<div class="fg"><label>Đã có một đội hình (dấu phẩy)</label><input id="f_formationOwns"></div>
+					<div class="fg"><label>Mảng mê hoặc (dấu phẩy)</label><input id="f_formationEnchant"></div>
+					<div class="fg full"><label>Thông tin dữ liệu thiết bị trang bị(JSON)</label><textarea id="f_equipInfo" placeholder='{"equipList":[],"equipSetMap":{},"curIndex":0}'></textarea></div>
+					<div class="fg full"><label>Thông tin hình thành dữ liệu(JSON)</label><textarea id="f_formationInfo" placeholder='{"equippedId":21001,"owns":[21001],"grade":1,"level":1,"exp":0,"enchant":[0,0,0,0,0]}'></textarea></div>
+					<div class="sec">Mở khóa và khởi động hệ thống</div>
+					<div class="fg"><label>hướng dẫn số bước hướng dẫnBước</label><input id="f_guideStep" type="number" min="0"></div>
+					<div class="fg"><label>Hệ thống đã mở khóa (dấu phẩy)</label><input id="f_unlockedSystem"></div>
+					<div class="fg"><label>Hệ thống đã được xác nhận quyền sở hữu (dấu phẩy)</label><input id="f_rewardedSystem"></div>
+					<div class="fg"><label>Đọc các tính năng mới (dấu phẩy)</label><input id="f_seenNewFeatures"></div>
+					<div class="fg"><label>Các chức năng mới sẽ được phát (chỉ đọc)</label><input id="f_pendingNewFeatures" disabled></div>
+					<div class="fg full"><label>Thao tác nhanh</label><div class="inline"><button class="btn s" id="f_unlockAllSystemsBtn" type="button" onclick="unlockAllSystemsFromEdit()">Mở khóa tất cả các hệ thống chỉ bằng một cú nhấp chuột</button><span class="hint" id="f_unlockAllSystemsHint">Mở khóa tất cả hệ thống và trạng thái chức năng mới của trình chỉnh sửa hiện tại cùng một lúc và làm mới biểu mẫu.</span></div></div>
+					<div class="fg full"><label>Cài đặt cài đặt hệ thống (JSON)</label><textarea id="f_systemSettings" placeholder='{"seenNewFeatures":[101,102]}'></textarea></div>
+					<div class="sec">Mối quan hệ và thông tin chỉ đọc</div>
+					<div class="fg"><label>agentId</label><input id="f_agentId"></div>
+					<div class="fg"><label>inviteCode</label><input id="f_inviteCode"></div>
+					<div class="fg"><label>accountId</label><input id="f_accountId" disabled></div>
+					<div class="fg"><label>roleId</label><input id="f_roleId" disabled></div>
+					<div class="fg"><label>serverId</label><input id="f_serverId" disabled></div>
+					<div class="fg"><label>lần đăng nhập cuối cùng</label><input id="f_lastLogin" disabled></div>
+					<div class="fg"><label>userId</label><input id="f_userId" disabled></div>
+					<div class="fg"><label>playerId</label><input id="f_playerId" disabled></div>
+					<div class="fg"><label>thời gian sáng tạo</label><input id="f_createdAt" disabled></div>
+					<div class="fg"><label>Thời gian cập nhật</label><input id="f_updatedAt" disabled></div>
+					<div class="sec">Quản lý tiến độ nhiệm vụ</div>
+					<div class="full"><div class="hint">Theo nhóm nhiệm vụ của `main`, bộ đếm nhiệm vụ chính và logic cấp độ hiện tại, việc chỉnh sửa nhiệm vụ đã được chia thành một cửa sổ bật lên riêng biệt.</div><div style="margin-top:8px"><button class="btn w" type="button" onclick="openTaskManager()">Quản lý tiến độ nhiệm vụ mở</button></div></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeEdit()">Hủy bỏ</button><button class="btn p"
+						onclick="savePlayer()">Lưu thay đổi</button><button class="btn" onclick="normalizeOrbCurrentPlayer()">Khởi tạo Soul Jade</button></div>
+			</div>
+		</div>
+
+		<div id="taskO" class="overlay">
+			<div class="modal">
+				<h2 id="taskManagerTitle">Quản lý tiến độ nhiệm vụ</h2>
+				<div class="grid" style="grid-template-columns:1fr">
+					<div class="task-admin-card full">
+						<h3>Thao tác nhanh</h3>
+						<div class="quickbar">
+							<button class="btn g" type="button" onclick="taskMarkCurrentStage(10)">Cấp độ hiện tại được đặt thành Đang tiến hành</button>
+							<button class="btn w" type="button" onclick="taskMarkCurrentStage(20)">Cấp độ hiện tại được đặt thành có thể thu thập được</button>
+							<button class="btn s" type="button" onclick="taskMarkCurrentStage(30)">Cấp độ hiện tại được đặt là đã hoàn thành</button>
+							<button class="btn g" type="button" onclick="taskSyncCurrentStageTargets()">Đồng bộ hóa mục tiêu cấp độ hiện tại</button>
+						</div>
+						<div class="hint">Chỉ có dữ liệu tạm thời trong cửa sổ bật lên được thay đổi ở đây. Cuối cùng, bạn vẫn cần quay lại trang chỉnh sửa Người chơi và nhấp vào "Lưu thay đổi" để ghi kho lưu trữ Người chơi.</div>
+					</div>
+					<div class="task-admin-grid full">
+						<div class="task-admin-card">
+							<h3>danh sách nhiệm vụ</h3>
+							<div id="taskEditorRows" class="task-admin-list"></div>
+							<div style="margin-top:10px"><button class="btn g" type="button" onclick="addTaskEditorRow()">Thêm dòng nhiệm vụ</button></div>
+						</div>
+						<div class="task-admin-card">
+							<h3>bộ đếm nhiệm vụ chính</h3>
+							<div id="counterEditorRows" class="task-admin-list"></div>
+							<div style="margin-top:10px"><button class="btn g" type="button" onclick="addCounterEditorRow()">Thêm bộ đếm</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeTaskManager()">đóng cửa</button></div>
+			</div>
+		</div>
+
+		<div id="giveO" class="overlay">
+			<div class="modal sm">
+				<h2>Phân phối tiền tệ và đạo cụ</h2><input id="gu" type="hidden">
+				<div class="grid">
+					<div class="sec">tiền tệ tăng hoặc giảm</div>
+					<div class="fg"><label>nhân dân tệ</label><input id="g_diamond" type="number"></div>
+					<div class="fg"><label>máy gia tốc</label><input id="g_gold" type="number"></div>
+					<div class="fg"><label>bạc</label><input id="g_silver" type="number"></div>
+					<div class="fg"><label>Bánh bao hấp(item4)</label><input id="g_baozi" type="number"></div>
+					<div class="sec">Đạo cụ thường được sử dụng</div>
+					<div class="fg"><label>Mảnh pháp (mục 7)</label><input id="g_lingyun" type="number"></div>
+					<div class="fg"><label>Tinh hoa của Pháp (mục 8)</label><input id="g_faxiang" type="number"></div>
+					<div class="fg"><label>Tian Yan Ling (nhỏ) (item1001)</label><input id="g_tianyanSmall" type="number"></div>
+					<div class="fg"><label>Lệnh Thiên Diên (Phần 2)(item1002)</label><input id="g_tianyanMedium" type="number"></div>
+					<div class="fg"><label>Lệnh Tianyan (Lớn)(item1003)</label><input id="g_tianyanLarge" type="number"></div>
+					<div class="fg"><label>Phiếu mua hàng(item7010)</label><input id="g_coupon" type="number"></div>
+					<div class="sec">Đạo cụ tùy chỉnh</div>
+					<div class="fg"><label>ID dự án</label><input id="g_customId" type="number" min="1" list="giveItemOptions" placeholder="Nhập hoặc chọn một chỗ dựa"></div>
+					<div class="fg"><label>Tăng hoặc giảm số lượng</label><input id="g_customCount" type="number"></div>
+					<div class="full"><button class="btn g" onclick="addGive()">Thêm một hàng đạo cụ tùy chỉnh mới</button></div>
+					<datalist id="giveItemOptions"></datalist>
+					<div id="grow" class="full"></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeGive()">Hủy bỏ</button><button class="btn s"
+						onclick="give()">Xác nhận phát hành</button></div>
+			</div>
+		</div>
+
+		<div id="batchO" class="overlay">
+			<div class="modal sm">
+				<h2>Quản lý hàng loạt</h2>
+				<div class="grid">
+					<div class="fg"><label>Tạo số lượng</label><input id="b_count" type="number" min="1" max="200" value="10"></div>
+					<div class="fg"><label>Số bắt đầu</label><input id="b_startIndex" type="number" min="1" value="1"></div>
+					<div class="fg"><label>Tiền tố tiếng Anh userId</label><input id="b_userPrefix" value="user"></div>
+					<div class="fg"><label>Tên người chơi Tiền tố tiếng Anh</label><input id="b_namePrefix" value="Player"></div>
+					<div class="fg full"><label>minh họa</label><input value="Sẽ được tạo bằng tiền tố tiếng Anh + số có bốn chữ số, chẳng hạn như Player0001 / user0001" disabled></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeBatchCreate()">Hủy bỏ</button><button class="btn p" onclick="batchCreatePlayers()">Bắt đầu tạo</button></div>
+			</div>
+		</div>
+
+		<div id="rechargeO" class="overlay">
+			<div class="modal xs">
+				<h2>Nạp tiền thủ công</h2><input id="ru" type="hidden">
+				<div class="grid" style="grid-template-columns:1fr">
+					<div class="fg full"><label>người chơi mục tiêu</label><input id="r_target" disabled></div>
+					<div class="fg full"><label>Cấu hình nạp tiền</label><select id="r_configProduct" onchange="applyRechargeConfigSelection()"><option value="">Điền thủ công</option></select></div>
+					<div class="fg full"><label>Số tiền nạp (nhân dân tệ)</label><input id="r_amount" type="number" min="1"></div>
+					<div class="fg full"><label>nhận dạng sản phẩm</label><input id="r_productId" placeholder="Mặc định thủ công-admin-nạp tiền"></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeRecharge()">Hủy bỏ</button><button class="btn s"
+						onclick="submitRecharge()">Xác nhận nạp tiền</button></div>
+			</div>
+		</div>
+
+		<div id="rechargeConfigO" class="overlay">
+			<div class="modal sm">
+				<h2 id="rechargeConfigT">Đã thêm cấu hình nạp tiền</h2><input id="rechargeConfigMode" type="hidden" value="create"><input id="rechargeConfigCurrentId" type="hidden">
+				<div class="grid">
+					<div class="fg"><label>nhận dạng sản phẩm</label><input id="rc_productId" placeholder="Chẳng hạn như 101"></div>
+					<div class="fg"><label>tên hiển thị</label><input id="rc_name" placeholder="Chẳng hạn như gói quà 60 nhân dân tệ"></div>
+					<div class="fg"><label>Số tiền nạp (nhân dân tệ)</label><input id="rc_amount" type="number" min="0" step="0.01"></div>
+					<div class="fg"><label>Phôi cơ bản</label><input id="rc_diamond" type="number" min="0"></div>
+					<div class="fg"><label>Miễn phí cho lần gửi tiền đầu tiên</label><input id="rc_firstBonus" type="number" min="0"></div>
+					<div class="fg"><label>Phương thức thanh toán</label><input id="rc_payType" placeholder="Chẳng hạn như alipay"></div>
+					<div class="fg"><label>sắp xếp giá trị</label><input id="rc_sort" type="number"></div>
+					<div class="fg"><label>tình trạng</label><select id="rc_enabled"><option value="1">Bật</option><option value="0">Tắt</option></select></div>
+					<div class="sec">Phần thưởng email trang thanh toán</div>
+					<div class="fg full"><label>Tiêu đề email</label><input id="rc_mailTitle" placeholder="Nếu trống, tên sản phẩm sẽ được sử dụng theo mặc định."></div>
+					<div class="fg full"><label>Nội dung email</label><input id="rc_mailContent" placeholder="Ví dụ: nạp tiền thành công, vui lòng kiểm tra phần thưởng đính kèm"></div>
+					<div class="fg"><label>ID dự án</label><input id="rc_addItemId" type="number" min="1" placeholder="Chẳng hạn như 7"></div>
+					<div class="fg"><label>Số lượng</label><input id="rc_addItemCount" type="number" min="1" placeholder="Chẳng hạn như 10"></div>
+					<div class="fg"><label>&nbsp;</label><button class="btn g" type="button" onclick="quickAddRechargeAttachmentRow()">Thêm đạo cụ email</button></div>
+					<div id="rc_attachments" class="full"></div>
+					<div class="fg full"><label>Nhận xét</label><input id="rc_note" placeholder="Có thể ghi lại kênh hoặc hướng dẫn vận hành"></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeRechargeConfigEditor()">Hủy bỏ</button><button class="btn p"
+						onclick="saveRechargeConfig()">cứu</button></div>
+			</div>
+		</div>
+
+		<div id="delO" class="overlay">
+			<div class="modal xs">
+				<h2>xóa người chơi</h2>
+				<p style="line-height:1.7;color:#475467">Xác nhận xóa người chơi <b id="dn" style="color:#b42318"></b>
+					?<br>Sau khi xóa, ánh xạ vai trò tài khoản của người chơi sẽ bị xóa đồng thời và thao tác này không thể khôi phục.</p><input id="du" type="hidden">
+				<div class="foot"><button class="btn g" onclick="closeDel()">Hủy bỏ</button><button class="btn r"
+						onclick="delPlayer()">Xác nhận xóa</button></div>
+			</div>
+		</div>
+
+		<div id="srvO" class="overlay">
+			<div class="modal sm">
+				<h2 id="srvT">Thêm máy chủ</h2><input id="srvMode" type="hidden" value="create">
+				<div class="grid">
+					<div class="fg"><label>Mã quận</label><input id="s_serverId" type="number" min="1"></div>
+					<div class="fg"><label>Tên vùng</label><input id="s_serverName"></div>
+					<div class="fg"><label>ID phân trang</label><input id="s_pageId" type="number" min="1"></div>
+					<div class="fg"><label>Tên trang</label><input id="s_pageName"></div>
+					<div class="fg"><label>Trạng thái chặn</label><select id="s_status"><option value="0">Tắt</option><option value="1">Bật</option><option value="2">Đầy</option></select></div>
+					<div class="fg"><label>Thời gian mở máy chủ</label><input id="s_openTime" type="datetime-local"></div>
+					<div class="full"><label class="hint">chuyển đổi mục</label>
+						<div class="inline"><label><input id="s_running" type="checkbox">Đang chạy</label><label><input id="s_isNew"
+									type="checkbox">Quận mới</label><label><input id="s_isRecommend" type="checkbox">gợi ý</label></div>
+					</div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeServer()">Hủy bỏ</button><button class="btn p"
+						onclick="saveServer()">cứu</button></div>
+			</div>
+		</div>
+
+		<div id="agentO" class="overlay">
+			<div class="modal sm">
+				<h2 id="agentT">Thêm đại lý</h2><input id="agentMode" type="hidden" value="create"><input id="agentCurrentId" type="hidden">
+				<div class="grid">
+					<div class="fg"><label>Đăng nhập tài khoản</label><input id="a_username"></div>
+					<div class="fg"><label>Ràng buộc agentId</label><input id="a_agentId" placeholder="Người chơi người chơi.agentId"></div>
+					<div class="fg"><label>tên hiển thị</label><input id="a_name"></div>
+					<div class="fg"><label>tình trạng</label><select id="a_status"><option value="active">Bật</option><option value="disabled">Tắt</option></select></div>
+					<div class="fg full"><label>Mật khẩu đăng nhập</label><input id="a_password" type="password" placeholder="Thêm một trường bắt buộc. Để trống khi chỉnh sửa để cho biết không có sửa đổi."></div>
+					<div class="fg full"><label>Nhận xét</label><input id="a_note"></div>
+					<div class="full"><label class="hint">Quyền</label><div class="inline"><label><input id="a_permGive" type="checkbox">Cho phép phân phối vật phẩm</label><label><input id="a_permRecharge" type="checkbox">Cho phép nạp tiền thủ công</label></div></div>
+					<div class="sec">Cấu hình giới hạn</div>
+					<div class="fg full"><label>Cho phép phát hành tiền tệ (dấu phẩy)</label><input id="a_giveCurrencies" placeholder="kim cương, vàng, bạc; để trống để biểu thị không có giới hạn"></div>
+					<div class="fg full"><label>Cho phép cấp ID prop (dấu phẩy)</label><input id="a_giveItems" placeholder="Chẳng hạn như 4,7,8,1001; để trống nghĩa là không có giới hạn"></div>
+					<div class="fg"><label>Giới hạn nạp tiền một lần (nhân dân tệ)</label><input id="a_rechargeSingleLimit" type="number" min="0" placeholder="0 có nghĩa là không có giới hạn"></div>
+					<div class="fg"><label>Giới hạn nạp tiền trong một ngày (nhân dân tệ)</label><input id="a_rechargeDailyLimit" type="number" min="0" placeholder="0 có nghĩa là không có giới hạn"></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeAgentEditor()">Hủy bỏ</button><button class="btn p"
+						onclick="saveAgent()">cứu</button></div>
+			</div>
+		</div>
+
+		<div id="redeemO" class="overlay">
+			<div class="modal sm">
+				<h2 id="redeemTitle">Thêm GiftCode</h2><input id="rd_originalCode" type="hidden">
+				<div class="grid">
+					<div class="sec">Thông tin cơ bản</div>
+					<div class="fg"><label>Đổi mã</label><input id="rd_code" placeholder="Chẳng hạn như WELCOME2026"></div>
+					<div class="fg"><label>tên</label><input id="rd_name" placeholder="Tên hoạt động"></div>
+					<div class="fg"><label>tình trạng</label><select id="rd_status"><option value="active">Bật</option><option value="disabled">Tắt</option></select></div>
+					<div class="fg"><label>Tổng thời gian có sẵn</label><input id="rd_maxUses" type="number" min="0" placeholder="0 có nghĩa là không có giới hạn"></div>
+					<div class="fg"><label>lần cho mỗi người chơi</label><input id="rd_perUserLimit" type="number" min="1" value="1"></div>
+					<div class="fg"><label>thời gian bắt đầu</label><input id="rd_startsAt" placeholder="Có thể để trống, chẳng hạn như 2026-05-16 00:00"></div>
+					<div class="fg"><label>thời gian kết thúc</label><input id="rd_expiresAt" placeholder="có sẵn"></div>
+					<div class="fg full"><label>Nhận xét</label><input id="rd_note"></div>
+					<div class="sec">Cấu hình phần thưởng</div>
+					<div class="fg"><label>nhân dân tệ</label><input id="rd_diamond" type="number"></div>
+					<div class="fg"><label>máy gia tốc</label><input id="rd_gold" type="number"></div>
+					<div class="fg"><label>bạc</label><input id="rd_silver" type="number"></div>
+					<div class="fg"><label>Bánh bao hấp(item4)</label><input id="rd_baozi" type="number"></div>
+					<div class="fg"><label>Mảnh pháp (mục 7)</label><input id="rd_lingyun" type="number"></div>
+					<div class="fg"><label>Tinh hoa của Pháp (mục 8)</label><input id="rd_faxiang" type="number"></div>
+					<div class="fg"><label>Tian Yan Ling (nhỏ) (item1001)</label><input id="rd_tianyanSmall" type="number"></div>
+					<div class="fg"><label>Lệnh Thiên Diên (Phần 2)(item1002)</label><input id="rd_tianyanMedium" type="number"></div>
+					<div class="fg"><label>Lệnh Tianyan (Lớn)(item1003)</label><input id="rd_tianyanLarge" type="number"></div>
+					<div class="fg"><label>Phiếu mua hàng(item7010)</label><input id="rd_coupon" type="number"></div>
+					<div class="fg"><label>ID chỗ dựa tùy chỉnh</label><input id="rd_customId" type="number" min="1"></div>
+					<div class="fg"><label>Số lượng</label><input id="rd_customCount" type="number"></div>
+					<div class="full"><button class="btn g" onclick="addRedeemItemRow()">Thêm một hàng đạo cụ tùy chỉnh mới</button></div>
+					<div id="rd_items" class="full"></div>
+				</div>
+				<div class="foot"><button class="btn g" onclick="closeRedeemEditor()">Hủy bỏ</button><button class="btn p" onclick="saveRedeemCode()">Lưu GiftCode</button></div>
+			</div>
+		</div>
+
+		<div id="logO" class="overlay on">
+			<div class="modal xs">
+				<h2>Đăng nhập quản trị</h2>
+				<div class="grid" style="grid-template-columns:1fr">
+					<div class="fg full"><label>Tên đăng nhập</label><input id="lu" autocomplete="username"></div>
+					<div class="fg full"><label>Mật khẩu</label><input id="lp" type="password" autocomplete="current-password"></div>
+				</div>
+				<div id="le" class="logerr"></div>
+				<div class="foot" style="border-top:none;padding-top:0"><button class="btn p" style="width:100%"
+						onclick="login()">Đăng nhập</button></div>
+			</div>
+		</div>
+
+		<script>
+			const MODULE_META = {
+				players: { title: "Quản lý dữ liệu người chơi", desc: "Xử lý độc lập các khả năng phụ trợ như truy vấn người chơi, chỉnh sửa, phát hành hàng loạt và nạp tiền thủ công.", buttonId: 'tp', panelId: 'players' },
+				agents: { title: "Quản lý đại lý", desc: "Xử lý độc lập việc mở tài khoản đại lý, cấu hình quyền và bảo trì dữ liệu đại lý.", buttonId: 'ta', panelId: 'agents' },
+				rechargeConfigs: { title: "Cấu hình nạp tiền", desc: "Xử lý độc lập các cấp độ sản phẩm, phương thức thanh toán và cấu hình sản phẩm nạp tiền thủ công.", buttonId: 'trc', panelId: 'rechargeConfigs' },
+				redeemCodes: { title: "Quản lý GiftCode", desc: "Duy trì độc lập các tài liệu có thể đổi được, thời gian sử dụng và thời hạn hiệu lực.", buttonId: 'tredeem', panelId: 'redeemCodes' },
+				chats: { title: "Quản lý chat", desc: "Xem thế giới và động lực trò chuyện của hệ thống trong bộ nhớ dịch vụ hiện tại để hỗ trợ khắc phục sự cố các lệnh cấm.", buttonId: 'tc', panelId: 'chats' },
+				logs: { title: "Nhật ký thao tác", desc: "Độc lập xem các liên kết hoạt động nền, kết quả và trách nhiệm.", buttonId: 'tl', panelId: 'logs' },
+				servers: { title: "Quản lý máy chủ", desc: "Duy trì độc lập dữ liệu máy chủ của học khu, số liệu thống kê hoạt động và các bổ sung, xóa và sửa đổi theo khu vực.", buttonId: 'ts', panelId: 'servers' }
+			};
+
+			function normalizeModuleName(name) {
+				const key = String(name || '').trim();
+				return MODULE_META[key] ? key : 'players';
+			}
+
+			const urlParams = new URLSearchParams(location.search);
+			const bootModuleName = normalizeModuleName(window.__LHS_ADMIN_BOOT_MODULE__ || urlParams.get('module') || location.hash.slice(1) || sessionStorage.getItem('admin_tab') || 'players');
+			const $ = id => document.getElementById(id),
+				cache = {};
+			const GAME_PROXY_PREFIX = '/game';
+			let page = 1,
+				search = '',
+				tabName = bootModuleName,
+				logPage = 1,
+				grow = 0,
+				redeemItemRow = 0,
+				rechargeAttachmentRow = 0,
+				selectedPlayers = new Set(),
+				currentGiveUserIds = [],
+				currentRechargeUserId = '';
+			let standaloneModule = window.__LHS_ADMIN_STANDALONE_MODULE__ ? tabName : (urlParams.get('standalone') === '1' ? tabName : '');
+			let currentUser = null,
+				agentCache = [],
+				rechargeConfigCache = [];
+			let chatRefreshTimer = null;
+			let giveItemConfigCache = [],
+				giveItemConfigLoading = null;
+			const tok = () => sessionStorage.getItem('admin_token') || '',
+				setTok = v => sessionStorage.setItem('admin_token', v),
+				setUser = user => sessionStorage.setItem('admin_user', JSON.stringify(user || null)),
+				getSavedUser = () => {
+					try {
+						return JSON.parse(sessionStorage.getItem('admin_user') || 'null')
+					} catch (_e) {
+						return null
+					}
+				};
+			const esc = s => String(s || '').replace(/[&<>"']/g, c => ({
+				'&': '&amp;',
+				'<': '&lt;',
+				'>': '&gt;',
+				'"': '&quot;',
+				"'": '&#39;'
+			} [c]));
+			const fmt = n => Number(n || 0).toLocaleString('zh-CN');
+			const date = v => v ? new Date(v).toLocaleString('zh-CN') : '-';
+			const num = id => {
+				const v = String($(id).value || '').trim();
+				if (!v) return null;
+				const n = Number(v);
+				return Number.isFinite(n) ? n : null;
+			};
+			const str = id => String($(id).value || '').trim();
+			const isAdmin = () => !currentUser || currentUser.role !== 'agent';
+			const hasPerm = key => isAdmin() || !!(currentUser && currentUser.permissions && currentUser.permissions[key]);
+
+			function applyStandaloneModuleView() {
+				const bar = $('moduleBar');
+				if (!bar) return;
+				if (!standaloneModule || !MODULE_META[standaloneModule]) {
+					bar.style.display = 'none';
+					document.body.classList.remove('standalone-module');
+					$('adminTitle').textContent = "Trang quản trị LHS";
+					return;
+				}
+				const meta = MODULE_META[standaloneModule];
+				document.body.classList.add('standalone-module');
+				document.title = `${meta.title}- Phần phụ trợ quản lý LHS`;
+				$('adminTitle').textContent = meta.title;
+				$('moduleTitle').textContent = meta.title;
+				$('moduleDesc').textContent = meta.desc;
+				bar.style.display = 'flex';
+				Object.keys(MODULE_META).forEach(key => {
+					const btn = $(MODULE_META[key].buttonId);
+					if (btn) btn.style.display = key === standaloneModule ? '' : 'none';
+				});
+			}
+
+			function applyRoleView() {
+				const adminOnlyIds = ['ta', 'trc', 'tredeem', 'tm', 'tc', 'ts', 'batchCreateBtn', 'batchUnlockBtn', 'batchClearSelectedBtn', 'batchClearAllBtn', 'batchDeleteBtn'];
+				adminOnlyIds.forEach(id => {
+					const el = $(id);
+					if (el) el.style.display = isAdmin() ? '' : 'none';
+				});
+				const batchGiveBtn = $('batchGiveBtn');
+				if (batchGiveBtn) batchGiveBtn.style.display = hasPerm('giveItems') ? '' : 'none';
+				if (!isAdmin() && (tabName === 'agents' || tabName === 'rechargeConfigs' || tabName === 'redeemCodes' || tabName === 'mails' || tabName === 'chats' || tabName === 'servers')) {
+					tabName = 'players';
+					if (standaloneModule && standaloneModule !== 'players') standaloneModule = 'players';
+				}
+				applyStandaloneModuleView();
+			}
+
+			function msg(t, ok = true) {
+				const d = document.createElement('div');
+				d.className = 'msg ' + (ok ? 'ok' : 'err');
+				d.textContent = t;
+				document.body.appendChild(d);
+				setTimeout(() => d.remove(), 3200);
+			}
+
+			function compact(v) {
+				if (Array.isArray(v) || !v || typeof v !== 'object') return v;
+				const o = {};
+				Object.keys(v).forEach(k => {
+					const x = v[k];
+					if (x === null || x === undefined || Number.isNaN(x)) return;
+					if (x && typeof x === 'object' && !Array.isArray(x)) {
+						const y = compact(x);
+						if (y && Object.keys(y).length) o[k] = y;
+						return;
+					}
+					o[k] = x;
+				});
+				return o;
+			}
+
+			function parseNumberList(raw) {
+				return String(raw || '').split(/[，,\s]+/).map(v => Number(v)).filter(v => Number.isFinite(v) && v > 0).map(v => Math.floor(v));
+			}
+
+			function parseTextList(raw) {
+				return String(raw || '').split(/[，,\s]+/).map(v => String(v || '').trim().toLowerCase()).filter(Boolean).filter((v, i, arr) => arr.indexOf(v) === i);
+			}
+
+			function normalizeAttachmentRows(rows) {
+				if (!Array.isArray(rows)) return [];
+				return rows.map(row => ({
+					id: Number(row && row.id || 0),
+					count: Number(row && row.count || 0)
+				})).filter(row => Number.isFinite(row.id) && row.id > 0 && Number.isFinite(row.count) && row.count > 0).map(row => ({
+					id: Math.floor(row.id),
+					count: Math.floor(row.count)
+				})).sort((a, b) => a.id - b.id);
+			}
+
+			function attachmentRewardText(items = []) {
+				const rows = normalizeAttachmentRows(items);
+				return rows.length ? rows.map(row => `item${row.id} x${fmt(row.count)}`).join('，') : "Chưa được định cấu hình";
+			}
+
+			function parseMailAttachments() {
+				return normalizeAttachmentRows(String($('mailAttachments').value || '').split(/[\n;,，]+/).map(part => {
+					const arr = String(part || '').trim().split(/[:：*xX\s]+/).filter(Boolean);
+					return { id: arr[0], count: arr[1] };
+				}));
+			}
+
+			function updateMailScope() {
+				const isServer = $('mailScope').value === 'server';
+				$('mailUsersBox').style.display = isServer ? 'none' : '';
+				$('mailServerBox').style.display = isServer ? '' : 'none';
+			}
+
+			function fillMailTargetsFromSelection() {
+				const ids = selectedPlayerIds();
+				if (!ids.length) return msg("Vui lòng chọn người chơi trong danh sách người chơi trước", false);
+				$('mailScope').value = 'users';
+				updateMailScope();
+				$('mailUserIds').value = ids.join('\n');
+				msg(`Đã mang vào rồi${ids.length}người chơi`);
+			}
+
+			function clearMailSearch() {
+				$('mailUserFilter').value = '';
+				$('mailBatchFilter').value = '';
+				loadMails();
+			}
+
+			function renderMailTarget(row) {
+				if (row.targetType === 'server') return `Khối${row.targetServerId || '-'}`;
+				return row.userId || '-';
+			}
+
+			async function loadMails() {
+				$('mailWrap').innerHTML = "<div class=\"loading\">Đang tải bản ghi thư...</div>";
+				try {
+					const q = new URLSearchParams();
+					if (str('mailUserFilter')) q.set('userId', str('mailUserFilter'));
+					if (str('mailBatchFilter')) q.set('batchId', str('mailBatchFilter'));
+					q.set('limit', '80');
+					const d = await api('GET', '/api/admin/mails?' + q.toString());
+					const rows = Array.isArray(d.mails) ? d.mails : [];
+					$('mailTotal').textContent = rows.length;
+					$('mailUnread').textContent = rows.filter(row => !row.read).length;
+					$('mailClaimed').textContent = rows.filter(row => row.claimed).length;
+					if (!rows.length) {
+						$('mailWrap').innerHTML = "<div class=\"empty\"> Không có bản ghi chữ cái </div>";
+						return;
+					}
+					$('mailWrap').innerHTML = `<table><thead><tr><th> mục tiêu </th><th> tiêu đề / Nội dung </th><th> Tệp đính kèm </th><th> Lô </th><th> Trạng thái </th><th> Thời gian </th></tr></thead><tbody>${rows.map(row=>`<tr><td><b>${esc(renderMailTarget(row))}</b><span class="sub">userId: ${esc(row.userId||'-')}</span></td><td><b>${esc(row.title||'-')}</b><span class="sub">${esc(row.content||'')}</span><span class="sub">Người gửi:${esc(row.sender||'-')}</span></td><td>${esc(attachmentRewardText(row.attachments||[]))}</td><td><span class="sub">${esc(row.batchId||'-')}</span><span class="sub"> Toán tử:${esc(row.createdBy||'-')}</span></td><td>${row.read?"<span class=\"tag tb\"> đã đọc </span>":"<span class=\"tag to\"> chưa đọc</span>"}${row.claimed?"<span class=\"tag tg\"> đã nhận được </span>":"<span class=\"tag tr\"> không nhận được </span>"}</td><td><div>${date(row.createdAt)}</div><span class="sub">EĐã hết hạn${date(row.expireAt)}</span></td></tr>`).join('')}</tbody></table>`;
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('mailWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+					msg("Không tải được thư:" + e.message, false);
+				}
+			}
+
+			async function sendMail() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền gửi tin nhắn", false);
+				const scope = $('mailScope').value;
+				const body = compact({
+					scope,
+					userIds: scope === 'users' ? $('mailUserIds').value : undefined,
+					serverId: scope === 'server' ? num('mailServerId') : undefined,
+					title: str('mailTitle'),
+					content: $('mailContent').value,
+					sender: str('mailSender') || "Hệ thống",
+					attachments: parseMailAttachments(),
+					minClaimLevel: num('mailMinLevel'),
+					expireDays: num('mailExpireDays') || 30,
+					reason: str('mailReason')
+				});
+				if (!body.title || !body.content) return msg("Vui lòng điền tiêu đề và nội dung", false);
+				if (scope === 'users' && !String(body.userIds || '').trim()) return msg("Vui lòng điền mục tiêu userId", false);
+				if (scope === 'server' && !body.serverId) return msg("Vui lòng điền vào vùng mục tiêu serverId", false);
+				if (!confirm(scope === 'server' ? `Xác định cho huyện${body.serverId}Đẩy thư?` : "Bạn có chắc chắn muốn gửi email đến người chơi được chỉ định không?")) return;
+				try {
+					const d = await api('POST', '/api/admin/mails/send', body);
+					msg(`Thư gửi:${fmt(d.total || 0)}niêm phong`);
+					$('mailBatchFilter').value = d.batchId || '';
+					loadMails();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					const m = { MAIL_TARGET_NOT_FOUND: "Có một mục tiêu không xác định userId", MAIL_TARGET_EMPTY: "Không có người chơi nào trong phạm vi mục tiêu", SERVER_ID_REQUIRED: "Vui lòng điền ID khu vực hợp lệ", MAIL_TARGET_REQUIRED: "Vui lòng điền mục tiêu userId", MAIL_TITLE_REQUIRED: "Vui lòng điền tiêu đề", MAIL_CONTENT_REQUIRED: "Vui lòng điền văn bản" };
+					msg(m[e.message] || ("Không gửi được tin nhắn:" + e.message), false);
+				}
+			}
+
+			function addRechargeAttachmentRow(item = {}) {
+				rechargeAttachmentRow += 1;
+				const rowId = `rc_attach_${rechargeAttachmentRow}`;
+				const wrap = $('rc_attachments');
+				if (!wrap) return;
+				const row = document.createElement('div');
+				row.id = rowId;
+				row.className = 'inline';
+				row.style.marginBottom = '8px';
+				row.innerHTML = `<input class="rc-attach-id" type="number" min="1" placeholder="Prop ID" value="${Number(item.id || 0) > 0 ? Math.floor(Number(item.id || 0)) : ''}" style="flex:1;min-width:120px"><input class="rc-attach-count" type="number" min="1" placeholder="number" value="${Number(item.count || 0) > 0 ? Math.floor(Number(item.count || 0)) : ''}" style="flex:1;min-width:120px"><button class="btn r" type="button" onclick="removeRechargeAttachmentRow('${rowId}')">Xóa </button>`;
+				wrap.appendChild(row);
+			}
+
+			function renderRechargeAttachmentRows(items = []) {
+				const wrap = $('rc_attachments');
+				if (!wrap) return;
+				wrap.innerHTML = '';
+				normalizeAttachmentRows(items).forEach(item => addRechargeAttachmentRow(item));
+				if (!wrap.children.length) addRechargeAttachmentRow();
+			}
+
+			function quickAddRechargeAttachmentRow() {
+				const id = Number($('rc_addItemId').value || 0);
+				const count = Number($('rc_addItemCount').value || 0);
+				if (!(id > 0) || !(count > 0)) return msg("Vui lòng điền ID và số lượng prop hợp lệ trước", false);
+				addRechargeAttachmentRow({ id, count });
+				$('rc_addItemId').value = '';
+				$('rc_addItemCount').value = '';
+			}
+
+			function removeRechargeAttachmentRow(rowId) {
+				const row = $(rowId);
+				if (row) row.remove();
+				const wrap = $('rc_attachments');
+				if (wrap && !wrap.children.length) addRechargeAttachmentRow();
+			}
+
+			function collectRechargeAttachments() {
+				return normalizeAttachmentRows(Array.from(document.querySelectorAll('#rc_attachments .inline')).map(row => ({
+					id: Number((row.querySelector('.rc-attach-id') || {}).value || 0),
+					count: Number((row.querySelector('.rc-attach-count') || {}).value || 0)
+				})));
+			}
+
+			function setJsonField(id, value) {
+				const el = $(id);
+				if (!el) return;
+				try {
+					el.value = value == null ? '' : JSON.stringify(value, null, 2);
+				} catch (_err) {
+					el.value = '';
+				}
+			}
+
+			function parseJsonField(id, fallback) {
+				const raw = String($(id).value || '').trim();
+				if (!raw) return fallback;
+				return JSON.parse(raw);
+			}
+
+			function renderAttrRows(rows = []) {
+				const box = $('f_attrRows');
+				if (!box) return;
+				const arr = Array.isArray(rows) ? rows.filter(row => row && Number(row.value || 0) > 0) : [];
+				if (!arr.length) {
+					box.innerHTML = "<div class=\"hint\"> chưa có dữ liệu thuộc tính </div>";
+					return;
+				}
+				box.innerHTML = arr.map(row => `<div class="mini-row"><b>${esc(row.name || ("tài sản#" + (row.id || '')))}</b><span class="sub">ID: ${esc(row.id || '')}/ giá trị:${fmt(row.value)}</span>${row.power ? `Hệ số sức chiến đấu <span class="sub">:${esc(row.power)}</span>` : ''}</div>`).join('');
+			}
+
+			function renderEquipRows(rows = []) {
+				const box = $('f_equipRows');
+				if (!box) return;
+				const arr = Array.isArray(rows) ? rows : [];
+				if (!arr.length) {
+					box.innerHTML = "<div class=\"hint\"> Không có dữ liệu thiết bị </div>";
+					return;
+				}
+				box.innerHTML = arr.map(row => {
+					const attrs = Array.isArray(row.attrs) && row.attrs.length
+						? row.attrs.slice(0, 4).map(a => `${esc(a.name || ("tài sản#" + (a.id || '')))} +${fmt(a.value)}`).join('，')
+						: "Không có thuộc tính";
+					return `<div class="mini-row"><b>${row.equipped ? "Rách nát ·" : ''}${esc(row.name || ("thiết bị#" + (row.id || '')))}</b><span class="sub">UID: ${esc(row.uid || '')} / ID: ${esc(row.id || '')} / ${esc(row.slot || ("các bộ phận" + (row.type || '')))}Chất lượng </span><span class="sub">:${esc(row.quality || 1)}/ Mức độ:${esc(row.level || 1)} / ${esc(row.location || '')}</span><span class="sub">${attrs}${Array.isArray(row.attrs) && row.attrs.length > 4 ? ' ...' : ''}</span></div>`;
+				}).join('');
+			}
+
+			function taskStatusLabel(v) {
+				const n = Number(v || 0);
+				if (n >= 30) return "Hoàn thành";
+				if (n >= 20) return "Có sẵn để sưu tập";
+				return "đang tiến hành";
+			}
+
+			function taskTypeLabel(v) {
+				const n = Number(v || 0);
+				return {
+					1: "nhiệm vụ chính",
+					2: "nhiệm vụ phụ",
+					3: "công việc hàng ngày",
+					4: "Nhiệm vụ cảnh giới",
+					5: "Nhiệm vụ hoạt động",
+					6: "Hoạt động tích lũy"
+				}[n] || `kiểu${n||0}`;
+			}
+
+			const counterAliasMap = {
+				bagelConsume: "Số bánh tiêu thụ",
+				equipSaleCount: "Số lần bán thiết bị",
+				equipSaleSilver: "Thiết bị được bán bằng đồng bạc",
+				mainlineChallengeCount: "Số thách thức chính",
+				arenaChallengeCount: "Số lượng thử thách đấu trường",
+				spiritUpgradeCount: "Số lần nâng cấp Pháp",
+				farmPlantCount: "Số lần gieo hạt ở Lăng Thiên",
+				farmHarvestCount: "Số vụ thu hoạch trên cánh đồng tâm linh",
+				farmStealCount: "Số lượng lĩnh vực tâm linh bị đánh cắp",
+				alchemyGenerateCount: "Số lượng đầu ra của thuật giả kim",
+				farmRobberFightCount: "Số lượng chuột đánh nhau",
+				mountRideCount: "Số lần cưỡi ngựa",
+				mountSummonCount: "Số lần triệu hồi thú cưỡi",
+				mountUpgradeCount: "Số lần nâng cấp thú cưỡi",
+				guildJoinCount: "Số lần tham gia Liên Minh Tiên",
+				petComposeCount: "Số lần tổng hợp thú cưng",
+				petWashCount: "Thời gian huấn luyện thú cưng",
+				fishCount: "thời gian câu cá",
+				fishRodUpgradeCount: "Số lần nâng cấp cần câu",
+				fishOrderCompleteCount: "Số đơn hàng câu cá đã hoàn thành",
+				gemObtainCount: "Số lượng đá quý thu được",
+				gemComposeCount: "Số lần đá quý được tổng hợp",
+				artifactUpgradeCount: "Số lần nâng cấp hiện vật"
+			};
+
+			function counterAlias(key) {
+				return counterAliasMap[key] || key || "quầy không tên";
+			}
+
+			function groupTaskRows(rows = []) {
+				const groups = [{ key: 'main', label: "nhiệm vụ chính", match: row => Number(row.type || 0) === 1 }, { key: 'side', label: "nhiệm vụ phụ", match: row => Number(row.type || 0) === 2 }, { key: 'realm', label: "Nhiệm vụ cảnh giới", match: row => Number(row.type || 0) === 4 }, { key: 'other', label: "Nhiệm vụ khác", match: row => ![1, 2, 4].includes(Number(row.type || 0)) }];
+				return groups.map(group => ({ ...group, rows: rows.filter(group.match) }));
+			}
+
+			function buildTaskEditorRow(row = {}) {
+				const el = document.createElement('div');
+				el.className = 'task-row-edit';
+				el.innerHTML = `<div class="task-row-head"><div><b>${esc(row.name||("Nhiệm vụ#"+(row.id||'')))}</b><span class="sub">${esc(row.typeLabel||taskTypeLabel(row.type))} · ${esc(taskStatusLabel(row.status))}${row.isCurrentStageTask?"· Cấp độ hiện tại":''}</span></div><button class="btn g" type="button">Remove</button></div><div class="task-mini-grid"><div class="fg"><label>Task ID</label><input data-task-field="id" type="number" min="1" value="${Number(row.id||0)||''}"></div><div class="fg"><label> loại </label><input data-task-field="type" type="number" min="0" value="${Number(row.type||0)||''}"></div><div class="fg"><label>Progress </label><input data-task-field="progress" type="number" min="0" value="${Number(row.progress||0)}"></div><div class="fg"><label> mục tiêu </label><input data-task-field="target" type="number" min="0" value="${Number(row.target||0)}"></div><div class="fg"><label> Trạng thái </label><select data-task-field="status"><option value="10"> Đang tiến hành (10) </option><option value="20"> Có sẵn để thu thập (20) </option><option value="30"> Đã hoàn thành(30)</option></select></div><div class="fg"><label>activeId</label><input data-task-field="activeId" type="number" min="0" value="${Number(row.activeId||0)||''}"></div><div class="fg full"><label>Nhận xét</label><input data-task-field="name" value="${esc(row.name||'')}" placeholder="Chỉ hiển thị ở chế độ nền, không có cấu hình nào được ghi"></div></div>`;
+				const btn = el.querySelector('button');
+				if (btn) btn.onclick = () => el.remove();
+				const status = el.querySelector('[data-task-field="status"]');
+				if (status) status.value = String(Number(row.status || 10));
+				if (row.isCurrentStageTask) el.setAttribute('data-current-stage-task', '1');
+				return el;
+			}
+
+			function buildCounterEditorRow(key = '', value = 0) {
+				const el = document.createElement('div');
+				el.className = 'counter-row-edit';
+				el.innerHTML = `<div class="fg"><label>${esc(counterAlias(key))}</label><input data-counter-field="key" value="${esc(key)}" placeholder="chẳng hạn như farmPlantCount"></div><div class="fg"><label> giá trị </label><input data-counter-field="value" type="number" min="0" value="${Number(value||0)}"></div><button class="btn g" type="button">Xóa </button>`;
+				const btn = el.querySelector('button');
+				if (btn) btn.onclick = () => el.remove();
+				const keyInput = el.querySelector('[data-counter-field="key"]');
+				const label = el.querySelector('label');
+				if (keyInput && label) keyInput.addEventListener('input', () => { label.textContent = counterAlias(String(keyInput.value || '').trim()); });
+				return el;
+			}
+
+			function renderTaskManagement(p = {}) {
+				const taskBox = $('taskEditorRows');
+				const counterBox = $('counterEditorRows');
+				if (taskBox) taskBox.innerHTML = '';
+				if (counterBox) counterBox.innerHTML = '';
+				const taskProgress = p.taskProgress || {};
+				const rows = Array.isArray(taskProgress.rows) ? taskProgress.rows : [];
+				const currentStageTaskIds = new Set(Array.isArray(taskProgress.currentStageTaskIds) ? taskProgress.currentStageTaskIds.map(Number) : []);
+				const currentStageRows = rows.filter(row => currentStageTaskIds.has(Number(row.id || 0)) || row.isCurrentStageTask);
+				const otherRows = rows.filter(row => !currentStageTaskIds.has(Number(row.id || 0)) && !row.isCurrentStageTask);
+				if (taskBox) {
+					if (currentStageRows.length) {
+						const wrap = document.createElement('div');
+						wrap.className = 'task-group';
+						wrap.innerHTML = `<h4>${esc(taskProgress.currentStageName || "Nhiệm vụ cấp hiện tại")} (${currentStageRows.length})</h4><div class="task-group-list"></div>`;
+						const list = wrap.querySelector('.task-group-list');
+						currentStageRows.forEach(row => list.appendChild(buildTaskEditorRow({ ...row, isCurrentStageTask: true })));
+						taskBox.appendChild(wrap);
+					}
+					groupTaskRows(otherRows).forEach(group => {
+						if (!group.rows.length) return;
+						const wrap = document.createElement('div');
+						wrap.className = 'task-group';
+						wrap.setAttribute('data-group', group.key);
+						wrap.innerHTML = `<h4>${esc(group.label)} (${group.rows.length})</h4><div class="task-group-list"></div>`;
+						const list = wrap.querySelector('.task-group-list');
+						group.rows.forEach(row => list.appendChild(buildTaskEditorRow(row)));
+						taskBox.appendChild(wrap);
+					});
+					if (!rows.length) taskBox.innerHTML = "<div class=\"hint\"> hiện không có nhiệm vụ nào. Nhấp vào nút bên dưới để thêm nó theo cách thủ công. </div>";
+				}
+				const counters = taskProgress.counters && typeof taskProgress.counters === 'object' ? taskProgress.counters : {};
+				Object.keys(counters).forEach(key => counterBox.appendChild(buildCounterEditorRow(key, counters[key])));
+				if (counterBox && !Object.keys(counters).length) counterBox.innerHTML = "<div class=\"hint\"> hiện không có bộ đếm nhiệm vụ chính. Nhấp vào nút bên dưới để thêm nó theo cách thủ công. </div>";
+			}
+
+			function addTaskEditorRow() {
+				const box = $('taskEditorRows');
+				if (!box) return;
+				if (box.querySelector('.hint')) box.innerHTML = '';
+				let group = box.querySelector('.task-group[data-group="other"] .task-group-list');
+				if (!group) {
+					const wrap = document.createElement('div');
+					wrap.className = 'task-group';
+					wrap.setAttribute('data-group', 'other');
+					wrap.innerHTML = "<h4>Nhiệm vụ khác</h4><div class=\"task-group-list\"></div>";
+					box.appendChild(wrap);
+					group = wrap.querySelector('.task-group-list');
+				}
+				group.appendChild(buildTaskEditorRow({ type: 0, typeLabel: "Nhiệm vụ cần nhóm", status: 10, progress: 0, target: 1 }));
+			}
+
+			function addCounterEditorRow() {
+				const box = $('counterEditorRows');
+				if (!box) return;
+				if (box.querySelector('.hint')) box.innerHTML = '';
+				box.appendChild(buildCounterEditorRow('', 0));
+			}
+
+			function collectTaskEditorRows() {
+				const tasks = {};
+				document.querySelectorAll('#taskEditorRows .task-row-edit').forEach(row => {
+					const getVal = name => row.querySelector(`[data-task-field="${name}"]`);
+					const id = Number(getVal('id') && getVal('id').value || 0);
+					if (!id) return;
+					tasks[String(id)] = {
+						id,
+						type: Math.max(0, Number(getVal('type') && getVal('type').value || 0)),
+						progress: Math.max(0, Number(getVal('progress') && getVal('progress').value || 0)),
+						target: Math.max(0, Number(getVal('target') && getVal('target').value || 0)),
+						status: Math.max(10, Number(getVal('status') && getVal('status').value || 10))
+					};
+				});
+				return tasks;
+			}
+
+			function collectCounterEditorRows() {
+				const counters = {};
+				document.querySelectorAll('#counterEditorRows .counter-row-edit').forEach(row => {
+					const keyInput = row.querySelector('[data-counter-field="key"]');
+					const valueInput = row.querySelector('[data-counter-field="value"]');
+					const key = String(keyInput && keyInput.value || '').trim();
+					if (!key) return;
+					const val = Number(valueInput && valueInput.value || 0);
+					counters[key] = Number.isFinite(val) ? Math.max(0, Math.floor(val)) : 0;
+				});
+				return counters;
+			}
+
+			function openTaskManager() {
+				$('taskO').classList.add('on');
+			}
+
+			function closeTaskManager() {
+				$('taskO').classList.remove('on');
+			}
+
+			function openBatchCreate() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền tạo người chơi theo đợt", false);
+				$('batchO').classList.add('on');
+			}
+
+			function closeBatchCreate() {
+				$('batchO').classList.remove('on');
+			}
+
+			function selectedPlayerIds() {
+				return Array.from(selectedPlayers.values());
+			}
+
+			function updateSelectedPlayersTip() {
+				$('selectedPlayersTip').textContent = `Đã chọn${selectedPlayers.size}người chơi`;
+				const all = Array.from(document.querySelectorAll('.player-check'));
+				const checked = all.length > 0 && all.every(el => el.checked);
+				if ($('checkAllPlayers')) $('checkAllPlayers').checked = checked;
+				if ($('checkAllPlayersHead')) $('checkAllPlayersHead').checked = checked;
+			}
+
+			function togglePlayerCheck(uid, checked) {
+				checked ? selectedPlayers.add(uid) : selectedPlayers.delete(uid);
+				updateSelectedPlayersTip();
+			}
+
+			function toggleAllPlayerChecks(checked) {
+				document.querySelectorAll('.player-check').forEach(el => {
+					el.checked = !!checked;
+					checked ? selectedPlayers.add(el.value) : selectedPlayers.delete(el.value);
+				});
+				updateSelectedPlayersTip();
+			}
+
+			async function batchCreatePlayers() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền tạo người chơi theo đợt", false);
+				try {
+					const d = await api('POST', '/api/admin/players/batch-create', {
+						count: num('b_count'),
+						startIndex: num('b_startIndex'),
+						userPrefix: str('b_userPrefix'),
+						namePrefix: str('b_namePrefix')
+					});
+					msg(`Tạo hàng loạt thành công, việc tạo này${fmt(d.count||0)}người chơi`);
+					$('b_startIndex').value = Number(d.nextIndex || num('b_startIndex') || 1);
+					closeBatchCreate();
+					loadPlayers(1);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Tạo hàng loạt không thành công:" + e.message, false);
+				}
+			}
+
+			function batchOpenGive() {
+				if (!hasPerm('giveItems')) return msg("Tài khoản hiện tại không có quyền phát hành hàng loạt", false);
+				const ids = selectedPlayerIds();
+				if (!ids.length) return msg("Vui lòng chọn người chơi trước", false);
+				openGive(ids);
+				msg(`Cửa sổ bật lên phân phối hàng loạt đã được mở, người chơi mục tiêu${ids.length}cá nhân`);
+			}
+
+			async function batchDeletePlayers() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền xóa người chơi hàng loạt", false);
+				const ids = selectedPlayerIds();
+				if (!ids.length) return msg("Vui lòng chọn người chơi trước", false);
+				if (!confirm(`Xác nhận xóa hàng loạt${ids.length}Một cầu thủ?`)) return;
+				let ok = 0;
+				for (const uid of ids) {
+					try {
+						await api('DELETE', `/api/admin/players/${uid}`);
+						ok += 1;
+						selectedPlayers.delete(uid);
+					} catch (_err) {}
+				}
+				updateSelectedPlayersTip();
+				msg(`Xóa hàng loạt hoàn tất, thành công${ok} / ${ids.length}`);
+				loadPlayers(page);
+			}
+
+			async function unlockAllSystems(uid, playerName) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền mở khóa hệ thống", false);
+				if (!uid) return msg("Thiếu ID người chơi", false);
+				if (!confirm(`Đã xác nhận là người chơi"${playerName || uid}"Mở khóa tất cả hệ thống chỉ bằng một cú nhấp chuột?"`)) return;
+				try {
+					await api('POST', `/api/admin/players/${uid}/unlock-all-systems`);
+					msg(`Đã dành cho${playerName || uid}Mở khóa tất cả hệ thống`);
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể mở khóa hệ thống chỉ bằng một cú nhấp chuột:" + e.message, false)
+				}
+			}
+
+			async function adminMutePlayer(uid, namev) {
+				const reason = prompt(`Vui lòng nhập người chơi bị cấm"${namev || uid}"Lý do`, "Vi phạm quy tắc trò chuyện");
+				if (reason === null) return;
+				const hoursText = prompt("Thời lượng tắt tiếng (giờ), để trống hoặc 0 có nghĩa là vĩnh viễn", '24');
+				if (hoursText === null) return;
+				try {
+					await api('POST', `/api/admin/players/${encodeURIComponent(uid)}/mute`, { reason, durationHours: Number(hoursText || 0) || 0 });
+					msg("Người chơi đã bị cấm và email hệ thống đã được gửi");
+					loadPlayers(page);
+					if (tabName === 'chats') loadChats();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Lệnh cấm không thành công:" + e.message, false);
+				}
+			}
+
+			async function adminUnmutePlayer(uid, namev) {
+				const reason = prompt(`Vui lòng nhập "Xóa người chơi"${namev || uid}“Lý do cấm`, "Bỏ cấm nền");
+				if (reason === null) return;
+				try {
+					await api('POST', `/api/admin/players/${encodeURIComponent(uid)}/unmute`, { reason });
+					msg("Người chơi đã được gỡ cấm và email hệ thống đã được gửi");
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể bỏ chặn:" + e.message, false);
+				}
+			}
+
+			async function adminBanPlayerAccount(uid, namev) {
+				const reason = prompt(`Vui lòng nhập tài khoản người chơi bị cấm"${namev || uid}"Lý do`, "Vi phạm quy tắc người chơi");
+				if (reason === null) return;
+				if (!confirm(`Xác nhận cấm tài khoản người chơi"${namev || uid}"? Tài khoản không thể đăng nhập sau khi bị cấm.`)) return;
+				try {
+					await api('POST', `/api/admin/players/${encodeURIComponent(uid)}/ban-account`, { reason });
+					msg("Tài khoản người chơi đã bị cấm và email hệ thống đã được gửi");
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể cấm tài khoản:" + e.message, false);
+				}
+			}
+
+			async function adminUnbanPlayerAccount(uid, namev) {
+				const reason = prompt(`Vui lòng nhập để bỏ chặn tài khoản người chơi"${namev || uid}"Lý do`, "Bỏ cấm tài khoản ở chế độ nền");
+				if (reason === null) return;
+				try {
+					await api('POST', `/api/admin/players/${encodeURIComponent(uid)}/unban-account`, { reason });
+					msg("Tài khoản người chơi đã được bỏ chặn và email hệ thống đã được gửi");
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể bỏ chặn tài khoản:" + e.message, false);
+				}
+			}
+
+			async function adminBanAgent(agentId, username) {
+				const reason = prompt(`Vui lòng nhập tài khoản đại lý bị cấm"${username || agentId}"Lý do`, "Cấm tài khoản đại lý trong nền");
+				if (reason === null) return;
+				try {
+					await api('POST', `/api/admin/agents/${encodeURIComponent(agentId)}/ban`, { reason, note: reason });
+					msg("Tài khoản đại lý đã bị cấm");
+					loadAgents();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không cấm được proxy:" + e.message, false);
+				}
+			}
+
+			async function adminUnbanAgent(agentId, username) {
+				const reason = prompt(`Vui lòng nhập tài khoản đại lý bỏ chặn"${username || agentId}"Lý do`, "Bỏ chặn proxy ở chế độ nền");
+				if (reason === null) return;
+				try {
+					await api('POST', `/api/admin/agents/${encodeURIComponent(agentId)}/unban`, { reason });
+					msg("Tài khoản đại lý đã được bỏ chặn");
+					loadAgents();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không bỏ chặn được proxy:" + e.message, false);
+				}
+			}
+
+			async function batchUnlockAllSystems() {
+				const ids = selectedPlayerIds();
+				if (!ids.length) return msg("Vui lòng chọn người chơi trước", false);
+				if (!confirm(`Xác nhận như đã chọn${ids.length}Người chơi có thể mở khóa tất cả các hệ thống chỉ bằng một cú nhấp chuột không?`)) return;
+				try {
+					const d = await api('POST', '/api/admin/players/batch-unlock-all-systems', { userIds: ids });
+					const failedCount = Number(d.failedCount || 0);
+					const failedTip = failedCount > 0 ? `,thất bại${fmt(failedCount)}` : '';
+					msg(`Mở khóa hàng loạt hoàn tất, thành công${fmt(d.successCount || 0)} / ${fmt(d.total || ids.length)}${failedTip}`);
+					if (failedCount > 0) {
+						const firstFailed = Array.isArray(d.failed) && d.failed.length ? d.failed[0] : null;
+						msg(`có${fmt(failedCount)}người chơi chưa mở khóa${firstFailed ? `,Ví dụ${firstFailed.userId}: ${firstFailed.reason}` : ''}`, false);
+					}
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Mở khóa tính năng hàng loạt không thành công:" + e.message, false)
+				}
+			}
+
+			function confirmClearGameData(text) {
+				if (!confirm(`${text}Thao tác này chỉ xóa dữ liệu trò chơi và không xóa tài khoản người chơi cũng như ánh xạ nhân vật.`)) return false;
+				return confirm(`Xác nhận lần thứ hai:${text}Sau khi xóa trò chơi, tiến trình trò chơi, tài sản, nhiệm vụ, ràng buộc nhân vật máy chủ khu vực, v.v. của người chơi sẽ bị xóa và không thể khôi phục. Bạn có chắc chắn muốn tiếp tục không?`);
+			}
+
+			async function submitClearGameData(payload, successText) {
+				try {
+					const d = await api('POST', '/api/admin/players/clear-game-data', {
+						...payload,
+						confirmText: 'CLEAR_GAME_DATA'
+					});
+					const failedCount = Number(d.failedCount || 0);
+					const failedTip = failedCount > 0 ? `,thất bại${fmt(failedCount)}` : '';
+					msg(`${successText},thành công${fmt(d.successCount || 0)} / ${fmt(d.total || 0)}${failedTip}`);
+					selectedPlayers.clear();
+					updateSelectedPlayersTip();
+					loadPlayers(1);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("xóa dữ liệu game không thành công:" + e.message, false);
+				}
+			}
+
+			async function clearSelectedGameData() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền xóa dữ liệu người chơi", false);
+				const ids = selectedPlayerIds();
+				if (!ids.length) return msg("Vui lòng chọn người chơi trước", false);
+				const serverText = prompt("Nếu bạn cần giới hạn một khu vực nhất định, vui lòng nhập ID khu vực; để trống có nghĩa là không có hạn chế theo khu vực hoặc máy chủ.", '');
+				if (serverText === null) return;
+				const serverId = Number(String(serverText || '').trim() || 0);
+				const zoneTip = serverId > 0 ? `(giới hạn${serverId}huyện)` : '';
+				if (!confirmClearGameData(`Xác nhận việc dọn dẹp đã được chọn${ids.length}người chơi${zoneTip}?`)) return;
+				await submitClearGameData({ scope: 'selected', userIds: ids, serverId }, "Việc xóa người chơi đã chọn hoàn tất");
+			}
+
+			async function clearAllGameData() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền xóa dữ liệu người chơi", false);
+				const serverText = prompt("Nhập ID khu vực để xóa tất cả người chơi trong khu vực; để trống để xóa tất cả người chơi trong máy chủ.", '');
+				if (serverText === null) return;
+				const serverId = Number(String(serverText || '').trim() || 0);
+				const scope = serverId > 0 ? 'server' : 'all';
+				const targetText = scope === 'server' ? `${serverId}Tất cả người chơi trong khu vực` : "Tất cả người chơi ở tất cả các máy chủ";
+				if (!confirmClearGameData(`Xác nhận giải phóng tập tin${targetText}?`)) return;
+				await submitClearGameData({ scope, serverId }, `${targetText}Hoàn tất xóa dữ liệu game`);
+			}
+
+			async function unlockAllSystemsFromEdit() {
+				const uid = String($('eu').value || '').trim();
+				const playerName = String($('f_name').value || '').trim() || uid;
+				const btn = $('f_unlockAllSystemsBtn');
+				if (btn && btn.disabled) return msg("Trình phát này đã được mở khóa toàn bộ, không cần lặp lại thao tác");
+				if (!uid) return msg("Trước tiên hãy mở cửa sổ bật lên chỉnh sửa Người chơi", false);
+				if (!confirm(`Đã xác nhận là người chơi"${playerName}"Mở khóa tất cả hệ thống chỉ bằng một cú nhấp chuột?"`)) return;
+				try {
+					await api('POST', `/api/admin/players/${uid}/unlock-all-systems`);
+					msg(`Đã dành cho${playerName}Mở khóa tất cả hệ thống`);
+					await openEdit(uid);
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể mở khóa hệ thống trong cửa sổ bật lên:" + e.message, false)
+				}
+			}
+
+			function taskMarkCurrentStage(status) {
+				document.querySelectorAll('#taskEditorRows [data-current-stage-task="1"]').forEach(row => {
+					const statusInput = row.querySelector('[data-task-field="status"]');
+					const progressInput = row.querySelector('[data-task-field="progress"]');
+					const targetInput = row.querySelector('[data-task-field="target"]');
+					if (statusInput) statusInput.value = String(status);
+					if (progressInput && targetInput && Number(status) >= 20) progressInput.value = targetInput.value || '0';
+				});
+			}
+
+			function taskSyncCurrentStageTargets() {
+				document.querySelectorAll('#taskEditorRows [data-current-stage-task="1"]').forEach(row => {
+					const progressInput = row.querySelector('[data-task-field="progress"]');
+					const targetInput = row.querySelector('[data-task-field="target"]');
+					const statusInput = row.querySelector('[data-task-field="status"]');
+					if (statusInput && Number(statusInput.value || 0) >= 20 && progressInput && targetInput) progressInput.value = targetInput.value || '0';
+				});
+				msg("Giá trị mục tiêu nhiệm vụ cấp hiện tại đã được đồng bộ hóa");
+			}
+
+			function closeAll() {
+				['editO', 'taskO', 'giveO', 'batchO', 'rechargeO', 'rechargeConfigO', 'redeemO', 'delO', 'srvO'].forEach(id => $(id).classList.remove('on'))
+			}
+
+			function setLogin(show) {
+				$('logO').classList.toggle('on', show);
+				$('logoutBtn').style.display = show ? 'none' : '';
+				const label = currentUser ? `${currentUser.displayName||currentUser.username||'-'} · ${isAdmin() ? "quản trị viên" : "đại lý"}` : '';
+				$('loginStatus').textContent = show ? '' : `Đã đăng nhập:${label}`;
+			}
+			async function api(method, path, body) {
+				const opt = {
+					method,
+					headers: {
+						'Content-Type': 'application/json',
+						Authorization: 'Bearer ' + tok()
+					}
+				};
+				if (body !== undefined) opt.body = JSON.stringify(body);
+				const r = await fetch(location.origin + GAME_PROXY_PREFIX + path, opt);
+				if (r.status === 401) {
+					sessionStorage.removeItem('admin_token');
+					sessionStorage.removeItem('admin_user');
+					currentUser = null;
+					setLogin(true);
+					throw new Error('SESSION_EXPIRED');
+				}
+				let d = {};
+				try {
+					d = await r.json()
+				} catch {}
+				if (!r.ok) throw new Error(d.error || ('HTTP ' + r.status));
+				return d;
+			}
+			async function login() {
+				const username = str('lu'),
+					password = $('lp').value,
+					err = $('le');
+				err.textContent = '';
+				if (!username || !password) {
+					err.textContent = "Vui lòng nhập tên người chơi và mật khẩu";
+					return;
+				}
+				try {
+					const r = await fetch(location.origin + GAME_PROXY_PREFIX + '/api/admin/auth/login', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify({
+							username,
+							password
+						})
+					});
+					const d = await r.json();
+					if (!r.ok) {
+						err.textContent = {
+							INVALID_CREDENTIALS: "Tên đăng nhập hoặc mật khẩu không đúng",
+							ADMIN_PASSWORD_NOT_SET: "Mật khẩu quản trị không được cấu hình trên máy chủ",
+							AGENT_DISABLED: "Tài khoản đại lý đã bị vô hiệu hóa"
+						} [d.error] || d.error || "Đăng nhập không thành công";
+						return;
+					}
+					setTok(d.token || '');
+					currentUser = d.user || {
+						username,
+						displayName: username,
+						role: 'admin',
+						permissions: {
+							giveItems: true,
+							recharge: true
+						}
+					};
+					setUser(currentUser);
+					applyRoleView();
+					setLogin(false);
+					$('lp').value = '';
+					tab(tabName);
+				} catch (e) {
+					err.textContent = "Lỗi mạng:" + e.message;
+				}
+			}
+			async function logout() {
+				try {
+					if (tok()) await fetch(location.origin + GAME_PROXY_PREFIX + '/api/admin/auth/logout', {
+						method: 'POST',
+						headers: {
+							Authorization: 'Bearer ' + tok()
+						}
+					})
+				} catch {}
+				sessionStorage.removeItem('admin_token');
+				sessionStorage.removeItem('admin_user');
+				currentUser = null;
+				setLogin(true)
+			}
+			async function auth() {
+				currentUser = getSavedUser();
+				applyRoleView();
+				if (!tok()) {
+					setLogin(true);
+					return;
+				}
+				try {
+					const r = await fetch(location.origin + GAME_PROXY_PREFIX + '/api/admin/auth/me', {
+						headers: {
+							Authorization: 'Bearer ' + tok()
+						}
+					});
+					if (r.status === 401) {
+						sessionStorage.removeItem('admin_token');
+						sessionStorage.removeItem('admin_user');
+						currentUser = null;
+						setLogin(true);
+						return;
+					}
+					const d = await r.json();
+					currentUser = d.user || currentUser;
+					setUser(currentUser);
+					applyRoleView();
+					setLogin(false);
+					tab(tabName);
+				} catch {
+					setLogin(true)
+				}
+			}
+
+			function tab(n) {
+				n = normalizeModuleName(n);
+				if (!isAdmin() && (n === 'servers' || n === 'agents' || n === 'rechargeConfigs' || n === 'redeemCodes' || n === 'mails' || n === 'chats')) n = 'players';
+				if (standaloneModule && n !== standaloneModule) n = standaloneModule;
+				tabName = n;
+				sessionStorage.setItem('admin_tab', n);
+				if (location.hash.slice(1) !== n) history.replaceState(null, '', `${location.pathname}${location.search}#${n}`);
+				$('tp').classList.toggle('on', n === 'players');
+				$('ta').classList.toggle('on', n === 'agents');
+				$('trc').classList.toggle('on', n === 'rechargeConfigs');
+				$('tredeem').classList.toggle('on', n === 'redeemCodes');
+				$('tm').classList.toggle('on', n === 'mails');
+				$('tc').classList.toggle('on', n === 'chats');
+				$('tl').classList.toggle('on', n === 'logs');
+				$('ts').classList.toggle('on', n === 'servers');
+				$('players').classList.toggle('on', n === 'players');
+				$('agents').classList.toggle('on', n === 'agents');
+				$('rechargeConfigs').classList.toggle('on', n === 'rechargeConfigs');
+				$('redeemCodes').classList.toggle('on', n === 'redeemCodes');
+				$('mails').classList.toggle('on', n === 'mails');
+				$('chats').classList.toggle('on', n === 'chats');
+				$('logs').classList.toggle('on', n === 'logs');
+				$('servers').classList.toggle('on', n === 'servers');
+				applyStandaloneModuleView();
+				if (!tok()) return;
+				if (n === 'players') loadPlayers(page);
+				else if (n === 'agents') loadAgents();
+				else if (n === 'rechargeConfigs') loadRechargeConfigs();
+				else if (n === 'redeemCodes') loadRedeemCodes();
+				else if (n === 'mails') loadMails();
+				else if (n === 'chats') loadChats();
+				else if (n === 'logs') loadActionLogs(logPage);
+				else loadServers()
+			}
+
+			function clearSearch() {
+				$('search').value = '';
+				search = '';
+				loadPlayers(1)
+			}
+
+			function renderPg(p, ps) {
+				$('pg').innerHTML = !ps || ps <= 1 ? '' :
+					`<button class="btn g" onclick="loadPlayers(1)" ${p<=1?'disabled':''}>Home</button><button class="btn g" onclick="loadPlayers(${p-1})" ${p<=1?'disabled':''}>Trang trước</button><span>${p} / ${ps}Trang </span><button class="btn g" onclick="loadPlayers(${p+1})" ${p>=ps?'disabled':''}>Trang tiếp theo </button><button class="btn g" onclick="loadPlayers(${ps})" ${p>=ps?'disabled':''}>Trang cuối</button>`
+			}
+
+			function renderLogPg(p, ps) {
+				$('logPg').innerHTML = !ps || ps <= 1 ? '' :
+					`<button class="btn g" onclick="loadActionLogs(1)" ${p<=1?'disabled':''}>Home</button><button class="btn g" onclick="loadActionLogs(${p-1})" ${p<=1?'disabled':''}>Trang trước</button><span>${p} / ${ps}Trang </span><button class="btn g" onclick="loadActionLogs(${p+1})" ${p>=ps?'disabled':''}>Trang tiếp theo </button><button class="btn g" onclick="loadActionLogs(${ps})" ${p>=ps?'disabled':''}>Trang cuối</button>`
+			}
+
+			function clearActionLogSearch() {
+				$('logKeyword').value = '';
+				$('logAction').value = '';
+				$('logResult').value = '';
+				loadActionLogs(1);
+			}
+
+			function clearChatSearch() {
+				$('chatKeyword').value = '';
+				$('chatUserId').value = '';
+				$('chatChannel').value = 'all';
+				$('chatLimit').value = '50';
+				loadChats();
+			}
+
+			function updateChatAutoRefresh() {
+				if (chatRefreshTimer) {
+					clearInterval(chatRefreshTimer);
+					chatRefreshTimer = null;
+				}
+				const seconds = Number($('chatAutoRefresh') && $('chatAutoRefresh').value || 0);
+				if (seconds > 0) chatRefreshTimer = setInterval(() => {
+					if (tabName === 'chats') loadChats(true);
+				}, seconds * 1000);
+			}
+
+			async function loadChats(silent = false) {
+				if (!silent) $('chatWrap').innerHTML = "<div class=\"loading\">Đang tải lịch sử trò chuyện...</div>";
+				try {
+					const keyword = str('chatKeyword');
+					const userId = str('chatUserId');
+					const channel = str('chatChannel') || 'all';
+					const limit = str('chatLimit') || '50';
+					const d = await api('GET', `/api/admin/chats?channel=${encodeURIComponent(channel)}&limit=${encodeURIComponent(limit)}&keyword=${encodeURIComponent(keyword)}&userId=${encodeURIComponent(userId)}`);
+					const arr = Array.isArray(d.chats) ? d.chats : [];
+					$('chTotal').textContent = fmt(d.total || arr.length);
+					$('chWorld').textContent = fmt(arr.filter(row => Number(row.channel || 0) === 0).length);
+					$('chSystem').textContent = fmt(arr.filter(row => Number(row.channel || 0) === 1).length);
+					$('chUpdated').textContent = new Date().toLocaleTimeString('zh-CN');
+					if (!arr.length) {
+						$('chatWrap').innerHTML = "<div class=\"empty\"> không có lịch sử trò chuyện trùng khớp </div>";
+						return;
+					}
+					$('chatWrap').innerHTML = `<table><thead><tr><th> thời gian </th><th> kênh </th><th> Người chơi </th><th> nội dung </th><th> loại Hoạt động </th><th> </th></tr></thead><tbody>${arr.map(row=>{
+						const summary = row.summary || {};
+						const uid = summary.userId || '';
+						const name = summary.name || (row.sys ? "Hệ thống" : '-');
+						const canMute = isAdmin() && uid && !row.sys;
+						return `<tr><td>${date(row.time)}</td><td>${Number(row.channel||0)===1?"Hệ thống <span class=\"tag to\"> </span>":"<span class=\"tag tb\"> thế giới</span>"}</td><td><b>${esc(name)}</b><span class="sub">userId: ${esc(uid || '-')}</span><span class="sub">dbid: ${esc(summary.dbid || '-')}</span><span class="sub">Lv.${fmt(summary.level || 0)} / S${esc(summary.serverId || '-')}</span></td><td><div>${esc(row.text || row.rawContent || '-')}</div>${row.rawContent && row.rawContent !== row.text ? `<span class="sub">raw: ${esc(row.rawContent)}</span>` : ''}</td><td><span class="sub">msgType: ${esc(row.msgType)}</span><span class="sub">reportId: ${esc(row.reportId || '-')}</span></td><td>${canMute ? `<button class="btn w" onclick="adminMutePlayer('${esc(uid)}','${esc(name)}')">Chặn </button>` : "<span class=\"hint\">No</span>"}</td></tr>`;
+					}).join('')}</tbody></table>`;
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('chatWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+				}
+			}
+
+			async function loadActionLogs(p = 1) {
+				logPage = p;
+				$('logWrap').innerHTML = "<div class=\"loading\">Nhật ký hoạt động tải...</div>";
+				try {
+					const keyword = str('logKeyword');
+					const action = str('logAction');
+					const result = str('logResult');
+					const d = await api('GET', `/api/admin/action-logs?page=${p}&limit=20&keyword=${encodeURIComponent(keyword)}&action=${encodeURIComponent(action)}&result=${encodeURIComponent(result)}`);
+					const arr = Array.isArray(d.logs) ? d.logs : [];
+					$('lgTotal').textContent = fmt(d.total || 0);
+					$('lgPage').textContent = d.page || 1;
+					$('lgPages').textContent = d.pages || 0;
+					if (!arr.length) {
+						$('logWrap').innerHTML = "<div class=\"empty\"> không có nhật ký hoạt động phù hợp </div>";
+						$('logPg').innerHTML = '';
+						return;
+					}
+					$('logWrap').innerHTML = `<table><thead><tr><th> thời gian </th><th> toán tử </th><th> hành động </th><th> mục tiêu </th><th>Result</th><th>Cause</th><th>Chi tiết</th></tr></thead><tbody>${arr.map(row=>`<tr><td>${date(row.createdAt)}</td><td><b>${esc(row.operatorUsername||'-')}</b><span class="sub">${esc(row.operatorRole||'-')} / ${esc(row.operatorAgentId||'-')}</span></td><td>${esc(row.action||'-')}</td><td><div>${esc(row.targetPlayerName||row.targetUserId||'-')}</div><span class="sub">userId: ${esc(row.targetUserId||'-')}</span><span class="sub">agentId: ${esc(row.targetAgentId||'-')}</span></td><td>${row.result==='success'?"<span class=\"tag tg\"> đã thành công</span>":row.result==='rejected'?"<span class=\"tag to\"> từ chối </span>":"<span class=\"tag tr\"> thất bại</span>"}</td><td>${esc(row.reason||'-')}</td><td><span class="sub">${esc(JSON.stringify(row.detail||{}))}</span></td></tr>`).join('')}</tbody></table>`;
+					renderLogPg(d.page || 1, d.pages || 0);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('logWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+				}
+			}
+
+			function renderPlayerActions(p) {
+				const acts = [];
+				if (isAdmin()) {
+					acts.push(`<button class="btn g" onclick="openEdit('${esc(p.userId)}')">Chỉnh sửa </button>`);
+					acts.push(`<button class="btn w" onclick="openEditAndTask('${esc(p.userId)}')">Nhiệm vụ </button>`);
+					acts.push(`<button class="btn g" onclick="resetPlayerPassword('${esc(p.userId)}','${esc(p.name)}')">Đặt lại mật khẩu </button>`);
+					acts.push(p.chatMuted ? `<button class="btn s" onclick="adminUnmutePlayer('${esc(p.userId)}','${esc(p.name)}')">Bỏ cấm </button>` : `<button class="btn w" onclick="adminMutePlayer('${esc(p.userId)}','${esc(p.name)}')">Chặn </button>`);
+					acts.push(Number(p.accountStatus || 1) <= 0 ? `<button class="btn s" onclick="adminUnbanPlayerAccount('${esc(p.userId)}','${esc(p.name)}')">Bỏ chặn tài khoản </button>` : `<button class="btn r" onclick="adminBanPlayerAccount('${esc(p.userId)}','${esc(p.name)}')">Chặn tài khoản </button>`);
+				}
+				if (hasPerm('giveItems')) acts.push(`<button class="btn w" onclick="openGive('${esc(p.userId)}')">Vấn đề </button>`);
+				if (hasPerm('recharge')) acts.push(`<button class="btn s" onclick="openRecharge('${esc(p.userId)}','${esc(p.name)}')">Nạp tiền </button>`);
+				if (isAdmin()) {
+					acts.push(`<button class="btn s" onclick="unlockAllSystems('${esc(p.userId)}','${esc(p.name)}')">Mở khóa hệ thống </button>`);
+					acts.push(`<button class="btn r" onclick="openDel('${esc(p.userId)}','${esc(p.name)}')">Xóa </button>`);
+				}
+				return acts.length ? `<div class="acts">${acts.join('')}</div>` : "<span class=\"hint\">Không có thao tác nào</span>";
+			}
+			async function loadPlayers(p = 1) {
+				page = p;
+				search = $('search').value.trim();
+				$('tableWrap').innerHTML = "<div class=\"loading\">Đang tải dữ liệu người chơi...</div>";
+				try {
+					const d = await api('GET', `/api/admin/players?page=${p}&limit=20&search=${encodeURIComponent(search)}`),
+						arr = Array.isArray(d.players) ? d.players : [];
+					$('totalBadge').textContent = d.total || 0;
+					$('stTotal').textContent = fmt(d.total);
+					$('stPage').textContent = d.page || 1;
+					$('stPages').textContent = d.pages || 0;
+					if (!arr.length) {
+						$('tableWrap').innerHTML = "<div class=\"empty\"> Không tìm thấy dữ liệu người chơi phù hợp cho </div>";
+						$('pg').innerHTML = '';
+						return;
+					}
+					$('tableWrap').innerHTML = `Tài khoản <table><thead><tr><th><input id="checkAllPlayersHead" type="checkbox" onchange="toggleAllPlayerChecks(this.checked)"></th><th>Player</th><th> tài khoản / Máy chủ quận </th><th> tiến trình </th><th> tài sản </th><th> mối quan hệ </th><th> thời gian cập nhật </th><th> hoạt động </th></tr></thead><tbody>${arr.map(p=>`<tr><td><input class="player-check" type="checkbox" value="${esc(p.userId)}" ${selectedPlayers.has(p.userId)?'checked':''} onchange="togglePlayerCheck('${esc(p.userId)}', this.checked)"></td><td><b>${esc(p.name)}</b><span class="sub">userId: ${esc(p.userId)}</span><span class="sub">playerId: ${esc(p.playerId)}</span>${p.chatMuted?`<span class="sub" style="color:#b42318"> đã bị cấm:${esc(p.muteReason||'-')}</span>`:''}</td><td><div>${p.accountId?esc(p.accountId):"<span style=\"color:#94a3b8\"> không bị ràng buộc với tài khoản </span>"}</div><span class="sub">roleId: ${p.roleId||'-'}</span><span class="sub">serverId: ${p.serverId||'-'}</span>${Number(p.accountStatus||1)<=0?"Tài khoản <span class=\"tag tr\"> bị cấm </span>":''}</td><td><span class="tag tb">Lv.${p.level||1}Chương </span><span class="sub">${p.chapter||1}-${p.raidLevel||1}Vương quốc </span><span class="sub">${p.stage||1} / VIP ${p.vipLevel||0}Phương pháp </span><span class="sub">${p.spiritRank||1}Đặt hàng </span></td><td><div> Yuanbao${fmt(p.diamond)}Biểu tượng gia tốc </div><span class="sub">${fmt(p.gold)}/ đồng bạc${fmt(p.silver)}</span><span class="sub"> Tian Yan Ling Nhỏ/Trung bình/Lớn${fmt(p.tianyanSmall)} / ${fmt(p.tianyanMedium)} / ${fmt(p.tianyanLarge)}Bánh bao </span><span class="sub">${fmt(p.baozi)}/ Phí tích lũy${fmt(p.totalRecharge)}</span></td><td><div>agentId: ${p.agentId?esc(p.agentId):'-'}</div><span class="sub">inviteCode: ${p.inviteCode?esc(p.inviteCode):'-'}</span></td><td><div>${date(p.updatedAt)}</div><span class="sub"> đã được tạo vào năm${date(p.createdAt)}</span><span class="sub">đăng nhập lần cuối${date(p.lastLoginTime)}</span></td><td>${renderPlayerActions(p)}</td></tr>`).join('')}</tbody></table>`;
+					updateSelectedPlayersTip();
+					renderPg(d.page || 1, d.pages || 0);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('tableWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+					msg("Không tải được dữ liệu người chơi:" + e.message, false)
+				}
+			}
+			async function openEdit(uid) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền chỉnh sửa thông tin đầy đủ của người chơi", false);
+				try {
+					const d = await api('GET', `/api/admin/players/${uid}`),
+						p = d.player || {};
+					$('eu').value = p.userId || '';
+					$('editT').textContent = `Chỉnh sửa người chơi:${p.name||p.userId||''}`;
+					$('taskManagerTitle').textContent = `Quản lý tiến độ công việc:${p.name||p.userId||''}`;
+					$('f_name').value = p.name || '';
+					$('f_level').value = p.level || 1;
+					$('f_exp').value = p.exp || 0;
+					$('f_avatar').value = p.avatar ?? 0;
+					$('f_avatarFrame').value = p.avatarFrame ?? -1;
+					$('f_title').value = p.title ?? -1;
+					$('f_chapter').value = p.raidInfo && p.raidInfo.chapter || 1;
+					$('f_raidLevel').value = p.raidInfo && p.raidInfo.level || 1;
+					$('f_hangUpChapter').value = p.progressInfo && p.progressInfo.raid && p.progressInfo.raid.hangUpChapter || p.raidInfo && p.raidInfo.hangUpChapter || p.raidInfo && p.raidInfo.chapter || 1;
+					$('f_hangUpTime').value = p.progressInfo && p.progressInfo.raid && p.progressInfo.raid.hangUpTime || p.raidInfo && p.raidInfo.hangUpTime || 0;
+					$('f_rewardChapter').value = p.progressInfo && p.progressInfo.raid && p.progressInfo.raid.rewardChapter || p.raidInfo && p.raidInfo.rewardChapter || 0;
+					$('f_claimedChapters').value = Array.isArray(p.progressInfo && p.progressInfo.raid && p.progressInfo.raid.claimedChapters) ? p.progressInfo.raid.claimedChapters.join(',') : Array.isArray(p.raidInfo && p.raidInfo.claimedChapters) ? p.raidInfo.claimedChapters.join(',') : '';
+					$('f_stage').value = p.roleInfo && p.roleInfo.stage || 1;
+					$('f_rewardedStage').value = p.progressInfo && p.progressInfo.realm && p.progressInfo.realm.rewardedStage || p.roleInfo && p.roleInfo.rewardedStage || 0;
+					$('f_stageFailedTime').value = p.progressInfo && p.progressInfo.realm && p.progressInfo.realm.failedTime || p.roleInfo && p.roleInfo.stageFailedTime || 0;
+					$('f_kungfuId').value = p.roleInfo && p.roleInfo.kungfuId || 4;
+					$('f_subJob').value = p.roleInfo && p.roleInfo.subJob || 0;
+					$('f_boxLevel').value = p.boxInfo && p.boxInfo.level || 1;
+					$('f_vip').value = p.rechargeInfo && p.rechargeInfo.vipLevel || 0;
+					$('f_totalRecharge').value = p.rechargeInfo && p.rechargeInfo.totalRecharge || 0;
+					$('f_spiritId').value = p.spiritInfo && p.spiritInfo.id != null ? p.spiritInfo.id : -1;
+					$('f_spiritRank').value = p.spiritInfo && p.spiritInfo.rank || 1;
+					$('f_diamond').value = p.currencies && p.currencies.diamond || 0;
+					$('f_gold').value = p.currencies && p.currencies.gold || 0;
+					$('f_silver').value = p.currencies && p.currencies.silver || 0;
+					$('f_baozi').value = p.items && p.items[4] || 0;
+					$('f_lingyun').value = p.items && p.items[7] || 0;
+					$('f_faxiang').value = p.items && p.items[8] || 0;
+					$('f_tianyanSmall').value = p.items && p.items[1001] || 0;
+					$('f_tianyanMedium').value = p.items && p.items[1002] || 0;
+					$('f_tianyanLarge').value = p.items && p.items[1003] || 0;
+					$('f_coupon').value = p.items && p.items[7010] || 0;
+					$('f_powerScore').value = p.combatInfo && p.combatInfo.power || 0;
+					$('f_equipCount').value = p.combatInfo && p.combatInfo.equipCount || 0;
+					renderAttrRows(p.combatInfo && p.combatInfo.attrRows || []);
+					renderEquipRows(p.combatInfo && p.combatInfo.equipRows || []);
+					$('f_formationEquippedId').value = p.formationInfo && (p.formationInfo.equippedId || p.formationInfo.curFormation) || 0;
+					$('f_formationLevel').value = p.formationInfo && p.formationInfo.level || 1;
+					$('f_formationGrade').value = p.formationInfo && p.formationInfo.grade || 1;
+					$('f_formationExp').value = p.formationInfo && p.formationInfo.exp || 0;
+					$('f_formationOwns').value = Array.isArray(p.formationInfo && p.formationInfo.owns) ? p.formationInfo.owns.join(',') : '';
+					$('f_formationEnchant').value = Array.isArray(p.formationInfo && p.formationInfo.enchant) ? p.formationInfo.enchant.join(',') : '';
+					setJsonField('f_equipInfo', p.equipInfo || {});
+					setJsonField('f_formationInfo', p.formationInfo || {});
+					$('f_guideStep').value = p.systemUnlockInfo && p.systemUnlockInfo.guideStep || 0;
+					$('f_unlockedSystem').value = Array.isArray(p.systemUnlockInfo && p.systemUnlockInfo.unlockedSystem) ? p.systemUnlockInfo.unlockedSystem.join(',') : '';
+					$('f_rewardedSystem').value = Array.isArray(p.systemUnlockInfo && p.systemUnlockInfo.rewardedSystem) ? p.systemUnlockInfo.rewardedSystem.join(',') : '';
+					$('f_seenNewFeatures').value = Array.isArray(p.systemUnlockInfo && p.systemUnlockInfo.settings && p.systemUnlockInfo.settings.seenNewFeatures) ? p.systemUnlockInfo.settings.seenNewFeatures.join(',') : '';
+					$('f_pendingNewFeatures').value = Array.isArray(p.systemUnlockInfo && p.systemUnlockInfo.pendingNewFeatures) ? p.systemUnlockInfo.pendingNewFeatures.join(',') : '';
+					const unlockBtn = $('f_unlockAllSystemsBtn');
+					const unlockHint = $('f_unlockAllSystemsHint');
+					const canUnlockAllSystems = !!(p.systemUnlockInfo && p.systemUnlockInfo.canUnlockAllSystems);
+					if (unlockBtn) {
+						unlockBtn.disabled = !canUnlockAllSystems;
+						unlockBtn.textContent = canUnlockAllSystems ? "Mở khóa tất cả các hệ thống chỉ bằng một cú nhấp chuột" : "Tất cả đã được mở khóa";
+					}
+					if (unlockHint) {
+						const allCount = Number(p.systemUnlockInfo && p.systemUnlockInfo.allSystemCount || 0);
+						const unlockedCount = Number(p.systemUnlockInfo && p.systemUnlockInfo.unlockedSystemCount || 0);
+						unlockHint.textContent = canUnlockAllSystems ? `Hiện đã được mở khóa${unlockedCount} / ${allCount}Hệ thống, sau khi nhấp vào, hệ thống còn lại và trạng thái chức năng mới sẽ được hoàn thành cùng một lúc.` : `Hiện đã được mở khóa${unlockedCount} / ${allCount}hệ thống, không cần phải mở khóa lại.`;
+					}
+					setJsonField('f_systemSettings', p.systemUnlockInfo && p.systemUnlockInfo.settings || {});
+					$('f_agentId').value = p.agentId || '';
+					$('f_inviteCode').value = p.inviteCode || '';
+					$('f_accountId').value = p.accountInfo && p.accountInfo.accountId || '';
+					$('f_roleId').value = p.accountInfo && p.accountInfo.roleId || '';
+					$('f_serverId').value = p.accountInfo && p.accountInfo.serverId || '';
+					$('f_lastLogin').value = date(p.accountInfo && p.accountInfo.lastLoginTime);
+					$('f_userId').value = p.userId || '';
+					$('f_playerId').value = p.playerId || '';
+					$('f_createdAt').value = date(p.createdAt);
+					$('f_updatedAt').value = date(p.updatedAt);
+					renderTaskManagement(p);
+					$('editO').classList.add('on')
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể tải thông tin chi tiết về người chơi:" + e.message, false)
+				}
+			}
+
+			async function openEditAndTask(uid) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý công việc", false);
+				await openEdit(uid);
+				openTaskManager();
+			}
+
+			function closeEdit() {
+				closeTaskManager();
+				$('editO').classList.remove('on')
+			}
+			async function normalizeOrbCurrentPlayer() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền khởi tạo ngọc linh hồn.", false);
+				const uid = $('eu').value;
+				if (!uid) return msg("Trước tiên hãy mở cửa sổ bật lên chỉnh sửa Người chơi", false);
+				try {
+					const res = await api('POST', `/api/admin/players/${encodeURIComponent(uid)}/normalize-orb`);
+					if (!res || res.ok === false) throw new Error(res && res.message || "Khởi tạo không thành công");
+					msg("Soul Jade đã được khởi tạo", true);
+					await openEdit(uid);
+				} catch (e) {
+					msg("Không thể khởi tạo Soul Jade:" + e.message, false);
+				}
+			}
+
+			async function savePlayer() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền lưu thông tin đầy đủ của người chơi", false);
+				const uid = $('eu').value,
+					namev = str('f_name'),
+					tasks = collectTaskEditorRows(),
+					mainTaskProgress = collectCounterEditorRows();
+				if (!namev) {
+					msg("Tên người chơi không được để trống", false);
+					return;
+				}
+				let systemSettings;
+				let equipInfoData;
+				let formationInfoData;
+				try {
+					systemSettings = parseJsonField('f_systemSettings', {});
+					equipInfoData = parseJsonField('f_equipInfo', {});
+					formationInfoData = parseJsonField('f_formationInfo', {});
+				} catch (e) {
+					msg("Lỗi định dạng JSON:" + e.message, false);
+					return;
+				}
+				systemSettings = systemSettings && typeof systemSettings === 'object' ? systemSettings : {};
+				systemSettings.seenNewFeatures = parseNumberList(str('f_seenNewFeatures'));
+				equipInfoData = equipInfoData && typeof equipInfoData === 'object' ? equipInfoData : {};
+				formationInfoData = formationInfoData && typeof formationInfoData === 'object' ? formationInfoData : {};
+				formationInfoData.equippedId = num('f_formationEquippedId') ?? formationInfoData.equippedId;
+				formationInfoData.curFormation = num('f_formationEquippedId') ?? formationInfoData.curFormation;
+				formationInfoData.level = num('f_formationLevel') ?? formationInfoData.level;
+				formationInfoData.grade = num('f_formationGrade') ?? formationInfoData.grade;
+				formationInfoData.exp = num('f_formationExp') ?? formationInfoData.exp;
+				formationInfoData.owns = parseNumberList(str('f_formationOwns'));
+				formationInfoData.enchant = parseNumberList(str('f_formationEnchant'));
+				const body = compact({
+					name: namev,
+					level: num('f_level'),
+					exp: num('f_exp'),
+					avatar: num('f_avatar'),
+					avatarFrame: num('f_avatarFrame'),
+					title: num('f_title'),
+					agentId: str('f_agentId'),
+					inviteCode: str('f_inviteCode'),
+					currencies: {
+						diamond: num('f_diamond'),
+						gold: num('f_gold'),
+						silver: num('f_silver')
+					},
+					items: {
+						4: num('f_baozi'),
+						7: num('f_lingyun'),
+						8: num('f_faxiang'),
+						1001: num('f_tianyanSmall'),
+						1002: num('f_tianyanMedium'),
+						1003: num('f_tianyanLarge'),
+						7010: num('f_coupon')
+					},
+					raidInfo: {
+						chapter: num('f_chapter'),
+						level: num('f_raidLevel'),
+						hangUpChapter: num('f_hangUpChapter'),
+						hangUpTime: num('f_hangUpTime'),
+						rewardChapter: num('f_rewardChapter'),
+						claimedChapters: parseNumberList(str('f_claimedChapters')),
+						chapterInfo: {
+							rewardChapter: num('f_rewardChapter')
+						}
+					},
+					roleInfo: {
+						stage: num('f_stage'),
+						rewardedStage: num('f_rewardedStage'),
+						stageFailedTime: num('f_stageFailedTime'),
+						kungfuId: num('f_kungfuId'),
+						subJob: num('f_subJob')
+					},
+					boxInfo: {
+						level: num('f_boxLevel')
+					},
+					rechargeInfo: {
+						vipLevel: num('f_vip'),
+						totalRecharge: num('f_totalRecharge')
+					},
+					spiritInfo: {
+						id: num('f_spiritId'),
+						rank: num('f_spiritRank')
+					},
+					equipInfo: equipInfoData,
+					formationInfo: formationInfoData,
+					systemUnlockInfo: {
+						guideStep: num('f_guideStep'),
+						unlockedSystem: parseNumberList(str('f_unlockedSystem')),
+						rewardedSystem: parseNumberList(str('f_rewardedSystem')),
+						settings: systemSettings
+					},
+					taskInfo: {
+						tasks
+					},
+					other_attr_info: {
+						mainTaskProgress
+					}
+				});
+				try {
+					await api('PATCH', `/api/admin/players/${uid}`, body);
+					msg("Dữ liệu người chơi đã được lưu và đẩy lên đồng bộ ký tự trực tuyến");
+					closeEdit();
+					loadPlayers(page)
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không lưu được người chơi:" + e.message, false)
+				}
+			}
+
+			function openGive(uid) {
+				if (!hasPerm('giveItems')) return msg("Tài khoản hiện tại không có quyền phân phối đạo cụ", false);
+				loadGiveItemOptions().catch(e => {
+					if (e.message !== 'SESSION_EXPIRED') msg("Không thể tải danh sách đạo cụ:" + e.message, false);
+				});
+				currentGiveUserIds = Array.isArray(uid) ? uid.slice() : [uid];
+				$('gu').value = currentGiveUserIds.join(',');
+				['g_diamond', 'g_gold', 'g_silver', 'g_baozi', 'g_lingyun', 'g_faxiang', 'g_tianyanSmall', 'g_tianyanMedium',
+					'g_tianyanLarge', 'g_coupon', 'g_customId', 'g_customCount'
+				]
+				.forEach(id => $(id).value = '');
+				$('grow').innerHTML = '';
+				grow = 0;
+				$('giveO').classList.add('on')
+			}
+
+			function closeGive() {
+				currentGiveUserIds = [];
+				$('giveO').classList.remove('on')
+			}
+
+			function renderGiveItemOptions() {
+				const el = $('giveItemOptions');
+				if (!el) return;
+				el.innerHTML = giveItemConfigCache.map(row => `<option value="${row.itemId}">${esc(row.name||row.cn||"Chỗ dựa không tên")} (#${row.itemId})</option>`).join('');
+			}
+
+			async function loadGiveItemOptions() {
+				if (giveItemConfigCache.length) return giveItemConfigCache;
+				if (giveItemConfigLoading) return giveItemConfigLoading;
+				giveItemConfigLoading = (async () => {
+					const all = [];
+					let pageNo = 1,
+						pages = 1;
+					do {
+						const d = await api('GET', `/api/admin/item-dictionaries?page=${pageNo}&limit=200&keyword=`);
+						all.push(...(Array.isArray(d.items) ? d.items : []));
+						pages = Number(d.pages || 0) || 0;
+						pageNo++;
+					} while (pageNo <= pages);
+					giveItemConfigCache = all.sort((a, b) => Number(a.itemId || 0) - Number(b.itemId || 0));
+					renderGiveItemOptions();
+					return giveItemConfigCache;
+				})().finally(() => {
+					giveItemConfigLoading = null;
+				});
+				return giveItemConfigLoading;
+			}
+
+			function addGive() {
+				grow++;
+				const id = 'gr' + grow,
+					d = document.createElement('div');
+				d.id = id;
+				d.style.display = 'grid';
+				d.style.gridTemplateColumns = '1fr 1fr auto';
+				d.style.gap = '10px';
+				d.innerHTML =
+					`ID <div class="fg"><label>Prop #${grow+1}</label><input id="gid${grow}" type="number" min="1" list="giveItemOptions" placeholder="Nhập hoặc chọn props"></div><div class="fg"><label>Số lượng tăng hoặc giảm</label><input id="gct${grow}" type="number"></div><button class="btn g" style="align-self:end" onclick="$('${id}').remove()">Xóa </button>`;
+				$('grow').appendChild(d)
+			}
+			async function give() {
+				if (!hasPerm('giveItems')) return msg("Tài khoản hiện tại không có quyền phân phối đạo cụ", false);
+				const ids = currentGiveUserIds.length ? currentGiveUserIds.slice() : String($('gu').value || '').split(',').map(v => String(v).trim()).filter(Boolean),
+					body = {},
+					items = {};
+				[
+					['diamond', 'g_diamond'],
+					['gold', 'g_gold'],
+					['silver', 'g_silver']
+				].forEach(([k, id]) => {
+					const v = num(id);
+					if (v) body[k] = v
+				});
+				[
+					[4, 'g_baozi'],
+					[7, 'g_lingyun'],
+					[8, 'g_faxiang'],
+					[1001, 'g_tianyanSmall'],
+					[1002, 'g_tianyanMedium'],
+					[1003, 'g_tianyanLarge'],
+					[7010, 'g_coupon']
+				].forEach(([k, id]) => {
+					const v = num(id);
+					if (v) items[k] = v
+				});
+				const cid = num('g_customId'),
+					cct = num('g_customCount');
+				if (cid && cct) items[cid] = cct;
+				for (let i = 1; i <= grow; i++) {
+					const id = num(`gid${i}`),
+						ct = num(`gct${i}`);
+					if (id && ct) items[id] = ct
+				}
+				if (Object.keys(items).length) body.items = items;
+				if (!Object.keys(body).length) {
+					msg("Vui lòng điền ít nhất một nội dung phân phối", false);
+					return;
+				}
+				try {
+					if (ids.length > 1) {
+						const d = await api('POST', '/api/admin/players/batch-give', { ...body, userIds: ids });
+						msg(`Phân phối hàng loạt thành công, thành công${fmt(d.successCount||0)} / ${fmt(d.total||ids.length)}`);
+					} else {
+						await api('POST', `/api/admin/players/${ids[0]}/give`, body);
+						msg("Phát hành thành công, vai trò trực tuyến đã được đồng bộ hóa");
+					}
+					closeGive();
+					loadPlayers(page)
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Phân phối không thành công:" + e.message, false)
+				}
+			}
+
+			async function openRecharge(uid, namev) {
+				if (!hasPerm('recharge')) return msg("Tài khoản vãng lai không có quyền thực hiện nạp tiền", false);
+				if (!rechargeConfigCache.length && isAdmin()) {
+					try {
+						const d = await api('GET', '/api/admin/recharge-configs');
+						rechargeConfigCache = Array.isArray(d.configs) ? d.configs : [];
+					} catch (_e) {}
+				}
+				currentRechargeUserId = uid || '';
+				$('ru').value = currentRechargeUserId;
+				$('r_target').value = `${namev || uid || ''} (${uid || '-'})`;
+				renderRechargeConfigOptions();
+				$('r_configProduct').value = '';
+				$('r_amount').value = '';
+				$('r_productId').value = '';
+				$('rechargeO').classList.add('on');
+			}
+
+			async function resetPlayerPassword(uid, namev) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền đặt lại mật khẩu người chơi", false);
+				if (!uid) return msg("Thiếu người chơi userId", false);
+				if (!confirm(`Xác nhận rằng người chơi sẽ "${namev||uid}"Đặt lại mật khẩu tài khoản thành 123456?`)) return;
+				try {
+					const d = await api('POST', `/api/admin/players/${encodeURIComponent(uid)}/reset-password`);
+					msg(`Mật khẩu đã được đặt lại thành 123456${d&&d.accountId ? `(tài khoản:${d.accountId}）` : ''}`);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Đặt lại mật khẩu không thành công:" + e.message, false);
+				}
+			}
+
+			function closeRecharge() {
+				currentRechargeUserId = '';
+				$('rechargeO').classList.remove('on');
+			}
+
+			function applyRechargeConfigSelection() {
+				const productId = str('r_configProduct');
+				if (!productId) return;
+				const row = rechargeConfigCache.find(item => String(item.productId) === productId);
+				if (!row) return;
+				$('r_productId').value = row.productId || '';
+				$('r_amount').value = row.amount || '';
+			}
+
+			async function submitRecharge() {
+				if (!hasPerm('recharge')) return msg("Tài khoản vãng lai không có quyền thực hiện nạp tiền", false);
+				const uid = currentRechargeUserId || $('ru').value;
+				const amount = num('r_amount');
+				if (!uid || !amount || amount <= 0) return msg("Vui lòng điền số tiền nạp hợp lệ", false);
+				try {
+					const d = await api('POST', `/api/admin/players/${uid}/recharge`, {
+						amount,
+						productId: str('r_productId') || 'manual-admin-recharge'
+					});
+					msg(`Nạp tiền thành công: Số tiền${fmt(amount)}Nhân dân tệ, phôi nhận được${fmt(d.recharge&&d.recharge.diamond||0)}`);
+					closeRecharge();
+					loadPlayers(page);
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Nạp tiền không thành công:" + e.message, false)
+				}
+			}
+
+			function openDel(uid, n) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền xóa người chơi", false);
+				$('du').value = uid;
+				$('dn').textContent = n || uid;
+				$('delO').classList.add('on')
+			}
+
+			function closeDel() {
+				$('delO').classList.remove('on')
+			}
+			async function delPlayer() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền xóa người chơi", false);
+				const uid = $('du').value;
+				try {
+					await api('DELETE', `/api/admin/players/${uid}`);
+					msg("Người chơi đã bị xóa và ánh xạ vai trò tài khoản tương ứng cũng đã bị xóa.");
+					closeDel();
+					loadPlayers(page)
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Xóa không thành công:" + e.message, false)
+				}
+			}
+
+			function clearAgentSearch() {
+				$('agentSearch').value = '';
+				loadAgents();
+			}
+
+			async function loadAgents() {
+				if (!isAdmin()) return;
+				const keyword = str('agentSearch');
+				$('agentWrap').innerHTML = "<div class=\"loading\">Đang tải dữ liệu tác nhân...</div>";
+				try {
+					const d = await api('GET', `/api/admin/agents?keyword=${encodeURIComponent(keyword)}`);
+					agentCache = Array.isArray(d.agents) ? d.agents : [];
+					$('agTotal').textContent = fmt(agentCache.length);
+					$('agGive').textContent = fmt(agentCache.filter(row => row.permissions && row.permissions.giveItems).length);
+					$('agRecharge').textContent = fmt(agentCache.filter(row => row.permissions && row.permissions.recharge).length);
+					if (!agentCache.length) {
+						$('agentWrap').innerHTML = "<div class=\"empty\"> hiện chưa có tài khoản đại lý </div>";
+						return;
+					}
+					$('agentWrap').innerHTML = `<table><thead><tr><th>Tài khoản</th><th>agentId</th><th>Name</th><th>Quyền</th><th> Giới hạn </th><th> Trạng thái </th><th> Đăng nhập lần cuối </th><th> Hoạt động </th></tr></thead><tbody>${agentCache.map(row=>`<tr><td><b>${esc(row.username)}</b><span class="sub"> tạo ra:${date(row.createdAt)}</span></td><td>${esc(row.agentId||'-')}</td><td>${esc(row.name||'-')}<span class="sub">Nhận xét:${esc(row.note||'-')}Phát hành </span></td><td><span class="sub">:${row.permissions&&row.permissions.giveItems?"Đúng":"KHÔNG"}Nạp tiền </span><span class="sub">:${row.permissions&&row.permissions.recharge?"Đúng":"KHÔNG"}Danh sách trắng tiền tệ </span></td><td><span class="sub">:${row.limits&&row.limits.giveCurrencyWhitelist&&row.limits.giveCurrencyWhitelist.length?esc(row.limits.giveCurrencyWhitelist.join(',')):"Không giới hạn"}Danh sách trắng đạo cụ </span><span class="sub">:${row.limits&&row.limits.giveItemWhitelist&&row.limits.giveItemWhitelist.length?esc(row.limits.giveItemWhitelist.join(',')):"Không giới hạn"}</span><span class="sub"> nạp tiền một lần/một ngày:${fmt(row.limits&&row.limits.rechargeSingleLimit||0)} / ${fmt(row.limits&&row.limits.rechargeDailyLimit||0)}Nhân dân tệ</span></td><td>${row.status==='active'?"<span class=\"tag tg\"> kích hoạt </span>":"<span class=\"tag tr\"> vô hiệu hóa </span>"}</td><td>${date(row.lastLoginAt)}</td><td><div class="acts"><button class="btn g" onclick="openAgentEditor('${esc(row.agentId)}')">Chỉnh sửa </button>${row.status==='active'?`<button class="btn r" onclick="adminBanAgent('${esc(row.agentId)}','${esc(row.username)}')">Cấm </button>`:`<button class="btn s" onclick="adminUnbanAgent('${esc(row.agentId)}','${esc(row.username)}')">Bỏ chặn </button>`}</div></td></tr>`).join('')}</tbody></table>`;
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('agentWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+				}
+			}
+
+			function openAgentEditor(agentId) {
+				if (!isAdmin()) return msg("Tài khoản vãng lai không có quyền quản lý đại lý", false);
+				const row = agentCache.find(item => item.agentId === agentId) || {};
+				const limits = row.limits || {};
+				$('agentMode').value = agentId ? 'edit' : 'create';
+				$('agentCurrentId').value = row.agentId || '';
+				$('agentT').textContent = agentId ? "Cơ quan biên tập" : "Thêm đại lý";
+				$('a_username').value = row.username || '';
+				$('a_agentId').value = row.agentId || '';
+				$('a_name').value = row.name || '';
+				$('a_status').value = row.status || 'active';
+				$('a_password').value = '';
+				$('a_note').value = row.note || '';
+				$('a_permGive').checked = !!(row.permissions && row.permissions.giveItems);
+				$('a_permRecharge').checked = !!(row.permissions && row.permissions.recharge);
+				$('a_giveCurrencies').value = Array.isArray(limits.giveCurrencyWhitelist) ? limits.giveCurrencyWhitelist.join(',') : '';
+				$('a_giveItems').value = Array.isArray(limits.giveItemWhitelist) ? limits.giveItemWhitelist.join(',') : '';
+				$('a_rechargeSingleLimit').value = limits.rechargeSingleLimit || 0;
+				$('a_rechargeDailyLimit').value = limits.rechargeDailyLimit || 0;
+				$('agentO').classList.add('on');
+			}
+
+			function closeAgentEditor() {
+				$('agentO').classList.remove('on');
+			}
+
+			async function saveAgent() {
+				if (!isAdmin()) return msg("Tài khoản vãng lai không có quyền quản lý đại lý", false);
+				const mode = $('agentMode').value;
+				const body = {
+					username: str('a_username'),
+					agentId: str('a_agentId'),
+					name: str('a_name'),
+					status: str('a_status') || 'active',
+					note: str('a_note'),
+					permissions: {
+						giveItems: $('a_permGive').checked,
+						recharge: $('a_permRecharge').checked
+					},
+					limits: {
+						giveCurrencyWhitelist: parseTextList(str('a_giveCurrencies')),
+						giveItemWhitelist: parseNumberList(str('a_giveItems')),
+						rechargeSingleLimit: num('a_rechargeSingleLimit') || 0,
+						rechargeDailyLimit: num('a_rechargeDailyLimit') || 0
+					}
+				};
+				const password = $('a_password').value;
+				if (mode === 'create' && !password) return msg("Phải đặt mật khẩu đăng nhập khi thêm đại lý mới", false);
+				if (password) body.password = password;
+				try {
+					if (mode === 'edit') {
+						await api('PATCH', `/api/admin/agents/${encodeURIComponent($('agentCurrentId').value)}`, body);
+						msg("Đã cập nhật đại lý");
+					} else {
+						await api('POST', '/api/admin/agents', body);
+						msg("Đại lý đã được tạo");
+					}
+					closeAgentEditor();
+					loadAgents();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không lưu được đại lý:" + e.message, false)
+				}
+			}
+
+			function clearRechargeConfigSearch() {
+				$('rechargeConfigSearch').value = '';
+				loadRechargeConfigs();
+			}
+
+			function renderRechargeConfigOptions() {
+				const select = $('r_configProduct');
+				if (!select) return;
+				const currentValue = select.value;
+				const rows = rechargeConfigCache.filter(row => row.enabled !== false);
+				select.innerHTML = "<option value=\"\"> Điền thủ công </option>" + rows.map(row =>
+					`<option value="${esc(row.productId)}">${esc(row.productId)} · ${esc(row.name||'-')} · ${fmt(row.amount||0)}Nhân dân tệ</option>`
+				).join('');
+				select.value = rows.some(row => String(row.productId) === String(currentValue)) ? currentValue : '';
+			}
+
+			async function loadRechargeConfigs() {
+				if (!isAdmin()) return;
+				const keyword = str('rechargeConfigSearch').toLowerCase();
+				$('rechargeConfigWrap').innerHTML = "<div class=\"loading\"> đang tải cấu hình nạp tiền...</div>";
+				try {
+					const d = await api('GET', '/api/admin/recharge-configs');
+					rechargeConfigCache = Array.isArray(d.configs) ? d.configs : [];
+					const rows = keyword ? rechargeConfigCache.filter(row => [row.productId, row.name, row.payType].some(v => String(v || '').toLowerCase().includes(keyword))) : rechargeConfigCache.slice();
+					$('rcTotal').textContent = fmt(rows.length);
+					$('rcEnabled').textContent = fmt(rows.filter(row => row.enabled !== false).length);
+					$('rcCustom').textContent = fmt(rows.filter(row => String(row.source || '').includes('custom')).length);
+					renderRechargeConfigOptions();
+					if (!rows.length) {
+						$('rechargeConfigWrap').innerHTML = "<div class=\"empty\"> hiện không có cấu hình nạp tiền</div>";
+						return;
+					}
+					$('rechargeConfigWrap').innerHTML = `<table><thead><tr><th>Hàng hóa</th><th>Số tiền / Nguyên bảo</th><th>Nạp tiền đầu tiên</th><th>Phần thưởng bổ sung</th><th>Thanh toán</th><th>Nguồn </th><th> Trạng thái </th><th> Thời gian cập nhật </th><th> Hoạt động </th></tr></thead><tbody>${rows.map(row=>`<tr><td><b>${esc(row.name||'-')}</b><span class="sub">productId: ${esc(row.productId||'-')}</span><span class="sub">Nhận xét:${esc(row.note||'-')}</span></td><td><div>${fmt(row.amount||0)}Yuan </div><span class="sub"> Yuanbao cơ bản:${fmt(row.diamond||0)}</span></td><td><div>${fmt(row.firstBonus||0)}</div><span class="sub"> sẽ tặng bạn thêm </span></td><td><div> cho lần gửi tiền đầu tiên${esc(attachmentRewardText(row.attachments || []))}Hướng dẫn đến </div><span class="sub">:${esc(row.mailTitle || row.name || '-')}</span></td><td><div>${esc(row.payType||'-')}Sắp xếp </div><span class="sub">:${fmt(row.sort||0)}</span></td><td><span class="sub">${esc(row.source||'builtin')}</span></td><td>${row.enabled!==false?"<span class=\"tag tg\"> kích hoạt </span>":"<span class=\"tag tr\"> vô hiệu hóa </span>"}</td><td><div>${date(row.updatedAt)}</div><span class="sub"> tạo ra:${date(row.createdAt)}</span></td><td><div class="acts"><button class="btn g" onclick="openRechargeConfigEditor('${esc(row.productId)}')">Chỉnh sửa </button>${String(row.source||'').includes('custom')?`<button class="btn r" onclick="deleteRechargeConfig('${esc(row.productId)}')">Xóa ghi đè </button>`:''}</div></td></tr>`).join('')}</tbody></table>`;
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('rechargeConfigWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+				}
+			}
+
+			function openRechargeConfigEditor(productId) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý cấu hình nạp tiền", false);
+				const row = rechargeConfigCache.find(item => String(item.productId) === String(productId)) || {};
+				$('rechargeConfigMode').value = productId ? 'edit' : 'create';
+				$('rechargeConfigCurrentId').value = row.productId || '';
+				$('rechargeConfigT').textContent = productId ? "Chỉnh sửa cấu hình nạp tiền" : "Đã thêm cấu hình nạp tiền";
+				$('rc_productId').value = row.productId || '';
+				$('rc_productId').disabled = !!productId;
+				$('rc_name').value = row.name || '';
+				$('rc_amount').value = row.amount || 0;
+				$('rc_diamond').value = row.diamond || 0;
+				$('rc_firstBonus').value = row.firstBonus || 0;
+				$('rc_payType').value = row.payType || '';
+				$('rc_sort').value = row.sort || 0;
+				$('rc_enabled').value = row.enabled === false ? '0' : '1';
+				$('rc_mailTitle').value = row.mailTitle || '';
+				$('rc_mailContent').value = row.mailContent || '';
+				$('rc_addItemId').value = '';
+				$('rc_addItemCount').value = '';
+				renderRechargeAttachmentRows(row.attachments || []);
+				$('rc_note').value = row.note || '';
+				$('rechargeConfigO').classList.add('on');
+			}
+
+			function closeRechargeConfigEditor() {
+				$('rechargeConfigO').classList.remove('on');
+			}
+
+			async function saveRechargeConfig() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý cấu hình nạp tiền", false);
+				const mode = $('rechargeConfigMode').value;
+				const productId = mode === 'edit' ? $('rechargeConfigCurrentId').value : str('rc_productId');
+				const body = {
+					productId,
+					name: str('rc_name'),
+					amount: Number($('rc_amount').value || 0),
+					diamond: num('rc_diamond') || 0,
+					firstBonus: num('rc_firstBonus') || 0,
+					payType: str('rc_payType'),
+					attachments: collectRechargeAttachments(),
+					mailTitle: str('rc_mailTitle'),
+					mailContent: str('rc_mailContent'),
+					sort: num('rc_sort') || 0,
+					enabled: $('rc_enabled').value !== '0',
+					note: str('rc_note'),
+				};
+				if (!body.productId) return msg("Vui lòng điền thông tin nhận dạng sản phẩm", false);
+				if (!(body.amount > 0)) return msg("Số tiền nạp phải lớn hơn 0", false);
+				if (!body.attachments.length) return msg("Vui lòng định cấu hình ít nhất một phần thưởng bổ sung", false);
+				try {
+					if (mode === 'edit') await api('PATCH', `/api/admin/recharge-configs/${encodeURIComponent(productId)}`, body);
+					else await api('POST', '/api/admin/recharge-configs', body);
+					msg("Cấu hình nạp tiền đã được lưu");
+					closeRechargeConfigEditor();
+					loadRechargeConfigs();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không lưu được cấu hình nạp tiền:" + e.message, false);
+				}
+			}
+
+			async function deleteRechargeConfig(productId) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý cấu hình nạp tiền", false);
+				if (!productId || !confirm(`Xác nhận xóa ghi đè cấu hình nạp tiền${productId}?`)) return;
+				try {
+					await api('DELETE', `/api/admin/recharge-configs/${encodeURIComponent(productId)}`);
+					msg("Ghi đè cấu hình nạp tiền đã bị xóa");
+					loadRechargeConfigs();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không xóa được cấu hình nạp tiền:" + e.message, false);
+				}
+			}
+
+			function clearRedeemSearch() {
+				$('redeemSearch').value = '';
+				$('redeemStatus').value = '';
+				loadRedeemCodes();
+			}
+
+			function redeemRewardText(rewards = {}) {
+				const parts = [];
+				[['diamond', "nhân dân tệ"], ['gold', "máy gia tốc"], ['silver', "bạc"]].forEach(([key, label]) => {
+					if (Number(rewards[key] || 0)) parts.push(`${label} ${fmt(rewards[key])}`);
+				});
+				const items = rewards.items && typeof rewards.items === 'object' ? rewards.items : {};
+				Object.keys(items).sort((a, b) => Number(a) - Number(b)).forEach(id => {
+					if (Number(items[id] || 0)) parts.push(`item${id} x${fmt(items[id])}`);
+				});
+				return parts.length ? parts.join('，') : '-';
+			}
+
+			async function loadRedeemCodes() {
+				if (!isAdmin()) return;
+				$('redeemWrap').innerHTML = "<div class=\"loading\"> đang tải mã đổi quà...</div>";
+				try {
+					const q = new URLSearchParams();
+					if (str('redeemSearch')) q.set('keyword', str('redeemSearch'));
+					if (str('redeemStatus')) q.set('status', str('redeemStatus'));
+					const d = await api('GET', '/api/admin/redeem-codes' + (q.toString() ? '?' + q.toString() : ''));
+					const rows = Array.isArray(d.codes) ? d.codes : [];
+					$('rdTotal').textContent = fmt(rows.length);
+					$('rdActive').textContent = fmt(rows.filter(row => row.status !== 'disabled').length);
+					$('rdUsed').textContent = fmt(rows.reduce((sum, row) => sum + Number(row.usedCount || 0), 0));
+					if (!rows.length) {
+						$('redeemWrap').innerHTML = "<div class=\"empty\"> Chưa có mã đổi quà </div>";
+						return;
+					}
+					$('redeemWrap').innerHTML = `<table><thead><tr><th> GiftCode </th><th> Phần thưởng </th><th> lần </th><th> Thời hạn hiệu lực </th><th> trạng thái </th><th> thời gian cập nhật </th><th> hoạt động </th></tr></thead><tbody>${rows.map(row=>`<tr><td><b>${esc(row.code||'-')}</b><span class="sub">${esc(row.name||'-')}</span><span class="sub">Nhận xét:${esc(row.note||'-')}</span></td><td>${esc(redeemRewardText(row.rewards||{}))}</td><td><div> đã được sử dụng:${fmt(row.usedCount||0)}</div><span class="sub"> tổng số lần:${Number(row.maxUses||0)>0?fmt(row.maxUses):"Không giới hạn"}· Mỗi người:${fmt(row.perUserLimit||1)}</span></td><td><div>Bắt đầu:${date(row.startsAt)}</div><span class="sub"> kết thúc:${date(row.expiresAt)}</span></td><td>${row.status==='disabled'?"<span class=\"tag tr\"> vô hiệu hóa </span>":"<span class=\"tag tg\"> kích hoạt </span>"}</td><td><div>${date(row.updatedAt)}</div><span class="sub"> tạo ra:${date(row.createdAt)}</span></td><td><div class="acts"><button class="btn g" onclick='openRedeemEditor(${JSON.stringify(row).replace(/'/g,"&#39;")})'>Chỉnh sửa </button><button class="btn r" onclick="deleteRedeemCode('${esc(row.code)}')">Xóa </button></div></td></tr>`).join('')}</tbody></table>`;
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('redeemWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+				}
+			}
+
+			function addRedeemItemRow(itemId = '', count = '') {
+				redeemItemRow++;
+				const id = 'rdi' + redeemItemRow;
+				const d = document.createElement('div');
+				d.id = id;
+				d.style.display = 'grid';
+				d.style.gridTemplateColumns = '1fr 1fr auto';
+				d.style.gap = '10px';
+				d.innerHTML = `<div class="fg"><label>Item ID</label><dữ liệu đầu vào-rd-item-id type="number" min="1" value="${esc(itemId)}"></div><div class="fg"><label> số lượng </label><dữ liệu đầu vào-rd-item-count type="number" value="${esc(count)}"></div><button class="btn g" style="align-self:end" onclick="$('${id}').remove()">Xóa </button>`;
+				$('rd_items').appendChild(d);
+			}
+
+			function openRedeemEditor(row = {}) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý mã đổi quà", false);
+				const rewards = row.rewards || {};
+				const items = rewards.items && typeof rewards.items === 'object' ? rewards.items : {};
+				$('redeemTitle').textContent = row.code ? "Chỉnh sửa mã đổi quà" : "Thêm GiftCode";
+				$('rd_originalCode').value = row.code || '';
+				$('rd_code').value = row.code || '';
+				$('rd_code').disabled = !!row.code;
+				$('rd_name').value = row.name || '';
+				$('rd_status').value = row.status === 'disabled' ? 'disabled' : 'active';
+				$('rd_maxUses').value = row.maxUses || '';
+				$('rd_perUserLimit').value = row.perUserLimit || 1;
+				$('rd_startsAt').value = row.startsAt ? date(row.startsAt) : '';
+				$('rd_expiresAt').value = row.expiresAt ? date(row.expiresAt) : '';
+				$('rd_note').value = row.note || '';
+				[['rd_diamond', rewards.diamond], ['rd_gold', rewards.gold], ['rd_silver', rewards.silver], ['rd_baozi', items[4]], ['rd_lingyun', items[7]], ['rd_faxiang', items[8]], ['rd_tianyanSmall', items[1001]], ['rd_tianyanMedium', items[1002]], ['rd_tianyanLarge', items[1003]], ['rd_coupon', items[7010]], ['rd_customId', ''], ['rd_customCount', '']].forEach(([id, value]) => { $(id).value = value || ''; });
+				$('rd_items').innerHTML = '';
+				redeemItemRow = 0;
+				Object.keys(items).filter(id => ![4, 7, 8, 1001, 1002, 1003, 7010].includes(Number(id))).forEach(id => addRedeemItemRow(id, items[id]));
+				$('redeemO').classList.add('on');
+			}
+
+			function closeRedeemEditor() {
+				$('redeemO').classList.remove('on');
+			}
+
+			function collectRedeemRewards() {
+				const rewards = {}, items = {};
+				[['diamond', 'rd_diamond'], ['gold', 'rd_gold'], ['silver', 'rd_silver']].forEach(([key, id]) => {
+					const v = num(id);
+					if (v) rewards[key] = v;
+				});
+				[[4, 'rd_baozi'], [7, 'rd_lingyun'], [8, 'rd_faxiang'], [1001, 'rd_tianyanSmall'], [1002, 'rd_tianyanMedium'], [1003, 'rd_tianyanLarge'], [7010, 'rd_coupon']].forEach(([key, id]) => {
+					const v = num(id);
+					if (v) items[key] = v;
+				});
+				const cid = num('rd_customId'), cct = num('rd_customCount');
+				if (cid && cct) items[cid] = cct;
+				document.querySelectorAll('#rd_items > div').forEach(row => {
+					const itemId = Number(row.querySelector('[data-rd-item-id]')?.value || 0);
+					const count = Number(row.querySelector('[data-rd-item-count]')?.value || 0);
+					if (Number.isFinite(itemId) && itemId > 0 && Number.isFinite(count) && count) items[Math.floor(itemId)] = count;
+				});
+				if (Object.keys(items).length) rewards.items = items;
+				return rewards;
+			}
+
+			async function saveRedeemCode() {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý mã đổi quà", false);
+				const originalCode = $('rd_originalCode').value;
+				const rewards = collectRedeemRewards();
+				const body = {
+					code: str('rd_code'),
+					name: str('rd_name'),
+					status: str('rd_status') || 'active',
+					maxUses: num('rd_maxUses') || 0,
+					perUserLimit: num('rd_perUserLimit') || 1,
+					startsAt: str('rd_startsAt'),
+					expiresAt: str('rd_expiresAt'),
+					note: str('rd_note'),
+					rewards,
+				};
+				if (!body.code) return msg("Vui lòng điền mã đổi quà", false);
+				if (!Object.keys(rewards).length) return msg("Vui lòng định cấu hình ít nhất một phần thưởng", false);
+				try {
+					if (originalCode) await api('PATCH', `/api/admin/redeem-codes/${encodeURIComponent(originalCode)}`, body);
+					else await api('POST', '/api/admin/redeem-codes', body);
+					msg("Mã đổi quà đã được lưu");
+					closeRedeemEditor();
+					loadRedeemCodes();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không lưu được mã đổi quà:" + e.message, false);
+				}
+			}
+
+			async function deleteRedeemCode(code) {
+				if (!isAdmin()) return msg("Tài khoản hiện tại không có quyền quản lý mã đổi quà", false);
+				if (!code || !confirm(`Xác nhận xóa mã đổi quà${code}?`)) return;
+				try {
+					await api('DELETE', `/api/admin/redeem-codes/${encodeURIComponent(code)}`);
+					msg("Mã đổi quà đã bị xóa");
+					loadRedeemCodes();
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					msg("Không thể xóa mã đổi quà:" + e.message, false);
+				}
+			}
+
+			function dt(v) {
+				if (!v) return '';
+				const d = new Date(Number(v));
+				if (Number.isNaN(d.getTime())) return '';
+				const p = n => String(n).padStart(2, '0');
+				return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}`
+			}
+
+			function dtv(id) {
+				const v = str(id);
+				if (!v) return null;
+				const t = new Date(v).getTime();
+				return Number.isFinite(t) ? t : null
+			}
+
+			function grp(arr) {
+				const m = {};
+				arr.forEach(s => {
+					const k = Number(s.pageId || 0);
+					if (!m[k]) m[k] = {
+						pageId: k,
+						pageName: s.pageName || (`Phân trang${k}`),
+						servers: [],
+						totalPlayers: 0,
+						recentActive: 0,
+						online: 0
+					};
+					m[k].servers.push(s);
+					m[k].totalPlayers += Number(s.totalPlayers || 0);
+					m[k].recentActive += Number(s.recentActive || 0);
+					m[k].online += Number(s.online || 0)
+				});
+				return Object.values(m).sort((a, b) => a.pageId - b.pageId)
+			}
+
+			function serverStatusTag(status) {
+				const safeStatus = Number(status || 0);
+				if (safeStatus === 2) return "<span class=\"tag to\"> đã đầy </span>";
+				return safeStatus > 0 ? "<span class=\"tag tg\"> kích hoạt </span>" : "<span class=\"tag tr\"> vô hiệu hóa </span>"
+			}
+
+			function renderSrv(s) {
+				const tags = [serverStatusTag(s.status), s
+					.running === false ? "<span class=\"tag tr\"> không chạy </span>" : "<span class=\"tag tb\"> đang chạy</span>", s.isNew ?
+					"<span class=\"tag to\"> Quận mới</span>" : '', s.isRecommend ? "<span class=\"tag tb\"> đề xuất </span>" : ''
+				].join('');
+				return `<div class="sc"><h3><span>${esc(s.serverName||("Dịch vụ quận"+s.serverId))}</span><span style="color:#94a3b8">#${s.serverId}</span></h3><div class="meta">${tags}</div><div class="kv"><span>Trang </span><b>${s.pageId} / ${esc(s.pageName||'-')}</b></div><div class="kv"><span> Thời gian mở máy chủ</span><b>${date(s.openTime)}</b></div><div class="kv"><span>Tổng số vai trò</span><b>${fmt(s.totalPlayers)}</b></div><div class="kv"><span>Hoạt động trong 7 ngày qua</span><b>${fmt(s.recentActive)}</b></div><div class="acts" style="margin-top:12px"><button class="btn g" onclick="openServer(${s.serverId})">Chỉnh sửa </button><button class="btn r" onclick="delServer(${s.serverId})">Xóa </button></div></div>`
+			}
+			async function loadServers() {
+				$('serverWrap').innerHTML = "<div class=\"loading\"> đang tải dữ liệu vùng...</div>";
+				Object.keys(cache).forEach(k => delete cache[k]);
+				try {
+					const d = await api('GET', '/api/admin/servers'),
+						arr = Array.isArray(d.servers) ? d.servers : [];
+					arr.forEach(s => cache[String(s.serverId)] = s);
+					$('svTotal').textContent = fmt(arr.reduce((a, b) => a + Number(b.totalPlayers || 0), 0));
+					$('svOn').textContent = fmt(Number(d.onlineTotal || 0));
+					$('svAct').textContent = fmt(arr.reduce((a, b) => a + Number(b.recentActive || 0), 0));
+					$('svCnt').textContent = arr.length;
+					if (!arr.length) {
+						$('serverWrap').innerHTML = "<div class=\"empty\"> Không có dữ liệu cho vùng </div>";
+						return;
+					}
+					const pages = (Array.isArray(d.pages) && d.pages.length ? d.pages : grp(arr));
+					pages.forEach(p => {
+						if (!Array.isArray(p.servers) || !p.servers.length) p.servers = arr.filter(s => Number(s.pageId || 0) ===
+							Number(p.pageId || 0))
+					});
+					$('serverWrap').innerHTML =
+						`<div class="pages">${pages.map(p=>`<div class="card"><div class="ph"><div><b>${esc(p.pageName||("Phân trang"+p.pageId))}</b><div class="hint">pageId: ${p.pageId}· Máy chủ quận${p.servers.length}Ký tự </div></div><div class="hint">${fmt(p.totalPlayers||0)}· tích cực${fmt(p.recentActive||0)}· Trực tuyến${fmt(p.online||0)}</div></div><div class="sg">${p.servers.map(renderSrv).join('')}</div></div>`).join('')}</div>`
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					$('serverWrap').innerHTML = `<div class="empty" style="color:#b42318"> không tải được:${esc(e.message)}</div>`;
+					msg("Không thể tải dữ liệu khu vực:" + e.message, false)
+				}
+			}
+
+			function openServer(id) {
+				$('srvMode').value = id ? 'edit' : 'create';
+				$('srvT').textContent = id ? "Chỉnh sửa khu vực" : "Thêm máy chủ";
+				$('s_serverId').disabled = !!id;
+				const s = id ? cache[String(id)] || {} : {};
+				$('s_serverId').value = s.serverId || '';
+				$('s_serverName').value = s.serverName || '';
+				$('s_pageId').value = s.pageId || '';
+				$('s_pageName').value = s.pageName || '';
+				$('s_status').value = s.status ?? 1;
+				$('s_running').checked = s.running !== false;
+				$('s_isNew').checked = !!s.isNew;
+				$('s_isRecommend').checked = !!s.isRecommend;
+				$('s_openTime').value = dt(s.openTime || Date.now());
+				$('srvO').classList.add('on')
+			}
+
+			function closeServer() {
+				$('srvO').classList.remove('on')
+			}
+			async function saveServer() {
+				const mode = $('srvMode').value,
+					sid = num('s_serverId'),
+					namev = str('s_serverName'),
+					pid = num('s_pageId');
+				if (!sid || !namev || !pid) {
+					msg("Vui lòng điền đầy đủ ID khu vực, tên khu vực và ID phân trang", false);
+					return;
+				}
+				const body = compact({
+					serverId: sid,
+					serverName: namev,
+					pageId: pid,
+					pageName: str('s_pageName'),
+					status: num('s_status'),
+					running: $('s_running').checked,
+					isNew: $('s_isNew').checked,
+					isRecommend: $('s_isRecommend').checked,
+					openTime: dtv('s_openTime')
+				});
+				try {
+					if (mode === 'edit') {
+						await api('PATCH', `/api/admin/servers/${sid}`, body);
+						msg("Dữ liệu khu vực đã được cập nhật")
+					} else {
+						await api('POST', '/api/admin/servers', body);
+						msg("Vùng đã được tạo")
+					}
+					closeServer();
+					loadServers()
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					const m = {
+						SERVER_ID_DUPLICATE: "ID khu vực đã tồn tại",
+						INVALID_SERVER_ID: "ID khu vực không hợp lệ",
+						INVALID_PAGE_ID: "ID phân trang không hợp lệ",
+						SERVER_NOT_FOUND: "Khu vực không tồn tại"
+					};
+					msg(m[e.message] || ("Không lưu được vùng:" + e.message), false)
+				}
+			}
+			async function delServer(id) {
+				const s = cache[String(id)] || {};
+				if (!confirm(`Xác nhận xóa khu vực"${s.serverName||id}"?"`)) return;
+				try {
+					await api('DELETE', `/api/admin/servers/${id}`);
+					msg("Khu vực đã bị xóa");
+					loadServers()
+				} catch (e) {
+					if (e.message === 'SESSION_EXPIRED') return;
+					if (e.message === 'SERVER_NOT_EMPTY') {
+						msg("Ngoài ra còn có dữ liệu ký tự trong khu vực này và không thể xóa trực tiếp.", false);
+						return;
+					}
+					msg("Không thể xóa vùng:" + e.message, false)
+				}
+			}
+			$('search').addEventListener('keydown', e => {
+				if (e.key === 'Enter') loadPlayers(1)
+			});
+			$('lu').addEventListener('keydown', e => {
+				if (e.key === 'Enter') $('lp').focus()
+			});
+			$('lp').addEventListener('keydown', e => {
+				if (e.key === 'Enter') login()
+			});
+			tab(tabName);
+			auth();
+		</script>
+	</body>
+</html>

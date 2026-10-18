@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bot và WebGM Server 2</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-bot-v-webgm-cho-server-2">Session Report — Bot và WebGM cho Server 2</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã cấu hình S2 giống S1 với <code>580</code> bot ảo và <code>580</code> bot thật, phân bố <code>10 bot/map</code> trên <code>58</code> map.</li>
+<li>Thêm process riêng <code>lhs-real-bots-s2</code>, kết nối <code>ws://127.0.0.1:9201</code>, <code>serverId=1002</code>; dữ liệu bot chỉ ghi MongoDB <code>lhs_s1002</code> và Redis prefix <code>s1002:</code>.</li>
+<li>Bot thật dùng protocol native <code>1402 -&gt; 2000 -&gt; 2001</code>, server quyết định monster/reward; không thực hiện purchase, recharge, guild hoặc ranking.</li>
+<li>Đã bổ sung WebGM server <code>1002</code> và route API riêng <code>http://127.0.0.1:8083</code>; S1 tiếp tục dùng <code>8080</code>.</li>
+<li>WebGM login/role lookup/mail/WebShop/Tích Donate/Donate SePay/daily check-in và ledger được giữ theo server người chơi chọn.</li>
+<li>Đã kiểm thử bridge gửi 1 thư item số lượng 1 tới bot S2, xác nhận thư nằm đúng <code>lhs_s1002</code> và xóa sạch thư QA ngay sau kiểm tra.</li>
+<li>Đã phát hiện và khóa thêm REST <code>/api/user/login</code> trên cả S1/S2 để WebGM không thể tạo role S2 trước 17:00.</li>
+<li>Đã chạy E2E hoàn nguyên cho GiftCode, Tích Donate và WebShop bằng role người chơi S2 thật; toàn bộ ledger/mail đi đúng S2 và dữ liệu QA đã được xóa.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="production">Production</h3>
+<ul>
+<li><code>/linhhoasu/lhs/newServer/ecosystem.config.js</code>: bật bot ảo S2 và thêm worker <code>lhs-real-bots-s2</code>.</li>
+<li><code>/linhhoasu/webgame/gm/config.php</code>: chọn API base theo server; role lookup, ownership check, mail và clear action đi đúng node.</li>
+<li><code>/linhhoasu/webgame/gm/.env</code>: thêm <code>LHS_SERVER_COUNT=2</code>, S2 ID/key/name và API base <code>8083</code>; không thay đổi secret.</li>
+<li>PM2: thêm process <code>lhs-real-bots-s2</code>; chỉ restart <code>lhs-s1002</code>, không restart S1/bot S1/WebGM/Nginx.</li>
+<li><code>/linhhoasu/lhs/newServer/src/net/HTTPServer.js</code>: enforce <code>ServerAccessService</code> cho REST user login trên cả node.</li>
+</ul>
+<h3 id="local-tool-evidence">Local/tool/evidence</h3>
+<ul>
+<li><code>linhhoasu/lhs/newServer/ecosystem.config.js</code>: đồng bộ cấu hình production mới.</li>
+<li><code>_ai_workbench/tools/snapshot_server2_bots_webgm.py</code>.</li>
+<li><code>_ai_workbench/tools/update_webgm_s2_env.py</code>.</li>
+<li><code>_ai_workbench/tools/audit_webgm_server2_contract.php</code>.</li>
+<li><code>_ai_workbench/tools/qa_webgm_s2_mail.php</code>.</li>
+<li><code>_ai_workbench/tools/deploy_server2_bots_webgm_20260904.py</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/server2_bots_webgm_deploy_20260903_222442.json</code>.</li>
+<li>Snapshot hậu kiểm: <code>_ai_workbench/temp/server2_bots_webgm_snapshot_20260903_223128/</code>.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/server2_bots_webgm_pre_20260903_222442/</code>.</li>
+<li>Backup local: <code>_ai_workbench/backups/server2_bots_webgm_local_pre_20260904/</code>.</li>
+<li>Evidence REST gate: <code>_ai_workbench/temp/server2_rest_gate_deploy_20260903_223519.json</code>.</li>
+<li>Evidence GiftCode/Tích Donate: <code>_ai_workbench/temp/webgm_s2_feature_qa_20260904_032816.json</code>.</li>
+<li>Evidence WebShop: <code>_ai_workbench/temp/webgm_s2_webshop_qa_20260904_033150.json</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Remote Python không hiểu <code>from __future__ import annotations</code></td>
+<td>VPS dùng Python 3.6</td>
+<td>Bỏ future import không cần thiết; deploy dừng trước mutation</td>
+<td>Tool chạy remote phải tương thích Python 3.6 của VPS</td>
+</tr>
+<tr>
+<td>Schema gate báo ledger VIP chưa tách server</td>
+<td><code>auth_codes</code> dùng <code>used_server_id</code>, không dùng tên chung <code>server_id</code></td>
+<td>Verifier kiểm tra đúng cột theo từng bảng</td>
+<td>Audit schema theo contract thực tế, không giả định cùng tên cột</td>
+</tr>
+<tr>
+<td>WebGM chỉ khai báo S1 và mọi call dùng <code>LHS_GAME_HTTP_BASE=8080</code></td>
+<td>Cấu hình cũ single-server</td>
+<td>Thêm API base theo từng server và truyền server key xuyên suốt role/mail/clear/login</td>
+<td>Mọi bridge đa server phải route theo session server ở backend</td>
+</tr>
+<tr>
+<td>Nguy cơ WebGM gửi quà S2 vào S1</td>
+<td>Role lookup/mail trước đây luôn gọi node 8080</td>
+<td>S2 lookup/mail gọi 8083 và kiểm tra <code>accountId + userId + serverId</code></td>
+<td>HTTP 2xx không đủ; phải readback mail trong đúng DB gameplay</td>
+</tr>
+<tr>
+<td>REST <code>/api/user/login</code> có thể tạo role trước giờ mở</td>
+<td>Gate ban đầu chỉ phủ protocol native và WebSocket</td>
+<td>Thêm <code>ServerAccessService</code> trước auth/create-role trên REST ở S1 và S2</td>
+<td>Mọi entrypoint đăng nhập phải dùng chung access gate</td>
+</tr>
+<tr>
+<td>Audit bot báo <code>claims=0</code> dù log farm liên tục</td>
+<td>Tool đọc nhầm <code>bots.mapMonsters</code> thay vì <code>runtime.mapMonsters</code></td>
+<td>Sửa parser và readback lại <code>claims=22647</code>, <code>completed=22646</code></td>
+<td>Kiểm chứng schema health bằng log native trước khi kết luận</td>
+</tr>
+<tr>
+<td>E2E PHP đầu lỗi <code>require_once ../config.php</code></td>
+<td>Wrapper chạy sai working directory</td>
+<td>Chạy action từ <code>/linhhoasu/webgame/gm/api</code>; setup được cleanup tự động</td>
+<td>PHP legacy relative include phải giữ đúng cwd khi test CLI</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>WebGM ledger đã có scope phù hợp: <code>auth_codes.used_server_id</code>; các bảng <code>giftcode_logs</code>, <code>daily_checkins</code>, <code>sepay_logs</code>, <code>recharge_milestone_claims</code>, <code>webshop_orders</code>, <code>gm_logs</code> dùng <code>server_id</code>.</li>
+<li>Ví tiền Xu Web vẫn thuộc tài khoản chung, nhưng order/history và quyền nhận quà được ghi theo server hiện tại.</li>
+<li>WebShop và Tích Donate đang bật; Daily check-in đang bật. GiftCode thực tế hoạt động theo từng mã <code>giftcodes.is_active</code>; action <code>submit_giftcode</code> không phụ thuộc cờ <code>giftcode_enabled</code>.</li>
+<li>S2 bot cần process riêng để không trùng state/socket worker S1; cùng ID dạng <code>lhs_real_bot_###</code> vẫn an toàn vì gameplay database/prefix tách riêng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>S1: <code>580</code> bot thật, hoạt động bình thường; không restart.</li>
+<li>S2: <code>580</code> bot thật + <code>580</code> bot ảo, process <code>lhs-real-bots-s2</code> online, restart count <code>0</code>.</li>
+<li>MongoDB S2: <code>580</code> player, toàn bộ là bot; <code>0</code> người chơi thật tại thời điểm hậu kiểm.</li>
+<li>S2 <code>invalid=0</code>, <code>claims=22.647</code>, <code>completed=22.646</code>; log live liên tục có <code>map-farm open ok</code> và <code>map-farm claim ok</code> trên nhiều map.</li>
+<li>Tải hậu kiểm cuối: load <code>1,45</code>; RAM khả dụng khoảng <code>12.038 MB</code>; swap còn <code>5.096 MB</code>; đủ biên an toàn.</li>
+<li>WebGM login HTTP 200 và có lựa chọn S1/S2; S2 API base là <code>127.0.0.1:8083</code>.</li>
+<li>REST gate: cả <code>8080</code> và <code>8083</code> trả HTTP 403 <code>SERVER_NOT_OPEN</code> trước 17:00; probe không tạo thêm role/Player.</li>
+<li>Có 1 role người chơi S2 đã phát sinh trước khi vá REST gate; giữ nguyên vì ownership Account/Player hợp lệ, không phải artifact bot/QA.</li>
+<li>E2E role routing: role S2 được lookup qua <code>8083</code>, đúng <code>serverId=1002</code>; cùng role không xuất hiện trong kết quả S1.</li>
+<li>E2E GiftCode: response thành công; <code>giftcode_logs</code>, delivery batch và <code>gm_logs</code> đều S2; mail <code>S2=1</code>, <code>S1=0</code>.</li>
+<li>E2E Tích Donate: response thành công; claim/event key/GM log đều S2; mail <code>S2=1</code>, <code>S1=0</code>; không cộng/trừ ví thật.</li>
+<li>E2E WebShop: order <code>paid</code>, <code>server_id=1002</code>, đúng role S2; order S1 bằng 0; mail <code>S2=1</code>, <code>S1=0</code>; ví Xu đã phục hồi đúng số ban đầu.</li>
+<li>Cleanup readback: GiftCode QA <code>0</code>, milestone QA <code>0</code>, SePay QA <code>0</code>, WebShop item/order QA <code>0</code>, claim/log/mail QA <code>0</code>; Player item không đổi.</li>
+<li>Evidence SHA-256: <code>11fee47d8557f5552b5ca737637a88e6d31178c21bb749f5080d29e06b883ebc</code>.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Sau 17:00, người chơi đăng nhập WebGM chọn S2 và thao tác bình thường; backend đã route/validate theo S2.</li>
+<li>Theo dõi giao dịch thật đầu tiên của S2 bằng <code>webshop_orders.server_id=1002</code>, <code>sepay_logs.server_id=1002</code> và mail <code>targetServerId=1002</code>.</li>
+<li>Không cần bật cờ GiftCode riêng; chỉ cần mã cụ thể có <code>is_active=1</code>, chưa hết hạn/hết lượt và người chơi chưa claim mã đó trên S2.</li>
+</ol></main></body></html>

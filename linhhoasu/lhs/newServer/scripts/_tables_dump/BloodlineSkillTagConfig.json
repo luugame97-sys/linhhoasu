@@ -1,0 +1,688 @@
+{
+  "_table": "BloodlineSkillTagConfig",
+  "_rows": 109,
+  "_type": "object",
+  "_firstKeys": "id,icon,desc,descColor",
+  "_sample": [
+    {
+      "1002": {
+        "id": 1002,
+        "icon": "xmzjm_bm_jndi01",
+        "desc": 30036700,
+        "descColor": 9393920
+      }
+    },
+    {
+      "1003": {
+        "id": 1003,
+        "icon": "xmzjm_bm_jndi01",
+        "desc": 30036701,
+        "descColor": 9393920
+      }
+    },
+    {
+      "1010": {
+        "id": 1010,
+        "icon": "xmzjm_bm_jndi01",
+        "desc": 30036702,
+        "descColor": 9393920
+      }
+    }
+  ],
+  "data": {
+    "1002": {
+      "id": 1002,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036700,
+      "descColor": 9393920
+    },
+    "1003": {
+      "id": 1003,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036701,
+      "descColor": 9393920
+    },
+    "1010": {
+      "id": 1010,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036702,
+      "descColor": 9393920
+    },
+    "1011": {
+      "id": 1011,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036739,
+      "descColor": 9393920
+    },
+    "1101": {
+      "id": 1101,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036703,
+      "descColor": 9393920
+    },
+    "1102": {
+      "id": 1102,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036704,
+      "descColor": 9393920
+    },
+    "1103": {
+      "id": 1103,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036705,
+      "descColor": 9393920
+    },
+    "1104": {
+      "id": 1104,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036706,
+      "descColor": 9393920
+    },
+    "1105": {
+      "id": 1105,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036707,
+      "descColor": 9393920
+    },
+    "1106": {
+      "id": 1106,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036708,
+      "descColor": 9393920
+    },
+    "1161": {
+      "id": 1161,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036709,
+      "descColor": 9393920
+    },
+    "1162": {
+      "id": 1162,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036710,
+      "descColor": 9393920
+    },
+    "1163": {
+      "id": 1163,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036711,
+      "descColor": 9393920
+    },
+    "1164": {
+      "id": 1164,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036712,
+      "descColor": 9393920
+    },
+    "1165": {
+      "id": 1165,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036713,
+      "descColor": 9393920
+    },
+    "1171": {
+      "id": 1171,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036742,
+      "descColor": 9393920
+    },
+    "1172": {
+      "id": 1172,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036743,
+      "descColor": 9393920
+    },
+    "1173": {
+      "id": 1173,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036744,
+      "descColor": 9393920
+    },
+    "1174": {
+      "id": 1174,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036745,
+      "descColor": 9393920
+    },
+    "1175": {
+      "id": 1175,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036746,
+      "descColor": 9393920
+    },
+    "1176": {
+      "id": 1176,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30036750,
+      "descColor": 9393920
+    },
+    "2001": {
+      "id": 2001,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036714,
+      "descColor": 10693943
+    },
+    "2002": {
+      "id": 2002,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036715,
+      "descColor": 10693943
+    },
+    "2003": {
+      "id": 2003,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036716,
+      "descColor": 10693943
+    },
+    "2010": {
+      "id": 2010,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036717,
+      "descColor": 10693943
+    },
+    "2011": {
+      "id": 2011,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036747,
+      "descColor": 10693943
+    },
+    "2101": {
+      "id": 2101,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036718,
+      "descColor": 10693943
+    },
+    "2102": {
+      "id": 2102,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036719,
+      "descColor": 10693943
+    },
+    "2103": {
+      "id": 2103,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036720,
+      "descColor": 10693943
+    },
+    "2104": {
+      "id": 2104,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036721,
+      "descColor": 10693943
+    },
+    "2105": {
+      "id": 2105,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036722,
+      "descColor": 10693943
+    },
+    "2106": {
+      "id": 2106,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036723,
+      "descColor": 10693943
+    },
+    "2161": {
+      "id": 2161,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036724,
+      "descColor": 10693943
+    },
+    "2162": {
+      "id": 2162,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036725,
+      "descColor": 10693943
+    },
+    "2163": {
+      "id": 2163,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036726,
+      "descColor": 10693943
+    },
+    "2164": {
+      "id": 2164,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036727,
+      "descColor": 10693943
+    },
+    "2165": {
+      "id": 2165,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036728,
+      "descColor": 10693943
+    },
+    "2166": {
+      "id": 2166,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036749,
+      "descColor": 10693943
+    },
+    "2167": {
+      "id": 2167,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036753,
+      "descColor": 10693943
+    },
+    "2168": {
+      "id": 2168,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036754,
+      "descColor": 10693943
+    },
+    "2202": {
+      "id": 2202,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036729,
+      "descColor": 10693943
+    },
+    "2241": {
+      "id": 2241,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036740,
+      "descColor": 10693943
+    },
+    "2242": {
+      "id": 2242,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036741,
+      "descColor": 10693943
+    },
+    "3001": {
+      "id": 3001,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036730,
+      "descColor": 6764194
+    },
+    "3002": {
+      "id": 3002,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036731,
+      "descColor": 6764194
+    },
+    "3003": {
+      "id": 3003,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036732,
+      "descColor": 6764194
+    },
+    "3004": {
+      "id": 3004,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036733,
+      "descColor": 6764194
+    },
+    "3005": {
+      "id": 3005,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036734,
+      "descColor": 6764194
+    },
+    "3006": {
+      "id": 3006,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036735,
+      "descColor": 6764194
+    },
+    "3007": {
+      "id": 3007,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036736,
+      "descColor": 6764194
+    },
+    "3008": {
+      "id": 3008,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30036748,
+      "descColor": 6764194
+    },
+    "4001": {
+      "id": 4001,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30036737,
+      "descColor": 3506761
+    },
+    "4002": {
+      "id": 4002,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30036738,
+      "descColor": 3506761
+    },
+    "4003": {
+      "id": 4003,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30036751,
+      "descColor": 3506761
+    },
+    "4004": {
+      "id": 4004,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30036752,
+      "descColor": 3506761
+    },
+    "30095059": {
+      "id": 30095059,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30095059,
+      "descColor": 3506761
+    },
+    "30095060": {
+      "id": 30095060,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095060,
+      "descColor": 9393920
+    },
+    "30095061": {
+      "id": 30095061,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095061,
+      "descColor": 9393920
+    },
+    "30095062": {
+      "id": 30095062,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095062,
+      "descColor": 9393920
+    },
+    "30095063": {
+      "id": 30095063,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095063,
+      "descColor": 9393920
+    },
+    "30095064": {
+      "id": 30095064,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095064,
+      "descColor": 9393920
+    },
+    "30095065": {
+      "id": 30095065,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095065,
+      "descColor": 6764194
+    },
+    "30095066": {
+      "id": 30095066,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095066,
+      "descColor": 9393920
+    },
+    "30095067": {
+      "id": 30095067,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30036732,
+      "descColor": 10693943
+    },
+    "30095068": {
+      "id": 30095068,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095068,
+      "descColor": 10693943
+    },
+    "30095069": {
+      "id": 30095069,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095069,
+      "descColor": 9393920
+    },
+    "30095070": {
+      "id": 30095070,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095070,
+      "descColor": 10693943
+    },
+    "30095071": {
+      "id": 30095071,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095071,
+      "descColor": 6764194
+    },
+    "30095072": {
+      "id": 30095072,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30095072,
+      "descColor": 3506761
+    },
+    "30095073": {
+      "id": 30095073,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095073,
+      "descColor": 10693943
+    },
+    "30095074": {
+      "id": 30095074,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095074,
+      "descColor": 10693943
+    },
+    "30095075": {
+      "id": 30095075,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095075,
+      "descColor": 6764194
+    },
+    "30095076": {
+      "id": 30095076,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095076,
+      "descColor": 10693943
+    },
+    "30095077": {
+      "id": 30095077,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095077,
+      "descColor": 10693943
+    },
+    "30095078": {
+      "id": 30095078,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095078,
+      "descColor": 6764194
+    },
+    "30095079": {
+      "id": 30095079,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095079,
+      "descColor": 6764194
+    },
+    "30095080": {
+      "id": 30095080,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095080,
+      "descColor": 9393920
+    },
+    "30095081": {
+      "id": 30095081,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095081,
+      "descColor": 9393920
+    },
+    "30095082": {
+      "id": 30095082,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095082,
+      "descColor": 10693943
+    },
+    "30095083": {
+      "id": 30095083,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095083,
+      "descColor": 6764194
+    },
+    "30095084": {
+      "id": 30095084,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095084,
+      "descColor": 6764194
+    },
+    "30095085": {
+      "id": 30095085,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095085,
+      "descColor": 10693943
+    },
+    "30095086": {
+      "id": 30095086,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095086,
+      "descColor": 9393920
+    },
+    "30095087": {
+      "id": 30095087,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095087,
+      "descColor": 9393920
+    },
+    "30095088": {
+      "id": 30095088,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095088,
+      "descColor": 6764194
+    },
+    "30095089": {
+      "id": 30095089,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095089,
+      "descColor": 9393920
+    },
+    "30095090": {
+      "id": 30095090,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095090,
+      "descColor": 10693943
+    },
+    "30095091": {
+      "id": 30095091,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095091,
+      "descColor": 9393920
+    },
+    "30095092": {
+      "id": 30095092,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095092,
+      "descColor": 9393920
+    },
+    "30095093": {
+      "id": 30095093,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095093,
+      "descColor": 9393920
+    },
+    "30095094": {
+      "id": 30095094,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095094,
+      "descColor": 9393920
+    },
+    "30095095": {
+      "id": 30095095,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095095,
+      "descColor": 6764194
+    },
+    "30095096": {
+      "id": 30095096,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095096,
+      "descColor": 6764194
+    },
+    "30095097": {
+      "id": 30095097,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095097,
+      "descColor": 6764194
+    },
+    "30095098": {
+      "id": 30095098,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095098,
+      "descColor": 9393920
+    },
+    "30095099": {
+      "id": 30095099,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095099,
+      "descColor": 6764194
+    },
+    "30095100": {
+      "id": 30095100,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30095100,
+      "descColor": 3506761
+    },
+    "30095101": {
+      "id": 30095101,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095101,
+      "descColor": 9393920
+    },
+    "30095102": {
+      "id": 30095102,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095102,
+      "descColor": 9393920
+    },
+    "30095103": {
+      "id": 30095103,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095103,
+      "descColor": 9393920
+    },
+    "30095104": {
+      "id": 30095104,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095104,
+      "descColor": 6764194
+    },
+    "30095105": {
+      "id": 30095105,
+      "icon": "xmzjm_bm_jndi01",
+      "desc": 30095105,
+      "descColor": 9393920
+    },
+    "30095106": {
+      "id": 30095106,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095106,
+      "descColor": 6764194
+    },
+    "30095107": {
+      "id": 30095107,
+      "icon": "xmzjm_bm_jndi02",
+      "desc": 30095107,
+      "descColor": 10693943
+    },
+    "30095108": {
+      "id": 30095108,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095108,
+      "descColor": 6764194
+    },
+    "30095109": {
+      "id": 30095109,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095109,
+      "descColor": 6764194
+    },
+    "30095110": {
+      "id": 30095110,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095110,
+      "descColor": 6764194
+    },
+    "30095111": {
+      "id": 30095111,
+      "icon": "xmzjm_bm_jndi04",
+      "desc": 30095111,
+      "descColor": 3506761
+    },
+    "30095112": {
+      "id": 30095112,
+      "icon": "xmzjm_bm_jndi03",
+      "desc": 30095112,
+      "descColor": 6764194
+    }
+  }
+}

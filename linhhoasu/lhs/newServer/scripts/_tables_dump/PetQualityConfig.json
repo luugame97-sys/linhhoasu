@@ -1,0 +1,186 @@
+{
+  "_table": "PetQualityConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "id,passiveSkillCount,composeSuccessRate,consumes,addConsumes",
+  "_sample": [
+    {
+      "2": {
+        "id": 2,
+        "passiveSkillCount": 2,
+        "composeSuccessRate": 9000,
+        "consumes": [
+          {
+            "id": 36,
+            "count": 5
+          }
+        ],
+        "addConsumes": [
+          {
+            "id": 36,
+            "count": 3
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "passiveSkillCount": 2,
+        "composeSuccessRate": 7500,
+        "consumes": [
+          {
+            "id": 36,
+            "count": 10
+          }
+        ],
+        "addConsumes": [
+          {
+            "id": 36,
+            "count": 6
+          }
+        ]
+      }
+    },
+    {
+      "4": {
+        "id": 4,
+        "passiveSkillCount": 3,
+        "composeSuccessRate": 3500,
+        "consumes": [
+          {
+            "id": 36,
+            "count": 25
+          }
+        ],
+        "addConsumes": [
+          {
+            "id": 36,
+            "count": 15
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "2": {
+      "id": 2,
+      "passiveSkillCount": 2,
+      "composeSuccessRate": 9000,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 5
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 3
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "passiveSkillCount": 2,
+      "composeSuccessRate": 7500,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 10
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 6
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "passiveSkillCount": 3,
+      "composeSuccessRate": 3500,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 25
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 15
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "passiveSkillCount": 4,
+      "composeSuccessRate": 2400,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 40
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 24
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "passiveSkillCount": 5,
+      "composeSuccessRate": 1800,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 60
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 36
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "passiveSkillCount": 6,
+      "composeSuccessRate": 1200,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 100
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 60
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "passiveSkillCount": 6,
+      "composeSuccessRate": 0,
+      "consumes": [
+        {
+          "id": 36,
+          "count": 150
+        }
+      ],
+      "addConsumes": [
+        {
+          "id": 36,
+          "count": 110
+        }
+      ]
+    }
+  }
+}

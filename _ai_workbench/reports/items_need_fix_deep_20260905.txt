@@ -1,0 +1,311 @@
+412	Hộp quà tuyển chọn Tuyết Bảo	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+413	Hộp quà tuyển chọn Tuyết Bảo	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+90021	Tự chọn Mảnh tinh linh Ưu tú	EMPTY_SELECTION	AssetsUseConfig.rewards rỗng; rương không mở được, không bị trừ.
+90022	Tự chọn Mảnh yêu tinh tinh xảo	EMPTY_SELECTION	AssetsUseConfig.rewards rỗng; rương không mở được, không bị trừ.
+90026	Tự chọn tinh linh hiếm	NATIVE_ELF_TO_BAG	Trừ rương, cộng ID Yêu linh vào items nhưng elfInfo.elfData không tăng.
+90027	Tự chọn yêu linh Sử Thi	NATIVE_ELF_TO_BAG	Trừ rương, cộng ID Yêu linh vào items nhưng elfInfo.elfData không tăng.
+90028	Tự chọn yêu linh truyền thuyết	NATIVE_ELF_TO_BAG	Trừ rương, cộng ID Yêu linh vào items nhưng elfInfo.elfData không tăng.
+90101	Bí bảo Đồng Tinh xảo tự chọn	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90102	Tự chọn bí bảo đồng hiếm	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90103	Tự chọn bí bảo đồng Sử Thi	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90104	Bí bảo truyền thuyết tự chọn	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90111	Tự chọn Bí Bảo hải trân Tinh xảo	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90112	Tự chọn bí bảo hải trân hiếm	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90113	Bí bảo trân hải Sử Thi tự chọn	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90131	Bí bảo ngọc thạch Tinh xảo tự chọn	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90132	Bí bảo ngọc thạch hiếm tự chọn	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90133	Bí bảo ngọc thạch Sử Thi tự chọn	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90141	Tự chọn bí bảo sứ tinh xảo	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90142	Tự chọn bí bảo sứ hiếm	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90143	Tự chọn bí bảo sứ Sử Thi	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+90151	Tự chọn hồn ngọc linh trục	SYNTHETIC_REWARD_NOT_RESOLVED	90151 chọn option index 1 trả 100721 ×2 (type 99, random_connect_01), không sinh Linh trục.
+90201	Tự chọn thần văn Hiếm	NATIVE_ORB_TO_BAG	Trừ rương, cộng ID Thần văn vào items nhưng artifactInfo.orbInfo không nhận.
+90202	Tự chọn Sử Thi thần văn	NATIVE_ORB_TO_BAG	Trừ rương, cộng ID Thần văn vào items nhưng artifactInfo.orbInfo không nhận.
+90203	Tự chọn Thần văn Truyền Thuyết	NATIVE_ORB_TO_BAG	Trừ rương, cộng ID Thần văn vào items nhưng artifactInfo.orbInfo không nhận.
+90211	Tự chọn linh trục cấp 1	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90212	Tự chọn linh trục cấp 2	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90213	Tự chọn linh trục cấp 3	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90214	Tự chọn linh trục cấp 4	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90215	Tự chọn Cấp 5 linh trục	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90216	Tự chọn Cấp 6 linh trục	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90217	Linh trục cấp 7 tự chọn	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90218	Tự chọn 8 cấp Linh Xu	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+90219	Linh Sơ cấp 9 tự chọn	NATIVE_CONNECT_TO_BAG	Trừ rương, cộng ID Linh trục vào items nhưng valhallaFormationInfo.connect không tăng.
+94203	Hộp chọn tự do diều giấy bí bảo	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94204	Hộp chọn tự do diều giấy bí bảo	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94301	Túi Phúc Thiên Cơ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94302	Hộp chọn tự do báu vật Thiên Cơ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94303	Hộp chọn tự do báu vật Thiên Cơ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94401	Cẩm nang Nghê Thường	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94416	Túi Phúc Trăng tròn	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94418	Hộp quà phá kén·Nguyên Bảo	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94419	Hộp quà phá kén·Đùi Gà	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94420	Hộp quà Phá Kiển · Phù Tốc Độ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94421	Hộp quà Phá Kén · Baozi	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94422	Hộp quà Phá Kién - Tiền bạc	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94515	Dịch Lôi kiếp song phẩm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94701	Túi phúc Thu Ý Nồng	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94702	Biểu cảm Công Tử	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94703	Túi phúc Nguyên Tuế mãn	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94704	Biểu cảm rắn nhỏ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94705	Túi Phúc Chúc Xuân	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94706	Túi Phúc Hoa Mệnh	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94707	Biểu cảm Pháp Hải	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94708	Chăm chỉ luyện túi phúc	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94709	Thiên Diễn Bảo Sảo	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94711	Tông tình gia lễ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94712	Biểu cảm Bát Giới	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94713	Hộp quà kỷ niệm	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94715	Hộp quà Thu Ái	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94716	Biểu cảm Chồn Tuyết	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94718	Khánh lễ Nguyên Chính	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94719	Huyền Cơ Bảo Sao	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94720	Biểu cảm tiểu mã	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94721	Đại lễ năm mới	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94722	Biểu cảm Bà ngoại	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94724	Quà ấm Thanh Dương	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94725	Bạc Tố Ngân Bảo Sào	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94726	Mộc Lan đoan lễ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94727	Biểu cảm Cửu U Tước	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94729	Hộp quà kỷ niệm 2 năm	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94801	Rương quyết đấu Bang hội	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94802	Hộp Khởi Nguyên Thần Văn	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94821	Kho báu Vùng biển tham lam	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94822	Kho báu Nộ Hải hải vực	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94823	Kho báu vùng biển Trí Vọng	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94824	Kho báu hải vực ngạo mạn	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94825	Kho báu vùng biển Nghi Cụ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94901	Tự chọn Long Châu Tứ Hải	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94902	Mảnh Long Châu ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94904	Mảnh Thần Nông ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94906	Tự chọn bảo khí Thần Nông	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94908	Mảnh tiên thực ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94910	Tự chọn tiên thảo linh thực	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94911	Mảnh mài ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94913	Tự chọn mài giũa 4 cụ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94915	Tự chọn Lò Hỏa Trân Bảo · 1	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94916	Tự chọn lò lửa trân bảo·2	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94917	Trân bảo lò lửa tự chọn·3	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94918	Tự chọn lò lửa trân bảo · Tứ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94923	Mảnh bắt ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94925	Tự chọn bắt 4 con	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94926	Mảnh luyện đạo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94928	Tự chọn đạo luyện tứ cụ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94929	Mảnh Thiền luyện ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94931	Tự chọn 4 cụm thiền luyện	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94932	Mảnh tu luyện bếp ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94934	Tự chọn 4 cụm bếp luyện	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94935	Mảnh đan luyện ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94937	Tự chọn đan luyện bốn cụ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94938	Ngẫu nhiên nhận mảnh cỏ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94940	Tự chọn 4 cụm làm cỏ	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+94941	Mảnh phong thình ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+94943	Tự chọn 4 món phong nẫm	NATIVE_CURIOS_TO_BAG	Trừ rương, cộng ID thân Bí bảo vào items nhưng curiosInfo.curiosData không tăng.
+100019	Xích Viêm Tường Long	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100020	Mảnh yêu linh ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100021	Mảnh yêu linh ưu tú	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100022	Mảnh tinh linh Tinh xảo	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100023	Mảnh yêu tinh Hiếm	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100024	Mảnh tinh linh Sử Thi	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100025	Mảnh yêu linh Truyền Thuyết	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100026	Mảnh Yêu linh cao cấp ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100030	Yêu linh ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100031	Yêu linh Ưu tú ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100032	Ngẫu nhiên Tinh linh tinh xảo	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100033	Yêu linh hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100034	Yêu linh sử thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100035	Yêu linh Truyền Thuyết ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100036	Yêu linh cao cấp ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100040	Thần binh ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100060	Thần binh đồng hành ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100061	Thần binh đồng hành hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100062	Thần binh đồng hành Sử Thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100063	Ngẫu nhiên Thần binh đồng hành Truyền Thuyết	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100139	Mảnh huyết mạch ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100160	Mảnh bí bảo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100170	Bí bảo Đồng ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100171	Mảnh bí bảo đồng tinh xảo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100172	Bí bảo đồng hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100173	Bí bảo Đồng Sử Thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100174	Bí bảo Truyền Thuyết ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100185	Mảnh bí bảo Đồng ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100190	Mảnh bí bảo hải trân ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100200	Bí bảo hải trân ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100201	Bí bảo hải trân phẩm chất Hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100202	Bí bảo hải trân quý hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100203	Bí bảo hải trân sử thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100230	Bí bảo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100231	Bí bảo tinh xảo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100232	Bí bảo hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100233	Bí bảo Sử Thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100250	Bí bảo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100251	Bí bảo tinh xảo ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100252	Bí bảo hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100253	Bí bảo Sử Thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100501	Thần văn Hiếm ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100502	Thần văn Sử Thi ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100503	Ngẫu nhiên Thần văn Truyền Thuyết	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100641	Tài nguyên ngẫu nhiên 30 phút	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100642	Tài nguyên ngẫu nhiên 2 giờ	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100643	8 giờ tài nguyên ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100701	Ngẫu nhiên 1 cấp Linh Trục	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100702	Tinh trục cấp 2 ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100703	Trục linh cấp 3 ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100704	Linh Xu cấp 4 ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100705	Tinh linh 5 cấp ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100706	Linh trục cấp 6 ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100707	Linh trục cấp 7 ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100708	Linh trục 8 cấp ngẫu nhiên	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+100709	Ngẫu nhiên linh trục cấp 9	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+101000	Rương tiêu diệt Yêu Tôn tầng 1	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+101310	Cẩm nang phòng thủ tranh phong	BLOCKED_RANDOM_POOL	Server từ chối trước consume vì chưa có pool được xác minh.
+110122	Bậc 1 phẩm xanh tu vi đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110123	Đan tu vi phẩm xanh bậc 1	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110124	Đan dược tu vi phẩm Tím bậc 1	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110126	Bậc 1 phẩm cam tu vi đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110127	Đan tu vi phẩm đỏ Bậc 1	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110142	Bậc 1 phẩm xanh Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110143	Bậc 1 phẩm xanh Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110144	Đan tịch cốc phẩm tím bậc 1	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110146	Bức cốc đan phẩm cam bậc 1	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110147	Đan dược Tích Cốc phẩm đỏ bậc 1	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110222	Tu vi đan phẩm xanh bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110223	Đan tu vi phẩm xanh bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110224	Đan dược tu vi Phẩm Tím Bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110226	Đan dược tu vi phẩm cam bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110227	Đan tu vi phẩm đỏ bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110242	Bậc 2 phẩm xanh đan Tịch Cốc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110243	Tịch Cốc đan Phẩm xanh Bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110244	Bậc 2 Phẩm Tím Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110246	Phẩm cam Trúc Cơ Đan bậc 2	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110247	Bậc 2 phẩm Đỏ Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110322	Đan tu vi 3 cấp Phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110323	bậc 3 phẩm xanh linh đan tu vi	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110324	Đan tu vi phẩm tím Bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110326	Đan dược tu vi phẩm cam bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110327	Đan dược tu vi phẩm Đỏ Bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110342	Đan Tịch Cốc phẩm xanh bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110343	Đan Tịch Cốc phẩm xanh Bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110344	Đan Tịch Cốc Phẩm Tím Bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110346	Đan dược Tích Cốc phẩm cam bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110347	Đan Tịch Cốc phẩm Đỏ bậc 3	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110422	Tu vi đan Phẩm xanh Bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110423	Đan tu vi Luyện khí phẩm xanh Bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110424	Đan tu vi phẩm Tím bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110426	Đan tu vi phẩm Cam bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110427	Đan tu vi phẩm Đỏ 4 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110442	Bậc 4 Phẩm xanh Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110443	Tịch Cốc Đan phẩm xanh bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110444	Bịch Tịch Cốc phẩm Tím bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110446	Phẩm cam Bậc 4 Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110447	Đan dược Tích Cốc phẩm đỏ bậc 4	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110522	Đan tu vi phẩm xanh 5 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110523	Đan tu vi phẩm xanh bậc 5	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110524	5 bậc Phẩm Tím tu vi đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110526	Đan dược tu vi phẩm cam Bậc 5	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110527	Đan dược tu vi phẩm Đỏ 5 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110542	Tịch Cốc đan 5 bậc phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110543	Bạch Dương Phẩm xanh 5 Bậc Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110544	Tịch Cốc đan phẩm tím 5 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110546	Đan Tịch Cốc phẩm cam bậc 5	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110547	Đan Tịch Cốc phẩm Đỏ 5 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110622	Đan dược tu vi phẩm xanh Bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110623	Đan tu vi Phẩm xanh bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110624	Tu vi đan phẩm tím bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110626	Phẩm cam tu vi đan Bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110627	Bậc 6 phẩm Đỏ linh đan tu vi	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110642	Bậc 6 phẩm xanh Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110643	Bậc 6 Phẩm xanh Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110644	Linh đan diệu dược Tịch Cốc phẩm tím Bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110646	Đan Tịch Cốc Phẩm Cam Bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110647	Bịch Cốc Đan phẩm Đỏ bậc 6	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110722	Đan tu vi bậc 7 phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110723	Đan dược tu vi phẩm lam cấp 7	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110724	Đan dược tu vi phẩm Tím bậc 7	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110726	Đan tu vi bậc 7 phẩm cam	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110727	Đan tu vi phẩm Đỏ bậc 7	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110742	Tịch Cốc đan bậc 7 phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110743	Tịch Cốc Đan phẩm xanh bậc 7	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110744	Đan Tịch Cốc Phẩm Tím bậc 7	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110746	7 cấp Phẩm cam Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110747	bậc 7 phẩm Đỏ Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110822	Đan dược tu vi bậc 8 Phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110823	Bậc 8 phẩm xanh tu vi đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110824	Đan tu vi phẩm Tím bậc 8	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110826	Đan tu vi phẩm cam bậc 8	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110827	Đan tu vi phẩm Đỏ bậc 8	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110842	Đan dược Tịch Cốc bậc 8 phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110843	Tịch Cốc Đan phẩm xanh bậc 8	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110844	Bậc 8 Phẩm Tím Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110846	Đan Tịch Cốc phẩm cam bậc 8	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110847	bậc 8 phẩm Đỏ Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110922	Đan dược tu vi phẩm xanh bậc 9	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110923	Đan tu vi phẩm xanh bậc 9	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110924	9 bậc Phẩm Tím tu vi đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110926	Tu vi đan Phẩm cam bậc 9	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110927	Đan tu vi phẩm Đỏ bậc 9	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110942	Đan Tịch Cốc bậc 9 Phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110943	bậc 9 Phẩm xanh Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110944	9 bậc Phẩm Tím linh đan tịch cốc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110946	Đan Pịch Cốc phẩm cam bậc 9	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+110947	Đan Tích Cốc phẩm đỏ bậc 9	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111022	Cấp 10 Phẩm xanh Đan tu vi	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111023	Đan dược tu vi phẩm xanh bậc 10	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111024	Đan tu vi Phẩm Tím Bậc 10	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111026	Đan tu vi phẩm cam Cấp 10	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111027	Đan tu vi phẩm Đỏ Bậc 10	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111042	Bậc 10 linh đan tịch cổ phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111043	Bậc 10 Phẩm xanh Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111044	Đan Tịch Cốc phẩm Tím bậc 10	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111046	Đan Tịch Cốc phẩm Cam bậc 10	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111047	Bậc 10 phẩm Đỏ Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111122	Tu vi đan phẩm xanh Bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111123	Tu vi đan phẩm xanh bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111124	Đan tu vi Phẩm Tím bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111126	Đan dược tu vi Phẩm cam Bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111127	Đan tu vi phẩm Đỏ Bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111142	Bậc 11 phẩm xanh Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111143	Đan Tịch Cốc phẩm xanh Bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111144	11BậcPhẩm TímTịch CốcĐan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111146	Bậc 11 phẩm cam tích cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111147	Tịch Cốc đan phẩm Đỏ bậc 11	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111222	Tu vi đan Bậc 12 phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111223	Đan tu vi phẩm xanh Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111224	Đan dược tu vi phẩm tím bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111226	Đan Tu Vi, Phẩm Cam, Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111227	Tu vi đan phẩm Đỏ Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111242	Đan Tịch Cốc phẩm xanh Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111243	Linh đan Tịch Cốc phẩm xanh Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111244	Đan Tịch Cốc phẩm tím Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111246	Bậc 12 phẩm cam Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111247	Đan Dược Tịch Cốc phẩm Đỏ Bậc 12	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111322	Đan tu vi phẩm xanh bậc 13	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111323	Đan tu vi phẩm xanh Bậc 13	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111324	Đan tu vi Phẩm Tím bậc 13	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111326	Đan phương tu vi Phẩm cam Bậc 13	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111327	Tu vi đan phẩm Đỏ 13 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111342	Đan Tịch Cốc phẩm xanh Bậc 13	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111343	Đan Tịch Cốc phẩm xanh 13 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111344	13 bậc Phẩm Tím Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111346	Đan tịch cốc phẩm cam 13 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111347	Đan Pịch Cốc phẩm Đỏ cấp 13	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111422	Đan tu vi phẩm lục bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111423	Đan tu vi phẩm xanh Bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111424	Đan tu vi Phẩm Tím bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111426	Tu vi đan phẩm cam Bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111427	Đan tu vi phẩm Đỏ Bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111442	Bậc 14 Phẩm xanh Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111443	Đan dược Tịch Cốc phẩm xanh bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111444	Đan dược Tịch Cốc phẩm tím 14 bậc	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111446	Tịch Cốc Đan phẩm cam bậc 14	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111447	Bậc 14 phẩm Đỏ Tịch Cốc Đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111522	Tu vi đan phẩm xanh Bậc 15	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111523	Đan tu vi phẩm xanh bậc 15	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111524	Đan tu vi phẩm tím bậc 15	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111526	Đan tu vi phẩm cam Bậc 15	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111527	Bậc 15 đan dược tu vi phẩm Đỏ	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111542	Đan tịch cốc 15 bậc phẩm xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111543	Bậc 15 Tịch Cốc Dan Phẩm Xanh	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111544	Bậc 15 Phẩm Tím Tịch Cốc đan	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111546	Đan Phục Cốc 15 cấp Phẩm cam	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.
+111547	Đan Tịch Cốc phẩm Đỏ bậc 15	BLOCKED_PILL_CONTRACT	Chặn để tránh mất đan trong khi contract thưởng, hạn mức chung/ngày chưa hoàn chỉnh.

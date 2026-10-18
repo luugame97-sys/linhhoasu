@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đã chuyển túi Hồn ngọc cho 265 người chơi</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="chuy-n-t-i-h-n-ng-c-l-i-cho-ng-i-ch-i-05-09-2026">Đã chuyển túi Hồn ngọc lỗi cho người chơi — 05/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Theo yêu cầu người dùng, đã rà S1/S2 và chuyển <strong>265 người chơi, 8.466 túi</strong> từ item trung gian không dùng được sang rương dùng được cùng cấp, tỷ lệ <strong>1:1</strong>.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Server</th>
+<th>Người được chuyển</th>
+<th>Túi cấp 1</th>
+<th>Túi cấp 5</th>
+<th>Tổng</th>
+</tr></thead><tbody>
+<tr>
+<td>S1</td>
+<td>265</td>
+<td>396</td>
+<td>8.070</td>
+<td>8.466</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table></div>
+<p><strong>nicky đã có <code>100081 ×3</code> và <code>100085 ×30</code></strong>, không còn <code>100091/100095</code>. Số lượng trước và sau giữ nguyên. Không mở rương, không random quà, không tự khảm hay đổi đội hình.</p>
+<p>Việc xử lý người chơi khác cùng lỗi được thực hiện bằng chuyển trực tiếp toàn bộ số túi lỗi còn tồn kho. <strong>Không gửi thêm thư bù cùng số lượng</strong>, vì vừa đổi vừa gửi lại sẽ nhân đôi giá trị thưởng. Chưa bù cho giao dịch đã mất vật phẩm không có bằng chứng; phạm vi hoàn tất là tồn kho sáu ID trung gian.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Dữ liệu production: <code>lhs_s1001.players</code>, đúng 265 document người thật có item lỗi. Không sửa người không có lỗi, không sửa bot, không thay source/config.</li>
+<li>Trong mỗi document: bỏ key <code>items.100091–100096</code> có tồn kho dương, cộng đúng lượng vào <code>items.100081–100086</code> tương ứng; thêm <code>gemBoxRepairLedger.gem-placeholder-to-usable-v1-20260905</code>.</li>
+<li>Không thay level, EXP, tiền, native gem đã sở hữu, task claim, mail, recharge, guild hoặc các field khác. Kiểm hash BSON của dữ liệu ngoài <code>items</code> và ledger trước/sau từng người.</li>
+<li>Tool: <code>_ai_workbench/tools/repair_gem_boxes_20260905.js</code>, <code>run_gem_box_conversion_20260905.py</code>, <code>verify_gem_conversion_20260905.py</code>.</li>
+<li>Evidence preview: <code>_ai_workbench/temp/gem_box_conversion_20260905_084925.json</code>.</li>
+<li>Evidence commit: <code>_ai_workbench/temp/gem_box_conversion_20260905_085020.json</code>.</li>
+<li>Hậu kiểm độc lập: <code>_ai_workbench/temp/gem_conversion_verified_20260905.json</code>.</li>
+<li>Báo cáo này có MD/HTML; session report đã cập nhật. Backup báo cáo cũ tại <code>_ai_workbench/backups/gem_conversion_reports_pre_20260905/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/rủi ro</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Túi trùng tên nhưng không có nút dùng</td>
+<td><code>100091–100096</code> là type99, không có use config</td>
+<td>Đổi sang <code>100081–100086</code>, cùng cấp, có useType102</td>
+<td>Validate type/icon/param/level trước commit</td>
+</tr>
+<tr>
+<td>Inventory online ghi đè sửa DB</td>
+<td>Session còn snapshot cũ</td>
+<td>Chỉ dừng <code>lhs-s1001</code>, để flush; scan lại sau dừng rồi commit</td>
+<td>Không dùng preview trước dừng làm số liệu commit</td>
+</tr>
+<tr>
+<td>Chạy lại phát bù lần hai</td>
+<td>Không có dấu giao dịch sửa</td>
+<td>Ledger cùng atomic update; lần hai không chuyển thêm</td>
+<td>Ledger + source hết + compare-and-swap</td>
+</tr>
+<tr>
+<td>Thay đổi inventory bởi tác vụ khác</td>
+<td>DB có writer ngoài game</td>
+<td>CAS theo nguyên trạng <code>items</code> và ledger chưa tồn tại; conflict sẽ dừng</td>
+<td>Không ghi đè toàn player</td>
+</tr>
+<tr>
+<td>Rollback làm mất tiến trình mới</td>
+<td>Restore full document sau khi chơi tiếp</td>
+<td>Backup full preimage, nhưng không tự restore hàng loạt</td>
+<td>Chỉ phục hồi sau đối chiếu field/ledger và khóa writer</td>
+</tr>
+<tr>
+<td>Bù và đổi cùng một lỗi</td>
+<td>Đếm hai lần giá trị item</td>
+<td>Chỉ thay thế số item tồn kho, không phát mail bổ sung</td>
+<td>Tách replacement khỏi compensation</td>
+</tr>
+</tbody></table></div>
+<p>Không gặp conflict hay lỗi dữ liệu trong lượt chuyển. Self-test kiểm sáu cặp, count không hợp lệ/overflow và chạy lặp PASS.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Mapping rõ sáu cấp: 100091→100081, 100092→100082, 100093→100083, 100094→100084, 100095→100085, 100096→100086.</li>
+<li>Mỗi player được ghi <strong>preimage EJSON bảo toàn BSON, flush/fsync trước update</strong>; atomic Mongo update đồng thời $inc target, $unset source và $set ledger.</li>
+<li>So sánh item không liên quan và dữ liệu ngoài inventory/ledger sau từng update; không dùng tổng số item đơn thuần để kết luận bảo toàn.</li>
+<li>Nếu source item xuất hiện lại trên player đã repair, script không tự đổi lần hai mà báo <code>SOURCE_REAPPEARED_AFTER_REPAIR</code> để truy luồng phát còn lỗi.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i-v-x-c-minh">5. Trạng thái hiện tại và xác minh</h2>
+<ul>
+<li>Commit S1: 265/265 người thành công, 8.466/8.466 túi, invalid/conflict0.</li>
+<li>Sau commit: số người còn item trung gian thuộc sáu cấp =0 ở cả S1/S2.</li>
+<li>Chạy <strong>commit lần hai</strong>: convertedPlayers0, convertedUnits0, remainingPlayers0. Ledger265 người giữ nguyên.</li>
+<li>Sau restart S1: rà lại còn0 người giữ placeholder; ledger265 tồn tại. S2 không sửa hoặc restart.</li>
+<li>Hậu kiểm riêng nicky: <code>100081=3</code>, <code>100085=30</code>; ledger lưu from/to/count chính xác. Không còn100091/100095.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/gem_box_conversion_20260905_085020/</code> có <strong>265 preimage +265 file xác minh</strong>, quyền thư mục700/file600. Danh sách SHA-256 từng file nằm trong evidence hậu kiểm; không đính kèm dữ liệu cá nhân vào báo cáo.</li>
+<li>Ready S1/S2 HTTP200; sáu process PM2 online. PID S2/dist/admin/bot workers giữ nguyên; chỉ S1 restart. Hậu kiểm08:51:48UTC ghi bot S1 đang reconnect300/580, S2 đủ580, virtual580, quái2.466slot,×2,invalid0. Không gọi bot S1 đủ580 trước khi xác minh.</li>
+<li>Không gửi thư bù hoặc phát thêm item ngoài phép thay thế. Không xử lý ngoài họ hồn ngọc (ví dụ5bản sao native của preview cũ khác loại).</li>
+<li>Không kiểm nghiệm UI trên nhân vật người dùng. Người dùng tự thử theo hướng dẫn dưới đây.</li>
+</ul>
+<h2 id="6-h-ng-d-n-test-v-b-c-ti-p-theo">6. Hướng dẫn test và bước tiếp theo</h2>
+<ol>
+<li><strong>Đăng nhập lại game</strong> để tải túi mới sau bảo trì S1.</li>
+<li>nicky kiểm có3“Hồn ngọc cấp1 ngẫu nhiên” ID100081 và30“Hồn ngọc cấp5 ngẫu nhiên” ID100085. Popup nay phải có nút Sử dụng.</li>
+<li>Dùng1túi cấp1: túi còn2, hệ Hồn ngọc thêm1viên cấp1. Dùng1túi cấp5: túi còn29, hệ Hồn ngọc thêm1viên cấp5. Không bắt buộc thử cả hai nếu muốn giữ item.</li>
+<li>Đóng/mở bảng, relog để kiểm bảo toàn. Dừng test và gửi ảnh+giờ nếu túi bị trừ mà thiếu thưởng.</li>
+<li>Nếu người chơi khác xuất hiện lại túi không dùng được, gửi ID/tên và nguồn nhận. Sửa nguồn mới trước, không tự bù lặp theo số lượng lịch sử.</li>
+<li>Với người đã mất đồ cần bù riêng: cần receipt/source/time xác thực và trừ các khoản đã chuyển/đã nhận để chống trùng. Chưa có case mất đồ được chứng minh trong đợt này.</li>
+</ol>
+<h3 id="ph-c-h-i-khi-c-n">Phục hồi khi cần</h3>
+<p>Giữ backup server nêu trên; không dùng restore cả DB. Khi có yêu cầu rollback, dừng process game bị ảnh hưởng, đọc ledger và postcondition của đúng player. Nếu target count hoặc dữ liệu liên quan đã thay đổi vì người chơi dùng rương, không khôi phục preimage mù. Đối chiếu giao dịch phát sinh rồi chỉ đảo đúng delta chưa bị sử dụng. Phiên này không cần rollback.</p></main></body></html>

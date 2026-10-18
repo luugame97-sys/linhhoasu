@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cổng web trong game — 07/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-c-ng-web-trong-game">Session Report — Cổng web trong game</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Đã sửa hai vấn đề trên cổng web mở từ game:</p>
+<ol>
+<li>Xóa khối thông báo “Tài khoản được đăng ký trực tiếp trong game…” khỏi trang người chơi.</li>
+<li>Sửa URL ảnh nền khi chạy trong iframe <code>/web-panel/</code>. Trước đây CSS dùng <code>/assets/...</code>, bị cổng game 81 trỏ nhầm về asset game. Khi request có <code>X-Forwarded-Prefix: /web-panel</code>, WebGM nay sinh URL <code>/web-panel/assets/...</code>; link trực tiếp cổng 88 vẫn sinh <code>/assets/...</code>.</li>
+</ol>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<p>Production:</p>
+<ul>
+<li><code>/linhhoasu/webgame/gm/config.php</code>: sửa <code>site_absolute_asset_url()</code> để nhận prefix an toàn, không cho giá trị ngoài allowlist URL path.</li>
+<li><code>/linhhoasu/webgame/gm/login.php</code>: xóa đúng một khối thông báo phía người chơi.</li>
+</ul>
+<p>Backup VPS: <code>/linhhoasu/_ai_workbench/backups/portal_bg_fix_20260907_210704/</code>.</p>
+<p>Local candidate, tool và bằng chứng: <code>_ai_workbench/temp/portal_bg_fix_20260907/</code>, <code>_ai_workbench/tools/patch_web_panel_assets_20260907.py</code>, <code>_ai_workbench/tools/verify_portal_bg_fix_20260907.py</code>.</p>
+<p>Hash trước/sau:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Trước</th>
+<th>Sau</th>
+</tr></thead><tbody>
+<tr>
+<td>config.php</td>
+<td><code>798b59adfed6df0614ae323a9049bb7401756e0fb065003da55e5ee833f3fab7</code></td>
+<td><code>75ed9833f97ebc0a5a0fe0877bcc75b31b50012d991028d04af52cd09555761d</code></td>
+</tr>
+<tr>
+<td>login.php</td>
+<td><code>7c47ac806bf0a63697af98f60751931b00401df5e3ff14f39988def2f5a4eef9</code></td>
+<td><code>4efb6495f77ef51528759db96d14ca367dfd7041168296838c7500540eae0068</code></td>
+</tr>
+</tbody></table></div>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Popup thiếu ảnh nền</td>
+<td>iframe ở cổng 81 nhưng CSS dùng absolute <code>/assets/...</code>; path đó thuộc game</td>
+<td>Dùng <code>X-Forwarded-Prefix</code> đã có trong proxy, kiểm tra path/URL trước khi prepend</td>
+<td>Mọi URL asset phải chạy đúng cả direct và prefixed mount</td>
+</tr>
+<tr>
+<td>Dòng hướng dẫn hiện trên trang người chơi</td>
+<td>Khối alert vẫn nằm trong <code>login.php</code></td>
+<td>Xóa đúng khối alert, giữ vùng báo lỗi động và form</td>
+<td>Không đưa hướng dẫn vận hành admin vào UI người chơi</td>
+</tr>
+<tr>
+<td>Cache CSS cũ</td>
+<td>CSS có cache dài</td>
+<td>Giữ query/version của trang và URL asset; login có no-store</td>
+<td>Kiểm HTTP sau deploy, không chỉ xem source local</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-ki-m-th-b-ng-ch-ng">4. Kiểm thử / bằng chứng</h2>
+<ul>
+<li>Direct <code>http://127.0.0.1:88/login.php</code>: HTTP 200, nền <code>/assets/images/bg_upload_20260829_173004_546bb5.png</code>, không còn thông báo.</li>
+<li>Iframe <code>http://127.0.0.1:81/web-panel/login.php</code> với prefix: HTTP 200, nền <code>/web-panel/assets/images/bg_upload_20260829_173004_546bb5.png</code>, không còn thông báo.</li>
+<li>Asset nền qua iframe: HTTP 200, <code>image/png</code>, 2.586.178 bytes.</li>
+<li>PHP lint hai file sau patch: PASS.</li>
+<li>Browser QA qua popup thật trên game 81: hiển thị ảnh nền game đầy đủ, logo, form login và không có dòng thông báo đã yêu cầu bỏ.</li>
+<li>Không đăng nhập, không gửi form, không thay đổi tài khoản/người chơi; verifier read-only ghi <code>productionDataWrites=0</code>.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>Đã hoàn tất và đang chạy. Link trực tiếp và popup iframe đều dùng đúng ảnh nền theo mount path. Thay đổi chỉ chạm WebGM <code>config.php</code>/<code>login.php</code>; game process, database và client bundle không restart/thay đổi.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<p>Người dùng chỉ cần đóng/mở lại popup hoặc tải lại game một lần để bỏ HTML cũ trong cache. Khi thêm mount WebGM khác, truyền prefix hợp lệ dạng <code>/web-panel</code>; không hard-code đường dẫn asset game vào trang WebGM.</p></main></body></html>

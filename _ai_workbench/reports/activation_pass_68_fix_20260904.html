@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fix gói 68 Nhiệm Vụ - Tiên duyên</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="fix-tri-t-g-i-68-nhi-m-v-ti-n-duy-n-04-09-2026">Fix triệt để gói 68 Nhiệm Vụ → Tiên duyên — 04/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã triển khai fix production cho gói <code>Tiên duyên</code> pay ID <code>10301</code>, giá <code>68</code>.</li>
+<li>Giữ đúng contract: mua một lần trong chu kỳ 7 ngày; tab Nhiệm vụ làm mới hằng ngày; điểm nhiệm vụ cộng dồn trong chu kỳ.</li>
+<li>Sửa đồng bộ purchase resolver, entitlement, reward claim, daily reset, rollover 7 ngày, callback tiền thật, rollback khi lưu lỗi và chống mua đồng thời/lặp.</li>
+<li>Repair tối thiểu dữ liệu cũ: 1 nhân vật tự self-heal khi đăng nhập, 6 nhân vật được thêm entitlement bằng job có backup; không cộng quà, tiền hoặc sửa reward ledger.</li>
+<li>Chỉ restart hai game node <code>lhs-s1002</code> rồi <code>lhs-s1001</code>; không restart dist/admin/bot workers.</li>
+<li>Hậu kiểm xác nhận 7/7 người mua có entitlement, không còn trường hợp mua mà giao diện chưa kích hoạt.</li>
+</ul>
+<h2 id="2-contract-sau-khi-s-a">2. Contract sau khi sửa</h2>
+<h3 id="chu-k-v-nhi-m-v">Chu kỳ và nhiệm vụ</h3>
+<ul>
+<li>Activity S1: <code>7001</code>.</li>
+<li>Activity S2: <code>7051</code>.</li>
+<li>Pay ID dùng chung: <code>10301</code>.</li>
+<li>Giá R: <code>68</code>; token S1 theo area là item <code>1001 ×68</code>.</li>
+<li>Chu kỳ: 7 ngày, lấy từ <code>Activity7TypeConfig.day=7</code>.</li>
+<li>Điều kiện mở: nhân vật cấp 15 trở lên.</li>
+<li>16 mốc: <code>0, 40, 80, 120, 160, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600</code>.</li>
+<li>12 nhiệm vụ type 2 có <code>updateCycle=1</code>, được tái tạo mỗi ngày.</li>
+<li>Trước khi reset item điểm hoạt động <code>19</code> ở ngày mới, server chốt delta cuối ngày vào score Tiên duyên; sau đó điểm ngày mới tiếp tục cộng dồn.</li>
+<li>Khi sang chu kỳ 7 ngày mới, server reset đúng <code>score</code>, <code>records</code>, <code>recordList</code> và purchase entitlement của chu kỳ cũ.</li>
+</ul>
+<h3 id="mua-g-i">Mua gói</h3>
+<ul>
+<li><code>RechargeRewardResolver</code> nhận dạng <code>10301</code> là family <code>activation-pass</code>.</li>
+<li>Gói là activation-only; không phát quà giả/fallback từ <code>ShopConfig</code> rỗng.</li>
+<li>Chỉ cho phép <code>multi=1</code>.</li>
+<li>Mua lại trong cùng chu kỳ trả <code>ALREADY_ACTIVE</code>, không trừ token và không ghi thêm purchase record.</li>
+<li>Token purchase chụp cả <code>activityInfo</code> trong rollback snapshot; save lỗi phục hồi token, recharge và activity state.</li>
+<li>Callback tiền thật kiểm đúng amount <code>68</code>, ghi resolver version <code>activation-pass-v1</code>.</li>
+<li>Callback được khóa theo order + user trong process; hai đơn khác nhau đến đồng thời cho cùng nhân vật chỉ một đơn được kích hoạt.</li>
+</ul>
+<h3 id="entitlement-v-nh-n-qu">Entitlement và nhận quà</h3>
+<ul>
+<li>Source-of-truth client/server thống nhất là <code>activity.recordList</code> chứa <code>10301</code>.</li>
+<li>Khi mua thành công, server ghi entitlement và push packet <code>1701</code> để UI mở cột ưu đãi ngay.</li>
+<li>Player cũ có recharge record hợp lệ được self-heal entitlement đúng một lần khi migrate lifecycle metadata.</li>
+<li>Handler claim không còn tin riêng <code>rechargeInfo.records</code>.</li>
+<li>Với một mốc chưa nhận và đã mua premium, một request cấp gộp free + premium và ghi <code>records[param]=3</code>; không còn trả premium của mốc trước khi người chơi bấm mốc khác.</li>
+<li>Claim lặp trả result lỗi và không thay đổi inventory/reward ledger.</li>
+</ul>
+<h2 id="3-file-th-m-c-thay-i">3. File/thư mục đã thay đổi</h2>
+<h3 id="source-production-v-local">Source production và local</h3>
+<ul>
+<li><code>linhhoasu/lhs/newServer/src/services/ActivationPassService.js</code> — service mới quản lý Activity 7, area, entitlement, điểm và rollover.</li>
+<li><code>linhhoasu/lhs/newServer/src/services/RechargeRewardResolver.js</code> — resolver chuyên biệt <code>10301</code>.</li>
+<li><code>linhhoasu/lhs/newServer/src/services/RechargeBenefitService.js</code> — kích hoạt Activity 7 khi purchase thành công.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/activity.js</code> — claim theo entitlement thống nhất và free+premium atomic.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/compat.js</code> — token purchase, duplicate guard, rollback <code>activityInfo</code>, push <code>1701</code>.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/recharge.js</code> — cash callback, amount/duplicate/concurrency guard và transaction metadata.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/account.js</code> — lifecycle/self-heal khi login.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/playerPayload.js</code> — reset nhiệm vụ/nguyên liệu điểm hằng ngày nhưng giữ score chu kỳ.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/task.js</code> — cập nhật và push Tiên duyên ngay khi nhận reward item 19.</li>
+</ul>
+<p>Không sửa client JS, binary config, WebGM, database schema hoặc asset.</p>
+<h3 id="tool-v-evidence">Tool và evidence</h3>
+<ul>
+<li>Tool audit/snapshot/preflight/test/QA/deploy/repair đặt trong <code>_ai_workbench/tools/</code>.</li>
+<li>Audit trước fix: <code>_ai_workbench/temp/activation_pass_68_audit_20260904_142124.json</code>.</li>
+<li>Dry-run repair: <code>_ai_workbench/temp/activation_pass_repair_dry_run_20260904_150943.json</code>.</li>
+<li>Preflight production dependencies: <code>_ai_workbench/temp/activation_pass_preflight_20260904_150513.json</code>.</li>
+<li>Deploy evidence: <code>_ai_workbench/temp/activation_pass_fix_deploy_20260904_151219.json</code>.</li>
+<li>Cash live QA: <code>_ai_workbench/temp/activation_pass_cash_live_20260904_152101.json</code>.</li>
+<li>Audit sau fix: <code>_ai_workbench/temp/activation_pass_68_audit_20260904_151952.json</code>.</li>
+<li>Hậu kiểm cuối: <code>_ai_workbench/temp/activation_pass_postdeploy_20260904.json</code>.</li>
+</ul>
+<h2 id="4-backup-v-rollback">4. Backup và rollback</h2>
+<ul>
+<li>Backup source production:</li>
+<li><code>/linhhoasu/_ai_workbench/backups/activation_pass_fix_20260904_151219/</code></li>
+<li>Backup trước repair:</li>
+<li><code>/linhhoasu/_ai_workbench/backups/activation_pass_fix_20260904_151219/activity_info_before_repair.json</code></li>
+<li>Quyền file <code>600</code>.</li>
+<li>Chứa đúng 6 player phải ghi trực tiếp.</li>
+<li>Một player thứ bảy tự self-heal khi đăng nhập giữa dry-run và commit nên không cần update trực tiếp.</li>
+<li>Repair chỉ thêm <code>10301</code> vào <code>recordList</code>; giữ nguyên <code>score</code>, <code>records[param]</code>, inventory, currency và recharge count.</li>
+</ul>
+<h2 id="5-ki-m-tra-ch-y">5. Kiểm tra đã chạy</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm kiểm tra</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Activity 7 candidate</td>
+<td>PASS 58 assertions</td>
+</tr>
+<tr>
+<td>Cash callback đồng thời</td>
+<td>PASS 8 checks</td>
+</tr>
+<tr>
+<td>Live token purchase S1</td>
+<td>PASS 28 checks</td>
+</tr>
+<tr>
+<td>Live cash callback S1</td>
+<td>PASS 18 checks</td>
+</tr>
+<tr>
+<td>Live cash callback S2 / Activity 7051</td>
+<td>PASS 18 checks</td>
+</tr>
+<tr>
+<td>16 mốc + claim replay</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Daily task reset + giữ score chu kỳ</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Rollover 7 ngày</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>S1/S2 area mapping 7001/7051</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Recharge resolver</td>
+<td>PASS, 614 gói</td>
+</tr>
+<tr>
+<td>Activity 9 / Đặc quyền đăng nhập</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Event 43001/44001</td>
+<td>PASS 51 + 27 + 8</td>
+</tr>
+<tr>
+<td>Linkage 365 ngày</td>
+<td>PASS 18</td>
+</tr>
+<tr>
+<td>Menu Ủy thác</td>
+<td>PASS 27</td>
+</tr>
+<tr>
+<td>Tự mặc đồ tài khoản mới</td>
+<td>PASS 24</td>
+</tr>
+<tr>
+<td>Quái ×2</td>
+<td>PASS 16</td>
+</tr>
+<tr>
+<td>Hướng dẫn nhiệm vụ H5</td>
+<td>PASS 12</td>
+</tr>
+<tr>
+<td>Core gameplay/config</td>
+<td>PASS, 714 bảng</td>
+</tr>
+<tr>
+<td>QA cleanup</td>
+<td>PASS, player 0 và transaction 0</td>
+</tr>
+<tr>
+<td>Mojibake report</td>
+<td>Không phát hiện mẫu mojibake mới</td>
+</tr>
+</tbody></table></div>
+<p>ESLint chưa chạy được vì dự án dùng ESLint 10 nhưng không có <code>eslint.config.js/mjs/cjs</code>. Không tự tạo config ngoài phạm vi. Toàn bộ 9 source file và tool mới đều qua <code>node --check</code>.</p>
+<h2 id="6-d-li-u-repair">6. Dữ liệu repair</h2>
+<p>Trước fix:</p>
+<ul>
+<li>S1 có 7 nhân vật mang recharge record <code>10301</code>.</li>
+<li>0/7 có entitlement trong Activity 7.</li>
+<li>Tổng recharge count đã ghi là 24; không dùng count này để bù tiền/quà vì không có provider ledger.</li>
+</ul>
+<p>Sau fix:</p>
+<ul>
+<li>7/7 có purchase record và entitlement.</li>
+<li><code>purchaseWithoutEntitlement=0</code>.</li>
+<li><code>entitlementWithoutPurchase=0</code>.</li>
+<li><code>purchaseWithoutRow=0</code>.</li>
+<li><code>noOpenRow=0</code>.</li>
+<li><code>malformedRewardRecord=0</code>.</li>
+<li>Không auto-claim: 5 premium mốc và 1 free mốc còn thiếu vẫn để người chơi tự nhận đúng UI sau khi đăng nhập lại.</li>
+</ul>
+<h2 id="7-tr-ng-th-i-production">7. Trạng thái production</h2>
+<ul>
+<li><code>lhs-s1001</code>: online, PID <code>22901</code>.</li>
+<li><code>lhs-s1002</code>: online, PID <code>22849</code>.</li>
+<li><code>lhs-dist</code>, <code>lhs-admin</code>, <code>lhs-real-bots</code>, <code>lhs-real-bots-s2</code>: PID/restart count giữ nguyên.</li>
+<li>S1 <code>/ready:8080 = 200</code>.</li>
+<li>S2 <code>/ready:8083 = 200</code>.</li>
+<li>Health <code>9200/9201 = ok</code>.</li>
+<li>Bot thực: <code>580/580</code> mỗi server.</li>
+<li>Bot virtual: <code>580/580</code> mỗi server.</li>
+<li>Quái: <code>2.466</code> slot, multiplier <code>2</code>, invalid <code>0</code>.</li>
+<li>Recent error scan: rỗng.</li>
+<li>Staging residue: <code>0</code>.</li>
+<li>QA player/transaction residue: <code>0/0</code>.</li>
+<li>S2 cash QA chạy trực tiếp trên player/order tạm trong <code>lhs_s1002</code> vì cổng đăng nhập S2 còn tuân theo lịch mở; callback chọn đúng Activity <code>7051</code> và cleanup <code>0/0</code>.</li>
+<li>Hash 9 source production khớp candidate.</li>
+</ul>
+<h2 id="8-l-i-g-p-gi-i-ph-p">8. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhận dạng nhầm family lúc audit đầu</td>
+<td>Nhiều panel có giá 68 và hai cột reward</td>
+<td>Khóa bằng Lang ID, class <code>ActivationMainWin</code>, type 7 và pay 10301</td>
+<td>Không map chỉ bằng giá/tên dịch</td>
+</tr>
+<tr>
+<td>Resolver trả <code>SPECIALIZED_RECHARGE_REQUIRED</code></td>
+<td>Gói activation-only có ShopConfig reward rỗng nhưng chưa có owner</td>
+<td>Tạo resolver chuyên biệt Activity 7</td>
+<td>Mọi paid row rỗng phải có owner contract</td>
+</tr>
+<tr>
+<td>Client khóa nhưng server vẫn claim premium</td>
+<td>Client đọc recordList, server đọc recharge record</td>
+<td>Thống nhất entitlement vào recordList</td>
+<td>Test UI state + server state + inventory</td>
+</tr>
+<tr>
+<td>Mua lặp</td>
+<td>UI không thấy entitlement và server thiếu duplicate guard</td>
+<td>Khóa <code>ALREADY_ACTIVE</code>, multi=1, user/order lock</td>
+<td>Test sequential + concurrent duplicate</td>
+</tr>
+<tr>
+<td>Điểm nhiệm vụ ngày không phù hợp chu kỳ</td>
+<td>Item 19 là counter ngày nhưng trước đây được dùng như score toàn kỳ</td>
+<td>Lưu delta vào score trước daily reset</td>
+<td>Test qua biên ngày</td>
+</tr>
+<tr>
+<td>Rollover chỉ đổi timer</td>
+<td>Không reset score/records/recordList</td>
+<td>Metadata cycle v1 và reset atomic ở biên 7 ngày</td>
+<td>Fixture trước/sau biên</td>
+</tr>
+<tr>
+<td>Local task.js cũ hơn production</td>
+<td>Production có ba tối ưu save chưa đồng bộ local</td>
+<td>Drift gate dừng trước mutation; rebase patch lên source live</td>
+<td>Snapshot/hash precondition trước deploy</td>
+</tr>
+<tr>
+<td>Test cũ thiếu dependency/path env</td>
+<td>Harness mặc định trỏ snapshot không có node_modules/thiếu argv</td>
+<td>Chạy lại trên current app root và truyền đủ đường dẫn</td>
+<td>Phân biệt harness fail với source fail</td>
+</tr>
+<tr>
+<td>Preflight Fortune false-negative</td>
+<td>Parser yêu cầu JSON không có khoảng trắng</td>
+<td>Đổi gate sang marker PASS</td>
+<td>Parse JSON hoặc marker ổn định</td>
+</tr>
+<tr>
+<td>ESLint không khởi động</td>
+<td>ESLint 10 thiếu flat config</td>
+<td>Ghi rõ và dùng syntax/contract checks</td>
+<td>Tạo config ở phiên riêng nếu cần</td>
+</tr>
+</tbody></table></div>
+<h2 id="9-k-n-ng-kinh-nghi-m-m-i">9. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Entitlement cần có vòng đời riêng theo cycle; recharge record lifetime không được dùng trực tiếp để mở mọi chu kỳ.</li>
+<li>Counter nhiệm vụ ngày và score pass nhiều ngày phải tách bằng delta/baseline.</li>
+<li>Activation-only purchase phải tạo transaction/entitlement nhưng không phát quà tức thời giả.</li>
+<li>Callback cần khóa cả order và user để chặn hai order khác nhau tranh chấp một entitlement.</li>
+<li>Repair production an toàn nên chỉ sửa state tối thiểu, có exact-target backup và không tự claim phần thưởng.</li>
+</ul>
+<h2 id="10-b-c-ti-p-theo">10. Bước tiếp theo</h2>
+<ol>
+<li>Người chơi đóng/mở lại game hoặc đăng nhập lại.</li>
+<li>Mở <code>Nhiệm Vụ → Tiên duyên</code>; người đã mua sẽ thấy cột ưu đãi mở.</li>
+<li>Người chơi tự bấm các mốc còn sáng để nhận phần chưa nhận; không cần mua lại trong chu kỳ hiện tại.</li>
+<li>S2 sẽ dùng cùng fix qua Activity <code>7051</code> khi nhân vật đạt cấp 15.</li>
+</ol></main></body></html>

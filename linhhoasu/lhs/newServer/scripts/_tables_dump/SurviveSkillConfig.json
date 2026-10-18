@@ -1,0 +1,1424 @@
+{
+  "_table": "SurviveSkillConfig",
+  "_rows": 28,
+  "_type": "object",
+  "_firstKeys": "id,castType,skillKind,icon,specialEffect,atk,cd,duration,durhitcd,repelType,repelSpeed,repelTime,bulletCount,hitRange,bulletSpeed,scale,layer,upLvDec,upLvAttribute,openScene",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "castType": 1,
+        "skillKind": 7,
+        "icon": "",
+        "specialEffect": "sp_skill_7_1",
+        "atk": 100,
+        "cd": 10000,
+        "duration": 0,
+        "durhitcd": 500,
+        "repelType": 0,
+        "repelSpeed": 0,
+        "repelTime": 0,
+        "bulletCount": 1,
+        "hitRange": 10,
+        "bulletSpeed": 7,
+        "scale": 33,
+        "layer": 3,
+        "upLvDec": [],
+        "upLvAttribute": [],
+        "openScene": -1,
+        "weight": 100
+      }
+    },
+    {
+      "104": {
+        "id": 104,
+        "castType": 1,
+        "skillKind": 3,
+        "name": 30101001,
+        "icon": "szx_gc_skill_2001",
+        "specialEffect": "sp_skill_gc_fly_104",
+        "atk": 150,
+        "cd": 1000,
+        "duration": 0,
+        "durhitcd": 500,
+        "repelType": 0,
+        "repelSpeed": 0,
+        "repelTime": 100,
+        "bulletCount": 2,
+        "hitRange": 12,
+        "bulletSpeed": 20,
+        "scale": 50,
+        "layer": 3,
+        "dec": 30102001,
+        "upLvDec": [
+          30103010,
+          30103010,
+          30103010,
+          30103010,
+          30103011
+        ],
+        "upLvAttribute": [
+          [
+            {
+              "id": 104,
+              "attrId": 5,
+              "value": 1
+            },
+            {
+              "id": 104,
+              "attrId": 4,
+              "value": 10
+            }
+          ],
+          [
+            {
+              "id": 104,
+              "attrId": 5,
+              "value": 1
+            },
+            {
+              "id": 104,
+              "attrId": 4,
+              "value": 10
+            }
+          ],
+          [
+            {
+              "id": 104,
+              "attrId": 5,
+              "value": 1
+            },
+            {
+              "id": 104,
+              "attrId": 4,
+              "value": 10
+            }
+          ],
+          [
+            {
+              "id": 104,
+              "attrId": 5,
+              "value": 1
+            },
+            {
+              "id": 104,
+              "attrId": 4,
+              "value": 10
+            }
+          ],
+          [
+            {
+              "id": 104,
+              "attrId": 33,
+              "value": 15
+            }
+          ]
+        ],
+        "openScene": 1,
+        "weight": 100
+      }
+    },
+    {
+      "108": {
+        "id": 108,
+        "castType": 1,
+        "skillKind": 1,
+        "name": 30101002,
+        "icon": "szx_gc_skill_4001",
+        "specialEffect": "sp_skill_gc_fly_108",
+        "atk": 200,
+        "cd": 4000,
+        "duration": 10000,
+        "durhitcd": 500,
+        "repelType": 0,
+        "repelSpeed": 0,
+        "repelTime": 0,
+        "bulletCount": 6,
+        "hitRange": 11,
+        "bulletSpeed": 20,
+        "scale": 50,
+        "layer": 3,
+        "dec": 30102002,
+        "upLvDec": [
+          30103020,
+          30103020,
+          30103020,
+          30103020,
+          30103021
+        ],
+        "upLvAttribute": [
+          [
+            {
+              "id": 108,
+              "attrId": 5,
+              "value": 3
+            },
+            {
+              "id": 108,
+              "attrId": 4,
+              "value": 3
+            }
+          ],
+          [
+            {
+              "id": 108,
+              "attrId": 5,
+              "value": 3
+            },
+            {
+              "id": 108,
+              "attrId": 4,
+              "value": 3
+            }
+          ],
+          [
+            {
+              "id": 108,
+              "attrId": 5,
+              "value": 3
+            },
+            {
+              "id": 108,
+              "attrId": 4,
+              "value": 3
+            }
+          ],
+          [
+            {
+              "id": 108,
+              "attrId": 5,
+              "value": 3
+            },
+            {
+              "id": 108,
+              "attrId": 4,
+              "value": 3
+            }
+          ],
+          [
+            {
+              "id": 108,
+              "attrId": 33,
+              "value": 33
+            }
+          ]
+        ],
+        "openScene": 1,
+        "weight": 100
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "castType": 1,
+      "skillKind": 7,
+      "icon": "",
+      "specialEffect": "sp_skill_7_1",
+      "atk": 100,
+      "cd": 10000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 1,
+      "hitRange": 10,
+      "bulletSpeed": 7,
+      "scale": 33,
+      "layer": 3,
+      "upLvDec": [],
+      "upLvAttribute": [],
+      "openScene": -1,
+      "weight": 100
+    },
+    "104": {
+      "id": 104,
+      "castType": 1,
+      "skillKind": 3,
+      "name": 30101001,
+      "icon": "szx_gc_skill_2001",
+      "specialEffect": "sp_skill_gc_fly_104",
+      "atk": 150,
+      "cd": 1000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 100,
+      "bulletCount": 2,
+      "hitRange": 12,
+      "bulletSpeed": 20,
+      "scale": 50,
+      "layer": 3,
+      "dec": 30102001,
+      "upLvDec": [
+        30103010,
+        30103010,
+        30103010,
+        30103010,
+        30103011
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 104,
+            "attrId": 5,
+            "value": 1
+          },
+          {
+            "id": 104,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 104,
+            "attrId": 5,
+            "value": 1
+          },
+          {
+            "id": 104,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 104,
+            "attrId": 5,
+            "value": 1
+          },
+          {
+            "id": 104,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 104,
+            "attrId": 5,
+            "value": 1
+          },
+          {
+            "id": 104,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 104,
+            "attrId": 33,
+            "value": 15
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "108": {
+      "id": 108,
+      "castType": 1,
+      "skillKind": 1,
+      "name": 30101002,
+      "icon": "szx_gc_skill_4001",
+      "specialEffect": "sp_skill_gc_fly_108",
+      "atk": 200,
+      "cd": 4000,
+      "duration": 10000,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 6,
+      "hitRange": 11,
+      "bulletSpeed": 20,
+      "scale": 50,
+      "layer": 3,
+      "dec": 30102002,
+      "upLvDec": [
+        30103020,
+        30103020,
+        30103020,
+        30103020,
+        30103021
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 108,
+            "attrId": 5,
+            "value": 3
+          },
+          {
+            "id": 108,
+            "attrId": 4,
+            "value": 3
+          }
+        ],
+        [
+          {
+            "id": 108,
+            "attrId": 5,
+            "value": 3
+          },
+          {
+            "id": 108,
+            "attrId": 4,
+            "value": 3
+          }
+        ],
+        [
+          {
+            "id": 108,
+            "attrId": 5,
+            "value": 3
+          },
+          {
+            "id": 108,
+            "attrId": 4,
+            "value": 3
+          }
+        ],
+        [
+          {
+            "id": 108,
+            "attrId": 5,
+            "value": 3
+          },
+          {
+            "id": 108,
+            "attrId": 4,
+            "value": 3
+          }
+        ],
+        [
+          {
+            "id": 108,
+            "attrId": 33,
+            "value": 33
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "111": {
+      "id": 111,
+      "castType": 1,
+      "skillKind": 2,
+      "name": 30101003,
+      "icon": "szx_gc_skill_3001",
+      "specialEffect": "sp_skill_gc_fly_111",
+      "atk": 250,
+      "cd": 1200,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 1,
+      "repelSpeed": 1,
+      "repelTime": 100,
+      "bulletCount": 1,
+      "hitRange": 12,
+      "bulletSpeed": 30,
+      "scale": 30,
+      "layer": 3,
+      "dec": 30102003,
+      "upLvDec": [
+        30103030
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 111,
+            "attrId": 33,
+            "value": 30
+          },
+          {
+            "id": 111,
+            "attrId": 43,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "115": {
+      "id": 115,
+      "castType": 1,
+      "skillKind": 2,
+      "name": 30101004,
+      "icon": "szx_gc_skill_3002",
+      "specialEffect": "sp_skill_gc_buff_115",
+      "atk": 250,
+      "cd": 6000,
+      "duration": 3000,
+      "durhitcd": 700,
+      "repelType": 1,
+      "repelSpeed": 1,
+      "repelTime": 100,
+      "bulletCount": 1,
+      "hitRange": 100,
+      "bulletSpeed": 0,
+      "scale": 50,
+      "layer": 1,
+      "dec": 30102004,
+      "upLvDec": [
+        30103040,
+        30103041,
+        30103041,
+        30103041,
+        30103041
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 115,
+            "attrId": 43,
+            "value": 20
+          },
+          {
+            "id": 115,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 115,
+            "attrId": 33,
+            "value": 20
+          }
+        ],
+        [
+          {
+            "id": 115,
+            "attrId": 43,
+            "value": 30
+          },
+          {
+            "id": 115,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 115,
+            "attrId": 33,
+            "value": 30
+          }
+        ],
+        [
+          {
+            "id": 115,
+            "attrId": 33,
+            "value": 15
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "116": {
+      "id": 116,
+      "castType": 1,
+      "skillKind": 1,
+      "name": 30101005,
+      "icon": "szx_gc_skill_4002",
+      "specialEffect": "sp_skill_gc_fly_116",
+      "atk": 270,
+      "cd": 1000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 1,
+      "hitRange": 18,
+      "bulletSpeed": 35,
+      "scale": 70,
+      "layer": 3,
+      "dec": 30102005,
+      "upLvDec": [
+        30103050
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 116,
+            "attrId": 33,
+            "value": 30
+          },
+          {
+            "id": 116,
+            "attrId": 43,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "119": {
+      "id": 119,
+      "castType": 1,
+      "skillKind": 1,
+      "name": 30101006,
+      "icon": "szx_gc_skill_4003",
+      "specialEffect": "sp_skill_gc_fly_119",
+      "atk": 220,
+      "cd": 300,
+      "duration": 0,
+      "durhitcd": 200,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 1,
+      "hitRange": 160,
+      "bulletSpeed": 0,
+      "scale": 80,
+      "layer": 1,
+      "dec": 30102006,
+      "upLvDec": [
+        30103060,
+        30103060,
+        30103060,
+        30103060,
+        30103061
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 119,
+            "attrId": 33,
+            "value": 10
+          },
+          {
+            "id": 119,
+            "attrId": 4,
+            "value": 20
+          }
+        ],
+        [
+          {
+            "id": 119,
+            "attrId": 33,
+            "value": 10
+          },
+          {
+            "id": 119,
+            "attrId": 4,
+            "value": 20
+          }
+        ],
+        [
+          {
+            "id": 119,
+            "attrId": 33,
+            "value": 10
+          },
+          {
+            "id": 119,
+            "attrId": 4,
+            "value": 20
+          }
+        ],
+        [
+          {
+            "id": 119,
+            "attrId": 33,
+            "value": 10
+          },
+          {
+            "id": 119,
+            "attrId": 4,
+            "value": 20
+          }
+        ],
+        [
+          {
+            "id": 119,
+            "attrId": 33,
+            "value": 15
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "121": {
+      "id": 121,
+      "castType": 1,
+      "skillKind": 3,
+      "name": 30101007,
+      "icon": "szx_gc_skill_2002",
+      "specialEffect": "sp_skill_gc_fly_121",
+      "atk": 270,
+      "cd": 5000,
+      "duration": 1500,
+      "durhitcd": 300,
+      "repelType": 2,
+      "repelSpeed": 2,
+      "repelTime": 100,
+      "bulletCount": 1,
+      "hitRange": 42,
+      "bulletSpeed": 25,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102007,
+      "upLvDec": [
+        30103070,
+        30103070,
+        30103070,
+        30103070,
+        30103071
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 121,
+            "attrId": 33,
+            "value": 30
+          },
+          {
+            "id": 121,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 121,
+            "attrId": 33,
+            "value": 30
+          },
+          {
+            "id": 121,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 121,
+            "attrId": 33,
+            "value": 30
+          },
+          {
+            "id": 121,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 121,
+            "attrId": 33,
+            "value": 30
+          },
+          {
+            "id": 121,
+            "attrId": 4,
+            "value": 10
+          }
+        ],
+        [
+          {
+            "id": 121,
+            "attrId": 43,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "122": {
+      "id": 122,
+      "castType": 1,
+      "skillKind": 3,
+      "name": 30101008,
+      "icon": "szx_gc_skill_2003",
+      "specialEffect": "sp_skill_gc_fly_122",
+      "hitEffect": "sp_skill_gc_baodian_122",
+      "atk": 250,
+      "cd": 800,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 2,
+      "repelSpeed": 2,
+      "repelTime": 100,
+      "bulletCount": 1,
+      "hitRange": 16,
+      "bulletSpeed": 20,
+      "scale": 70,
+      "layer": 3,
+      "dec": 30102008,
+      "upLvDec": [
+        30103080
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 122,
+            "attrId": 33,
+            "value": 40
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "130": {
+      "id": 130,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101010,
+      "icon": "szx_gc_skill_1001",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102010,
+      "upLvDec": [
+        30103100
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 14,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "131": {
+      "id": 131,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101011,
+      "icon": "szx_gc_skill_1002",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102011,
+      "upLvDec": [
+        30103110
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 43,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "132": {
+      "id": 132,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101012,
+      "icon": "szx_gc_skill_1003",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102012,
+      "upLvDec": [
+        30103120
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 33,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "133": {
+      "id": 133,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101013,
+      "icon": "szx_gc_skill_1004",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102013,
+      "upLvDec": [
+        30103130
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 38,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "134": {
+      "id": 134,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101014,
+      "icon": "szx_gc_skill_1005",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102014,
+      "upLvDec": [
+        30103140
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 4,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "137": {
+      "id": 137,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101015,
+      "icon": "szx_gc_skill_1006",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102015,
+      "upLvDec": [
+        30103150
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 3,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "140": {
+      "id": 140,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101016,
+      "icon": "szx_gc_skill_1007",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102016,
+      "upLvDec": [
+        30103160
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 37,
+            "value": 50
+          },
+          {
+            "id": 0,
+            "attrId": 8,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "141": {
+      "id": 141,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101017,
+      "icon": "szx_gc_skill_1008",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102017,
+      "upLvDec": [
+        30103170
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 3,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "142": {
+      "id": 142,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101018,
+      "icon": "szx_gc_skill_1009",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102018,
+      "upLvDec": [
+        30103180
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 3,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "143": {
+      "id": 143,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101019,
+      "icon": "szx_gc_skill_1010",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 70,
+      "layer": 2,
+      "dec": 30102019,
+      "upLvDec": [
+        30103190
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 3,
+            "value": 5
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 30
+    },
+    "154": {
+      "id": 154,
+      "castType": 1,
+      "skillKind": 2,
+      "name": 30101009,
+      "icon": "szx_gc_skill_3003",
+      "specialEffect": "sp_skill_gc_baodian_154",
+      "atk": 300,
+      "cd": 3000,
+      "duration": 0,
+      "durhitcd": 1000,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 7,
+      "hitRange": 16,
+      "bulletSpeed": 5,
+      "scale": 40,
+      "layer": 3,
+      "dec": 30102009,
+      "upLvDec": [
+        30103090
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 154,
+            "attrId": 36,
+            "value": 80
+          },
+          {
+            "id": 154,
+            "attrId": 43,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": 1,
+      "weight": 100
+    },
+    "1003": {
+      "id": 1003,
+      "castType": 1,
+      "skillKind": 3,
+      "name": 30101020,
+      "icon": "szx_gc_skill_2004",
+      "specialEffect": "sp_skill_gc_buff_1003",
+      "atk": 8,
+      "cd": 4000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 6,
+      "hitRange": 12,
+      "bulletSpeed": 20,
+      "scale": 20,
+      "layer": 2,
+      "dec": 30102020,
+      "upLvDec": [
+        30103200
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 121,
+            "attrId": 33,
+            "value": 40
+          }
+        ]
+      ],
+      "openScene": -1,
+      "weight": 0
+    },
+    "1006": {
+      "id": 1006,
+      "castType": 1,
+      "skillKind": 1,
+      "name": 30101021,
+      "icon": "szx_gc_skill_4004",
+      "specialEffect": "sp_skill_gc_fly_1006",
+      "hitEffect": "sp_skill_gc_baodian_1006",
+      "atk": 1000,
+      "cd": 5000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 4,
+      "hitRange": 100,
+      "bulletSpeed": 5,
+      "scale": 60,
+      "layer": 3,
+      "dec": 30102021,
+      "upLvDec": [
+        30103210
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 123,
+            "attrId": 43,
+            "value": 30
+          }
+        ]
+      ],
+      "openScene": -1,
+      "weight": 0
+    },
+    "1007": {
+      "id": 1007,
+      "castType": 1,
+      "skillKind": 2,
+      "name": 30101022,
+      "icon": "szx_gc_skill_3004",
+      "specialEffect": "sp_skill_gc_buff_1007",
+      "atk": 8,
+      "cd": 500,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 1,
+      "hitRange": 100,
+      "bulletSpeed": 0,
+      "scale": 80,
+      "layer": 1,
+      "dec": 30102022,
+      "upLvDec": [
+        30103220
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 119,
+            "attrId": 4,
+            "value": 10
+          }
+        ]
+      ],
+      "openScene": -1,
+      "weight": 0
+    },
+    "10001": {
+      "id": 10001,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101023,
+      "icon": "",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 20,
+      "layer": 2,
+      "dec": 30102023,
+      "upLvDec": [
+        30102230
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 2,
+            "value": 1
+          }
+        ]
+      ],
+      "openScene": -1,
+      "weight": 0
+    },
+    "10002": {
+      "id": 10002,
+      "castType": 2,
+      "skillKind": 0,
+      "name": 30101024,
+      "icon": "",
+      "specialEffect": "",
+      "atk": 0,
+      "cd": 0,
+      "duration": 0,
+      "durhitcd": 0,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 0,
+      "hitRange": 0,
+      "bulletSpeed": 0,
+      "scale": 20,
+      "layer": 2,
+      "dec": 30102024,
+      "upLvDec": [
+        30102240
+      ],
+      "upLvAttribute": [
+        [
+          {
+            "id": 0,
+            "attrId": 1,
+            "value": 1
+          }
+        ]
+      ],
+      "openScene": -1,
+      "weight": 0
+    },
+    "20001": {
+      "id": 20001,
+      "castType": 1,
+      "skillKind": 1,
+      "name": 30101023,
+      "icon": "",
+      "specialEffect": "sp_skill_gc_fly_11001",
+      "atk": 25,
+      "cd": 15000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 2,
+      "hitRange": 16,
+      "bulletSpeed": 20,
+      "scale": 40,
+      "layer": 2,
+      "dec": 30102023,
+      "upLvDec": [],
+      "upLvAttribute": [],
+      "openScene": -1,
+      "weight": 0
+    },
+    "20002": {
+      "id": 20002,
+      "castType": 1,
+      "skillKind": 1,
+      "name": 30101024,
+      "icon": "",
+      "specialEffect": "sp_skill_gc_fly_11002",
+      "atk": 30,
+      "cd": 15000,
+      "duration": 0,
+      "durhitcd": 500,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 1,
+      "hitRange": 16,
+      "bulletSpeed": 20,
+      "scale": 60,
+      "layer": 2,
+      "dec": 30102024,
+      "upLvDec": [],
+      "upLvAttribute": [],
+      "openScene": -1,
+      "weight": 0
+    },
+    "20003": {
+      "id": 20003,
+      "castType": 1,
+      "skillKind": 2,
+      "name": 30101025,
+      "icon": "",
+      "specialEffect": "sp_skill_gc_buff_11003",
+      "useSoundName": 10073,
+      "atk": 50,
+      "cd": 20000,
+      "duration": 1500,
+      "durhitcd": 200,
+      "repelType": 0,
+      "repelSpeed": 0,
+      "repelTime": 0,
+      "bulletCount": 1,
+      "hitRange": 100,
+      "bulletSpeed": 15,
+      "scale": 80,
+      "layer": 1,
+      "dec": 30102025,
+      "upLvDec": [],
+      "upLvAttribute": [],
+      "openScene": -1,
+      "weight": 0
+    }
+  }
+}

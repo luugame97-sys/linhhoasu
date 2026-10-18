@@ -1,0 +1,3178 @@
+{
+  "_table": "RebornSimEventButtonConfig",
+  "_rows": 236,
+  "_type": "object",
+  "_firstKeys": "id,name,nameTw,text,textTw,nextGroup,type,typeValue,picture,buttonType",
+  "_sample": [
+    {
+      "100": {
+        "id": 100,
+        "name": "抓阄",
+        "nameTw": "抓鬮",
+        "text": "父母逐一摆开物件，准备让你来次抓阄。你尚且不认得东西，只能凭感觉抓取，你选择……",
+        "textTw": "父母逐一擺開物件，準備讓你來次抓鬮。你尚且不認得東西，只能憑感覺抓取，你選擇……",
+        "nextGroup": -1,
+        "type": 1,
+        "typeValue": [
+          101,
+          102,
+          103,
+          104,
+          105,
+          106
+        ],
+        "picture": 0,
+        "buttonType": 0
+      }
+    },
+    {
+      "101": {
+        "id": 101,
+        "name": "不抓",
+        "nameTw": "不抓",
+        "text": "",
+        "textTw": "",
+        "nextGroup": 1004010,
+        "type": 0,
+        "picture": 0,
+        "buttonType": 0
+      }
+    },
+    {
+      "102": {
+        "id": 102,
+        "name": "西边的",
+        "nameTw": "西邊的",
+        "text": "",
+        "textTw": "",
+        "nextGroup": 1004020,
+        "type": 0,
+        "requirePropAnd": [
+          [
+            71,
+            1,
+            0
+          ]
+        ],
+        "picture": 0,
+        "buttonType": 0
+      }
+    }
+  ],
+  "data": {
+    "100": {
+      "id": 100,
+      "name": "抓阄",
+      "nameTw": "抓鬮",
+      "text": "父母逐一摆开物件，准备让你来次抓阄。你尚且不认得东西，只能凭感觉抓取，你选择……",
+      "textTw": "父母逐一擺開物件，準備讓你來次抓鬮。你尚且不認得東西，只能憑感覺抓取，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101": {
+      "id": 101,
+      "name": "不抓",
+      "nameTw": "不抓",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1004010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102": {
+      "id": 102,
+      "name": "西边的",
+      "nameTw": "西邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1004020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          71,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "103": {
+      "id": 103,
+      "name": "东边的",
+      "nameTw": "東邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1004030,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          72,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "104": {
+      "id": 104,
+      "name": "北边的",
+      "nameTw": "北邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1004040,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          73,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "105": {
+      "id": 105,
+      "name": "南边的",
+      "nameTw": "南邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1004050,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          74,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "106": {
+      "id": 106,
+      "name": "中间的",
+      "nameTw": "中間的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1004060,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          75,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "200": {
+      "id": 200,
+      "name": "晒书",
+      "nameTw": "曬書",
+      "text": "到了功法楼晒书的日子，你选择……",
+      "textTw": "到了功法樓曬書的日子，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        201,
+        202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "201": {
+      "id": 201,
+      "name": "折纸",
+      "nameTw": "折紙",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1006010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "202": {
+      "id": 202,
+      "name": "默默走开",
+      "nameTw": "默默走開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1006020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "300": {
+      "id": 300,
+      "name": "人生目标",
+      "nameTw": "人生目標",
+      "text": "宗门大长老召集门派内的小弟子，询问你们的人生目标。",
+      "textTw": "宗門大長老召集門派內的小弟子，詢問你們的人生目標。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        301,
+        302,
+        303
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "301": {
+      "id": 301,
+      "name": "行侠仗义",
+      "nameTw": "行俠仗義",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1008010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "302": {
+      "id": 302,
+      "name": "为所欲为",
+      "nameTw": "為所欲為",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1008020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "303": {
+      "id": 303,
+      "name": "天下第一",
+      "nameTw": "天下第一",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1008030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400": {
+      "id": 400,
+      "name": "山楂",
+      "nameTw": "山楂",
+      "text": "在后山的林子里捡到一颗红彤彤的果子，你判断这应当是山楂。你选择……",
+      "textTw": "在後山的林子裏撿到一顆紅彤彤的果子，你判斷這應當是山楂。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401,
+        402
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401": {
+      "id": 401,
+      "name": "吃",
+      "nameTw": "吃",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1010010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402": {
+      "id": 402,
+      "name": "不吃",
+      "nameTw": "不吃",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1010040,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "500": {
+      "id": 500,
+      "name": "路见不平",
+      "nameTw": "路見不平",
+      "text": "路见不平，有一少女遭强盗拦路抢劫，你选择……",
+      "textTw": "路見不平，有一少女遭強盜攔路搶劫，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        501,
+        502
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "501": {
+      "id": 501,
+      "name": "出手救下",
+      "nameTw": "出手救下",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1015011,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "502": {
+      "id": 502,
+      "name": "离开",
+      "nameTw": "離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1015014,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "600": {
+      "id": 600,
+      "name": "偷碧水印",
+      "nameTw": "偷碧水印",
+      "text": "偷偷溜进藏宝阁，顺走了一枚碧水印，你选择……",
+      "textTw": "偷偷溜進藏寶閣，順走了一枚碧水印，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        601,
+        602
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "601": {
+      "id": 601,
+      "name": "助人为乐",
+      "nameTw": "助人為樂",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1016111,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "602": {
+      "id": 602,
+      "name": "胡作非为",
+      "nameTw": "胡作非為",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1016112,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "700": {
+      "id": 700,
+      "name": "撞机缘",
+      "nameTw": "撞機緣",
+      "text": "你今早醒来时左眼皮直跳，自觉气运加身，是时候去撞撞机缘了。你选择去……",
+      "textTw": "你今早醒來時左眼皮直跳，自覺氣運加身，是時候去撞撞機緣了。你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        701,
+        702,
+        703,
+        704
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "701": {
+      "id": 701,
+      "name": "四处转转",
+      "nameTw": "四處轉轉",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1019010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "702": {
+      "id": 702,
+      "name": "翻找旧物（危）",
+      "nameTw": "翻找舊物（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1019020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "703": {
+      "id": 703,
+      "name": "沟通外域（危）",
+      "nameTw": "溝通外域（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1019030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "704": {
+      "id": 704,
+      "name": "跳下山崖（危）",
+      "nameTw": "跳下山崖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1019040,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "800": {
+      "id": 800,
+      "name": "剿灭妖兽",
+      "nameTw": "剿滅妖獸",
+      "text": "久未活动筋骨，听闻近日清风山有妖兽作乱，长安城发布除妖令。你的选择是……",
+      "textTw": "久未活動筋骨，聽聞近日清風山有妖獸作亂，長安城發佈除妖令。你的選擇是……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        801,
+        802
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "801": {
+      "id": 801,
+      "name": "闭门修炼",
+      "nameTw": "閉門修煉",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1021100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "802": {
+      "id": 802,
+      "name": "前往除妖（危）",
+      "nameTw": "前往除妖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1021200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "900": {
+      "id": 900,
+      "name": "遭遇大妖",
+      "nameTw": "遭遇大妖",
+      "text": "下山清剿了一些妖兽之后，你们突然遇见了一只浑身散发着强大威压的妖兽！",
+      "textTw": "下山清剿了一些妖獸之後，你們突然遇見了一只渾身散發著強大威壓的妖獸！",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        901,
+        902
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "901": {
+      "id": 901,
+      "name": "往后稍稍",
+      "nameTw": "往後稍稍",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1021221,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "902": {
+      "id": 902,
+      "name": "带头冲锋（危）",
+      "nameTw": "帶頭衝鋒（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1021222,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1000": {
+      "id": 1000,
+      "name": "瑞兽呈祥",
+      "nameTw": "瑞獸呈祥",
+      "text": "去天衍山打猎，撞见一只毛茸茸的瑞兽，它看起来眉清目秀。你选择……",
+      "textTw": "去天衍山打獵，撞見一只毛茸茸的瑞獸，它看起來眉清目秀。你選擇……",
+      "nextGroup": -1,
+      "type": 2,
+      "typeValue": [
+        1001,
+        1002,
+        1003
+      ],
+      "picture": 210005,
+      "buttonType": 0
+    },
+    "1001": {
+      "id": 1001,
+      "name": "离开",
+      "nameTw": "離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1023010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 1
+    },
+    "1002": {
+      "id": 1002,
+      "name": "轻轻抚摸",
+      "nameTw": "輕輕撫摸",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1023020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          25,
+          9,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 2
+    },
+    "1003": {
+      "id": 1003,
+      "name": "强撸（危）",
+      "nameTw": "強擼（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1023030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 2
+    },
+    "1100": {
+      "id": 1100,
+      "name": "霸凌",
+      "nameTw": "霸淩",
+      "text": "游历经过某小门派的山门，偶遇一伙趾高气扬的修士正在欺辱一个少年。你选择……",
+      "textTw": "遊歷經過某小門派的山門，偶遇一夥趾高氣揚的修士正在欺辱一個少年。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1101,
+        1102
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1101": {
+      "id": 1101,
+      "name": "见义勇为（危）",
+      "nameTw": "見義勇為（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1024010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1102": {
+      "id": 1102,
+      "name": "落井下石（危）",
+      "nameTw": "落井下石（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1024030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1200": {
+      "id": 1200,
+      "name": "游览城镇",
+      "nameTw": "遊覽城鎮",
+      "text": "下山游览城镇，见识市井百态。你选择去……",
+      "textTw": "下山遊覽城鎮，見識市井百態。你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1201,
+        1202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1201": {
+      "id": 1201,
+      "name": "学堂旁听",
+      "nameTw": "學堂旁聽",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1025110,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1202": {
+      "id": 1202,
+      "name": "坊市捡漏",
+      "nameTw": "坊市撿漏",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1025120,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1300": {
+      "id": 1300,
+      "name": "云游商人",
+      "nameTw": "雲遊商人",
+      "text": "游方商人神秘兮兮地打开百宝袋，言称里面是一些换季法宝，打折促销，但只卖给属性契合之人。你选择……",
+      "textTw": "遊方商人神秘兮兮地打開百寶袋，言稱裏面是一些換季法寶，打折促銷，但只賣給屬性契合之人。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1301,
+        1302,
+        1303,
+        1304,
+        1305,
+        1306
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1301": {
+      "id": 1301,
+      "name": "不选",
+      "nameTw": "不選",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1031010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1302": {
+      "id": 1302,
+      "name": "金属性",
+      "nameTw": "金屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1031020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          71,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1303": {
+      "id": 1303,
+      "name": "木属性",
+      "nameTw": "木屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1031030,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          72,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1304": {
+      "id": 1304,
+      "name": "水属性",
+      "nameTw": "水屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1031040,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          73,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1305": {
+      "id": 1305,
+      "name": "火属性",
+      "nameTw": "火屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1031050,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          74,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1306": {
+      "id": 1306,
+      "name": "土属性",
+      "nameTw": "土屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1031060,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          75,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1400": {
+      "id": 1400,
+      "name": "前往坊市",
+      "nameTw": "前往坊市",
+      "text": "天山郡最近常有散修交易，渐渐形成了一个临时的坊市，或有一些异宝秘法出现。同时，因无人监管，杀人夺宝的事也偶有发生。",
+      "textTw": "天山郡最近常有散修交易，漸漸形成了一個臨時的坊市，或有一些異寶秘法出現。同時，因無人監管，殺人奪寶的事也偶有發生。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1401,
+        1402
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1401": {
+      "id": 1401,
+      "name": "一动不动",
+      "nameTw": "一動不動",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1032100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1402": {
+      "id": 1402,
+      "name": "过去看看",
+      "nameTw": "過去看看",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1032300,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1500": {
+      "id": 1500,
+      "name": "是否购买",
+      "nameTw": "是否購買",
+      "text": "越过一些摆着常见材料和法宝的摊位，你似乎心有所感，寻着这莫名的触动，你的目光停在了……",
+      "textTw": "越過一些擺著常見材料和法寶的攤位，你似乎心有所感，尋著這莫名的觸動，你的目光停在了……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1501,
+        1502,
+        1503
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1501": {
+      "id": 1501,
+      "name": "古旧的法宝",
+      "nameTw": "古舊的法寶",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1032310,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1502": {
+      "id": 1502,
+      "name": "灰扑扑的书",
+      "nameTw": "灰撲撲的書",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1032320,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1503": {
+      "id": 1503,
+      "name": "枯萎的灵草",
+      "nameTw": "枯萎的靈草",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1032330,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1600": {
+      "id": 1600,
+      "name": "是否购买",
+      "nameTw": "是否購買",
+      "text": "一件神秘物品，摊主愿忍痛以10灵石的价格出售。",
+      "textTw": "一件神秘物品，攤主願忍痛以10靈石的價格出售。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1601,
+        1602
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1601": {
+      "id": 1601,
+      "name": "我才不买",
+      "nameTw": "我才不買",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1033100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1602": {
+      "id": 1602,
+      "name": "果断支付",
+      "nameTw": "果斷支付",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1033200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1700": {
+      "id": 1700,
+      "name": "散修截杀",
+      "nameTw": "散修截殺",
+      "text": "回程路上遭遇了陌生散修的截杀！",
+      "textTw": "回程路上遭遇了陌生散修的截殺！",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1701,
+        1702
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1701": {
+      "id": 1701,
+      "name": "迎战（危）",
+      "nameTw": "迎戰（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1035100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1702": {
+      "id": 1702,
+      "name": "感化（危）",
+      "nameTw": "感化（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1035200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1800": {
+      "id": 1800,
+      "name": "宗门任务",
+      "nameTw": "宗門任務",
+      "text": "门派发布了一些宗门任务，要求金丹期弟子完成。",
+      "textTw": "門派發佈了一些宗門任務，要求金丹期弟子完成。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1801,
+        1802,
+        1803
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1801": {
+      "id": 1801,
+      "name": "斩杀大妖（危）",
+      "nameTw": "斬殺大妖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1039010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1802": {
+      "id": 1802,
+      "name": "诛灭妖王（危）",
+      "nameTw": "誅滅妖王（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1039020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1803": {
+      "id": 1803,
+      "name": "装没看到",
+      "nameTw": "裝沒看到",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1039030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1900": {
+      "id": 1900,
+      "name": "激烈竞价",
+      "nameTw": "激烈競價",
+      "text": "台下一片沸腾，众人纷纷开始叫价，价格很快攀升到了天价，才渐渐停止。你选择……",
+      "textTw": "台下一片沸騰，眾人紛紛開始叫價，價格很快攀升到了天價，才漸漸停止。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        1901,
+        1902
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1901": {
+      "id": 1901,
+      "name": "静静观望",
+      "nameTw": "靜靜觀望",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1043010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "1902": {
+      "id": 1902,
+      "name": "参与竞拍",
+      "nameTw": "參與競拍",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1043020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "2000": {
+      "id": 2000,
+      "name": "神秘修士",
+      "nameTw": "神秘修士",
+      "text": "离开拍卖会后，你循着感应，看见了一个戴着面具的神秘修士正匆匆地离开。你知道，龙虎丹就在他的身上。",
+      "textTw": "離開拍賣會後，你循著感應，看見了一個戴著面具的神秘修士正匆匆地離開。你知道，龍虎丹就在他的身上。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        2001,
+        2002
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "2001": {
+      "id": 2001,
+      "name": "任其离开",
+      "nameTw": "任其離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1044010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "2002": {
+      "id": 2002,
+      "name": "杀人夺宝（危）",
+      "nameTw": "殺人奪寶（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1044020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "2100": {
+      "id": 2100,
+      "name": "仙人指点",
+      "nameTw": "仙人指點",
+      "text": "明月夜，短松冈，偶遇一名仙风道骨的老人。老人在坟头排出五枚纸钱，问你茴香豆的茴有几种写法。你的答案是……",
+      "textTw": "明月夜，短松岡，偶遇一名仙風道骨的老人。老人在墳頭排出五枚紙錢，問你茴香豆的茴有幾種寫法。你的答案是……",
+      "nextGroup": -1,
+      "type": 2,
+      "typeValue": [
+        2101,
+        2102,
+        2103
+      ],
+      "picture": 600004,
+      "buttonType": 0
+    },
+    "2101": {
+      "id": 2101,
+      "name": "阿巴阿巴",
+      "nameTw": "阿巴阿巴",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1046710,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 1
+    },
+    "2102": {
+      "id": 2102,
+      "name": "举一反三",
+      "nameTw": "舉一反三",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1046720,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          22,
+          12,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 2
+    },
+    "2103": {
+      "id": 2103,
+      "name": "装懂（危）",
+      "nameTw": "裝懂（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1046730,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 2
+    },
+    "2200": {
+      "id": 2200,
+      "name": "宗门事务",
+      "nameTw": "宗門事務",
+      "text": "宗门最近人手不足，一些事务需要年轻弟子帮忙，你选择去……",
+      "textTw": "宗門最近人手不足，一些事務需要年輕弟子幫忙，你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        2201,
+        2202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "2201": {
+      "id": 2201,
+      "name": "炼丹房",
+      "nameTw": "煉丹房",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1047010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "2202": {
+      "id": 2202,
+      "name": "炼器阁",
+      "nameTw": "煉器閣",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 1047030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100100": {
+      "id": 100100,
+      "name": "前世今生",
+      "nameTw": "前世今生",
+      "text": "随着年岁渐涨，一些不属于你的记忆在你的脑海中支离破碎的浮现……在一个风雨交加的夜晚，这些记忆在你的梦中开始爆发。你选择……",
+      "textTw": "隨著年歲漸漲，一些不屬於你的記憶在你的腦海中支離破碎的浮現……在一個風雨交加的夜晚，這些記憶在你的夢中開始爆發。你選擇……",
+      "nextGroup": -1,
+      "type": 2,
+      "typeValue": [
+        100101,
+        100102,
+        100103
+      ],
+      "picture": 30004,
+      "buttonType": 0
+    },
+    "100101": {
+      "id": 100101,
+      "name": "强制醒来",
+      "nameTw": "強制醒來",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2004010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 1
+    },
+    "100102": {
+      "id": 100102,
+      "name": "继续深入",
+      "nameTw": "繼續深入",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2004030,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          26,
+          9,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 2
+    },
+    "100103": {
+      "id": 100103,
+      "name": "对抗（危）",
+      "nameTw": "對抗（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2004040,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 2
+    },
+    "100200": {
+      "id": 100200,
+      "name": "橘猫落水",
+      "nameTw": "橘貓落水",
+      "text": "目睹一只橘色短毛猪落水，你选择……",
+      "textTw": "目睹一只橘色短毛豬落水，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100201,
+        100202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100201": {
+      "id": 100201,
+      "name": "果断救下",
+      "nameTw": "果斷救下",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2005010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100202": {
+      "id": 100202,
+      "name": "静观其变",
+      "nameTw": "靜觀其變",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2005020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100300": {
+      "id": 100300,
+      "name": "蚂蚁",
+      "nameTw": "螞蟻",
+      "text": "在院子里和泥玩，偶见蚂蚁搬家，你选择……",
+      "textTw": "在院子裏和泥玩，偶見螞蟻搬家，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100301,
+        100302
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100301": {
+      "id": 100301,
+      "name": "祸祸蚁窝",
+      "nameTw": "禍禍蟻窩",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2005110,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100302": {
+      "id": 100302,
+      "name": "继续和泥",
+      "nameTw": "繼續和泥",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2005120,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100400": {
+      "id": 100400,
+      "name": "灵符",
+      "nameTw": "靈符",
+      "text": "无意间走到一处密林，突然发现一处树干上贴着一张灵符，你选择……",
+      "textTw": "無意間走到一處密林，突然發現一處樹幹上貼著一張靈符，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100401,
+        100402,
+        100403
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100401": {
+      "id": 100401,
+      "name": "留下标语",
+      "nameTw": "留下標語",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2007100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100402": {
+      "id": 100402,
+      "name": "揭下灵符",
+      "nameTw": "揭下靈符",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2007200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100403": {
+      "id": 100403,
+      "name": "报官",
+      "nameTw": "報官",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2007300,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100500": {
+      "id": 100500,
+      "name": "山楂",
+      "nameTw": "山楂",
+      "text": "在后山的林子里捡到一颗红彤彤的果子，你判断这应当是山楂。你选择……",
+      "textTw": "在後山的林子裏撿到一顆紅彤彤的果子，你判斷這應當是山楂。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100501,
+        100502
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100501": {
+      "id": 100501,
+      "name": "吃",
+      "nameTw": "吃",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2011010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100502": {
+      "id": 100502,
+      "name": "不吃",
+      "nameTw": "不吃",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2011040,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100600": {
+      "id": 100600,
+      "name": "路见不平",
+      "nameTw": "路見不平",
+      "text": "路见不平，有一少女遭强盗拦路抢劫，你选择……",
+      "textTw": "路見不平，有一少女遭強盜攔路搶劫，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100601,
+        100602
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100601": {
+      "id": 100601,
+      "name": "出手救下",
+      "nameTw": "出手救下",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2016011,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100602": {
+      "id": 100602,
+      "name": "离开",
+      "nameTw": "離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2016014,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100700": {
+      "id": 100700,
+      "name": "碧水印",
+      "nameTw": "碧水印",
+      "text": "与一修士斗法时，顺走了碧水印，你选择……",
+      "textTw": "與一修士鬥法時，順走了碧水印，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100701,
+        100702
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100701": {
+      "id": 100701,
+      "name": "助人为乐",
+      "nameTw": "助人為樂",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2017111,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100702": {
+      "id": 100702,
+      "name": "胡作非为",
+      "nameTw": "胡作非為",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2017112,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100800": {
+      "id": 100800,
+      "name": "撞机缘",
+      "nameTw": "撞機緣",
+      "text": "你今早醒来时左眼皮直跳，自觉气运加身，是时候去撞撞机缘了。你选择去……",
+      "textTw": "你今早醒來時左眼皮直跳，自覺氣運加身，是時候去撞撞機緣了。你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100801,
+        100802,
+        100803,
+        100804
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100801": {
+      "id": 100801,
+      "name": "四处转转",
+      "nameTw": "四處轉轉",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2019010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100802": {
+      "id": 100802,
+      "name": "翻找旧物（危）",
+      "nameTw": "翻找舊物（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2019020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100803": {
+      "id": 100803,
+      "name": "沟通外域（危）",
+      "nameTw": "溝通外域（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2019030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100804": {
+      "id": 100804,
+      "name": "跳下山崖（危）",
+      "nameTw": "跳下山崖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2019040,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100900": {
+      "id": 100900,
+      "name": "剿灭妖兽",
+      "nameTw": "剿滅妖獸",
+      "text": "久未活动筋骨，听闻近日清风山有妖兽作乱，长安城发布除妖令。你的选择是……",
+      "textTw": "久未活動筋骨，聽聞近日清風山有妖獸作亂，長安城發佈除妖令。你的選擇是……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        100901,
+        100902
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100901": {
+      "id": 100901,
+      "name": "闭门修炼",
+      "nameTw": "閉門修煉",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2021100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "100902": {
+      "id": 100902,
+      "name": "前往除妖（危）",
+      "nameTw": "前往除妖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2021200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101000": {
+      "id": 101000,
+      "name": "遭遇大妖",
+      "nameTw": "遭遇大妖",
+      "text": "下山清剿了一些妖兽之后，你们突然遇见了一只浑身散发着强大威压的妖兽！",
+      "textTw": "下山清剿了一些妖獸之後，你們突然遇見了一只渾身散發著強大威壓的妖獸！",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101001,
+        101002
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101001": {
+      "id": 101001,
+      "name": "往后稍稍",
+      "nameTw": "往後稍稍",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2021221,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101002": {
+      "id": 101002,
+      "name": "带头冲锋（危）",
+      "nameTw": "帶頭衝鋒（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2021222,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101100": {
+      "id": 101100,
+      "name": "瑞兽呈祥",
+      "nameTw": "瑞獸呈祥",
+      "text": "去天衍山打猎，撞见一只毛茸茸的瑞兽，它看起来眉清目秀。你选择……",
+      "textTw": "去天衍山打獵，撞見一只毛茸茸的瑞獸，它看起來眉清目秀。你選擇……",
+      "nextGroup": -1,
+      "type": 2,
+      "typeValue": [
+        101101,
+        101102,
+        101103
+      ],
+      "picture": 210005,
+      "buttonType": 0
+    },
+    "101101": {
+      "id": 101101,
+      "name": "离开",
+      "nameTw": "離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2023010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 1
+    },
+    "101102": {
+      "id": 101102,
+      "name": "轻轻抚摸",
+      "nameTw": "輕輕撫摸",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2023020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          25,
+          9,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 2
+    },
+    "101103": {
+      "id": 101103,
+      "name": "强撸（危）",
+      "nameTw": "強擼（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2023030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 2
+    },
+    "101200": {
+      "id": 101200,
+      "name": "宗门打劫",
+      "nameTw": "宗門打劫",
+      "text": "偶遇灵物，遭一众宗门弟子抢夺。你选择……",
+      "textTw": "偶遇靈物，遭一眾宗門弟子搶奪。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101201,
+        101202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101201": {
+      "id": 101201,
+      "name": "这能忍？（危）",
+      "nameTw": "這能忍？（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2024010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101202": {
+      "id": 101202,
+      "name": "忍了",
+      "nameTw": "忍了",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2024020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101300": {
+      "id": 101300,
+      "name": "游览城镇",
+      "nameTw": "遊覽城鎮",
+      "text": "下山游览城镇，见识市井百态。你选择去……",
+      "textTw": "下山遊覽城鎮，見識市井百態。你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101301,
+        101302
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101301": {
+      "id": 101301,
+      "name": "学堂旁听",
+      "nameTw": "學堂旁聽",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2025110,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101302": {
+      "id": 101302,
+      "name": "坊市捡漏",
+      "nameTw": "坊市撿漏",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2025120,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101400": {
+      "id": 101400,
+      "name": "云游商人",
+      "nameTw": "雲遊商人",
+      "text": "游方商人神秘兮兮地打开百宝袋，言称里面是一些换季法宝，打折促销，但只卖给属性契合之人。你选择……",
+      "textTw": "遊方商人神秘兮兮地打開百寶袋，言稱裏面是一些換季法寶，打折促銷，但只賣給屬性契合之人。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101401,
+        101402,
+        101403,
+        101404,
+        101405,
+        101406
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101401": {
+      "id": 101401,
+      "name": "不选",
+      "nameTw": "不選",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2031010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101402": {
+      "id": 101402,
+      "name": "金属性",
+      "nameTw": "金屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2031020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          71,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101403": {
+      "id": 101403,
+      "name": "木属性",
+      "nameTw": "木屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2031030,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          72,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101404": {
+      "id": 101404,
+      "name": "水属性",
+      "nameTw": "水屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2031040,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          73,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101405": {
+      "id": 101405,
+      "name": "火属性",
+      "nameTw": "火屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2031050,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          74,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101406": {
+      "id": 101406,
+      "name": "土属性",
+      "nameTw": "土屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2031060,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          75,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101500": {
+      "id": 101500,
+      "name": "前往坊市",
+      "nameTw": "前往坊市",
+      "text": "天山郡最近常有散修交易，渐渐形成了一个临时的坊市，或有一些异宝秘法出现。同时，因无人监管，杀人夺宝的事也偶有发生。",
+      "textTw": "天山郡最近常有散修交易，漸漸形成了一個臨時的坊市，或有一些異寶秘法出現。同時，因無人監管，殺人奪寶的事也偶有發生。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101501,
+        101502
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101501": {
+      "id": 101501,
+      "name": "一动不动",
+      "nameTw": "一動不動",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2032100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101502": {
+      "id": 101502,
+      "name": "过去看看",
+      "nameTw": "過去看看",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2032300,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101600": {
+      "id": 101600,
+      "name": "是否购买",
+      "nameTw": "是否購買",
+      "text": "越过一些摆着常见材料和法宝的摊位，你似乎心有所感，寻着这莫名的触动，你的目光停在了……",
+      "textTw": "越過一些擺著常見材料和法寶的攤位，你似乎心有所感，尋著這莫名的觸動，你的目光停在了……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101601,
+        101602,
+        101603
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101601": {
+      "id": 101601,
+      "name": "古旧的法宝",
+      "nameTw": "古舊的法寶",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2032310,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101602": {
+      "id": 101602,
+      "name": "灰扑扑的书",
+      "nameTw": "灰撲撲的書",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2032320,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101603": {
+      "id": 101603,
+      "name": "枯萎的灵草",
+      "nameTw": "枯萎的靈草",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2032330,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101700": {
+      "id": 101700,
+      "name": "是否购买",
+      "nameTw": "是否購買",
+      "text": "一件神秘物品，摊主愿忍痛以10灵石的价格出售。",
+      "textTw": "一件神秘物品，攤主願忍痛以10靈石的價格出售。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101701,
+        101702
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101701": {
+      "id": 101701,
+      "name": "我才不买",
+      "nameTw": "我才不買",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2033100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101702": {
+      "id": 101702,
+      "name": "果断支付",
+      "nameTw": "果斷支付",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2033200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101800": {
+      "id": 101800,
+      "name": "散修截杀",
+      "nameTw": "散修截殺",
+      "text": "回程路上遭遇了陌生散修的截杀！",
+      "textTw": "回程路上遭遇了陌生散修的截殺！",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101801,
+        101802
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101801": {
+      "id": 101801,
+      "name": "迎战（危）",
+      "nameTw": "迎戰（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2035100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101802": {
+      "id": 101802,
+      "name": "感化（危）",
+      "nameTw": "感化（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2035200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101900": {
+      "id": 101900,
+      "name": "悬赏任务",
+      "nameTw": "懸賞任務",
+      "text": "玉京城发布了一些悬赏，是否接取？",
+      "textTw": "玉京城發佈了一些懸賞，是否接取？",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        101901,
+        101902,
+        101903
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101901": {
+      "id": 101901,
+      "name": "斩杀大妖（危）",
+      "nameTw": "斬殺大妖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2039010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101902": {
+      "id": 101902,
+      "name": "诛灭妖王（危）",
+      "nameTw": "誅滅妖王（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2039020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "101903": {
+      "id": 101903,
+      "name": "不接",
+      "nameTw": "不接",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2039030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102000": {
+      "id": 102000,
+      "name": "激烈竞价",
+      "nameTw": "激烈競價",
+      "text": "台下一片沸腾，众人纷纷开始叫价，价格很快攀升到了天价，才渐渐停止。你选择……",
+      "textTw": "台下一片沸騰，眾人紛紛開始叫價，價格很快攀升到了天價，才漸漸停止。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        102001,
+        102002
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102001": {
+      "id": 102001,
+      "name": "静静观望",
+      "nameTw": "靜靜觀望",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2043010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102002": {
+      "id": 102002,
+      "name": "参与竞拍",
+      "nameTw": "參與競拍",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2043020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102100": {
+      "id": 102100,
+      "name": "神秘修士",
+      "nameTw": "神秘修士",
+      "text": "离开拍卖会后，你循着感应，看见了一个戴着面具的神秘修士正匆匆地离开。你知道，龙虎丹就在他的身上。",
+      "textTw": "離開拍賣會後，你循著感應，看見了一個戴著面具的神秘修士正匆匆地離開。你知道，龍虎丹就在他的身上。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        102101,
+        102102
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102101": {
+      "id": 102101,
+      "name": "任其离开",
+      "nameTw": "任其離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2044010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102102": {
+      "id": 102102,
+      "name": "杀人夺宝（危）",
+      "nameTw": "殺人奪寶（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2044020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "102200": {
+      "id": 102200,
+      "name": "仙人指点",
+      "nameTw": "仙人指點",
+      "text": "明月夜，短松冈，偶遇一名仙风道骨的老人。老人在坟头排出五枚纸钱，问你茴香豆的茴有几种写法。你的答案是……",
+      "textTw": "明月夜，短松岡，偶遇一名仙風道骨的老人。老人在墳頭排出五枚紙錢，問你茴香豆的茴有幾種寫法。你的答案是……",
+      "nextGroup": -1,
+      "type": 2,
+      "typeValue": [
+        102201,
+        102202,
+        102202
+      ],
+      "picture": 600004,
+      "buttonType": 0
+    },
+    "102201": {
+      "id": 102201,
+      "name": "阿巴阿巴",
+      "nameTw": "阿巴阿巴",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2046710,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 1
+    },
+    "102202": {
+      "id": 102202,
+      "name": "举一反三",
+      "nameTw": "舉一反三",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2046720,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          22,
+          12,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 2
+    },
+    "102203": {
+      "id": 102203,
+      "name": "装懂（危）",
+      "nameTw": "裝懂（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 2046730,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 2
+    },
+    "400100": {
+      "id": 400100,
+      "name": "抓阄",
+      "nameTw": "抓鬮",
+      "text": "父母逐一摆开物件，准备让你来次抓阄。你尚且不认得东西，只能凭感觉抓取，你选择……",
+      "textTw": "父母逐一擺開物件，準備讓你來次抓鬮。你尚且不認得東西，只能憑感覺抓取，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400101,
+        400102,
+        400103,
+        400104,
+        400105,
+        400106
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400101": {
+      "id": 400101,
+      "name": "不抓",
+      "nameTw": "不抓",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5004010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400102": {
+      "id": 400102,
+      "name": "西边的",
+      "nameTw": "西邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5004020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          71,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400103": {
+      "id": 400103,
+      "name": "东边的",
+      "nameTw": "東邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5004030,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          72,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400104": {
+      "id": 400104,
+      "name": "北边的",
+      "nameTw": "北邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5004040,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          73,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400105": {
+      "id": 400105,
+      "name": "南边的",
+      "nameTw": "南邊的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5004050,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          74,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400106": {
+      "id": 400106,
+      "name": "中间的",
+      "nameTw": "中間的",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5004060,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          75,
+          1,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400200": {
+      "id": 400200,
+      "name": "蚂蚁",
+      "nameTw": "螞蟻",
+      "text": "在院子里和泥玩，偶见蚂蚁搬家，你选择……",
+      "textTw": "在院子裏和泥玩，偶見螞蟻搬家，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400201,
+        400202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400201": {
+      "id": 400201,
+      "name": "祸祸蚁窝",
+      "nameTw": "禍禍蟻窩",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5006010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400202": {
+      "id": 400202,
+      "name": "继续和泥",
+      "nameTw": "繼續和泥",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5006020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400300": {
+      "id": 400300,
+      "name": "家族问答",
+      "nameTw": "家族問答",
+      "text": "族长问道：“倘若现在有一桩恶事，对家族大有裨益，你会选择做还是不做？”",
+      "textTw": "族長問道：“倘若現在有一樁惡事，對家族大有裨益，你會選擇做還是不做？”",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400301,
+        400302,
+        400303
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400301": {
+      "id": 400301,
+      "name": "不做",
+      "nameTw": "不做",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5008010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400302": {
+      "id": 400302,
+      "name": "做",
+      "nameTw": "做",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5008020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400303": {
+      "id": 400303,
+      "name": "糊弄",
+      "nameTw": "糊弄",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5008030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400400": {
+      "id": 400400,
+      "name": "庶子",
+      "nameTw": "庶子",
+      "text": "身为家族庶子，你的修炼资源经常被克扣，或被嫡系强占。这一次，你的资源又一次被克扣，你选择……",
+      "textTw": "身為家族庶子，你的修煉資源經常被克扣，或被嫡系強佔。這一次，你的資源又一次被克扣，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400401,
+        400402
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400401": {
+      "id": 400401,
+      "name": "忍气吞声",
+      "nameTw": "忍氣吞聲",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5009010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400402": {
+      "id": 400402,
+      "name": "据理力争（危）",
+      "nameTw": "據理力爭（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5009020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400500": {
+      "id": 400500,
+      "name": "路见不平",
+      "nameTw": "路見不平",
+      "text": "路见不平，有一少女遭强盗拦路抢劫，你选择……",
+      "textTw": "路見不平，有一少女遭強盜攔路搶劫，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400501,
+        400502
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400501": {
+      "id": 400501,
+      "name": "出手救下",
+      "nameTw": "出手救下",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5015011,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400502": {
+      "id": 400502,
+      "name": "离开",
+      "nameTw": "離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5015014,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400600": {
+      "id": 400600,
+      "name": "碧水印",
+      "nameTw": "碧水印",
+      "text": "与一修士斗法时，顺走了碧水印，你选择……",
+      "textTw": "與一修士鬥法時，順走了碧水印，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400601,
+        400602
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400601": {
+      "id": 400601,
+      "name": "助人为乐",
+      "nameTw": "助人為樂",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5016111,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400602": {
+      "id": 400602,
+      "name": "胡作非为",
+      "nameTw": "胡作非為",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5016112,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400700": {
+      "id": 400700,
+      "name": "撞机缘",
+      "nameTw": "撞機緣",
+      "text": "你今早醒来时左眼皮直跳，自觉气运加身，是时候去撞撞机缘了。你选择去……",
+      "textTw": "你今早醒來時左眼皮直跳，自覺氣運加身，是時候去撞撞機緣了。你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400701,
+        400702,
+        400703,
+        400704
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400701": {
+      "id": 400701,
+      "name": "四处转转",
+      "nameTw": "四處轉轉",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5018010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400702": {
+      "id": 400702,
+      "name": "翻找旧物（危）",
+      "nameTw": "翻找舊物（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5018020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400703": {
+      "id": 400703,
+      "name": "沟通外域（危）",
+      "nameTw": "溝通外域（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5018030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400704": {
+      "id": 400704,
+      "name": "跳下山崖（危）",
+      "nameTw": "跳下山崖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5018040,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400800": {
+      "id": 400800,
+      "name": "剿灭妖兽",
+      "nameTw": "剿滅妖獸",
+      "text": "久未活动筋骨，听闻近日清风山有妖兽作乱，长安城发布除妖令。你的选择是……",
+      "textTw": "久未活動筋骨，聽聞近日清風山有妖獸作亂，長安城發佈除妖令。你的選擇是……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400801,
+        400802
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400801": {
+      "id": 400801,
+      "name": "闭门修炼",
+      "nameTw": "閉門修煉",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5020100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400802": {
+      "id": 400802,
+      "name": "前往除妖（危）",
+      "nameTw": "前往除妖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5020200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400900": {
+      "id": 400900,
+      "name": "遭遇大妖",
+      "nameTw": "遭遇大妖",
+      "text": "下山清剿了一些妖兽之后，你们突然遇见了一只浑身散发着强大威压的妖兽！",
+      "textTw": "下山清剿了一些妖獸之後，你們突然遇見了一只渾身散發著強大威壓的妖獸！",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        400901,
+        400902
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400901": {
+      "id": 400901,
+      "name": "往后稍稍",
+      "nameTw": "往後稍稍",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5020221,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "400902": {
+      "id": 400902,
+      "name": "带头冲锋（危）",
+      "nameTw": "帶頭衝鋒（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5020222,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401000": {
+      "id": 401000,
+      "name": "瑞兽呈祥",
+      "nameTw": "瑞獸呈祥",
+      "text": "去天衍山打猎，撞见一只毛茸茸的瑞兽，它看起来眉清目秀。你选择……",
+      "textTw": "去天衍山打獵，撞見一只毛茸茸的瑞獸，它看起來眉清目秀。你選擇……",
+      "nextGroup": -1,
+      "type": 2,
+      "typeValue": [
+        401001,
+        401002,
+        401003
+      ],
+      "picture": 210005,
+      "buttonType": 0
+    },
+    "401001": {
+      "id": 401001,
+      "name": "离开",
+      "nameTw": "離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5022010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 1
+    },
+    "401002": {
+      "id": 401002,
+      "name": "轻轻抚摸",
+      "nameTw": "輕輕撫摸",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5022020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          25,
+          9,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 2
+    },
+    "401003": {
+      "id": 401003,
+      "name": "强撸（危）",
+      "nameTw": "強擼（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5022030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 2
+    },
+    "401100": {
+      "id": 401100,
+      "name": "被霸凌",
+      "nameTw": "被霸淩",
+      "text": "与族中子弟因任务分派产生口角，对方呼朋唤友，要给你个教训，你选择……",
+      "textTw": "與族中子弟因任務分派產生口角，對方呼朋喚友，要給你個教訓，你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401101,
+        401102
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401101": {
+      "id": 401101,
+      "name": "反抗（危）",
+      "nameTw": "反抗（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5023010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401102": {
+      "id": 401102,
+      "name": "忍让",
+      "nameTw": "忍讓",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5023030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401200": {
+      "id": 401200,
+      "name": "游览城镇",
+      "nameTw": "遊覽城鎮",
+      "text": "下山游览城镇，见识市井百态。你选择去……",
+      "textTw": "下山遊覽城鎮，見識市井百態。你選擇去……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401201,
+        401202
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401201": {
+      "id": 401201,
+      "name": "学堂旁听",
+      "nameTw": "學堂旁聽",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5024110,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401202": {
+      "id": 401202,
+      "name": "坊市捡漏",
+      "nameTw": "坊市撿漏",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5024120,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401300": {
+      "id": 401300,
+      "name": "云游商人",
+      "nameTw": "雲遊商人",
+      "text": "游方商人神秘兮兮地打开百宝袋，言称里面是一些换季法宝，打折促销，但只卖给属性契合之人。你选择……",
+      "textTw": "遊方商人神秘兮兮地打開百寶袋，言稱裏面是一些換季法寶，打折促銷，但只賣給屬性契合之人。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401301,
+        401302,
+        401303,
+        401304,
+        401305,
+        401306
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401301": {
+      "id": 401301,
+      "name": "不选",
+      "nameTw": "不選",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5030010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401302": {
+      "id": 401302,
+      "name": "金属性",
+      "nameTw": "金屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5030020,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          71,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401303": {
+      "id": 401303,
+      "name": "木属性",
+      "nameTw": "木屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5030030,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          72,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401304": {
+      "id": 401304,
+      "name": "水属性",
+      "nameTw": "水屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5030040,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          73,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401305": {
+      "id": 401305,
+      "name": "火属性",
+      "nameTw": "火屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5030050,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          74,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401306": {
+      "id": 401306,
+      "name": "土属性",
+      "nameTw": "土屬性",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5030060,
+      "type": 0,
+      "requirePropAnd": [
+        [
+          75,
+          10,
+          0
+        ]
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401400": {
+      "id": 401400,
+      "name": "前往坊市",
+      "nameTw": "前往坊市",
+      "text": "天山郡最近常有散修交易，渐渐形成了一个临时的坊市，或有一些异宝秘法出现。同时，因无人监管，杀人夺宝的事也偶有发生。",
+      "textTw": "天山郡最近常有散修交易，漸漸形成了一個臨時的坊市，或有一些異寶秘法出現。同時，因無人監管，殺人奪寶的事也偶有發生。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401401,
+        401402
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401401": {
+      "id": 401401,
+      "name": "一动不动",
+      "nameTw": "一動不動",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5031100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401402": {
+      "id": 401402,
+      "name": "过去看看",
+      "nameTw": "過去看看",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5031300,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401500": {
+      "id": 401500,
+      "name": "是否购买",
+      "nameTw": "是否購買",
+      "text": "越过一些摆着常见材料和法宝的摊位，你似乎心有所感，寻着这莫名的触动，你的目光停在了……",
+      "textTw": "越過一些擺著常見材料和法寶的攤位，你似乎心有所感，尋著這莫名的觸動，你的目光停在了……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401501,
+        401502,
+        401503
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401501": {
+      "id": 401501,
+      "name": "古旧的法宝",
+      "nameTw": "古舊的法寶",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5031310,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401502": {
+      "id": 401502,
+      "name": "灰扑扑的书",
+      "nameTw": "灰撲撲的書",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5031320,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401503": {
+      "id": 401503,
+      "name": "枯萎的灵草",
+      "nameTw": "枯萎的靈草",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5031330,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401600": {
+      "id": 401600,
+      "name": "是否购买",
+      "nameTw": "是否購買",
+      "text": "一件神秘物品，摊主愿忍痛以10灵石的价格出售。",
+      "textTw": "一件神秘物品，攤主願忍痛以10靈石的價格出售。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401601,
+        401602
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401601": {
+      "id": 401601,
+      "name": "我才不买",
+      "nameTw": "我才不買",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5032100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401602": {
+      "id": 401602,
+      "name": "果断支付",
+      "nameTw": "果斷支付",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5032200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401700": {
+      "id": 401700,
+      "name": "散修截杀",
+      "nameTw": "散修截殺",
+      "text": "回程路上遭遇了陌生散修的截杀！",
+      "textTw": "回程路上遭遇了陌生散修的截殺！",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401701,
+        401702
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401701": {
+      "id": 401701,
+      "name": "迎战（危）",
+      "nameTw": "迎戰（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5034100,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401702": {
+      "id": 401702,
+      "name": "感化（危）",
+      "nameTw": "感化（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5034200,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401800": {
+      "id": 401800,
+      "name": "家族任务",
+      "nameTw": "家族任務",
+      "text": "家族发布了一些清剿任务，要求金丹期子弟完成。",
+      "textTw": "家族發佈了一些清剿任務，要求金丹期子弟完成。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401801,
+        401802,
+        401803
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401801": {
+      "id": 401801,
+      "name": "斩杀大妖（危）",
+      "nameTw": "斬殺大妖（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5038010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401802": {
+      "id": 401802,
+      "name": "诛灭妖王（危）",
+      "nameTw": "誅滅妖王（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5038020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401803": {
+      "id": 401803,
+      "name": "装没看到",
+      "nameTw": "裝沒看到",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5038030,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401900": {
+      "id": 401900,
+      "name": "激烈竞价",
+      "nameTw": "激烈競價",
+      "text": "台下一片沸腾，众人纷纷开始叫价，价格很快攀升到了天价，才渐渐停止。你选择……",
+      "textTw": "台下一片沸騰，眾人紛紛開始叫價，價格很快攀升到了天價，才漸漸停止。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        401901,
+        401902
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401901": {
+      "id": 401901,
+      "name": "静静观望",
+      "nameTw": "靜靜觀望",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5041010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "401902": {
+      "id": 401902,
+      "name": "参与竞拍",
+      "nameTw": "參與競拍",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5041020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402000": {
+      "id": 402000,
+      "name": "神秘修士",
+      "nameTw": "神秘修士",
+      "text": "离开拍卖会后，你循着感应，看见了一个戴着面具的神秘修士正匆匆地离开。你知道，龙虎丹就在他的身上。",
+      "textTw": "離開拍賣會後，你循著感應，看見了一個戴著面具的神秘修士正匆匆地離開。你知道，龍虎丹就在他的身上。",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        402001,
+        402002
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402001": {
+      "id": 402001,
+      "name": "任其离开",
+      "nameTw": "任其離開",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5042010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402002": {
+      "id": 402002,
+      "name": "杀人夺宝（危）",
+      "nameTw": "殺人奪寶（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5042020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402100": {
+      "id": 402100,
+      "name": "报仇报怨",
+      "nameTw": "報仇報怨",
+      "text": "作为庶子，经常被家族中某些宵小排挤欺负，如今或许可以有仇报仇，有怨报怨。你选择……",
+      "textTw": "作為庶子，經常被家族中某些宵小排擠欺負，如今或許可以有仇報仇，有怨報怨。你選擇……",
+      "nextGroup": -1,
+      "type": 1,
+      "typeValue": [
+        402101,
+        402102
+      ],
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402101": {
+      "id": 402101,
+      "name": "放下",
+      "nameTw": "放下",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5045010,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    },
+    "402102": {
+      "id": 402102,
+      "name": "伏杀（危）",
+      "nameTw": "伏殺（危）",
+      "text": "",
+      "textTw": "",
+      "nextGroup": 5045020,
+      "type": 0,
+      "picture": 0,
+      "buttonType": 0
+    }
+  }
+}

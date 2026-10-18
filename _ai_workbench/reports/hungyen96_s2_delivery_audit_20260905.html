@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xác minh thư code và Webshop của hungyen96 S2</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="x-c-minh-ph-n-nh-hungyen96-kh-ng-th-y-th-s2">Xác minh phản ánh hungyen96 không thấy thư ở S2</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Nguyên văn phản ánh: “Mình nhận hết code vs cả mua 200k vé mà ko thấy thư”. Theo dữ liệu production đọc lại lúc <strong>19:53:09 ngày05/09/2026 (UTC+7)</strong>, đã có đầy đủ thư và dấu nhận trên đúng nhân vật S2. <strong>Không xác nhận được giả thuyết không chơi S1 nên S2 không nhận quà</strong>, và không có bằng chứng giao dịch chưa giao để phát bù ở thời điểm audit.</p>
+<p>Điều này không phủ định việc người chơi từng không thấy thư ngay lúc giao dịch. Chưa có screenshot/trace client ở thời điểm đó để kết luận hiển thị, độ trễ hay đang xem sai server. Không quy lỗi hoặc ý định cho người chơi.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Không sửa game, DB, ví, code, đơn hàng, thư hoặc nhân vật; không restart hay đăng nhập thay người chơi.</li>
+<li>Tool read-only trong <code>_ai_workbench/tools/</code>: <code>inspect_hungyen96_s2.py</code>, <code>audit_hungyen96_web_ledger.php</code>, <code>audit_hungyen96_mail.py</code>, <code>verify_hungyen96_claims_20260905.py</code>.</li>
+<li>Evidence riêng dưới <code>_ai_workbench/temp/hungyen96_s2_20260905/</code>: <code>audit.json</code>, <code>mail_audit.json</code>, <code>web_ledger.json</code>, <code>claims_verified.json</code>. Source snapshot config không được đưa vào gói bàn giao vì có thể chứa cấu hình nhạy cảm.</li>
+<li>Báo cáo MD/HTML này và cập nhật session_report.md/.html. Backup báo cáo trước sửa: <code>_ai_workbench/backups/hungyen96_audit_reports_20260905/</code>.</li>
+</ul>
+<h2 id="3-b-ng-ch-ng-v-k-t-lu-n">3. Bằng chứng và kết luận</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>SQL WebGM</th>
+<th>Mongo S2</th>
+<th>Dấu nhận trong player ledger</th>
+</tr></thead><tbody>
+<tr>
+<td>Giftcode</td>
+<td>5 code có claim; 5 batch sent, không last_error</td>
+<td>5 thư đúng userId S2, read=true, claimed=true</td>
+<td>Khớp cả5mailId</td>
+</tr>
+<tr>
+<td>Webshop</td>
+<td>Đơn1495, server1002, status paid, total_price200.000Xu, item1001, quantity200</td>
+<td>1thư chứa1001×2.000, read=true, claimed=true</td>
+<td>Khớp mailId</td>
+</tr>
+<tr>
+<td>Tích nạp</td>
+<td>24claim mốc theo server1002</td>
+<td>24thư đúnguserId S2, read=true, claimed=true</td>
+<td>Khớp cả24mailId</td>
+</tr>
+<tr>
+<td>Tổng</td>
+<td>30 giao nhận liên quan</td>
+<td>30thư,0chưa nhận,0hết hạn</td>
+<td>30/30mailId</td>
+</tr>
+</tbody></table></div>
+<h3 id="n-200k-v">Đơn “200k vé”</h3>
+<ul>
+<li>Đơn Webshop <strong>1495</strong> tạo lúc <strong>19:34:09</strong>, tổng giá ghi nhận <strong>200.000 Xu Web</strong>. Không suy đây là200.000VNĐ.</li>
+<li>SQL quantity200 là số lượng mua; thư thực tế có <strong>2.000 vé item1001</strong>.</li>
+<li>Thư tạo19:34:09.404; hiện claimed=true và có mailId trong mailClaimLedger. <code>updatedAt</code> của thư là19:42:36 — đây là mốc cập nhật bản ghi, không phải log riêng chứng minh thao tác bấm nhận chính xác tại giây đó.</li>
+<li>InventoryS2 lúc kiểm có <strong>1.610 vé1001</strong>. Không tự kết luận390vé chênh lệch đã tiêu cho gói nào vì chưa truy ledger tiêu vé.</li>
+</ul>
+<h3 id="qu-code-v-m-c">Quà code và mốc</h3>
+<ul>
+<li>Năm batch giftcode được nối với thư bằng eventKey server-authoritative: SHA256(account|server|giftcodeId|batchNo). Tất cả tìm thấy và đã nhận.</li>
+<li>Hai mươi bốn mốc được nối bằng SHA256(account|server|milestoneId|claimPeriod). Tất cả tìm thấy và đã nhận.</li>
+<li>Kiểm bổ sung hệ Hồn ngọc S2 có30viên cấp5; điều này hỗ trợ việc phần quà code có30placeholder đã được resolve, nhưng không dùng số lượng trùng để gán nguồn một cách tuyệt đối khi không có transaction ledger từngviên.</li>
+<li>S1 không có thư liên quan của các role tài khoản trong lần đọc. Các thư trên đều thuộc roleS2 đúng account, không gửi nhầm S1.</li>
+</ul>
+<h3 id="t-i-kho-n-v-routing">Tài khoản và routing</h3>
+<ul>
+<li>Tài khoản có metadata và player thật ở cảS1 vàS2, trạng tháiaccount hoạt động. RoleS1 level5 lúc đọc có thể được khởi tạo từ login mặc định; không đồng nghĩa người dùng chủ động chơiS1.</li>
+<li><code>lhs_api_base(1002)</code> trỏ8083; <code>lhs_roles_for_account</code> gọi lookup theo server_key và lọc cảserverId/accountId. <code>hk_default_session_role</code> được dùng chung bởi code/Webshop/tích nạp.</li>
+<li>Mốc “24thư” ở kiểm tra đầu không phải kết quả cuối: người chơi tiếp tục nhận mốc trong khi audit. Snapshot sau và đối chiếu đầy đủ xác nhận30thư,30ledger. Không dùng hai snapshot khác thời điểm để kết luận thiếu6thư.</li>
+</ul>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Tách “WebGM báo thành công”, “mail đã tạo”, “mail claimed”, “player claim ledger” và “inventory hiện tại”. Mỗi lớp chứng minh một phần, không lấy một cờsuccess để khẳng định tất cả.</li>
+<li>Phản ánh “không thấy thư” không đồng nghĩa “server chưa tạo thư”. Cần thời điểm phản ánh để so với log/snapshot, không tự phát bù gây trùng.</li>
+<li>SQL chỉ truy vấn SELECT trong read-only transaction; Mongo chỉ find/count. Không gọi route submit_giftcode/buy_shop_item/claim_mail.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Xác minh giao/nhận:30/30thư và ledger,0unclaimed,0expired, đúngroleS2.</li>
+<li>Không có bằng chứng tài khoản này bị mất toàn bộ quà vì thiếuS1; cũng chưa chứng minh mọi tài khoản chỉ cóS2 đều không thể gặp lỗi khác.</li>
+<li>Chưa xác định tình trạng UI tại thời điểm người chơi báo lỗi. Chưa audit toàn bộ lịch sử tiêu vé hoặc mọi nguồn ngoài các giao dịch được nêu.</li>
+<li>Chưa phát bù/hoànXu/resetcode hoặc đánh dấu thư. Không cần mutation cho kết luận này.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Gửi người chơi đối chiếu vé1001 hiện tại và thời điểm họ từng không nhìn thấy thư; hỏi có bấm“nhận tất cả” hoặc đăng nhập lại sau khi phản ánh không, không mặc định họ đã làm thao tác nào.</li>
+<li>Nếu vẫn báo thiếu, xin ảnh server/nhân vật/túi vé và giờ thao tác; không xin mật khẩu hoặc code còn dùng được.</li>
+<li>Khi điều tra tiếp, kiểm hiển thị thư/đúngserver và trace đồng bộ1100/1102/1103. Chỉ xét bù nếu có giao dịch chưa giao hoặc nhận sai được chứng minh, trừ các khoản đã nhận để tránhdoublegrant.</li>
+</ol></main></body></html>

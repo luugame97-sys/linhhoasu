@@ -1,0 +1,556 @@
+{
+  "_table": "Activity2RewardConfig",
+  "_rows": 47,
+  "_type": "object",
+  "_firstKeys": "activityId,reward,banner",
+  "_sample": [
+    {
+      "2001": {
+        "activityId": 2001,
+        "reward": {
+          "id": 4,
+          "count": 10
+        },
+        "banner": [
+          "ui_lj_banner_lc1"
+        ]
+      }
+    },
+    {
+      "2002": {
+        "activityId": 2002,
+        "reward": {
+          "id": 4,
+          "count": 10
+        },
+        "banner": [
+          "ui_lj_banner_lc2"
+        ]
+      }
+    },
+    {
+      "2003": {
+        "activityId": 2003,
+        "reward": {
+          "id": 4,
+          "count": 10
+        },
+        "banner": [
+          "ui_lj_banner_lc3"
+        ]
+      }
+    }
+  ],
+  "data": {
+    "2001": {
+      "activityId": 2001,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2002": {
+      "activityId": 2002,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc2"
+      ]
+    },
+    "2003": {
+      "activityId": 2003,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc3"
+      ]
+    },
+    "2004": {
+      "activityId": 2004,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc4"
+      ]
+    },
+    "2005": {
+      "activityId": 2005,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc5"
+      ]
+    },
+    "2006": {
+      "activityId": 2006,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc6"
+      ]
+    },
+    "2007": {
+      "activityId": 2007,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc6"
+      ]
+    },
+    "2008": {
+      "activityId": 2008,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2009": {
+      "activityId": 2009,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc5"
+      ]
+    },
+    "2051": {
+      "activityId": 2051,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2052": {
+      "activityId": 2052,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc2"
+      ]
+    },
+    "2053": {
+      "activityId": 2053,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc3"
+      ]
+    },
+    "2054": {
+      "activityId": 2054,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc4"
+      ]
+    },
+    "2055": {
+      "activityId": 2055,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc5"
+      ]
+    },
+    "2056": {
+      "activityId": 2056,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc6"
+      ]
+    },
+    "2057": {
+      "activityId": 2057,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc6"
+      ]
+    },
+    "2058": {
+      "activityId": 2058,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2059": {
+      "activityId": 2059,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc5"
+      ]
+    },
+    "2101": {
+      "activityId": 2101,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2103": {
+      "activityId": 2103,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2104": {
+      "activityId": 2104,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2105": {
+      "activityId": 2105,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc22"
+      ]
+    },
+    "2106": {
+      "activityId": 2106,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2107": {
+      "activityId": 2107,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc5"
+      ]
+    },
+    "2108": {
+      "activityId": 2108,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc9"
+      ]
+    },
+    "2109": {
+      "activityId": 2109,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc22",
+        "ui_lj_banner_lc21",
+        "ui_lj_banner_lc20",
+        "ui_lj_banner_lc19"
+      ]
+    },
+    "2151": {
+      "activityId": 2151,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2153": {
+      "activityId": 2153,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2154": {
+      "activityId": 2154,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc1"
+      ]
+    },
+    "2155": {
+      "activityId": 2155,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc22"
+      ]
+    },
+    "2156": {
+      "activityId": 2156,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2157": {
+      "activityId": 2157,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc5"
+      ]
+    },
+    "2158": {
+      "activityId": 2158,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc10",
+        "ui_lj_banner_lc8",
+        "ui_lj_banner_lc6",
+        "ui_lj_banner_lc4",
+        "ui_lj_banner_lc2"
+      ]
+    },
+    "2159": {
+      "activityId": 2159,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc22",
+        "ui_lj_banner_lc21",
+        "ui_lj_banner_lc20",
+        "ui_lj_banner_lc19"
+      ]
+    },
+    "2201": {
+      "activityId": 2201,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc14"
+      ]
+    },
+    "2202": {
+      "activityId": 2202,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc14"
+      ]
+    },
+    "2203": {
+      "activityId": 2203,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc19"
+      ]
+    },
+    "2251": {
+      "activityId": 2251,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2252": {
+      "activityId": 2252,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2253": {
+      "activityId": 2253,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc19"
+      ]
+    },
+    "2951": {
+      "activityId": 2951,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2952": {
+      "activityId": 2952,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2953": {
+      "activityId": 2953,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2954": {
+      "activityId": 2954,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2955": {
+      "activityId": 2955,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2956": {
+      "activityId": 2956,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    },
+    "2957": {
+      "activityId": 2957,
+      "reward": {
+        "id": 4,
+        "count": 10
+      },
+      "banner": [
+        "ui_lj_banner_lc16",
+        "ui_lj_banner_lc15",
+        "ui_lj_banner_lc13",
+        "ui_lj_banner_lc12"
+      ]
+    }
+  }
+}

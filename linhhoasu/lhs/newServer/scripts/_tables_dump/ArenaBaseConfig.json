@@ -1,0 +1,125 @@
+{
+  "_table": "ArenaBaseConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "arenaCost": {
+        "id": 10,
+        "count": 1
+      }
+    },
+    {
+      "arenaRefreshCost": {
+        "id": 2,
+        "count": 100
+      }
+    },
+    {
+      "arenaReward": [
+        [
+          {
+            "id": 2,
+            "count": 2000
+          },
+          {
+            "id": 7,
+            "count": 2
+          }
+        ],
+        [
+          {
+            "id": 2,
+            "count": 2000
+          },
+          {
+            "id": 7,
+            "count": 2
+          }
+        ],
+        [
+          {
+            "id": 2,
+            "count": 2000
+          },
+          {
+            "id": 7,
+            "count": 2
+          }
+        ],
+        [
+          {
+            "id": 2,
+            "count": 2000
+          },
+          {
+            "id": 7,
+            "count": 2
+          }
+        ]
+      ]
+    }
+  ],
+  "data": {
+    "arenaCost": {
+      "id": 10,
+      "count": 1
+    },
+    "arenaRefreshCost": {
+      "id": 2,
+      "count": 100
+    },
+    "arenaReward": [
+      [
+        {
+          "id": 2,
+          "count": 2000
+        },
+        {
+          "id": 7,
+          "count": 2
+        }
+      ],
+      [
+        {
+          "id": 2,
+          "count": 2000
+        },
+        {
+          "id": 7,
+          "count": 2
+        }
+      ],
+      [
+        {
+          "id": 2,
+          "count": 2000
+        },
+        {
+          "id": 7,
+          "count": 2
+        }
+      ],
+      [
+        {
+          "id": 2,
+          "count": 2000
+        },
+        {
+          "id": 7,
+          "count": 2
+        }
+      ]
+    ],
+    "arenaScoreSection": [
+      0,
+      1200,
+      1500,
+      2000
+    ],
+    "arenaScoreDefault": 1000,
+    "arenaRefreshTime": 3,
+    "arenaProtectTime": 30
+  }
+}

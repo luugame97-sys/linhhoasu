@@ -1,0 +1,27 @@
+{
+  "_table": "HotSpringBaseConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "(obj)[bathingTime|bathingTimeUp|expUp|tpCastTime|tpApplyTime]",
+  "_sample": [
+    {
+      "bathingTime": 1800
+    },
+    {
+      "bathingTimeUp": 5000
+    },
+    {
+      "expUp": 5000
+    }
+  ],
+  "data": {
+    "bathingTime": 1800,
+    "bathingTimeUp": 5000,
+    "expUp": 5000,
+    "tpCastTime": 60,
+    "tpApplyTime": 30,
+    "countMax": 20,
+    "interactiveDistance": 300,
+    "speed": -4000
+  }
+}

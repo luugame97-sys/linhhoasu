@@ -1,0 +1,19 @@
+{
+  "version": "compatible-approximation-20260921-v1",
+  "provenance": "Owner-approved approximation; not recovered original server rules",
+  "eventDistance": 600,
+  "maxEncountersPerTrek": 24,
+  "maxChainSteps": 32,
+  "eventTypeWeights": { "1": 45, "2": 10, "3": 10, "6": 15, "4": 20 },
+  "seaBattleStableLoss": 10,
+  "miniGameMinElapsedMs": 1500,
+  "miniGameMaxElapsedMs": 900000,
+  "miniGameMaxScoreMultiple": 20,
+  "terminalSuccessReward": [{ "id": 331, "count": 100 }],
+  "terminalFailureReward": [{ "id": 331, "count": 25 }],
+  "terminalShipExp": 100,
+  "cargoChanceBps": 2500,
+  "maxCargoRows": 100,
+  "logLimit": 128,
+  "replayWindow": 128
+}

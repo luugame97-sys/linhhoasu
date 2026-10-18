@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login TW full visual deploy - 02/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="b-t-giao-di-n-n-n-tw-y-02-09-2026">Bật giao diện nền TW đầy đủ (02/09/2026)</h1>
+<h2 id="1-t-m-t-t">1. Tóm tắt</h2>
+<ul>
+<li>Đã bật nền xanh đậm <code>login_bg_tw</code> cho màn hình đăng nhập production.</li>
+<li>Thay đổi chỉ ở lớp trình bày: ép chọn ảnh TW và bật lớp ảnh TW phủ cảnh animation trắng mặc định.</li>
+<li>Không thay <code>inChina</code>, vùng, thanh toán, đăng nhập, điều khoản, sự kiện hoặc gameplay.</li>
+</ul>
+<h2 id="2-file-production-thay-i">2. File production đã thay đổi</h2>
+<ul>
+<li><code>/linhhoasu/webgame/game/js/start.min_52ac8d58.js</code></li>
+<li>Mapping nền mặc định được ép thành <code>login_bg_tw</code>.</li>
+<li>Logic thời gian <code>login_ld_bg</code> vẫn được giữ nguyên.</li>
+<li><code>/linhhoasu/webgame/game/js/main.min_a6195824.js</code></li>
+<li>Chỉ chuyển phần trình bày login sang nhánh TW: <code>loadingBGImg.visible=true</code>, <code>logo.top=49</code>.</li>
+<li>Không sửa <code>AppInfo.inChina</code> hoặc các chỗ sử dụng <code>inChina</code> khác.</li>
+<li><code>/linhhoasu/webgame/game/index.html</code></li>
+<li>Cache token đổi thành <code>20260902_login_tw_full_visual_v2</code> để client lấy bundle mới.</li>
+</ul>
+<h2 id="3-ki-m-th">3. Kiểm thử</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Kiểm tra</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Node syntax start/main</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Contract <code>forceTw</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Mapping khu vực cũ trong chọn nền</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Conditional <code>AppInfo.inChina</code> của lớp animation</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Cache token mới</td>
+<td>2 vị trí</td>
+</tr>
+<tr>
+<td>HTTP index/start/main/TW asset</td>
+<td><code>200/200/200/200</code></td>
+</tr>
+<tr>
+<td>Backend <code>/ready</code></td>
+<td><code>200</code></td>
+</tr>
+<tr>
+<td>Browser QA sạch</td>
+<td>Nền xanh mặt trăng hiển thị đúng; cảnh animation trắng không còn thấy</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>Không có lỗi client mới; chỉ cảnh báo autoplay do chưa tương tác</td>
+</tr>
+<tr>
+<td>Restart</td>
+<td>Không restart backend/Nginx/PM2</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-hash-v-backup">4. Hash và backup</h2>
+<ul>
+<li><code>start.min_52ac8d58.js</code>: <code>0dbcad104e31373d6c8536c9a2bbfd0a196dce88824226fda22e58c0ec4aacb1</code>.</li>
+<li><code>main.min_a6195824.js</code>: <code>99b420c57a2271b2ebba7c05fe9c92e8963bfde4600b01acb9852c58dcc18c1e</code>.</li>
+<li><code>index.html</code>: <code>a972d8124c57f824812b10322adfa7e4fdbb133ca44987b7e54b22d5d0ddd7dc</code>.</li>
+<li>Backup trước thay đổi đầy đủ: <code>/linhhoasu/_ai_workbench/backups/login_tw_full_visual_pre_20260901_171906/</code>.</li>
+<li>Backup của lần tráo mapping đầu: <code>/linhhoasu/_ai_workbench/backups/login_tw_swap_pre_20260901_171314/</code>.</li>
+</ul>
+<h2 id="5-tr-ng-th-i">5. Trạng thái</h2>
+<ul>
+<li>Production đang dùng giao diện TW đầy đủ.</li>
+<li>Người chơi đang giữ tab cũ cần <code>Ctrl+F5</code> hoặc đóng/mở lại game.</li>
+<li>Đây chỉ là đổi hình ảnh trình bày; không thay logic game.</li>
+</ul></main></body></html>

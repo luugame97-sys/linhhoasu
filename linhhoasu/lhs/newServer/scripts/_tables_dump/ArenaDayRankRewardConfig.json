@@ -1,0 +1,264 @@
+{
+  "_table": "ArenaDayRankRewardConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "id,rankMin,rankMax,rankShow,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rankMin": 1,
+        "rankMax": 1,
+        "rankShow": "1",
+        "rewards": [
+          {
+            "id": 7,
+            "count": 50
+          },
+          {
+            "id": 1,
+            "count": 200
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rankMin": 2,
+        "rankMax": 2,
+        "rankShow": "2",
+        "rewards": [
+          {
+            "id": 7,
+            "count": 40
+          },
+          {
+            "id": 1,
+            "count": 160
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rankMin": 3,
+        "rankMax": 3,
+        "rankShow": "3",
+        "rewards": [
+          {
+            "id": 7,
+            "count": 30
+          },
+          {
+            "id": 1,
+            "count": 120
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rankMin": 1,
+      "rankMax": 1,
+      "rankShow": "1",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 5000
+        },
+        {
+          "id": 1,
+          "count": 2000000
+        },
+        {
+          "id": 100097,
+          "count": 10
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "rankMin": 2,
+      "rankMax": 2,
+      "rankShow": "2",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 4000
+        },
+        {
+          "id": 1,
+          "count": 1600000
+        },
+        {
+          "id": 100097,
+          "count": 8
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "rankMin": 3,
+      "rankMax": 3,
+      "rankShow": "3",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 3000
+        },
+        {
+          "id": 1,
+          "count": 1200000
+        },
+        {
+          "id": 100097,
+          "count": 5
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "rankMin": 4,
+      "rankMax": 4,
+      "rankShow": "4",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 2000
+        },
+        {
+          "id": 1,
+          "count": 800000
+        },
+        {
+          "id": 100097,
+          "count": 3
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "rankMin": 5,
+      "rankMax": 5,
+      "rankShow": "5",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 1600
+        },
+        {
+          "id": 1,
+          "count": 500000
+        },
+        {
+          "id": 100097,
+          "count": 3
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "rankMin": 6,
+      "rankMax": 10,
+      "rankShow": "6-10",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 1000
+        },
+        {
+          "id": 1,
+          "count": 500000
+        },
+        {
+          "id": 100097,
+          "count": 3
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "rankMin": 11,
+      "rankMax": 20,
+      "rankShow": "11-20",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 600
+        },
+        {
+          "id": 1,
+          "count": 500000
+        },
+        {
+          "id": 100097,
+          "count": 2
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "rankMin": 21,
+      "rankMax": 50,
+      "rankShow": "21-50",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 400
+        },
+        {
+          "id": 1,
+          "count": 500000
+        },
+        {
+          "id": 100097,
+          "count": 2
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "rankMin": 51,
+      "rankMax": 500,
+      "rankShow": "51-500",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 200
+        },
+        {
+          "id": 1,
+          "count": 100000
+        },
+        {
+          "id": 100097,
+          "count": 2
+        }
+      ]
+    },
+    "10": {
+      "id": 10,
+      "rankMin": 501,
+      "rankMax": 9999,
+      "rankShow": "501+",
+      "rewards": [
+        {
+          "id": 1001,
+          "count": 100
+        },
+        {
+          "id": 1,
+          "count": 100000
+        },
+        {
+          "id": 100097,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

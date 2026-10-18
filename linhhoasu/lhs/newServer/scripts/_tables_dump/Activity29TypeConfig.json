@@ -1,0 +1,426 @@
+{
+  "_table": "Activity29TypeConfig",
+  "_rows": 22,
+  "_type": "object",
+  "_firstKeys": "activityId,payid,advancedPayid,buyExp,creditId,showMultiple,buyLevel",
+  "_sample": [
+    {
+      "29001": {
+        "activityId": 29001,
+        "payid": 10801,
+        "advancedPayid": 10802,
+        "buyExp": {
+          "id": 1,
+          "count": 30
+        },
+        "creditId": 114,
+        "showMultiple": [
+          100,
+          588,
+          599
+        ],
+        "buyLevel": 20
+      }
+    },
+    {
+      "29002": {
+        "activityId": 29002,
+        "payid": 10801,
+        "advancedPayid": 10802,
+        "buyExp": {
+          "id": 1,
+          "count": 30
+        },
+        "creditId": 114,
+        "showMultiple": [
+          100,
+          588,
+          599
+        ],
+        "buyLevel": 20
+      }
+    },
+    {
+      "29003": {
+        "activityId": 29003,
+        "payid": 10803,
+        "advancedPayid": 10804,
+        "buyExp": {
+          "id": 1,
+          "count": 30
+        },
+        "creditId": 114,
+        "showMultiple": [
+          100,
+          588,
+          599
+        ],
+        "dressId": 29060,
+        "colorId": 1,
+        "buyLevel": 20
+      }
+    }
+  ],
+  "data": {
+    "29001": {
+      "activityId": 29001,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29002": {
+      "activityId": 29002,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29003": {
+      "activityId": 29003,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "dressId": 29060,
+      "colorId": 1,
+      "buyLevel": 20
+    },
+    "29004": {
+      "activityId": 29004,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "dressId": 28240,
+      "colorId": 0,
+      "buyLevel": 20,
+      "theme": 1
+    },
+    "29005": {
+      "activityId": 29005,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "dressId": 29240,
+      "colorId": 1,
+      "buyLevel": 20
+    },
+    "29006": {
+      "activityId": 29006,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29051": {
+      "activityId": 29051,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29052": {
+      "activityId": 29052,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29053": {
+      "activityId": 29053,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "dressId": 29060,
+      "colorId": 1,
+      "buyLevel": 20
+    },
+    "29054": {
+      "activityId": 29054,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "dressId": 28240,
+      "colorId": 0,
+      "buyLevel": 20,
+      "theme": 1
+    },
+    "29055": {
+      "activityId": 29055,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "dressId": 29240,
+      "colorId": 1,
+      "buyLevel": 20
+    },
+    "29056": {
+      "activityId": 29056,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29101": {
+      "activityId": 29101,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29151": {
+      "activityId": 29151,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29152": {
+      "activityId": 29152,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29153": {
+      "activityId": 29153,
+      "payid": 10801,
+      "advancedPayid": 10802,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ],
+      "buyLevel": 20
+    },
+    "29951": {
+      "activityId": 29951,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ]
+    },
+    "29952": {
+      "activityId": 29952,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ]
+    },
+    "29953": {
+      "activityId": 29953,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ]
+    },
+    "29954": {
+      "activityId": 29954,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ]
+    },
+    "29955": {
+      "activityId": 29955,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ]
+    },
+    "29956": {
+      "activityId": 29956,
+      "payid": 10803,
+      "advancedPayid": 10804,
+      "buyExp": {
+        "id": 1,
+        "count": 30
+      },
+      "creditId": 114,
+      "showMultiple": [
+        100,
+        588,
+        599
+      ]
+    }
+  }
+}

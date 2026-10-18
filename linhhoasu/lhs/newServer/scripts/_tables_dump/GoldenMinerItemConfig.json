@@ -1,0 +1,91 @@
+{
+  "_table": "GoldenMinerItemConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,name,desc,icon,buffIcon",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "name": 30080150,
+        "desc": 30080151,
+        "icon": "hdmz_prop_01",
+        "buffIcon": ""
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "param": 5000,
+        "name": 30080152,
+        "desc": 30080153,
+        "icon": "hdmz_prop_03",
+        "buffIcon": "hdmz_buff_03",
+        "buffDesc": 30080177
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "name": 30080154,
+        "desc": 30080155,
+        "icon": "hdmz_prop_02",
+        "buffIcon": "hdmz_buff_02",
+        "buffDesc": 30080178
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "name": 30080150,
+      "desc": 30080151,
+      "icon": "hdmz_prop_01",
+      "buffIcon": ""
+    },
+    "2": {
+      "id": 2,
+      "param": 5000,
+      "name": 30080152,
+      "desc": 30080153,
+      "icon": "hdmz_prop_03",
+      "buffIcon": "hdmz_buff_03",
+      "buffDesc": 30080177
+    },
+    "3": {
+      "id": 3,
+      "name": 30080154,
+      "desc": 30080155,
+      "icon": "hdmz_prop_02",
+      "buffIcon": "hdmz_buff_02",
+      "buffDesc": 30080178
+    },
+    "4": {
+      "id": 4,
+      "param": 10000,
+      "name": 30080156,
+      "desc": 30080157,
+      "icon": "hdmz_prop_07",
+      "buffIcon": "hdmz_buff_07",
+      "buffDesc": 30080179
+    },
+    "5": {
+      "id": 5,
+      "param": 5000,
+      "name": 30080158,
+      "desc": 30080159,
+      "icon": "hdmz_prop_05",
+      "buffIcon": "hdmz_buff_05",
+      "buffDesc": 30080180
+    },
+    "6": {
+      "id": 6,
+      "param": 20,
+      "name": 30080160,
+      "desc": 30080161,
+      "icon": "hdmz_prop_04",
+      "buffIcon": "hdmz_buff_04",
+      "buffDesc": 30080181
+    }
+  }
+}

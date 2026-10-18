@@ -1,0 +1,10 @@
+{
+  "version": "20260909_social_offline_v1",
+  "normalSeedWeights": [{"id":2,"weight":4500},{"id":4,"weight":3000},{"id":101,"weight":2000},{"id":1,"weight":500}],
+  "magicWeights": [{"id":1,"weight":3500},{"id":2,"weight":1250},{"id":3,"weight":250},{"id":4,"weight":350},{"id":5,"weight":125},{"id":6,"weight":25},{"id":7,"weight":2100},{"id":8,"weight":750},{"id":9,"weight":150},{"id":10,"weight":1050},{"id":11,"weight":375},{"id":12,"weight":75}],
+  "dailySupport": {"enabled":true,"cooldownSeconds":30,"seedClaims":2,"fertilizerClaims":2,"buildClaims":4},
+  "seedRefill": {"enabled":true,"backfill":false},
+  "neighborFeed": {"enabled":true,"secondsPerItem":300,"senderDailyLimit":5,"plotCycleLimit":5},
+  "assistance": {"enabled":true,"dailyLimit":10,"perUpgradeHelpers":3,"ratePerHelp":500,"secondsCap":300},
+  "offline": {"enabled":false,"maxHours":0,"allowSteal":false,"allowCurrencySpend":false}
+}

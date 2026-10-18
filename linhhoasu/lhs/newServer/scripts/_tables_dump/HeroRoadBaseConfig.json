@@ -1,0 +1,34 @@
+{
+  "_table": "HeroRoadBaseConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "(obj)[playLevel|dailyRewards]",
+  "_sample": [
+    {
+      "playLevel": 1
+    },
+    {
+      "dailyRewards": [
+        {
+          "id": 4,
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "data": {
+    "playLevel": 1,
+    "dailyRewards": [
+      {
+        "id": 4,
+        "count": 5
+      }
+    ]
+  },
+  "dailyRewards": [
+    {
+      "id": 4,
+      "count": 50
+    }
+  ]
+}

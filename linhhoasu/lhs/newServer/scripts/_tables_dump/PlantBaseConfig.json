@@ -1,0 +1,92 @@
+{
+  "_table": "PlantBaseConfig",
+  "_rows": 20,
+  "_type": "object",
+  "_firstKeys": "(obj)[fieldMax|fieldCondition|pSeedDailyCountMax|stealGardenListCd|stealCountRate]",
+  "_sample": [
+    {
+      "fieldMax": 6
+    },
+    {
+      "fieldCondition": [
+        1,
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    {
+      "pSeedDailyCountMax": 5
+    }
+  ],
+  "data": {
+    "fieldMax": 6,
+    "fieldCondition": [
+      1,
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "pSeedDailyCountMax": 5,
+    "stealGardenListCd": 60,
+    "stealCountRate": 1000,
+    "stealBanRate": 3000,
+    "pickTime": 5,
+    "sproutTimeRate": 3000,
+    "plantFoodId": {
+      "27": 1800,
+      "28": 3600,
+      "32": 300
+    },
+    "othersPPlantFoodDailyCountMax": 5,
+    "buildAttrName": {
+      "1": {
+        "name": 30010017,
+        "type": 2
+      },
+      "2": {
+        "name": 30010018,
+        "type": 2
+      },
+      "3": {
+        "name": 30010019,
+        "type": 2
+      },
+      "4": {
+        "name": 30010020,
+        "type": 1
+      },
+      "5": {
+        "name": 30010021,
+        "type": 2
+      }
+    },
+    "buildLevelCondition": 2,
+    "buildName": {
+      "1": 30010022,
+      "2": 30010023,
+      "3": 30010024
+    },
+    "magicFieldCond": [
+      1,
+      10,
+      20
+    ],
+    "magicFieldCd": 300,
+    "protectTime": 30,
+    "reduceTired": 40,
+    "stealCd": 120,
+    "feedingMinTime": 5,
+    "autoTiredParam": [
+      40,
+      80,
+      120,
+      160,
+      200
+    ]
+  }
+}

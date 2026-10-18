@@ -1,0 +1,86 @@
+{
+  "_table": "SurviveBaseConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "(obj)[iniDelay|showReward|iniAttr|dailyRewards]",
+  "_sample": [
+    {
+      "iniDelay": 1000
+    },
+    {
+      "showReward": [
+        {
+          "id": 30200001,
+          "count": 0
+        },
+        {
+          "id": 30200002,
+          "count": 0
+        },
+        {
+          "id": 12800000,
+          "count": 0
+        }
+      ]
+    },
+    {
+      "iniAttr": [
+        {
+          "id": 1,
+          "value": 100
+        },
+        {
+          "id": 3,
+          "value": 6
+        },
+        {
+          "id": 37,
+          "value": 100
+        }
+      ]
+    }
+  ],
+  "data": {
+    "iniDelay": 1000,
+    "showReward": [
+      {
+        "id": 30200001,
+        "count": 0
+      },
+      {
+        "id": 30200002,
+        "count": 0
+      },
+      {
+        "id": 12800000,
+        "count": 0
+      }
+    ],
+    "iniAttr": [
+      {
+        "id": 1,
+        "value": 100
+      },
+      {
+        "id": 3,
+        "value": 6
+      },
+      {
+        "id": 37,
+        "value": 100
+      }
+    ],
+    "dailyRewards": [
+      {
+        "id": 4,
+        "count": 5
+      }
+    ]
+  },
+  "dailyRewards": [
+    {
+      "id": 4,
+      "count": 50
+    }
+  ]
+}

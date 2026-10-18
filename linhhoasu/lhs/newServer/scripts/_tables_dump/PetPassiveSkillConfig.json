@@ -1,0 +1,1031 @@
+{
+  "_table": "PetPassiveSkillConfig",
+  "_rows": 200,
+  "_type": "object",
+  "_firstKeys": "skillId,quality,type",
+  "_sample": [
+    {
+      "800001": {
+        "skillId": 800001,
+        "quality": 1,
+        "type": 1
+      }
+    },
+    {
+      "800002": {
+        "skillId": 800002,
+        "quality": 2,
+        "type": 1
+      }
+    },
+    {
+      "800003": {
+        "skillId": 800003,
+        "quality": 3,
+        "type": 1
+      }
+    }
+  ],
+  "data": {
+    "800001": {
+      "skillId": 800001,
+      "quality": 1,
+      "type": 1
+    },
+    "800002": {
+      "skillId": 800002,
+      "quality": 2,
+      "type": 1
+    },
+    "800003": {
+      "skillId": 800003,
+      "quality": 3,
+      "type": 1
+    },
+    "800004": {
+      "skillId": 800004,
+      "quality": 4,
+      "type": 1
+    },
+    "800005": {
+      "skillId": 800005,
+      "quality": 5,
+      "type": 1
+    },
+    "800006": {
+      "skillId": 800006,
+      "quality": 6,
+      "type": 1
+    },
+    "800007": {
+      "skillId": 800007,
+      "quality": 7,
+      "type": 1
+    },
+    "800008": {
+      "skillId": 800008,
+      "quality": 8,
+      "type": 1
+    },
+    "800009": {
+      "skillId": 800009,
+      "quality": 9,
+      "type": 1
+    },
+    "800010": {
+      "skillId": 800010,
+      "quality": 10,
+      "type": 1
+    },
+    "800101": {
+      "skillId": 800101,
+      "quality": 1,
+      "type": 2
+    },
+    "800102": {
+      "skillId": 800102,
+      "quality": 2,
+      "type": 2
+    },
+    "800103": {
+      "skillId": 800103,
+      "quality": 3,
+      "type": 2
+    },
+    "800104": {
+      "skillId": 800104,
+      "quality": 4,
+      "type": 2
+    },
+    "800105": {
+      "skillId": 800105,
+      "quality": 5,
+      "type": 2
+    },
+    "800106": {
+      "skillId": 800106,
+      "quality": 6,
+      "type": 2
+    },
+    "800107": {
+      "skillId": 800107,
+      "quality": 7,
+      "type": 2
+    },
+    "800108": {
+      "skillId": 800108,
+      "quality": 8,
+      "type": 2
+    },
+    "800109": {
+      "skillId": 800109,
+      "quality": 9,
+      "type": 2
+    },
+    "800110": {
+      "skillId": 800110,
+      "quality": 10,
+      "type": 2
+    },
+    "800201": {
+      "skillId": 800201,
+      "quality": 1,
+      "type": 3
+    },
+    "800202": {
+      "skillId": 800202,
+      "quality": 2,
+      "type": 3
+    },
+    "800203": {
+      "skillId": 800203,
+      "quality": 3,
+      "type": 3
+    },
+    "800204": {
+      "skillId": 800204,
+      "quality": 4,
+      "type": 3
+    },
+    "800205": {
+      "skillId": 800205,
+      "quality": 5,
+      "type": 3
+    },
+    "800206": {
+      "skillId": 800206,
+      "quality": 6,
+      "type": 3
+    },
+    "800207": {
+      "skillId": 800207,
+      "quality": 7,
+      "type": 3
+    },
+    "800208": {
+      "skillId": 800208,
+      "quality": 8,
+      "type": 3
+    },
+    "800209": {
+      "skillId": 800209,
+      "quality": 9,
+      "type": 3
+    },
+    "800210": {
+      "skillId": 800210,
+      "quality": 10,
+      "type": 3
+    },
+    "800301": {
+      "skillId": 800301,
+      "quality": 1,
+      "type": 4
+    },
+    "800302": {
+      "skillId": 800302,
+      "quality": 2,
+      "type": 4
+    },
+    "800303": {
+      "skillId": 800303,
+      "quality": 3,
+      "type": 4
+    },
+    "800304": {
+      "skillId": 800304,
+      "quality": 4,
+      "type": 4
+    },
+    "800305": {
+      "skillId": 800305,
+      "quality": 5,
+      "type": 4
+    },
+    "800306": {
+      "skillId": 800306,
+      "quality": 6,
+      "type": 4
+    },
+    "800307": {
+      "skillId": 800307,
+      "quality": 7,
+      "type": 4
+    },
+    "800308": {
+      "skillId": 800308,
+      "quality": 8,
+      "type": 4
+    },
+    "800309": {
+      "skillId": 800309,
+      "quality": 9,
+      "type": 4
+    },
+    "800310": {
+      "skillId": 800310,
+      "quality": 10,
+      "type": 4
+    },
+    "800401": {
+      "skillId": 800401,
+      "quality": 1,
+      "type": 5
+    },
+    "800402": {
+      "skillId": 800402,
+      "quality": 2,
+      "type": 5
+    },
+    "800403": {
+      "skillId": 800403,
+      "quality": 3,
+      "type": 5
+    },
+    "800404": {
+      "skillId": 800404,
+      "quality": 4,
+      "type": 5
+    },
+    "800405": {
+      "skillId": 800405,
+      "quality": 5,
+      "type": 5
+    },
+    "800406": {
+      "skillId": 800406,
+      "quality": 6,
+      "type": 5
+    },
+    "800407": {
+      "skillId": 800407,
+      "quality": 7,
+      "type": 5
+    },
+    "800408": {
+      "skillId": 800408,
+      "quality": 8,
+      "type": 5
+    },
+    "800409": {
+      "skillId": 800409,
+      "quality": 9,
+      "type": 5
+    },
+    "800410": {
+      "skillId": 800410,
+      "quality": 10,
+      "type": 5
+    },
+    "800501": {
+      "skillId": 800501,
+      "quality": 1,
+      "type": 0
+    },
+    "800502": {
+      "skillId": 800502,
+      "quality": 2,
+      "type": 0
+    },
+    "800503": {
+      "skillId": 800503,
+      "quality": 3,
+      "type": 0
+    },
+    "800504": {
+      "skillId": 800504,
+      "quality": 4,
+      "type": 0
+    },
+    "800505": {
+      "skillId": 800505,
+      "quality": 5,
+      "type": 0
+    },
+    "800506": {
+      "skillId": 800506,
+      "quality": 6,
+      "type": 0
+    },
+    "800507": {
+      "skillId": 800507,
+      "quality": 7,
+      "type": 0
+    },
+    "800508": {
+      "skillId": 800508,
+      "quality": 8,
+      "type": 0
+    },
+    "800509": {
+      "skillId": 800509,
+      "quality": 9,
+      "type": 0
+    },
+    "800510": {
+      "skillId": 800510,
+      "quality": 10,
+      "type": 0
+    },
+    "800601": {
+      "skillId": 800601,
+      "quality": 1,
+      "type": 0
+    },
+    "800602": {
+      "skillId": 800602,
+      "quality": 2,
+      "type": 0
+    },
+    "800603": {
+      "skillId": 800603,
+      "quality": 3,
+      "type": 0
+    },
+    "800604": {
+      "skillId": 800604,
+      "quality": 4,
+      "type": 0
+    },
+    "800605": {
+      "skillId": 800605,
+      "quality": 5,
+      "type": 0
+    },
+    "800606": {
+      "skillId": 800606,
+      "quality": 6,
+      "type": 0
+    },
+    "800607": {
+      "skillId": 800607,
+      "quality": 7,
+      "type": 0
+    },
+    "800608": {
+      "skillId": 800608,
+      "quality": 8,
+      "type": 0
+    },
+    "800609": {
+      "skillId": 800609,
+      "quality": 9,
+      "type": 0
+    },
+    "800610": {
+      "skillId": 800610,
+      "quality": 10,
+      "type": 0
+    },
+    "800701": {
+      "skillId": 800701,
+      "quality": 1,
+      "type": 0
+    },
+    "800702": {
+      "skillId": 800702,
+      "quality": 2,
+      "type": 0
+    },
+    "800703": {
+      "skillId": 800703,
+      "quality": 3,
+      "type": 0
+    },
+    "800704": {
+      "skillId": 800704,
+      "quality": 4,
+      "type": 0
+    },
+    "800705": {
+      "skillId": 800705,
+      "quality": 5,
+      "type": 0
+    },
+    "800706": {
+      "skillId": 800706,
+      "quality": 6,
+      "type": 0
+    },
+    "800707": {
+      "skillId": 800707,
+      "quality": 7,
+      "type": 0
+    },
+    "800708": {
+      "skillId": 800708,
+      "quality": 8,
+      "type": 0
+    },
+    "800709": {
+      "skillId": 800709,
+      "quality": 9,
+      "type": 0
+    },
+    "800710": {
+      "skillId": 800710,
+      "quality": 10,
+      "type": 0
+    },
+    "800801": {
+      "skillId": 800801,
+      "quality": 1,
+      "type": 0
+    },
+    "800802": {
+      "skillId": 800802,
+      "quality": 2,
+      "type": 0
+    },
+    "800803": {
+      "skillId": 800803,
+      "quality": 3,
+      "type": 0
+    },
+    "800804": {
+      "skillId": 800804,
+      "quality": 4,
+      "type": 0
+    },
+    "800805": {
+      "skillId": 800805,
+      "quality": 5,
+      "type": 0
+    },
+    "800806": {
+      "skillId": 800806,
+      "quality": 6,
+      "type": 0
+    },
+    "800807": {
+      "skillId": 800807,
+      "quality": 7,
+      "type": 0
+    },
+    "800808": {
+      "skillId": 800808,
+      "quality": 8,
+      "type": 0
+    },
+    "800809": {
+      "skillId": 800809,
+      "quality": 9,
+      "type": 0
+    },
+    "800810": {
+      "skillId": 800810,
+      "quality": 10,
+      "type": 0
+    },
+    "800901": {
+      "skillId": 800901,
+      "quality": 1,
+      "type": 0
+    },
+    "800902": {
+      "skillId": 800902,
+      "quality": 2,
+      "type": 0
+    },
+    "800903": {
+      "skillId": 800903,
+      "quality": 3,
+      "type": 0
+    },
+    "800904": {
+      "skillId": 800904,
+      "quality": 4,
+      "type": 0
+    },
+    "800905": {
+      "skillId": 800905,
+      "quality": 5,
+      "type": 0
+    },
+    "800906": {
+      "skillId": 800906,
+      "quality": 6,
+      "type": 0
+    },
+    "800907": {
+      "skillId": 800907,
+      "quality": 7,
+      "type": 0
+    },
+    "800908": {
+      "skillId": 800908,
+      "quality": 8,
+      "type": 0
+    },
+    "800909": {
+      "skillId": 800909,
+      "quality": 9,
+      "type": 0
+    },
+    "800910": {
+      "skillId": 800910,
+      "quality": 10,
+      "type": 0
+    },
+    "801001": {
+      "skillId": 801001,
+      "quality": 1,
+      "type": 0
+    },
+    "801002": {
+      "skillId": 801002,
+      "quality": 2,
+      "type": 0
+    },
+    "801003": {
+      "skillId": 801003,
+      "quality": 3,
+      "type": 0
+    },
+    "801004": {
+      "skillId": 801004,
+      "quality": 4,
+      "type": 0
+    },
+    "801005": {
+      "skillId": 801005,
+      "quality": 5,
+      "type": 0
+    },
+    "801006": {
+      "skillId": 801006,
+      "quality": 6,
+      "type": 0
+    },
+    "801007": {
+      "skillId": 801007,
+      "quality": 7,
+      "type": 0
+    },
+    "801008": {
+      "skillId": 801008,
+      "quality": 8,
+      "type": 0
+    },
+    "801009": {
+      "skillId": 801009,
+      "quality": 9,
+      "type": 0
+    },
+    "801010": {
+      "skillId": 801010,
+      "quality": 10,
+      "type": 0
+    },
+    "801101": {
+      "skillId": 801101,
+      "quality": 1,
+      "type": 0
+    },
+    "801102": {
+      "skillId": 801102,
+      "quality": 2,
+      "type": 0
+    },
+    "801103": {
+      "skillId": 801103,
+      "quality": 3,
+      "type": 0
+    },
+    "801104": {
+      "skillId": 801104,
+      "quality": 4,
+      "type": 0
+    },
+    "801105": {
+      "skillId": 801105,
+      "quality": 5,
+      "type": 0
+    },
+    "801106": {
+      "skillId": 801106,
+      "quality": 6,
+      "type": 0
+    },
+    "801107": {
+      "skillId": 801107,
+      "quality": 7,
+      "type": 0
+    },
+    "801108": {
+      "skillId": 801108,
+      "quality": 8,
+      "type": 0
+    },
+    "801109": {
+      "skillId": 801109,
+      "quality": 9,
+      "type": 0
+    },
+    "801110": {
+      "skillId": 801110,
+      "quality": 10,
+      "type": 0
+    },
+    "801201": {
+      "skillId": 801201,
+      "quality": 1,
+      "type": 0
+    },
+    "801202": {
+      "skillId": 801202,
+      "quality": 2,
+      "type": 0
+    },
+    "801203": {
+      "skillId": 801203,
+      "quality": 3,
+      "type": 0
+    },
+    "801204": {
+      "skillId": 801204,
+      "quality": 4,
+      "type": 0
+    },
+    "801205": {
+      "skillId": 801205,
+      "quality": 5,
+      "type": 0
+    },
+    "801206": {
+      "skillId": 801206,
+      "quality": 6,
+      "type": 0
+    },
+    "801207": {
+      "skillId": 801207,
+      "quality": 7,
+      "type": 0
+    },
+    "801208": {
+      "skillId": 801208,
+      "quality": 8,
+      "type": 0
+    },
+    "801209": {
+      "skillId": 801209,
+      "quality": 9,
+      "type": 0
+    },
+    "801210": {
+      "skillId": 801210,
+      "quality": 10,
+      "type": 0
+    },
+    "801301": {
+      "skillId": 801301,
+      "quality": 1,
+      "type": 0
+    },
+    "801302": {
+      "skillId": 801302,
+      "quality": 2,
+      "type": 0
+    },
+    "801303": {
+      "skillId": 801303,
+      "quality": 3,
+      "type": 0
+    },
+    "801304": {
+      "skillId": 801304,
+      "quality": 4,
+      "type": 0
+    },
+    "801305": {
+      "skillId": 801305,
+      "quality": 5,
+      "type": 0
+    },
+    "801306": {
+      "skillId": 801306,
+      "quality": 6,
+      "type": 0
+    },
+    "801307": {
+      "skillId": 801307,
+      "quality": 7,
+      "type": 0
+    },
+    "801308": {
+      "skillId": 801308,
+      "quality": 8,
+      "type": 0
+    },
+    "801309": {
+      "skillId": 801309,
+      "quality": 9,
+      "type": 0
+    },
+    "801310": {
+      "skillId": 801310,
+      "quality": 10,
+      "type": 0
+    },
+    "801401": {
+      "skillId": 801401,
+      "quality": 1,
+      "type": 0
+    },
+    "801402": {
+      "skillId": 801402,
+      "quality": 2,
+      "type": 0
+    },
+    "801403": {
+      "skillId": 801403,
+      "quality": 3,
+      "type": 0
+    },
+    "801404": {
+      "skillId": 801404,
+      "quality": 4,
+      "type": 0
+    },
+    "801405": {
+      "skillId": 801405,
+      "quality": 5,
+      "type": 0
+    },
+    "801406": {
+      "skillId": 801406,
+      "quality": 6,
+      "type": 0
+    },
+    "801407": {
+      "skillId": 801407,
+      "quality": 7,
+      "type": 0
+    },
+    "801408": {
+      "skillId": 801408,
+      "quality": 8,
+      "type": 0
+    },
+    "801409": {
+      "skillId": 801409,
+      "quality": 9,
+      "type": 0
+    },
+    "801410": {
+      "skillId": 801410,
+      "quality": 10,
+      "type": 0
+    },
+    "801501": {
+      "skillId": 801501,
+      "quality": 1,
+      "type": 0
+    },
+    "801502": {
+      "skillId": 801502,
+      "quality": 2,
+      "type": 0
+    },
+    "801503": {
+      "skillId": 801503,
+      "quality": 3,
+      "type": 0
+    },
+    "801504": {
+      "skillId": 801504,
+      "quality": 4,
+      "type": 0
+    },
+    "801505": {
+      "skillId": 801505,
+      "quality": 5,
+      "type": 0
+    },
+    "801506": {
+      "skillId": 801506,
+      "quality": 6,
+      "type": 0
+    },
+    "801507": {
+      "skillId": 801507,
+      "quality": 7,
+      "type": 0
+    },
+    "801508": {
+      "skillId": 801508,
+      "quality": 8,
+      "type": 0
+    },
+    "801509": {
+      "skillId": 801509,
+      "quality": 9,
+      "type": 0
+    },
+    "801510": {
+      "skillId": 801510,
+      "quality": 10,
+      "type": 0
+    },
+    "801601": {
+      "skillId": 801601,
+      "quality": 1,
+      "type": 0
+    },
+    "801602": {
+      "skillId": 801602,
+      "quality": 2,
+      "type": 0
+    },
+    "801603": {
+      "skillId": 801603,
+      "quality": 3,
+      "type": 0
+    },
+    "801604": {
+      "skillId": 801604,
+      "quality": 4,
+      "type": 0
+    },
+    "801605": {
+      "skillId": 801605,
+      "quality": 5,
+      "type": 0
+    },
+    "801606": {
+      "skillId": 801606,
+      "quality": 6,
+      "type": 0
+    },
+    "801607": {
+      "skillId": 801607,
+      "quality": 7,
+      "type": 0
+    },
+    "801608": {
+      "skillId": 801608,
+      "quality": 8,
+      "type": 0
+    },
+    "801609": {
+      "skillId": 801609,
+      "quality": 9,
+      "type": 0
+    },
+    "801610": {
+      "skillId": 801610,
+      "quality": 10,
+      "type": 0
+    },
+    "801701": {
+      "skillId": 801701,
+      "quality": 1,
+      "type": 0
+    },
+    "801702": {
+      "skillId": 801702,
+      "quality": 2,
+      "type": 0
+    },
+    "801703": {
+      "skillId": 801703,
+      "quality": 3,
+      "type": 0
+    },
+    "801704": {
+      "skillId": 801704,
+      "quality": 4,
+      "type": 0
+    },
+    "801705": {
+      "skillId": 801705,
+      "quality": 5,
+      "type": 0
+    },
+    "801706": {
+      "skillId": 801706,
+      "quality": 6,
+      "type": 0
+    },
+    "801707": {
+      "skillId": 801707,
+      "quality": 7,
+      "type": 0
+    },
+    "801708": {
+      "skillId": 801708,
+      "quality": 8,
+      "type": 0
+    },
+    "801709": {
+      "skillId": 801709,
+      "quality": 9,
+      "type": 0
+    },
+    "801710": {
+      "skillId": 801710,
+      "quality": 10,
+      "type": 0
+    },
+    "801801": {
+      "skillId": 801801,
+      "quality": 1,
+      "type": 0
+    },
+    "801802": {
+      "skillId": 801802,
+      "quality": 2,
+      "type": 0
+    },
+    "801803": {
+      "skillId": 801803,
+      "quality": 3,
+      "type": 0
+    },
+    "801804": {
+      "skillId": 801804,
+      "quality": 4,
+      "type": 0
+    },
+    "801805": {
+      "skillId": 801805,
+      "quality": 5,
+      "type": 0
+    },
+    "801806": {
+      "skillId": 801806,
+      "quality": 6,
+      "type": 0
+    },
+    "801807": {
+      "skillId": 801807,
+      "quality": 7,
+      "type": 0
+    },
+    "801808": {
+      "skillId": 801808,
+      "quality": 8,
+      "type": 0
+    },
+    "801809": {
+      "skillId": 801809,
+      "quality": 9,
+      "type": 0
+    },
+    "801810": {
+      "skillId": 801810,
+      "quality": 10,
+      "type": 0
+    },
+    "801901": {
+      "skillId": 801901,
+      "quality": 1,
+      "type": 0
+    },
+    "801902": {
+      "skillId": 801902,
+      "quality": 2,
+      "type": 0
+    },
+    "801903": {
+      "skillId": 801903,
+      "quality": 3,
+      "type": 0
+    },
+    "801904": {
+      "skillId": 801904,
+      "quality": 4,
+      "type": 0
+    },
+    "801905": {
+      "skillId": 801905,
+      "quality": 5,
+      "type": 0
+    },
+    "801906": {
+      "skillId": 801906,
+      "quality": 6,
+      "type": 0
+    },
+    "801907": {
+      "skillId": 801907,
+      "quality": 7,
+      "type": 0
+    },
+    "801908": {
+      "skillId": 801908,
+      "quality": 8,
+      "type": 0
+    },
+    "801909": {
+      "skillId": 801909,
+      "quality": 9,
+      "type": 0
+    },
+    "801910": {
+      "skillId": 801910,
+      "quality": 10,
+      "type": 0
+    }
+  }
+}

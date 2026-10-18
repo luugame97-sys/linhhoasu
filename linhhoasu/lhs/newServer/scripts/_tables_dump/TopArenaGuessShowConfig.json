@@ -1,0 +1,64 @@
+{
+  "_table": "TopArenaGuessShowConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "Id,rateMin,rateMax,res",
+  "_sample": [
+    {
+      "1": {
+        "Id": 1,
+        "rateMin": 0,
+        "rateMax": 1,
+        "res": "dtjc_bm_ch05"
+      }
+    },
+    {
+      "2": {
+        "Id": 2,
+        "rateMin": 1,
+        "rateMax": 1.5,
+        "res": "dtjc_bm_ch04"
+      }
+    },
+    {
+      "3": {
+        "Id": 3,
+        "rateMin": 1.5,
+        "rateMax": 2,
+        "res": "dtjc_bm_ch03"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "Id": 1,
+      "rateMin": 0,
+      "rateMax": 1,
+      "res": "dtjc_bm_ch05"
+    },
+    "2": {
+      "Id": 2,
+      "rateMin": 1,
+      "rateMax": 1.5,
+      "res": "dtjc_bm_ch04"
+    },
+    "3": {
+      "Id": 3,
+      "rateMin": 1.5,
+      "rateMax": 2,
+      "res": "dtjc_bm_ch03"
+    },
+    "4": {
+      "Id": 4,
+      "rateMin": 2,
+      "rateMax": 2.5,
+      "res": "dtjc_bm_ch02"
+    },
+    "5": {
+      "Id": 5,
+      "rateMin": 2.5,
+      "rateMax": 888,
+      "res": "dtjc_bm_ch01"
+    }
+  }
+}

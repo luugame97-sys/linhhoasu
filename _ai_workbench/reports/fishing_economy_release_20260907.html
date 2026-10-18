@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kinh tế câu cá — đã phát hành</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-ti-n-ng-tr-n-qu-c-ch-p-v-th-ng-c-u-c">Session Report — Tiền đồng, Trân quý Cá chép và thưởng câu cá</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p><strong>Đã triển khai S2 → S1, hoàn tất09:08:04 GMT+7 ngày07/09/2026.</strong> Không dùng tiền/đồ người chơi thật để QA; không tự bù lượt mua hoặc câu trước đây.</p>
+<h3 id="ti-n-ng119">Tiền đồng119</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Nội dung</th>
+<th>Quy tắc đã triển khai</th>
+</tr></thead><tbody>
+<tr>
+<td>Nguồn</td>
+<td>Bán cá mới được câu trong ngư trường sự kiện type33 đang mở</td>
+</tr>
+<tr>
+<td>Tỷ lệ</td>
+<td>20% mỗi con bán, nhận ngẫu nhiên1–3 Tiền đồng</td>
+</tr>
+<tr>
+<td>Huyền Vũ</td>
+<td>Thẻ11000009 còn hạn tăng25% số tiền nhận; phần lẻ lưu qua các lần bán/relog</td>
+</tr>
+<tr>
+<td>Chống lặp</td>
+<td>Nguồn cá gắn UID/instance trên server, xóa khi bán; gửi lại UID không cấp thêm</td>
+</tr>
+<tr>
+<td>Phạm vi</td>
+<td>Phải đang bán trong ngư trường sự kiện đúng kỳ; cá cũ trước bản sửa/cá thường không có nguồn hợp lệ không được farm tiền</td>
+</tr>
+<tr>
+<td>Cuối kỳ</td>
+<td>Tồn119 đổi thành Bạc1:1.000 ở heartbeat hoặc lần thao tác hợp lệ tiếp theo; ghi dấu để không đổi hai lần</td>
+</tr>
+<tr>
+<td>Đổi đồ</td>
+<td>Giá gốc cửa hàng119; limit theo ActivityShopConfig/kỳ, không tin frontend</td>
+</tr>
+</tbody></table></div>
+<p>Đây là bảng cân bằng riêng được user yêu cầu thiết kế, không phải tỷ lệ chính thức Trung Quốc. Trung bình trước bonus khoảng0,4 Tiền đồng mỗi con đủ điều kiện bán; có Huyền Vũ khoảng0,5. Không tính lại quá khứ, không reset tiền68/69 hoặc các nguồn cá khác.</p>
+<h3 id="tr-n-qu-c-a-c-ch-p94501">Trân quý của Cá chép94501</h3>
+<p>Quà mới tự mở trong đường nhận phần thưởng sự kiện/thư. Túi đã tồn có nút sử dụng ở client mới, tối đa100 túi/lần; QA đã mở66 túi. Một túi roll một dòng:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Item</th>
+<th>Số lượng</th>
+<th>Xác suất</th>
+</tr></thead><tbody>
+<tr>
+<td>68 — tiền câu cá</td>
+<td>100–300</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>69 — Ngọc cá</td>
+<td>1–3</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>135 — nguyên liệu tẩy</td>
+<td>1–3</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>5535 — bí quyển câu cá</td>
+<td>1–3</td>
+<td>8%</td>
+</tr>
+<tr>
+<td>65 — Đùi Gà</td>
+<td>5</td>
+<td>1,9%</td>
+</tr>
+<tr>
+<td>29040 — thời trang</td>
+<td>1</td>
+<td>0,1%</td>
+</tr>
+</tbody></table></div>
+<p>Giữ quyền sở hữu native của thời trang; không chỉ cộng một item giả. Consume và thưởng cùng snapshot/save xác nhận. Khi save lỗi, session mất hiệu lực để tải DB mới; không giữ snapshot đã biến đổi rồi ghi đè về sau.</p>
+<h3 id="nh-n-th-ng-ng-ph-m-vi-nh">Nhân thưởng đúng phạm vi ảnh</h3>
+<p>Năm gói Đại hội6006, ID11001401–11001405: Nguyên bảo300/680/1.280/3.280/6.480 →300.000/680.000/1.280.000/3.280.000/6.480.000. Giữ giá30/68/128/328/648, số Đùi Gà, mồi và giới hạn mua. Các gói này không có vé tăng tốc nên không tự thêm item6.</p>
+<p>BXH Đại hội6006: Nguyên bảo x1.000 và vé tăng tốc item6 x10.000. Hạng1:1.000.000 Nguyên bảo +1.000.000 vé; hạng2:800.000 +800.000; hạng3:600.000 +600.000; các hạng còn lại cùng hệ số. Quà ngoại quan, mảnh và Đùi Gà giữ nguyên. Không nhân mọi gói nạp/sự kiện khác của game.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<p>Source chính <code>linhhoasu/lhs/newServer/</code>:</p>
+<ul>
+<li>Thêm <code>src/config/fishingEconomy.json</code>, <code>src/services/FishingEconomyService.js</code>.</li>
+<li>Sửa FishingGameplayService/FishingEventService; handler fish/item/raid/mail/playerPayload. Tổng9 source/config file.</li>
+<li>Binary server <code>linhhoasu/lhs/update/resource/assets/excel/config_e5ac72c2.bin</code>; binary client cùng tên dưới <code>linhhoasu/webgame/game/update/resource/assets/excel/</code> và ngôn ngữ <code>lang_cn/config_lang_c2fa8585.bin</code>.</li>
+<li>Client index cache token <code>20260907_fishing_economy_v1</code>; giữ bundle/banner fix trước đó nguyên byte.</li>
+</ul>
+<p>Tools inspect/build/22-test/stage/preflight/QA/release/rollback-verify/local-merge/residue ở <code>_ai_workbench/tools/</code>. Candidate/evidence <code>temp/fishing_economy_20260907/</code>; baseline <code>temp/fishing_audit_20260906T212212Z/</code>.</p>
+<p>Backup phát hành <code>/linhhoasu/_ai_workbench/backups/fishing_economy_20260907_020722/</code>; canary đầu <code>/linhhoasu/_ai_workbench/backups/fishing_economy_20260907_020501/</code>. Local <code>backups/fishing_economy_local_20260907/</code>, report <code>backups/fishing_economy_reports_20260907/</code>. Bản server local có SystemConfig khác sẵn, đã giữ nguyên bảng đó, chỉ ghép bốn bảng cần đổi; không tuyên bố binary server local khớp byte toàn bộ VPS.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Tránh tái diễn</th>
+</tr></thead><tbody>
+<tr>
+<td>119 không có nguồn</td>
+<td>Chỉ show/cost chưa grant</td>
+<td>Nguồn UID theo kỳ, roll ở bán cá</td>
+<td>Manual/auto/replay/scene/expiry</td>
+</tr>
+<tr>
+<td>94501 nằm túi không dùng</td>
+<td>Type99 và thiếu use/pool</td>
+<td>Use config + tự mở quà mới + handler túi tồn</td>
+<td>Test66 túi/concurrent/savefail</td>
+</tr>
+<tr>
+<td>Cửa hàng119 thiếu giới hạn server</td>
+<td>Policy cũ chỉ phủtype43</td>
+<td>Nhánh119 riêng theo kỳ/ActivityShopConfig</td>
+<td>Sai sự kiện, hết limit, request trộn</td>
+</tr>
+<tr>
+<td>Bản vá mail có thể bỏ native reward</td>
+<td>Generic mail chỉ gom ít reward types</td>
+<td>Expand94501 trước vòng xử lý mail</td>
+<td>Giữ grant đường native theo từng vật phẩm</td>
+</tr>
+<tr>
+<td>Canary đầu mini-game trảresult1</td>
+<td>Chưa xác định được nguyên nhân từ assertion đầu không ghi response; không được kết luận đã tìm ra root cause</td>
+<td>RollbackS2, kiểm toàn hash/ready; bổ sung diagnostic; canaryS2/S1 sau đềuPASS</td>
+<td>Giữ failed-attempt-1.json; nếu tái diễn đọc reason/revision/ticket trước xử lý</td>
+</tr>
+<tr>
+<td>Syntax deploy helper lỗi else</td>
+<td>Thiếu khoảng trắng trong tool Python</td>
+<td>py_compile chặn trước execution</td>
+<td>Kiểm syntax trước kết nối</td>
+</tr>
+<tr>
+<td>Local config hash khác</td>
+<td>SystemConfig local đã khác baseline</td>
+<td>Ghép các bảng đã xác minh, giữ phần khác</td>
+<td>Không copy toàn binary mù</td>
+</tr>
+<tr>
+<td>Test local chạy thiếu dependency</td>
+<td>NODE_PATH không còn sau lượt tool</td>
+<td>Chạy lại đúng dependency,22PASS</td>
+<td>Không coi lỗi harness là lỗi game hoặc giấu fail</td>
+</tr>
+</tbody></table></div>
+<p>Không đổi database người chơi thật, không reset các túi cũ, không thu/bù gói đã mua. Warning isNew từ model cũ không sửa ngoài phạm vi. Nội dung mớiUTF-8; không sửa rộng asset/ngôn ngữ.</p>
+<h2 id="4-ki-m-th-v-kinh-nghi-m">4. Kiểm thử và kinh nghiệm</h2>
+<p>-22 nhóm local/Linux stagingPASS: xác suất boundary20%,1–3, bonus25% phần lẻ/relog, không tiền từ cá cũ/sai scene/kỳ, cùng UID không double, conversion cuối kỳ một lần,94501auto/manual66/concurrent/badquantity/savefail/commit-timeout, toàn pool boundary, currency shop price/limit/foreign/mixed, normal/auto sale replay, dữ liệu provenance không lộ payload, rank payout nhân đúng và resolver gói giữ giá. -Core stagingPASS với714 bảng. Binary server/client giải/ghi/giải lại đủ714 bảng; bốn bảng đổi là ShopConfig,Activity6RankConfig,AssetsConfig,AssetsUseConfig; các bảng khác giữ nguyên. Ngôn ngữ sửa hai tooltip. -Live QA S2/S1 bằng nhân vật tạo riêng: mở66 túi, mở quà mini-game tự động, replay không cấp lại, gói11001401 cấp300.000 Nguyên bảo (token QA), vào scene101 và bán3 cá có119; S2 nhận1, S1 nhận4 trong mẫu. Đây là kết quả ngẫu nhiên mẫu nhỏ, không dùng để ước lượng tỷ lệ20%. -Đăng nhập lại giữ túi94501=0 và số119 đúng. Không gọi provider/cash upstream hoặc dùng account thật. Rank cuối kỳ và bonus25% được test fixture, chưa chờ kỳ live kết thúc. -Hậu kiểm13/13 artifact hash và HTTP config/lang/index đúng; ready8080/8083=200. -QA residue: players/mails/bottles/Redis sessions/process harness đều0. Mẫu log tối đa256KiB/file sau phát hành chưa thấy error mới; không suy toàn log sạch.</p>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>Gói delta <code>temp/fishing_economy_20260907/Fishing_Economy_20260907.zip</code> gồm16 entry, CRC và hash từng entry đã kiểm. Không chứa credential, snapshot player hoặc tài khoản QA. Metadata/hash toàn gói ở <code>package.json</code>. Chín file source local tương đương nội dung VPS; binary server local giữ khác biệt SystemConfig ngoài phạm vi.</p>
+<p>Đã phát hành09:08:04 GMT+7. S1 PID3021/restart1385; S2 PID32727/restart57 tại hậu kiểm. S1 tăng1restart; S2 tăng3 (canary đầu, rollback, bản cuối). Dist30824/admin30856/bot1600/1576 giữ nguyên. Không restart PHP/Nginx hoặc game khác.</p>
+<p>Giới hạn: chưa screenshot native UI với client/config mới trên thiết bị vật lý; kiểm code/config display và RPC thực đã đạt. Chưa cash upstream thật, chưa live cuối kỳ hoặc thử toàn bộ ô bảng rơi bằng RNG thật. Canary mini-game đầu là lỗi ngắt quãng chưa xác định root cause, đã lưu evidence và không ghi thành “đã fix nguyên nhân”.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<p>Tải lại game một lần để lấy config/cache mới. Mở túi94501 trong Túi đồ; tới ngư trường sự kiện, câu cá mới rồi bán để nhận119. Cửa hàng giới hạn theo kỳ, tiền hết kỳ chuyển Bạc ở heartbeat/thao tác kế tiếp, không phải job cập nhật đồng loạt người offline ngay lập tức.</p>
+<p>Nếu đổi bảng rơi sau này phải đổi version/provenance, kiểm nguồnUID, kỳ và snapshot; không sửa tỷ lệ để làm test RNG mẫu nhỏ xanh. Rollback giữ state receipt/currency, không xóa hoặc hoàn lại vật phẩm đã nhận. Bản client nền web/banner trước vẫn được giữ.</p></main></body></html>

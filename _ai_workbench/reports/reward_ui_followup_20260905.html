@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiểm tra tiếp lỗi item trên phiên game đang chạy</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ti-p-t-c-ki-m-tra-l-i-item-tr-n-phi-n-game-ang-ch-y-05-09-2026">Tiếp tục kiểm tra lỗi item trên phiên game đang chạy — 05/09/2026</h1>
+<h2 id="k-t-qu">Kết quả</h2>
+<ul>
+<li>Dùng đúng tab game người dùng đã mở sẵn tại <code>http://103.116.105.154:81/</code>; không tạo phiên đăng nhập mới, không reload, không đăng xuất.</li>
+<li>Nhìn thấy nhân vật <code>nicky</code>, cấp 108, đang ở trong game. Lớp loot hiển thị item <code>108</code> và nút <strong>Bán toàn bộ</strong>.</li>
+<li>Không bấm bán, không mở item, không mua gói, không dùng code; tránh làm thay đổi inventory người dùng.</li>
+<li>Console tại thời điểm đọc: các cảnh báo Spine “tài nguyên chưa tải xong”, cảnh báo khoảng cách ký tự và duplicate handle; <strong>không thấy Illegal invocation, TypeError, Unhandled hoặc fatal error</strong> trong lần đọc hiện tại.</li>
+<li>Các listener WebSocket probe localhost và proxy QA đã được dừng; không để lại cổng kiểm thử 18791–18793.</li>
+</ul>
+<h2 id="tr-ng-th-i-fix">Trạng thái fix</h2>
+<ul>
+<li>Không có bằng chứng lỗi đăng nhập trên phiên người dùng đang chạy. Nhánh sửa wrapper WebSocket bị dừng, không patch client production.</li>
+<li>Không thể nghiệm thu item UI từ lớp loot đang mở vì hành động đóng/mở hoặc click sai có thể làm bán/tiêu item. Server WS contract, DB/relog và native ownership đã PASS ở phiên triển khai trước.</li>
+<li>Các cảnh báo Spine/duplicate handle được ghi nhận riêng; chưa đủ bằng chứng là nguyên nhân item lỗi hoặc mất tương tác.</li>
+</ul>
+<h2 id="b-c-k-ti-p-an-to-n">Bước kế tiếp an toàn</h2>
+<ol>
+<li>Khi người dùng đóng lớp loot hoặc chủ động chỉ rõ item cần kiểm, mới thao tác một item cụ thể và chụp state trước/sau.</li>
+<li>Đối chiếu item delta, native state và console theo đúng <code>itemId/msgUid</code>; không bấm nút bán toàn bộ.</li>
+<li>Giữ 114 ID fail-closed và P4 repair preview chưa commit.</li>
+</ol></main></body></html>

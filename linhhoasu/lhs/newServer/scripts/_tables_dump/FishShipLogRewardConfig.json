@@ -1,0 +1,1422 @@
+{
+  "_table": "FishShipLogRewardConfig",
+  "_rows": 27,
+  "_type": "object",
+  "_firstKeys": "id,cost,rewards,scene,bannerEff,banner,bannerName,name,desc",
+  "_sample": [
+    {
+      "101": {
+        "id": 101,
+        "cost": {
+          "id": 6013,
+          "count": 1
+        },
+        "rewards": {
+          "5": [
+            {
+              "id": 65,
+              "count": 20
+            }
+          ],
+          "10": [
+            {
+              "id": 5514,
+              "count": 30
+            }
+          ],
+          "15": [
+            {
+              "id": 65,
+              "count": 40
+            }
+          ],
+          "20": [
+            {
+              "id": 5535,
+              "count": 50
+            }
+          ],
+          "25": [
+            {
+              "id": 29133,
+              "count": 1
+            }
+          ]
+        },
+        "scene": 1,
+        "bannerEff": "sp_ui_haiguotuzhi_sgb",
+        "banner": "dy_bm_hhrzBanner_101",
+        "bannerName": "dy_bm_hhrzName_101",
+        "name": 30035910,
+        "desc": 30035889
+      }
+    },
+    {
+      "102": {
+        "id": 102,
+        "cost": {
+          "id": 6013,
+          "count": 1
+        },
+        "rewards": {
+          "5": [
+            {
+              "id": 65,
+              "count": 20
+            }
+          ],
+          "10": [
+            {
+              "id": 5514,
+              "count": 30
+            }
+          ],
+          "15": [
+            {
+              "id": 65,
+              "count": 40
+            }
+          ],
+          "20": [
+            {
+              "id": 5535,
+              "count": 50
+            }
+          ],
+          "25": [
+            {
+              "id": 29223,
+              "count": 1
+            }
+          ]
+        },
+        "scene": 1,
+        "bannerEff": "sp_ui_haiguotuzhi_sgb",
+        "banner": "dy_bm_hhrzBanner_102",
+        "bannerName": "dy_bm_hhrzName_102",
+        "name": 30035966,
+        "desc": 30035889
+      }
+    },
+    {
+      "201": {
+        "id": 201,
+        "cost": {
+          "id": 6012,
+          "count": 1
+        },
+        "rewards": {
+          "5": [
+            {
+              "id": 65,
+              "count": 20
+            }
+          ],
+          "10": [
+            {
+              "id": 5514,
+              "count": 30
+            }
+          ],
+          "15": [
+            {
+              "id": 65,
+              "count": 40
+            }
+          ],
+          "20": [
+            {
+              "id": 5535,
+              "count": 50
+            }
+          ],
+          "25": [
+            {
+              "id": 29143,
+              "count": 1
+            }
+          ]
+        },
+        "scene": 2,
+        "bannerEff": "sp_ui_haiguotuzhi_sgc",
+        "banner": "dy_bm_hhrzBanner_201",
+        "bannerName": "dy_bm_hhrzName_201",
+        "name": 30035916,
+        "desc": 30035889
+      }
+    }
+  ],
+  "data": {
+    "101": {
+      "id": 101,
+      "cost": {
+        "id": 6013,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29133,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 1,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_101",
+      "bannerName": "dy_bm_hhrzName_101",
+      "name": 30035910,
+      "desc": 30035889
+    },
+    "102": {
+      "id": 102,
+      "cost": {
+        "id": 6013,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29223,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 1,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_102",
+      "bannerName": "dy_bm_hhrzName_102",
+      "name": 30035966,
+      "desc": 30035889
+    },
+    "201": {
+      "id": 201,
+      "cost": {
+        "id": 6012,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29143,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 2,
+      "bannerEff": "sp_ui_haiguotuzhi_sgc",
+      "banner": "dy_bm_hhrzBanner_201",
+      "bannerName": "dy_bm_hhrzName_201",
+      "name": 30035916,
+      "desc": 30035889
+    },
+    "301": {
+      "id": 301,
+      "cost": {
+        "id": 6011,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29113,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 3,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_301",
+      "bannerName": "dy_bm_hhrzName_301",
+      "name": 30035901,
+      "desc": 30035889
+    },
+    "302": {
+      "id": 302,
+      "cost": {
+        "id": 6011,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29203,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 3,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_302",
+      "bannerName": "dy_bm_hhrzName_302",
+      "name": 30035936,
+      "desc": 30035889
+    },
+    "401": {
+      "id": 401,
+      "cost": {
+        "id": 6011,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29119,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 4,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_401",
+      "bannerName": "dy_bm_hhrzName_401",
+      "name": 30035902,
+      "desc": 30035889
+    },
+    "402": {
+      "id": 402,
+      "cost": {
+        "id": 6011,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29209,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 4,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_402",
+      "bannerName": "dy_bm_hhrzName_402",
+      "name": 30035918,
+      "desc": 30035889
+    },
+    "501": {
+      "id": 501,
+      "cost": {
+        "id": 6014,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29123,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 5,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_501",
+      "bannerName": "dy_bm_hhrzName_501",
+      "name": 30035905,
+      "desc": 30035889
+    },
+    "502": {
+      "id": 502,
+      "cost": {
+        "id": 6014,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29213,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 5,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_502",
+      "bannerName": "dy_bm_hhrzName_502",
+      "name": 30035955,
+      "desc": 30035889
+    },
+    "601": {
+      "id": 601,
+      "cost": {
+        "id": 6013,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29139,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 6,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_601",
+      "bannerName": "dy_bm_hhrzName_601",
+      "name": 30035911,
+      "desc": 30035889
+    },
+    "602": {
+      "id": 602,
+      "cost": {
+        "id": 6013,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29229,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 6,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_602",
+      "bannerName": "dy_bm_hhrzName_602",
+      "name": 30035967,
+      "desc": 30035889
+    },
+    "701": {
+      "id": 701,
+      "cost": {
+        "id": 6014,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29129,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 7,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_701",
+      "bannerName": "dy_bm_hhrzName_701",
+      "name": 30035906,
+      "desc": 30035889
+    },
+    "702": {
+      "id": 702,
+      "cost": {
+        "id": 6014,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 29219,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 7,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_702",
+      "bannerName": "dy_bm_hhrzName_702",
+      "name": 30035953,
+      "desc": 30035889
+    },
+    "20101": {
+      "id": 20101,
+      "cost": {
+        "id": 6001,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113101,
+            "count": 1
+          },
+          {
+            "id": 23009,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 201,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_20101",
+      "bannerName": "dy_bm_hhrzName_20101",
+      "name": 30035888,
+      "desc": 30035889
+    },
+    "20102": {
+      "id": 20102,
+      "cost": {
+        "id": 6001,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113103,
+            "count": 1
+          },
+          {
+            "id": 29112,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 201,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_20102",
+      "bannerName": "dy_bm_hhrzName_20102",
+      "name": 30035904,
+      "desc": 30035889
+    },
+    "20103": {
+      "id": 20103,
+      "cost": {
+        "id": 6001,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113110,
+            "count": 1
+          },
+          {
+            "id": 29202,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 201,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_20104",
+      "bannerName": "dy_bm_hhrzName_20104",
+      "name": 30035937,
+      "desc": 30035889
+    },
+    "20104": {
+      "id": 20104,
+      "cost": {
+        "id": 6001,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113113,
+            "count": 1
+          },
+          {
+            "id": 29201,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 201,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_20103",
+      "bannerName": "dy_bm_hhrzName_20103",
+      "name": 30035938,
+      "desc": 30035889
+    },
+    "20105": {
+      "id": 20105,
+      "cost": {
+        "id": 6001,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113115,
+            "count": 1
+          },
+          {
+            "id": 11550,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 201,
+      "bannerEff": "sp_ui_haiguotuzhi_sgd",
+      "banner": "dy_bm_hhrzBanner_20105",
+      "bannerName": "dy_bm_hhrzName_20105",
+      "name": 30035942,
+      "desc": 30035889
+    },
+    "30101": {
+      "id": 30101,
+      "cost": {
+        "id": 6004,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113105,
+            "count": 1
+          },
+          {
+            "id": 29122,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 301,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_30101",
+      "bannerName": "dy_bm_hhrzName_30101",
+      "name": 30035907,
+      "desc": 30035889
+    },
+    "30102": {
+      "id": 30102,
+      "cost": {
+        "id": 6004,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113104,
+            "count": 1
+          },
+          {
+            "id": 29121,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 301,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_30102",
+      "bannerName": "dy_bm_hhrzName_30102",
+      "name": 30035908,
+      "desc": 30035889
+    },
+    "30103": {
+      "id": 30103,
+      "cost": {
+        "id": 6004,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 112921,
+            "count": 1
+          },
+          {
+            "id": 29212,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 301,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_30103",
+      "bannerName": "dy_bm_hhrzName_30103",
+      "name": 30035954,
+      "desc": 30035889
+    },
+    "30104": {
+      "id": 30104,
+      "cost": {
+        "id": 6004,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113116,
+            "count": 1
+          },
+          {
+            "id": 29211,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 301,
+      "bannerEff": "sp_ui_haiguotuzhi_sga",
+      "banner": "dy_bm_hhrzBanner_30104",
+      "bannerName": "dy_bm_hhrzName_30104",
+      "name": 30035956,
+      "desc": 30035889
+    },
+    "40101": {
+      "id": 40101,
+      "cost": {
+        "id": 6003,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113106,
+            "count": 1
+          },
+          {
+            "id": 29132,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 401,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_40101",
+      "bannerName": "dy_bm_hhrzName_40101",
+      "name": 30035912,
+      "desc": 30035889
+    },
+    "40102": {
+      "id": 40102,
+      "cost": {
+        "id": 6003,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113107,
+            "count": 1
+          },
+          {
+            "id": 29131,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 401,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_40102",
+      "bannerName": "dy_bm_hhrzName_40102",
+      "name": 30035913,
+      "desc": 30035889
+    },
+    "40103": {
+      "id": 40103,
+      "cost": {
+        "id": 6003,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 112922,
+            "count": 1
+          },
+          {
+            "id": 29222,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 401,
+      "bannerEff": "sp_ui_haiguotuzhi_sgb",
+      "banner": "dy_bm_hhrzBanner_40103",
+      "bannerName": "dy_bm_hhrzName_40103",
+      "name": 30035968,
+      "desc": 30035889
+    },
+    "50101": {
+      "id": 50101,
+      "cost": {
+        "id": 6002,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113108,
+            "count": 1
+          },
+          {
+            "id": 29142,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 501,
+      "bannerEff": "sp_ui_haiguotuzhi_sgc",
+      "banner": "dy_bm_hhrzBanner_50101",
+      "bannerName": "dy_bm_hhrzName_50101",
+      "name": 30035914,
+      "desc": 30035889
+    },
+    "50102": {
+      "id": 50102,
+      "cost": {
+        "id": 6002,
+        "count": 1
+      },
+      "rewards": {
+        "5": [
+          {
+            "id": 65,
+            "count": 20
+          }
+        ],
+        "10": [
+          {
+            "id": 5514,
+            "count": 30
+          }
+        ],
+        "15": [
+          {
+            "id": 65,
+            "count": 40
+          }
+        ],
+        "20": [
+          {
+            "id": 5535,
+            "count": 50
+          }
+        ],
+        "25": [
+          {
+            "id": 113109,
+            "count": 1
+          },
+          {
+            "id": 29141,
+            "count": 1
+          }
+        ]
+      },
+      "scene": 501,
+      "bannerEff": "sp_ui_haiguotuzhi_sgc",
+      "banner": "dy_bm_hhrzBanner_50102",
+      "bannerName": "dy_bm_hhrzName_50102",
+      "name": 30035915,
+      "desc": 30035889
+    }
+  }
+}

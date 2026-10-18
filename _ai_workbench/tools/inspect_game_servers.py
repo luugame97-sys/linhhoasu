@@ -1,0 +1,7 @@
+import getpass,json,paramiko
+ssh=paramiko.SSHClient();ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy());ssh.connect('103.116.105.154',username='root',password=getpass.getpass('VPS password (not logged): '),look_for_keys=False,allow_agent=False,timeout=15)
+try:
+ s=ssh.open_sftp(); local='/linhhoasu/_ai_workbench/temp/inspect_game_servers.js'; src=r'''const mongo=require('/linhhoasu/lhs/newServer/src/db/mongo'); const GameServer=require('/linhhoasu/lhs/newServer/src/db/models/GameServer'); const Account=require('/linhhoasu/lhs/newServer/src/db/models/Account'); const Player=require('/linhhoasu/lhs/newServer/src/db/models/Player'); (async()=>{await mongo.connect(); const rows=await GameServer.find({}).sort({pageId:1,serverId:1}).lean(); const roleCounts=await Account.aggregate([{$unwind:'$roles'},{$group:{_id:'$roles.serverId',roles:{$sum:1},accounts:{$addToSet:'$accountId'}}},{$project:{roles:1,accounts:{$size:'$accounts'}}},{$sort:{_id:1}}]); const playerCounts=await Player.aggregate([{$group:{_id:'$serverId',players:{$sum:1}}},{$sort:{_id:1}}]); console.log(JSON.stringify({servers:rows,roleCounts,playerCounts},null,2));})().finally(()=>mongo.disconnect());''';
+ with s.open(local,'w') as f:f.write(src)
+ s.close(); cmd="export MONGO_URI=\"$(pm2 env 0 | awk -F': ' '$1==\"MONGO_URI\"{print substr($0,index($0,\": \")+2);exit}')\"; node "+local; _,o,e=ssh.exec_command(cmd); print(o.read().decode('utf-8','replace')); print(e.read().decode('utf-8','replace'))
+finally:ssh.close()

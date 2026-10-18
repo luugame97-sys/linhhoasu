@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linh Họa Sư — Đã sửa ngoại quan và khôi phục người chơi</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-s-a-ngo-i-quan-v-kh-i-ph-c-quy-n-s-h-u">Session Report — sửa ngoại quan và khôi phục quyền sở hữu</h1>
+<p>Ngày 05/09/2026, UTC+7. <strong>Đã triển khai S1/S2 và khôi phục 56 quyền sở hữu cho 48 nhân vật S1.</strong> Không gửi thêm vật phẩm, không trừ/hoàn Xu, không phát bù người đã sở hữu. Đây là kết quả cho các lỗi đã xác nhận trong audit ngoại quan, không phải tuyên bố toàn bộ thanh toán/model của game đã hoàn hảo.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Lấy lại baseline production lúc 21:08 trước khi sửa, giữ riêng candidate và backup. Source local khác production ở nhiều file nên không chép cả cây lên VPS.</li>
+<li>Sửa cash callback để dùng cùng khóa thao tác theo nhân vật với gameplay/login/close; đợi các lần lưu đang chạy, đã xếp hàng và lưu trì hoãn trước khi đọc state. Dùng state live làm nguồn cho tiến trình chưa flush, không ghi trả snapshot DB cũ khi retry.</li>
+<li>Đồng bộ đủ ngoại quan, collection native và entitlement sau khi save xác nhận thành công; nếu kết quả save không chắc chắn thì vô hiệu hóa snapshot phiên để bắt buộc tải lại, ngăn close save ghi đè receipt.</li>
+<li>Giữ snapshot của kết nối đang đóng cho tới khi final save xong; cash commit hoặc invalidate vẫn tác động được đúng phiên. Chọn phiên mới nhất khi có kết nối cũ trùng.</li>
+<li>Chặn dùng Fashion body không có use config trước khi tiêu item. 1.914 case body-in-bag đều giữ nguyên item và trả lỗi rõ.</li>
+<li>Bổ sung quy đổi <code>FashionConfig.swaps</code> vào grant dùng chung. 631 ID nhận trùng từng thiếu quà nay khớp mail; không cộng lần hai ngoài config, giữ gia hạn danh hiệu có thời hạn.</li>
+<li>Khôi phục dữ liệu đủ căn cứ bằng chuyển 1:1 body trong túi → quyền sở hữu thiếu: 31 Đồ Long Đao29001 và25 danh hiệu11274. Không gửi mail chứa thêm item và không cộng tiền bù tùy ý.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh-ng-b-local-v-production">Source chính đã đồng bộ local và production</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>Thay đổi</th>
+</tr></thead><tbody>
+<tr>
+<td><code>src/services/PlayerMutationService.js</code> — mới</td>
+<td>Queue theo userId, hỗ trợ gọi lồng cùng thao tác; không mở khóa khi công việc async chưa kết thúc</td>
+</tr>
+<tr>
+<td><code>src/services/PlayerService.js</code></td>
+<td>Drain pending/deferred writes; deadline không cho writer tiếp theo chạy trước khi thao tác DB cũ kết thúc</td>
+</tr>
+<tr>
+<td><code>src/net/WSServer.js</code></td>
+<td>Khóa toàn lượt xử lý gameplay, final close save; lấy phiên mới nhất, giữ closing snapshot và invalidate an toàn</td>
+</tr>
+<tr>
+<td><code>src/handlers/account.js</code></td>
+<td>Khóa giai đoạn load/migrate/login và đợi pending saves; giữ nguyên điều kiện S2 và auth</td>
+</tr>
+<tr>
+<td><code>src/services/RewardGrantService.js</code></td>
+<td>Cấp thưởng quy đổi Fashion trùng qua pipeline thật và đầy đủ reward delta</td>
+</tr>
+<tr>
+<td><code>src/handlers/item.js</code></td>
+<td>Reject Fashion body thiếu flow dùng hợp lệ trước consume</td>
+</tr>
+<tr>
+<td><code>src/handlers/recharge.js</code></td>
+<td>Cùng khóa với gameplay, lấy live state đúng, sync sau commit, retry không ghi đè tiến trình/spend mới, bảo vệ save chưa rõ kết quả</td>
+</tr>
+</tbody></table></div>
+<p>Local: <code>I:\Linhhoasu\server\server\linhhoasu\lhs\newServer\</code>. Production: <code>/linhhoasu/lhs/newServer/</code>. Bảy file có hash khớp candidate sau triển khai và sau QA. Không sửa config/client/WebGM, không restart dist/admin/DB/Nginx hay bot worker.</p>
+<h3 id="tool-candidate-v-evidence">Tool, candidate và evidence</h3>
+<ul>
+<li>Candidate: <code>_ai_workbench/temp/fashion_fix_20260905/</code>.</li>
+<li>Snapshot baseline bất biến: <code>_ai_workbench/temp/fashion_channels_20260905T140803Z/</code>.</li>
+<li>Test: <code>test_fashion_writer_20260905.js</code>, <code>test_fashion_repair_20260905.js</code>, <code>run_fashion_fix_tests_20260905.js</code>; tái sử dụng audit từng kênh và các regression reward/native/appearance.</li>
+<li>Staging/deploy: <code>stage_fashion_fix_20260905.py</code>, <code>deploy_fashion_fix_20260905.py</code>.</li>
+<li>Repair: <code>repair_fashion_ownership_20260905.js</code>, <code>resume_fashion_repair_20260905.py</code>, tool kiểm conflict/state. <code>FashionInventoryRepairService.js</code> chỉ có trong candidate/staging để phục vụ repair; <strong>không thêm service repair vào runtime game</strong>.</li>
+<li>Live QA: <code>final_fashion_verification_20260905.py</code>, <code>qa_cash_fashion_live_20260905.py</code>, <code>audit_fashion_release_health_20260905.py</code>.</li>
+<li>Local sync: <code>build_fashion_local_patch_20260905.py</code>; chỉ tạo/apply diff bảy file sau khi baseline local khớp, không chép đè thay đổi khác.</li>
+<li>Evidence chính: <code>stage.json</code>, <code>verification.json</code>, <code>fixture.json</code>, <code>deploy_20260905_142733.json</code>, <code>repair_resume_20260905_143005.json</code>, <code>repair_failure_audit.json</code>, <code>repair_conflict_reason.json</code>, <code>final_verification.json</code>, <code>cash_live_verification.json</code>, <code>health_final.json</code> trong candidate root.</li>
+<li>Log: <code>_ai_workbench/logs/fashion_fix_*</code>, <code>fashion_cash_live_s1001_20260905.log</code>, <code>fashion_cash_live_s1002_20260905.log</code>.</li>
+<li>Báo cáo MD/HTML này và session_report.md/.html đã cập nhật. Không tạo tool tạm ở root.</li>
+</ul>
+<h3 id="backup-v-kh-n-ng-ph-c-h-i">Backup và khả năng phục hồi</h3>
+<ul>
+<li>Source production trước sửa: <code>/linhhoasu/_ai_workbench/backups/fashion_fix_20260905_142733/source/</code>.</li>
+<li>Preimage/after image đợt đầu: <code>/linhhoasu/_ai_workbench/backups/fashion_fix_20260905_142733/players/</code>.</li>
+<li>Preimage/after image đợt tiếp: <code>/linhhoasu/_ai_workbench/backups/fashion_repair_resume_20260905_143005/</code>.</li>
+<li>Tổng49 preimage và48 postimage EJSON: có một preimage của bản ghi bị CAS từ chối, sau đó có preimage mới ở đợt tiếp. Hash từng file trong <code>health_final.json</code>. Ghi/fsync preimage trước mỗi update.</li>
+<li>Backup source local: <code>_ai_workbench/backups/fashion_fix_local_20260905/</code>; backup report: <code>_ai_workbench/backups/fashion_fix_reports_20260905/</code>.</li>
+<li>Không rollback DB mù. Nếu cần khôi phục phải so state mới và chỉ phục hồi field/nhân vật đúng phạm vi; không ghi đè tiến trình sau sửa.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi / dấu hiệu</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Nạp có DB ownership nhưng live thiếu</td>
+<td>Sync mặc định chỉ bốn trường, callback ở ngoài queue gameplay</td>
+<td>Khóa chung theo player, đủ field, live state, drain pending saves</td>
+<td>Test DB/RAM/equip ngay/close/relog, không chỉ result success</td>
+</tr>
+<tr>
+<td>Retry làm lùi tiến trình hoặc hoàn ngược khoản tiêu</td>
+<td>Copy snapshot DB cũ lên RAM chưa flush</td>
+<td>Retry dùng state live hiện tại; không resync khi receipt đã có ở live</td>
+<td>Inject lỗi mail/transaction rồi spend/claim trước retry</td>
+</tr>
+<tr>
+<td>Snapshot đóng socket xóa quà vừa nạp</td>
+<td>Client bị xóa khỏi registry trước final save</td>
+<td>Giữ closing snapshot đến hết final save; invalidate cả closing session</td>
+<td>Test cash/close và save ambiguous</td>
+</tr>
+<tr>
+<td>Writer timeout mở đường cho snapshot tiếp theo</td>
+<td>Promise.race hết giờ nhưng DB write vẫn chạy nền</td>
+<td>Đợi thao tác gốc settle rồi mới trả lỗi/retry, không bỏ thứ tự</td>
+<td>Không dùng timeout để mở khóa dữ liệu đang mutate</td>
+</tr>
+<tr>
+<td>Fashion trong túi bị dùng mất</td>
+<td>Thiếu guard khi useCfg=null</td>
+<td>Trả FASHION_REQUIRES_OWNERSHIP_REPAIR trước consume</td>
+<td>1.914 Fashion body regression; hộp bộ đồ vẫn có flow riêng</td>
+</tr>
+<tr>
+<td>Nhận trùng code không có quà quy đổi</td>
+<td>Generic grant bỏ qua swaps</td>
+<td>Quy đổi qua normal grant; item delta/sync thật</td>
+<td>631 ID duplicate cross-channel regression</td>
+</tr>
+<tr>
+<td>Repair dừng ở bản ghi thứ3</td>
+<td>Mongo embedded-object equality phụ thuộc thứ tự key; JS đổi thứ tự numeric bag keys dù nội dung giống hệt</td>
+<td>Chẩn đoán read-only xác nhận canonical state không đổi; dùng <code>$objectToArray</code> + <code>$setEquals</code> so đủ key/value</td>
+<td>Không nới thành chỉ check số item; vẫn CAS toàn bag và fashion/ledger</td>
+</tr>
+<tr>
+<td>Syntax account sau thêm khóa</td>
+<td>Đóng callback nhầm ở buildLoginBatch thay vì handleLogin</td>
+<td>Sửa đúng ranh giới, node --check trước stage</td>
+<td>Kiểm function boundary, không chỉ tìm return cuối file</td>
+</tr>
+<tr>
+<td>Writer test fail khi chạy runner</td>
+<td>Preload cũ stub savePlayer khiến test không còn dùng persistence service thật</td>
+<td>Writer/channels tự cách ly, không nạp preload stub</td>
+<td>Test concurrency phải dùng queue/save thật với DB giả</td>
+</tr>
+<tr>
+<td>Native test thiếu acorn/top-combat thiếu client fixture</td>
+<td>Candidate source-only chưa có fixture dependency</td>
+<td>Pin acorn local, thêm index/main bản local làm test fixture</td>
+<td>Không coi thiếu fixture là regression game</td>
+</tr>
+<tr>
+<td>Repair fixture đầu không tìm thấy config</td>
+<td>Chỉ LHS_CONFIG_PATH được set, module đọc CONFIG_BIN_PATH</td>
+<td>Test riêng pin rõ config trước require</td>
+<td>Ghi config/source hash vào evidence</td>
+</tr>
+</tbody></table></div>
+<p>Không có lỗi encoding mới trong source/báo cáo. Các thay đổi source giữ comment tiếng Anh/Trung theo style hiện có; báo cáo tiếng Việt UTF-8.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Khóa cash callback riêng không ngăn gameplay/close/autosave. Phải cùng ranh giới thao tác và xử lý cả snapshot đã được chụp trước đó.</li>
+<li>AsyncLocalStorage cho phép save/helper gọi lồng không tự deadlock; token hết hạn khi thao tác hoàn tất để callback trì hoãn không tưởng mình còn giữ khóa.</li>
+<li>Receipt tồn tại trên DB mà thiếu ở live là trạng thái nghi vấn: bắt tải lại, không grant tiếp hoặc copy mù.</li>
+<li>So embedded Mongo document bằng object literal không thích hợp với bag có numeric key order; CAS phải so nội dung đầy đủ độc lập thứ tự.</li>
+<li>Conversion item lỗi sang ownership là khôi phục giá trị đã có, không phải phát thêm quà. Người đã sở hữu hoặc thiếu receipt phải tách riêng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="kh-i-ph-c-ng-i-ch-i">Khôi phục người chơi</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Server</th>
+<th>Nhân vật khôi phục</th>
+<th>Quyền sở hữu phục hồi</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>S1</td>
+<td>48</td>
+<td>56 =31 item29001 +25 item11274</td>
+<td>Đã commit, đọc lại và hậu kiểm sau restart đúng</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>0</td>
+<td>0</td>
+<td>Không có trường hợp đủ điều kiện cần sửa</td>
+</tr>
+</tbody></table></div>
+<p>Đợt đầu commit2 người/4 quyền rồi CAS dừng; server đã khởi động lại ngay. Sau xác định nguyên nhân, đợt tiếp xử lý46 người/52 quyền, không lặp2 người trước. Dry-run lần nữa còn0 người đủ điều kiện ở cả hai server.</p>
+<p><strong>Còn9 bản sao body item ở9 nhân vật đã sở hữu; unowned=0.</strong> Không tự đổi chín bản sao này thành tiền vì cần biết liệu trước đây đã bù/đổi quà hay chưa. Giữ nguyên trong túi và không cho tiêu mất qua use. Ba trường hợp thú cưỡi đã mở hình nhưng thiếu native của audit trước cũng không phát lại khi chưa loại trừ khả năng đã dung luyện.</p>
+<p>Không tự bù lịch sử duplicate của631 ID nếu không có receipt chứng minh số lần nhận/số quà thiếu. Luồng nhận mới đã sửa; sửa lịch sử không dùng catalog exposure làm chứng cứ giao dịch thật.</p>
+<h3 id="ki-m-th-v-live-acceptance">Kiểm thử và live acceptance</h3>
+<ul>
+<li>Fixture cấp thưởng:8.756 ca,0 lỗi ownership;56 bộ đồ,0 lỗi;15 ca gói nạp,0 mismatch cash/live;631 duplicate mismatch về0;1.914 Fashion body consume không hợp lệ về0.</li>
+<li>Writer:18 ca PASS với PlayerService/PlayerMutationService/WSServer wrapper thật, DB giả. Gồm cash↔gameplay, snapshot đã capture, deferred, retry sau spend, commit chưa rõ, socket closing, latest session và timeout không giải phóng writer sớm.</li>
+<li>Repair fixture10 checks PASS: chuyển1:1, giữ số dư bản sao, bảo toàn field khác, chống lặp, thiếu bằng chứng thì giữ, CAS preview đổi thì từ chối.</li>
+<li>Regression cash11/token11, recovery, Activity7 58, cash concurrency8, ngoại quan2.192 ID/234 assertions, native470 ID/940 grant/474 rương/150 đan/4 receiver, gem480, fixed emoji32: PASS. Core714 và top-combat PASS.</li>
+<li>Staging VPS: writer18, repair10 và audit đầy đủ đạt trước promotion.</li>
+<li>Live S1/S2:45 checks mỗi server qua WS cho mua vé1230→giftcode→mail→title thời hạn/native→dùng/mặc suit→relog. Cleanup player/code/mail=0.</li>
+<li>Live cash S1/S2:48 checks mỗi server, gọi <strong>internal callback được ký chỉ cho nhân vật QA riêng</strong>, mặc29001 ngay trong session hiện tại, retry cùng order không grant lặp, gameplay/relog giữ ownership. Cleanup transaction/player/code/mail=0. Không gọi nhà cung cấp thanh toán hoặc dùng tiền thật; upstream payment=false.</li>
+<li>Hash source local/production/candidate7/7 khớp. Ready8080/8083 trả200. Dist/admin/bot workers giữ PID và restart counter trước triển khai.</li>
+<li>Snapshot health đầu sau QA có real bots541 S1 và560 S2 đang reconnect. <strong>Hậu kiểm cuối21:40 UTC+7: real/virtual580/580 mỗi server</strong>, ready200, quái2.466 slot/server, ×2, invalid0; hash7/7 vẫn khớp.</li>
+</ul>
+<h3 id="gi-i-h-n-c-n-gi-r">Giới hạn cần giữ rõ</h3>
+<ul>
+<li>Chưa nghiệm thu hình ảnh/model/animation trên native client; người dùng giữ phần kiểm game theo chỉ đạo trước. WS/VM receiver không thay native visual.</li>
+<li>Queue theo player áp dụng cho hai game process hiện chạy fork1/server, đã inventory. Không gọi đây là giải pháp nhiều writer/multi-process trên cùng database hoặc bao phủ mọi admin mutation ngoài phạm vi cash/gameplay.</li>
+<li>Không đổi giá gói, phương án Xu Web, nguồn pool còn thiếu hoặc mở105 item đang fail-closed. Các rủi ro order binding/custom product/distribution recovery ngoài checkpoint ngoại quan chưa được tuyên bố hoàn tất.</li>
+<li>Player writer sẽ chờ DB settle nếu quá deadline; ưu tiên không ghi chồng. Nếu DB thực sự treo, cần vận hành kiểm kết nối thay vì mở khóa để chạy snapshot mới chồng lên.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người chơi đăng nhập lại để nhận state đã khôi phục; kiểm Đồ Long Đao29001 và danh hiệu11274 trong mục ngoại quan, không cần tìm mail bù.</li>
+<li>Test UI một gói11000003, một code/web mail có ngoại quan, hộp29040 và nhận trùng11274. Báo server/nhân vật/ID/thời điểm/ảnh nếu còn lỗi, không gửi mật khẩu hoặc code dùng được.</li>
+<li>Nếu muốn xử lý chín bản sao dư và lịch sử duplicate, phải đối soát ledger/backup bù cũ trước; chỉ commit phần thực thiếu, không phát lại toàn bộ.</li>
+<li>Các105 item thiếu pool và ba thú cưỡi native cần dữ liệu/receipt riêng, không trộn vào bản fix này.</li>
+<li>Package source-only kèm manifest/hash/test/report nằm trong workbench; không chứa credential, env hoặc player preimage. Không dùng script deploy/repair cũ chạy lại tự động.</li>
+</ol></main></body></html>

@@ -1,0 +1,476 @@
+{
+  "_table": "BidKingArchitectureConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,checkValue,moneyConsume,totalQuantity,expectedValue,includeMaps,extraConsume,valueText",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "checkValue": 100000,
+        "moneyConsume": 2000,
+        "totalQuantity": [
+          {
+            "id": 25,
+            "weight": 800
+          },
+          {
+            "id": 26,
+            "weight": 900
+          },
+          {
+            "id": 27,
+            "weight": 1100
+          },
+          {
+            "id": 28,
+            "weight": 1600
+          },
+          {
+            "id": 29,
+            "weight": 1200
+          },
+          {
+            "id": 30,
+            "weight": 1200
+          },
+          {
+            "id": 31,
+            "weight": 800
+          },
+          {
+            "id": 32,
+            "weight": 800
+          },
+          {
+            "id": 33,
+            "weight": 800
+          },
+          {
+            "id": 34,
+            "weight": 500
+          },
+          {
+            "id": 35,
+            "weight": 300
+          }
+        ],
+        "expectedValue": 3500,
+        "includeMaps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "extraConsume": {
+          "id": 340,
+          "count": 1
+        },
+        "valueText": 30140163
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "checkValue": 500000,
+        "moneyConsume": 10000,
+        "totalQuantity": [
+          {
+            "id": 30,
+            "weight": 800
+          },
+          {
+            "id": 31,
+            "weight": 900
+          },
+          {
+            "id": 32,
+            "weight": 1100
+          },
+          {
+            "id": 33,
+            "weight": 1600
+          },
+          {
+            "id": 34,
+            "weight": 1200
+          },
+          {
+            "id": 35,
+            "weight": 1200
+          },
+          {
+            "id": 36,
+            "weight": 800
+          },
+          {
+            "id": 37,
+            "weight": 800
+          },
+          {
+            "id": 38,
+            "weight": 800
+          },
+          {
+            "id": 39,
+            "weight": 500
+          },
+          {
+            "id": 40,
+            "weight": 300
+          }
+        ],
+        "expectedValue": 12000,
+        "includeMaps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "extraConsume": {
+          "id": 341,
+          "count": 1
+        },
+        "valueText": 30140164
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "checkValue": 2000000,
+        "moneyConsume": 25000,
+        "totalQuantity": [
+          {
+            "id": 35,
+            "weight": 800
+          },
+          {
+            "id": 36,
+            "weight": 900
+          },
+          {
+            "id": 37,
+            "weight": 1000
+          },
+          {
+            "id": 38,
+            "weight": 1100
+          },
+          {
+            "id": 39,
+            "weight": 1100
+          },
+          {
+            "id": 40,
+            "weight": 1200
+          },
+          {
+            "id": 41,
+            "weight": 800
+          },
+          {
+            "id": 42,
+            "weight": 800
+          },
+          {
+            "id": 43,
+            "weight": 800
+          },
+          {
+            "id": 44,
+            "weight": 500
+          },
+          {
+            "id": 45,
+            "weight": 300
+          },
+          {
+            "id": 47,
+            "weight": 200
+          },
+          {
+            "id": 50,
+            "weight": 150
+          },
+          {
+            "id": 52,
+            "weight": 150
+          },
+          {
+            "id": 55,
+            "weight": 100
+          },
+          {
+            "id": 58,
+            "weight": 100
+          }
+        ],
+        "expectedValue": 24000,
+        "includeMaps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "extraConsume": {
+          "id": 342,
+          "count": 1
+        },
+        "valueText": 30140165
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "checkValue": 100000,
+      "moneyConsume": 2000,
+      "totalQuantity": [
+        {
+          "id": 25,
+          "weight": 800
+        },
+        {
+          "id": 26,
+          "weight": 900
+        },
+        {
+          "id": 27,
+          "weight": 1100
+        },
+        {
+          "id": 28,
+          "weight": 1600
+        },
+        {
+          "id": 29,
+          "weight": 1200
+        },
+        {
+          "id": 30,
+          "weight": 1200
+        },
+        {
+          "id": 31,
+          "weight": 800
+        },
+        {
+          "id": 32,
+          "weight": 800
+        },
+        {
+          "id": 33,
+          "weight": 800
+        },
+        {
+          "id": 34,
+          "weight": 500
+        },
+        {
+          "id": 35,
+          "weight": 300
+        }
+      ],
+      "expectedValue": 3500,
+      "includeMaps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "extraConsume": {
+        "id": 340,
+        "count": 1
+      },
+      "valueText": 30140163
+    },
+    "2": {
+      "id": 2,
+      "checkValue": 500000,
+      "moneyConsume": 10000,
+      "totalQuantity": [
+        {
+          "id": 30,
+          "weight": 800
+        },
+        {
+          "id": 31,
+          "weight": 900
+        },
+        {
+          "id": 32,
+          "weight": 1100
+        },
+        {
+          "id": 33,
+          "weight": 1600
+        },
+        {
+          "id": 34,
+          "weight": 1200
+        },
+        {
+          "id": 35,
+          "weight": 1200
+        },
+        {
+          "id": 36,
+          "weight": 800
+        },
+        {
+          "id": 37,
+          "weight": 800
+        },
+        {
+          "id": 38,
+          "weight": 800
+        },
+        {
+          "id": 39,
+          "weight": 500
+        },
+        {
+          "id": 40,
+          "weight": 300
+        }
+      ],
+      "expectedValue": 12000,
+      "includeMaps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "extraConsume": {
+        "id": 341,
+        "count": 1
+      },
+      "valueText": 30140164
+    },
+    "3": {
+      "id": 3,
+      "checkValue": 2000000,
+      "moneyConsume": 25000,
+      "totalQuantity": [
+        {
+          "id": 35,
+          "weight": 800
+        },
+        {
+          "id": 36,
+          "weight": 900
+        },
+        {
+          "id": 37,
+          "weight": 1000
+        },
+        {
+          "id": 38,
+          "weight": 1100
+        },
+        {
+          "id": 39,
+          "weight": 1100
+        },
+        {
+          "id": 40,
+          "weight": 1200
+        },
+        {
+          "id": 41,
+          "weight": 800
+        },
+        {
+          "id": 42,
+          "weight": 800
+        },
+        {
+          "id": 43,
+          "weight": 800
+        },
+        {
+          "id": 44,
+          "weight": 500
+        },
+        {
+          "id": 45,
+          "weight": 300
+        },
+        {
+          "id": 47,
+          "weight": 200
+        },
+        {
+          "id": 50,
+          "weight": 150
+        },
+        {
+          "id": 52,
+          "weight": 150
+        },
+        {
+          "id": 55,
+          "weight": 100
+        },
+        {
+          "id": 58,
+          "weight": 100
+        }
+      ],
+      "expectedValue": 24000,
+      "includeMaps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "extraConsume": {
+        "id": 342,
+        "count": 1
+      },
+      "valueText": 30140165
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Câu cá: thông báo và Tiền đồng — 07/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-banner-c-u-c-l-p-v-ti-n-ng">Session Report — Banner câu cá lặp và Tiền đồng</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Đã sửa và phát hành lỗi banner “Tiến hành 100 lần câu cá” lặp. Native TaskModel nhận tag1000 trạng thái20 (hoàn thành) và luôn gọi banner, ngay cả khi trạng thái trước đó đã20. FishingEventService gửi đồng bộ sau mỗi lượt câu/heartbeat, vì vậy banner cứ được kích hoạt lại. Không phải mỗi banner là một lần nhận thưởng.</p>
+<p>Bản sửa chỉ áp dụng nhiệm vụ Đại hội câu cá60601–60608/type6006: lấy trạng thái cũ trước khi thay row và chỉ gọi completion tip khi trạng thái trước không phải20. Đồng bộ tiến độ/listener vẫn giữ; vòng mới trở về10 rồi lên20 được báo lại. Không tắt toàn bộ thông báo hoặc tự nhận quà.</p>
+<p>Tiền đồng trong ảnh là item119, không phải tiền câu cá68. Đã xác minh thiếu luồng cấp item119, chưa tự đặt tỷ lệ rơi hoặc thêm tiền.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source chính local và production: <code>linhhoasu/webgame/game/js/main.min_a6195824.js</code> và <code>linhhoasu/webgame/game/index.html</code>. Client token <code>20260907_fishing_notice_v1</code>.</li>
+<li>Snapshot hiện hành: <code>_ai_workbench/temp/fishing_audit_20260906T211352Z/</code> (167 file, server/client config và state câu cá read-only).</li>
+<li>Bản sửa, test và manifest: <code>_ai_workbench/temp/fishing_notice_20260907/</code>.</li>
+<li>Tools inspect/build/test/audit/release/sync trong <code>_ai_workbench/tools/</code>.</li>
+<li>Backup VPS <code>/linhhoasu/_ai_workbench/backups/fishing_notice_20260906_211706/</code>; backup local <code>_ai_workbench/backups/fishing_notice_local_20260907/</code>, báo cáo cũ trong <code>backups/fishing_notice_reports_20260907/</code>.</li>
+<li>Không sửa gameplay server, config RNG, scheduler, wallet/reward/DB hoặc input-freeze đang pause.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Banner nhiệm vụ hoàn thành cứ hiện</td>
+<td>Client coi mọi sync status20 là completion mới</td>
+<td>Kiểm trạng thái trước khi thay row; chỉ báo khi chuyển trạng thái</td>
+<td>Test packet lặp, login snapshot, claim30, vòng mới, mốc kế tiếp</td>
+</tr>
+<tr>
+<td>Tiền đồng119 bằng0, không tìm thấy nguồn</td>
+<td>Chỉ có quảng bá và cửa hàng, không có reward/drop implementation</td>
+<td>Lưu audit item119; giữ pending quyết định tỷ lệ</td>
+<td>Không coi showRewards là bảng rơi thực tế</td>
+</tr>
+<tr>
+<td>Tìm file rơi vào bundle/vendor quá lớn</td>
+<td>Minified/many config rất nhiều match</td>
+<td>Trích native function bằng Acorn, lọc đúng cấu trúc id/count</td>
+<td>Không dump bundle hoặc coi ID trùng của bảng khác là item</td>
+</tr>
+<tr>
+<td>Local index khác hash</td>
+<td>Khác newline, nội dung đã so tương đương</td>
+<td>So normalized content trước sync, giữ backup cả hai</td>
+<td>Không chép đè local chưa kiểm drift</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-ki-m-th-kinh-nghi-m">4. Kiểm thử / kinh nghiệm</h2>
+<p>9 kiểm tra native function thực tế PASS:</p>
+<ul>
+<li>Baseline:20 packet giống nhau hiện20 banner.</li>
+<li>Bản sửa:100 packet giống nhau chỉ một banner.</li>
+<li>Snapshot login đã hoàn thành không bật banner mới.</li>
+<li>Claimed30 im lặng và giữ trạng thái.</li>
+<li>Vòng mới30→10→20 được thông báo trở lại.</li>
+<li>Mốc60602 độc lập với60601.</li>
+<li>Nhiệm vụ ngoài Đại hội không đổi hành vi.</li>
+<li>Tiến độ chưa hoàn thành vẫn cập nhật và dispatch đủ listener.</li>
+<li>Chưa khởi tạo task state vẫn no-op như cũ.</li>
+</ul>
+<p>Acorn parse toàn bundle và Node syntax local/Linux PASS. HTTP main/index hash khớp disk; ready8080/8083 đều200, PM2 giữ nguyên. Không chạy gameplay RPC/nhận thưởng bằng tài khoản người chơi. Chưa tự đo banner native đang mở trên thiết bị thật sau reload; xác minh hành vi bằng function native trích nguyên bundle và lưu đầu ra.</p>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>Phát hành04:17:44 GMT+7, hậu kiểm04:17:46. Main SHA256 <code>2cc9a3811fd61cc421c3ce240982aae84582593e38d5d8c679a7a2af8c9d6c42</code>; index <code>532c463a4c4dd0643cc682919a86e7119c508066050c6443b808cde42605dfe3</code>. Bản local khớp cả hai. Game không restart, không thu/bù/reset vật phẩm.</p>
+<h3 id="item119-c-n-thi-u">Item119 còn thiếu</h3>
+<ul>
+<li>AssetsConfig119 có icon119/name Tiền đồng; tooltip nói có tỷ lệ nhận <strong>khi bán cá trong sự kiện</strong> và chuyển đổi khi kết thúc.</li>
+<li>25 Activity33 showRewards có119; 32 cost rows của shop dùng119. Ví dụ11012001 tốn1250 để đổi29040.</li>
+<li>Không có actual reward row <code>{id:119,count:...}</code> ngoài showRewards/cost trong714 bảng đã quét.</li>
+<li>FishingGameplayService.sale, FishingEventService, fish và fish-soul đều không tham chiếu119. Mini-game33001 chỉ cấp69/68/94501 theo bảng hiện hữu.</li>
+<li>Thiếu tỷ lệ/số lượng rơi, logic thưởng+25% của thẻ Huyền Vũ và quy tắc quy đổi tồn cuối kỳ; không thể gọi hoạt động hiện tại là nguồn kiếm119 hợp lệ.</li>
+</ul>
+<p>Kết quả này xác nhận phần triển khai còn thiếu, không phải lỗi người chơi chưa biết bấm nhận. Chưa tự thêm drop, bù lịch sử hoặc bán hàng mới. Evidence <code>currency-audit.json</code> trong thư mục candidate.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<p>Người chơi tải lại game một lần để nhận client token mới; chỉ đóng/mở panel không thay bundle đã tải trong bộ nhớ.</p>
+<p>Muốn hoàn thiện119 cần cung cấp bảng gốc hoặc duyệt bảng riêng: phạm vi scene/event, xác suất và số lượng khi bán cá, bonus Huyền Vũ25%, cửa sổ đổi đồ và tài nguyên/tỷ lệ chuyển đổi cuối kỳ. Sau đó test normal/auto, bán batch, replay/save failure/relog và cuối kỳ. Không tự điền các con số chưa có bằng chứng.</p></main></body></html>

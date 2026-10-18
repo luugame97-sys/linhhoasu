@@ -1,0 +1,34 @@
+{
+  "_table": "FishSoulBaseConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "(obj)[divides|qualityMessage|cost|fishingTime]",
+  "_sample": [
+    {
+      "divides": [
+        3000,
+        6500,
+        10000
+      ]
+    },
+    {
+      "qualityMessage": 7
+    },
+    {
+      "cost": 3
+    }
+  ],
+  "data": {
+    "divides": [
+      3000,
+      6500,
+      10000
+    ],
+    "qualityMessage": 7,
+    "cost": 3,
+    "fishingTime": [
+      5,
+      10
+    ]
+  }
+}

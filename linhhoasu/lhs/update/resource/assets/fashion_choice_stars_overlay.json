@@ -1,0 +1,46 @@
+{
+  "AssetsConfig": {
+    "99001": { "id": 99001, "type": 1, "subType": 0, "quality": 7, "name": 99001, "desc": 10099001, "icon": "icon_fashion_2837", "itemWay": [], "ifShow": 1, "ifShowNum": 1, "useType": 101 },
+    "99002": { "id": 99002, "type": 1, "subType": 0, "quality": 7, "name": 99002, "desc": 10099002, "icon": "icon_fashion_2838", "itemWay": [], "ifShow": 1, "ifShowNum": 1, "useType": 101 }
+  },
+  "AssetsUseConfig": {
+    "99001": {
+      "id": 99001,
+      "type": 101,
+      "rewards": [
+        { "id": 28370, "count": 1 },
+        { "id": 28380, "count": 1 },
+        { "id": 837, "count": 50 },
+        { "id": 838, "count": 50 }
+      ],
+      "attrs": [],
+      "conditions": []
+    },
+    "99002": {
+      "id": 99002,
+      "type": 101,
+      "rewards": [
+        { "id": 28060, "count": 1 }, { "id": 28070, "count": 1 },
+        { "id": 28080, "count": 1 }, { "id": 28090, "count": 1 },
+        { "id": 28100, "count": 1 }, { "id": 28110, "count": 1 },
+        { "id": 28120, "count": 1 }, { "id": 28130, "count": 1 },
+        { "id": 28200, "count": 1 }, { "id": 28210, "count": 1 },
+        { "id": 28220, "count": 1 }, { "id": 28230, "count": 1 },
+        { "id": 28250, "count": 1 }, { "id": 28260, "count": 1 },
+        { "id": 28270, "count": 1 }, { "id": 28280, "count": 1 },
+        { "id": 28350, "count": 1 }, { "id": 28360, "count": 1 },
+        { "id": 806, "count": 50 }, { "id": 807, "count": 50 },
+        { "id": 808, "count": 50 }, { "id": 809, "count": 50 },
+        { "id": 810, "count": 50 }, { "id": 811, "count": 50 },
+        { "id": 812, "count": 50 }, { "id": 813, "count": 50 },
+        { "id": 820, "count": 50 }, { "id": 821, "count": 50 },
+        { "id": 822, "count": 50 }, { "id": 823, "count": 50 },
+        { "id": 825, "count": 50 }, { "id": 826, "count": 50 },
+        { "id": 827, "count": 50 }, { "id": 828, "count": 50 },
+        { "id": 835, "count": 50 }, { "id": 836, "count": 50 }
+      ],
+      "attrs": [],
+      "conditions": []
+    }
+  }
+}

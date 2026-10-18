@@ -1,0 +1,727 @@
+{
+  "_table": "Activity51Config",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "activityId,payId,advancedPayId,buyExp,redressTimes,quickUnlockTimes,show_1,show_2,material,buyLevel,skin",
+  "_sample": [
+    {
+      "51001": {
+        "activityId": 51001,
+        "payId": 11022001,
+        "advancedPayId": 11022002,
+        "buyExp": {
+          "id": 1,
+          "count": 10
+        },
+        "redressTimes": 3,
+        "quickUnlockTimes": 1,
+        "show_1": [
+          {
+            "id": 180801,
+            "count": 65
+          },
+          {
+            "id": 1,
+            "count": 1680
+          },
+          {
+            "id": 405,
+            "count": 1
+          },
+          {
+            "id": 401,
+            "count": 52
+          },
+          {
+            "id": 402,
+            "count": 52
+          },
+          {
+            "id": 403,
+            "count": 74
+          },
+          {
+            "id": 407,
+            "count": 6
+          }
+        ],
+        "show_2": [
+          {
+            "id": 181101,
+            "count": 65
+          },
+          {
+            "id": 1,
+            "count": 6480
+          },
+          {
+            "id": 405,
+            "count": 6
+          },
+          {
+            "id": 401,
+            "count": 144
+          },
+          {
+            "id": 402,
+            "count": 144
+          },
+          {
+            "id": 403,
+            "count": 108
+          },
+          {
+            "id": 404,
+            "count": 36
+          }
+        ],
+        "material": [
+          401,
+          402,
+          403,
+          404
+        ],
+        "buyLevel": 30,
+        "skin": 1
+      }
+    },
+    {
+      "51002": {
+        "activityId": 51002,
+        "payId": 11022011,
+        "advancedPayId": 11022012,
+        "buyExp": {
+          "id": 1,
+          "count": 10
+        },
+        "redressTimes": 3,
+        "quickUnlockTimes": 1,
+        "show_1": [
+          {
+            "id": 180803,
+            "count": 65
+          },
+          {
+            "id": 1,
+            "count": 1680
+          },
+          {
+            "id": 431,
+            "count": 1
+          },
+          {
+            "id": 427,
+            "count": 52
+          },
+          {
+            "id": 428,
+            "count": 52
+          },
+          {
+            "id": 429,
+            "count": 74
+          },
+          {
+            "id": 430,
+            "count": 6
+          }
+        ],
+        "show_2": [
+          {
+            "id": 181103,
+            "count": 65
+          },
+          {
+            "id": 1,
+            "count": 6480
+          },
+          {
+            "id": 431,
+            "count": 6
+          },
+          {
+            "id": 427,
+            "count": 144
+          },
+          {
+            "id": 428,
+            "count": 144
+          },
+          {
+            "id": 429,
+            "count": 108
+          },
+          {
+            "id": 430,
+            "count": 36
+          }
+        ],
+        "material": [
+          427,
+          428,
+          429,
+          430
+        ],
+        "buyLevel": 30,
+        "skin": 2
+      }
+    },
+    {
+      "51003": {
+        "activityId": 51003,
+        "payId": 11022021,
+        "advancedPayId": 11022022,
+        "buyExp": {
+          "id": 1,
+          "count": 10
+        },
+        "redressTimes": 3,
+        "quickUnlockTimes": 1,
+        "show_1": [
+          {
+            "id": 180804,
+            "count": 65
+          },
+          {
+            "id": 1,
+            "count": 1680
+          },
+          {
+            "id": 443,
+            "count": 1
+          },
+          {
+            "id": 439,
+            "count": 52
+          },
+          {
+            "id": 440,
+            "count": 52
+          },
+          {
+            "id": 441,
+            "count": 74
+          },
+          {
+            "id": 442,
+            "count": 6
+          }
+        ],
+        "show_2": [
+          {
+            "id": 181104,
+            "count": 65
+          },
+          {
+            "id": 1,
+            "count": 6480
+          },
+          {
+            "id": 443,
+            "count": 6
+          },
+          {
+            "id": 439,
+            "count": 144
+          },
+          {
+            "id": 440,
+            "count": 144
+          },
+          {
+            "id": 441,
+            "count": 108
+          },
+          {
+            "id": 442,
+            "count": 36
+          }
+        ],
+        "material": [
+          439,
+          440,
+          441,
+          442
+        ],
+        "buyLevel": 30,
+        "skin": 3
+      }
+    }
+  ],
+  "data": {
+    "51001": {
+      "activityId": 51001,
+      "payId": 11022001,
+      "advancedPayId": 11022002,
+      "buyExp": {
+        "id": 1,
+        "count": 10
+      },
+      "redressTimes": 3,
+      "quickUnlockTimes": 1,
+      "show_1": [
+        {
+          "id": 180801,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 405,
+          "count": 1
+        },
+        {
+          "id": 401,
+          "count": 52
+        },
+        {
+          "id": 402,
+          "count": 52
+        },
+        {
+          "id": 403,
+          "count": 74
+        },
+        {
+          "id": 407,
+          "count": 6
+        }
+      ],
+      "show_2": [
+        {
+          "id": 181101,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 405,
+          "count": 6
+        },
+        {
+          "id": 401,
+          "count": 144
+        },
+        {
+          "id": 402,
+          "count": 144
+        },
+        {
+          "id": 403,
+          "count": 108
+        },
+        {
+          "id": 404,
+          "count": 36
+        }
+      ],
+      "material": [
+        401,
+        402,
+        403,
+        404
+      ],
+      "buyLevel": 30,
+      "skin": 1
+    },
+    "51002": {
+      "activityId": 51002,
+      "payId": 11022011,
+      "advancedPayId": 11022012,
+      "buyExp": {
+        "id": 1,
+        "count": 10
+      },
+      "redressTimes": 3,
+      "quickUnlockTimes": 1,
+      "show_1": [
+        {
+          "id": 180803,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 431,
+          "count": 1
+        },
+        {
+          "id": 427,
+          "count": 52
+        },
+        {
+          "id": 428,
+          "count": 52
+        },
+        {
+          "id": 429,
+          "count": 74
+        },
+        {
+          "id": 430,
+          "count": 6
+        }
+      ],
+      "show_2": [
+        {
+          "id": 181103,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 431,
+          "count": 6
+        },
+        {
+          "id": 427,
+          "count": 144
+        },
+        {
+          "id": 428,
+          "count": 144
+        },
+        {
+          "id": 429,
+          "count": 108
+        },
+        {
+          "id": 430,
+          "count": 36
+        }
+      ],
+      "material": [
+        427,
+        428,
+        429,
+        430
+      ],
+      "buyLevel": 30,
+      "skin": 2
+    },
+    "51003": {
+      "activityId": 51003,
+      "payId": 11022021,
+      "advancedPayId": 11022022,
+      "buyExp": {
+        "id": 1,
+        "count": 10
+      },
+      "redressTimes": 3,
+      "quickUnlockTimes": 1,
+      "show_1": [
+        {
+          "id": 180804,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 443,
+          "count": 1
+        },
+        {
+          "id": 439,
+          "count": 52
+        },
+        {
+          "id": 440,
+          "count": 52
+        },
+        {
+          "id": 441,
+          "count": 74
+        },
+        {
+          "id": 442,
+          "count": 6
+        }
+      ],
+      "show_2": [
+        {
+          "id": 181104,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 443,
+          "count": 6
+        },
+        {
+          "id": 439,
+          "count": 144
+        },
+        {
+          "id": 440,
+          "count": 144
+        },
+        {
+          "id": 441,
+          "count": 108
+        },
+        {
+          "id": 442,
+          "count": 36
+        }
+      ],
+      "material": [
+        439,
+        440,
+        441,
+        442
+      ],
+      "buyLevel": 30,
+      "skin": 3
+    },
+    "51052": {
+      "activityId": 51052,
+      "payId": 11022011,
+      "advancedPayId": 11022012,
+      "buyExp": {
+        "id": 1,
+        "count": 10
+      },
+      "redressTimes": 3,
+      "quickUnlockTimes": 1,
+      "show_1": [
+        {
+          "id": 180803,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 431,
+          "count": 1
+        },
+        {
+          "id": 427,
+          "count": 52
+        },
+        {
+          "id": 428,
+          "count": 52
+        },
+        {
+          "id": 429,
+          "count": 74
+        },
+        {
+          "id": 430,
+          "count": 6
+        }
+      ],
+      "show_2": [
+        {
+          "id": 181103,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 431,
+          "count": 6
+        },
+        {
+          "id": 427,
+          "count": 144
+        },
+        {
+          "id": 428,
+          "count": 144
+        },
+        {
+          "id": 429,
+          "count": 108
+        },
+        {
+          "id": 430,
+          "count": 36
+        }
+      ],
+      "material": [
+        427,
+        428,
+        429,
+        430
+      ],
+      "buyLevel": 30,
+      "skin": 2
+    },
+    "51053": {
+      "activityId": 51053,
+      "payId": 11022021,
+      "advancedPayId": 11022022,
+      "buyExp": {
+        "id": 1,
+        "count": 10
+      },
+      "redressTimes": 3,
+      "quickUnlockTimes": 1,
+      "show_1": [
+        {
+          "id": 180804,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 443,
+          "count": 1
+        },
+        {
+          "id": 439,
+          "count": 52
+        },
+        {
+          "id": 440,
+          "count": 52
+        },
+        {
+          "id": 441,
+          "count": 74
+        },
+        {
+          "id": 442,
+          "count": 6
+        }
+      ],
+      "show_2": [
+        {
+          "id": 181104,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 443,
+          "count": 6
+        },
+        {
+          "id": 439,
+          "count": 144
+        },
+        {
+          "id": 440,
+          "count": 144
+        },
+        {
+          "id": 441,
+          "count": 108
+        },
+        {
+          "id": 442,
+          "count": 36
+        }
+      ],
+      "material": [
+        439,
+        440,
+        441,
+        442
+      ],
+      "buyLevel": 30,
+      "skin": 3
+    },
+    "51061": {
+      "activityId": 51061,
+      "payId": 11022001,
+      "advancedPayId": 11022002,
+      "buyExp": {
+        "id": 1,
+        "count": 10
+      },
+      "redressTimes": 3,
+      "quickUnlockTimes": 1,
+      "show_1": [
+        {
+          "id": 180801,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 1680
+        },
+        {
+          "id": 405,
+          "count": 1
+        },
+        {
+          "id": 401,
+          "count": 52
+        },
+        {
+          "id": 402,
+          "count": 52
+        },
+        {
+          "id": 403,
+          "count": 74
+        },
+        {
+          "id": 407,
+          "count": 6
+        }
+      ],
+      "show_2": [
+        {
+          "id": 181101,
+          "count": 65
+        },
+        {
+          "id": 1,
+          "count": 6480
+        },
+        {
+          "id": 405,
+          "count": 6
+        },
+        {
+          "id": 401,
+          "count": 144
+        },
+        {
+          "id": 402,
+          "count": 144
+        },
+        {
+          "id": 403,
+          "count": 108
+        },
+        {
+          "id": 404,
+          "count": 36
+        }
+      ],
+      "material": [
+        401,
+        402,
+        403,
+        404
+      ],
+      "buyLevel": 30,
+      "skin": 1
+    }
+  }
+}

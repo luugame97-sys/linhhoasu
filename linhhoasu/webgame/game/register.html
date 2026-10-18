@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đăng ký tài khoản - LHS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1f2a24;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255, 216, 136, .85), transparent 30%),
+        radial-gradient(circle at 88% 20%, rgba(111, 178, 137, .8), transparent 28%),
+        linear-gradient(135deg, #f7efe1 0%, #e5f0e6 45%, #dce9ef 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .panel {
+      width: min(960px, 100%);
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      overflow: hidden;
+      border: 1px solid rgba(31, 42, 36, .12);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .78);
+      box-shadow: 0 26px 80px rgba(31, 42, 36, .18);
+      backdrop-filter: blur(14px);
+    }
+    .hero {
+      min-height: 560px;
+      padding: 44px;
+      color: #fff;
+      background:
+        linear-gradient(160deg, rgba(23, 60, 48, .92), rgba(30, 91, 81, .82)),
+        url("update/resource/assets/game_start/login_ld_bg_7abdeeb9.jpg") center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hero h1 { margin: 0 0 14px; font-size: 42px; letter-spacing: .06em; }
+    .hero p { margin: 0; line-height: 1.9; opacity: .88; }
+    .badge { width: max-content; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.16); }
+    .form-area { padding: 36px; background: rgba(255, 255, 255, .9); }
+    .tabs { display: flex; gap: 10px; margin-bottom: 24px; }
+    .tab {
+      flex: 1;
+      border: 0;
+      border-radius: 16px;
+      padding: 12px;
+      background: #edf3ee;
+      color: #4b5c51;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .tab.active { background: #174434; color: #fff; }
+    .field { margin-bottom: 16px; }
+    label { display: block; margin-bottom: 7px; font-weight: 700; }
+    input {
+      width: 100%;
+      box-sizing: content-box;
+      border: 1px solid #ccd8d0;
+      border-radius: 14px;
+      padding: 13px 14px;
+      font-size: 15px;
+      outline: none;
+      background: #fbfdfb;
+    }
+    input:focus { border-color: #1d6a4e; box-shadow: 0 0 0 4px rgba(29, 106, 78, .12); }
+    .hint { margin-top: 6px; min-height: 18px; color: #718076; font-size: 12px; }
+    .hint.error { color: #ba3a2f; }
+    .hint.ok { color: #26794d; }
+    .submit {
+      width: 100%;
+      margin-top: 8px;
+      border: 0;
+      border-radius: 16px;
+      padding: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, #174434, #2d7d58);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .submit:disabled { opacity: .55; cursor: not-allowed; }
+    .message { min-height: 22px; margin-top: 14px; font-size: 14px; }
+    .message.error { color: #ba3a2f; }
+    .message.ok { color: #26794d; }
+    .links { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 13px; }
+    .links a { color: #174434; text-decoration: none; font-weight: 700; }
+    @media (max-width: 820px) {
+      .panel { grid-template-columns: 1fr; }
+      .hero { min-height: 260px; padding: 30px; }
+      .hero h1 { font-size: 32px; }
+      .form-area { padding: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <section class="hero">
+      <div>
+        <div class="badge">Trung Tâm Người Dùng Linh Họa Sư</div>
+        <h1>Tạo tài khoản tu hành</h1>
+        <p>Vui lòng ghi nhớ tài khoản và mật khẩu sau khi đăng ký. Hệ thống đã kích hoạt xác thực từ phía người dùng, tài khoản chưa đăng ký hoặc sai mật khẩu sẽ không thể đăng nhập.</p>
+      </div>
+      <p>Quy tắc tài khoản: 4-20 ký tự, bắt đầu bằng chữ cái, chỉ gồm chữ cái, số và dấu gạch dưới.</p>
+    </section>
+    <section class="form-area">
+      <div class="tabs">
+        <button class="tab active" id="registerTab" type="button">Đăng ký</button>
+        <button class="tab" id="loginTab" type="button">Đăng nhập</button>
+      </div>
+
+      <form id="registerForm">
+        <div class="field">
+          <label for="regAccount">Tài khoản</label>
+          <input id="regAccount" autocomplete="username" maxlength="20" placeholder="Ví dụ: lhs_user01">
+          <div class="hint" id="regAccountHint">4-20 ký tự, bắt đầu bằng chữ cái, có thể chứa số và dấu gạch dưới</div>
+        </div>
+        <div class="field" id="inviteCodeField">
+          <label for="inviteCode">Mã mời (không bắt buộc)</label>
+          <input id="inviteCode" maxlength="6" placeholder="Nhập mã mời nếu có (tùy chọn)">
+          <div class="hint" id="inviteCodeHint">Có thể để trống nếu không có mã mời</div>
+        </div>
+        <div class="field">
+          <label for="regPassword">Mật khẩu</label>
+          <input id="regPassword" type="password" autocomplete="new-password" maxlength="32" placeholder="Tối thiểu 8 ký tự, gồm cả chữ và số">
+          <div class="hint" id="regPasswordHint">Không dùng mật khẩu quá đơn giản hoặc chứa tên tài khoản</div>
+        </div>
+        <div class="field">
+          <label for="regConfirm">Xác nhận mật khẩu</label>
+          <input id="regConfirm" type="password" autocomplete="new-password" maxlength="32" placeholder="Nhập lại mật khẩu">
+          <div class="hint" id="regConfirmHint"></div>
+        </div>
+        <button class="submit" id="registerSubmit" type="submit">Đăng Ký Ngay</button>
+      </form>
+
+      <form id="loginForm" style="display:none">
+        <div class="field">
+          <label for="loginAccount">Tài khoản</label>
+          <input id="loginAccount" autocomplete="username" maxlength="20" placeholder="Vui lòng nhập tài khoản">
+          <div class="hint" id="loginAccountHint"></div>
+        </div>
+        <div class="field">
+          <label for="loginPassword">Mật khẩu</label>
+          <input id="loginPassword" type="password" autocomplete="current-password" maxlength="32" placeholder="Vui lòng nhập mật khẩu">
+          <div class="hint" id="loginPasswordHint"></div>
+        </div>
+        <button class="submit" id="loginSubmit" type="submit">Đăng nhập và vào game</button>
+      </form>
+
+      <div class="message" id="message"></div>
+      <div class="links">
+        <a href="index.html" id="backToGameLink">Quay lại trò chơi</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    var ACCOUNT_PATTERN = /^[a-zA-Z][a-zA-Z0-9_]{3,19}$/;
+    var INVITE_CODE_PATTERN = /^[A-Za-z0-9]{6}$/;
+    var WEAK_PASSWORDS = ['12345678', '123456789', 'password', 'password123', 'qwerty123', 'abc123456'];
+    var activeMode = 'register';
+    var query = new URLSearchParams(window.location.search);
+    var inviteCodeFromUrl = normalizeInviteCode(query.get('inviteCode') || query.get('invite') || query.get('code') || '');
+    var backendHost = query.get('backendHost') || '';
+    var httpPort = query.get('httpPort') || '';
+    var wsPort = query.get('wsPort') || '';
+    var shellv = query.get('shellv') || '';
+
+    function $(id) { return document.getElementById(id); }
+    function setHint(id, text, type) {
+      var node = $(id);
+      node.textContent = text || '';
+      node.className = 'hint' + (type ? ' ' + type : '');
+    }
+    function setMessage(text, type) {
+      var node = $('message');
+      node.textContent = text || '';
+      node.className = 'message' + (type ? ' ' + type : '');
+    }
+    function normalizeAccount(value) { return String(value || '').trim().toLowerCase(); }
+    function normalizeInviteCode(value) { return String(value || '').trim().toUpperCase(); }
+    function buildRuntimeQueryString() {
+      var runtimeQuery = new URLSearchParams();
+      // Chỉ gắn backendHost nếu là máy dev khác và khác hostname hiện tại
+      if (backendHost && backendHost !== window.location.hostname && backendHost !== '127.0.0.1') {
+        runtimeQuery.set('backendHost', backendHost);
+      }
+      // Không bao giờ gắn cổng 81 lên query string
+      if (httpPort && httpPort !== '81' && httpPort !== '80' && httpPort !== '443') {
+        runtimeQuery.set('httpPort', httpPort);
+      }
+      if (wsPort && wsPort !== '81' && wsPort !== '80' && wsPort !== '443') {
+        runtimeQuery.set('wsPort', wsPort);
+      }
+      if (shellv) runtimeQuery.set('shellv', shellv);
+      return runtimeQuery.toString();
+    }
+    function resolveRuntimePage(page) {
+      var runtimeQuery = buildRuntimeQueryString();
+      return runtimeQuery ? (page + '?' + runtimeQuery) : page;
+    }
+    function resolveApiUrl(path) {
+      if (window.location.protocol === 'file:') {
+        var host = backendHost || '127.0.0.1';
+        var port = httpPort || '81';
+        return 'http://' + host + ':' + port + path;
+      }
+      return path;
+    }
+    function validateAccount(value) {
+      var account = normalizeAccount(value);
+      if (!account) return 'Vui lòng nhập tài khoản';
+      if (!ACCOUNT_PATTERN.test(account)) return 'Định dạng tài khoản không hợp lệ';
+      return '';
+    }
+    function validateInviteCode(value) {
+      var inviteCode = normalizeInviteCode(value);
+      if (!inviteCode) return '';
+      if (!INVITE_CODE_PATTERN.test(inviteCode)) return 'Mã mời đại lý phải gồm 6 ký tự chữ hoặc số';
+      return '';
+    }
+    function validatePassword(password, account) {
+      password = String(password || '');
+      account = normalizeAccount(account);
+      if (!password) return 'Vui lòng nhập mật khẩu';
+      if (password.length < 8 || password.length > 32) return 'Mật khẩu phải từ 8-32 ký tự';
+      if (/\s/.test(password)) return 'Mật khẩu không được chứa khoảng trắng';
+      if (!/[A-Za-z]/.test(password) || !/\d/.test(password)) return 'Mật khẩu phải bao gồm cả chữ cái và số';
+      if (WEAK_PASSWORDS.indexOf(password.toLowerCase()) !== -1) return 'Mật khẩu quá đơn giản';
+      if (account && password.toLowerCase().indexOf(account) !== -1) return 'Mật khẩu không được chứa tên tài khoản';
+      return '';
+    }
+    function saveLogin(account, password, inviteCode) {
+      localStorage.setItem('lhs_user_account', account);
+      localStorage.setItem('lhs_user_password', password);
+      if (inviteCode) localStorage.setItem('lhs_invite_code', inviteCode);
+    }
+    function initInviteCode() {
+      if (inviteCodeFromUrl) {
+        $('inviteCode').value = inviteCodeFromUrl;
+        var inviteError = validateInviteCode(inviteCodeFromUrl);
+        setHint(
+          'inviteCodeHint',
+          inviteError || ('Đã nhận diện mã mời đại lý: ' + inviteCodeFromUrl),
+          inviteError ? 'error' : 'ok'
+        );
+      } else {
+        setHint('inviteCodeHint', 'Có thể để trống nếu không có mã mời', '');
+      }
+    }
+    function initRuntimeLinks() {
+      $('backToGameLink').href = resolveRuntimePage('index.html');
+      if (window.location.protocol === 'file:') {
+        var agentLink = $('agentEntryLink');
+        if (agentLink) agentLink.style.display = 'none';
+      }
+    }
+    function switchMode(mode) {
+      activeMode = mode;
+      $('registerTab').classList.toggle('active', mode === 'register');
+      $('loginTab').classList.toggle('active', mode === 'login');
+      $('registerForm').style.display = mode === 'register' ? '' : 'none';
+      $('loginForm').style.display = mode === 'login' ? '' : 'none';
+      setMessage('', '');
+    }
+    async function postJson(url, body) {
+      var res = await fetch(resolveApiUrl(url), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      var data = await res.json().catch(function () { return {}; });
+      if (!res.ok || data.success === false) throw new Error(data.message || 'Yêu cầu thất bại');
+      return data;
+    }
+    function validateRegisterForm() {
+      var account = normalizeAccount($('regAccount').value);
+      var password = $('regPassword').value;
+      var confirm = $('regConfirm').value;
+      var accountError = validateAccount(account);
+      var passwordError = validatePassword(password, account);
+      var confirmError = confirm && confirm !== password ? 'Hai lần nhập mật khẩu không khớp' : '';
+      setHint('regAccountHint', accountError || 'Định dạng tài khoản hợp lệ', accountError ? 'error' : 'ok');
+      setHint('regPasswordHint', passwordError || 'Độ mạnh mật khẩu hợp lệ', passwordError ? 'error' : 'ok');
+      setHint('regConfirmHint', confirmError || (confirm ? 'Mật khẩu trùng khớp' : ''), confirmError ? 'error' : (confirm ? 'ok' : ''));
+      return !accountError && !passwordError && !confirmError && confirm;
+    }
+    ['regAccount', 'regPassword', 'regConfirm'].forEach(function (id) {
+      $(id).addEventListener('input', validateRegisterForm);
+    });
+    $('inviteCode').addEventListener('input', function () {
+      var val = normalizeInviteCode($('inviteCode').value);
+      if (!val) {
+        setHint('inviteCodeHint', 'Có thể để trống nếu không có mã mời', '');
+      } else {
+        var inviteError = validateInviteCode(val);
+        setHint(
+          'inviteCodeHint',
+          inviteError || ('Mã mời hợp lệ: ' + val),
+          inviteError ? 'error' : 'ok'
+        );
+      }
+    });
+    $('registerTab').addEventListener('click', function () { switchMode('register'); });
+    $('loginTab').addEventListener('click', function () { switchMode('login'); });
+    initInviteCode();
+    initRuntimeLinks();
+    $('registerForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (!validateRegisterForm()) return setMessage('Vui lòng sửa các lỗi trong biểu mẫu trước', 'error');
+      var account = normalizeAccount($('regAccount').value);
+      var password = $('regPassword').value;
+      var inviteCode = normalizeInviteCode($('inviteCode').value || inviteCodeFromUrl);
+      if (inviteCode) {
+        var inviteError = validateInviteCode(inviteCode);
+        if (inviteError) return setMessage(inviteError, 'error');
+      }
+      $('registerSubmit').disabled = true;
+      setMessage('Đang đăng ký...', '');
+      try {
+        var payload = { accountId: account, password: password, confirmPassword: $('regConfirm').value };
+        if (inviteCode) payload.inviteCode = inviteCode;
+        await postJson('/api/user/register', payload);
+        saveLogin(account, password, inviteCode);
+        setMessage('Đăng ký thành công, đã lưu trên thiết bị, đang vào trò chơi...', 'ok');
+        setTimeout(function () { location.href = resolveRuntimePage('index.html'); }, 800);
+      } catch (error) {
+        setMessage(error.message, 'error');
+      } finally {
+        $('registerSubmit').disabled = false;
+      }
+    });
+    $('loginForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      var account = normalizeAccount($('loginAccount').value);
+      var password = $('loginPassword').value;
+      var accountError = validateAccount(account);
+      if (accountError) return setHint('loginAccountHint', accountError, 'error');
+      if (!password) return setHint('loginPasswordHint', 'Vui lòng nhập mật khẩu', 'error');
+      $('loginSubmit').disabled = true;
+      setMessage('Đang đăng nhập...', '');
+      try {
+        await postJson('/api/user/login', { accountId: account, password: password });
+        saveLogin(account, password, localStorage.getItem('lhs_invite_code'));
+        setMessage('Đăng nhập thành công, đang vào trò chơi...', 'ok');
+        setTimeout(function () { location.href = resolveRuntimePage('index.html'); }, 800);
+      } catch (error) {
+        setMessage(error.message, 'error');
+      } finally {
+        $('loginSubmit').disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

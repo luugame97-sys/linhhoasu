@@ -1,0 +1,1376 @@
+{
+  "_table": "PetConfig",
+  "_rows": 41,
+  "_type": "object",
+  "_firstKeys": "id,quality,tag,type,name,icon,atlasReward,composeWeight,swapCost,swapCostCount,attrs,attrsUp,attrIcon,appearId,effect",
+  "_sample": [
+    {
+      "82001": {
+        "id": 82001,
+        "quality": 2,
+        "tag": 2,
+        "type": 0,
+        "name": 82001,
+        "icon": "",
+        "atlasReward": {
+          "id": 1,
+          "count": 50
+        },
+        "composeWeight": 0,
+        "swapCost": 0,
+        "swapCostCount": 0,
+        "attrs": {
+          "1": 4500,
+          "2": 540,
+          "3": 90,
+          "4": 24
+        },
+        "attrsUp": {
+          "1": 750,
+          "2": 90,
+          "3": 15,
+          "4": 4
+        },
+        "attrIcon": "",
+        "appearId": 82001,
+        "effect": 8200101
+      }
+    },
+    {
+      "82101": {
+        "id": 82101,
+        "quality": 2,
+        "tag": 1,
+        "type": 1,
+        "name": 82101,
+        "icon": "",
+        "atlasReward": {
+          "id": 1,
+          "count": 50
+        },
+        "composeWeight": 0,
+        "swapCost": 0,
+        "swapCostCount": 0,
+        "attrs": {
+          "1": 5308,
+          "2": 732,
+          "3": 103,
+          "4": 32
+        },
+        "attrsUp": {
+          "1": 885,
+          "2": 122,
+          "3": 17,
+          "4": 5
+        },
+        "attrIcon": "",
+        "appearId": 82101,
+        "effect": 8210101
+      }
+    },
+    {
+      "82201": {
+        "id": 82201,
+        "quality": 2,
+        "tag": 1,
+        "type": 2,
+        "name": 82201,
+        "icon": "",
+        "atlasReward": {
+          "id": 1,
+          "count": 50
+        },
+        "composeWeight": 0,
+        "swapCost": 0,
+        "swapCostCount": 0,
+        "attrs": {
+          "1": 6103,
+          "2": 613,
+          "3": 106,
+          "4": 32
+        },
+        "attrsUp": {
+          "1": 1017,
+          "2": 102,
+          "3": 18,
+          "4": 5
+        },
+        "attrIcon": "",
+        "appearId": 82201,
+        "effect": 8220101
+      }
+    }
+  ],
+  "data": {
+    "82001": {
+      "id": 82001,
+      "quality": 2,
+      "tag": 2,
+      "type": 0,
+      "name": 82001,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 50
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 4500,
+        "2": 540,
+        "3": 90,
+        "4": 24
+      },
+      "attrsUp": {
+        "1": 750,
+        "2": 90,
+        "3": 15,
+        "4": 4
+      },
+      "attrIcon": "",
+      "appearId": 82001,
+      "effect": 8200101
+    },
+    "82101": {
+      "id": 82101,
+      "quality": 2,
+      "tag": 1,
+      "type": 1,
+      "name": 82101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 50
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 5308,
+        "2": 732,
+        "3": 103,
+        "4": 32
+      },
+      "attrsUp": {
+        "1": 885,
+        "2": 122,
+        "3": 17,
+        "4": 5
+      },
+      "attrIcon": "",
+      "appearId": 82101,
+      "effect": 8210101
+    },
+    "82201": {
+      "id": 82201,
+      "quality": 2,
+      "tag": 1,
+      "type": 2,
+      "name": 82201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 50
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 6103,
+        "2": 613,
+        "3": 106,
+        "4": 32
+      },
+      "attrsUp": {
+        "1": 1017,
+        "2": 102,
+        "3": 18,
+        "4": 5
+      },
+      "attrIcon": "",
+      "appearId": 82201,
+      "effect": 8220101
+    },
+    "82301": {
+      "id": 82301,
+      "quality": 2,
+      "tag": 1,
+      "type": 3,
+      "name": 82301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 50
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 5737,
+        "2": 686,
+        "3": 113,
+        "4": 30
+      },
+      "attrsUp": {
+        "1": 956,
+        "2": 114,
+        "3": 19,
+        "4": 5
+      },
+      "attrIcon": "",
+      "appearId": 82301,
+      "effect": 8230101
+    },
+    "82401": {
+      "id": 82401,
+      "quality": 2,
+      "tag": 1,
+      "type": 4,
+      "name": 82401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 50
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 5650,
+        "2": 734,
+        "3": 109,
+        "4": 27
+      },
+      "attrsUp": {
+        "1": 942,
+        "2": 122,
+        "3": 18,
+        "4": 5
+      },
+      "attrIcon": "",
+      "appearId": 82401,
+      "effect": 8240101
+    },
+    "82501": {
+      "id": 82501,
+      "quality": 2,
+      "tag": 1,
+      "type": 5,
+      "name": 82501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 50
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 5473,
+        "2": 630,
+        "3": 120,
+        "4": 30
+      },
+      "attrsUp": {
+        "1": 912,
+        "2": 105,
+        "3": 20,
+        "4": 5
+      },
+      "attrIcon": "",
+      "appearId": 82501,
+      "effect": 8250101
+    },
+    "83001": {
+      "id": 83001,
+      "quality": 3,
+      "tag": 2,
+      "type": 0,
+      "name": 83001,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 6750,
+        "2": 810,
+        "3": 135,
+        "4": 36
+      },
+      "attrsUp": {
+        "1": 1125,
+        "2": 135,
+        "3": 23,
+        "4": 6
+      },
+      "attrIcon": "",
+      "appearId": 83001,
+      "effect": 8200101
+    },
+    "83101": {
+      "id": 83101,
+      "quality": 3,
+      "tag": 1,
+      "type": 1,
+      "name": 83101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 7765,
+        "2": 1064,
+        "3": 154,
+        "4": 49
+      },
+      "attrsUp": {
+        "1": 1294,
+        "2": 177,
+        "3": 26,
+        "4": 8
+      },
+      "attrIcon": "",
+      "appearId": 83101,
+      "effect": 8310101
+    },
+    "83201": {
+      "id": 83201,
+      "quality": 3,
+      "tag": 1,
+      "type": 2,
+      "name": 83201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 8910,
+        "2": 913,
+        "3": 152,
+        "4": 49
+      },
+      "attrsUp": {
+        "1": 1485,
+        "2": 152,
+        "3": 25,
+        "4": 8
+      },
+      "attrIcon": "",
+      "appearId": 83201,
+      "effect": 8320101
+    },
+    "83301": {
+      "id": 83301,
+      "quality": 3,
+      "tag": 1,
+      "type": 3,
+      "name": 83301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 8561,
+        "2": 1007,
+        "3": 170,
+        "4": 45
+      },
+      "attrsUp": {
+        "1": 1427,
+        "2": 168,
+        "3": 28,
+        "4": 8
+      },
+      "attrIcon": "",
+      "appearId": 83301,
+      "effect": 8330101
+    },
+    "83401": {
+      "id": 83401,
+      "quality": 3,
+      "tag": 1,
+      "type": 4,
+      "name": 83401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 8218,
+        "2": 1080,
+        "3": 172,
+        "4": 42
+      },
+      "attrsUp": {
+        "1": 1370,
+        "2": 180,
+        "3": 29,
+        "4": 7
+      },
+      "attrIcon": "",
+      "appearId": 83401,
+      "effect": 8340101
+    },
+    "83501": {
+      "id": 83501,
+      "quality": 3,
+      "tag": 1,
+      "type": 5,
+      "name": 83501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 100
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 8381,
+        "2": 928,
+        "3": 185,
+        "4": 45
+      },
+      "attrsUp": {
+        "1": 1397,
+        "2": 155,
+        "3": 31,
+        "4": 8
+      },
+      "attrIcon": "",
+      "appearId": 83501,
+      "effect": 8350101
+    },
+    "84001": {
+      "id": 84001,
+      "quality": 4,
+      "tag": 2,
+      "type": 0,
+      "name": 84001,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 9000,
+        "2": 1080,
+        "3": 180,
+        "4": 48
+      },
+      "attrsUp": {
+        "1": 1500,
+        "2": 180,
+        "3": 30,
+        "4": 8
+      },
+      "attrIcon": "",
+      "appearId": 84001,
+      "effect": 8200101
+    },
+    "84101": {
+      "id": 84101,
+      "quality": 4,
+      "tag": 1,
+      "type": 1,
+      "name": 84101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 10149,
+        "2": 1445,
+        "3": 208,
+        "4": 63
+      },
+      "attrsUp": {
+        "1": 1692,
+        "2": 241,
+        "3": 35,
+        "4": 11
+      },
+      "attrIcon": "",
+      "appearId": 84101,
+      "effect": 8410101
+    },
+    "84201": {
+      "id": 84201,
+      "quality": 4,
+      "tag": 1,
+      "type": 2,
+      "name": 84201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 11708,
+        "2": 1214,
+        "3": 207,
+        "4": 62
+      },
+      "attrsUp": {
+        "1": 1951,
+        "2": 202,
+        "3": 35,
+        "4": 10
+      },
+      "attrIcon": "",
+      "appearId": 84201,
+      "effect": 8420101
+    },
+    "84301": {
+      "id": 84301,
+      "quality": 4,
+      "tag": 1,
+      "type": 3,
+      "name": 84301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 11345,
+        "2": 1324,
+        "3": 228,
+        "4": 58
+      },
+      "attrsUp": {
+        "1": 1891,
+        "2": 221,
+        "3": 38,
+        "4": 10
+      },
+      "attrIcon": "",
+      "appearId": 84301,
+      "effect": 8430101
+    },
+    "84401": {
+      "id": 84401,
+      "quality": 4,
+      "tag": 1,
+      "type": 4,
+      "name": 84401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 11217,
+        "2": 1413,
+        "3": 218,
+        "4": 54
+      },
+      "attrsUp": {
+        "1": 1870,
+        "2": 236,
+        "3": 36,
+        "4": 9
+      },
+      "attrIcon": "",
+      "appearId": 84401,
+      "effect": 8440101
+    },
+    "84501": {
+      "id": 84501,
+      "quality": 4,
+      "tag": 1,
+      "type": 5,
+      "name": 84501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 150
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 11167,
+        "2": 1202,
+        "3": 246,
+        "4": 58
+      },
+      "attrsUp": {
+        "1": 1861,
+        "2": 200,
+        "3": 41,
+        "4": 10
+      },
+      "attrIcon": "",
+      "appearId": 84501,
+      "effect": 8450101
+    },
+    "85001": {
+      "id": 85001,
+      "quality": 5,
+      "tag": 2,
+      "type": 0,
+      "name": 85001,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 11250,
+        "2": 1350,
+        "3": 225,
+        "4": 60
+      },
+      "attrsUp": {
+        "1": 1875,
+        "2": 225,
+        "3": 38,
+        "4": 10
+      },
+      "attrIcon": "",
+      "appearId": 85001,
+      "effect": 8200101
+    },
+    "85101": {
+      "id": 85101,
+      "quality": 5,
+      "tag": 1,
+      "type": 1,
+      "name": 85101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 13239,
+        "2": 1837,
+        "3": 255,
+        "4": 78
+      },
+      "attrsUp": {
+        "1": 2207,
+        "2": 306,
+        "3": 43,
+        "4": 13
+      },
+      "attrIcon": "",
+      "appearId": 85101,
+      "effect": 8510101
+    },
+    "85201": {
+      "id": 85201,
+      "quality": 5,
+      "tag": 1,
+      "type": 2,
+      "name": 85201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 15070,
+        "2": 1561,
+        "3": 257,
+        "4": 81
+      },
+      "attrsUp": {
+        "1": 2512,
+        "2": 260,
+        "3": 43,
+        "4": 14
+      },
+      "attrIcon": "",
+      "appearId": 85201,
+      "effect": 8520101
+    },
+    "85301": {
+      "id": 85301,
+      "quality": 5,
+      "tag": 1,
+      "type": 3,
+      "name": 85301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 14045,
+        "2": 1696,
+        "3": 271,
+        "4": 74
+      },
+      "attrsUp": {
+        "1": 2341,
+        "2": 283,
+        "3": 45,
+        "4": 12
+      },
+      "attrIcon": "",
+      "appearId": 85301,
+      "effect": 8530101
+    },
+    "85401": {
+      "id": 85401,
+      "quality": 5,
+      "tag": 1,
+      "type": 4,
+      "name": 85401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 13985,
+        "2": 1836,
+        "3": 274,
+        "4": 68
+      },
+      "attrsUp": {
+        "1": 2331,
+        "2": 306,
+        "3": 46,
+        "4": 11
+      },
+      "attrIcon": "",
+      "appearId": 85401,
+      "effect": 8540101
+    },
+    "85501": {
+      "id": 85501,
+      "quality": 5,
+      "tag": 1,
+      "type": 5,
+      "name": 85501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 200
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 13732,
+        "2": 1520,
+        "3": 294,
+        "4": 76
+      },
+      "attrsUp": {
+        "1": 2289,
+        "2": 253,
+        "3": 49,
+        "4": 13
+      },
+      "attrIcon": "",
+      "appearId": 85501,
+      "effect": 8550101
+    },
+    "86001": {
+      "id": 86001,
+      "quality": 6,
+      "tag": 2,
+      "type": 0,
+      "name": 86001,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 14625,
+        "2": 1755,
+        "3": 293,
+        "4": 78
+      },
+      "attrsUp": {
+        "1": 2438,
+        "2": 293,
+        "3": 49,
+        "4": 13
+      },
+      "attrIcon": "",
+      "appearId": 86001,
+      "effect": 8200101
+    },
+    "86101": {
+      "id": 86101,
+      "quality": 6,
+      "tag": 1,
+      "type": 1,
+      "name": 86101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 16374,
+        "2": 2373,
+        "3": 327,
+        "4": 105
+      },
+      "attrsUp": {
+        "1": 2729,
+        "2": 396,
+        "3": 55,
+        "4": 18
+      },
+      "attrIcon": "",
+      "appearId": 86101,
+      "effect": 8610101
+    },
+    "86201": {
+      "id": 86201,
+      "quality": 6,
+      "tag": 1,
+      "type": 2,
+      "name": 86201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 18969,
+        "2": 1978,
+        "3": 328,
+        "4": 104
+      },
+      "attrsUp": {
+        "1": 3162,
+        "2": 330,
+        "3": 55,
+        "4": 17
+      },
+      "attrIcon": "",
+      "appearId": 86201,
+      "effect": 8620101
+    },
+    "86301": {
+      "id": 86301,
+      "quality": 6,
+      "tag": 1,
+      "type": 3,
+      "name": 86301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 18533,
+        "2": 2169,
+        "3": 367,
+        "4": 94
+      },
+      "attrsUp": {
+        "1": 3089,
+        "2": 362,
+        "3": 61,
+        "4": 16
+      },
+      "attrIcon": "",
+      "appearId": 86301,
+      "effect": 8630101
+    },
+    "86401": {
+      "id": 86401,
+      "quality": 6,
+      "tag": 1,
+      "type": 4,
+      "name": 86401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 18480,
+        "2": 2352,
+        "3": 365,
+        "4": 89
+      },
+      "attrsUp": {
+        "1": 3080,
+        "2": 392,
+        "3": 61,
+        "4": 15
+      },
+      "attrIcon": "",
+      "appearId": 86401,
+      "effect": 8640101
+    },
+    "86501": {
+      "id": 86501,
+      "quality": 6,
+      "tag": 1,
+      "type": 5,
+      "name": 86501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 250
+      },
+      "composeWeight": 2000,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 17684,
+        "2": 2016,
+        "3": 385,
+        "4": 97
+      },
+      "attrsUp": {
+        "1": 2947,
+        "2": 336,
+        "3": 64,
+        "4": 16
+      },
+      "attrIcon": "",
+      "appearId": 86501,
+      "effect": 8650101
+    },
+    "87001": {
+      "id": 87001,
+      "quality": 7,
+      "tag": 2,
+      "type": 0,
+      "name": 87001,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "composeWeight": 0,
+      "swapCost": 0,
+      "swapCostCount": 0,
+      "attrs": {
+        "1": 18000,
+        "2": 2160,
+        "3": 360,
+        "4": 96
+      },
+      "attrsUp": {
+        "1": 3000,
+        "2": 360,
+        "3": 60,
+        "4": 16
+      },
+      "attrIcon": "",
+      "appearId": 87001,
+      "effect": 8200101
+    },
+    "87101": {
+      "id": 87101,
+      "quality": 7,
+      "tag": 1,
+      "type": 1,
+      "name": 87101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "composeWeight": 2000,
+      "swapCost": 6,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 1
+      },
+      "attrs": {
+        "1": 20385,
+        "2": 2948,
+        "3": 401,
+        "4": 127
+      },
+      "attrsUp": {
+        "1": 3398,
+        "2": 491,
+        "3": 67,
+        "4": 21
+      },
+      "attrIcon": "",
+      "appearId": 87101,
+      "effect": 8710101
+    },
+    "87201": {
+      "id": 87201,
+      "quality": 7,
+      "tag": 1,
+      "type": 2,
+      "name": 87201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "composeWeight": 2000,
+      "swapCost": 6,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 1
+      },
+      "attrs": {
+        "1": 23754,
+        "2": 2453,
+        "3": 407,
+        "4": 132
+      },
+      "attrsUp": {
+        "1": 3959,
+        "2": 409,
+        "3": 68,
+        "4": 22
+      },
+      "attrIcon": "",
+      "appearId": 87201,
+      "effect": 8720101
+    },
+    "87301": {
+      "id": 87301,
+      "quality": 7,
+      "tag": 1,
+      "type": 3,
+      "name": 87301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "composeWeight": 2000,
+      "swapCost": 6,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 1
+      },
+      "attrs": {
+        "1": 22936,
+        "2": 2678,
+        "3": 441,
+        "4": 117
+      },
+      "attrsUp": {
+        "1": 3823,
+        "2": 446,
+        "3": 74,
+        "4": 20
+      },
+      "attrIcon": "",
+      "appearId": 87301,
+      "effect": 8730101
+    },
+    "87401": {
+      "id": 87401,
+      "quality": 7,
+      "tag": 1,
+      "type": 4,
+      "name": 87401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "composeWeight": 2000,
+      "swapCost": 6,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 1
+      },
+      "attrs": {
+        "1": 22033,
+        "2": 2843,
+        "3": 434,
+        "4": 110
+      },
+      "attrsUp": {
+        "1": 3672,
+        "2": 474,
+        "3": 72,
+        "4": 18
+      },
+      "attrIcon": "",
+      "appearId": 87401,
+      "effect": 8740101
+    },
+    "87501": {
+      "id": 87501,
+      "quality": 7,
+      "tag": 1,
+      "type": 5,
+      "name": 87501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 300
+      },
+      "composeWeight": 2000,
+      "swapCost": 6,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 1
+      },
+      "attrs": {
+        "1": 21867,
+        "2": 2502,
+        "3": 478,
+        "4": 120
+      },
+      "attrsUp": {
+        "1": 3645,
+        "2": 417,
+        "3": 80,
+        "4": 20
+      },
+      "attrIcon": "",
+      "appearId": 87501,
+      "effect": 8750101
+    },
+    "89101": {
+      "id": 89101,
+      "quality": 9,
+      "tag": 1,
+      "type": 1,
+      "name": 89101,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "composeWeight": 2000,
+      "swapCost": 7,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 10
+      },
+      "attrs": {
+        "1": 25975,
+        "2": 3545,
+        "3": 509,
+        "4": 159
+      },
+      "attrsUp": {
+        "1": 4329,
+        "2": 591,
+        "3": 85,
+        "4": 27
+      },
+      "attrIcon": "",
+      "appearId": 89101,
+      "effect": 8910101
+    },
+    "89201": {
+      "id": 89201,
+      "quality": 9,
+      "tag": 1,
+      "type": 2,
+      "name": 89201,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "composeWeight": 2000,
+      "swapCost": 7,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 10
+      },
+      "attrs": {
+        "1": 30690,
+        "2": 3086,
+        "3": 526,
+        "4": 165
+      },
+      "attrsUp": {
+        "1": 5115,
+        "2": 514,
+        "3": 88,
+        "4": 28
+      },
+      "attrIcon": "",
+      "appearId": 89201,
+      "effect": 8920101
+    },
+    "89301": {
+      "id": 89301,
+      "quality": 9,
+      "tag": 1,
+      "type": 3,
+      "name": 89301,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "composeWeight": 2000,
+      "swapCost": 7,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 10
+      },
+      "attrs": {
+        "1": 27578,
+        "2": 3389,
+        "3": 550,
+        "4": 146
+      },
+      "attrsUp": {
+        "1": 4596,
+        "2": 565,
+        "3": 92,
+        "4": 24
+      },
+      "attrIcon": "",
+      "appearId": 89301,
+      "effect": 8930101
+    },
+    "89401": {
+      "id": 89401,
+      "quality": 9,
+      "tag": 1,
+      "type": 4,
+      "name": 89401,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "composeWeight": 2000,
+      "swapCost": 7,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 10
+      },
+      "attrs": {
+        "1": 27877,
+        "2": 3509,
+        "3": 560,
+        "4": 137
+      },
+      "attrsUp": {
+        "1": 4646,
+        "2": 585,
+        "3": 93,
+        "4": 23
+      },
+      "attrIcon": "",
+      "appearId": 89401,
+      "effect": 8940101
+    },
+    "89501": {
+      "id": 89501,
+      "quality": 9,
+      "tag": 1,
+      "type": 5,
+      "name": 89501,
+      "icon": "",
+      "atlasReward": {
+        "id": 1,
+        "count": 400
+      },
+      "composeWeight": 2000,
+      "swapCost": 7,
+      "swapCostCount": 1,
+      "swapCostItem": {
+        "id": 162,
+        "count": 10
+      },
+      "attrs": {
+        "1": 28559,
+        "2": 3171,
+        "3": 612,
+        "4": 153
+      },
+      "attrsUp": {
+        "1": 4760,
+        "2": 529,
+        "3": 102,
+        "4": 26
+      },
+      "attrIcon": "",
+      "appearId": 89501,
+      "effect": 8950101
+    }
+  }
+}

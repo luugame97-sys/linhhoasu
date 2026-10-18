@@ -1,0 +1,1087 @@
+{
+  "_table": "AlchemyRoleConfig",
+  "_rows": 60,
+  "_type": "object",
+  "_firstKeys": "id,exp,name,minStage,stageIds,qualityRates,addSucceed,stageName,stage",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "exp": 50,
+        "name": 30010101,
+        "minStage": 1,
+        "stageIds": [
+          1,
+          2,
+          3
+        ],
+        "qualityRates": {
+          "3": 2000
+        },
+        "addSucceed": 300,
+        "stageName": 30030370,
+        "stage": 1
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "exp": 50,
+        "name": 30010102,
+        "minStage": 1,
+        "stageIds": [
+          1,
+          2,
+          3
+        ],
+        "qualityRates": {
+          "4": 2000
+        },
+        "addSucceed": 600,
+        "stageName": 30030370,
+        "stage": 1
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "exp": 50,
+        "name": 30010103,
+        "minStage": 1,
+        "stageIds": [
+          1,
+          2,
+          3
+        ],
+        "qualityRates": {
+          "6": 2500
+        },
+        "addSucceed": 1000,
+        "stageName": 30030370,
+        "stage": 1
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "exp": 50,
+      "name": 30010101,
+      "minStage": 1,
+      "stageIds": [
+        1,
+        2,
+        3
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030370,
+      "stage": 1
+    },
+    "2": {
+      "id": 2,
+      "exp": 50,
+      "name": 30010102,
+      "minStage": 1,
+      "stageIds": [
+        1,
+        2,
+        3
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030370,
+      "stage": 1
+    },
+    "3": {
+      "id": 3,
+      "exp": 50,
+      "name": 30010103,
+      "minStage": 1,
+      "stageIds": [
+        1,
+        2,
+        3
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030370,
+      "stage": 1
+    },
+    "4": {
+      "id": 4,
+      "exp": 50,
+      "name": 30010104,
+      "minStage": 1,
+      "stageIds": [
+        1,
+        2,
+        3
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030370,
+      "stage": 1
+    },
+    "5": {
+      "id": 5,
+      "exp": 60,
+      "name": 30010105,
+      "minStage": 4,
+      "stageIds": [
+        4,
+        5,
+        6
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030371,
+      "stage": 2
+    },
+    "6": {
+      "id": 6,
+      "exp": 60,
+      "name": 30010106,
+      "minStage": 4,
+      "stageIds": [
+        4,
+        5,
+        6
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030371,
+      "stage": 2
+    },
+    "7": {
+      "id": 7,
+      "exp": 60,
+      "name": 30010107,
+      "minStage": 4,
+      "stageIds": [
+        4,
+        5,
+        6
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030371,
+      "stage": 2
+    },
+    "8": {
+      "id": 8,
+      "exp": 60,
+      "name": 30010108,
+      "minStage": 4,
+      "stageIds": [
+        4,
+        5,
+        6
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030371,
+      "stage": 2
+    },
+    "9": {
+      "id": 9,
+      "exp": 80,
+      "name": 30010109,
+      "minStage": 7,
+      "stageIds": [
+        7,
+        8,
+        9
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030372,
+      "stage": 3
+    },
+    "10": {
+      "id": 10,
+      "exp": 80,
+      "name": 30010110,
+      "minStage": 7,
+      "stageIds": [
+        7,
+        8,
+        9
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030372,
+      "stage": 3
+    },
+    "11": {
+      "id": 11,
+      "exp": 150,
+      "name": 30010111,
+      "minStage": 7,
+      "stageIds": [
+        7,
+        8,
+        9
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030372,
+      "stage": 3
+    },
+    "12": {
+      "id": 12,
+      "exp": 160,
+      "name": 30010112,
+      "minStage": 7,
+      "stageIds": [
+        7,
+        8,
+        9
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030372,
+      "stage": 3
+    },
+    "13": {
+      "id": 13,
+      "exp": 180,
+      "name": 30010113,
+      "minStage": 10,
+      "stageIds": [
+        10,
+        11,
+        12
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030373,
+      "stage": 4
+    },
+    "14": {
+      "id": 14,
+      "exp": 200,
+      "name": 30010114,
+      "minStage": 10,
+      "stageIds": [
+        10,
+        11,
+        12
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030373,
+      "stage": 4
+    },
+    "15": {
+      "id": 15,
+      "exp": 220,
+      "name": 30010115,
+      "minStage": 10,
+      "stageIds": [
+        10,
+        11,
+        12
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030373,
+      "stage": 4
+    },
+    "16": {
+      "id": 16,
+      "exp": 240,
+      "name": 30010116,
+      "minStage": 10,
+      "stageIds": [
+        10,
+        11,
+        12
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030373,
+      "stage": 4
+    },
+    "17": {
+      "id": 17,
+      "exp": 280,
+      "name": 30010117,
+      "minStage": 13,
+      "stageIds": [
+        13,
+        14,
+        15
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030374,
+      "stage": 5
+    },
+    "18": {
+      "id": 18,
+      "exp": 320,
+      "name": 30010118,
+      "minStage": 13,
+      "stageIds": [
+        13,
+        14,
+        15
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030374,
+      "stage": 5
+    },
+    "19": {
+      "id": 19,
+      "exp": 360,
+      "name": 30010119,
+      "minStage": 13,
+      "stageIds": [
+        13,
+        14,
+        15
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030374,
+      "stage": 5
+    },
+    "20": {
+      "id": 20,
+      "exp": 400,
+      "name": 30010120,
+      "minStage": 13,
+      "stageIds": [
+        13,
+        14,
+        15
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030374,
+      "stage": 5
+    },
+    "21": {
+      "id": 21,
+      "exp": 450,
+      "name": 30010121,
+      "minStage": 16,
+      "stageIds": [
+        16,
+        17,
+        18
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030375,
+      "stage": 6
+    },
+    "22": {
+      "id": 22,
+      "exp": 500,
+      "name": 30010122,
+      "minStage": 16,
+      "stageIds": [
+        16,
+        17,
+        18
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030375,
+      "stage": 6
+    },
+    "23": {
+      "id": 23,
+      "exp": 550,
+      "name": 30010123,
+      "minStage": 16,
+      "stageIds": [
+        16,
+        17,
+        18
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030375,
+      "stage": 6
+    },
+    "24": {
+      "id": 24,
+      "exp": 600,
+      "name": 30010124,
+      "minStage": 16,
+      "stageIds": [
+        16,
+        17,
+        18
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030375,
+      "stage": 6
+    },
+    "25": {
+      "id": 25,
+      "exp": 660,
+      "name": 30010125,
+      "minStage": 19,
+      "stageIds": [
+        19,
+        20,
+        21
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030376,
+      "stage": 7
+    },
+    "26": {
+      "id": 26,
+      "exp": 720,
+      "name": 30010126,
+      "minStage": 19,
+      "stageIds": [
+        19,
+        20,
+        21
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030376,
+      "stage": 7
+    },
+    "27": {
+      "id": 27,
+      "exp": 780,
+      "name": 30010127,
+      "minStage": 19,
+      "stageIds": [
+        19,
+        20,
+        21
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030376,
+      "stage": 7
+    },
+    "28": {
+      "id": 28,
+      "exp": 840,
+      "name": 30010128,
+      "minStage": 19,
+      "stageIds": [
+        19,
+        20,
+        21
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030376,
+      "stage": 7
+    },
+    "29": {
+      "id": 29,
+      "exp": 910,
+      "name": 30010129,
+      "minStage": 22,
+      "stageIds": [
+        22,
+        23,
+        24
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030377,
+      "stage": 8
+    },
+    "30": {
+      "id": 30,
+      "exp": 980,
+      "name": 30010130,
+      "minStage": 22,
+      "stageIds": [
+        22,
+        23,
+        24
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030377,
+      "stage": 8
+    },
+    "31": {
+      "id": 31,
+      "exp": 1050,
+      "name": 30010131,
+      "minStage": 22,
+      "stageIds": [
+        22,
+        23,
+        24
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030377,
+      "stage": 8
+    },
+    "32": {
+      "id": 32,
+      "exp": 1120,
+      "name": 30010132,
+      "minStage": 22,
+      "stageIds": [
+        22,
+        23,
+        24
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030377,
+      "stage": 8
+    },
+    "33": {
+      "id": 33,
+      "exp": 1200,
+      "name": 30010133,
+      "minStage": 25,
+      "stageIds": [
+        25,
+        26,
+        27
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030378,
+      "stage": 9
+    },
+    "34": {
+      "id": 34,
+      "exp": 1280,
+      "name": 30010134,
+      "minStage": 25,
+      "stageIds": [
+        25,
+        26,
+        27
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030378,
+      "stage": 9
+    },
+    "35": {
+      "id": 35,
+      "exp": 1360,
+      "name": 30010135,
+      "minStage": 25,
+      "stageIds": [
+        25,
+        26,
+        27
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030378,
+      "stage": 9
+    },
+    "36": {
+      "id": 36,
+      "exp": 1440,
+      "name": 30010136,
+      "minStage": 25,
+      "stageIds": [
+        25,
+        26,
+        27
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030378,
+      "stage": 9
+    },
+    "37": {
+      "id": 37,
+      "exp": 1530,
+      "name": 30010137,
+      "minStage": 28,
+      "stageIds": [
+        28,
+        29,
+        30
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030379,
+      "stage": 10
+    },
+    "38": {
+      "id": 38,
+      "exp": 1620,
+      "name": 30010138,
+      "minStage": 28,
+      "stageIds": [
+        28,
+        29,
+        30
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030379,
+      "stage": 10
+    },
+    "39": {
+      "id": 39,
+      "exp": 1710,
+      "name": 30010139,
+      "minStage": 28,
+      "stageIds": [
+        28,
+        29,
+        30
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030379,
+      "stage": 10
+    },
+    "40": {
+      "id": 40,
+      "exp": 1800,
+      "name": 30010140,
+      "minStage": 28,
+      "stageIds": [
+        28,
+        29,
+        30
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030379,
+      "stage": 10
+    },
+    "41": {
+      "id": 41,
+      "exp": 1900,
+      "name": 30010141,
+      "minStage": 31,
+      "stageIds": [
+        31,
+        32,
+        33
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030380,
+      "stage": 11
+    },
+    "42": {
+      "id": 42,
+      "exp": 2000,
+      "name": 30010142,
+      "minStage": 31,
+      "stageIds": [
+        31,
+        32,
+        33
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030380,
+      "stage": 11
+    },
+    "43": {
+      "id": 43,
+      "exp": 2100,
+      "name": 30010143,
+      "minStage": 31,
+      "stageIds": [
+        31,
+        32,
+        33
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030380,
+      "stage": 11
+    },
+    "44": {
+      "id": 44,
+      "exp": 2200,
+      "name": 30010144,
+      "minStage": 31,
+      "stageIds": [
+        31,
+        32,
+        33
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030380,
+      "stage": 11
+    },
+    "45": {
+      "id": 45,
+      "exp": 2300,
+      "name": 30010145,
+      "minStage": 34,
+      "stageIds": [
+        34,
+        35,
+        36
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030381,
+      "stage": 12
+    },
+    "46": {
+      "id": 46,
+      "exp": 2400,
+      "name": 30010146,
+      "minStage": 34,
+      "stageIds": [
+        34,
+        35,
+        36
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030381,
+      "stage": 12
+    },
+    "47": {
+      "id": 47,
+      "exp": 2500,
+      "name": 30010147,
+      "minStage": 34,
+      "stageIds": [
+        34,
+        35,
+        36
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030381,
+      "stage": 12
+    },
+    "48": {
+      "id": 48,
+      "exp": 2600,
+      "name": 30010148,
+      "minStage": 34,
+      "stageIds": [
+        34,
+        35,
+        36
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030381,
+      "stage": 12
+    },
+    "49": {
+      "id": 49,
+      "exp": 2700,
+      "name": 30010149,
+      "minStage": 37,
+      "stageIds": [
+        37,
+        38,
+        39
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030382,
+      "stage": 13
+    },
+    "50": {
+      "id": 50,
+      "exp": 2800,
+      "name": 30010150,
+      "minStage": 37,
+      "stageIds": [
+        37,
+        38,
+        39
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030382,
+      "stage": 13
+    },
+    "51": {
+      "id": 51,
+      "exp": 2900,
+      "name": 30010151,
+      "minStage": 37,
+      "stageIds": [
+        37,
+        38,
+        39
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030382,
+      "stage": 13
+    },
+    "52": {
+      "id": 52,
+      "exp": 3000,
+      "name": 30010152,
+      "minStage": 37,
+      "stageIds": [
+        37,
+        38,
+        39
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030382,
+      "stage": 13
+    },
+    "53": {
+      "id": 53,
+      "exp": 3100,
+      "name": 30010153,
+      "minStage": 40,
+      "stageIds": [
+        40,
+        41,
+        42
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030383,
+      "stage": 14
+    },
+    "54": {
+      "id": 54,
+      "exp": 3200,
+      "name": 30010154,
+      "minStage": 40,
+      "stageIds": [
+        40,
+        41,
+        42
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030383,
+      "stage": 14
+    },
+    "55": {
+      "id": 55,
+      "exp": 3300,
+      "name": 30010155,
+      "minStage": 40,
+      "stageIds": [
+        40,
+        41,
+        42
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030383,
+      "stage": 14
+    },
+    "56": {
+      "id": 56,
+      "exp": 3400,
+      "name": 30010156,
+      "minStage": 40,
+      "stageIds": [
+        40,
+        41,
+        42
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030383,
+      "stage": 14
+    },
+    "57": {
+      "id": 57,
+      "exp": 3500,
+      "name": 30010157,
+      "minStage": 43,
+      "stageIds": [
+        43,
+        44,
+        45
+      ],
+      "qualityRates": {
+        "3": 2000
+      },
+      "addSucceed": 300,
+      "stageName": 30030384,
+      "stage": 15
+    },
+    "58": {
+      "id": 58,
+      "exp": 3600,
+      "name": 30010158,
+      "minStage": 43,
+      "stageIds": [
+        43,
+        44,
+        45
+      ],
+      "qualityRates": {
+        "4": 2000
+      },
+      "addSucceed": 600,
+      "stageName": 30030384,
+      "stage": 15
+    },
+    "59": {
+      "id": 59,
+      "exp": 3700,
+      "name": 30010159,
+      "minStage": 43,
+      "stageIds": [
+        43,
+        44,
+        45
+      ],
+      "qualityRates": {
+        "6": 2500
+      },
+      "addSucceed": 1000,
+      "stageName": 30030384,
+      "stage": 15
+    },
+    "60": {
+      "id": 60,
+      "exp": 0,
+      "name": 30010160,
+      "minStage": 43,
+      "stageIds": [
+        43,
+        44,
+        45
+      ],
+      "qualityRates": {
+        "7": 3000
+      },
+      "addSucceed": 1500,
+      "stageName": 30030384,
+      "stage": 15
+    }
+  }
+}

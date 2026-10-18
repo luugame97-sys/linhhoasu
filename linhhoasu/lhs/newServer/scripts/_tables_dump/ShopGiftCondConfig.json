@@ -1,0 +1,90 @@
+{
+  "_table": "ShopGiftCondConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "id,conditions,intervalTri,duration,qualityShow,showMultiple",
+  "_sample": [
+    {
+      "50001": {
+        "id": 50001,
+        "conditions": [
+          {
+            "type": 7,
+            "value": 222,
+            "cond": 0
+          }
+        ],
+        "intervalTri": [
+          {
+            "type": 153,
+            "value": 6
+          }
+        ],
+        "duration": 1440,
+        "qualityShow": 6,
+        "showMultiple": 450
+      }
+    },
+    {
+      "50010": {
+        "id": 50010,
+        "conditions": [
+          {
+            "type": 7,
+            "value": 222,
+            "cond": 0
+          }
+        ],
+        "intervalTri": [
+          {
+            "type": 153,
+            "value": 7
+          }
+        ],
+        "duration": 1440,
+        "qualityShow": 7,
+        "showMultiple": 450
+      }
+    }
+  ],
+  "data": {
+    "50001": {
+      "id": 50001,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 222,
+          "cond": 0
+        }
+      ],
+      "intervalTri": [
+        {
+          "type": 153,
+          "value": 6
+        }
+      ],
+      "duration": 1440,
+      "qualityShow": 6,
+      "showMultiple": 450
+    },
+    "50010": {
+      "id": 50010,
+      "conditions": [
+        {
+          "type": 7,
+          "value": 222,
+          "cond": 0
+        }
+      ],
+      "intervalTri": [
+        {
+          "type": 153,
+          "value": 7
+        }
+      ],
+      "duration": 1440,
+      "qualityShow": 7,
+      "showMultiple": 450
+    }
+  }
+}

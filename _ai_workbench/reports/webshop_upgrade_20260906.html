@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linh Họa Sư — Webshop popup, ảnh và gói</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-webshop-popup-nh-item-v-g-i-nhi-u-m-n">Session Report — Webshop popup, ảnh item và gói nhiều món</h1>
+<p><strong>Đã triển khai WebGM ngày06/09/2026 UTC+7.</strong> Không tự mở bán bộ thời trang, không đổi giá144 mặt hàng hiện có, không trừ tiền hoặc phát quà cho người chơi thật. Backend game, config client và PM2 không thay đổi.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Admin bấm “Sửa” mở popup đúng mặt hàng ngay tại chỗ, không kéo lên đầu trang. Select2 tìm item nằm đúng trong modal; giữ upload ảnh, tên, giá, thứ tự và trạng thái mở/tắt.</li>
+<li>Thêm chế độ “Một item” / “Gói nhiều item — nhận tất cả”. Admin chọn từng item/số lượng hoặc chọn nhanh bộ thời trang để điền đủ thành phần. Hỗ trợ tối đa20 ID khác nhau mỗi gói, đáp ứng gói4 hoặc10 món.</li>
+<li>Người mua xem toàn bộ ID/tên/số lượng trước xác nhận. Giá là giá cả gói; mua N gói nhận N lần danh sách. Server tự lấy giá/reward từ DB, không tin giá/số lượng thưởng do frontend gửi.</li>
+<li>Cấp link ảnh cho7.951 ID:5.480 ảnh riêng,608 ảnh bộ,1.863 hộp mặc định.3.406 filePNG duy nhất/26.206.052 byte đã copy sang vùng ảnh WebGM, giữ game assets bất biến.</li>
+<li>Xuất38 bộ có thành phần ẩn/101 biến thể cấp-màu, ID bộ và từng phần; trang admin có tìm kiếm/copy JSON/tảiCSV.</li>
+<li>Thêm order request key, reward snapshot và pending delivery để retry không trừ tiền/giao quà lần hai khi mất kết nối.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-production">Source production</h3>
+<p>Root <code>/linhhoasu/webgame/gm/</code>:</p>
+<ul>
+<li><code>admin/index.php</code>, <code>assets/js/admin.js</code>: popup sửa tại chỗ, gói, trạng thái, danh mục ảnh.</li>
+<li><code>admin/admin_api.php</code>: validate gói, lưu reward_items/is_active, bảo vệ client admin cũ khỏi làm mất bundle, kiểm từng item khi bật bán.</li>
+<li><code>index.php</code>, <code>assets/js/index.js</code>: hiển thị nội dung gói, modal mua, request key, trạng thái pending và nút gửi lại đơn trong lịch sử.</li>
+<li>Mới <code>webshop_bundle.php</code>, <code>assets/js/webshop-admin.js</code>, <code>assets/js/webshop-buyer.js</code>.</li>
+<li>Mới <code>api/item_icon.php</code>, <code>admin/item_catalog.php</code>, <code>assets/images/item-default.svg</code>, <code>assets/item/item_images.json</code>, <code>assets/item/hidden_fashion_sets.json</code>; cập nhật <code>assets/item/item_icon_map.json</code>.</li>
+<li><code>config.php</code>: chỉ thêm một dòng require helper, giữ nội dung/credentials/quyền file tại production. Không đóng gói config thật.</li>
+<li><code>assets/images/catalog/</code>:3.406PNG theo whitelist manifest. Không nới open_basedir, không mở quyền đọc config hay filesystem game cho PHP.</li>
+</ul>
+<p>Tổng15 artifact có manifest hash riêng +1 include patch trên config; icon mirror có hash từng file.</p>
+<h3 id="sql-migration">SQL migration</h3>
+<ul>
+<li><code>webshop_items.reward_items LONGTEXT NULL</code>.</li>
+<li><code>webshop_orders.request_key VARCHAR(64) NULL</code>, <code>reward_snapshot LONGTEXT NULL</code>.</li>
+<li>Status thêm <code>pending_delivery</code>, unique index <code>(account_name,request_key)</code>.</li>
+<li>Các row cũ giữNULL/default, không sửa nội dung lịch sử. Đây là DDL, <strong>không có transaction rollback toàn bộ DDL</strong>; schema backup chỉ là cấu trúc, không phải full database dump. Rollback source giữ cột mở rộng để bảo toàn đơn mới/pending.</li>
+</ul>
+<h3 id="local-artifact-v-backup">Local artifact và backup</h3>
+<ul>
+<li>Source patch candidate: <code>_ai_workbench/temp/webshop_upgrade_20260906/candidate/</code>; không có config thật.</li>
+<li>Không tự đồng bộ sang <code>F:\WebSite\gm\Linhhoasu</code> vì chưa xác minh dirty worktree/current source của dự án riêng đó.</li>
+<li>Tool hỗ trợ snapshot/build/patch/test/stage/deploy/QA/report/package nằm <code>_ai_workbench/tools/</code>.</li>
+<li>Evidence: <code>bundle_tests.json</code>, <code>ui_contract.json</code>, <code>schema_migration_20260905_170945.json</code>, <code>icon_mirror.json</code>, <code>deploy_20260905_172151.json</code>, <code>live_bundle_qa.json</code>, <code>final_verification.json</code> dưới thư mục release.</li>
+<li>Schema backup <code>/linhhoasu/_ai_workbench/backups/webshop_bundle_schema_20260905_170945/</code>.</li>
+<li>Source backup release <code>/linhhoasu/_ai_workbench/backups/webshop_upgrade_20260905_172151/</code>; lần deploy đầu rollback ở<code>webshop_upgrade_20260905_172026/</code>.</li>
+<li>Report trước phiên <code>_ai_workbench/backups/webshop_upgrade_reports_20260906/</code>.</li>
+<li>Báo cáo này MD/HTML; danh sách bộẩnMD/HTML/TXT và linkảnhTXT; session_report.md/.html được cập nhật, giữ lịch sử.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/phát hiện</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Sửa item phải cuộn đầu trang</td>
+<td>Form nằm trên table, edit scrollTo</td>
+<td>Chuyển form vào Bootstrap modal, giữ nguyênID/control</td>
+<td>Browser click edit xác minh modal trên đúng item</td>
+</tr>
+<tr>
+<td>Form có bật/tắt nhưng save không lưu</td>
+<td>SQL save cũ bỏis_active</td>
+<td>Lưu trạng thái ở insert/update</td>
+<td>Test preserve checkbox và API code</td>
+</tr>
+<tr>
+<td>Gói nhiều item chưa có schema/contract</td>
+<td>Mỗi product chỉitem_id+amount</td>
+<td>reward_items + server validator + public reward list</td>
+<td>Kiểm4/10/multi/invalid/legacy</td>
+</tr>
+<tr>
+<td>Timeout có thể trừ tiền/gửi lặp</td>
+<td>Thiếu idempotency bền vững của Webshop</td>
+<td>Debit và order snapshot cùng SQLtransaction; key/eventKey bền; pending retry</td>
+<td>Không refund khi chưa rõ đã gửi; không tạo order mới để thử lại</td>
+</tr>
+<tr>
+<td>Icon endpoint FPM trả ảnh mặc định thay ảnh thật</td>
+<td>open_basedir không đọc sibling game directory</td>
+<td>Deploy lần đầu tự restore source; mirror ảnh đúng whitelist vàoWebGM</td>
+<td>Test HTTP/hash thực, không chỉ PHPCLI/fileexists</td>
+</tr>
+<tr>
+<td>Bản sao config nội bộ bị đưa vào staging</td>
+<td>Snapshot ban đầu lấy rootPHP indiscriminately</td>
+<td>Xóa exact2 local và3 stagingconfig; production config giữ nguyên trừinclude patch</td>
+<td>Không shipconfig/env; backup bảo vệ chỉ trênVPS</td>
+</tr>
+<tr>
+<td>Temp table LIKE lỗi alias</td>
+<td>MariaDB không choCREATE TEMP same-nameLIKE</td>
+<td>LấySHOW CREATE rồiCREATE TEMPORARY cùng schema</td>
+<td>Test DB fixture shadow connection, không ghi rowproduction</td>
+</tr>
+<tr>
+<td>SQL migration fieldmutated báofalse ngoài cùng</td>
+<td>Result wrapper chưa set flag, nested migration true</td>
+<td>Báo cáo đính chính: migration thật đã áp dụng</td>
+<td>Đọc before/after schema, không dựa wrapperflag</td>
+</tr>
+<tr>
+<td>PatchJS trùnganchor/tái chạy thêm block</td>
+<td>Exactneedle quá rộng, patch dở</td>
+<td>Giới hạn anchor riêngWebshop; dọn duplicateblock; test syntax/structure</td>
+<td>Không chạy lại script patch cũ tự động</td>
+</tr>
+<tr>
+<td>Ảnh/map output bị cắt khi đọc</td>
+<td>JSON một dòng rất lớn</td>
+<td>Chỉ đọc summary/fields chọn lọc</td>
+<td>Không dumpmap toàn bộ trongtooloutput</td>
+</tr>
+</tbody></table></div>
+<p>Không sửa mã hóa source ngoài scope. Báo cáo/danh mục UTF-8; tên catalog được giữ nguyên, chưa hiệu đính toàn bộ tên tronggame.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Một gói là danh sách thưởng độc lập với item dùng làm ảnh đại diện. Gửi cả hộp bộ lẫn component có thể cấp thừa giá trị; chọn một cách, danh sách mẫu cấp thẳng từng component.</li>
+<li>Thư tối đa20 attachment: kiểm danh sách sau nhân quantity/tách stack trước khi debit; request vượt giới hạn bị từ chối.</li>
+<li>Nếu DB commit rồi bridge timeout: giữpending, không hoànXu ngay, retry theo cùngsnapshot/eventKey. Đơn cũ không bị đổi thưởng khi admin chỉnh product sau đó.</li>
+<li>Auth/admin/CSRF/role/server vẫn phải kiểm phía server, không nhận role hoặc giá từfrontend làm nguồn quyết định.</li>
+<li>HTTP200 của endpoint ảnh chưa đủ: phải so hash ảnh thật và ảnhfallback riêng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>PHP7.4.33 lint10file staging trước rollout; JSsyntaxPASS. Sau loạiconfig nhạy cảm, deploy chỉ lint/tác động whitelist.</li>
+<li>Contract bundle25checksPASS trên SQLTEMP tables:4item/10item, nhânquantity, retry, pendingrecovery saucatalog thay, thiếuXu, sai server/key, invaliditem/count, quá20 và legacy.</li>
+<li>UI contractPASS: modal/no scroll, prefill4món, trạng thái tắt không mất, requestkeystable/account-server scoped,CSRF giữ nguyên,7.951links,101variants.</li>
+<li>Browserlocal trên adminpage render từPHP thật: bấmSửa mở đúngpopup, modebundle và “Thêm đủ bộ” điền28041/28042/28043/28049; đã xem screenshot. Dữ liệuSQL/UI làfixture, không đăngnhập adminthật.</li>
+<li>Live delivery QA: helper mua gói dùng SQLTEMP wallet/order, gọi mailAPI ký thật trênVPS;2thư có4và10attachments; WSlogin→claim→ownership bộ đúng→claimretry khôngregrant→close persistencePASS. QAplayer/mail cleanup0; không trừXu người thật.</li>
+<li><strong>Giới hạn E2E:</strong> chưa test toàn bộ request HTTP admin save/buyer purchase qua session người thật; liveQA dùng adapter mailký vàroleQA riêng. Không tuyên bố upstream thanh toán thật đã được test.</li>
+<li>Final15artifacthashPASS, includeconfig đã áp dụng, icon28043 vàfallbackHTTP/hashPASS; <code>/web-panel/api/item_icon.php?id=28043</code>200. Admincatalog chưalogin302 đúng bảo vệ. IDpathtraversal không đọcfile, trảảnhdefault theo regex.</li>
+<li>S1/S2ready200, PM2/PID/restartcounterkhôngđổi. SQL144products,0bundleđãmởbán,0pending tại finalcheck. Chưa đổi giá/quà các mặt hàng có sẵn.</li>
+<li>Localhost QA preview server/tab chỉ phục vụ kiểm thử; không deploy preview.html.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo-s-d-ng">6. Bước tiếp theo / sử dụng</h2>
+<ol>
+<li>Tải lại trang admin, vàoWebshop→bấmSửa hoặcThêm item/gói; popup mở tại chỗ.</li>
+<li>ChọnGói nhiều item, thêm4/10món hoặc chọnbộẩn→Thêm đủ bộ; đặt tên/giá/status, kiểm danh sách rồiLưu. Gói mẫu chưa được tựbán.</li>
+<li>Người mua xem toàn bộ danh sách trong modal trướcxácnhận. Nếu pending, dùngGửi lại đơn trong lịch sử hoặc giữmãrequest trongmodal, không muađơnmới để thửlại.</li>
+<li><a href="http://103.116.105.154:88/admin/item_catalog.php">Tra ảnh &amp; bộẩn</a> cần adminlogin; tìmID/tên, copylink/JSON, tảiCSV. HTTPclipboard có fallbackcopy.</li>
+<li>Link ảnh mẫu: <a href="http://103.116.105.154:88/api/item_icon.php?id=28043">áo28043</a>. ThayID bất kỳ trongcatalog; không cóảnh sẽdùnghộpdefault.</li>
+<li><a href="http://103.116.105.154:88/assets/item/item_images.json">Danh mục7.951ảnhJSON</a>, <a href="http://103.116.105.154:88/assets/item/hidden_fashion_sets.json">38bộ/101biếnthểJSON</a>. Báocáo<code>hidden_fashion_sets_20260906.md/.html</code> liệt kêtoàn bộID từngmón.</li>
+</ol>
+<p>Ví dụ gói <strong>Phượng Cầu Hoàng28040</strong>: <code>28041×1,28042×1,28043×1,28049×1</code>. Đây là đủ4phần, khácvới chỉgửiáo28043.</p></main></body></html>

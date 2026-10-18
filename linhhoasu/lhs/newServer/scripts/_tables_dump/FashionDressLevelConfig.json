@@ -1,0 +1,3457 @@
+{
+  "_table": "FashionDressLevelConfig",
+  "_rows": 32,
+  "_type": "object",
+  "_firstKeys": "0",
+  "_sample": [
+    {
+      "28010": {
+        "0": {
+          "id": 28010,
+          "level": 0,
+          "icon": "head_rs_2801",
+          "consumes": [],
+          "attrs": {
+            "51": 400,
+            "52": 300,
+            "53": 300
+          },
+          "skillId": 28010,
+          "cpSkill": 28011,
+          "cpSkillDesc": 1128011,
+          "cpDressId": 28990,
+          "fashionIds": [
+            28012,
+            28013,
+            28019
+          ],
+          "banTypeIds": [
+            302,
+            303,
+            309,
+            2,
+            5,
+            305
+          ],
+          "showType": 2,
+          "showTypeTw": 2,
+          "area": 1
+        }
+      }
+    },
+    {
+      "28020": {
+        "0": {
+          "id": 28020,
+          "level": 0,
+          "icon": "head_rs_2802",
+          "consumes": [],
+          "attrs": {
+            "51": 400,
+            "52": 300,
+            "53": 300
+          },
+          "skillId": 28020,
+          "cpSkill": 28021,
+          "cpSkillDesc": 1128021,
+          "cpDressId": 28030,
+          "fashionIds": [
+            28022,
+            28023,
+            28029
+          ],
+          "banTypeIds": [
+            302,
+            303,
+            309,
+            2,
+            5,
+            305
+          ],
+          "showType": 2,
+          "showTypeTw": 2,
+          "area": 1
+        }
+      }
+    },
+    {
+      "28030": {
+        "0": {
+          "id": 28030,
+          "level": 0,
+          "icon": "head_rs_2803",
+          "consumes": [],
+          "attrs": {
+            "51": 400,
+            "52": 300,
+            "53": 300
+          },
+          "skillId": 28030,
+          "cpSkill": 28031,
+          "cpSkillDesc": 1128031,
+          "cpDressId": 28020,
+          "fashionIds": [
+            28032,
+            28033,
+            28039
+          ],
+          "banTypeIds": [
+            302,
+            303,
+            309,
+            2,
+            5,
+            305
+          ],
+          "showType": 2,
+          "showTypeTw": 2,
+          "area": 1
+        }
+      }
+    }
+  ],
+  "data": {
+    "28010": {
+      "0": {
+        "id": 28010,
+        "level": 0,
+        "icon": "head_rs_2801",
+        "consumes": [],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28010,
+        "cpSkill": 28011,
+        "cpSkillDesc": 1128011,
+        "cpDressId": 28990,
+        "fashionIds": [
+          28012,
+          28013,
+          28019
+        ],
+        "banTypeIds": [
+          302,
+          303,
+          309,
+          2,
+          5,
+          305
+        ],
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      }
+    },
+    "28020": {
+      "0": {
+        "id": 28020,
+        "level": 0,
+        "icon": "head_rs_2802",
+        "consumes": [],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28020,
+        "cpSkill": 28021,
+        "cpSkillDesc": 1128021,
+        "cpDressId": 28030,
+        "fashionIds": [
+          28022,
+          28023,
+          28029
+        ],
+        "banTypeIds": [
+          302,
+          303,
+          309,
+          2,
+          5,
+          305
+        ],
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      }
+    },
+    "28030": {
+      "0": {
+        "id": 28030,
+        "level": 0,
+        "icon": "head_rs_2803",
+        "consumes": [],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28030,
+        "cpSkill": 28031,
+        "cpSkillDesc": 1128031,
+        "cpDressId": 28020,
+        "fashionIds": [
+          28032,
+          28033,
+          28039
+        ],
+        "banTypeIds": [
+          302,
+          303,
+          309,
+          2,
+          5,
+          305
+        ],
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      }
+    },
+    "28040": {
+      "0": {
+        "id": 28040,
+        "level": 0,
+        "icon": "head_rs_2804",
+        "consumes": [],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28040,
+        "cpSkill": 28041,
+        "cpSkillDesc": 1128041,
+        "cpDressId": 28050,
+        "fashionIds": [
+          28041,
+          28042,
+          28043,
+          28049
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28050": {
+      "0": {
+        "id": 28050,
+        "level": 0,
+        "icon": "head_rs_2805",
+        "consumes": [],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28050,
+        "cpSkill": 28051,
+        "cpSkillDesc": 1128051,
+        "cpDressId": 28040,
+        "fashionIds": [
+          28051,
+          28052,
+          28053,
+          28059
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28060": {
+      "0": {
+        "id": 28060,
+        "level": 0,
+        "icon": "head_rs_2806",
+        "consumes": [
+          {
+            "id": 806,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28060,
+        "cpSkill": 28061,
+        "cpSkillDesc": 1128061,
+        "desc": 1228061,
+        "cpDressId": 28070,
+        "fashionIds": [
+          28061,
+          28062,
+          28063,
+          28069
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28060,
+        "level": 1,
+        "icon": "head_rs_2806",
+        "consumes": [
+          {
+            "id": 806,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28060,
+        "cpSkill": 28062,
+        "cpSkillDesc": 1128061,
+        "desc": 1228062,
+        "cpDressId": 28070,
+        "fashionIds": [
+          80128061,
+          80128062,
+          80128063,
+          80128069
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28060,
+        "level": 2,
+        "icon": "head_rs_2806",
+        "consumes": [
+          {
+            "id": 806,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28060,
+        "cpSkill": 28063,
+        "cpSkillDesc": 1128061,
+        "desc": 1228063,
+        "cpDressId": 28070,
+        "fashionIds": [
+          80228061,
+          80228062,
+          80228063,
+          80228069
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28060,
+        "level": 3,
+        "icon": "head_rs_2806",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28060,
+        "cpSkill": 28064,
+        "cpSkillDesc": 1128061,
+        "desc": 1228064,
+        "cpDressId": 28070,
+        "fashionIds": [
+          80328061,
+          80328062,
+          80328063,
+          80328069
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28070": {
+      "0": {
+        "id": 28070,
+        "level": 0,
+        "icon": "head_rs_2807",
+        "consumes": [
+          {
+            "id": 807,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28070,
+        "cpSkill": 28071,
+        "cpSkillDesc": 1128071,
+        "desc": 1228071,
+        "cpDressId": 28060,
+        "fashionIds": [
+          28071,
+          28072,
+          28073,
+          28079
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28070,
+        "level": 1,
+        "icon": "head_rs_2807",
+        "consumes": [
+          {
+            "id": 807,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28070,
+        "cpSkill": 28072,
+        "cpSkillDesc": 1128071,
+        "desc": 1228072,
+        "cpDressId": 28060,
+        "fashionIds": [
+          80128071,
+          80128072,
+          80128073,
+          80128079
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28070,
+        "level": 2,
+        "icon": "head_rs_2807",
+        "consumes": [
+          {
+            "id": 807,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28070,
+        "cpSkill": 28073,
+        "cpSkillDesc": 1128071,
+        "desc": 1228073,
+        "cpDressId": 28060,
+        "fashionIds": [
+          80228071,
+          80228072,
+          80228073,
+          80228079
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28070,
+        "level": 3,
+        "icon": "head_rs_2807",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28070,
+        "cpSkill": 28074,
+        "cpSkillDesc": 1128071,
+        "desc": 1228074,
+        "cpDressId": 28060,
+        "fashionIds": [
+          80328071,
+          80328072,
+          80328073,
+          80328079
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28080": {
+      "0": {
+        "id": 28080,
+        "level": 0,
+        "icon": "head_rs_2808",
+        "consumes": [
+          {
+            "id": 808,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28080,
+        "cpSkill": 28081,
+        "cpSkillDesc": 1128081,
+        "desc": 1228081,
+        "cpDressId": 28090,
+        "fashionIds": [
+          28081,
+          28082,
+          28083,
+          28089
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28080,
+        "level": 1,
+        "icon": "head_rs_2808",
+        "consumes": [
+          {
+            "id": 808,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28080,
+        "cpSkill": 28082,
+        "cpSkillDesc": 1128081,
+        "desc": 1228082,
+        "cpDressId": 28090,
+        "fashionIds": [
+          80128081,
+          80128082,
+          80128083,
+          80128089
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28080,
+        "level": 2,
+        "icon": "head_rs_2808",
+        "consumes": [
+          {
+            "id": 808,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28080,
+        "cpSkill": 28083,
+        "cpSkillDesc": 1128081,
+        "desc": 1228083,
+        "cpDressId": 28090,
+        "fashionIds": [
+          80228081,
+          80228082,
+          80228083,
+          80228089
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28080,
+        "level": 3,
+        "icon": "head_rs_2808",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28080,
+        "cpSkill": 28084,
+        "cpSkillDesc": 1128081,
+        "desc": 1228084,
+        "cpDressId": 28090,
+        "fashionIds": [
+          80328081,
+          80328082,
+          80328083,
+          80328089
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28090": {
+      "0": {
+        "id": 28090,
+        "level": 0,
+        "icon": "head_rs_2809",
+        "consumes": [
+          {
+            "id": 809,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28090,
+        "cpSkill": 28091,
+        "cpSkillDesc": 1128091,
+        "desc": 1228091,
+        "cpDressId": 28080,
+        "fashionIds": [
+          28091,
+          28092,
+          28093,
+          28099
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28090,
+        "level": 1,
+        "icon": "head_rs_2809",
+        "consumes": [
+          {
+            "id": 809,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28090,
+        "cpSkill": 28092,
+        "cpSkillDesc": 1128091,
+        "desc": 1228092,
+        "cpDressId": 28080,
+        "fashionIds": [
+          80128091,
+          80128092,
+          80128093,
+          80128099
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28090,
+        "level": 2,
+        "icon": "head_rs_2809",
+        "consumes": [
+          {
+            "id": 809,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28090,
+        "cpSkill": 28093,
+        "cpSkillDesc": 1128091,
+        "desc": 1228093,
+        "cpDressId": 28080,
+        "fashionIds": [
+          80228091,
+          80228092,
+          80228093,
+          80228099
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28090,
+        "level": 3,
+        "icon": "head_rs_2809",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28090,
+        "cpSkill": 28094,
+        "cpSkillDesc": 1128091,
+        "desc": 1228094,
+        "cpDressId": 28080,
+        "fashionIds": [
+          80328091,
+          80328092,
+          80328093,
+          80328099
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28100": {
+      "0": {
+        "id": 28100,
+        "level": 0,
+        "icon": "head_rs_2810",
+        "consumes": [
+          {
+            "id": 810,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28100,
+        "cpSkill": 28101,
+        "cpSkillDesc": 1128101,
+        "desc": 1228101,
+        "cpDressId": 28110,
+        "fashionIds": [
+          28101,
+          28102,
+          28103,
+          28109
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28100,
+        "level": 1,
+        "icon": "head_rs_2810",
+        "consumes": [
+          {
+            "id": 810,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28100,
+        "cpSkill": 28102,
+        "cpSkillDesc": 1128101,
+        "desc": 1228102,
+        "cpDressId": 28110,
+        "fashionIds": [
+          80128101,
+          80128102,
+          80128103,
+          80128109
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28100,
+        "level": 2,
+        "icon": "head_rs_2810",
+        "consumes": [
+          {
+            "id": 810,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28100,
+        "cpSkill": 28103,
+        "cpSkillDesc": 1128101,
+        "desc": 1228103,
+        "cpDressId": 28110,
+        "fashionIds": [
+          80228101,
+          80228102,
+          80228103,
+          80228109
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28100,
+        "level": 3,
+        "icon": "head_rs_2810",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28100,
+        "cpSkill": 28104,
+        "cpSkillDesc": 1128101,
+        "desc": 1228104,
+        "cpDressId": 28110,
+        "fashionIds": [
+          80328101,
+          80328102,
+          80328103,
+          80328109
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28110": {
+      "0": {
+        "id": 28110,
+        "level": 0,
+        "icon": "head_rs_2811",
+        "consumes": [
+          {
+            "id": 811,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28110,
+        "cpSkill": 28111,
+        "cpSkillDesc": 1128111,
+        "desc": 1228111,
+        "cpDressId": 28100,
+        "fashionIds": [
+          28111,
+          28112,
+          28113,
+          28119
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28110,
+        "level": 1,
+        "icon": "head_rs_2811",
+        "consumes": [
+          {
+            "id": 811,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28110,
+        "cpSkill": 28112,
+        "cpSkillDesc": 1128111,
+        "desc": 1228112,
+        "cpDressId": 28100,
+        "fashionIds": [
+          80128111,
+          80128112,
+          80128113,
+          80128119
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28110,
+        "level": 2,
+        "icon": "head_rs_2811",
+        "consumes": [
+          {
+            "id": 811,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28110,
+        "cpSkill": 28113,
+        "cpSkillDesc": 1128111,
+        "desc": 1228113,
+        "cpDressId": 28100,
+        "fashionIds": [
+          80228111,
+          80228112,
+          80228113,
+          80228119
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28110,
+        "level": 3,
+        "icon": "head_rs_2811",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28110,
+        "cpSkill": 28114,
+        "cpSkillDesc": 1128111,
+        "desc": 1228114,
+        "cpDressId": 28100,
+        "fashionIds": [
+          80328111,
+          80328112,
+          80328113,
+          80328119
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28120": {
+      "0": {
+        "id": 28120,
+        "level": 0,
+        "icon": "head_rs_2812",
+        "consumes": [
+          {
+            "id": 812,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28120,
+        "cpSkill": 28121,
+        "cpSkillDesc": 1128121,
+        "desc": 1228121,
+        "cpDressId": 28130,
+        "fashionIds": [
+          28121,
+          28122,
+          28123,
+          28129
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28120,
+        "level": 1,
+        "icon": "head_rs_2812",
+        "consumes": [
+          {
+            "id": 812,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28120,
+        "cpSkill": 28122,
+        "cpSkillDesc": 1128121,
+        "desc": 1228122,
+        "cpDressId": 28130,
+        "fashionIds": [
+          80128121,
+          80128122,
+          80128123,
+          80128129
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28120,
+        "level": 2,
+        "icon": "head_rs_2812",
+        "consumes": [
+          {
+            "id": 812,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28120,
+        "cpSkill": 28123,
+        "cpSkillDesc": 1128121,
+        "desc": 1228123,
+        "cpDressId": 28130,
+        "fashionIds": [
+          80228121,
+          80228122,
+          80228123,
+          80228129
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28120,
+        "level": 3,
+        "icon": "head_rs_2812",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28120,
+        "cpSkill": 28124,
+        "cpSkillDesc": 1128121,
+        "desc": 1228124,
+        "cpDressId": 28130,
+        "fashionIds": [
+          80328121,
+          80328122,
+          80328123,
+          80328129
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28130": {
+      "0": {
+        "id": 28130,
+        "level": 0,
+        "icon": "head_rs_2813",
+        "consumes": [
+          {
+            "id": 813,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28130,
+        "cpSkill": 28131,
+        "cpSkillDesc": 1128131,
+        "desc": 1228131,
+        "cpDressId": 28120,
+        "fashionIds": [
+          28131,
+          28132,
+          28133,
+          28139
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28130,
+        "level": 1,
+        "icon": "head_rs_2813",
+        "consumes": [
+          {
+            "id": 813,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28130,
+        "cpSkill": 28132,
+        "cpSkillDesc": 1128131,
+        "desc": 1228132,
+        "cpDressId": 28120,
+        "fashionIds": [
+          80128131,
+          80128132,
+          80128133,
+          80128139
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28130,
+        "level": 2,
+        "icon": "head_rs_2813",
+        "consumes": [
+          {
+            "id": 813,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28130,
+        "cpSkill": 28133,
+        "cpSkillDesc": 1128131,
+        "desc": 1228133,
+        "cpDressId": 28120,
+        "fashionIds": [
+          80228131,
+          80228132,
+          80228133,
+          80228139
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28130,
+        "level": 3,
+        "icon": "head_rs_2813",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28130,
+        "cpSkill": 28134,
+        "cpSkillDesc": 1128131,
+        "desc": 1228134,
+        "cpDressId": 28120,
+        "fashionIds": [
+          80328131,
+          80328132,
+          80328133,
+          80328139
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28140": {
+      "0": {
+        "id": 28140,
+        "level": 0,
+        "icon": "head_rs_2814",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28140,
+        "fashionIds": [
+          28141,
+          28142,
+          28143,
+          28149
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28150": {
+      "0": {
+        "id": 28150,
+        "level": 0,
+        "icon": "head_rs_2815",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28140,
+        "fashionIds": [
+          28151,
+          28152,
+          28153,
+          28159
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28160": {
+      "0": {
+        "id": 28160,
+        "level": 0,
+        "icon": "head_rs_2816",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28140,
+        "fashionIds": [
+          28161,
+          28162,
+          28163,
+          28169
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28170": {
+      "0": {
+        "id": 28170,
+        "level": 0,
+        "icon": "head_rs_2817",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28170,
+        "fashionIds": [
+          28171,
+          28172,
+          28173,
+          28179
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28180": {
+      "0": {
+        "id": 28180,
+        "level": 0,
+        "icon": "head_rs_2818",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28170,
+        "fashionIds": [
+          28181,
+          28182,
+          28183,
+          28189
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28190": {
+      "0": {
+        "id": 28190,
+        "level": 0,
+        "icon": "head_rs_2819",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28170,
+        "fashionIds": [
+          28191,
+          28192,
+          28193,
+          28199
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28200": {
+      "0": {
+        "id": 28200,
+        "level": 0,
+        "icon": "head_rs_2820",
+        "consumes": [
+          {
+            "id": 820,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28200,
+        "cpSkill": 28201,
+        "cpSkillDesc": 1128201,
+        "desc": 1228201,
+        "cpDressId": 28210,
+        "fashionIds": [
+          28201,
+          28202,
+          28203,
+          28209
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 28200,
+        "level": 1,
+        "icon": "head_rs_2820",
+        "consumes": [
+          {
+            "id": 820,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28200,
+        "cpSkill": 28202,
+        "cpSkillDesc": 1128201,
+        "desc": 1228202,
+        "cpDressId": 28210,
+        "fashionIds": [
+          80128201,
+          80128202,
+          80128203,
+          80128209
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28200,
+        "level": 2,
+        "icon": "head_rs_2820",
+        "consumes": [
+          {
+            "id": 820,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28200,
+        "cpSkill": 28203,
+        "cpSkillDesc": 1128201,
+        "desc": 1228203,
+        "cpDressId": 28210,
+        "fashionIds": [
+          80228201,
+          80228202,
+          80228203,
+          80228209
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "3": {
+        "id": 28200,
+        "level": 3,
+        "icon": "head_rs_2820",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28200,
+        "cpSkill": 28204,
+        "cpSkillDesc": 1128201,
+        "desc": 1228204,
+        "cpDressId": 28210,
+        "fashionIds": [
+          80328201,
+          80328202,
+          80328203,
+          80328209
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "28210": {
+      "0": {
+        "id": 28210,
+        "level": 0,
+        "icon": "head_rs_2821",
+        "consumes": [
+          {
+            "id": 821,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28210,
+        "cpSkill": 28211,
+        "cpSkillDesc": 1128211,
+        "desc": 1228211,
+        "cpDressId": 28200,
+        "fashionIds": [
+          28211,
+          28212,
+          28213,
+          28219
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 28210,
+        "level": 1,
+        "icon": "head_rs_2821",
+        "consumes": [
+          {
+            "id": 821,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28210,
+        "cpSkill": 28212,
+        "cpSkillDesc": 1128211,
+        "desc": 1228212,
+        "cpDressId": 28200,
+        "fashionIds": [
+          80128211,
+          80128212,
+          80128213,
+          80128219
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28210,
+        "level": 2,
+        "icon": "head_rs_2821",
+        "consumes": [
+          {
+            "id": 821,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28210,
+        "cpSkill": 28213,
+        "cpSkillDesc": 1128211,
+        "desc": 1228213,
+        "cpDressId": 28200,
+        "fashionIds": [
+          80228211,
+          80228212,
+          80228213,
+          80228219
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "3": {
+        "id": 28210,
+        "level": 3,
+        "icon": "head_rs_2821",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28210,
+        "cpSkill": 28214,
+        "cpSkillDesc": 1128211,
+        "desc": 1228214,
+        "cpDressId": 28200,
+        "fashionIds": [
+          80328211,
+          80328212,
+          80328213,
+          80328219
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "28220": {
+      "0": {
+        "id": 28220,
+        "level": 0,
+        "icon": "head_rs_2822",
+        "consumes": [
+          {
+            "id": 822,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28220,
+        "cpSkill": 28221,
+        "cpSkillDesc": 1128221,
+        "desc": 1228221,
+        "cpDressId": 28230,
+        "fashionIds": [
+          28221,
+          28222,
+          28223,
+          28229
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 28220,
+        "level": 1,
+        "icon": "head_rs_2822",
+        "consumes": [
+          {
+            "id": 822,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28220,
+        "cpSkill": 28222,
+        "cpSkillDesc": 1128221,
+        "desc": 1228222,
+        "cpDressId": 28230,
+        "fashionIds": [
+          80128221,
+          80128222,
+          80128223,
+          80128229
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28220,
+        "level": 2,
+        "icon": "head_rs_2822",
+        "consumes": [
+          {
+            "id": 822,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28220,
+        "cpSkill": 28223,
+        "cpSkillDesc": 1128221,
+        "desc": 1228223,
+        "cpDressId": 28230,
+        "fashionIds": [
+          80228221,
+          80228222,
+          80228223,
+          80228229
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "3": {
+        "id": 28220,
+        "level": 3,
+        "icon": "head_rs_2822",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28220,
+        "cpSkill": 28224,
+        "cpSkillDesc": 1128221,
+        "desc": 1228224,
+        "cpDressId": 28230,
+        "fashionIds": [
+          80328221,
+          80328222,
+          80328223,
+          80328229
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "28230": {
+      "0": {
+        "id": 28230,
+        "level": 0,
+        "icon": "head_rs_2823",
+        "consumes": [
+          {
+            "id": 823,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28230,
+        "cpSkill": 28231,
+        "cpSkillDesc": 1128231,
+        "desc": 1228231,
+        "cpDressId": 28220,
+        "fashionIds": [
+          28231,
+          28232,
+          28233,
+          28239
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 28230,
+        "level": 1,
+        "icon": "head_rs_2823",
+        "consumes": [
+          {
+            "id": 823,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28230,
+        "cpSkill": 28232,
+        "cpSkillDesc": 1128231,
+        "desc": 1228232,
+        "cpDressId": 28220,
+        "fashionIds": [
+          80128231,
+          80128232,
+          80128233,
+          80128239
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28230,
+        "level": 2,
+        "icon": "head_rs_2823",
+        "consumes": [
+          {
+            "id": 823,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28230,
+        "cpSkill": 28233,
+        "cpSkillDesc": 1128231,
+        "desc": 1228233,
+        "cpDressId": 28220,
+        "fashionIds": [
+          80228231,
+          80228232,
+          80228233,
+          80228239
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "3": {
+        "id": 28230,
+        "level": 3,
+        "icon": "head_rs_2823",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28230,
+        "cpSkill": 28234,
+        "cpSkillDesc": 1128231,
+        "desc": 1228234,
+        "cpDressId": 28220,
+        "fashionIds": [
+          80328231,
+          80328232,
+          80328233,
+          80328239
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "28250": {
+      "0": {
+        "id": 28250,
+        "level": 0,
+        "icon": "head_rs_2825",
+        "consumes": [
+          {
+            "id": 825,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28260,
+        "cpSkill": 28261,
+        "cpSkillDesc": 1128261,
+        "desc": 1228261,
+        "cpDressId": 28260,
+        "fashionIds": [
+          28251,
+          28252,
+          28253,
+          28259
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28250,
+        "level": 1,
+        "icon": "head_rs_2825",
+        "consumes": [
+          {
+            "id": 825,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28260,
+        "cpSkill": 28262,
+        "cpSkillDesc": 1128261,
+        "desc": 1228262,
+        "cpDressId": 28260,
+        "fashionIds": [
+          80128251,
+          80128252,
+          80128253,
+          80128259
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28250,
+        "level": 2,
+        "icon": "head_rs_2825",
+        "consumes": [
+          {
+            "id": 825,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28260,
+        "cpSkill": 28263,
+        "cpSkillDesc": 1128261,
+        "desc": 1228263,
+        "cpDressId": 28260,
+        "fashionIds": [
+          80228251,
+          80228252,
+          80228253,
+          80228259
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28250,
+        "level": 3,
+        "icon": "head_rs_2825",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28260,
+        "cpSkill": 28264,
+        "cpSkillDesc": 1128261,
+        "desc": 1228264,
+        "cpDressId": 28260,
+        "fashionIds": [
+          80328251,
+          80328252,
+          80328253,
+          80328259
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28260": {
+      "0": {
+        "id": 28260,
+        "level": 0,
+        "icon": "head_rs_2826",
+        "consumes": [
+          {
+            "id": 826,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28250,
+        "cpSkill": 28251,
+        "cpSkillDesc": 1128251,
+        "desc": 1228251,
+        "cpDressId": 28250,
+        "fashionIds": [
+          28261,
+          28262,
+          28263,
+          28269
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28260,
+        "level": 1,
+        "icon": "head_rs_2826",
+        "consumes": [
+          {
+            "id": 826,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28250,
+        "cpSkill": 28252,
+        "cpSkillDesc": 1128251,
+        "desc": 1228252,
+        "cpDressId": 28250,
+        "fashionIds": [
+          80128261,
+          80128262,
+          80128263,
+          80128269
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28260,
+        "level": 2,
+        "icon": "head_rs_2826",
+        "consumes": [
+          {
+            "id": 826,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28250,
+        "cpSkill": 28253,
+        "cpSkillDesc": 1128251,
+        "desc": 1228253,
+        "cpDressId": 28250,
+        "fashionIds": [
+          80228261,
+          80228262,
+          80228263,
+          80228269
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28260,
+        "level": 3,
+        "icon": "head_rs_2826",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28250,
+        "cpSkill": 28254,
+        "cpSkillDesc": 1128251,
+        "desc": 1228254,
+        "cpDressId": 28250,
+        "fashionIds": [
+          80328261,
+          80328262,
+          80328263,
+          80328269
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28270": {
+      "0": {
+        "id": 28270,
+        "level": 0,
+        "icon": "head_rs_2827",
+        "consumes": [
+          {
+            "id": 827,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28270,
+        "cpSkill": 28271,
+        "cpSkillDesc": 1128271,
+        "desc": 1228271,
+        "cpDressId": 28280,
+        "fashionIds": [
+          28271,
+          28272,
+          28273,
+          28279
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28270,
+        "level": 1,
+        "icon": "head_rs_2827",
+        "consumes": [
+          {
+            "id": 827,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28270,
+        "cpSkill": 28272,
+        "cpSkillDesc": 1128271,
+        "desc": 1228272,
+        "cpDressId": 28280,
+        "fashionIds": [
+          80128271,
+          80128272,
+          80128273,
+          80128279
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28270,
+        "level": 2,
+        "icon": "head_rs_2827",
+        "consumes": [
+          {
+            "id": 827,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28270,
+        "cpSkill": 28273,
+        "cpSkillDesc": 1128271,
+        "desc": 1228273,
+        "cpDressId": 28280,
+        "fashionIds": [
+          80228271,
+          80228272,
+          80228273,
+          80228279
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28270,
+        "level": 3,
+        "icon": "head_rs_2827",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28270,
+        "cpSkill": 28274,
+        "cpSkillDesc": 1128271,
+        "desc": 1228274,
+        "cpDressId": 28280,
+        "fashionIds": [
+          80328271,
+          80328272,
+          80328273,
+          80328279
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28280": {
+      "0": {
+        "id": 28280,
+        "level": 0,
+        "icon": "head_rs_2828",
+        "consumes": [
+          {
+            "id": 828,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28280,
+        "cpSkill": 28281,
+        "cpSkillDesc": 1128281,
+        "desc": 1228281,
+        "cpDressId": 28270,
+        "fashionIds": [
+          28281,
+          28282,
+          28283,
+          28289
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      },
+      "1": {
+        "id": 28280,
+        "level": 1,
+        "icon": "head_rs_2828",
+        "consumes": [
+          {
+            "id": 828,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28280,
+        "cpSkill": 28282,
+        "cpSkillDesc": 1128281,
+        "desc": 1228282,
+        "cpDressId": 28270,
+        "fashionIds": [
+          80128281,
+          80128282,
+          80128283,
+          80128289
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "2": {
+        "id": 28280,
+        "level": 2,
+        "icon": "head_rs_2828",
+        "consumes": [
+          {
+            "id": 828,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28280,
+        "cpSkill": 28283,
+        "cpSkillDesc": 1128281,
+        "desc": 1228283,
+        "cpDressId": 28270,
+        "fashionIds": [
+          80228281,
+          80228282,
+          80228283,
+          80228289
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      },
+      "3": {
+        "id": 28280,
+        "level": 3,
+        "icon": "head_rs_2828",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28280,
+        "cpSkill": 28284,
+        "cpSkillDesc": 1128281,
+        "desc": 1228284,
+        "cpDressId": 28270,
+        "fashionIds": [
+          80328281,
+          80328282,
+          80328283,
+          80328289
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1,
+        "area": 1
+      }
+    },
+    "28290": {
+      "0": {
+        "id": 28290,
+        "level": 0,
+        "icon": "head_rs_2829",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28290,
+        "fashionIds": [
+          28291,
+          28292,
+          28293,
+          28299
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28300": {
+      "0": {
+        "id": 28300,
+        "level": 0,
+        "icon": "head_rs_2830",
+        "consumes": [],
+        "attrs": {
+          "51": 1500,
+          "52": 1000,
+          "53": 1500
+        },
+        "skillId": 28290,
+        "fashionIds": [
+          28301,
+          28302,
+          28303,
+          28309
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      }
+    },
+    "28350": {
+      "0": {
+        "id": 28350,
+        "level": 0,
+        "icon": "head_rs_2835",
+        "consumes": [
+          {
+            "id": 835,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28350,
+        "cpSkill": 28351,
+        "cpSkillDesc": 1128351,
+        "desc": 1228351,
+        "cpDressId": 28360,
+        "fashionIds": [
+          28351,
+          28352,
+          28353,
+          28359
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 28350,
+        "level": 1,
+        "icon": "head_rs_2835",
+        "consumes": [
+          {
+            "id": 835,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28350,
+        "cpSkill": 28352,
+        "cpSkillDesc": 1128351,
+        "desc": 1228352,
+        "cpDressId": 28360,
+        "fashionIds": [
+          80128351,
+          80128352,
+          80128353,
+          80128359
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28350,
+        "level": 2,
+        "icon": "head_rs_2835",
+        "consumes": [
+          {
+            "id": 835,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28350,
+        "cpSkill": 28353,
+        "cpSkillDesc": 1128351,
+        "desc": 1228353,
+        "cpDressId": 28360,
+        "fashionIds": [
+          80228351,
+          80228352,
+          80228353,
+          80228359
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "3": {
+        "id": 28350,
+        "level": 3,
+        "icon": "head_rs_2835",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28350,
+        "cpSkill": 28354,
+        "cpSkillDesc": 1128351,
+        "desc": 1228354,
+        "cpDressId": 28360,
+        "fashionIds": [
+          80328351,
+          80328352,
+          80328353,
+          80328359
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "28360": {
+      "0": {
+        "id": 28360,
+        "level": 0,
+        "icon": "head_rs_2836",
+        "consumes": [
+          {
+            "id": 836,
+            "count": 100
+          }
+        ],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28360,
+        "cpSkill": 28361,
+        "cpSkillDesc": 1128361,
+        "desc": 1228361,
+        "cpDressId": 28350,
+        "fashionIds": [
+          28361,
+          28362,
+          28363,
+          28369
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 2,
+        "showTypeTw": 2
+      },
+      "1": {
+        "id": 28360,
+        "level": 1,
+        "icon": "head_rs_2836",
+        "consumes": [
+          {
+            "id": 836,
+            "count": 150
+          }
+        ],
+        "attrs": {
+          "51": 520,
+          "52": 390,
+          "53": 390
+        },
+        "skillId": 28360,
+        "cpSkill": 28362,
+        "cpSkillDesc": 1128361,
+        "desc": 1228362,
+        "cpDressId": 28350,
+        "fashionIds": [
+          80128361,
+          80128362,
+          80128363,
+          80128369
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "2": {
+        "id": 28360,
+        "level": 2,
+        "icon": "head_rs_2836",
+        "consumes": [
+          {
+            "id": 836,
+            "count": 250
+          }
+        ],
+        "attrs": {
+          "51": 640,
+          "52": 480,
+          "53": 480
+        },
+        "skillId": 28360,
+        "cpSkill": 28363,
+        "cpSkillDesc": 1128361,
+        "desc": 1228363,
+        "cpDressId": 28350,
+        "fashionIds": [
+          80228361,
+          80228362,
+          80228363,
+          80228369
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "3": {
+        "id": 28360,
+        "level": 3,
+        "icon": "head_rs_2836",
+        "consumes": [],
+        "attrs": {
+          "51": 800,
+          "52": 600,
+          "53": 600
+        },
+        "skillId": 28360,
+        "cpSkill": 28364,
+        "cpSkillDesc": 1128361,
+        "desc": 1228364,
+        "cpDressId": 28350,
+        "fashionIds": [
+          80328361,
+          80328362,
+          80328363,
+          80328369
+        ],
+        "banTypeIds": [
+          301,
+          302,
+          303,
+          309,
+          2,
+          5,
+          17,
+          305
+        ],
+        "soundEffect": 1,
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "28990": {
+      "0": {
+        "id": 28990,
+        "level": 0,
+        "icon": "head_rs_2800",
+        "consumes": [],
+        "attrs": {
+          "51": 400,
+          "52": 300,
+          "53": 300
+        },
+        "skillId": 28000,
+        "cpSkill": 28001,
+        "cpSkillDesc": 1128001,
+        "cpDressId": 28010,
+        "fashionIds": [
+          28002,
+          28003,
+          28009
+        ],
+        "banTypeIds": [
+          302,
+          303,
+          309,
+          2,
+          5,
+          305
+        ],
+        "showType": 2,
+        "showTypeTw": 2,
+        "area": 1
+      }
+    }
+  }
+}

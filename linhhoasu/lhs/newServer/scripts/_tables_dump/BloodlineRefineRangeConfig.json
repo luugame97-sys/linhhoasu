@@ -1,0 +1,192 @@
+{
+  "_table": "BloodlineRefineRangeConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "quality,score,rollBackCost,rollBackDiamondCost",
+  "_sample": [
+    {
+      "1": {
+        "quality": 1,
+        "score": 10,
+        "rollBackCost": [
+          {
+            "id": 2,
+            "count": 1000
+          }
+        ],
+        "rollBackDiamondCost": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "quality": 2,
+        "score": 20,
+        "rollBackCost": [
+          {
+            "id": 2,
+            "count": 2000
+          }
+        ],
+        "rollBackDiamondCost": [
+          {
+            "id": 1,
+            "count": 20
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "quality": 3,
+        "score": 30,
+        "rollBackCost": [
+          {
+            "id": 2,
+            "count": 3000
+          }
+        ],
+        "rollBackDiamondCost": [
+          {
+            "id": 1,
+            "count": 30
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "quality": 1,
+      "score": 10,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 1000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ]
+    },
+    "2": {
+      "quality": 2,
+      "score": 20,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 2000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    "3": {
+      "quality": 3,
+      "score": 30,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 3000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ]
+    },
+    "4": {
+      "quality": 4,
+      "score": 50,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 4000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ]
+    },
+    "5": {
+      "quality": 5,
+      "score": 80,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 5000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ]
+    },
+    "6": {
+      "quality": 6,
+      "score": 120,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 6000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 60
+        }
+      ]
+    },
+    "7": {
+      "quality": 7,
+      "score": 200,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 7000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 70
+        }
+      ]
+    },
+    "9": {
+      "quality": 9,
+      "score": 300,
+      "rollBackCost": [
+        {
+          "id": 2,
+          "count": 9000
+        }
+      ],
+      "rollBackDiamondCost": [
+        {
+          "id": 1,
+          "count": 90
+        }
+      ]
+    }
+  }
+}

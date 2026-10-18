@@ -1,0 +1,382 @@
+{
+  "_table": "RoleKungFuConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,inJob,jobIcon,unlockLv,nameIcon,icon,resource,color,lineColor,tags,ifShow,atkId,skillId,skillUnlockLv,atkType,equipBasicAttrParam,rewards",
+  "_sample": [
+    {
+      "0": {
+        "id": 0,
+        "inJob": 0,
+        "jobIcon": "",
+        "unlockLv": 1,
+        "nameIcon": "",
+        "icon": "",
+        "resource": "sp_cr_zhujue01",
+        "color": "",
+        "lineColor": "",
+        "tags": [],
+        "ifShow": 0,
+        "atkId": 1002,
+        "skillId": [],
+        "skillUnlockLv": [],
+        "atkType": 2,
+        "equipBasicAttrParam": {
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100
+        },
+        "rewards": []
+      }
+    },
+    {
+      "1": {
+        "id": 1,
+        "inJob": 3,
+        "jobIcon": "ui_mg_bm_1_s",
+        "unlockLv": 1,
+        "nameIcon": "create_txt_1",
+        "icon": "create_head_1",
+        "resource": "sp_cr_zhujue01",
+        "color": "662d9b",
+        "lineColor": "8D30EC",
+        "tags": [
+          30030139,
+          30030140
+        ],
+        "ifShow": 1,
+        "atkId": 1002,
+        "skillId": [],
+        "skillUnlockLv": [
+          3,
+          23,
+          43,
+          63
+        ],
+        "atkType": 2,
+        "equipBasicAttrParam": {
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100
+        },
+        "rewards": [
+          {
+            "id": 11301,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "inJob": 0,
+        "jobIcon": "",
+        "unlockLv": 1,
+        "nameIcon": "create_txt_2",
+        "icon": "create_head_2",
+        "resource": "sp_cr_zhujue01",
+        "color": "",
+        "lineColor": "",
+        "tags": [],
+        "ifShow": 0,
+        "atkId": 1002,
+        "skillId": [],
+        "skillUnlockLv": [
+          3,
+          23,
+          43,
+          63
+        ],
+        "atkType": 2,
+        "equipBasicAttrParam": {
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100
+        },
+        "rewards": [
+          {
+            "id": 11302,
+            "count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "id": 0,
+      "inJob": 0,
+      "jobIcon": "",
+      "unlockLv": 1,
+      "nameIcon": "",
+      "icon": "",
+      "resource": "sp_cr_zhujue01",
+      "color": "",
+      "lineColor": "",
+      "tags": [],
+      "ifShow": 0,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": []
+    },
+    "1": {
+      "id": 1,
+      "inJob": 3,
+      "jobIcon": "ui_mg_bm_1_s",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_1",
+      "icon": "create_head_1",
+      "resource": "sp_cr_zhujue01",
+      "color": "662d9b",
+      "lineColor": "8D30EC",
+      "tags": [
+        30030139,
+        30030140
+      ],
+      "ifShow": 1,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11301,
+          "count": 1
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "inJob": 0,
+      "jobIcon": "",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_2",
+      "icon": "create_head_2",
+      "resource": "sp_cr_zhujue01",
+      "color": "",
+      "lineColor": "",
+      "tags": [],
+      "ifShow": 0,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11302,
+          "count": 1
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "inJob": 8,
+      "jobIcon": "ui_mg_bm_3_s",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_3",
+      "icon": "create_head_3",
+      "resource": "sp_cr_zhujue01",
+      "color": "",
+      "lineColor": "",
+      "tags": [],
+      "ifShow": 1,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11303,
+          "count": 1
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "inJob": 1,
+      "jobIcon": "ui_mg_bm_4_s",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_4",
+      "icon": "create_head_4",
+      "resource": "sp_cr_zhujue01",
+      "color": "365623",
+      "lineColor": "6EEC30",
+      "tags": [
+        30030141,
+        30030142
+      ],
+      "ifShow": 1,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11304,
+          "count": 1
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "inJob": 6,
+      "jobIcon": "ui_mg_bm_5_s",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_5",
+      "icon": "create_head_5",
+      "resource": "sp_cr_zhujue01",
+      "color": "3a67a3",
+      "lineColor": "2EDAFF",
+      "tags": [
+        30030143,
+        30030144
+      ],
+      "ifShow": 1,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11305,
+          "count": 1
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "inJob": 4,
+      "jobIcon": "ui_mg_bm_6_s",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_6",
+      "icon": "create_head_6",
+      "resource": "sp_cr_zhujue01",
+      "color": "",
+      "lineColor": "",
+      "tags": [],
+      "ifShow": 1,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11306,
+          "count": 1
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "inJob": 5,
+      "jobIcon": "ui_mg_bm_8_s",
+      "unlockLv": 1,
+      "nameIcon": "create_txt_8",
+      "icon": "create_head_8",
+      "resource": "sp_cr_zhujue01",
+      "color": "",
+      "lineColor": "",
+      "tags": [],
+      "ifShow": 1,
+      "atkId": 1002,
+      "skillId": [],
+      "skillUnlockLv": [
+        3,
+        23,
+        43,
+        63
+      ],
+      "atkType": 2,
+      "equipBasicAttrParam": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100
+      },
+      "rewards": [
+        {
+          "id": 11308,
+          "count": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "_table": "FateLevelConfig",
+  "_rows": 81,
+  "_type": "object",
+  "_firstKeys": "level,playerLevel,count,showCount",
+  "_sample": [
+    {
+      "1": {
+        "level": 1,
+        "playerLevel": 33,
+        "count": 10,
+        "showCount": 10
+      }
+    },
+    {
+      "2": {
+        "level": 2,
+        "playerLevel": 36,
+        "count": 11,
+        "showCount": 1
+      }
+    },
+    {
+      "3": {
+        "level": 3,
+        "playerLevel": 39,
+        "count": 12,
+        "showCount": 1
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "level": 1,
+      "playerLevel": 33,
+      "count": 10,
+      "showCount": 10
+    },
+    "2": {
+      "level": 2,
+      "playerLevel": 36,
+      "count": 11,
+      "showCount": 1
+    },
+    "3": {
+      "level": 3,
+      "playerLevel": 39,
+      "count": 12,
+      "showCount": 1
+    },
+    "4": {
+      "level": 4,
+      "playerLevel": 42,
+      "count": 13,
+      "showCount": 1
+    },
+    "5": {
+      "level": 5,
+      "playerLevel": 45,
+      "count": 14,
+      "showCount": 1
+    },
+    "6": {
+      "level": 6,
+      "playerLevel": 48,
+      "count": 15,
+      "showCount": 1
+    },
+    "7": {
+      "level": 7,
+      "playerLevel": 51,
+      "count": 16,
+      "showCount": 1
+    },
+    "8": {
+      "level": 8,
+      "playerLevel": 54,
+      "count": 17,
+      "showCount": 1
+    },
+    "9": {
+      "level": 9,
+      "playerLevel": 57,
+      "count": 18,
+      "showCount": 1
+    },
+    "10": {
+      "level": 10,
+      "playerLevel": 60,
+      "count": 19,
+      "showCount": 1
+    },
+    "11": {
+      "level": 11,
+      "playerLevel": 63,
+      "count": 20,
+      "showCount": 1
+    },
+    "12": {
+      "level": 12,
+      "playerLevel": 66,
+      "count": 21,
+      "showCount": 1
+    },
+    "13": {
+      "level": 13,
+      "playerLevel": 69,
+      "count": 22,
+      "showCount": 1
+    },
+    "14": {
+      "level": 14,
+      "playerLevel": 72,
+      "count": 23,
+      "showCount": 1
+    },
+    "15": {
+      "level": 15,
+      "playerLevel": 75,
+      "count": 24,
+      "showCount": 1
+    },
+    "16": {
+      "level": 16,
+      "playerLevel": 78,
+      "count": 25,
+      "showCount": 1
+    },
+    "17": {
+      "level": 17,
+      "playerLevel": 81,
+      "count": 26,
+      "showCount": 1
+    },
+    "18": {
+      "level": 18,
+      "playerLevel": 84,
+      "count": 27,
+      "showCount": 1
+    },
+    "19": {
+      "level": 19,
+      "playerLevel": 87,
+      "count": 28,
+      "showCount": 1
+    },
+    "20": {
+      "level": 20,
+      "playerLevel": 90,
+      "count": 29,
+      "showCount": 1
+    },
+    "21": {
+      "level": 21,
+      "playerLevel": 93,
+      "count": 30,
+      "showCount": 1
+    },
+    "22": {
+      "level": 22,
+      "playerLevel": 96,
+      "count": 31,
+      "showCount": 1
+    },
+    "23": {
+      "level": 23,
+      "playerLevel": 99,
+      "count": 32,
+      "showCount": 1
+    },
+    "24": {
+      "level": 24,
+      "playerLevel": 102,
+      "count": 33,
+      "showCount": 1
+    },
+    "25": {
+      "level": 25,
+      "playerLevel": 105,
+      "count": 34,
+      "showCount": 1
+    },
+    "26": {
+      "level": 26,
+      "playerLevel": 108,
+      "count": 35,
+      "showCount": 1
+    },
+    "27": {
+      "level": 27,
+      "playerLevel": 111,
+      "count": 36,
+      "showCount": 1
+    },
+    "28": {
+      "level": 28,
+      "playerLevel": 114,
+      "count": 37,
+      "showCount": 1
+    },
+    "29": {
+      "level": 29,
+      "playerLevel": 117,
+      "count": 38,
+      "showCount": 1
+    },
+    "30": {
+      "level": 30,
+      "playerLevel": 120,
+      "count": 39,
+      "showCount": 1
+    },
+    "31": {
+      "level": 31,
+      "playerLevel": 123,
+      "count": 40,
+      "showCount": 1
+    },
+    "32": {
+      "level": 32,
+      "playerLevel": 126,
+      "count": 41,
+      "showCount": 1
+    },
+    "33": {
+      "level": 33,
+      "playerLevel": 129,
+      "count": 42,
+      "showCount": 1
+    },
+    "34": {
+      "level": 34,
+      "playerLevel": 132,
+      "count": 43,
+      "showCount": 1
+    },
+    "35": {
+      "level": 35,
+      "playerLevel": 135,
+      "count": 44,
+      "showCount": 1
+    },
+    "36": {
+      "level": 36,
+      "playerLevel": 138,
+      "count": 45,
+      "showCount": 1
+    },
+    "37": {
+      "level": 37,
+      "playerLevel": 141,
+      "count": 46,
+      "showCount": 1
+    },
+    "38": {
+      "level": 38,
+      "playerLevel": 144,
+      "count": 47,
+      "showCount": 1
+    },
+    "39": {
+      "level": 39,
+      "playerLevel": 147,
+      "count": 48,
+      "showCount": 1
+    },
+    "40": {
+      "level": 40,
+      "playerLevel": 150,
+      "count": 49,
+      "showCount": 1
+    },
+    "41": {
+      "level": 41,
+      "playerLevel": 153,
+      "count": 50,
+      "showCount": 1
+    },
+    "42": {
+      "level": 42,
+      "playerLevel": 156,
+      "count": 51,
+      "showCount": 1
+    },
+    "43": {
+      "level": 43,
+      "playerLevel": 159,
+      "count": 52,
+      "showCount": 1
+    },
+    "44": {
+      "level": 44,
+      "playerLevel": 162,
+      "count": 53,
+      "showCount": 1
+    },
+    "45": {
+      "level": 45,
+      "playerLevel": 165,
+      "count": 54,
+      "showCount": 1
+    },
+    "46": {
+      "level": 46,
+      "playerLevel": 168,
+      "count": 55,
+      "showCount": 1
+    },
+    "47": {
+      "level": 47,
+      "playerLevel": 171,
+      "count": 56,
+      "showCount": 1
+    },
+    "48": {
+      "level": 48,
+      "playerLevel": 174,
+      "count": 57,
+      "showCount": 1
+    },
+    "49": {
+      "level": 49,
+      "playerLevel": 177,
+      "count": 58,
+      "showCount": 1
+    },
+    "50": {
+      "level": 50,
+      "playerLevel": 180,
+      "count": 59,
+      "showCount": 1
+    },
+    "51": {
+      "level": 51,
+      "playerLevel": 183,
+      "count": 60,
+      "showCount": 1
+    },
+    "52": {
+      "level": 52,
+      "playerLevel": 186,
+      "count": 61,
+      "showCount": 1
+    },
+    "53": {
+      "level": 53,
+      "playerLevel": 189,
+      "count": 62,
+      "showCount": 1
+    },
+    "54": {
+      "level": 54,
+      "playerLevel": 192,
+      "count": 63,
+      "showCount": 1
+    },
+    "55": {
+      "level": 55,
+      "playerLevel": 195,
+      "count": 64,
+      "showCount": 1
+    },
+    "56": {
+      "level": 56,
+      "playerLevel": 198,
+      "count": 65,
+      "showCount": 1
+    },
+    "57": {
+      "level": 57,
+      "playerLevel": 201,
+      "count": 66,
+      "showCount": 1
+    },
+    "58": {
+      "level": 58,
+      "playerLevel": 204,
+      "count": 67,
+      "showCount": 1
+    },
+    "59": {
+      "level": 59,
+      "playerLevel": 207,
+      "count": 68,
+      "showCount": 1
+    },
+    "60": {
+      "level": 60,
+      "playerLevel": 210,
+      "count": 69,
+      "showCount": 1
+    },
+    "61": {
+      "level": 61,
+      "playerLevel": 213,
+      "count": 70,
+      "showCount": 1
+    },
+    "62": {
+      "level": 62,
+      "playerLevel": 216,
+      "count": 71,
+      "showCount": 1
+    },
+    "63": {
+      "level": 63,
+      "playerLevel": 219,
+      "count": 72,
+      "showCount": 1
+    },
+    "64": {
+      "level": 64,
+      "playerLevel": 222,
+      "count": 73,
+      "showCount": 1
+    },
+    "65": {
+      "level": 65,
+      "playerLevel": 225,
+      "count": 74,
+      "showCount": 1
+    },
+    "66": {
+      "level": 66,
+      "playerLevel": 228,
+      "count": 75,
+      "showCount": 1
+    },
+    "67": {
+      "level": 67,
+      "playerLevel": 231,
+      "count": 76,
+      "showCount": 1
+    },
+    "68": {
+      "level": 68,
+      "playerLevel": 234,
+      "count": 77,
+      "showCount": 1
+    },
+    "69": {
+      "level": 69,
+      "playerLevel": 237,
+      "count": 78,
+      "showCount": 1
+    },
+    "70": {
+      "level": 70,
+      "playerLevel": 240,
+      "count": 79,
+      "showCount": 1
+    },
+    "71": {
+      "level": 71,
+      "playerLevel": 243,
+      "count": 80,
+      "showCount": 1
+    },
+    "72": {
+      "level": 72,
+      "playerLevel": 246,
+      "count": 81,
+      "showCount": 1
+    },
+    "73": {
+      "level": 73,
+      "playerLevel": 249,
+      "count": 82,
+      "showCount": 1
+    },
+    "74": {
+      "level": 74,
+      "playerLevel": 252,
+      "count": 83,
+      "showCount": 1
+    },
+    "75": {
+      "level": 75,
+      "playerLevel": 255,
+      "count": 84,
+      "showCount": 1
+    },
+    "76": {
+      "level": 76,
+      "playerLevel": 258,
+      "count": 85,
+      "showCount": 1
+    },
+    "77": {
+      "level": 77,
+      "playerLevel": 261,
+      "count": 86,
+      "showCount": 1
+    },
+    "78": {
+      "level": 78,
+      "playerLevel": 264,
+      "count": 87,
+      "showCount": 1
+    },
+    "79": {
+      "level": 79,
+      "playerLevel": 267,
+      "count": 88,
+      "showCount": 1
+    },
+    "80": {
+      "level": 80,
+      "playerLevel": 270,
+      "count": 89,
+      "showCount": 1
+    },
+    "81": {
+      "level": 81,
+      "playerLevel": 273,
+      "count": 90,
+      "showCount": 1
+    }
+  }
+}

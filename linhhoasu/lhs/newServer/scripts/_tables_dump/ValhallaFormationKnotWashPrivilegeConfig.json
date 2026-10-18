@@ -1,0 +1,172 @@
+{
+  "_table": "ValhallaFormationKnotWashPrivilegeConfig",
+  "_rows": 9,
+  "_type": "object",
+  "_firstKeys": "id,useQuality,privilege,showType,priority",
+  "_sample": [
+    {
+      "234": {
+        "id": 234,
+        "useQuality": [
+          1,
+          7
+        ],
+        "privilege": {
+          "13": 1
+        },
+        "showType": 1,
+        "priority": 3
+      }
+    },
+    {
+      "235": {
+        "id": 235,
+        "useQuality": [
+          1,
+          7
+        ],
+        "privilege": {
+          "999": 1
+        },
+        "showType": 1,
+        "priority": 1
+      }
+    },
+    {
+      "236": {
+        "id": 236,
+        "useQuality": [
+          7,
+          7
+        ],
+        "privilege": {
+          "12": 1
+        },
+        "showType": 1,
+        "priority": 2
+      }
+    }
+  ],
+  "data": {
+    "234": {
+      "id": 234,
+      "useQuality": [
+        1,
+        7
+      ],
+      "privilege": {
+        "13": 1
+      },
+      "showType": 1,
+      "priority": 3
+    },
+    "235": {
+      "id": 235,
+      "useQuality": [
+        1,
+        7
+      ],
+      "privilege": {
+        "999": 1
+      },
+      "showType": 1,
+      "priority": 1
+    },
+    "236": {
+      "id": 236,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1
+      },
+      "showType": 1,
+      "priority": 2
+    },
+    "237": {
+      "id": 237,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1,
+        "21": 1,
+        "32": 1
+      },
+      "showType": 2,
+      "priority": 6
+    },
+    "238": {
+      "id": 238,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1,
+        "22": 1,
+        "32": 1
+      },
+      "showType": 1,
+      "priority": 4
+    },
+    "239": {
+      "id": 239,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1,
+        "31": 1
+      },
+      "showType": 1,
+      "priority": 5
+    },
+    "240": {
+      "id": 240,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1,
+        "31": 1,
+        "42": 2
+      },
+      "showType": 2,
+      "priority": 7
+    },
+    "241": {
+      "id": 241,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1,
+        "31": 1,
+        "42": 3
+      },
+      "showType": 2,
+      "priority": 8
+    },
+    "242": {
+      "id": 242,
+      "useQuality": [
+        7,
+        7
+      ],
+      "privilege": {
+        "12": 1,
+        "21": 1,
+        "31": 1,
+        "41": 1
+      },
+      "showType": 2,
+      "priority": 9
+    }
+  }
+}

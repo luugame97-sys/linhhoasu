@@ -1,0 +1,8564 @@
+{
+  "_table": "OrbLevelCostConfig",
+  "_rows": 200,
+  "_type": "object",
+  "_firstKeys": "4,6,7",
+  "_sample": [
+    {
+      "1": {
+        "4": {
+          "level": 1,
+          "quality": 4,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 10
+          }
+        },
+        "6": {
+          "level": 1,
+          "quality": 6,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 16
+          }
+        },
+        "7": {
+          "level": 1,
+          "quality": 7,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 20
+          }
+        }
+      }
+    },
+    {
+      "2": {
+        "4": {
+          "level": 2,
+          "quality": 4,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 12
+          }
+        },
+        "6": {
+          "level": 2,
+          "quality": 6,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 20
+          }
+        },
+        "7": {
+          "level": 2,
+          "quality": 7,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 24
+          }
+        }
+      }
+    },
+    {
+      "3": {
+        "4": {
+          "level": 3,
+          "quality": 4,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 14
+          }
+        },
+        "6": {
+          "level": 3,
+          "quality": 6,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 23
+          }
+        },
+        "7": {
+          "level": 3,
+          "quality": 7,
+          "consumes": [
+            {
+              "id": 205,
+              "count": 50
+            }
+          ],
+          "attr": {
+            "9": 28
+          }
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "4": {
+        "level": 1,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 10
+        }
+      },
+      "6": {
+        "level": 1,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 16
+        }
+      },
+      "7": {
+        "level": 1,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 20
+        }
+      }
+    },
+    "2": {
+      "4": {
+        "level": 2,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 12
+        }
+      },
+      "6": {
+        "level": 2,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 20
+        }
+      },
+      "7": {
+        "level": 2,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 24
+        }
+      }
+    },
+    "3": {
+      "4": {
+        "level": 3,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 14
+        }
+      },
+      "6": {
+        "level": 3,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 23
+        }
+      },
+      "7": {
+        "level": 3,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 28
+        }
+      }
+    },
+    "4": {
+      "4": {
+        "level": 4,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 16
+        }
+      },
+      "6": {
+        "level": 4,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 26
+        }
+      },
+      "7": {
+        "level": 4,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 32
+        }
+      }
+    },
+    "5": {
+      "4": {
+        "level": 5,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 18
+        }
+      },
+      "6": {
+        "level": 5,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 29
+        }
+      },
+      "7": {
+        "level": 5,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 36
+        }
+      }
+    },
+    "6": {
+      "4": {
+        "level": 6,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 20
+        }
+      },
+      "6": {
+        "level": 6,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 33
+        }
+      },
+      "7": {
+        "level": 6,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 40
+        }
+      }
+    },
+    "7": {
+      "4": {
+        "level": 7,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 22
+        }
+      },
+      "6": {
+        "level": 7,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 36
+        }
+      },
+      "7": {
+        "level": 7,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 44
+        }
+      }
+    },
+    "8": {
+      "4": {
+        "level": 8,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 24
+        }
+      },
+      "6": {
+        "level": 8,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 39
+        }
+      },
+      "7": {
+        "level": 8,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 50
+          }
+        ],
+        "attr": {
+          "9": 48
+        }
+      }
+    },
+    "9": {
+      "4": {
+        "level": 9,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          },
+          {
+            "id": 206,
+            "count": 55
+          }
+        ],
+        "attr": {
+          "9": 26
+        }
+      },
+      "6": {
+        "level": 9,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          },
+          {
+            "id": 206,
+            "count": 55
+          }
+        ],
+        "attr": {
+          "9": 42
+        }
+      },
+      "7": {
+        "level": 9,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          },
+          {
+            "id": 206,
+            "count": 55
+          }
+        ],
+        "attr": {
+          "9": 52
+        }
+      }
+    },
+    "10": {
+      "4": {
+        "level": 10,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 28
+        }
+      },
+      "6": {
+        "level": 10,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 46
+        }
+      },
+      "7": {
+        "level": 10,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 56
+        }
+      }
+    },
+    "11": {
+      "4": {
+        "level": 11,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 30
+        }
+      },
+      "6": {
+        "level": 11,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 49
+        }
+      },
+      "7": {
+        "level": 11,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 60
+        }
+      }
+    },
+    "12": {
+      "4": {
+        "level": 12,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 32
+        }
+      },
+      "6": {
+        "level": 12,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 52
+        }
+      },
+      "7": {
+        "level": 12,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 64
+        }
+      }
+    },
+    "13": {
+      "4": {
+        "level": 13,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 34
+        }
+      },
+      "6": {
+        "level": 13,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 55
+        }
+      },
+      "7": {
+        "level": 13,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 68
+        }
+      }
+    },
+    "14": {
+      "4": {
+        "level": 14,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 36
+        }
+      },
+      "6": {
+        "level": 14,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 59
+        }
+      },
+      "7": {
+        "level": 14,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 72
+        }
+      }
+    },
+    "15": {
+      "4": {
+        "level": 15,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 38
+        }
+      },
+      "6": {
+        "level": 15,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 62
+        }
+      },
+      "7": {
+        "level": 15,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 76
+        }
+      }
+    },
+    "16": {
+      "4": {
+        "level": 16,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 40
+        }
+      },
+      "6": {
+        "level": 16,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 65
+        }
+      },
+      "7": {
+        "level": 16,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 80
+        }
+      }
+    },
+    "17": {
+      "4": {
+        "level": 17,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 42
+        }
+      },
+      "6": {
+        "level": 17,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 68
+        }
+      },
+      "7": {
+        "level": 17,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 84
+        }
+      }
+    },
+    "18": {
+      "4": {
+        "level": 18,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 44
+        }
+      },
+      "6": {
+        "level": 18,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 72
+        }
+      },
+      "7": {
+        "level": 18,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 60
+          }
+        ],
+        "attr": {
+          "9": 88
+        }
+      }
+    },
+    "19": {
+      "4": {
+        "level": 19,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          },
+          {
+            "id": 206,
+            "count": 65
+          }
+        ],
+        "attr": {
+          "9": 46
+        }
+      },
+      "6": {
+        "level": 19,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          },
+          {
+            "id": 206,
+            "count": 65
+          }
+        ],
+        "attr": {
+          "9": 75
+        }
+      },
+      "7": {
+        "level": 19,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          },
+          {
+            "id": 206,
+            "count": 65
+          }
+        ],
+        "attr": {
+          "9": 92
+        }
+      }
+    },
+    "20": {
+      "4": {
+        "level": 20,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 50
+        }
+      },
+      "6": {
+        "level": 20,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 81
+        }
+      },
+      "7": {
+        "level": 20,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 100
+        }
+      }
+    },
+    "21": {
+      "4": {
+        "level": 21,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 54
+        }
+      },
+      "6": {
+        "level": 21,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 88
+        }
+      },
+      "7": {
+        "level": 21,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 108
+        }
+      }
+    },
+    "22": {
+      "4": {
+        "level": 22,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 58
+        }
+      },
+      "6": {
+        "level": 22,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 94
+        }
+      },
+      "7": {
+        "level": 22,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 116
+        }
+      }
+    },
+    "23": {
+      "4": {
+        "level": 23,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 62
+        }
+      },
+      "6": {
+        "level": 23,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 101
+        }
+      },
+      "7": {
+        "level": 23,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 124
+        }
+      }
+    },
+    "24": {
+      "4": {
+        "level": 24,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 66
+        }
+      },
+      "6": {
+        "level": 24,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 107
+        }
+      },
+      "7": {
+        "level": 24,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 132
+        }
+      }
+    },
+    "25": {
+      "4": {
+        "level": 25,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 70
+        }
+      },
+      "6": {
+        "level": 25,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 114
+        }
+      },
+      "7": {
+        "level": 25,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 140
+        }
+      }
+    },
+    "26": {
+      "4": {
+        "level": 26,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 74
+        }
+      },
+      "6": {
+        "level": 26,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 120
+        }
+      },
+      "7": {
+        "level": 26,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 148
+        }
+      }
+    },
+    "27": {
+      "4": {
+        "level": 27,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 78
+        }
+      },
+      "6": {
+        "level": 27,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 127
+        }
+      },
+      "7": {
+        "level": 27,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 156
+        }
+      }
+    },
+    "28": {
+      "4": {
+        "level": 28,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 82
+        }
+      },
+      "6": {
+        "level": 28,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 133
+        }
+      },
+      "7": {
+        "level": 28,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 75
+          }
+        ],
+        "attr": {
+          "9": 164
+        }
+      }
+    },
+    "29": {
+      "4": {
+        "level": 29,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          },
+          {
+            "id": 206,
+            "count": 85
+          }
+        ],
+        "attr": {
+          "9": 86
+        }
+      },
+      "6": {
+        "level": 29,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          },
+          {
+            "id": 206,
+            "count": 85
+          }
+        ],
+        "attr": {
+          "9": 140
+        }
+      },
+      "7": {
+        "level": 29,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          },
+          {
+            "id": 206,
+            "count": 85
+          }
+        ],
+        "attr": {
+          "9": 172
+        }
+      }
+    },
+    "30": {
+      "4": {
+        "level": 30,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 90
+        }
+      },
+      "6": {
+        "level": 30,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 146
+        }
+      },
+      "7": {
+        "level": 30,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 180
+        }
+      }
+    },
+    "31": {
+      "4": {
+        "level": 31,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 94
+        }
+      },
+      "6": {
+        "level": 31,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 153
+        }
+      },
+      "7": {
+        "level": 31,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 188
+        }
+      }
+    },
+    "32": {
+      "4": {
+        "level": 32,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 98
+        }
+      },
+      "6": {
+        "level": 32,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 159
+        }
+      },
+      "7": {
+        "level": 32,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 196
+        }
+      }
+    },
+    "33": {
+      "4": {
+        "level": 33,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 102
+        }
+      },
+      "6": {
+        "level": 33,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 166
+        }
+      },
+      "7": {
+        "level": 33,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 204
+        }
+      }
+    },
+    "34": {
+      "4": {
+        "level": 34,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 106
+        }
+      },
+      "6": {
+        "level": 34,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 172
+        }
+      },
+      "7": {
+        "level": 34,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 212
+        }
+      }
+    },
+    "35": {
+      "4": {
+        "level": 35,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 110
+        }
+      },
+      "6": {
+        "level": 35,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 179
+        }
+      },
+      "7": {
+        "level": 35,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 220
+        }
+      }
+    },
+    "36": {
+      "4": {
+        "level": 36,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 114
+        }
+      },
+      "6": {
+        "level": 36,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 185
+        }
+      },
+      "7": {
+        "level": 36,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 228
+        }
+      }
+    },
+    "37": {
+      "4": {
+        "level": 37,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 118
+        }
+      },
+      "6": {
+        "level": 37,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 192
+        }
+      },
+      "7": {
+        "level": 37,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 236
+        }
+      }
+    },
+    "38": {
+      "4": {
+        "level": 38,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 122
+        }
+      },
+      "6": {
+        "level": 38,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 198
+        }
+      },
+      "7": {
+        "level": 38,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 95
+          }
+        ],
+        "attr": {
+          "9": 244
+        }
+      }
+    },
+    "39": {
+      "4": {
+        "level": 39,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          },
+          {
+            "id": 206,
+            "count": 110
+          }
+        ],
+        "attr": {
+          "9": 126
+        }
+      },
+      "6": {
+        "level": 39,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          },
+          {
+            "id": 206,
+            "count": 110
+          }
+        ],
+        "attr": {
+          "9": 205
+        }
+      },
+      "7": {
+        "level": 39,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          },
+          {
+            "id": 206,
+            "count": 110
+          }
+        ],
+        "attr": {
+          "9": 252
+        }
+      }
+    },
+    "40": {
+      "4": {
+        "level": 40,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 132
+        }
+      },
+      "6": {
+        "level": 40,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 215
+        }
+      },
+      "7": {
+        "level": 40,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 264
+        }
+      }
+    },
+    "41": {
+      "4": {
+        "level": 41,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 138
+        }
+      },
+      "6": {
+        "level": 41,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 224
+        }
+      },
+      "7": {
+        "level": 41,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 276
+        }
+      }
+    },
+    "42": {
+      "4": {
+        "level": 42,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 144
+        }
+      },
+      "6": {
+        "level": 42,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 234
+        }
+      },
+      "7": {
+        "level": 42,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 288
+        }
+      }
+    },
+    "43": {
+      "4": {
+        "level": 43,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 150
+        }
+      },
+      "6": {
+        "level": 43,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 244
+        }
+      },
+      "7": {
+        "level": 43,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 300
+        }
+      }
+    },
+    "44": {
+      "4": {
+        "level": 44,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 156
+        }
+      },
+      "6": {
+        "level": 44,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 254
+        }
+      },
+      "7": {
+        "level": 44,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 312
+        }
+      }
+    },
+    "45": {
+      "4": {
+        "level": 45,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 162
+        }
+      },
+      "6": {
+        "level": 45,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 263
+        }
+      },
+      "7": {
+        "level": 45,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 324
+        }
+      }
+    },
+    "46": {
+      "4": {
+        "level": 46,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 168
+        }
+      },
+      "6": {
+        "level": 46,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 273
+        }
+      },
+      "7": {
+        "level": 46,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 336
+        }
+      }
+    },
+    "47": {
+      "4": {
+        "level": 47,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 174
+        }
+      },
+      "6": {
+        "level": 47,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 283
+        }
+      },
+      "7": {
+        "level": 47,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 348
+        }
+      }
+    },
+    "48": {
+      "4": {
+        "level": 48,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 180
+        }
+      },
+      "6": {
+        "level": 48,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 293
+        }
+      },
+      "7": {
+        "level": 48,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 120
+          }
+        ],
+        "attr": {
+          "9": 360
+        }
+      }
+    },
+    "49": {
+      "4": {
+        "level": 49,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          },
+          {
+            "id": 206,
+            "count": 135
+          }
+        ],
+        "attr": {
+          "9": 186
+        }
+      },
+      "6": {
+        "level": 49,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          },
+          {
+            "id": 206,
+            "count": 135
+          }
+        ],
+        "attr": {
+          "9": 302
+        }
+      },
+      "7": {
+        "level": 49,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          },
+          {
+            "id": 206,
+            "count": 135
+          }
+        ],
+        "attr": {
+          "9": 372
+        }
+      }
+    },
+    "50": {
+      "4": {
+        "level": 50,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 192
+        }
+      },
+      "6": {
+        "level": 50,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 312
+        }
+      },
+      "7": {
+        "level": 50,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 384
+        }
+      }
+    },
+    "51": {
+      "4": {
+        "level": 51,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 198
+        }
+      },
+      "6": {
+        "level": 51,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 322
+        }
+      },
+      "7": {
+        "level": 51,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 396
+        }
+      }
+    },
+    "52": {
+      "4": {
+        "level": 52,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 204
+        }
+      },
+      "6": {
+        "level": 52,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 332
+        }
+      },
+      "7": {
+        "level": 52,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 408
+        }
+      }
+    },
+    "53": {
+      "4": {
+        "level": 53,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 210
+        }
+      },
+      "6": {
+        "level": 53,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 341
+        }
+      },
+      "7": {
+        "level": 53,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 420
+        }
+      }
+    },
+    "54": {
+      "4": {
+        "level": 54,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 216
+        }
+      },
+      "6": {
+        "level": 54,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 351
+        }
+      },
+      "7": {
+        "level": 54,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 432
+        }
+      }
+    },
+    "55": {
+      "4": {
+        "level": 55,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 222
+        }
+      },
+      "6": {
+        "level": 55,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 361
+        }
+      },
+      "7": {
+        "level": 55,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 444
+        }
+      }
+    },
+    "56": {
+      "4": {
+        "level": 56,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 228
+        }
+      },
+      "6": {
+        "level": 56,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 371
+        }
+      },
+      "7": {
+        "level": 56,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 456
+        }
+      }
+    },
+    "57": {
+      "4": {
+        "level": 57,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 234
+        }
+      },
+      "6": {
+        "level": 57,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 380
+        }
+      },
+      "7": {
+        "level": 57,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 468
+        }
+      }
+    },
+    "58": {
+      "4": {
+        "level": 58,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 240
+        }
+      },
+      "6": {
+        "level": 58,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 390
+        }
+      },
+      "7": {
+        "level": 58,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 150
+          }
+        ],
+        "attr": {
+          "9": 480
+        }
+      }
+    },
+    "59": {
+      "4": {
+        "level": 59,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          },
+          {
+            "id": 206,
+            "count": 165
+          }
+        ],
+        "attr": {
+          "9": 246
+        }
+      },
+      "6": {
+        "level": 59,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          },
+          {
+            "id": 206,
+            "count": 165
+          }
+        ],
+        "attr": {
+          "9": 400
+        }
+      },
+      "7": {
+        "level": 59,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          },
+          {
+            "id": 206,
+            "count": 165
+          }
+        ],
+        "attr": {
+          "9": 492
+        }
+      }
+    },
+    "60": {
+      "4": {
+        "level": 60,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 254
+        }
+      },
+      "6": {
+        "level": 60,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 413
+        }
+      },
+      "7": {
+        "level": 60,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 508
+        }
+      }
+    },
+    "61": {
+      "4": {
+        "level": 61,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 262
+        }
+      },
+      "6": {
+        "level": 61,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 426
+        }
+      },
+      "7": {
+        "level": 61,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 524
+        }
+      }
+    },
+    "62": {
+      "4": {
+        "level": 62,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 270
+        }
+      },
+      "6": {
+        "level": 62,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 439
+        }
+      },
+      "7": {
+        "level": 62,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 540
+        }
+      }
+    },
+    "63": {
+      "4": {
+        "level": 63,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 278
+        }
+      },
+      "6": {
+        "level": 63,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 452
+        }
+      },
+      "7": {
+        "level": 63,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 556
+        }
+      }
+    },
+    "64": {
+      "4": {
+        "level": 64,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 286
+        }
+      },
+      "6": {
+        "level": 64,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 465
+        }
+      },
+      "7": {
+        "level": 64,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 572
+        }
+      }
+    },
+    "65": {
+      "4": {
+        "level": 65,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 294
+        }
+      },
+      "6": {
+        "level": 65,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 478
+        }
+      },
+      "7": {
+        "level": 65,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 588
+        }
+      }
+    },
+    "66": {
+      "4": {
+        "level": 66,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 302
+        }
+      },
+      "6": {
+        "level": 66,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 491
+        }
+      },
+      "7": {
+        "level": 66,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 604
+        }
+      }
+    },
+    "67": {
+      "4": {
+        "level": 67,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 310
+        }
+      },
+      "6": {
+        "level": 67,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 504
+        }
+      },
+      "7": {
+        "level": 67,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 620
+        }
+      }
+    },
+    "68": {
+      "4": {
+        "level": 68,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 318
+        }
+      },
+      "6": {
+        "level": 68,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 517
+        }
+      },
+      "7": {
+        "level": 68,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 185
+          }
+        ],
+        "attr": {
+          "9": 636
+        }
+      }
+    },
+    "69": {
+      "4": {
+        "level": 69,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          },
+          {
+            "id": 206,
+            "count": 200
+          }
+        ],
+        "attr": {
+          "9": 326
+        }
+      },
+      "6": {
+        "level": 69,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          },
+          {
+            "id": 206,
+            "count": 200
+          }
+        ],
+        "attr": {
+          "9": 530
+        }
+      },
+      "7": {
+        "level": 69,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          },
+          {
+            "id": 206,
+            "count": 200
+          }
+        ],
+        "attr": {
+          "9": 652
+        }
+      }
+    },
+    "70": {
+      "4": {
+        "level": 70,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 334
+        }
+      },
+      "6": {
+        "level": 70,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 543
+        }
+      },
+      "7": {
+        "level": 70,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 668
+        }
+      }
+    },
+    "71": {
+      "4": {
+        "level": 71,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 342
+        }
+      },
+      "6": {
+        "level": 71,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 556
+        }
+      },
+      "7": {
+        "level": 71,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 684
+        }
+      }
+    },
+    "72": {
+      "4": {
+        "level": 72,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 350
+        }
+      },
+      "6": {
+        "level": 72,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 569
+        }
+      },
+      "7": {
+        "level": 72,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 700
+        }
+      }
+    },
+    "73": {
+      "4": {
+        "level": 73,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 358
+        }
+      },
+      "6": {
+        "level": 73,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 582
+        }
+      },
+      "7": {
+        "level": 73,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 716
+        }
+      }
+    },
+    "74": {
+      "4": {
+        "level": 74,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 366
+        }
+      },
+      "6": {
+        "level": 74,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 595
+        }
+      },
+      "7": {
+        "level": 74,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 732
+        }
+      }
+    },
+    "75": {
+      "4": {
+        "level": 75,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 374
+        }
+      },
+      "6": {
+        "level": 75,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 608
+        }
+      },
+      "7": {
+        "level": 75,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 748
+        }
+      }
+    },
+    "76": {
+      "4": {
+        "level": 76,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 382
+        }
+      },
+      "6": {
+        "level": 76,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 621
+        }
+      },
+      "7": {
+        "level": 76,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 764
+        }
+      }
+    },
+    "77": {
+      "4": {
+        "level": 77,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 390
+        }
+      },
+      "6": {
+        "level": 77,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 634
+        }
+      },
+      "7": {
+        "level": 77,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 780
+        }
+      }
+    },
+    "78": {
+      "4": {
+        "level": 78,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 398
+        }
+      },
+      "6": {
+        "level": 78,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 647
+        }
+      },
+      "7": {
+        "level": 78,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 225
+          }
+        ],
+        "attr": {
+          "9": 796
+        }
+      }
+    },
+    "79": {
+      "4": {
+        "level": 79,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          },
+          {
+            "id": 206,
+            "count": 240
+          }
+        ],
+        "attr": {
+          "9": 406
+        }
+      },
+      "6": {
+        "level": 79,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          },
+          {
+            "id": 206,
+            "count": 240
+          }
+        ],
+        "attr": {
+          "9": 660
+        }
+      },
+      "7": {
+        "level": 79,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          },
+          {
+            "id": 206,
+            "count": 240
+          }
+        ],
+        "attr": {
+          "9": 812
+        }
+      }
+    },
+    "80": {
+      "4": {
+        "level": 80,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 416
+        }
+      },
+      "6": {
+        "level": 80,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 676
+        }
+      },
+      "7": {
+        "level": 80,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 832
+        }
+      }
+    },
+    "81": {
+      "4": {
+        "level": 81,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 426
+        }
+      },
+      "6": {
+        "level": 81,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 692
+        }
+      },
+      "7": {
+        "level": 81,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 852
+        }
+      }
+    },
+    "82": {
+      "4": {
+        "level": 82,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 436
+        }
+      },
+      "6": {
+        "level": 82,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 709
+        }
+      },
+      "7": {
+        "level": 82,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 872
+        }
+      }
+    },
+    "83": {
+      "4": {
+        "level": 83,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 446
+        }
+      },
+      "6": {
+        "level": 83,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 725
+        }
+      },
+      "7": {
+        "level": 83,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 892
+        }
+      }
+    },
+    "84": {
+      "4": {
+        "level": 84,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 456
+        }
+      },
+      "6": {
+        "level": 84,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 741
+        }
+      },
+      "7": {
+        "level": 84,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 912
+        }
+      }
+    },
+    "85": {
+      "4": {
+        "level": 85,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 466
+        }
+      },
+      "6": {
+        "level": 85,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 757
+        }
+      },
+      "7": {
+        "level": 85,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 932
+        }
+      }
+    },
+    "86": {
+      "4": {
+        "level": 86,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 476
+        }
+      },
+      "6": {
+        "level": 86,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 774
+        }
+      },
+      "7": {
+        "level": 86,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 952
+        }
+      }
+    },
+    "87": {
+      "4": {
+        "level": 87,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 486
+        }
+      },
+      "6": {
+        "level": 87,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 790
+        }
+      },
+      "7": {
+        "level": 87,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 972
+        }
+      }
+    },
+    "88": {
+      "4": {
+        "level": 88,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 496
+        }
+      },
+      "6": {
+        "level": 88,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 806
+        }
+      },
+      "7": {
+        "level": 88,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 270
+          }
+        ],
+        "attr": {
+          "9": 992
+        }
+      }
+    },
+    "89": {
+      "4": {
+        "level": 89,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          },
+          {
+            "id": 206,
+            "count": 285
+          }
+        ],
+        "attr": {
+          "9": 506
+        }
+      },
+      "6": {
+        "level": 89,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          },
+          {
+            "id": 206,
+            "count": 285
+          }
+        ],
+        "attr": {
+          "9": 822
+        }
+      },
+      "7": {
+        "level": 89,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          },
+          {
+            "id": 206,
+            "count": 285
+          }
+        ],
+        "attr": {
+          "9": 1012
+        }
+      }
+    },
+    "90": {
+      "4": {
+        "level": 90,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 516
+        }
+      },
+      "6": {
+        "level": 90,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 839
+        }
+      },
+      "7": {
+        "level": 90,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1032
+        }
+      }
+    },
+    "91": {
+      "4": {
+        "level": 91,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 526
+        }
+      },
+      "6": {
+        "level": 91,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 855
+        }
+      },
+      "7": {
+        "level": 91,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1052
+        }
+      }
+    },
+    "92": {
+      "4": {
+        "level": 92,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 536
+        }
+      },
+      "6": {
+        "level": 92,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 871
+        }
+      },
+      "7": {
+        "level": 92,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1072
+        }
+      }
+    },
+    "93": {
+      "4": {
+        "level": 93,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 546
+        }
+      },
+      "6": {
+        "level": 93,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 887
+        }
+      },
+      "7": {
+        "level": 93,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1092
+        }
+      }
+    },
+    "94": {
+      "4": {
+        "level": 94,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 556
+        }
+      },
+      "6": {
+        "level": 94,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 904
+        }
+      },
+      "7": {
+        "level": 94,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1112
+        }
+      }
+    },
+    "95": {
+      "4": {
+        "level": 95,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 566
+        }
+      },
+      "6": {
+        "level": 95,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 920
+        }
+      },
+      "7": {
+        "level": 95,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1132
+        }
+      }
+    },
+    "96": {
+      "4": {
+        "level": 96,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 576
+        }
+      },
+      "6": {
+        "level": 96,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 936
+        }
+      },
+      "7": {
+        "level": 96,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1152
+        }
+      }
+    },
+    "97": {
+      "4": {
+        "level": 97,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 586
+        }
+      },
+      "6": {
+        "level": 97,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 952
+        }
+      },
+      "7": {
+        "level": 97,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1172
+        }
+      }
+    },
+    "98": {
+      "4": {
+        "level": 98,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 596
+        }
+      },
+      "6": {
+        "level": 98,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 969
+        }
+      },
+      "7": {
+        "level": 98,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 320
+          }
+        ],
+        "attr": {
+          "9": 1192
+        }
+      }
+    },
+    "99": {
+      "4": {
+        "level": 99,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          },
+          {
+            "id": 206,
+            "count": 335
+          }
+        ],
+        "attr": {
+          "9": 606
+        }
+      },
+      "6": {
+        "level": 99,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          },
+          {
+            "id": 206,
+            "count": 335
+          }
+        ],
+        "attr": {
+          "9": 985
+        }
+      },
+      "7": {
+        "level": 99,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          },
+          {
+            "id": 206,
+            "count": 335
+          }
+        ],
+        "attr": {
+          "9": 1212
+        }
+      }
+    },
+    "100": {
+      "4": {
+        "level": 100,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 618
+        }
+      },
+      "6": {
+        "level": 100,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1004
+        }
+      },
+      "7": {
+        "level": 100,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1236
+        }
+      }
+    },
+    "101": {
+      "4": {
+        "level": 101,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 630
+        }
+      },
+      "6": {
+        "level": 101,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1024
+        }
+      },
+      "7": {
+        "level": 101,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1260
+        }
+      }
+    },
+    "102": {
+      "4": {
+        "level": 102,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 642
+        }
+      },
+      "6": {
+        "level": 102,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1043
+        }
+      },
+      "7": {
+        "level": 102,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1284
+        }
+      }
+    },
+    "103": {
+      "4": {
+        "level": 103,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 654
+        }
+      },
+      "6": {
+        "level": 103,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1063
+        }
+      },
+      "7": {
+        "level": 103,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1308
+        }
+      }
+    },
+    "104": {
+      "4": {
+        "level": 104,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 666
+        }
+      },
+      "6": {
+        "level": 104,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1082
+        }
+      },
+      "7": {
+        "level": 104,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1332
+        }
+      }
+    },
+    "105": {
+      "4": {
+        "level": 105,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 678
+        }
+      },
+      "6": {
+        "level": 105,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1102
+        }
+      },
+      "7": {
+        "level": 105,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1356
+        }
+      }
+    },
+    "106": {
+      "4": {
+        "level": 106,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 690
+        }
+      },
+      "6": {
+        "level": 106,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1121
+        }
+      },
+      "7": {
+        "level": 106,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1380
+        }
+      }
+    },
+    "107": {
+      "4": {
+        "level": 107,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 702
+        }
+      },
+      "6": {
+        "level": 107,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1141
+        }
+      },
+      "7": {
+        "level": 107,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1404
+        }
+      }
+    },
+    "108": {
+      "4": {
+        "level": 108,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 714
+        }
+      },
+      "6": {
+        "level": 108,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1160
+        }
+      },
+      "7": {
+        "level": 108,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 375
+          }
+        ],
+        "attr": {
+          "9": 1428
+        }
+      }
+    },
+    "109": {
+      "4": {
+        "level": 109,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          },
+          {
+            "id": 206,
+            "count": 390
+          }
+        ],
+        "attr": {
+          "9": 726
+        }
+      },
+      "6": {
+        "level": 109,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          },
+          {
+            "id": 206,
+            "count": 390
+          }
+        ],
+        "attr": {
+          "9": 1180
+        }
+      },
+      "7": {
+        "level": 109,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          },
+          {
+            "id": 206,
+            "count": 390
+          }
+        ],
+        "attr": {
+          "9": 1452
+        }
+      }
+    },
+    "110": {
+      "4": {
+        "level": 110,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 738
+        }
+      },
+      "6": {
+        "level": 110,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1199
+        }
+      },
+      "7": {
+        "level": 110,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1476
+        }
+      }
+    },
+    "111": {
+      "4": {
+        "level": 111,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 750
+        }
+      },
+      "6": {
+        "level": 111,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1219
+        }
+      },
+      "7": {
+        "level": 111,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1500
+        }
+      }
+    },
+    "112": {
+      "4": {
+        "level": 112,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 762
+        }
+      },
+      "6": {
+        "level": 112,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1238
+        }
+      },
+      "7": {
+        "level": 112,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1524
+        }
+      }
+    },
+    "113": {
+      "4": {
+        "level": 113,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 774
+        }
+      },
+      "6": {
+        "level": 113,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1258
+        }
+      },
+      "7": {
+        "level": 113,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1548
+        }
+      }
+    },
+    "114": {
+      "4": {
+        "level": 114,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 786
+        }
+      },
+      "6": {
+        "level": 114,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1277
+        }
+      },
+      "7": {
+        "level": 114,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1572
+        }
+      }
+    },
+    "115": {
+      "4": {
+        "level": 115,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 798
+        }
+      },
+      "6": {
+        "level": 115,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1297
+        }
+      },
+      "7": {
+        "level": 115,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1596
+        }
+      }
+    },
+    "116": {
+      "4": {
+        "level": 116,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 810
+        }
+      },
+      "6": {
+        "level": 116,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1316
+        }
+      },
+      "7": {
+        "level": 116,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1620
+        }
+      }
+    },
+    "117": {
+      "4": {
+        "level": 117,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 822
+        }
+      },
+      "6": {
+        "level": 117,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1336
+        }
+      },
+      "7": {
+        "level": 117,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1644
+        }
+      }
+    },
+    "118": {
+      "4": {
+        "level": 118,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 834
+        }
+      },
+      "6": {
+        "level": 118,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1355
+        }
+      },
+      "7": {
+        "level": 118,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 435
+          }
+        ],
+        "attr": {
+          "9": 1668
+        }
+      }
+    },
+    "119": {
+      "4": {
+        "level": 119,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          },
+          {
+            "id": 206,
+            "count": 445
+          }
+        ],
+        "attr": {
+          "9": 846
+        }
+      },
+      "6": {
+        "level": 119,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          },
+          {
+            "id": 206,
+            "count": 445
+          }
+        ],
+        "attr": {
+          "9": 1375
+        }
+      },
+      "7": {
+        "level": 119,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          },
+          {
+            "id": 206,
+            "count": 445
+          }
+        ],
+        "attr": {
+          "9": 1692
+        }
+      }
+    },
+    "120": {
+      "4": {
+        "level": 120,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 860
+        }
+      },
+      "6": {
+        "level": 120,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1398
+        }
+      },
+      "7": {
+        "level": 120,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1720
+        }
+      }
+    },
+    "121": {
+      "4": {
+        "level": 121,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 874
+        }
+      },
+      "6": {
+        "level": 121,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1420
+        }
+      },
+      "7": {
+        "level": 121,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1748
+        }
+      }
+    },
+    "122": {
+      "4": {
+        "level": 122,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 888
+        }
+      },
+      "6": {
+        "level": 122,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1443
+        }
+      },
+      "7": {
+        "level": 122,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1776
+        }
+      }
+    },
+    "123": {
+      "4": {
+        "level": 123,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 902
+        }
+      },
+      "6": {
+        "level": 123,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1466
+        }
+      },
+      "7": {
+        "level": 123,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1804
+        }
+      }
+    },
+    "124": {
+      "4": {
+        "level": 124,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 916
+        }
+      },
+      "6": {
+        "level": 124,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1489
+        }
+      },
+      "7": {
+        "level": 124,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1832
+        }
+      }
+    },
+    "125": {
+      "4": {
+        "level": 125,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 930
+        }
+      },
+      "6": {
+        "level": 125,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1511
+        }
+      },
+      "7": {
+        "level": 125,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1860
+        }
+      }
+    },
+    "126": {
+      "4": {
+        "level": 126,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 944
+        }
+      },
+      "6": {
+        "level": 126,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1534
+        }
+      },
+      "7": {
+        "level": 126,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1888
+        }
+      }
+    },
+    "127": {
+      "4": {
+        "level": 127,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 958
+        }
+      },
+      "6": {
+        "level": 127,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1557
+        }
+      },
+      "7": {
+        "level": 127,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1916
+        }
+      }
+    },
+    "128": {
+      "4": {
+        "level": 128,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 972
+        }
+      },
+      "6": {
+        "level": 128,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1580
+        }
+      },
+      "7": {
+        "level": 128,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 500
+          }
+        ],
+        "attr": {
+          "9": 1944
+        }
+      }
+    },
+    "129": {
+      "4": {
+        "level": 129,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          },
+          {
+            "id": 206,
+            "count": 510
+          }
+        ],
+        "attr": {
+          "9": 986
+        }
+      },
+      "6": {
+        "level": 129,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          },
+          {
+            "id": 206,
+            "count": 510
+          }
+        ],
+        "attr": {
+          "9": 1602
+        }
+      },
+      "7": {
+        "level": 129,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          },
+          {
+            "id": 206,
+            "count": 510
+          }
+        ],
+        "attr": {
+          "9": 1972
+        }
+      }
+    },
+    "130": {
+      "4": {
+        "level": 130,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1000
+        }
+      },
+      "6": {
+        "level": 130,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1625
+        }
+      },
+      "7": {
+        "level": 130,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2000
+        }
+      }
+    },
+    "131": {
+      "4": {
+        "level": 131,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1014
+        }
+      },
+      "6": {
+        "level": 131,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1648
+        }
+      },
+      "7": {
+        "level": 131,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2028
+        }
+      }
+    },
+    "132": {
+      "4": {
+        "level": 132,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1028
+        }
+      },
+      "6": {
+        "level": 132,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1671
+        }
+      },
+      "7": {
+        "level": 132,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2056
+        }
+      }
+    },
+    "133": {
+      "4": {
+        "level": 133,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1042
+        }
+      },
+      "6": {
+        "level": 133,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1693
+        }
+      },
+      "7": {
+        "level": 133,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2084
+        }
+      }
+    },
+    "134": {
+      "4": {
+        "level": 134,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1056
+        }
+      },
+      "6": {
+        "level": 134,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1716
+        }
+      },
+      "7": {
+        "level": 134,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2112
+        }
+      }
+    },
+    "135": {
+      "4": {
+        "level": 135,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1070
+        }
+      },
+      "6": {
+        "level": 135,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1739
+        }
+      },
+      "7": {
+        "level": 135,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2140
+        }
+      }
+    },
+    "136": {
+      "4": {
+        "level": 136,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1084
+        }
+      },
+      "6": {
+        "level": 136,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1762
+        }
+      },
+      "7": {
+        "level": 136,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2168
+        }
+      }
+    },
+    "137": {
+      "4": {
+        "level": 137,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1098
+        }
+      },
+      "6": {
+        "level": 137,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1784
+        }
+      },
+      "7": {
+        "level": 137,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2196
+        }
+      }
+    },
+    "138": {
+      "4": {
+        "level": 138,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1112
+        }
+      },
+      "6": {
+        "level": 138,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 1807
+        }
+      },
+      "7": {
+        "level": 138,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 570
+          }
+        ],
+        "attr": {
+          "9": 2224
+        }
+      }
+    },
+    "139": {
+      "4": {
+        "level": 139,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          },
+          {
+            "id": 206,
+            "count": 575
+          }
+        ],
+        "attr": {
+          "9": 1126
+        }
+      },
+      "6": {
+        "level": 139,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          },
+          {
+            "id": 206,
+            "count": 575
+          }
+        ],
+        "attr": {
+          "9": 1830
+        }
+      },
+      "7": {
+        "level": 139,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          },
+          {
+            "id": 206,
+            "count": 575
+          }
+        ],
+        "attr": {
+          "9": 2252
+        }
+      }
+    },
+    "140": {
+      "4": {
+        "level": 140,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1142
+        }
+      },
+      "6": {
+        "level": 140,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1856
+        }
+      },
+      "7": {
+        "level": 140,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2284
+        }
+      }
+    },
+    "141": {
+      "4": {
+        "level": 141,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1158
+        }
+      },
+      "6": {
+        "level": 141,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1882
+        }
+      },
+      "7": {
+        "level": 141,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2316
+        }
+      }
+    },
+    "142": {
+      "4": {
+        "level": 142,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1174
+        }
+      },
+      "6": {
+        "level": 142,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1908
+        }
+      },
+      "7": {
+        "level": 142,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2348
+        }
+      }
+    },
+    "143": {
+      "4": {
+        "level": 143,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1190
+        }
+      },
+      "6": {
+        "level": 143,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1934
+        }
+      },
+      "7": {
+        "level": 143,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2380
+        }
+      }
+    },
+    "144": {
+      "4": {
+        "level": 144,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1206
+        }
+      },
+      "6": {
+        "level": 144,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1960
+        }
+      },
+      "7": {
+        "level": 144,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2412
+        }
+      }
+    },
+    "145": {
+      "4": {
+        "level": 145,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1222
+        }
+      },
+      "6": {
+        "level": 145,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1986
+        }
+      },
+      "7": {
+        "level": 145,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2444
+        }
+      }
+    },
+    "146": {
+      "4": {
+        "level": 146,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1238
+        }
+      },
+      "6": {
+        "level": 146,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2012
+        }
+      },
+      "7": {
+        "level": 146,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2476
+        }
+      }
+    },
+    "147": {
+      "4": {
+        "level": 147,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1254
+        }
+      },
+      "6": {
+        "level": 147,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2038
+        }
+      },
+      "7": {
+        "level": 147,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2508
+        }
+      }
+    },
+    "148": {
+      "4": {
+        "level": 148,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1270
+        }
+      },
+      "6": {
+        "level": 148,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2064
+        }
+      },
+      "7": {
+        "level": 148,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2540
+        }
+      }
+    },
+    "149": {
+      "4": {
+        "level": 149,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          },
+          {
+            "id": 206,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 1286
+        }
+      },
+      "6": {
+        "level": 149,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          },
+          {
+            "id": 206,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2090
+        }
+      },
+      "7": {
+        "level": 149,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          },
+          {
+            "id": 206,
+            "count": 645
+          }
+        ],
+        "attr": {
+          "9": 2572
+        }
+      }
+    },
+    "150": {
+      "4": {
+        "level": 150,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1302
+        }
+      },
+      "6": {
+        "level": 150,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2116
+        }
+      },
+      "7": {
+        "level": 150,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2604
+        }
+      }
+    },
+    "151": {
+      "4": {
+        "level": 151,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1318
+        }
+      },
+      "6": {
+        "level": 151,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2142
+        }
+      },
+      "7": {
+        "level": 151,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2636
+        }
+      }
+    },
+    "152": {
+      "4": {
+        "level": 152,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1334
+        }
+      },
+      "6": {
+        "level": 152,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2168
+        }
+      },
+      "7": {
+        "level": 152,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2668
+        }
+      }
+    },
+    "153": {
+      "4": {
+        "level": 153,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1350
+        }
+      },
+      "6": {
+        "level": 153,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2194
+        }
+      },
+      "7": {
+        "level": 153,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2700
+        }
+      }
+    },
+    "154": {
+      "4": {
+        "level": 154,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1366
+        }
+      },
+      "6": {
+        "level": 154,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2220
+        }
+      },
+      "7": {
+        "level": 154,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2732
+        }
+      }
+    },
+    "155": {
+      "4": {
+        "level": 155,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1382
+        }
+      },
+      "6": {
+        "level": 155,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2246
+        }
+      },
+      "7": {
+        "level": 155,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2764
+        }
+      }
+    },
+    "156": {
+      "4": {
+        "level": 156,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1398
+        }
+      },
+      "6": {
+        "level": 156,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2272
+        }
+      },
+      "7": {
+        "level": 156,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2796
+        }
+      }
+    },
+    "157": {
+      "4": {
+        "level": 157,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1414
+        }
+      },
+      "6": {
+        "level": 157,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2298
+        }
+      },
+      "7": {
+        "level": 157,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2828
+        }
+      }
+    },
+    "158": {
+      "4": {
+        "level": 158,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1430
+        }
+      },
+      "6": {
+        "level": 158,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2324
+        }
+      },
+      "7": {
+        "level": 158,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2860
+        }
+      }
+    },
+    "159": {
+      "4": {
+        "level": 159,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          },
+          {
+            "id": 206,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 1446
+        }
+      },
+      "6": {
+        "level": 159,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          },
+          {
+            "id": 206,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2350
+        }
+      },
+      "7": {
+        "level": 159,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          },
+          {
+            "id": 206,
+            "count": 725
+          }
+        ],
+        "attr": {
+          "9": 2892
+        }
+      }
+    },
+    "160": {
+      "4": {
+        "level": 160,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1464
+        }
+      },
+      "6": {
+        "level": 160,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2379
+        }
+      },
+      "7": {
+        "level": 160,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2928
+        }
+      }
+    },
+    "161": {
+      "4": {
+        "level": 161,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1482
+        }
+      },
+      "6": {
+        "level": 161,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2408
+        }
+      },
+      "7": {
+        "level": 161,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2964
+        }
+      }
+    },
+    "162": {
+      "4": {
+        "level": 162,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1500
+        }
+      },
+      "6": {
+        "level": 162,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2438
+        }
+      },
+      "7": {
+        "level": 162,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3000
+        }
+      }
+    },
+    "163": {
+      "4": {
+        "level": 163,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1518
+        }
+      },
+      "6": {
+        "level": 163,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2467
+        }
+      },
+      "7": {
+        "level": 163,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3036
+        }
+      }
+    },
+    "164": {
+      "4": {
+        "level": 164,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1536
+        }
+      },
+      "6": {
+        "level": 164,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2496
+        }
+      },
+      "7": {
+        "level": 164,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3072
+        }
+      }
+    },
+    "165": {
+      "4": {
+        "level": 165,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1554
+        }
+      },
+      "6": {
+        "level": 165,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2525
+        }
+      },
+      "7": {
+        "level": 165,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3108
+        }
+      }
+    },
+    "166": {
+      "4": {
+        "level": 166,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1572
+        }
+      },
+      "6": {
+        "level": 166,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2555
+        }
+      },
+      "7": {
+        "level": 166,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3144
+        }
+      }
+    },
+    "167": {
+      "4": {
+        "level": 167,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1590
+        }
+      },
+      "6": {
+        "level": 167,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2584
+        }
+      },
+      "7": {
+        "level": 167,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3180
+        }
+      }
+    },
+    "168": {
+      "4": {
+        "level": 168,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 1608
+        }
+      },
+      "6": {
+        "level": 168,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 2613
+        }
+      },
+      "7": {
+        "level": 168,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 810
+          }
+        ],
+        "attr": {
+          "9": 3216
+        }
+      }
+    },
+    "169": {
+      "4": {
+        "level": 169,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          },
+          {
+            "id": 206,
+            "count": 805
+          }
+        ],
+        "attr": {
+          "9": 1626
+        }
+      },
+      "6": {
+        "level": 169,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          },
+          {
+            "id": 206,
+            "count": 805
+          }
+        ],
+        "attr": {
+          "9": 2642
+        }
+      },
+      "7": {
+        "level": 169,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          },
+          {
+            "id": 206,
+            "count": 805
+          }
+        ],
+        "attr": {
+          "9": 3252
+        }
+      }
+    },
+    "170": {
+      "4": {
+        "level": 170,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1644
+        }
+      },
+      "6": {
+        "level": 170,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2672
+        }
+      },
+      "7": {
+        "level": 170,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3288
+        }
+      }
+    },
+    "171": {
+      "4": {
+        "level": 171,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1662
+        }
+      },
+      "6": {
+        "level": 171,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2701
+        }
+      },
+      "7": {
+        "level": 171,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3324
+        }
+      }
+    },
+    "172": {
+      "4": {
+        "level": 172,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1680
+        }
+      },
+      "6": {
+        "level": 172,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2730
+        }
+      },
+      "7": {
+        "level": 172,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3360
+        }
+      }
+    },
+    "173": {
+      "4": {
+        "level": 173,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1698
+        }
+      },
+      "6": {
+        "level": 173,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2759
+        }
+      },
+      "7": {
+        "level": 173,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3396
+        }
+      }
+    },
+    "174": {
+      "4": {
+        "level": 174,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1716
+        }
+      },
+      "6": {
+        "level": 174,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2789
+        }
+      },
+      "7": {
+        "level": 174,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3432
+        }
+      }
+    },
+    "175": {
+      "4": {
+        "level": 175,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1734
+        }
+      },
+      "6": {
+        "level": 175,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2818
+        }
+      },
+      "7": {
+        "level": 175,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3468
+        }
+      }
+    },
+    "176": {
+      "4": {
+        "level": 176,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1752
+        }
+      },
+      "6": {
+        "level": 176,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2847
+        }
+      },
+      "7": {
+        "level": 176,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3504
+        }
+      }
+    },
+    "177": {
+      "4": {
+        "level": 177,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1770
+        }
+      },
+      "6": {
+        "level": 177,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2876
+        }
+      },
+      "7": {
+        "level": 177,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3540
+        }
+      }
+    },
+    "178": {
+      "4": {
+        "level": 178,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 1788
+        }
+      },
+      "6": {
+        "level": 178,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 2906
+        }
+      },
+      "7": {
+        "level": 178,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 900
+          }
+        ],
+        "attr": {
+          "9": 3576
+        }
+      }
+    },
+    "179": {
+      "4": {
+        "level": 179,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          },
+          {
+            "id": 206,
+            "count": 890
+          }
+        ],
+        "attr": {
+          "9": 1806
+        }
+      },
+      "6": {
+        "level": 179,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          },
+          {
+            "id": 206,
+            "count": 890
+          }
+        ],
+        "attr": {
+          "9": 2935
+        }
+      },
+      "7": {
+        "level": 179,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          },
+          {
+            "id": 206,
+            "count": 890
+          }
+        ],
+        "attr": {
+          "9": 3612
+        }
+      }
+    },
+    "180": {
+      "4": {
+        "level": 180,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1826
+        }
+      },
+      "6": {
+        "level": 180,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 2967
+        }
+      },
+      "7": {
+        "level": 180,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3652
+        }
+      }
+    },
+    "181": {
+      "4": {
+        "level": 181,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1846
+        }
+      },
+      "6": {
+        "level": 181,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3000
+        }
+      },
+      "7": {
+        "level": 181,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3692
+        }
+      }
+    },
+    "182": {
+      "4": {
+        "level": 182,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1866
+        }
+      },
+      "6": {
+        "level": 182,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3032
+        }
+      },
+      "7": {
+        "level": 182,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3732
+        }
+      }
+    },
+    "183": {
+      "4": {
+        "level": 183,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1886
+        }
+      },
+      "6": {
+        "level": 183,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3065
+        }
+      },
+      "7": {
+        "level": 183,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3772
+        }
+      }
+    },
+    "184": {
+      "4": {
+        "level": 184,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1906
+        }
+      },
+      "6": {
+        "level": 184,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3097
+        }
+      },
+      "7": {
+        "level": 184,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3812
+        }
+      }
+    },
+    "185": {
+      "4": {
+        "level": 185,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1926
+        }
+      },
+      "6": {
+        "level": 185,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3130
+        }
+      },
+      "7": {
+        "level": 185,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3852
+        }
+      }
+    },
+    "186": {
+      "4": {
+        "level": 186,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1946
+        }
+      },
+      "6": {
+        "level": 186,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3162
+        }
+      },
+      "7": {
+        "level": 186,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3892
+        }
+      }
+    },
+    "187": {
+      "4": {
+        "level": 187,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1966
+        }
+      },
+      "6": {
+        "level": 187,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3195
+        }
+      },
+      "7": {
+        "level": 187,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3932
+        }
+      }
+    },
+    "188": {
+      "4": {
+        "level": 188,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 1986
+        }
+      },
+      "6": {
+        "level": 188,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3227
+        }
+      },
+      "7": {
+        "level": 188,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 995
+          }
+        ],
+        "attr": {
+          "9": 3972
+        }
+      }
+    },
+    "189": {
+      "4": {
+        "level": 189,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          },
+          {
+            "id": 206,
+            "count": 975
+          }
+        ],
+        "attr": {
+          "9": 2006
+        }
+      },
+      "6": {
+        "level": 189,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          },
+          {
+            "id": 206,
+            "count": 975
+          }
+        ],
+        "attr": {
+          "9": 3260
+        }
+      },
+      "7": {
+        "level": 189,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          },
+          {
+            "id": 206,
+            "count": 975
+          }
+        ],
+        "attr": {
+          "9": 4012
+        }
+      }
+    },
+    "190": {
+      "4": {
+        "level": 190,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2026
+        }
+      },
+      "6": {
+        "level": 190,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3292
+        }
+      },
+      "7": {
+        "level": 190,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4052
+        }
+      }
+    },
+    "191": {
+      "4": {
+        "level": 191,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2046
+        }
+      },
+      "6": {
+        "level": 191,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3325
+        }
+      },
+      "7": {
+        "level": 191,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4092
+        }
+      }
+    },
+    "192": {
+      "4": {
+        "level": 192,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2066
+        }
+      },
+      "6": {
+        "level": 192,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3357
+        }
+      },
+      "7": {
+        "level": 192,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4132
+        }
+      }
+    },
+    "193": {
+      "4": {
+        "level": 193,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2086
+        }
+      },
+      "6": {
+        "level": 193,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3390
+        }
+      },
+      "7": {
+        "level": 193,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4172
+        }
+      }
+    },
+    "194": {
+      "4": {
+        "level": 194,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2106
+        }
+      },
+      "6": {
+        "level": 194,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3422
+        }
+      },
+      "7": {
+        "level": 194,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4212
+        }
+      }
+    },
+    "195": {
+      "4": {
+        "level": 195,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2126
+        }
+      },
+      "6": {
+        "level": 195,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3455
+        }
+      },
+      "7": {
+        "level": 195,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4252
+        }
+      }
+    },
+    "196": {
+      "4": {
+        "level": 196,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2146
+        }
+      },
+      "6": {
+        "level": 196,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3487
+        }
+      },
+      "7": {
+        "level": 196,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4292
+        }
+      }
+    },
+    "197": {
+      "4": {
+        "level": 197,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2166
+        }
+      },
+      "6": {
+        "level": 197,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3520
+        }
+      },
+      "7": {
+        "level": 197,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4332
+        }
+      }
+    },
+    "198": {
+      "4": {
+        "level": 198,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 2186
+        }
+      },
+      "6": {
+        "level": 198,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 3552
+        }
+      },
+      "7": {
+        "level": 198,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1095
+          }
+        ],
+        "attr": {
+          "9": 4372
+        }
+      }
+    },
+    "199": {
+      "4": {
+        "level": 199,
+        "quality": 4,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1200
+          },
+          {
+            "id": 206,
+            "count": 1070
+          }
+        ],
+        "attr": {
+          "9": 2206
+        }
+      },
+      "6": {
+        "level": 199,
+        "quality": 6,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1200
+          },
+          {
+            "id": 206,
+            "count": 1070
+          }
+        ],
+        "attr": {
+          "9": 3585
+        }
+      },
+      "7": {
+        "level": 199,
+        "quality": 7,
+        "consumes": [
+          {
+            "id": 205,
+            "count": 1200
+          },
+          {
+            "id": 206,
+            "count": 1070
+          }
+        ],
+        "attr": {
+          "9": 4412
+        }
+      }
+    },
+    "200": {
+      "4": {
+        "level": 200,
+        "quality": 4,
+        "consumes": [],
+        "attr": {
+          "9": 2228
+        }
+      },
+      "6": {
+        "level": 200,
+        "quality": 6,
+        "consumes": [],
+        "attr": {
+          "9": 3621
+        }
+      },
+      "7": {
+        "level": 200,
+        "quality": 7,
+        "consumes": [],
+        "attr": {
+          "9": 4456
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_table": "AlchemyBaseConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "(obj)[alchemyDailyCount|pillExp|expPillDailyCount|energyPillDailyCount|typeName]",
+  "_sample": [
+    {
+      "alchemyDailyCount": 9999
+    },
+    {
+      "pillExp": {
+        "id": 41,
+        "count": 10
+      }
+    },
+    {
+      "expPillDailyCount": 10
+    }
+  ],
+  "data": {
+    "alchemyDailyCount": 9999,
+    "pillExp": {
+      "id": 41,
+      "count": 10
+    },
+    "expPillDailyCount": 10,
+    "energyPillDailyCount": 10,
+    "typeName": {
+      "1": 30010201,
+      "2": 30010202,
+      "3": 30010203,
+      "4": 30010204,
+      "5": 30010205,
+      "6": 30010206,
+      "7": 30010207,
+      "8": 30010208,
+      "9": 30010209,
+      "10": 30010210,
+      "11": 30010211,
+      "12": 30010212,
+      "13": 30010213,
+      "14": 30010214,
+      "15": 30010215
+    }
+  }
+}

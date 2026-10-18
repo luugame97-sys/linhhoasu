@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linh Họa Sư — Checkpoint thưởng và thanh toán</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-ti-p-t-c-lu-ng-th-ng-v-thanh-to-n">Session Report — tiếp tục luồng thưởng và thanh toán</h1>
+<p>Ngày 05/09/2026, UTC+7. <strong>Trạng thái: candidate local / HOLD production.</strong> Không triển khai, không sửa ví, DB, nhân vật, lịch S2 hoặc thao tác game.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đọc cấu trúc dự án, phần cập nhật mới nhất của session report, các báo cáo item/reward, S2, giao thư và đề xuất Xu Web. Source game chính là Node.js tại <code>linhhoasu/lhs/newServer</code>; client Egret, dist và admin là các cây riêng. Workspace không có Git tại các cấp đã kiểm.</li>
+<li>Đối chiếu ghi chú cũ với báo cáo hiện tại: Tĩnh lặng 29 ngày, mở ủy thác sau nhiệm vụ đầu, chuyển túi Hồn ngọc và các sửa S2 đã có báo cáo hoàn thành. Không tự làm lại hoặc phát bù giao dịch đã nhận.</li>
+<li>Chọn tiếp CP2 của kế hoạch thưởng: bảo toàn quà native, entitlement và receipt khi cash callback có phiên chơi online. Chưa triển khai đề xuất thanh toán Xu Web vì phương án ví và cách tính quyền lợi chưa chốt.</li>
+<li>Tái hiện hai thiếu sót: sync mặc định chỉ gồm bốn trường ví; sync lại diễn ra sau tạo thư/giao dịch và push, nên lỗi ở bước phụ bỏ qua đồng bộ live state.</li>
+<li>Tạo candidate đồng bộ đủ trường ngay sau khi player save thành công, và trước finalizer khi phục hồi receipt. Giữ mặc định sync của các tính năng khác nguyên trạng; không grant lần hai khi retry.</li>
+<li>Candidate qua 10/10 test phạm vi hẹp và 11 bộ hồi quy liên quan. Tuy nhiên, hai gate ghi dữ liệu đồng thời đều thất bại. Đã tách candidate ra workbench và khôi phục byte-for-byte file source local về trước phiên. <strong>Chưa sửa xong CP2, không có bản release được duyệt.</strong></li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-v-candidate">Source và candidate</h3>
+<ul>
+<li>Source chính <code>linhhoasu/lhs/newServer/src/handlers/recharge.js</code>: đã thử sửa, sau đó chỉ gỡ đúng phần sửa của phiên này bằng patch. SHA-256 cuối khớp backup trước phiên; không giữ bản chưa an toàn ở source chính.</li>
+<li>Candidate chưa được phép deploy: <code>_ai_workbench/temp/cash_session_candidate_20260905/src/handlers/recharge.js</code>.</li>
+<li>README và manifest cạnh candidate ghi rõ HOLD, dependency và cách chạy lại; đây là một file patch phụ thuộc workspace, không phải server standalone.</li>
+<li>Không sửa <code>WSServer.js</code>, <code>PlayerService.js</code>, <code>SessionPlayerSyncService.js</code>, config/client, dist/admin hoặc cây tham chiếu.</li>
+</ul>
+<h3 id="tool-v-b-ng-ch-ng">Tool và bằng chứng</h3>
+<ul>
+<li><code>_ai_workbench/tools/test_cash_session_durability_20260905.js</code>: fixture dùng resolver/grant và SessionPlayerSyncService thật, DB/mail/transaction giả lập; default 10 ca, <code>--writer-gates</code> thêm chế độ riêng gồm hai gate bắt buộc.</li>
+<li><code>_ai_workbench/tools/preload_cash_checkpoint_20260905.js</code>: chỉ dùng trong test, nạp candidate/baseline vào đường dẫn module thật và chặn socket network. Không dùng preload này trong game.</li>
+<li><code>_ai_workbench/tools/run_cash_checkpoint_20260905.js</code>: chạy baseline, candidate và hồi quy, pin config rõ ràng, ghi log/evidence. <strong>Exit 1 khi gate production đỏ</strong>, dù test phạm vi hẹp xanh.</li>
+<li>Evidence cuối: <code>_ai_workbench/temp/cash_session_checkpoint_20260905T134106Z/verification.json</code>, hoàn tất 20:41:13 UTC+7.</li>
+<li>Log cuối: <code>_ai_workbench/logs/cash_session_checkpoint_20260905T134106Z/</code>.</li>
+<li>Backup source và hai session report trước sửa: <code>_ai_workbench/backups/cash_session_durability_20260905_203224/</code>.</li>
+<li>Báo cáo này có cả MD/HTML; session_report.md và session_report.html cũng được cập nhật, giữ nội dung lịch sử.</li>
+</ul>
+<h3 id="hash-ki-m-ch-ng">Hash kiểm chứng</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Artifact</th>
+<th>SHA-256</th>
+</tr></thead><tbody>
+<tr>
+<td>Source recharge gốc và source cuối phiên</td>
+<td><code>43c3fc0eb114d688aea1f64edaa159a0c047c1fb70c1a86be565602864e51ae5</code></td>
+</tr>
+<tr>
+<td>Candidate recharge chưa deploy</td>
+<td><code>dd007bcd4f05e81238a49bc5afe512315e8620e635414986439e851feab87364</code></td>
+</tr>
+<tr>
+<td>Config server pin cho lần kiểm cuối</td>
+<td><code>87ac08c278091f3ff0fd7d7b539af3c7157ec1682ac1cf40f148b17faca27a5e</code></td>
+</tr>
+</tbody></table></div>
+<p>Config cuối dùng <code>_ai_workbench/temp/delegate_first_task_20260905/server.next.bin</code>, là artifact triển khai được ghi trong báo cáo trước. Đây không phải xác minh lại runtime production trong phiên này. Không dùng nhầm config client hoặc chép đè cây tham chiếu.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi / dấu hiệu</th>
+<th>Nguyên nhân, module</th>
+<th>Xử lý trong phiên</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>DB có Bí bảo nhưng phiên online không có; entitlement Activity7001 bị thiếu</td>
+<td>recharge dùng sync không truyền fields; SessionPlayerSyncService mặc định chỉ items/currencies/rechargeInfo/shopInfo</td>
+<td>Candidate truyền danh sách trường cùng với markModified; Curios130601 và entitlement10301 qua test</td>
+<td>Test cả DB và session thật về semantics; không chỉ nhìn rewardInfo</td>
+</tr>
+<tr>
+<td>Mail/transaction finalizer lỗi sau khi player đã save</td>
+<td>sync nằm cuối handler, sau nhiều bước có thể throw</td>
+<td>Candidate sync ngay sau durable save; receipt recovery sync trước finalizer; no-sync nếu save chưa commit</td>
+<td>Inject lỗi save/mail/transaction/push và thử lưu lại từ session</td>
+</tr>
+<tr>
+<td>Đồng bộ cuối callback ghi đè gameplay phát sinh khi chờ mail</td>
+<td>Snapshot callback cũ được dùng lại sau await</td>
+<td>Candidate bỏ lần sync cuối; test thay đổi stage/activity/equip trong lúc finalize giữ nguyên</td>
+<td>Chỉ sync một lần tại mốc đã xác định, không resync mù</td>
+</tr>
+<tr>
+<td>Gate concurrent save: stage1017 bị trả về999, mất activity row</td>
+<td>Copy cả subtree từ DB snapshot trong khi gameplay sửa live object lúc await player.save</td>
+<td><strong>Chưa sửa; gate FAIL</strong>. Candidate bị giữ riêng</td>
+<td>Cần thứ tự mutation/save chung theo player; không coi sync sớm là khóa ghi</td>
+</tr>
+<tr>
+<td>Gate recovery: stage/equip/activity bị lùi, 3375 diamond thành3380</td>
+<td>Retry đọc receipt nhưng copy cả state DB cũ lên RAM chưa flush khoản tiêu5</td>
+<td><strong>Chưa sửa; gate FAIL</strong>. Không đưa vào source chính hoặc production</td>
+<td>Phân biệt receipt đã áp dụng với live state mới; không replay snapshot cũ</td>
+</tr>
+<tr>
+<td>Rủi ro snapshot autosave đã chụp trước thanh toán</td>
+<td>PlayerService clone/queue riêng; recharge dùng player.save trực tiếp</td>
+<td>Đọc rõ đường gọi, ghi gate còn thiếu; chưa có test/giải pháp đạt cho cửa sổ này</td>
+<td>Kiểm queue đang chạy, pending/deferred snapshot, close/reconnect và multi-process</td>
+</tr>
+<tr>
+<td>Test cũ mặc định trỏ staging/config khác</td>
+<td>Nhiều cây source và hai bản config khác hash</td>
+<td>Runner pin source + config; preload chọn candidate/baseline, ghi hash từng test</td>
+<td>Luôn xác minh source thực được nạp và config oracle</td>
+</tr>
+<tr>
+<td>Session report rất lớn, đọc một lần bị cắt output</td>
+<td>Báo cáo khoảng585KB chứa nhiều phiên và trạng thái superseded</td>
+<td>Chuyển sang phần đầu mới nhất, tìm tiêu đề và báo cáo riêng</td>
+<td>Đọc theo checkpoint/thời gian; không lấy đoạn cũ làm trạng thái mới</td>
+</tr>
+<tr>
+<td>PowerShell báo ParserError khi chạy regex kiểm encoding</td>
+<td>Dấu nháy Unicode trong regex của chuỗi node -e bị shell nhận là delimiter</td>
+<td>Chạy lại bằng Unicode escape ASCII; kiểm tra hoàn tất PASS</td>
+<td>Không nhúng dấu nháy cong vào literal shell</td>
+</tr>
+</tbody></table></div>
+<p>Không phát hiện hay sửa lỗi encoding mới trong phần thay đổi. Nội dung báo cáo mới được ghi UTF-8. Không sửa cách viết hoặc khoảng trắng của lịch sử ngoài phạm vi.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li><code>syncSessionPlayer</code> giữ identity của live object nhưng thay nguyên từng subtree. Tên hàm không đảm bảo merge an toàn với gameplay mới.</li>
+<li>Receipt bền vững giúp chống grant lặp chỉ khi receipt và reward không bị snapshot cũ ghi đè. Lock cash callback hiện tại không thay cho queue gameplay hoặc queue DB.</li>
+<li>Kiểm ba trạng thái riêng: tái hiện baseline, candidate qua checkpoint, gate production. Expected RED của baseline không phải lỗi regression; RED của production phải trả exit1 và giữ HOLD.</li>
+<li>Native grant, entitlement, client push, session RAM, DB và upstream payment là các lớp khác nhau. Fixture xanh không thay cho native UI hoặc giao dịch thật.</li>
+<li>Khi phát hiện candidate chưa an toàn, lưu code/test/evidence riêng và khôi phục đúng thay đổi của phiên; không rollout để thử trên người chơi.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="k-t-qu-ki-m-th-cu-i">Kết quả kiểm thử cuối</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Bộ kiểm tra</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Baseline cùng bộ test10 ca</td>
+<td>7 ca FAIL,3 ca PASS: tái hiện lỗi cũ</td>
+</tr>
+<tr>
+<td>Candidate — live state/receipt</td>
+<td>PASS10/10</td>
+</tr>
+<tr>
+<td>Candidate — writer/recovery gates</td>
+<td><strong>FAIL2/2; HOLD; runner exit1</strong></td>
+</tr>
+<tr>
+<td>Cash receipt recovery</td>
+<td>PASS, hai lỗi mail/transaction phục hồi không save/grant lại</td>
+</tr>
+<tr>
+<td>Cash cũ / token cũ</td>
+<td>PASS11 +11 checks</td>
+</tr>
+<tr>
+<td>Activation pass / same-process cash concurrency</td>
+<td>PASS58 assertions +8 checks</td>
+</tr>
+<tr>
+<td>Reward native</td>
+<td>PASS470 asset,940 grant,474 ca rương,150 đan,4 receiver trong VM</td>
+</tr>
+<tr>
+<td>Ngoại quan</td>
+<td>PASS2.192 ID,234 assertions</td>
+</tr>
+<tr>
+<td>Hồn ngọc</td>
+<td>PASS480 draw trên6 cấp; không xác nhận xác suất bản gốc</td>
+</tr>
+<tr>
+<td>Fixed item</td>
+<td>PASS8 hộp emoji/32 ca và Pet100019→85401</td>
+</tr>
+<tr>
+<td>Core / top combat</td>
+<td>PASS714 bảng / PASS</td>
+</tr>
+<tr>
+<td>Syntax</td>
+<td>PASS các JS mới và candidate</td>
+</tr>
+</tbody></table></div>
+<p>Tất cả là local in-memory/contract, không chạy app, không kết nối DB, không login hoặc dùng item của người chơi. Không có live health/hash, payment upstream, restart/relog thật hoặc native UI acceptance mới trong phiên này. Người dùng vẫn giữ phần test game theo chỉ đạo trước.</p>
+<h3 id="backlog-c-gi-ng-tr-ng-th-i">Backlog được giữ đúng trạng thái</h3>
+<ul>
+<li>CP2: tiếp tục xử lý hai writer gate và snapshot autosave đã chụp trước; chưa đủ căn cứ gọi concurrency an toàn.</li>
+<li>Theo báo cáo item mới nhất đã đọc: còn105 fail-closed (102 random,90021/90022,option1 của90151), hai rương cha93065/100803 bị ảnh hưởng;5 pending. Chưa quét lại production hoặc mở bằng pool tự đoán.</li>
+<li>Curios duplicate vẫn cần dữ liệu quy đổi chuẩn; chuyển native lịch sử P4 vẫn là preview, không commit hoặc bù trùng. Việc chuyển túi Hồn ngọc trước đó là checkpoint khác đã có báo cáo hoàn thành.</li>
+<li>Audit bổ sung source/fixture của agent ghi nhận order binding khi chưa có pending global, amount của custom product và thiếu bước push/dist trong recovery cần kiểm ingress/contract riêng. Chưa vá, chưa kết luận đường thanh toán production bị khai thác.</li>
+<li>Xu Web bridge chỉ là đề xuất trước: chưa chọn cách nối, chưa sửa giá/tỷ lệ/VIP/tích nạp hay bật trừ tiền.</li>
+<li>Trạng thái S2, các giao thư hungyen96 và input-freeze không bị thay đổi. Không tự phát bù hoặc khởi động lại cuộc điều tra UI đã tạm dừng.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Ưu tiên thiết kế và kiểm thử một thứ tự mutation/save chung cho cash callback và gameplay của cùng player. Phải xử lý cả snapshot đang chạy/chờ, deferred save và close/reconnect; không chỉ thêm sync hoặc mở rộng field list.</li>
+<li>Làm hai writer gate đang đỏ thành xanh; thêm test autosave đã chụp, retry sau tiêu tiền/nâng trang bị/claim entitlement và lỗi commit chưa rõ. Không tiếp tục deploy candidate hiện tại.</li>
+<li>Kiểm pending order global, binding account/role/product/amount và recovery notification/distribution bằng fixture độc lập; giữ đúng contract ingress thực tế, không tạo callback thanh toán thật để thử.</li>
+<li>Khi đạt gate, snapshot/hash production read-only trước, tạo candidate từ đúng baseline và backup/rollback scoped; chỉ triển khai checkpoint đã đạt. Không restart dist/admin/DB hay thao tác ví nếu chưa thuộc phạm vi đã chốt.</li>
+<li>Với105 item và Curios duplicate, lấy pool/option/tỷ lệ chuẩn; P4 chỉ commit sau preview được duyệt. Với Xu Web, chốt phương án trước khi triển khai.</li>
+</ol>
+<h3 id="ch-y-l-i-checkpoint">Chạy lại checkpoint</h3>
+<p>Từ workspace <code>I:\Linhhoasu\server\server</code>:</p>
+<pre><code>node _ai_workbench/tools/run_cash_checkpoint_20260905.js</code></pre>
+<p>Lệnh chỉ nạp candidate trong tiến trình test, không sửa source game. Kết quả hiện tại phải có checkpointPass=true, baselineReproduced=true, productionGatePassed=false, productionStatus=HOLD và exit1. Log/evidence mới nằm trong workbench theo timestamp. Không dùng checkpointPass riêng để quyết định phát hành.</p>
+<h3 id="ki-m-tra-b-n-giao">Kiểm tra bàn giao</h3>
+<ul>
+<li>SHA source chính khớp backup; SHA candidate khớp manifest.</li>
+<li>Toàn bộ nội dung session report cũ sau tiêu đề vẫn là suffix nguyên vẹn của bản cập nhật.</li>
+<li>MD/HTML có đủ6 mục, bảng, UTF-8, CSS responsive; kiểm marker lỗi mã hóa trong báo cáo mới PASS. Đây là kiểm cấu trúc/nội dung, không phải screenshot UI.</li>
+<li>Review độc lập xác nhận HOLD được ghi đúng; runner không che hai gate đỏ. Không có package release hoặc tự động deploy.</li>
+</ul></main></body></html>

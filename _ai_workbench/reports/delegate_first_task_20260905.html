@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ủy thác tự động sau nhiệm vụ đầu tiên</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="m-y-th-c-t-ng-sau-nhi-m-v-u-ti-n">Mở Ủy thác tự động sau nhiệm vụ đầu tiên</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Đã triển khai S1/S2: <strong>nhận thưởng nhiệm vụ chính tuyến đầu tiên (<code>10001</code>) là có thể mở Ủy thác tự động</strong>. Không cần chờ tới nhiệm vụ10028 như trước. Khi nhận thưởng10001, nhiệm vụ hiện tại chuyển10002, thỏa điều kiện mới.</p>
+<p>Chỉ mở quyền sử dụng; không tự bật chế độ ủy thác, tự mặc/bán đồ hoặc thay cấu hình mà người chơi đã chọn.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source local/production: <code>linhhoasu/lhs/newServer/src/handlers/task.js</code>: nhiệm vụ10001 phải ở trạng thái hoàn thành trước khi claim; chờ lưu reward/task/unlock trước trả thành công.</li>
+<li>Config production server: <code>/linhhoasu/lhs/update/resource/assets/excel/config_e5ac72c2.bin</code>.</li>
+<li>Config client local/production: <code>linhhoasu/webgame/game/update/resource/assets/excel/config_e5ac72c2.bin</code>.</li>
+<li>Hai config chỉ đổi <code>SystemConfig[107].conditions</code>: <code>[{type:2,value:10028,cond:4}]</code> → <code>[{type:2,value:10002,cond:4}]</code>. Các chunk bảng khác giữ byte nguyên vẹn; bảngSystemConfig roundtrip và chỉ đổi đúng field này.</li>
+<li><code>linhhoasu/webgame/game/index.html</code>: cache version <code>20260905_delegate_first_task_v1</code>; không thay logic client JS, UI hoặc wrapper WebSocket.</li>
+<li>Cây config CN tham chiếu local <code>linhhoasu/lhs/update</code> không ghi đè; test backend dùng snapshot config production đã sửa trong workbench.</li>
+<li>Tool mới: <code>snapshot_delegate_first_task.py</code>, <code>patch_delegate_first_task_config.js</code>, <code>test_delegate_first_task.js</code>, <code>test_delegate_client_condition.js</code>, <code>deploy_delegate_first_task.py</code> dưới <code>_ai_workbench/tools/</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/delegate_first_task_20260905/manifest.json</code>, <code>deploy_20260905_091316.json</code> và config trước/sau.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/delegate_first_task_20260905_091316/</code> gồm4artifact trước sửa; local <code>_ai_workbench/backups/delegate_first_task_local/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Phát hiện</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Ủy thác mở muộn</td>
+<td>System107 đợi current main task≥10028</td>
+<td>Đổi cùng điều kiện server/client thành10002</td>
+<td>Không đổi thành10001 vì sẽ mở trước nhận thưởng</td>
+</tr>
+<tr>
+<td>Có thể claim nhiệm vụ đầu chưa hoàn thành</td>
+<td>Claim cũ chỉ kiểm chưa nhận</td>
+<td>Riêng10001 bắt status20</td>
+<td>Test request sớm không nhận quà/không unlock</td>
+</tr>
+<tr>
+<td>Báo unlock trước lưu dữ liệu</td>
+<td>Claim thường background save</td>
+<td>Riêngclaim10001 awaitsave, failure invalidate session</td>
+<td>Test lỗi save không trảsuccess</td>
+</tr>
+<tr>
+<td>Test menu cũ thiếu tham số</td>
+<td>Cần cảbundleJS vàindexHTML</td>
+<td>Chạy lại đủ2path,27checksPASS</td>
+<td>Đọc entrypoint test trước chạy</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Điều kiện type2 với nhiệm vụ chính tuyến đo ID nhiệm vụ đang làm; target10002 bảo đảm đã qua bước nhận thưởng10001.</li>
+<li>Client thật gọi sendConditionSystems(2) khi nhận update task và cập nhật nút qua SYSTEM_UNLOCK_UPDATE+107. Không cần thêm packet tùy ý hay mở mọi hệ.</li>
+<li>Hệ107 còn được client dùng cho điều kiện hiện icon commentGift; phụ thuộc này cũng đạt sớm hơn theo config107, không cấp thêm phần thưởng/comment entitlement.</li>
+<li>Các ràng buộc vận hành bình thường còn nguyên: có đồ chờ xử lý có thể cần giải quyết trước khi bật ủy thác. Không bỏ điều kiện của tính năng trả phí riêng như fast-mode/thẻ.</li>
+</ul>
+<h2 id="5-ki-m-tra-v-tr-ng-th-i">5. Kiểm tra và trạng thái</h2>
+<ul>
+<li>Test server30assertions: trước nhận thưởng khóa; nhiệm vụ hoàn thành nhưng chưa claim vẫn khóa; haihandler claim đều mở107 sau10001; bánhbao+5 đúng một lần; retry không thưởng thêm; settingautoEquipUpgrade giữ nguyên; JSON/reload giữunlock; savefailure khôngsuccess.</li>
+<li>Test hàm điều kiện trích client thật: currentTask10001=false,10002=true,10083=true,null=false; có task update recheck và event107.</li>
+<li>Config server/client714bảng, chỉ1SystemConfig field thay; HTTP clientconfig servedhash khớp candidate.</li>
+<li>Regression menuủy thác27checksPASS; nhiệm vụHồnngọc12casePASS; core714bảngPASS.</li>
+<li>Staging và fixture productionPASS;4artifact deployedhashkhớp;S1/S2ready200,PM2online. Chỉ restart gameS1/S2 vì chungsource, khôngrestartdist/admin/DB/Nginx. Bot reconnect theo evidence, không gọi đủ580 nếu chưa đo.</li>
+<li>Không sửaDB người thật hoặc tự thao tác game. UI acceptance do người dùng tự kiểm theo yêu cầu trước.</li>
+</ul>
+<h2 id="6-h-ng-d-n-test">6. Hướng dẫn test</h2>
+<ol>
+<li>Tải lại game một lần (Ctrl+F5) để nhận config mở khóa mới, rồi đăng nhập.</li>
+<li>Nhân vật mới: trước khi nhận thưởng nhiệm vụ đầu, Ủy thác còn khóa.</li>
+<li>Làm xong và <strong>nhận thưởng nhiệm vụ10001</strong>; mở nútỦy thác và bấmBắt đầu. Không cần đợi level cao hoặc nhiệm vụ10028.</li>
+<li>Nhân vật cũ đã qua nhiệm vụ đầu: dùng được sau khi tải config mới; thiết lập ủy thác cũ không bị reset.</li>
+<li>Đăng nhập lại kiểm vẫn mở. Nếu nút vẫn xám, gửi ảnhnhiệmvụ hiện tại và thời điểm để đối chiếu cache/config; không reset nhiệm vụ người thật để test.</li>
+</ol></main></body></html>

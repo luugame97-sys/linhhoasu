@@ -1,0 +1,50 @@
+{
+  "_table": "PetSoulItemSynthesisTypeConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "type,name,goodsId",
+  "_sample": [
+    {
+      "1": {
+        "type": 1,
+        "name": 28099004,
+        "goodsId": [
+          16000001,
+          16000002
+        ]
+      }
+    },
+    {
+      "2": {
+        "type": 2,
+        "name": 28099005,
+        "goodsId": [
+          16000003,
+          16000004,
+          16000005,
+          16000006
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "type": 1,
+      "name": 28099004,
+      "goodsId": [
+        16000001,
+        16000002
+      ]
+    },
+    "2": {
+      "type": 2,
+      "name": 28099005,
+      "goodsId": [
+        16000003,
+        16000004,
+        16000005,
+        16000006
+      ]
+    }
+  }
+}

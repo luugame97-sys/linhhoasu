@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sửa đổi ngư trường câu cá — 06/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="s-a-i-ng-tr-ng-c-u-c-06-09-2026">Sửa đổi ngư trường câu cá — 06/09/2026</h1>
+<p>Đã triển khai thành công S2 rồi S1 lúc <strong>11:52 UTC+7</strong>. Chỉ thay <code>src/handlers/fish.js</code>; client và cấu hình giữ nguyên. Bản sửa gửi đủ sự kiện vào cảnh để client gốc dựng lại ngư trường ngay, không phải tải lại game sau mỗi lần đổi map.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="nguy-n-nh-n-v-c-ch-s-a">Nguyên nhân và cách sửa</h3>
+<p>Trước đây, tag4002 chỉ lưu <code>fishInfo.scene</code> và trả ID mới. Session vẫn ở room cũ, còn client không nhận push4050 để chạy <code>sc_fish_map_enter</code> → <code>EnterFishMapRaid</code>. Vì vậy nhãn ngư trường đổi nhưng cảnh vẫn cũ; reload mới vào đúng cảnh.</p>
+<p>Hai đường đổi map4002 và vào map4050 hiện dùng chung <code>handleFishMapTransition</code>:</p>
+<ol>
+<li>Chuẩn bị trên bản sao player, kiểm ID và điều kiện mở khu hiện hành. ID sai không tự rơi về map1.</li>
+<li>Lưu scene và chờ xác nhận. Lỗi/null/timeout không phát sự kiện chuyển room; session bị vô hiệu hóa để nạp lại dữ liệu bền vững, không ghi rollback giả.</li>
+<li>Sau khi lưu: cập nhật <code>_fishRoomMapId</code>, báo rời room cũ4052 và vào room mới4051 cho các client khác. Chọn lại cùng room không tạo thông báo ra/vào trùng cho người khác.</li>
+<li>Với4002: ACK4002 trước, push4050 sau. Push chứa mapId/time/pos/food/raftId/rodId/players theo contract sẵn có. Với4050 giữ thứ tự entry rồi ACK như trước.</li>
+</ol>
+<p>Luồng rời map4051 cũng chuyển sang chuẩn bị trên clone, chỉ xóa room sau khi lưu thành công. <strong>Giữ hành vi cũ khi bấm thoát câu cá: scene trở về map1</strong>; không đổi nó thành tính năng ghi nhớ khu sau khi thoát. Ngắt kết nối/relog khi còn ở map vẫn giữ scene đã lưu.</p>
+<p>Không thêm tỷ lệ hụt, không thay tăng tốc, không reset đơn, không bù hoặc chỉnh cá/vật phẩm người thật. Không sửa sự cố input-freeze đang tạm dừng.</p>
+<h3 id="h-nh-vi-client-g-c-c-gi">Hành vi client gốc được giữ</h3>
+<ul>
+<li>Push4050 đóng view cũ, dọn raid/entity/timer rồi tạo view mới; nền lấy từ <code>FishSceneConfig[scene].picture</code>.</li>
+<li>Nếu đang ủy thác, client gốc tự dừng khi vào cảnh mới. Muốn tiếp tục cần bật lại ủy thác.</li>
+<li>Cá đã câu nhưng chưa xử lý vẫn còn trong kết quả/giỏ chờ. Chuyển khu không tự bán, giữ, nộp hoặc xóa cá.</li>
+<li>Không sửa file main/index, không thêm background giả hoặc DOM fallback.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<ul>
+<li>Local: <code>I:/Linhhoasu/server/server/linhhoasu/lhs/newServer/src/handlers/fish.js</code>.</li>
+<li>Production: <code>/linhhoasu/lhs/newServer/src/handlers/fish.js</code>.</li>
+<li>Diff: thêm56 dòng, bỏ38 dòng; các hàm ngoài nhóm map không đổi theo so sánh AST.</li>
+<li>SHA-256 mới: <code>48e62e9b49aa80a29552a9561698159f83b2621030b50aa8f25dd27c1fd3e182</code>.</li>
+<li>SHA-256 trước sửa: <code>50886be8cd194a02fb7e542dca9934be356972206f6bade56fe16c80fa3984c9</code>.</li>
+</ul>
+<h3 id="tool-h-tr-v-evidence">Tool hỗ trợ và evidence</h3>
+<ul>
+<li>Mới: <code>_ai_workbench/tools/test_fishing_map_fix_20260906.js</code>, <code>qa_fishing_map_live_20260906.js</code>, <code>release_fishing_map_20260906.py</code>.</li>
+<li>Sửa test cũ: <code>_ai_workbench/tools/test_fishing_balance_20260906.js</code>; sau giao dịch clone phải thao tác trên <code>session.player</code>, không tiếp tục sửa alias player cũ. Giữ nguyên toàn bộ kỳ vọng gameplay của test.</li>
+<li>Baseline bất biến: <code>_ai_workbench/temp/fishing_audit_20260906T043042Z/</code>.</li>
+<li>Candidate/evidence: <code>_ai_workbench/temp/fishing_map_fix_20260906/</code>: <code>map-test.json</code>, <code>stage.json</code>, <code>canary-progress.json</code>, <code>deploy.json</code>, <code>verify.json</code>, <code>status.json</code>.</li>
+<li><code>main.fixed.js</code> trong candidate chỉ là bản sao <strong>byte-identical</strong> của main.js để chạy các test cũ; không phải client được sửa hoặc deploy.</li>
+<li><code>release-error.json</code> là lỗi staging ban đầu do test dùng alias cũ; kết quả cuối cùng nằm trong <code>deploy.json</code> và <code>verify.json</code>.</li>
+<li>Report: file này, bản HTML cùng tên, và <code>session_report.md/.html</code>.</li>
+</ul>
+<h3 id="backup-v-tri-n-khai">Backup và triển khai</h3>
+<ul>
+<li>Backup local: <code>_ai_workbench/backups/fishing_map_local_20260906/</code>.</li>
+<li>Backup báo cáo cũ: <code>_ai_workbench/backups/fishing_map_reports_20260906/</code>.</li>
+<li>Backup production cuối: <code>/linhhoasu/_ai_workbench/backups/fishing_map_20260906_045045/fish.js.before</code>.</li>
+<li>Staging cuối: <code>/linhhoasu/_ai_workbench/temp/fishing_map_20260906_045045/</code>.</li>
+<li>Không chép toàn cây source local lên VPS. Hash guard toàn153 artifact trước/sau; kiểm ownership/cwd/script của hai tiến trình game trước restart.</li>
+<li>Rollback chỉ khôi phục file nguồn đã backup và restart đúng game đã đổi; không rollback player DB.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/phát hiện</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Đổi nhãn nhưng cảnh không đổi</td>
+<td>4002 thiếu push4050, session còn room cũ</td>
+<td>Dùng chung transition có save, room và native entry</td>
+<td>Test ID lưu, session room, packet và hàm dựng cảnh riêng</td>
+</tr>
+<tr>
+<td>Room được công bố trước xác nhận lưu</td>
+<td>4050/4051 cũ sửa session room trước save</td>
+<td>Clone, save confirmed rồi mới publish</td>
+<td>Inject null, throw và commit-then-throw</td>
+</tr>
+<tr>
+<td>ID vào map sai tự đổi thành map1</td>
+<td>Normalize ID trước validate</td>
+<td>Validate ID yêu cầu trước chuyển cảnh</td>
+<td>Negative test ID âm,0,lẻ,chuỗi rác,ID thiếu và map sự kiện bị khóa</td>
+</tr>
+<tr>
+<td>Native fixture trích nhầm Init</td>
+<td>Method đầu lớp minify là <code>(r=Abt.prototype).Init</code>, không phải <code>r.Init</code></td>
+<td>Neo theo lớp Abt và chọn đúng method đầu</td>
+<td>Không lấy method cùng tên của lớp kế tiếp</td>
+</tr>
+<tr>
+<td>Một regression báo thiếu mồi dù vừa cấp trong fixture</td>
+<td>Test sửa alias <code>p</code> cũ sau khi session thay bằng clone</td>
+<td>Sửa test dùng <code>s.player</code>; giữ assertion thiếu/có mồi</td>
+<td>Sau transaction luôn đọc player hiện hành</td>
+</tr>
+<tr>
+<td>Canary S2 đầu kỳ vọng mất3 mồi nhưng chỉ mất2</td>
+<td>Nhân vật QA mở bè223, hiệu ứng miễn mồi104 có thể kích hoạt hợp lệ</td>
+<td>Gate dừng và hoàn nguyên trước S1; QA mới không mở223 để cô lập phép kiểm map/cost</td>
+<td>Không đặt kỳ vọng RNG cố định khi fixture còn bonus ngẫu nhiên</td>
+</tr>
+<tr>
+<td>Kiểm ready ngay sau rollback trả000</td>
+<td>Game vừa restart chưa kịp listen</td>
+<td>Hậu kiểm xác nhận S2 đã ready; sửa release tool chờ ready sau rollback và ghi lỗi trước rollback</td>
+<td>Lưu lỗi gốc trước, chờ tiến trình phục hồi rồi kiểm hash/health</td>
+</tr>
+<tr>
+<td>Lệnh kiểm encoding report bị PowerShell parser chặn</td>
+<td>Dấu nháy cong trong regex one-liner bị shell coi là dấu đóng chuỗi</td>
+<td>Đổi mẫu regex sang Unicode escape, chạy lại PASS</td>
+<td>Không nhúng smart quote trực tiếp trong shell one-liner</td>
+</tr>
+</tbody></table></div>
+<p>Canary đầu tại staging044716 dừng trước S1. Source đã về đúng SHA cũ, S1 PID23011 không đổi; S2 PID13124/restart40 và cả hai ready200 được xác nhận lúc11:50:13. QA còn0. Không sửa kinh tế game để làm test xanh. Sau khi chỉnh fixture và chạy lại toàn bộ staging, bản cuối triển khai11:51:40–11:52:14.</p>
+<p>Không có lỗi encoding mới trong file sửa/report; giữ UTF-8. Không chỉnh các đoạn báo cáo lịch sử ngoài phần bổ sung của phiên này.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li><code>fishInfo.scene</code>, session room và raid đang hiển thị là ba trạng thái khác nhau; ACK lựa chọn không đủ chứng minh cảnh đã đổi.</li>
+<li>Sự kiện native có sẵn cần đúng thứ tự; sửa một file server đủ cho lỗi này, không cần thay asset/client.</li>
+<li>Chuẩn bị trên clone bảo vệ state đang dùng khỏi mutation khi validation thất bại; không được giả định object player cũ vẫn là object hiện hành.</li>
+<li>Hậu kiểm tiêu hao phải tách chi phí lượt câu khỏi thao tác đổi map và hiệu ứng miễn tiêu hao hợp lệ.</li>
+<li>Nếu canary thất bại thì dừng promotion; source rollback không đồng nghĩa dịch vụ đã ready ngay lập tức.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="ki-m-th">Kiểm thử</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>Kết quả</th>
+<th>Phạm vi</th>
+</tr></thead><tbody>
+<tr>
+<td>Map mới</td>
+<td>26/26 PASS local và Linux staging</td>
+<td>7 khu, validate/khóa/ngày mở, room, pending/skills/lock/soul/preview/receipt, save fail, native lifecycle, đổi nhanh</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>21/21 PASS staging</td>
+<td>Tự trang bị/bán và các bảo vệ hiện có</td>
+</tr>
+<tr>
+<td>Cần/bè</td>
+<td>38/38 PASS staging</td>
+<td>Kèm1.800 case ma trận</td>
+</tr>
+<tr>
+<td>Balance/integrity</td>
+<td>70/70 PASS staging</td>
+<td>Giữ cá, mồi, đơn, linh hồn, tẩy/hộp và save guards</td>
+</tr>
+<tr>
+<td>Huyền Vũ</td>
+<td>24/24 PASS staging</td>
+<td>Quà ngày và đồng bộ tồn kho không hồi quy</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>PASS,714 bảng</td>
+<td>Contract gameplay chung</td>
+</tr>
+<tr>
+<td>Live WS S2</td>
+<td>PASS</td>
+<td>11 đổi map trên1 kết nối, ACK→4050, invalid reject, catch→map gửi liền, giữ3 cá, không trừ thêm, relog</td>
+</tr>
+<tr>
+<td>Live WS S1</td>
+<td>PASS</td>
+<td>Cùng bộ kiểm S2; chỉ promotion sau S2 đạt</td>
+</tr>
+</tbody></table></div>
+<p>Tổng <strong>179 nhóm test staging PASS</strong>, ngoài core714 bảng. Live QA dùng nhân vật riêng, không thao tác nicky hoặc người thật; đã xóa đúng player/mail QA, hậu kiểm cả hai DB còn0 nhân vật QA của task.</p>
+<p>Native test chạy hàm thật trích từ client: đóng view, dọn timer/entity, đổi sceneBg, dừng auto, gọi callback đúng một lần và giữ pending. <strong>Đây không phải nghiệm thu hình ảnh trực tiếp trong trình duyệt/APK</strong>. Chưa chạy native visual, cold-start hoặc giữ QA xuyên thêm một lần restart; không dùng WS/VM để tuyên bố các phần đó PASS.</p>
+<h3 id="h-u-ki-m11-52-46-utc-7">Hậu kiểm11:52:46 UTC+7</h3>
+<p>-153/153 artifact trong scope đúng expected:1 source thay,152 giữ nguyên. Local fish.js khớp candidate/production.</p>
+<ul>
+<li>Main được phục vụ tại cổng81 có SHA <code>ae1a85310aa20ccfcd8166526ef6686049e0cdede7eef791728d4621d3048870</code>, không đổi.</li>
+<li>S1 PID8786/restart1375; S2 PID8678/restart41; ready8080/8083 đều200. S2 có thêm hai restart ở lần canary đầu và hoàn nguyên, đã ghi rõ bên trên.</li>
+<li>Dist PID30824, admin30856, bot S1 PID1600, bot S2 PID1576 giữ nguyên cả PID/restart so với trước triển khai. Không restart Nginx/DB hoặc thay WebGM.</li>
+<li>Không phát bù, migration hay sửa dữ liệu lịch sử. Không kết luận toàn bộ tính năng câu cá đã hết lỗi; phiên này chỉ đóng lỗi đổi map và tính nhất quán save/room liên quan.</li>
+</ul>
+<p>Hậu kiểm bổ sung11:56:59: PID/restart và ready không đổi; player QA <strong>và mail QA</strong> đều0 trên hai DB. Cặp report/session MD–HTML đủ6 mục, UTF-8 và cấu trúc HTML hoàn chỉnh đã kiểm PASS.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người dùng mở câu cá, chọn hai ngư trường đã mở và đổi qua lại; cảnh/nền phải cập nhật ngay, không cần reload sau mỗi lần chọn.</li>
+<li>Thử với cá đang chờ xử lý: cá phải còn, vật phẩm không đổi do riêng thao tác chuyển khu.</li>
+<li>Nếu đang ủy thác, việc đổi map sẽ dừng ủy thác theo client gốc; bật lại để tiếp tục câu.</li>
+<li>Nếu client cụ thể vẫn giữ cảnh cũ, ghi thời điểm và ngư trường đi/đến, ảnh/video; kiểm native lifecycle của đúng client đó, không tự đổi tốc độ/RNG hoặc reset dữ liệu.</li>
+</ol></main></body></html>

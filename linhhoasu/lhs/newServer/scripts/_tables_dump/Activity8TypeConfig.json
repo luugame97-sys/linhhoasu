@@ -1,0 +1,62 @@
+{
+  "_table": "Activity8TypeConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "1,2",
+  "_sample": [
+    {
+      "8001": {
+        "1": {
+          "activityId": 8001,
+          "stage": 1,
+          "rechargeId": 10401
+        },
+        "2": {
+          "activityId": 8001,
+          "stage": 2,
+          "rechargeId": 10402
+        }
+      }
+    },
+    {
+      "8051": {
+        "1": {
+          "activityId": 8051,
+          "stage": 1,
+          "rechargeId": 10401
+        },
+        "2": {
+          "activityId": 8051,
+          "stage": 2,
+          "rechargeId": 10402
+        }
+      }
+    }
+  ],
+  "data": {
+    "8001": {
+      "1": {
+        "activityId": 8001,
+        "stage": 1,
+        "rechargeId": 10401
+      },
+      "2": {
+        "activityId": 8001,
+        "stage": 2,
+        "rechargeId": 10402
+      }
+    },
+    "8051": {
+      "1": {
+        "activityId": 8051,
+        "stage": 1,
+        "rechargeId": 10401
+      },
+      "2": {
+        "activityId": 8051,
+        "stage": 2,
+        "rechargeId": 10402
+      }
+    }
+  }
+}

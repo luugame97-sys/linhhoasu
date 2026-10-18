@@ -1,0 +1,156 @@
+{
+  "_table": "FashionBathConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "0,1",
+  "_sample": [
+    {
+      "29800": {
+        "0": {
+          "id": 29800,
+          "colorId": 0,
+          "name": 29800,
+          "icon": "head_rs_2980",
+          "star": 0,
+          "fashionIds": [
+            29802,
+            29803,
+            29809
+          ],
+          "banTypeIds": [
+            303,
+            309
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        },
+        "1": {
+          "id": 29800,
+          "colorId": 1,
+          "name": 80129800,
+          "icon": "head_rs_8012980",
+          "cost": {
+            "id": 50,
+            "count": 30
+          },
+          "star": 2,
+          "fashionIds": [
+            80129802,
+            80129803,
+            80129809
+          ],
+          "banTypeIds": [
+            303,
+            309
+          ],
+          "showType": 1,
+          "showTypeTw": 1
+        }
+      }
+    },
+    {
+      "29810": {
+        "0": {
+          "id": 29810,
+          "colorId": 0,
+          "name": 29810,
+          "icon": "head_rs_2981",
+          "cost": {
+            "id": 456,
+            "count": 30
+          },
+          "star": 0,
+          "fashionIds": [
+            29812,
+            29813,
+            29819,
+            29815
+          ],
+          "banTypeIds": [
+            303,
+            309
+          ],
+          "showType": 1,
+          "showTypeTw": 1,
+          "privilege": {
+            "38": 500,
+            "50": 10000
+          }
+        }
+      }
+    }
+  ],
+  "data": {
+    "29800": {
+      "0": {
+        "id": 29800,
+        "colorId": 0,
+        "name": 29800,
+        "icon": "head_rs_2980",
+        "star": 0,
+        "fashionIds": [
+          29802,
+          29803,
+          29809
+        ],
+        "banTypeIds": [
+          303,
+          309
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      },
+      "1": {
+        "id": 29800,
+        "colorId": 1,
+        "name": 80129800,
+        "icon": "head_rs_8012980",
+        "cost": {
+          "id": 50,
+          "count": 30
+        },
+        "star": 2,
+        "fashionIds": [
+          80129802,
+          80129803,
+          80129809
+        ],
+        "banTypeIds": [
+          303,
+          309
+        ],
+        "showType": 1,
+        "showTypeTw": 1
+      }
+    },
+    "29810": {
+      "0": {
+        "id": 29810,
+        "colorId": 0,
+        "name": 29810,
+        "icon": "head_rs_2981",
+        "cost": {
+          "id": 456,
+          "count": 30
+        },
+        "star": 0,
+        "fashionIds": [
+          29812,
+          29813,
+          29819,
+          29815
+        ],
+        "banTypeIds": [
+          303,
+          309
+        ],
+        "showType": 1,
+        "showTypeTw": 1,
+        "privilege": {
+          "38": 500,
+          "50": 10000
+        }
+      }
+    }
+  }
+}

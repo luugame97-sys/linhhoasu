@@ -1,0 +1,50 @@
+{
+  "_table": "CommunityBaseConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "firstSignInReward": [
+        {
+          "id": 1,
+          "count": 50
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "signInCondition": 2
+    },
+    {
+      "task": [
+        100002,
+        100003,
+        100004,
+        100005
+      ]
+    }
+  ],
+  "data": {
+    "firstSignInReward": [
+      {
+        "id": 1,
+        "count": 50
+      },
+      {
+        "id": 6,
+        "count": 5
+      }
+    ],
+    "signInCondition": 2,
+    "task": [
+      100002,
+      100003,
+      100004,
+      100005
+    ]
+  }
+}

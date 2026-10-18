@@ -1,0 +1,24 @@
+'use strict';
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const app=process.env.DROP200_APP||path.resolve(__dirname,'../../linhhoasu/lhs/newServer');
+const players=require(path.join(app,'src/services/PlayerService'));
+const runtime=require(path.join(app,'src/services/RuntimeBus'));
+const service=require(path.join(app,'src/services/DropTierMutationService'));
+const clone=v=>JSON.parse(JSON.stringify(v));
+const oldDrain=players.drainPendingSaves,oldSave=players.savePlayer,oldBus=runtime.getWsServer;
+let mode='ok',saves=0,invalidations=0;
+players.drainPendingSaves=async()=>{};
+players.savePlayer=async(_id,p)=>{saves++;if(mode==='throw')throw Error('TEST_SAVE');if(mode==='null')return null;return p;};
+runtime.getWsServer=()=>({invalidatePlayerForMutation(){invalidations++;}});
+const make=()=>({userId:'ram-tier',player:{boxInfo:{tier:100,tierExp:0},items:{1:100,6:100},currencies:{diamond:1000,gold:100,silver:0}}});
+(async()=>{
+  let s=make(),original=clone(s.player);
+  const handler=async(_params,shadow,msgUid)=>{shadow.player.boxInfo.tierExp=1;return {tag:2150,msgUid,data:{result:0,tier:100,tierExp:1,tierUpTime:0}};};
+  const first=await service.run(2150,{},s,1,handler);assert.equal(first.data.result,0);assert.equal(s.player.boxInfo.tierExp,1);assert.equal(saves,1);assert.notDeepEqual(s.player,original);
+  const replay=await service.run(2150,{},s,1,async()=>{throw Error('REPLAY_RAN');});assert.deepEqual(replay,first);assert.equal(saves,1);
+  s=make();mode='null';invalidations=0;original=clone(s.player);await assert.rejects(()=>service.run(2150,{},s,2,handler));assert.equal(s.player,null);assert.deepEqual(original,{boxInfo:{tier:100,tierExp:0},items:{1:100,6:100},currencies:{diamond:1000,gold:100,silver:0}});assert.equal(invalidations,1);
+  s=make();mode='throw';invalidations=0;original=clone(s.player);await assert.rejects(()=>service.run(2150,{},s,3,handler));assert.equal(s.player,null);assert.deepEqual(original,s.player===null?original:clone(s.player));assert.equal(invalidations,1);
+  mode='ok';players.drainPendingSaves=oldDrain;players.savePlayer=oldSave;runtime.getWsServer=oldBus;
+  console.log(JSON.stringify({result:'PASS',checks:7,productionWrites:0,networkAttempts:0}));
+})().catch(err=>{players.drainPendingSaves=oldDrain;players.savePlayer=oldSave;runtime.getWsServer=oldBus;console.error(err.stack);process.exitCode=1;});

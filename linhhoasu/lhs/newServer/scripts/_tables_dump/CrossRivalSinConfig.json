@@ -1,0 +1,70 @@
+{
+  "_table": "CrossRivalSinConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,effect,headEffect",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "effect": [
+          101,
+          301
+        ],
+        "headEffect": "sp_ui_xianyuzhengfeng_hong1"
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "effect": [
+          101,
+          102,
+          302
+        ],
+        "headEffect": "sp_ui_xianyuzhengfeng_hong2"
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "effect": [
+          101,
+          102,
+          103,
+          304
+        ],
+        "headEffect": "sp_ui_xianyuzhengfeng_hong3"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "effect": [
+        101,
+        301
+      ],
+      "headEffect": "sp_ui_xianyuzhengfeng_hong1"
+    },
+    "2": {
+      "id": 2,
+      "effect": [
+        101,
+        102,
+        302
+      ],
+      "headEffect": "sp_ui_xianyuzhengfeng_hong2"
+    },
+    "3": {
+      "id": 3,
+      "effect": [
+        101,
+        102,
+        103,
+        304
+      ],
+      "headEffect": "sp_ui_xianyuzhengfeng_hong3"
+    }
+  }
+}

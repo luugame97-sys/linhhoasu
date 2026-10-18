@@ -1,0 +1,131 @@
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+※ HƯỚNG DẪN CÀI ĐẶT GAME LINH HỌA SƯ H5 (ĐÃ CẬP NHẬT THEO CẤU TRÚC MỚI)               ※
+※ Mã nguồn này đã được test "có thể cài đặt và chạy được".                              ※
+※ Nếu bạn không cài được, vui lòng kiểm tra kỹ lại xem có bỏ sót thao tác nào không.    ※
+※ Lưu ý: Trước khi cài đặt, máy chủ phải được cài đặt môi trường cần thiết, tắt        ※
+※ tường lửa và mở tất cả các cổng (ports).                                              ※
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+Tắt tường lửa máy chủ, mở tất cả các cổng tham khảo: https://www.lyzwlkj.vip/185/hybk/
+
+Hướng dẫn cài đặt Linh Họa Sư H5 - Bản nội bộ tặng vé nạp (Linux)
+
+Hệ điều hành yêu cầu: CentOS Stream 9 (Khuyến nghị)
+IP Demo gốc: 122.51.27.223
+
+===============================================================================================
+
+Cài đặt Baota Panel (aaPanel bản Trung):
+
+URL=https://www.aapanel.com/script/install_panel_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO $URL ;else wget --no-check-certificate -O install_panel_en.sh $URL;fi;bash install_panel_en.sh ipssl
+
+Lệnh tắt xác thực SSL của Baota: bt 26
+Xem địa chỉ đăng nhập Baota mới: bt 14
+
+Cài đặt các phần mềm môi trường trong Baota:
+- Nginx 1.22
+- MySQL 5.7
+- PHP 7.2
+- Redis 7.2
+- MongoDB 7.0
+
+===============================================================================================
+
+Mở các cổng (port) trên Baota: 1-65535
+
+Tắt tường lửa của CentOS:
+systemctl stop firewalld
+systemctl disable firewalld
+
+===============================================================================================
+
+1. Upload bản server (lyzwlkjvip.zip) lên thư mục gốc "/" của máy chủ.
+
+2. Giải nén server:
+cd / && unzip lyzwlkjvip.zip
+(Lưu ý: Đảm bảo Nginx đã được cài đặt thành công trước khi giải nén)
+
+3. Cập nhật đường dẫn cho phù hợp với thư mục mới (Quan trọng):
+Do thư mục "/data" đã được đổi tên thành "/linhhoasu", và thư mục web "/www/wwwroot/game" được đổi thành "/linhhoasu/webgame/game", bạn cần chạy lệnh sau để tự động sửa lỗi đường dẫn trong các file script:
+
+sed -i 's/\/data\//\/linhhoasu\//g' /linhhoasu/setup.sh /linhhoasu/start.sh /linhhoasu/lhs/newServer/ecosystem.config.js
+
+4. Khởi động lại Nginx:
+/etc/init.d/nginx restart
+
+5. Cấp quyền 777 cho thư mục:
+chmod -R 777 /linhhoasu
+chmod -R 777 /linhhoasu/webgame/game
+
+6. Sửa mật khẩu cơ sở dữ liệu (MySQL) thành: 123456
+
+===============================================================================================
+
+Cài đặt môi trường chạy Node.js cho game:
+
+cd /linhhoasu && ./setup.sh
+
+cd /linhhoasu/lhs/newServer
+npm install --production
+npm rebuild bcrypt
+
+cd /linhhoasu/lhs/LHS-dist
+npm install --production
+npm rebuild bcrypt
+
+RESTART_PM2=0 bash /linhhoasu/_ai_workbench/tools/fix_linhhoasu_centos7.sh
+pm2 restart lhs-s1001 --update-env
+pm2 restart lhs-dist --update-env
+pm2 save
+===============================================================================================
+
+Khởi động Server game:
+cd /linhhoasu && ./start.sh start
+cd /linhhoasu && ./start.sh restart
+
+Kiểm tra trạng thái chạy:
+cd /linhhoasu && ./start.sh status
+(Sau khi chạy, có thể dùng lệnh: netstat -lntp để xem các port đang mở)
+
+Tắt Server game:
+cd /linhhoasu && ./start.sh stop
+
+===============================================================================================
+
+Địa chỉ đăng ký: http://103.116.105.154:81/register.html?inviteCode=TY7C1A
+Địa chỉ chơi game: http://IP:81
+
+Cách sửa IP cho file cài đặt Android (Client APK):
+Sửa IP "122.51.27.223" thành IP máy chủ của bạn trong file:
+\assets\apps\H564D19F0\www\manifest.json
+
+===============================================================================================
+
+Trang quản trị GM:
+http://IP:81/ht/gm/gm.html
+Mã GM: lyzwlkj.vip
+
+Trang tạo Giftcode (CDK):
+http://IP:81/ht/cdk
+Mã GM: lyzwlkj.vip
+
+Trang kích hoạt nạp thẻ/Giftcode:
+http://IP:81/ht/pay
+
+Trang GM cho người chơi:
+http://IP:81/ht/gm
+
+Trang Admin quản lý game:
+http://IP:81/admin
+Tài khoản: admin
+Mật khẩu: 31afQbdQOr7Z{s?3
+
+Hệ thống đại lý phân phối (Dist Admin):
+http://IP:3001
+Tài khoản: lhsmanager
+Mật khẩu: 31afQbdQOr7Z{s?3
+
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+Mã nguồn chỉ dành cho mục đích nghiên cứu và học tập!
+Vui lòng không sử dụng cho mục đích thương mại. Mọi tranh chấp phát sinh sẽ do bạn tự chịu trách nhiệm!
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※※

@@ -1,0 +1,103 @@
+{
+  "_table": "FishRodConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,desc,appearId",
+  "_sample": [
+    {
+      "5901": {
+        "id": 5901,
+        "desc": 30010051,
+        "appearId": 5901
+      }
+    },
+    {
+      "5902": {
+        "id": 5902,
+        "shopId": 5902,
+        "desc": 30010052,
+        "appearId": 5902
+      }
+    },
+    {
+      "5903": {
+        "id": 5903,
+        "shopId": 11000009,
+        "isPrivilege": 1,
+        "desc": 30010053,
+        "appearId": 5903
+      }
+    }
+  ],
+  "data": {
+    "5901": {
+      "id": 5901,
+      "desc": 30010051,
+      "appearId": 5901
+    },
+    "5902": {
+      "id": 5902,
+      "shopId": 5902,
+      "desc": 30010052,
+      "appearId": 5902
+    },
+    "5903": {
+      "id": 5903,
+      "shopId": 11000009,
+      "isPrivilege": 1,
+      "desc": 30010053,
+      "appearId": 5903
+    },
+    "5904": {
+      "id": 5904,
+      "shopId": 3000001,
+      "desc": 30010054,
+      "appearId": 5904
+    },
+    "5905": {
+      "id": 5905,
+      "shopId": 11000101,
+      "desc": 30010055,
+      "appearId": 5905
+    },
+    "5906": {
+      "id": 5906,
+      "shopId": 11000102,
+      "desc": 30010056,
+      "appearId": 5906,
+      "conditions": [
+        {
+          "type": 5,
+          "value": 43,
+          "cond": 4
+        }
+      ]
+    },
+    "5907": {
+      "id": 5907,
+      "shopId": 11000106,
+      "desc": 30010057,
+      "appearId": 5907,
+      "conditions": [
+        {
+          "type": 5,
+          "value": 57,
+          "cond": 4
+        }
+      ]
+    },
+    "5908": {
+      "id": 5908,
+      "shopId": 11000107,
+      "desc": 30010058,
+      "appearId": 5908,
+      "conditions": [
+        {
+          "type": 5,
+          "value": 57,
+          "cond": 4
+        }
+      ]
+    }
+  }
+}

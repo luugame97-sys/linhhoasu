@@ -1,0 +1,12 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs'),vm=require('vm'),path=require('path');
+const dir=path.resolve(__dirname,'../temp/server_status_color_20260905');const s=fs.readFileSync(path.join(dir,'helper.js'),'utf8');
+const context={T:{serverTimeMilli:100},egret:{ColorMatrixFilter:class{constructor(matrix){this.matrix=matrix;}}}};vm.createContext(context);vm.runInContext(s,context);
+const open={state:1,status:1,running:1,openTime:80};
+assert(context.lhsServerStatusOpen(open,100));assert(context.lhsServerStatusOpen({...open,state:2},100));assert(context.lhsServerStatusOpen({...open,state:3},100));
+for(const row of [null,{...open,state:4},{...open,state:0},{...open,state:5},{...open,status:0},{...open,running:false},{...open,running:0},{...open,openTime:101}])assert(!context.lhsServerStatusOpen(row,100));
+assert(context.lhsServerStatusOpen({...open,openTime:100},100));
+const dot={source:'login_bm_redpoint'},other={source:'background'},view={serverBg:{numChildren:2,getChildAt:i=>[other,dot][i]}};
+const before=JSON.stringify(open);context.lhsRefreshServerDot(view,open);assert(dot.filters?.length===1);assert.equal(dot.filters[0].matrix[5],1);assert.equal(other.filters,undefined);assert.equal(JSON.stringify(open),before);
+context.lhsRefreshServerDot(view,{...open,state:4});assert.equal(dot.filters,null);context.lhsRefreshServerDot({},open);
+console.log(JSON.stringify({result:'PASS',checks:18,openGreen:true,closedRed:true,futureRed:true,gateDataUnchanged:true,bothLoginSkins:true}));

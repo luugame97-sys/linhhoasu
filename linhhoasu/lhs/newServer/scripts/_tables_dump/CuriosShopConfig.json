@@ -1,0 +1,265 @@
+{
+  "_table": "CuriosShopConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,cost,conditions,bgBanner,talk,callRateShow1,callRateShow2,callRateShow3",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "cost": {
+          "id": 128,
+          "count": 60
+        },
+        "conditions": [
+          {
+            "type": 7,
+            "value": 220,
+            "cond": 4
+          }
+        ],
+        "bgBanner": "taobao_bm_shop_1",
+        "talk": [
+          30038500,
+          30038501,
+          30038502,
+          30038503
+        ],
+        "callRateShow1": {
+          "3": 615,
+          "4": 410,
+          "6": 100
+        },
+        "callRateShow2": {
+          "3": 1460,
+          "4": 720,
+          "6": 200
+        },
+        "callRateShow3": {
+          "3": 3230,
+          "4": 3150,
+          "6": 115
+        }
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "cost": {
+          "id": 128,
+          "count": 60
+        },
+        "conditions": [
+          {
+            "type": 5,
+            "value": 50,
+            "cond": 4
+          }
+        ],
+        "bgBanner": "taobao_bm_shop_2",
+        "talk": [
+          30038504,
+          30038505,
+          30038506,
+          30038507
+        ],
+        "callRateShow1": {
+          "3": 615,
+          "4": 410,
+          "6": 100
+        },
+        "callRateShow2": {
+          "3": 1460,
+          "4": 720,
+          "6": 200
+        },
+        "callRateShow3": {
+          "3": 3230,
+          "4": 3150,
+          "6": 115
+        }
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "cost": {
+          "id": 128,
+          "count": 60
+        },
+        "conditions": [
+          {
+            "type": 5,
+            "value": 78,
+            "cond": 4
+          }
+        ],
+        "bgBanner": "taobao_bm_shop_3",
+        "talk": [
+          30038508,
+          30038509,
+          30038510
+        ],
+        "callRateShow1": {
+          "3": 615,
+          "4": 410,
+          "6": 100
+        },
+        "callRateShow2": {
+          "3": 1460,
+          "4": 720,
+          "6": 200
+        },
+        "callRateShow3": {
+          "3": 3230,
+          "4": 3150,
+          "6": 115
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "cost": {
+        "id": 128,
+        "count": 60
+      },
+      "conditions": [
+        {
+          "type": 7,
+          "value": 220,
+          "cond": 4
+        }
+      ],
+      "bgBanner": "taobao_bm_shop_1",
+      "talk": [
+        30038500,
+        30038501,
+        30038502,
+        30038503
+      ],
+      "callRateShow1": {
+        "3": 615,
+        "4": 410,
+        "6": 100
+      },
+      "callRateShow2": {
+        "3": 1460,
+        "4": 720,
+        "6": 200
+      },
+      "callRateShow3": {
+        "3": 3230,
+        "4": 3150,
+        "6": 115
+      }
+    },
+    "2": {
+      "id": 2,
+      "cost": {
+        "id": 128,
+        "count": 60
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 50,
+          "cond": 4
+        }
+      ],
+      "bgBanner": "taobao_bm_shop_2",
+      "talk": [
+        30038504,
+        30038505,
+        30038506,
+        30038507
+      ],
+      "callRateShow1": {
+        "3": 615,
+        "4": 410,
+        "6": 100
+      },
+      "callRateShow2": {
+        "3": 1460,
+        "4": 720,
+        "6": 200
+      },
+      "callRateShow3": {
+        "3": 3230,
+        "4": 3150,
+        "6": 115
+      }
+    },
+    "3": {
+      "id": 3,
+      "cost": {
+        "id": 128,
+        "count": 60
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 78,
+          "cond": 4
+        }
+      ],
+      "bgBanner": "taobao_bm_shop_3",
+      "talk": [
+        30038508,
+        30038509,
+        30038510
+      ],
+      "callRateShow1": {
+        "3": 615,
+        "4": 410,
+        "6": 100
+      },
+      "callRateShow2": {
+        "3": 1460,
+        "4": 720,
+        "6": 200
+      },
+      "callRateShow3": {
+        "3": 3230,
+        "4": 3150,
+        "6": 115
+      }
+    },
+    "4": {
+      "id": 4,
+      "cost": {
+        "id": 128,
+        "count": 60
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 106,
+          "cond": 4
+        }
+      ],
+      "bgBanner": "taobao_bm_shop_4",
+      "talk": [
+        30038511,
+        30038512,
+        30038513
+      ],
+      "callRateShow1": {
+        "3": 615,
+        "4": 410,
+        "6": 100
+      },
+      "callRateShow2": {
+        "3": 1460,
+        "4": 720,
+        "6": 200
+      },
+      "callRateShow3": {
+        "3": 3230,
+        "4": 3150,
+        "6": 115
+      }
+    }
+  }
+}

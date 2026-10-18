@@ -1,0 +1,169 @@
+{
+  "_table": "DoubleTowerSeasonRewardsConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rewards": [
+          {
+            "id": 80,
+            "count": 1
+          },
+          {
+            "id": 6,
+            "count": 10
+          },
+          {
+            "id": 71,
+            "count": 500
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rewards": [
+          {
+            "id": 80,
+            "count": 2
+          },
+          {
+            "id": 6,
+            "count": 20
+          },
+          {
+            "id": 71,
+            "count": 1000
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rewards": [
+          {
+            "id": 81,
+            "count": 1
+          },
+          {
+            "id": 6,
+            "count": 30
+          },
+          {
+            "id": 71,
+            "count": 1500
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rewards": [
+        {
+          "id": 80,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 10
+        },
+        {
+          "id": 71,
+          "count": 500
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "rewards": [
+        {
+          "id": 80,
+          "count": 2
+        },
+        {
+          "id": 6,
+          "count": 20
+        },
+        {
+          "id": 71,
+          "count": 1000
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 30
+        },
+        {
+          "id": 71,
+          "count": 1500
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 2
+        },
+        {
+          "id": 72,
+          "count": 500
+        },
+        {
+          "id": 6,
+          "count": 50
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 3
+        },
+        {
+          "id": 72,
+          "count": 800
+        },
+        {
+          "id": 6,
+          "count": 80
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "rewards": [
+        {
+          "id": 81,
+          "count": 4
+        },
+        {
+          "id": 72,
+          "count": 1000
+        },
+        {
+          "id": 6,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

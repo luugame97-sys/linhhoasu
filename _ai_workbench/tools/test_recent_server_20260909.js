@@ -1,0 +1,26 @@
+'use strict';
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert/strict');
+const root=process.env.LHS_APP_ROOT||path.resolve(__dirname,'../../linhhoasu/lhs/newServer');
+const src=fs.readFileSync(path.join(root,'src/handlers/serverList.js'),'utf8');
+const start=src.indexOf('async function buildRecentLoginServers('),end=src.indexOf('\nfunction uniqueTextList',start);
+const context={buildRoleSummary:r=>r,buildServerData:async(id,req,now,r)=>({serverId:id,...r})};
+vm.createContext(context);vm.runInContext(src.slice(start,end)+';this.recent=buildRecentLoginServers;',context);
+(async()=>{
+const roles=[{serverId:1001,lastLoginTime:100,createTime:1},{serverId:1002,lastLoginTime:200,createTime:2},{serverId:1003,lastLoginTime:0,createTime:300}];
+assert.deepEqual(Array.from(await context.recent(roles),r=>r.serverId),[1002,1001]);
+roles[0].lastLoginTime=400;assert.equal((await context.recent(roles))[0].serverId,1001);
+assert.equal((await context.recent([])).length,0);
+assert(!src.includes('await accountService.markRoleLogin('));
+assert(src.includes('defaultServerData: recentLoginServers[0] || selectedServerData'));
+const http=fs.readFileSync(path.join(root,'src/net/HTTPServer.js'),'utf8');assert(!http.includes('await accountService.markRoleLogin('));
+const account=fs.readFileSync(path.join(root,'src/handlers/account.js'),'utf8');
+const a=account.indexOf('  // The native client may authenticate on S1'),b=account.indexOf('  return loginBatch;',a);
+const body=account.slice(a,b);
+let calls=0;const c={managedBot:false,key:'u2',authSession:{accountId:'qa',roleId:'r1'},loginServerId:1002,accountService:{findAccount:async()=>({roles:[{userId:'u2',serverId:1002,roleId:'r2'}]}),markRoleLogin:async(...args)=>{calls++;assert.deepEqual(args,['qa','r2',1002]);return {};}}};
+const invoke=()=>vm.runInNewContext('(async()=>{'+body+'})()',c);
+await invoke();assert.equal(calls,1);c.managedBot=true;await invoke();assert.equal(calls,1);
+c.managedBot=false;c.authSession=null;await invoke();assert.equal(calls,1);
+c.authSession={accountId:'qa',roleId:'r2'};c.accountService.markRoleLogin=async()=>null;await assert.rejects(invoke,/LOGIN_HISTORY_SAVE_NOT_CONFIRMED/);
+assert(a>account.indexOf('const loginBatch = await buildLoginBatch'));
+console.log(JSON.stringify({result:'PASS',checks:11,fixture:true,productionWrites:0}));
+})().catch(e=>{console.error(e);process.exitCode=1;});

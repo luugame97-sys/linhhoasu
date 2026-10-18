@@ -1,0 +1,216 @@
+{
+  "_table": "TopArenaBattleRankRewardConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,rankMin,rankMax,rankShow,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rankMin": 1,
+        "rankMax": 1,
+        "rankShow": "1",
+        "rewards": [
+          {
+            "id": 11237,
+            "count": 1
+          },
+          {
+            "id": 182,
+            "count": 5000
+          },
+          {
+            "id": 6,
+            "count": 100
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rankMin": 2,
+        "rankMax": 2,
+        "rankShow": "2",
+        "rewards": [
+          {
+            "id": 11238,
+            "count": 1
+          },
+          {
+            "id": 182,
+            "count": 4000
+          },
+          {
+            "id": 6,
+            "count": 80
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rankMin": 3,
+        "rankMax": 4,
+        "rankShow": "3-4",
+        "rewards": [
+          {
+            "id": 11239,
+            "count": 1
+          },
+          {
+            "id": 182,
+            "count": 3000
+          },
+          {
+            "id": 6,
+            "count": 60
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rankMin": 1,
+      "rankMax": 1,
+      "rankShow": "1",
+      "rewards": [
+        {
+          "id": 11237,
+          "count": 1
+        },
+        {
+          "id": 182,
+          "count": 5000
+        },
+        {
+          "id": 6,
+          "count": 100
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "rankMin": 2,
+      "rankMax": 2,
+      "rankShow": "2",
+      "rewards": [
+        {
+          "id": 11238,
+          "count": 1
+        },
+        {
+          "id": 182,
+          "count": 4000
+        },
+        {
+          "id": 6,
+          "count": 80
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "rankMin": 3,
+      "rankMax": 4,
+      "rankShow": "3-4",
+      "rewards": [
+        {
+          "id": 11239,
+          "count": 1
+        },
+        {
+          "id": 182,
+          "count": 3000
+        },
+        {
+          "id": 6,
+          "count": 60
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "rankMin": 5,
+      "rankMax": 8,
+      "rankShow": "5-8",
+      "rewards": [
+        {
+          "id": 182,
+          "count": 2500
+        },
+        {
+          "id": 6,
+          "count": 50
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "rankMin": 9,
+      "rankMax": 16,
+      "rankShow": "9-16",
+      "rewards": [
+        {
+          "id": 182,
+          "count": 2000
+        },
+        {
+          "id": 6,
+          "count": 40
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "rankMin": 17,
+      "rankMax": 32,
+      "rankShow": "17-32",
+      "rewards": [
+        {
+          "id": 182,
+          "count": 1500
+        },
+        {
+          "id": 6,
+          "count": 30
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "rankMin": 33,
+      "rankMax": 64,
+      "rankShow": "33-64",
+      "rewards": [
+        {
+          "id": 182,
+          "count": 1250
+        },
+        {
+          "id": 6,
+          "count": 25
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "rankMin": 65,
+      "rankMax": 512,
+      "rankShow": "65-512",
+      "rewards": [
+        {
+          "id": 182,
+          "count": 1000
+        },
+        {
+          "id": 6,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

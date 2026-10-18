@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login visual theme audit - 02/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ki-m-tra-nh-m-n-h-nh-ng-nh-p-02-09-2026">Kiểm tra ảnh màn hình đăng nhập (02/09/2026)</h1>
+<h2 id="k-t-lu-n">Kết luận</h2>
+<p>Ảnh nền trắng trong ảnh người dùng gửi là <strong>ảnh mặc định hợp lệ</strong> của client, không phải asset bị ghi đè do rollback marquee.</p>
+<p>Asset khớp với ảnh hiển thị:</p>
+<p><code>/linhhoasu/webgame/game/update/resource/assets/game_start/login_bg_4f696aaa.jpg</code></p>
+<p>Ảnh này có nền mây trắng, tháp phát sáng và nhân vật ngồi thiền, đúng với phần nền trong ảnh.</p>
+<h2 id="c-ch-i-nh-theo-ch-th-i-gian">Cơ chế đổi ảnh theo chủ đề/thời gian</h2>
+<p>Trong <code>js/start.min_52ac8d58.js</code>, client chọn nền theo mốc thời gian:</p>
+<pre><code>Nếu đang trong khoảng linkageStartTime..linkageEndTime và chưa bật skipIntro:
+    loadingBGImg = login_ld_bg
+Nếu ngoài khoảng đó:
+    inChina ? login_bg : login_bg_tw</code></pre>
+<p>Mốc đang có trong bundle:</p>
+<ul>
+<li><code>linkageStartTime = 1784044800000</code> → 14/07/2026 23:00 (GMT+7).</li>
+<li><code>linkageEndTime = 1788278400000</code> → 01/09/2026 23:00 (GMT+7).</li>
+</ul>
+<p>Vì vậy sau 01/09/2026 23:00, client tự chuyển về <code>login_bg</code> (nền trắng) khi <code>inChina=true</code>. Đây là hành vi theo chủ đề/ngày, không phải lỗi.</p>
+<h2 id="i-chi-u-asset-production-local">Đối chiếu asset production/local</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Asset</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td><code>login_bg_4f696aaa.jpg</code></td>
+<td>VPS/local khớp SHA-256 <code>8b4ff5c56b2262b44f61b02db04ee28cf78836a6c033ce3a505c9a603d6b8f5d</code></td>
+</tr>
+<tr>
+<td><code>login_bg_tw_8d2e3139.jpg</code></td>
+<td>VPS/local khớp SHA-256 <code>2454583865e44d42ef2d50b46ef3820250ff9218fe02c91f2f690ef4ee806d5d</code></td>
+</tr>
+<tr>
+<td><code>login_ld_bg_fa5c6746.jpg</code></td>
+<td>VPS/local khớp SHA-256 <code>c635a4b302aded75746494f42e7ad8bf163f054e6e37d16d8675f0ec8d054904</code></td>
+</tr>
+<tr>
+<td><code>atlas_ui/9_login</code></td>
+<td>96/96 file khớp, mismatch 0</td>
+</tr>
+<tr>
+<td><code>gameEui</code> login skins</td>
+<td>30 skin được chọn so sánh, khác biệt 0</td>
+</tr>
+<tr>
+<td><code>start.min_52ac8d58.js</code></td>
+<td>VPS/local khớp SHA-256 <code>e822365fca7b7380e60c0c80025d8efaeb798b19543067a609d0117a25ec9e24</code></td>
+</tr>
+</tbody></table></div>
+<h2 id="nh-ng-kh-c-bi-t-kh-ng-li-n-quan">Những khác biệt không liên quan</h2>
+<ul>
+<li><code>index.html</code> production có các patch trước đó (cache token <code>20260831_tien_duyen_fix_v1</code>, hit-route V6) nên hash khác file local hiện tại.</li>
+<li><code>main.min_a6195824.js</code> và <code>config_e5ac72c2.bin</code> production cũng là các bản production đã có thay đổi tính năng trước đây; không có thay đổi nào trong rollback marquee chạm các file này.</li>
+<li>Các khác biệt trên không làm đổi asset <code>login_bg</code> và không phải nguyên nhân ảnh trắng xuất hiện.</li>
+</ul>
+<h2 id="tr-ng-th-i">Trạng thái</h2>
+<ul>
+<li>Không sửa asset/client trong phiên này.</li>
+<li>Không rollback ảnh hoặc config theo cảm tính.</li>
+<li>Ảnh hiện tại là đúng theo lịch chủ đề của client.</li>
+</ul>
+<p>Evidence: <code>_ai_workbench/temp/client_core_remote_audit_20260902.json</code>, <code>_ai_workbench/temp/login_skin_remote_local_diff_20260902.json</code>.</p></main></body></html>

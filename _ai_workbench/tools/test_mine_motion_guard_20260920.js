@@ -1,0 +1,12 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const main = fs.readFileSync(path.resolve(__dirname, '../temp/mine_motion_guard_20260920/main.min_drop100.js'), 'utf8');
+const index = fs.readFileSync(path.resolve(__dirname, '../temp/mine_motion_guard_20260920/index.html'), 'utf8');
+assert.equal((main.match(/var i=e\.setEntityAnimtion\(this\.aniName,!1\)/g) || []).length, 1);
+assert.match(main, /i&&i\.waitPlayEnd\?i\.waitPlayEnd\(\)/);
+assert.match(main, /setTimeout\(function\(\)\{t\.isFin=!0\},1800\)/);
+assert.match(index, /20260920_mine_motion_guard_v1/);
+assert.doesNotMatch(main, /e\.setEntityAnimtion\(this\.aniName,!1\)\.waitPlayEnd\(\)\.then/);
+console.log(JSON.stringify({ result: 'PASS', checks: 5, productionWrites: 0 }));

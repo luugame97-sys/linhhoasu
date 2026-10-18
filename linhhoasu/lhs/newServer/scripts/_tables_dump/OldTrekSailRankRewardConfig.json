@@ -1,0 +1,256 @@
+{
+  "_table": "OldTrekSailRankRewardConfig",
+  "_rows": 8,
+  "_type": "object",
+  "_firstKeys": "id,rankMin,rankMax,rankShow,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rankMin": 1,
+        "rankMax": 1,
+        "rankShow": "1",
+        "rewards": [
+          {
+            "id": 101322,
+            "count": 20
+          },
+          {
+            "id": 11284,
+            "count": 1
+          },
+          {
+            "id": 101341,
+            "count": 15
+          },
+          {
+            "id": 327,
+            "count": 2000
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rankMin": 2,
+        "rankMax": 2,
+        "rankShow": "2",
+        "rewards": [
+          {
+            "id": 101322,
+            "count": 16
+          },
+          {
+            "id": 11284,
+            "count": 1
+          },
+          {
+            "id": 101341,
+            "count": 12
+          },
+          {
+            "id": 327,
+            "count": 1500
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rankMin": 3,
+        "rankMax": 3,
+        "rankShow": "3",
+        "rewards": [
+          {
+            "id": 101322,
+            "count": 12
+          },
+          {
+            "id": 11284,
+            "count": 1
+          },
+          {
+            "id": 101341,
+            "count": 10
+          },
+          {
+            "id": 327,
+            "count": 1000
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rankMin": 1,
+      "rankMax": 1,
+      "rankShow": "1",
+      "rewards": [
+        {
+          "id": 101322,
+          "count": 20
+        },
+        {
+          "id": 11284,
+          "count": 1
+        },
+        {
+          "id": 101341,
+          "count": 15
+        },
+        {
+          "id": 327,
+          "count": 2000
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "rankMin": 2,
+      "rankMax": 2,
+      "rankShow": "2",
+      "rewards": [
+        {
+          "id": 101322,
+          "count": 16
+        },
+        {
+          "id": 11284,
+          "count": 1
+        },
+        {
+          "id": 101341,
+          "count": 12
+        },
+        {
+          "id": 327,
+          "count": 1500
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "rankMin": 3,
+      "rankMax": 3,
+      "rankShow": "3",
+      "rewards": [
+        {
+          "id": 101322,
+          "count": 12
+        },
+        {
+          "id": 11284,
+          "count": 1
+        },
+        {
+          "id": 101341,
+          "count": 10
+        },
+        {
+          "id": 327,
+          "count": 1000
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "rankMin": 4,
+      "rankMax": 10,
+      "rankShow": "4-10",
+      "rewards": [
+        {
+          "id": 101322,
+          "count": 8
+        },
+        {
+          "id": 11284,
+          "count": 1
+        },
+        {
+          "id": 101341,
+          "count": 8
+        },
+        {
+          "id": 327,
+          "count": 800
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "rankMin": 11,
+      "rankMax": 20,
+      "rankShow": "11-20",
+      "rewards": [
+        {
+          "id": 101322,
+          "count": 5
+        },
+        {
+          "id": 11284,
+          "count": 1
+        },
+        {
+          "id": 101341,
+          "count": 5
+        },
+        {
+          "id": 327,
+          "count": 600
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "rankMin": 21,
+      "rankMax": 50,
+      "rankShow": "21-50",
+      "rewards": [
+        {
+          "id": 101341,
+          "count": 3
+        },
+        {
+          "id": 327,
+          "count": 500
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "rankMin": 51,
+      "rankMax": 100,
+      "rankShow": "51-100",
+      "rewards": [
+        {
+          "id": 101341,
+          "count": 2
+        },
+        {
+          "id": 327,
+          "count": 300
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "rankMin": 101,
+      "rankMax": 999,
+      "rankShow": "101+",
+      "rewards": [
+        {
+          "id": 101341,
+          "count": 1
+        },
+        {
+          "id": 327,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs'),path=require('path'),vm=require('vm');
+const client=process.env.COMPETITION_CLIENT_ROOT||path.resolve(__dirname,'../../../webgame/game');
+const main=process.env.COMPETITION_MAIN||path.join(client,'js/main.min_drop100.js');
+const native=fs.readFileSync(main,'utf8'),patch=fs.readFileSync(path.join(client,'js/lhs-arena-v1.js'),'utf8');
+const sent=[],notices=[],timers=new Map(),storage=new Map();let serial=0;
+function Base(){}Base.prototype.Rpc=function(tag,data,ok,fail){sent.push({tag,data,ok,fail});};
+function Arena(){}Arena.prototype=Object.create(Base.prototype);Arena.prototype.constructor=Arena;
+function Cross(){}Cross.prototype=Object.create(Base.prototype);Cross.prototype.constructor=Cross;
+function Raid(){}Raid.prototype=Object.create(Base.prototype);Raid.prototype.constructor=Raid;
+Raid.prototype.sendStartFightPart=function(p){this.Rpc(2300,p,r=>{this.battle=r;});};
+function Rank(){}Rank.prototype.updateUI=function(){};
+const c={Object,Array,Number,String,Function,Date,Math,console:{warn:m=>notices.push(String(m))},A:{ins:()=>({dispatch(){}})},E:{},
+ Y:{Config:{AssetsRefreshConfig:{110:{countMax:10}}}},setTimeout:fn=>{timers.set(++serial,fn);return serial;},clearTimeout:id=>timers.delete(id),
+ sessionStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)},
+ UserInfo:{UserID:'qa_comp_client',ServerID:1001},GlobalManager:{ArenaModel:Arena,CrossArenaModel:Cross,RaidInfoModel:Raid,ArenaRankView:Rank}};
+c.window=c;vm.createContext(c);
+c.m=Arena.prototype;let start=native.indexOf('m.onArenaInfoUpdate=function'),end=native.indexOf('hNe.getArenaTicketMax=function',start);
+assert(start>=0&&end>start);vm.runInContext(native.slice(start,end).replace(/,$/,';'),c);
+c.m=Cross.prototype;const classStart=native.indexOf('(m=mNe.prototype).onArenaInfo=function');end=native.indexOf('t(FV=mNe,"CrossArenaModel")',classStart);
+assert(classStart>=0&&end>classStart);start=native.indexOf('.onArenaInfo=function',classStart);
+vm.runInContext('m'+native.slice(start,end).replace(/,$/,';'),c);
+vm.runInContext(patch,c);
+assert(c.LhsArenaContractV1.installed);assert(c.LhsArenaContractV1.crossInstalled);
+const arena=c.GlobalManager.ArenaModel=new Arena(),cross=c.GlobalManager.CrossArenaModel=new Cross(),raid=c.GlobalManager.RaidInfoModel=new Raid();
+const row={dbid:'111111111111111111111111',challengeVersion:'v1',cycleKey:'C1',serverId:1002};
+cross.onArenaInfo({result:0,score:1000,rank:5,ranklist:[{rank:1}],toplist:[{rank:1}],challengelist:[row],loglist:[],cycleKey:'C1',challengeVersion:'v1'});
+const tests=[];const check=(name,fn)=>{fn();tests.push(name);};
+cross.requestGetChallengeList();let call=sent.pop();check('Cross list uses 5002',()=>assert.equal(call.tag,5002));call.ok({result:0,challengelist:[row],rank:6});
+check('partial list retains global BXH',()=>{assert.equal(cross.rankInfo.ranklist.length,1);assert.equal(cross.rankInfo.toplist.length,1);assert.equal(cross.rankInfo.rank,6);});
+cross.requestRefreshChllengeList();call=sent.pop();cross.requestRefreshChllengeList();
+check('refresh single pending intent with cycle/version',()=>{assert.equal(sent.length,0);assert.equal(call.tag,5001);assert.equal(call.data.cycleKey,'C1');assert.equal(call.data.challengeVersion,'v1');assert(call.data.requestId);});
+call.fail();cross.requestRefreshChllengeList();let retry=sent.pop();
+check('transport retry reuses immutable refresh intent',()=>assert.deepEqual(retry.data,call.data));retry.ok({result:-1,retryable:false,message:'Không đủ kim cương'});
+cross.requestRefreshChllengeList();let newCall=sent.pop();check('terminal refusal retires refresh intent',()=>assert.notEqual(newCall.data.requestId,call.data.requestId));
+newCall.ok({result:0,challengelist:[row],challengeVersion:'v1',cycleKey:'C1'});
+raid.sendStartFightPart({type:16,enemyid:row.dbid});call=sent.pop();
+check('Cross fight carries owner-issued snapshot and stable id',()=>{assert.equal(call.data.cycleKey,'C1');assert.equal(call.data.challengeVersion,'v1');assert(call.data.requestId);});
+call.fail();raid.OnSocketClose();cross.arenaInfo.challengeVersion='v2';
+raid.sendStartFightPart({type:16,enemyid:row.dbid});retry=sent.pop();check('reconnect preserves unknown fight payload',()=>assert.deepEqual(retry.data,call.data));
+retry.ok({result:0,recovered:true,enemyid:row.dbid,score:1010,fightResult:{entitys:[{showInfo:{}},{showInfo:{}}],events:[{}]}});
+check('complete replay opens battle and hydrates Cross score',()=>{assert(raid.battle);assert.equal(cross.arenaInfo.score,1010);});
+raid.battle=null;raid.sendStartFightPart({type:17,enemyid:'42'});call=sent.pop();
+check('revenge keeps numeric native uid and attaches current state',()=>{assert.equal(call.data.logUid,'42');assert.equal(call.data.cycleKey,'C1');assert.equal(call.data.challengeVersion,'v2');});
+call.ok({result:-1,retryable:false,open:false,code:'CROSS_ARENA_CLOSED',message:'Đỉnh Phong chưa mở'});
+check('closed event gives feedback without corrupting battle',()=>{assert.equal(raid.battle,null);assert.equal(cross.arenaInfo.open,false);assert.equal(cross.getChallengeList().length,0);assert(notices.some(m=>m.includes('Đỉnh Phong chưa mở')));});
+cross.onArenaInfo({result:0,score:1000,challengelist:[row],loglist:[],cycleKey:'C1',challengeVersion:'v1'});
+cross.requestGetChallengeList();call=sent.pop();cross.OnSocketClose();call.ok({score:9999,challengelist:[]});
+check('late disconnected reply ignored',()=>assert.equal(cross.arenaInfo.score,1000));
+cross.Rpc=()=>{throw Error('SEND_THROW');};cross.requestRefreshChllengeList();
+check('synchronous send error releases refresh pending',()=>assert.equal(cross.__lhsArenaRefreshPending,false));cross.Rpc=Base.prototype.Rpc;
+cross.requestRefreshChllengeList();sent.pop();for(const fn of [...timers.values()])fn();
+check('timeout releases refresh pending',()=>assert.equal(cross.__lhsArenaRefreshPending,false));
+raid.sendStartFightPart({type:1,enemyid:'pve'});check('unrelated PvE unchanged',()=>assert.equal(sent.pop().data.requestId,undefined));
+arena.onArenaInfo({score:1000,challengelist:[],loglist:[]});arena.requestRankInfo();check('ordinary Arena route unchanged',()=>assert.equal(sent.pop().tag,2600));
+vm.runInContext(patch,c);check('addon reinstall idempotent',()=>assert.equal(c.LhsArenaContractV1.patched.filter(x=>x==='CrossArenaModel').length,1));
+// Compatibility during rollout: an already-open tab can still run the old
+// native callback before the user reloads the new guard.
+const legacyStart=native.indexOf('m.sendStartFightPart=function'),legacyEnd=native.indexOf(',m.send',legacyStart+30);
+assert(legacyStart>=0&&legacyEnd>legacyStart);
+const legacyProto={Rpc(tag,data,callback){callback({result:-1,enemyid:'000000000000000000000000',code:'CROSS_ARENA_CLOSED'});}};
+const legacyContext=vm.createContext({m:legacyProto});vm.runInContext(native.slice(legacyStart,legacyEnd)+';',legacyContext);
+check('old native Cross callback rejects safely before client refresh',()=>assert.doesNotThrow(()=>legacyProto.sendStartFightPart({type:16,enemyid:'1'})));
+console.log(JSON.stringify({result:'PASS',checks:tests.length,tests,nativeMain:main,networkAttempts:0,productionWrites:0},null,2));

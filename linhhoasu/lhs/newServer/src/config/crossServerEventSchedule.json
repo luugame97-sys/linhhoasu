@@ -1,0 +1,28 @@
+{
+  "version": "cross-parallel-v2",
+  "enabled": true,
+  "anchor": "2026-09-14T00:00:00+07:00",
+  "periodDays": 7,
+  "rotation": ["crossRival"],
+  "independent": {
+    "crossArena": {
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "activationAt": "2026-09-17T22:00:00+07:00",
+      "periodDays": 7
+    },
+    "topArena": {
+      "anchor": "2026-10-04T00:00:00+07:00",
+      "activationAt": "2026-10-04T00:00:00+07:00",
+      "periodDays": 7
+    }
+  },
+  "serverIds": [1001, 1002, 1003, 1004, 1005],
+  "serverPool": {
+    "autoInclude": true,
+    "mode": "page",
+    "pageId": 1,
+    "minServerId": 1001,
+    "maxServerId": 1099
+  },
+  "settlementGraceMs": 60000
+}

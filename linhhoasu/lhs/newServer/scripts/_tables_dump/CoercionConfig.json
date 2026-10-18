@@ -1,0 +1,444 @@
+{
+  "_table": "CoercionConfig",
+  "_rows": 51,
+  "_type": "object",
+  "_firstKeys": "stage,coercion,attrs,limitLevelUp",
+  "_sample": [
+    {
+      "0": {
+        "stage": 0,
+        "coercion": 0,
+        "attrs": [],
+        "limitLevelUp": 0
+      }
+    },
+    {
+      "1": {
+        "stage": 1,
+        "coercion": 50,
+        "attrs": {
+          "225": 15
+        },
+        "limitLevelUp": 0
+      }
+    },
+    {
+      "2": {
+        "stage": 2,
+        "coercion": 120,
+        "attrs": {
+          "225": 30
+        },
+        "limitLevelUp": 0
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "stage": 0,
+      "coercion": 0,
+      "attrs": [],
+      "limitLevelUp": 0
+    },
+    "1": {
+      "stage": 1,
+      "coercion": 50,
+      "attrs": {
+        "225": 15
+      },
+      "limitLevelUp": 0
+    },
+    "2": {
+      "stage": 2,
+      "coercion": 120,
+      "attrs": {
+        "225": 30
+      },
+      "limitLevelUp": 0
+    },
+    "3": {
+      "stage": 3,
+      "coercion": 200,
+      "attrs": {
+        "225": 50
+      },
+      "limitLevelUp": 10
+    },
+    "4": {
+      "stage": 4,
+      "coercion": 300,
+      "attrs": {
+        "225": 80
+      },
+      "limitLevelUp": 10
+    },
+    "5": {
+      "stage": 5,
+      "coercion": 400,
+      "attrs": {
+        "225": 100
+      },
+      "limitLevelUp": 10
+    },
+    "6": {
+      "stage": 6,
+      "coercion": 500,
+      "attrs": {
+        "225": 120
+      },
+      "limitLevelUp": 20
+    },
+    "7": {
+      "stage": 7,
+      "coercion": 650,
+      "attrs": {
+        "225": 160
+      },
+      "limitLevelUp": 20
+    },
+    "8": {
+      "stage": 8,
+      "coercion": 800,
+      "attrs": {
+        "225": 200
+      },
+      "limitLevelUp": 20
+    },
+    "9": {
+      "stage": 9,
+      "coercion": 1000,
+      "attrs": {
+        "225": 240
+      },
+      "limitLevelUp": 30
+    },
+    "10": {
+      "stage": 10,
+      "coercion": 1200,
+      "attrs": {
+        "225": 290
+      },
+      "limitLevelUp": 30
+    },
+    "11": {
+      "stage": 11,
+      "coercion": 1450,
+      "attrs": {
+        "225": 350
+      },
+      "limitLevelUp": 30
+    },
+    "12": {
+      "stage": 12,
+      "coercion": 1700,
+      "attrs": {
+        "225": 410
+      },
+      "limitLevelUp": 40
+    },
+    "13": {
+      "stage": 13,
+      "coercion": 2000,
+      "attrs": {
+        "225": 480
+      },
+      "limitLevelUp": 40
+    },
+    "14": {
+      "stage": 14,
+      "coercion": 2300,
+      "attrs": {
+        "225": 550
+      },
+      "limitLevelUp": 40
+    },
+    "15": {
+      "stage": 15,
+      "coercion": 2600,
+      "attrs": {
+        "225": 620
+      },
+      "limitLevelUp": 50
+    },
+    "16": {
+      "stage": 16,
+      "coercion": 3000,
+      "attrs": {
+        "225": 720
+      },
+      "limitLevelUp": 50
+    },
+    "17": {
+      "stage": 17,
+      "coercion": 3400,
+      "attrs": {
+        "225": 810
+      },
+      "limitLevelUp": 50
+    },
+    "18": {
+      "stage": 18,
+      "coercion": 3800,
+      "attrs": {
+        "225": 910
+      },
+      "limitLevelUp": 60
+    },
+    "19": {
+      "stage": 19,
+      "coercion": 4200,
+      "attrs": {
+        "225": 1000
+      },
+      "limitLevelUp": 60
+    },
+    "20": {
+      "stage": 20,
+      "coercion": 4600,
+      "attrs": {
+        "225": 1100
+      },
+      "limitLevelUp": 60
+    },
+    "21": {
+      "stage": 21,
+      "coercion": 5000,
+      "attrs": {
+        "225": 1190
+      },
+      "limitLevelUp": 70
+    },
+    "22": {
+      "stage": 22,
+      "coercion": 5500,
+      "attrs": {
+        "225": 1310
+      },
+      "limitLevelUp": 70
+    },
+    "23": {
+      "stage": 23,
+      "coercion": 6000,
+      "attrs": {
+        "225": 1430
+      },
+      "limitLevelUp": 70
+    },
+    "24": {
+      "stage": 24,
+      "coercion": 6600,
+      "attrs": {
+        "225": 1570
+      },
+      "limitLevelUp": 80
+    },
+    "25": {
+      "stage": 25,
+      "coercion": 7300,
+      "attrs": {
+        "225": 1740
+      },
+      "limitLevelUp": 80
+    },
+    "26": {
+      "stage": 26,
+      "coercion": 8000,
+      "attrs": {
+        "225": 1910
+      },
+      "limitLevelUp": 80
+    },
+    "27": {
+      "stage": 27,
+      "coercion": 8800,
+      "attrs": {
+        "225": 2100
+      },
+      "limitLevelUp": 90
+    },
+    "28": {
+      "stage": 28,
+      "coercion": 9600,
+      "attrs": {
+        "225": 2290
+      },
+      "limitLevelUp": 90
+    },
+    "29": {
+      "stage": 29,
+      "coercion": 10400,
+      "attrs": {
+        "225": 2480
+      },
+      "limitLevelUp": 90
+    },
+    "30": {
+      "stage": 30,
+      "coercion": 11200,
+      "attrs": {
+        "225": 2670
+      },
+      "limitLevelUp": 100
+    },
+    "31": {
+      "stage": 31,
+      "coercion": 12000,
+      "attrs": {
+        "225": 2860
+      },
+      "limitLevelUp": 100
+    },
+    "32": {
+      "stage": 32,
+      "coercion": 13000,
+      "attrs": {
+        "225": 3100
+      },
+      "limitLevelUp": 110
+    },
+    "33": {
+      "stage": 33,
+      "coercion": 14000,
+      "attrs": {
+        "225": 3330
+      },
+      "limitLevelUp": 110
+    },
+    "34": {
+      "stage": 34,
+      "coercion": 15000,
+      "attrs": {
+        "225": 3570
+      },
+      "limitLevelUp": 120
+    },
+    "35": {
+      "stage": 35,
+      "coercion": 16000,
+      "attrs": {
+        "225": 3810
+      },
+      "limitLevelUp": 120
+    },
+    "36": {
+      "stage": 36,
+      "coercion": 17000,
+      "attrs": {
+        "225": 4050
+      },
+      "limitLevelUp": 130
+    },
+    "37": {
+      "stage": 37,
+      "coercion": 18000,
+      "attrs": {
+        "225": 4280
+      },
+      "limitLevelUp": 130
+    },
+    "38": {
+      "stage": 38,
+      "coercion": 19000,
+      "attrs": {
+        "225": 4520
+      },
+      "limitLevelUp": 140
+    },
+    "39": {
+      "stage": 39,
+      "coercion": 20000,
+      "attrs": {
+        "225": 4760
+      },
+      "limitLevelUp": 140
+    },
+    "40": {
+      "stage": 40,
+      "coercion": 21200,
+      "attrs": {
+        "225": 5040
+      },
+      "limitLevelUp": 150
+    },
+    "41": {
+      "stage": 41,
+      "coercion": 22400,
+      "attrs": {
+        "225": 5330
+      },
+      "limitLevelUp": 150
+    },
+    "42": {
+      "stage": 42,
+      "coercion": 23600,
+      "attrs": {
+        "225": 5620
+      },
+      "limitLevelUp": 160
+    },
+    "43": {
+      "stage": 43,
+      "coercion": 24800,
+      "attrs": {
+        "225": 5900
+      },
+      "limitLevelUp": 160
+    },
+    "44": {
+      "stage": 44,
+      "coercion": 26000,
+      "attrs": {
+        "225": 6190
+      },
+      "limitLevelUp": 170
+    },
+    "45": {
+      "stage": 45,
+      "coercion": 27500,
+      "attrs": {
+        "225": 6540
+      },
+      "limitLevelUp": 170
+    },
+    "46": {
+      "stage": 46,
+      "coercion": 29000,
+      "attrs": {
+        "225": 6900
+      },
+      "limitLevelUp": 180
+    },
+    "47": {
+      "stage": 47,
+      "coercion": 30500,
+      "attrs": {
+        "225": 7260
+      },
+      "limitLevelUp": 180
+    },
+    "48": {
+      "stage": 48,
+      "coercion": 32000,
+      "attrs": {
+        "225": 7610
+      },
+      "limitLevelUp": 190
+    },
+    "49": {
+      "stage": 49,
+      "coercion": 33500,
+      "attrs": {
+        "225": 7970
+      },
+      "limitLevelUp": 190
+    },
+    "50": {
+      "stage": 50,
+      "coercion": 35000,
+      "attrs": {
+        "225": 8330
+      },
+      "limitLevelUp": 800
+    }
+  }
+}

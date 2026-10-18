@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trung tâm mô-đun quản trị game</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100vh;font:15px "Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f2f6fb,#f8fbff 42%,#eef3f8);color:#172033}
+    .shell{max-width:1220px;margin:0 auto;padding:34px 20px 42px}
+    .hero{padding:28px;border-radius:28px;background:linear-gradient(135deg,#17324d,#1f5b8d 58%,#4f8bd6);color:#fff;box-shadow:0 20px 56px rgba(23,50,77,.18)}
+    .hero h1{font-size:30px;margin-bottom:10px}
+    .hero p{max-width:760px;line-height:1.8;opacity:.9}
+    .ops{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .ops a{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;text-decoration:none;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .card{display:flex;flex-direction:column;gap:10px;min-height:190px;padding:22px;border-radius:24px;background:#fff;border:1px solid #dde6f2;box-shadow:0 18px 44px rgba(23,50,77,.08);text-decoration:none;color:#172033}
+    .card b{display:inline-block;width:max-content;padding:4px 10px;border-radius:999px;background:#e8f0ff;color:#1d4e89;font-size:12px}
+    .card strong{font-size:21px}
+    .card span{line-height:1.7;color:#5a677b}
+    .card:hover{transform:translateY(-3px);transition:.18s ease;box-shadow:0 22px 50px rgba(23,50,77,.14)}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Trung tâm mô-đun quản trị game</h1>
+      <p>Chia các khả năng nền ban đầu được tích hợp trong `admin-users.html` thành các lối vào riêng biệt. Mỗi mô-đun có thể được mở trực tiếp, đăng nhập và sử dụng độc lập, trong khi vẫn giữ lại một lối vào phụ trợ hoàn chỉnh để tạo điều kiện thuận lợi cho các hoạt động liên kết được tiếp tục.</p>
+      <div class="ops">
+        <a href="admin-users.html">Trang quản trị đầy đủ</a>
+        <a href="index.html">Trang tổng quản</a>
+      </div>
+    </section>
+    <section class="grid">
+      <a class="card" href="game-users.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Quản lý dữ liệu người chơi</strong>
+        <span>Truy vấn người chơi, chỉnh sửa, phân phối hàng loạt, nạp tiền thủ công, điều chỉnh nhiệm vụ và tăng trưởng.</span>
+      </a>
+      <a class="card" href="game-agents.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Quản lý đại lý</strong>
+        <span>Mở tài khoản đại lý, cấu hình quyền, giới hạn hạn ngạch và bảo trì dữ liệu.</span>
+      </a>
+      <a class="card" href="game-recharge-configs.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Cấu hình nạp tiền</strong>
+        <span>Duy trì thống nhất các cấp độ sản phẩm, phương thức thanh toán và cấu hình sản phẩm nạp tiền nền.</span>
+      </a>
+      <a class="card" href="game-logs.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Nhật ký thao tác</strong>
+        <span>Sàng lọc các bản ghi hành vi nền theo người vận hành, người chơi, hành động và kết quả.</span>
+      </a>
+      <a class="card" href="game-chats.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Quản lý chat</strong>
+        <span>Xem các hoạt động trò chuyện gần đây trên thế giới và các kênh hệ thống, đồng thời hỗ trợ xử lý các lệnh cấm và khiếu nại.</span>
+      </a>
+      <a class="card" href="game-mails.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Quản lý thư</strong>
+        <span>Định cấu hình các chữ cái hệ thống để hỗ trợ đẩy hàng loạt tới người chơi và nhóm được chỉ định.</span>
+      </a>
+      <a class="card" href="game-servers.html">
+        <b>Mô-đun độc lập</b>
+        <strong>Quản lý máy chủ</strong>
+        <span>Duy trì độc lập các khu vực, số liệu thống kê hoạt động, dữ liệu trực tuyến và vòng đời dịch vụ của quận.</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

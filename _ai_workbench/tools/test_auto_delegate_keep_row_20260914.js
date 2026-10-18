@@ -1,0 +1,31 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs'),path=require('path'),vm=require('vm'),zlib=require('zlib');
+const app=process.env.AUTO_SELL_APP||path.resolve(__dirname,'../../linhhoasu/lhs/newServer');
+const out=process.env.AUTO_SELL_FIXTURE||path.resolve(__dirname,'../temp/auto_delegate_sell_fix_20260914');
+const acorn=process.env.AUTO_SELL_FUNCTIONS?null:require(app+'/node_modules/acorn'),{ByteArray,BinJsonUtil}=require(app+'/src/protocol/BinJsonUtil');
+const slices=process.env.AUTO_SELL_FUNCTIONS?JSON.parse(fs.readFileSync(process.env.AUTO_SELL_FUNCTIONS)):null;
+const source=fs.readFileSync(out+'/main.js','utf8'),before=fs.readFileSync(out+'/main.js.before','utf8');
+function func(marker,text=source){if(slices){const key=require('crypto').createHash('sha256').update(text).digest('hex');assert(slices[key]&&slices[key][marker]);return slices[key][marker];}const at=text.indexOf(marker);assert(at>=0,marker);let node=acorn.parseExpressionAt(text,at+marker.length,{ecmaVersion:'latest'});if(node.expressions)node=node.expressions[0];return text.slice(node.start,node.end);}
+const skin=BinJsonUtil.readFullJson(new ByteArray(zlib.inflateSync(fs.readFileSync(out+'/eui.bin.before')))).AutoOpenBoxPanelSkin;
+let saved=null,stored=null,events=[];
+class Group {constructor(){this.children=[];this.width=554;}addChild(child){this.children.push(child);child.parent=this;}get numChildren(){return this.children.length;}getChildAt(i){return this.children[i];}}
+class CheckBox {constructor(){this.selected=false;}addEventListener(...args){events.push([this,...args]);}}
+const settings={_autoConfig:{},autoConfig:{},multipleData:[1,4],fishing_qualityData:[2],fishing_maxQualityData:[7],UpdateMultipleData(){},getPlayerKey:()=> 'fixture-role-S2'};
+const ctx=vm.createContext({U9:settings,n7e:settings,U:{Group,CheckBox,Label:class{}},O:Math,console:{log(){}},ec:{copyDataHandler:x=>JSON.parse(JSON.stringify(x))},
+  egret:{ByteArray,Event:{CHANGE:'change'},TouchEvent:{TOUCH_TAP:'tap'},localStorage:{getItem:()=>stored,setItem:(k,v)=>stored=v},Base64Util:{encode:buffer=>Buffer.from(buffer).toString('base64'),decode:s=>Uint8Array.from(Buffer.from(s,'base64')).buffer}},
+  Y:{UnlockSystem:{getSetting:()=>saved,setSetting:(k,v)=>saved=v},BoxLayerModel:{getAutoNum:()=>4},FishingModel:{isUnlockFishCard:()=>true}}});
+const get=marker=>vm.runInContext('('+func(marker)+')',ctx);
+settings.Init=get('n7e.Init=');settings.updateTemporaryConfig=get('n7e.updateTemporaryConfig=');settings.updateRecord=get('n7e.updateRecord=');
+const panel={qualityCheckBox:new CheckBox,updateViewUI(){this.sellAllEquipmentsBox.selected=!settings.autoConfig.sellAllEquipments;this.qualityCheckBox.enabled=!settings.autoConfig.sellAllEquipments;}};
+const row=new Group,label={...skin._Label2};row.addChild({});row.addChild(label);row.addChild(panel.qualityCheckBox);
+panel.installKeepQualityToggle=get('_.installKeepQualityToggle=');panel.sellAllEquipmentsCheckBox=get('_.sellAllEquipmentsCheckBox=');
+const tests=[];function test(name,fn){fn();tests.push(name);}
+test('new role default keep checked and dropdown remains same row',()=>{settings.Init();panel.installKeepQualityToggle();panel.updateViewUI();assert.equal(settings.autoConfig.sellAllEquipments,false);assert.equal(panel.sellAllEquipmentsBox.selected,true);assert.equal(panel.sellAllEquipmentsBox.parent,row);assert.equal(panel.qualityCheckBox.parent,row);assert.equal(label.text,'Giữ lại phẩm chất trang bị');assert.equal(row.numChildren,4);assert.equal(panel.qualityCheckBox.enabled,true);});
+test('checkbox label and dropdown do not overlap in native 554px row',()=>{assert(panel.sellAllEquipmentsBox.left+50*.72<label.left);assert(label.left+label.width<=row.width-panel.qualityCheckBox.right-panel.qualityCheckBox.width);assert.equal(label.textId,0);});
+test('only one mode checkbox; auto-equip remains independent below',()=>{assert(!source.includes('this.sellAllEquipmentsLabel='));assert(source.includes('this.autoEquipNewAccountLabel.text="Mặc đồ mạnh"'));assert(source.includes('this.installKeepQualityToggle()'));assert.equal(func('_.onSilentMode='),func('_.onSilentMode=',before));});
+test('unchecked disables dropdown but keeps selected quality',()=>{settings.autoConfig.quality=35;settings.autoConfig.autoEquipUpgrade=true;settings.autoConfig.isSilentMode=true;panel.sellAllEquipmentsBox.selected=false;panel.sellAllEquipmentsCheckBox();assert.equal(settings.autoConfig.sellAllEquipments,true);assert.equal(settings.autoConfig.quality,35);assert.equal(settings.autoConfig.autoEquipUpgrade,true);assert.equal(settings.autoConfig.isSilentMode,true);assert.equal(panel.qualityCheckBox.enabled,false);});
+test('native binary and role-local storage roundtrip retain unchecked and threshold',()=>{settings.updateRecord();const expected=saved;assert.equal(JSON.parse(stored).sellAllEquipments,true);settings._autoConfig={};settings.autoConfig={};settings.Init();assert.equal(settings.autoConfig.sellAllEquipments,true);assert.equal(settings.autoConfig.quality,35);assert.equal(settings.autoConfig.isSilentMode,true);assert.equal(saved,expected);panel.updateViewUI();assert.equal(panel.sellAllEquipmentsBox.selected,false);});
+test('old binary without extra toggle defaults keep checked',()=>{saved=Buffer.from(saved,'base64').subarray(0,-1).toString('base64');settings._autoConfig={};settings.Init();panel.updateViewUI();assert.equal(panel.sellAllEquipmentsBox.selected,true);assert.equal(settings.autoConfig.quality,35);});
+test('checking again restores dropdown and persists independent silent setting',()=>{panel.sellAllEquipmentsBox.selected=true;panel.sellAllEquipmentsCheckBox();settings.updateRecord();settings._autoConfig={};settings.Init();panel.updateViewUI();assert.equal(settings.autoConfig.sellAllEquipments,false);assert.equal(settings.autoConfig.isSilentMode,true);assert.equal(panel.qualityCheckBox.enabled,true);assert.equal(settings.autoConfig.quality,35);});
+test('keep filter algorithm remains unchanged when enabled',()=>{for(const marker of ['e7e.CheckAutoStop=','e7e.CheckQuality=','_.qualityCheckBoxChange='])assert.equal(func(marker),func(marker,before));});
+console.log(JSON.stringify({result:'PASS',count:tests.length,tests,network:false,realPlayerWrites:0,layout:{checkboxX:12,labelX:58,labelWidth:284,dropdownX:345,dropdownWidth:200}}));

@@ -1,0 +1,76 @@
+{
+  "_table": "HotSpringGuildConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,count,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "count": 2,
+        "rewards": [
+          {
+            "id": 16,
+            "count": 500
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "count": 4,
+        "rewards": [
+          {
+            "id": 16,
+            "count": 1000
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "count": 6,
+        "rewards": [
+          {
+            "id": 16,
+            "count": 2000
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "count": 2,
+      "rewards": [
+        {
+          "id": 16,
+          "count": 500
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "count": 4,
+      "rewards": [
+        {
+          "id": 16,
+          "count": 1000
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "count": 6,
+      "rewards": [
+        {
+          "id": 16,
+          "count": 2000
+        }
+      ]
+    }
+  }
+}

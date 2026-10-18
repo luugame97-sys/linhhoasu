@@ -1,0 +1,27 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const root = path.resolve(__dirname, '../..');
+const out = path.join(root, '_ai_workbench/temp/oldtrek_popup_fix_20261008');
+const rel = 'webgame/game/js/main.min_drop200.js';
+const before = fs.readFileSync(path.join(out, 'before', rel), 'utf8');
+const candidate = fs.readFileSync(path.join(out, 'candidate', rel), 'utf8');
+const start = before.indexOf('i(n5e,OVe=');
+const end = before.indexOf(',t(Z4=n5e,"OldTrekEventCheckView")', start);
+assert(start >= 0 && end > start);
+const beforeSegment = before.slice(start, end);
+const afterSegment = candidate.slice(start, end + (candidate.length - before.length));
+assert.equal((afterSegment.match(/!Array\.isArray\([eni]\.checkValue\)/g)||[]).length, 3);
+assert.match(afterSegment, /Array\.isArray\(t&&t\.checkValue\)/);
+assert.match(afterSegment, /this\.groupContent\.horizontalCenter=0,this\.groupContent\.verticalCenter=0/);
+assert.doesNotMatch(afterSegment, /getBoneNodeInfo\(this\.spShake,"p_zp"/);
+assert.notEqual(beforeSegment, afterSegment);
+const indexBefore = fs.readFileSync(path.join(out,'before/webgame/game/index.html'),'utf8');
+const indexAfter = fs.readFileSync(path.join(out,'candidate/webgame/game/index.html'),'utf8');
+assert.match(indexAfter, /main\.min_drop200\.js\?v=20261008_oldtrek_popup_v1/);
+assert.match(indexAfter, /lhs-fulu-safe-v1\.js\?v=20261008_fulu_safe_v4/);
+assert.notEqual(indexBefore, indexAfter);
+assert.equal((candidate.match(/OldTrekEventCheckView/g)||[]).length,(before.match(/OldTrekEventCheckView/g)||[]).length);
+console.log(JSON.stringify({result:'PASS',checks:7,productionWrites:0,networkAttempts:0,
+  changedClass:'OldTrekEventCheckView'}));

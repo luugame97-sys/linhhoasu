@@ -1,0 +1,392 @@
+{
+  "_table": "FishSceneConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "id,cond,openDay,isActivity,name,fishes,relics,picture,frontBg,backBg,banner,miniBanner",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "cond": 1,
+        "openDay": 1,
+        "isActivity": 0,
+        "name": 30030280,
+        "fishes": [
+          5011,
+          5012,
+          5013,
+          5014,
+          5015,
+          5021,
+          5022,
+          5023,
+          5024,
+          5025
+        ],
+        "relics": [
+          5301,
+          5302,
+          5303
+        ],
+        "picture": "fishing_scene_1",
+        "frontBg": "",
+        "backBg": "",
+        "banner": "ui_dydj_bm_banner1",
+        "miniBanner": "dy_bm_handbook_1"
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "cond": 2,
+        "openDay": 1,
+        "isActivity": 0,
+        "name": 30030281,
+        "fishes": [
+          5031,
+          5032,
+          5033,
+          5034,
+          5035,
+          5041,
+          5042,
+          5043,
+          5044,
+          5045
+        ],
+        "relics": [
+          5304,
+          5305,
+          5306
+        ],
+        "picture": "fishing_scene_2",
+        "frontBg": "",
+        "backBg": "",
+        "banner": "ui_dydj_bm_banner2",
+        "miniBanner": "dy_bm_handbook_2"
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "cond": 5,
+        "openDay": 1,
+        "isActivity": 0,
+        "name": 30030282,
+        "fishes": [
+          5051,
+          5052,
+          5053,
+          5054,
+          5055,
+          5061,
+          5062,
+          5063,
+          5064,
+          5065
+        ],
+        "relics": [
+          5307,
+          5308,
+          5309
+        ],
+        "picture": "fishing_scene_3",
+        "frontBg": "",
+        "backBg": "",
+        "banner": "ui_dydj_bm_banner3",
+        "miniBanner": "dy_bm_handbook_3"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "cond": 1,
+      "openDay": 1,
+      "isActivity": 0,
+      "name": 30030280,
+      "fishes": [
+        5011,
+        5012,
+        5013,
+        5014,
+        5015,
+        5021,
+        5022,
+        5023,
+        5024,
+        5025
+      ],
+      "relics": [
+        5301,
+        5302,
+        5303
+      ],
+      "picture": "fishing_scene_1",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner1",
+      "miniBanner": "dy_bm_handbook_1"
+    },
+    "2": {
+      "id": 2,
+      "cond": 2,
+      "openDay": 1,
+      "isActivity": 0,
+      "name": 30030281,
+      "fishes": [
+        5031,
+        5032,
+        5033,
+        5034,
+        5035,
+        5041,
+        5042,
+        5043,
+        5044,
+        5045
+      ],
+      "relics": [
+        5304,
+        5305,
+        5306
+      ],
+      "picture": "fishing_scene_2",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner2",
+      "miniBanner": "dy_bm_handbook_2"
+    },
+    "3": {
+      "id": 3,
+      "cond": 5,
+      "openDay": 1,
+      "isActivity": 0,
+      "name": 30030282,
+      "fishes": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5061,
+        5062,
+        5063,
+        5064,
+        5065
+      ],
+      "relics": [
+        5307,
+        5308,
+        5309
+      ],
+      "picture": "fishing_scene_3",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner3",
+      "miniBanner": "dy_bm_handbook_3"
+    },
+    "4": {
+      "id": 4,
+      "cond": 10,
+      "openDay": 1,
+      "isActivity": 0,
+      "name": 30030283,
+      "fishes": [
+        5071,
+        5072,
+        5073,
+        5074,
+        5075,
+        5081,
+        5082,
+        5083,
+        5084,
+        5085
+      ],
+      "relics": [
+        5310,
+        5311,
+        5312
+      ],
+      "picture": "fishing_scene_4",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner4",
+      "miniBanner": "dy_bm_handbook_4"
+    },
+    "5": {
+      "id": 5,
+      "cond": 15,
+      "openDay": 1,
+      "isActivity": 0,
+      "name": 30030284,
+      "fishes": [
+        5091,
+        5092,
+        5093,
+        5094,
+        5095,
+        5101,
+        5102,
+        5103,
+        5104,
+        5105
+      ],
+      "relics": [
+        5313,
+        5314,
+        5315
+      ],
+      "picture": "fishing_scene_5",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner5",
+      "miniBanner": "dy_bm_handbook_5"
+    },
+    "6": {
+      "id": 6,
+      "cond": 25,
+      "openDay": 43,
+      "isActivity": 0,
+      "name": 30030285,
+      "fishes": [
+        5016,
+        5026,
+        5036,
+        5046,
+        5056,
+        5018,
+        5028,
+        5038,
+        5048,
+        5058,
+        5017,
+        5027,
+        5037,
+        5047,
+        5057
+      ],
+      "relics": [
+        5804,
+        5801,
+        5316,
+        5317,
+        5318,
+        5319
+      ],
+      "picture": "fishing_scene_6",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner6",
+      "miniBanner": "dy_bm_handbook_6"
+    },
+    "7": {
+      "id": 7,
+      "cond": 28,
+      "openDay": 71,
+      "isActivity": 0,
+      "name": 30030286,
+      "fishes": [
+        5066,
+        5076,
+        5086,
+        5096,
+        5106,
+        5068,
+        5078,
+        5088,
+        5098,
+        5108,
+        5067,
+        5077,
+        5087,
+        5097,
+        5107
+      ],
+      "relics": [
+        5803,
+        5802,
+        5320,
+        5321,
+        5322,
+        5323
+      ],
+      "picture": "fishing_scene_7",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "ui_dydj_bm_banner7",
+      "miniBanner": "dy_bm_handbook_7"
+    },
+    "101": {
+      "id": 101,
+      "cond": 0,
+      "openDay": 1,
+      "isActivity": 1,
+      "name": 30030287,
+      "fishes": [],
+      "relics": [],
+      "picture": "fishing_scene_101",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "",
+      "miniBanner": ""
+    },
+    "201": {
+      "id": 201,
+      "cond": 0,
+      "openDay": 1,
+      "isActivity": 1,
+      "name": 30030288,
+      "fishes": [],
+      "relics": [],
+      "picture": "fishing_scene_201",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "",
+      "miniBanner": ""
+    },
+    "301": {
+      "id": 301,
+      "cond": 0,
+      "openDay": 1,
+      "isActivity": 1,
+      "name": 30030289,
+      "fishes": [],
+      "relics": [],
+      "picture": "fishing_scene_301",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "",
+      "miniBanner": ""
+    },
+    "401": {
+      "id": 401,
+      "cond": 0,
+      "openDay": 1,
+      "isActivity": 1,
+      "name": 30030290,
+      "fishes": [],
+      "relics": [],
+      "picture": "fishing_scene_401",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "",
+      "miniBanner": ""
+    },
+    "501": {
+      "id": 501,
+      "cond": 0,
+      "openDay": 1,
+      "isActivity": 1,
+      "name": 30030291,
+      "fishes": [],
+      "relics": [],
+      "picture": "fishing_scene_501",
+      "frontBg": "",
+      "backBg": "",
+      "banner": "",
+      "miniBanner": ""
+    }
+  }
+}

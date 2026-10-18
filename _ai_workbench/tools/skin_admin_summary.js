@@ -1,0 +1,7 @@
+'use strict';
+const fs=require('fs');
+const {MongoClient}=require('/linhhoasu/lhs/newServer/node_modules/mongodb');
+const c=new MongoClient('mongodb://127.0.0.1:27017');
+const ids=new Set(Object.keys(JSON.parse(fs.readFileSync('/linhhoasu/_ai_workbench/temp/skin2026lhs_manifest.json','utf8')).items).map(Number));
+function walk(v,path,out,depth=0){if(depth>8||v===null||v===undefined)return;if(Array.isArray(v)){v.forEach((x,i)=>{if(ids.has(Number(x)))out.push({path:`${path}[${i}]`,id:Number(x),value:x});else if(x&&typeof x==='object')walk(x,`${path}[${i}]`,out,depth+1);});return;}if(typeof v!=='object')return;for(const [k,x] of Object.entries(v)){const n=Number(k);if(Number.isInteger(n)&&ids.has(n))out.push({path:path?`${path}.${k}`:k,id:n,value:x});else if(x&&typeof x==='object')walk(x,path?`${path}.${k}`:k,out,depth+1);}}
+(async()=>{await c.connect();try{const p=await c.db('lhs_s1001').collection('players').findOne({userId:'u_Wk_1001_d7b1ec_1787996263464'});const out=[];walk(p,'player',out);const groups={};for(const x of out){const root=x.path.split('.')[1]||x.path.split('[')[0];(groups[root]??=[]).push(x);}const summary={accountId:p.accountId,name:p.name,playerId:p.playerId,keys:Object.keys(p),matchedCount:out.length,groups:Object.fromEntries(Object.entries(groups).map(([k,v])=>[k,{count:v.length,ids:[...new Set(v.map(x=>x.id))].sort((a,b)=>a-b),paths:v.slice(0,30)}]))};console.log(JSON.stringify(summary,null,2));}finally{await c.close();}})().catch(e=>{console.error(e.stack);process.exitCode=1});

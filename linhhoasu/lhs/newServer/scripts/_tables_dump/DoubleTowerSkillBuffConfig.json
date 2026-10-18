@@ -1,0 +1,6638 @@
+{
+  "_table": "DoubleTowerSkillBuffConfig",
+  "_rows": 529,
+  "_type": "object",
+  "_firstKeys": "id,effectType,hit,timeInterval,time,attr,value,trigger,target,isControl,superposition,buffAddVFX,buffAddSoundId",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "effectType": 101,
+        "hit": 10000,
+        "timeInterval": 60,
+        "time": 360,
+        "attr": 2,
+        "value": 200,
+        "trigger": 2,
+        "target": 200300020,
+        "isControl": 0,
+        "superposition": 1,
+        "buffAddVFX": 1010,
+        "buffAddSoundId": 10032
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "effectType": 102,
+        "hit": 10000,
+        "timeInterval": 60,
+        "time": 360,
+        "attr": 2,
+        "value": 100,
+        "trigger": 2,
+        "target": 200300020,
+        "isControl": 0,
+        "superposition": 1,
+        "buffAddVFX": 1020
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "effectType": 3,
+        "hit": 10000,
+        "time": 360,
+        "attr": 1003,
+        "value": -2000,
+        "trigger": 3,
+        "target": 200300020,
+        "isControl": 0,
+        "superposition": 1,
+        "buffAddVFX": 1030
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "effectType": 101,
+      "hit": 10000,
+      "timeInterval": 60,
+      "time": 360,
+      "attr": 2,
+      "value": 200,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1010,
+      "buffAddSoundId": 10032
+    },
+    "2": {
+      "id": 2,
+      "effectType": 102,
+      "hit": 10000,
+      "timeInterval": 60,
+      "time": 360,
+      "attr": 2,
+      "value": 100,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1020
+    },
+    "3": {
+      "id": 3,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 360,
+      "attr": 1003,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1030
+    },
+    "4": {
+      "id": 4,
+      "effectType": 104,
+      "hit": 10000,
+      "timeInterval": 60,
+      "time": 180,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201": {
+      "id": 201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 2,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 20130
+    },
+    "202": {
+      "id": 202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 2,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 20130
+    },
+    "203": {
+      "id": 203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 360,
+      "attr": 2,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1051
+    },
+    "204": {
+      "id": 204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 360,
+      "attr": 2,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1051
+    },
+    "205": {
+      "id": 205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 120,
+      "attr": 1004,
+      "value": 15000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 20180
+    },
+    "1010101": {
+      "id": 1010101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": 7,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1010201": {
+      "id": 1010201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": 15,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1010301": {
+      "id": 1010301,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": 25,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1010401": {
+      "id": 1010401,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": 40,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1010402": {
+      "id": 1010402,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1010403": {
+      "id": 1010403,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": -5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1020101": {
+      "id": 1020101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1020201": {
+      "id": 1020201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1020301": {
+      "id": 1020301,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 1000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1020401": {
+      "id": 1020401,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1020402": {
+      "id": 1020402,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1030101": {
+      "id": 1030101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 20,
+      "value": 5,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1030201": {
+      "id": 1030201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 20,
+      "value": 10,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1030301": {
+      "id": 1030301,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 20,
+      "value": 15,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1030401": {
+      "id": 1030401,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 20,
+      "value": 20,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1030402": {
+      "id": 1030402,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 3,
+      "target": 110102020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1040101": {
+      "id": 1040101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": 1500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1040201": {
+      "id": 1040201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1040301": {
+      "id": 1040301,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": 2500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1040401": {
+      "id": 1040401,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1040402": {
+      "id": 1040402,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1050101": {
+      "id": 1050101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 21,
+      "value": 5,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1050201": {
+      "id": 1050201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 21,
+      "value": 10,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1050301": {
+      "id": 1050301,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 21,
+      "value": 15,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1050401": {
+      "id": 1050401,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 21,
+      "value": 20,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1050402": {
+      "id": 1050402,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 3,
+      "target": 110103020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1060101": {
+      "id": 1060101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": 7,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1060201": {
+      "id": 1060201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": 15,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1060301": {
+      "id": 1060301,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": 25,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1060401": {
+      "id": 1060401,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": 40,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1060402": {
+      "id": 1060402,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 30,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "1060403": {
+      "id": 1060403,
+      "effectType": 4,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": -50000,
+      "trigger": 3,
+      "target": 190200020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9010201": {
+      "id": 9010201,
+      "effectType": 55,
+      "hit": 10000,
+      "time": -1,
+      "value": 1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9010202": {
+      "id": 9010202,
+      "effectType": 55,
+      "hit": 10000,
+      "time": -1,
+      "value": 2,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9010203": {
+      "id": 9010203,
+      "effectType": 55,
+      "hit": 10000,
+      "time": -1,
+      "value": 3,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9010204": {
+      "id": 9010204,
+      "effectType": 55,
+      "hit": 10000,
+      "time": -1,
+      "value": 4,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9010205": {
+      "id": 9010205,
+      "effectType": 55,
+      "hit": 10000,
+      "time": -1,
+      "value": 5,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9011201": {
+      "id": 9011201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9011202": {
+      "id": 9011202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9011203": {
+      "id": 9011203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9011204": {
+      "id": 9011204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9011205": {
+      "id": 9011205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9012201": {
+      "id": 9012201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9012202": {
+      "id": 9012202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9012203": {
+      "id": 9012203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9012204": {
+      "id": 9012204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9012205": {
+      "id": 9012205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9013201": {
+      "id": 9013201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9013202": {
+      "id": 9013202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9013203": {
+      "id": 9013203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9013204": {
+      "id": 9013204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9013205": {
+      "id": 9013205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9014201": {
+      "id": 9014201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9014202": {
+      "id": 9014202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9014203": {
+      "id": 9014203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9014204": {
+      "id": 9014204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9014205": {
+      "id": 9014205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9015201": {
+      "id": 9015201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9015202": {
+      "id": 9015202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9015203": {
+      "id": 9015203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9015204": {
+      "id": 9015204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9015205": {
+      "id": 9015205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9020201": {
+      "id": 9020201,
+      "effectType": 56,
+      "hit": 10000,
+      "time": -1,
+      "value": 2,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9020202": {
+      "id": 9020202,
+      "effectType": 56,
+      "hit": 10000,
+      "time": -1,
+      "value": 4,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9020203": {
+      "id": 9020203,
+      "effectType": 56,
+      "hit": 10000,
+      "time": -1,
+      "value": 6,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9020204": {
+      "id": 9020204,
+      "effectType": 56,
+      "hit": 10000,
+      "time": -1,
+      "value": 8,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9020205": {
+      "id": 9020205,
+      "effectType": 56,
+      "hit": 10000,
+      "time": -1,
+      "value": 10,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9030201": {
+      "id": 9030201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 320,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9030202": {
+      "id": 9030202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 640,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9030203": {
+      "id": 9030203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 960,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9030204": {
+      "id": 9030204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 1280,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9030205": {
+      "id": 9030205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 1600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9031201": {
+      "id": 9031201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9031202": {
+      "id": 9031202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9031203": {
+      "id": 9031203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 700,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9031204": {
+      "id": 9031204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 800,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9031205": {
+      "id": 9031205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 1000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9032201": {
+      "id": 9032201,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        90322011
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 4,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9032202": {
+      "id": 9032202,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        90322021
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 4,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9032203": {
+      "id": 9032203,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        90322031
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 4,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9032204": {
+      "id": 9032204,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        90322041
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 4,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9032205": {
+      "id": 9032205,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        90322051
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 4,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9032206": {
+      "id": 9032206,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 6,
+      "value": 1500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9033201": {
+      "id": 9033201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 800,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9033202": {
+      "id": 9033202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 1200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9033203": {
+      "id": 9033203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 1600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9033204": {
+      "id": 9033204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9033205": {
+      "id": 9033205,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 2400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9034201": {
+      "id": 9034201,
+      "effectType": 8,
+      "hit": 4000,
+      "buffList": [
+        90342011,
+        90342012
+      ],
+      "time": -1,
+      "trigger": 10,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 1
+    },
+    "9034202": {
+      "id": 9034202,
+      "effectType": 8,
+      "hit": 5500,
+      "buffList": [
+        90342011,
+        90342012
+      ],
+      "time": -1,
+      "trigger": 10,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 1
+    },
+    "9034203": {
+      "id": 9034203,
+      "effectType": 8,
+      "hit": 7000,
+      "buffList": [
+        90342011,
+        90342012
+      ],
+      "time": -1,
+      "trigger": 10,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 1
+    },
+    "9034204": {
+      "id": 9034204,
+      "effectType": 8,
+      "hit": 8500,
+      "buffList": [
+        90342011,
+        90342012
+      ],
+      "time": -1,
+      "trigger": 10,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 1
+    },
+    "9034205": {
+      "id": 9034205,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        90342011,
+        90342012
+      ],
+      "time": -1,
+      "trigger": 10,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 1
+    },
+    "9035201": {
+      "id": 9035201,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 60,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9035202": {
+      "id": 9035202,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 120,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9035203": {
+      "id": 9035203,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 180,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9035204": {
+      "id": 9035204,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 240,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "9035205": {
+      "id": 9035205,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90312011": {
+      "id": 90312011,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 800,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90312021": {
+      "id": 90312021,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 1200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90312031": {
+      "id": 90312031,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 1600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90312041": {
+      "id": 90312041,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90312051": {
+      "id": 90312051,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 2400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90322011": {
+      "id": 90322011,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 200,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 6,
+      "buffTriggerVFX": 1060
+    },
+    "90322021": {
+      "id": 90322021,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 250,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 6,
+      "buffTriggerVFX": 1060
+    },
+    "90322031": {
+      "id": 90322031,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 300,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 6,
+      "buffTriggerVFX": 1060
+    },
+    "90322041": {
+      "id": 90322041,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 350,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 6,
+      "buffTriggerVFX": 1060
+    },
+    "90322051": {
+      "id": 90322051,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 400,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 6,
+      "buffTriggerVFX": 1060
+    },
+    "90342011": {
+      "id": 90342011,
+      "effectType": 101,
+      "hit": 10000,
+      "timeInterval": 60,
+      "time": 360,
+      "attr": 2,
+      "value": 200,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1010,
+      "buffAddSoundId": 10032
+    },
+    "90342012": {
+      "id": 90342012,
+      "effectType": 102,
+      "hit": 10000,
+      "timeInterval": 60,
+      "time": 360,
+      "attr": 2,
+      "value": 100,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1020
+    },
+    "90342015": {
+      "id": 90342015,
+      "effectType": 57,
+      "hit": 10000,
+      "time": -1,
+      "value": 1600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90342025": {
+      "id": 90342025,
+      "effectType": 57,
+      "hit": 10000,
+      "time": -1,
+      "value": 1800,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90342035": {
+      "id": 90342035,
+      "effectType": 57,
+      "hit": 10000,
+      "time": -1,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90342045": {
+      "id": 90342045,
+      "effectType": 57,
+      "hit": 10000,
+      "time": -1,
+      "value": 2200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90342055": {
+      "id": 90342055,
+      "effectType": 57,
+      "hit": 10000,
+      "time": -1,
+      "value": 2400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352011": {
+      "id": 90352011,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 800,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352012": {
+      "id": 90352012,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 800,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352021": {
+      "id": 90352021,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 1200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352022": {
+      "id": 90352022,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 1200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352031": {
+      "id": 90352031,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 1600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352032": {
+      "id": 90352032,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 1600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352041": {
+      "id": 90352041,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352042": {
+      "id": 90352042,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352051": {
+      "id": 90352051,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 2400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "90352052": {
+      "id": 90352052,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 2400,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100110101": {
+      "id": 100110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 7500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100120101": {
+      "id": 100120101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": -7,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100120201": {
+      "id": 100120201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": -13,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100120301": {
+      "id": 100120301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1000001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100120302": {
+      "id": 100120302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1000002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100210101": {
+      "id": 100210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 7500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100220101": {
+      "id": 100220101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 24,
+      "value": 9999999,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100220201": {
+      "id": 100220201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 20000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100310101": {
+      "id": 100310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320101": {
+      "id": 100320101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 7500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320102": {
+      "id": 100320102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": -10,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320201": {
+      "id": 100320201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 7500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320202": {
+      "id": 100320202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": -10,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320301": {
+      "id": 100320301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1001001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320302": {
+      "id": 100320302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1001002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320303": {
+      "id": 100320303,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1001003
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100320304": {
+      "id": 100320304,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1001004
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100410101": {
+      "id": 100410101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 7500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100420101": {
+      "id": 100420101,
+      "effectType": 5,
+      "hit": 10000,
+      "timeInterval": 180,
+      "time": -1,
+      "value": 2,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100420201": {
+      "id": 100420201,
+      "effectType": 5,
+      "hit": 10000,
+      "timeInterval": 180,
+      "time": -1,
+      "value": 2,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100510101": {
+      "id": 100510101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100520101": {
+      "id": 100520101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 25,
+      "value": 40,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100520201": {
+      "id": 100520201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 25,
+      "value": 200,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100610101": {
+      "id": 100610101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100610102": {
+      "id": 100610102,
+      "effectType": 6,
+      "hit": 10000,
+      "time": 2,
+      "attr": 19,
+      "value": 50,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100620101": {
+      "id": 100620101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100620102": {
+      "id": 100620102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 8000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100620201": {
+      "id": 100620201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100620202": {
+      "id": 100620202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 12000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100620301": {
+      "id": 100620301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1002001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "100620302": {
+      "id": 100620302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1002002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "101510101": {
+      "id": 101510101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 25000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "101520101": {
+      "id": 101520101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        101520102
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "101520102": {
+      "id": 101520102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 300,
+      "isControl": 0,
+      "superposition": 50
+    },
+    "101520201": {
+      "id": 101520201,
+      "effectType": 16,
+      "hit": 10000,
+      "time": -1,
+      "value": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "101610101": {
+      "id": 101610101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "101620101": {
+      "id": 101620101,
+      "effectType": 17,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 1000,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "101620201": {
+      "id": 101620201,
+      "effectType": 17,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 2000,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170110101": {
+      "id": 170110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170110102": {
+      "id": 170110102,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        170110103
+      ],
+      "time": -1,
+      "trigger": 7,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170110103": {
+      "id": 170110103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 300,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 200
+    },
+    "170120101": {
+      "id": 170120101,
+      "effectType": 30,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 1000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 99
+    },
+    "170120201": {
+      "id": 170120201,
+      "effectType": 30,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 99
+    },
+    "170210101": {
+      "id": 170210101,
+      "effectType": 28,
+      "hit": 10000,
+      "buffList": [
+        3
+      ],
+      "time": -1,
+      "attr": 1002,
+      "value": 48000,
+      "trigger": 4,
+      "target": 180200020,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": [
+        "sp_skill_full_26453"
+      ]
+    },
+    "170220101": {
+      "id": 170220101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1702201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170220102": {
+      "id": 170220102,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        170220103
+      ],
+      "time": -1,
+      "trigger": 5,
+      "triggerParam": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170220103": {
+      "id": 170220103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "170220201": {
+      "id": 170220201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1702202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170220202": {
+      "id": 170220202,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        170220203
+      ],
+      "time": -1,
+      "trigger": 5,
+      "triggerParam": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170220203": {
+      "id": 170220203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": -500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "170310101": {
+      "id": 170310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 60000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170320101": {
+      "id": 170320101,
+      "effectType": 43,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": [
+        "sp_skill_buff_26451_1",
+        "sp_skill_buff_26451_2"
+      ]
+    },
+    "170320102": {
+      "id": 170320102,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1018001,
+        1018005
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "170320103": {
+      "id": 170320103,
+      "effectType": 44,
+      "hit": 10000,
+      "time": -1,
+      "value": 150,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 1
+    },
+    "170320201": {
+      "id": 170320201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1018002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180110101": {
+      "id": 180110101,
+      "effectType": 1,
+      "hit": 12000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180110102": {
+      "id": 180110102,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        180110103
+      ],
+      "time": -1,
+      "trigger": 7,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180110103": {
+      "id": 180110103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 200
+    },
+    "180120101": {
+      "id": 180120101,
+      "effectType": 30,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 99
+    },
+    "180120201": {
+      "id": 180120201,
+      "effectType": 30,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 6000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 99
+    },
+    "180210101": {
+      "id": 180210101,
+      "effectType": 28,
+      "hit": 10000,
+      "buffList": [
+        3
+      ],
+      "time": -1,
+      "attr": 1002,
+      "value": 48000,
+      "trigger": 4,
+      "target": 180200020,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": [
+        "sp_skill_full_26463"
+      ]
+    },
+    "180220101": {
+      "id": 180220101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1802201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180220102": {
+      "id": 180220102,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        180220103,
+        180220104
+      ],
+      "time": -1,
+      "trigger": 5,
+      "triggerParam": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180220103": {
+      "id": 180220103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": -700,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "180220104": {
+      "id": 180220104,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": -3,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "180220201": {
+      "id": 180220201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1802202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180220202": {
+      "id": 180220202,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        180220203,
+        180220204
+      ],
+      "time": -1,
+      "trigger": 5,
+      "triggerParam": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180220203": {
+      "id": 180220203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": -700,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "180220204": {
+      "id": 180220204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": -3,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "180310101": {
+      "id": 180310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 75000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180320101": {
+      "id": 180320101,
+      "effectType": 43,
+      "hit": 10000,
+      "time": -1,
+      "value": 5000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": [
+        "sp_skill_buff_26461_1",
+        "sp_skill_buff_26461_2"
+      ]
+    },
+    "180320102": {
+      "id": 180320102,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1018003,
+        1018006
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "180320103": {
+      "id": 180320103,
+      "effectType": 44,
+      "hit": 10000,
+      "time": -1,
+      "value": 250,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 1
+    },
+    "180320201": {
+      "id": 180320201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1018004
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200110101": {
+      "id": 200110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200120101": {
+      "id": 200120101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 100,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200120201": {
+      "id": 200120201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 900,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200120301": {
+      "id": 200120301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1003001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200120302": {
+      "id": 200120302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1003002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200210101": {
+      "id": 200210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200220101": {
+      "id": 200220101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200220201": {
+      "id": 200220201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200220301": {
+      "id": 200220301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1004001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200220302": {
+      "id": 200220302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1004002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200310101": {
+      "id": 200310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200310102": {
+      "id": 200310102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 360,
+      "attr": 3,
+      "value": -15,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320101": {
+      "id": 200320101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 7500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320102": {
+      "id": 200320102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 4,
+      "value": 7,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320201": {
+      "id": 200320201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 7500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320202": {
+      "id": 200320202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": -30,
+      "trigger": 3,
+      "target": 190200020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320301": {
+      "id": 200320301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1005001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320302": {
+      "id": 200320302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1005002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200320303": {
+      "id": 200320303,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1005003
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200410101": {
+      "id": 200410101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200420101": {
+      "id": 200420101,
+      "effectType": 9,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200420201": {
+      "id": 200420201,
+      "effectType": 9,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200510101": {
+      "id": 200510101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200520101": {
+      "id": 200520101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 26,
+      "value": 9999999,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200520102": {
+      "id": 200520102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 27,
+      "value": 9999999,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200520201": {
+      "id": 200520201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 35000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200610101": {
+      "id": 200610101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200620101": {
+      "id": 200620101,
+      "effectType": 8,
+      "hit": 2000,
+      "buffList": [
+        201
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110102020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "200620201": {
+      "id": 200620201,
+      "effectType": 8,
+      "hit": 4000,
+      "buffList": [
+        202
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110102020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201710101": {
+      "id": 201710101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201720101": {
+      "id": 201720101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        201720102
+      ],
+      "time": -1,
+      "trigger": 8,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201720102": {
+      "id": 201720102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 500,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "201720201": {
+      "id": 201720201,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        201720202
+      ],
+      "time": -1,
+      "trigger": 8,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201720202": {
+      "id": 201720202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 1500,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "201810101": {
+      "id": 201810101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 12000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201820101": {
+      "id": 201820101,
+      "effectType": 8,
+      "hit": 2000,
+      "buffList": [
+        205
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110102020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "201820201": {
+      "id": 201820201,
+      "effectType": 8,
+      "hit": 3000,
+      "buffList": [
+        205
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110102020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270110101": {
+      "id": 270110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 80000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270120101": {
+      "id": 270120101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2701201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270120102": {
+      "id": 270120102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270120201": {
+      "id": 270120201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2701202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270120202": {
+      "id": 270120202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": -3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270210101": {
+      "id": 270210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 17500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270220101": {
+      "id": 270220101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        270220102
+      ],
+      "time": -1,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270220102": {
+      "id": 270220102,
+      "effectType": 31,
+      "hit": 10000,
+      "time": 180,
+      "value": 1000,
+      "isControl": 0,
+      "superposition": 7,
+      "param": 2
+    },
+    "270220201": {
+      "id": 270220201,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        270220102
+      ],
+      "time": -1,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "270220202": {
+      "id": 270220202,
+      "effectType": 31,
+      "hit": 10000,
+      "time": 180,
+      "value": 1000,
+      "isControl": 0,
+      "superposition": 7,
+      "param": 2
+    },
+    "280110101": {
+      "id": 280110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 80000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280120101": {
+      "id": 280120101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2801201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280120102": {
+      "id": 280120102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280120103": {
+      "id": 280120103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": -20,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280120201": {
+      "id": 280120201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2801202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280120202": {
+      "id": 280120202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": -3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280120203": {
+      "id": 280120203,
+      "effectType": 3,
+      "hit": 10000,
+      "attr": 5,
+      "value": -30,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280210101": {
+      "id": 280210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 17500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280220101": {
+      "id": 280220101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        280220102
+      ],
+      "time": -1,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280220102": {
+      "id": 280220102,
+      "effectType": 31,
+      "hit": 10000,
+      "time": 180,
+      "value": 1800,
+      "isControl": 0,
+      "superposition": 8,
+      "param": 2
+    },
+    "280220201": {
+      "id": 280220201,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        280220102
+      ],
+      "time": -1,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "280220202": {
+      "id": 280220202,
+      "effectType": 31,
+      "hit": 10000,
+      "time": 180,
+      "value": 1800,
+      "isControl": 0,
+      "superposition": 8,
+      "param": 2
+    },
+    "300110101": {
+      "id": 300110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300120101": {
+      "id": 300120101,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 30,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300120201": {
+      "id": 300120201,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 60,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300210101": {
+      "id": 300210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300220101": {
+      "id": 300220101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300220201": {
+      "id": 300220201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 16000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300310101": {
+      "id": 300310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320101": {
+      "id": 300320101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 1500,
+      "trigger": 3,
+      "target": 190100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320102": {
+      "id": 300320102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 30,
+      "value": 10000,
+      "trigger": 3,
+      "target": 190100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320201": {
+      "id": 300320201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 2,
+      "value": 4500,
+      "trigger": 3,
+      "target": 190100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320202": {
+      "id": 300320202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": -4000,
+      "trigger": 3,
+      "target": 190100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320301": {
+      "id": 300320301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1006001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 190100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320302": {
+      "id": 300320302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1006002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 190100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300320303": {
+      "id": 300320303,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1006003
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 190200020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300410101": {
+      "id": 300410101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 20000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300420101": {
+      "id": 300420101,
+      "effectType": 7,
+      "hit": 10000,
+      "time": -1,
+      "value": 0.5,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300420201": {
+      "id": 300420201,
+      "effectType": 7,
+      "hit": 10000,
+      "time": -1,
+      "value": 0.5,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300510101": {
+      "id": 300510101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300520101": {
+      "id": 300520101,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 200,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "300520102": {
+      "id": 300520102,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 200,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "300520201": {
+      "id": 300520201,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 200,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "300520202": {
+      "id": 300520202,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 200,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "300610101": {
+      "id": 300610101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300620101": {
+      "id": 300620101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300620201": {
+      "id": 300620201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 8000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300620301": {
+      "id": 300620301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1007001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "300620302": {
+      "id": 300620302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1007002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "301410101": {
+      "id": 301410101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "301420101": {
+      "id": 301420101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        301420102
+      ],
+      "time": -1,
+      "trigger": 7,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "301420102": {
+      "id": 301420102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 50
+    },
+    "301420201": {
+      "id": 301420201,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        301420202
+      ],
+      "time": -1,
+      "trigger": 7,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "301420202": {
+      "id": 301420202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 50
+    },
+    "301510101": {
+      "id": 301510101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 15000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "301520101": {
+      "id": 301520101,
+      "effectType": 15,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 2500,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "301520201": {
+      "id": 301520201,
+      "effectType": 15,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 3500,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370110101": {
+      "id": 370110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 20000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370110102": {
+      "id": 370110102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370120101": {
+      "id": 370120101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1019001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370120102": {
+      "id": 370120102,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        370120103
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 3,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370120103": {
+      "id": 370120103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 1500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 99
+    },
+    "370120201": {
+      "id": 370120201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 15000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370120202": {
+      "id": 370120202,
+      "effectType": 28,
+      "hit": 10000,
+      "timeInterval": 240,
+      "time": -1,
+      "attr": 1002,
+      "value": 40000,
+      "trigger": 2,
+      "target": 180200020,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": [
+        "sp_skill_full_26151"
+      ]
+    },
+    "370210101": {
+      "id": 370210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 40000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370210201": {
+      "id": 370210201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370220101": {
+      "id": 370220101,
+      "effectType": 32,
+      "hit": 10000,
+      "time": -1,
+      "value": 40,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 3
+    },
+    "370220201": {
+      "id": 370220201,
+      "effectType": 32,
+      "hit": 10000,
+      "time": -1,
+      "value": 40,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 3
+    },
+    "370310101": {
+      "id": 370310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370320101": {
+      "id": 370320101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        370320102
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370320102": {
+      "id": 370320102,
+      "effectType": 40,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 300,
+      "isControl": 0,
+      "superposition": 20
+    },
+    "370320103": {
+      "id": 370320103,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        370320104
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "370320104": {
+      "id": 370320104,
+      "effectType": 40,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 300,
+      "isControl": 0,
+      "superposition": 20
+    },
+    "370320105": {
+      "id": 370320105,
+      "effectType": 41,
+      "hit": 10000,
+      "timeInterval": 10,
+      "time": -1,
+      "value": 3,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1080
+    },
+    "370320201": {
+      "id": 370320201,
+      "effectType": 42,
+      "hit": 10000,
+      "time": -1,
+      "value": 12,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380110101": {
+      "id": 380110101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 20000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380110102": {
+      "id": 380110102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": -4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380120101": {
+      "id": 380120101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1019002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380120102": {
+      "id": 380120102,
+      "effectType": 24,
+      "hit": 10000,
+      "buffList": [
+        380120103
+      ],
+      "timeInterval": 60,
+      "time": -1,
+      "value": 3,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380120103": {
+      "id": 380120103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 2500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 99
+    },
+    "380120201": {
+      "id": 380120201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 20000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380120202": {
+      "id": 380120202,
+      "effectType": 28,
+      "hit": 10000,
+      "timeInterval": 240,
+      "time": -1,
+      "attr": 1002,
+      "value": 60000,
+      "trigger": 2,
+      "target": 180200020,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": [
+        "sp_skill_full_26161"
+      ]
+    },
+    "380210101": {
+      "id": 380210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 50000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380210201": {
+      "id": 380210201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": 7000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380220101": {
+      "id": 380220101,
+      "effectType": 32,
+      "hit": 10000,
+      "time": -1,
+      "value": 80,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 3
+    },
+    "380220201": {
+      "id": 380220201,
+      "effectType": 32,
+      "hit": 10000,
+      "time": -1,
+      "value": 120,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 3
+    },
+    "380310101": {
+      "id": 380310101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380320101": {
+      "id": 380320101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        380320102
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380320102": {
+      "id": 380320102,
+      "effectType": 40,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 500,
+      "isControl": 0,
+      "superposition": 20
+    },
+    "380320103": {
+      "id": 380320103,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        380320104
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "380320104": {
+      "id": 380320104,
+      "effectType": 40,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 500,
+      "isControl": 0,
+      "superposition": 20
+    },
+    "380320105": {
+      "id": 380320105,
+      "effectType": 41,
+      "hit": 10000,
+      "timeInterval": 10,
+      "time": -1,
+      "value": 3,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1080
+    },
+    "380320201": {
+      "id": 380320201,
+      "effectType": 42,
+      "hit": 10000,
+      "time": -1,
+      "value": 15,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400110101": {
+      "id": 400110101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 18000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26231
+    },
+    "400120101": {
+      "id": 400120101,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 2500,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 1060
+    },
+    "400120201": {
+      "id": 400120201,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 1000,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 1060
+    },
+    "400120202": {
+      "id": 400120202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 6,
+      "value": 6000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400120301": {
+      "id": 400120301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1008001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400120302": {
+      "id": 400120302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1008002,
+        1008003
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400210101": {
+      "id": 400210101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 18000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26232
+    },
+    "400220101": {
+      "id": 400220101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 14,
+      "value": 1000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400220201": {
+      "id": 400220201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 14,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400220301": {
+      "id": 400220301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1009001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400220302": {
+      "id": 400220302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1009002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400310101": {
+      "id": 400310101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 30000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26242
+    },
+    "400320101": {
+      "id": 400320101,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        203
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110100021,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400320201": {
+      "id": 400320201,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        204
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110100021,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400410101": {
+      "id": 400410101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 24000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26241
+    },
+    "400420101": {
+      "id": 400420101,
+      "effectType": 12,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400420201": {
+      "id": 400420201,
+      "effectType": 29,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 400,
+      "trigger": 6,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26241
+    },
+    "400510101": {
+      "id": 400510101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 18000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26211
+    },
+    "400520101": {
+      "id": 400520101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": 5,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400520201": {
+      "id": 400520201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 3,
+      "value": 10,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400610101": {
+      "id": 400610101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 18000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26211
+    },
+    "400620101": {
+      "id": 400620101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 2500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400620201": {
+      "id": 400620201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 15,
+      "value": 2500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400620301": {
+      "id": 400620301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1017001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400620302": {
+      "id": 400620302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1017002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400710101": {
+      "id": 400710101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 18000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26233
+    },
+    "400720101": {
+      "id": 400720101,
+      "effectType": 48,
+      "hit": 10000,
+      "time": -1,
+      "value": 2000,
+      "trigger": 14,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "400720201": {
+      "id": 400720201,
+      "effectType": 48,
+      "hit": 10000,
+      "time": -1,
+      "value": 4000,
+      "trigger": 14,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "470110101": {
+      "id": 470110101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 50000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 1044,
+      "effectSpineList": "sp_skill_buff_26251_a"
+    },
+    "470110102": {
+      "id": 470110102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 120,
+      "attr": 15,
+      "value": 6000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "470120101": {
+      "id": 470120101,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 400,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 99
+    },
+    "470120201": {
+      "id": 470120201,
+      "effectType": 25,
+      "hit": 10000,
+      "buffList": [
+        470120202
+      ],
+      "time": -1,
+      "trigger": 11,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": "sp_skill_buff_26251_b"
+    },
+    "470120202": {
+      "id": 470120202,
+      "effectType": 26,
+      "hit": 10000,
+      "time": 300,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1070
+    },
+    "470210101": {
+      "id": 470210101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 50000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26253
+    },
+    "470220101": {
+      "id": 470220101,
+      "effectType": 33,
+      "hit": 10000,
+      "timeInterval": 360,
+      "time": -1,
+      "value": 6000,
+      "trigger": 2,
+      "target": 190300020,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 4,
+      "effectSpineList": [
+        "sp_skill_full_26253"
+      ]
+    },
+    "470220201": {
+      "id": 470220201,
+      "effectType": 34,
+      "hit": 10000,
+      "time": -1,
+      "value": 5000,
+      "trigger": 12,
+      "target": 180200020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "480110101": {
+      "id": 480110101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 65000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 1046,
+      "effectSpineList": "sp_skill_buff_26261_a"
+    },
+    "480110102": {
+      "id": 480110102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 150,
+      "attr": 15,
+      "value": 6000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "480120101": {
+      "id": 480120101,
+      "effectType": 21,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 600,
+      "trigger": 5,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 99
+    },
+    "480120102": {
+      "id": 480120102,
+      "effectType": 37,
+      "hit": 10000,
+      "timeInterval": 120,
+      "time": -1,
+      "value": 1,
+      "trigger": 2,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 4
+    },
+    "480120201": {
+      "id": 480120201,
+      "effectType": 25,
+      "hit": 10000,
+      "buffList": [
+        480120202
+      ],
+      "time": -1,
+      "trigger": 11,
+      "isControl": 0,
+      "superposition": 1,
+      "effectSpineList": "sp_skill_buff_26261_b"
+    },
+    "480120202": {
+      "id": 480120202,
+      "effectType": 26,
+      "hit": 10000,
+      "time": 480,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1071
+    },
+    "480210101": {
+      "id": 480210101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 60000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26231
+    },
+    "480220101": {
+      "id": 480220101,
+      "effectType": 38,
+      "hit": 10000,
+      "buffList": [
+        480220102
+      ],
+      "timeInterval": 360,
+      "time": -1,
+      "value": 7500,
+      "trigger": 2,
+      "target": 190400020,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 4,
+      "effectSpineList": [
+        "sp_skill_full_26263"
+      ]
+    },
+    "480220102": {
+      "id": 480220102,
+      "effectType": 39,
+      "hit": 10000,
+      "time": 1,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 1045
+    },
+    "480220201": {
+      "id": 480220201,
+      "effectType": 34,
+      "hit": 10000,
+      "time": -1,
+      "value": 7000,
+      "trigger": 12,
+      "target": 180200020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500110101": {
+      "id": 500110101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        511,
+        2,
+        0
+      ],
+      "effectSpineList": [
+        "",
+        "sp_skill_summon_26511"
+      ]
+    },
+    "500120101": {
+      "id": 500120101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 6000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500120201": {
+      "id": 500120201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 6000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500120301": {
+      "id": 500120301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1013001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500120302": {
+      "id": 500120302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1013002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500210101": {
+      "id": 500210101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        521,
+        1,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26521"
+      ]
+    },
+    "500220101": {
+      "id": 500220101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 8000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500220201": {
+      "id": 500220201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 10000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500220301": {
+      "id": 500220301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1014001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500220302": {
+      "id": 500220302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1014002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500310101": {
+      "id": 500310101,
+      "effectType": 36,
+      "hit": 10000,
+      "time": -1,
+      "value": 2,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 5
+    },
+    "500320101": {
+      "id": 500320101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 7500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500320102": {
+      "id": 500320102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -1500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500320201": {
+      "id": 500320201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 7500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500320202": {
+      "id": 500320202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": -1500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500320301": {
+      "id": 500320301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1010001,
+        1010002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500320302": {
+      "id": 500320302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1010003,
+        1010004
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500410101": {
+      "id": 500410101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        533,
+        3,
+        0
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26533_1",
+        "sp_skill_summon_26533_2"
+      ]
+    },
+    "500420101": {
+      "id": 500420101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": 1500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500420201": {
+      "id": 500420201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 5,
+      "value": 2500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500420301": {
+      "id": 500420301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1011001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500420302": {
+      "id": 500420302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1011002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500510101": {
+      "id": 500510101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        541,
+        1,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26541"
+      ]
+    },
+    "500520101": {
+      "id": 500520101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 15000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500520201": {
+      "id": 500520201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 9,
+      "value": 25000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500520301": {
+      "id": 500520301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1015001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500520302": {
+      "id": 500520302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1015002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500610101": {
+      "id": 500610101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        542,
+        1,
+        0
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26542_1",
+        "sp_skill_summon_26542_2"
+      ]
+    },
+    "500610102": {
+      "id": 500610102,
+      "effectType": 20,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 100,
+      "trigger": 9,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500620101": {
+      "id": 500620101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500620102": {
+      "id": 500620102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 8000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500620201": {
+      "id": 500620201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1003,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500620202": {
+      "id": 500620202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 8000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500620301": {
+      "id": 500620301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1016001
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500620302": {
+      "id": 500620302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        1016002
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500710101": {
+      "id": 500710101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        532,
+        2,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26532"
+      ]
+    },
+    "500720101": {
+      "id": 500720101,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 300,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500720201": {
+      "id": 500720201,
+      "effectType": 49,
+      "hit": 10000,
+      "time": -1,
+      "value": 600,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500720301": {
+      "id": 500720301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2653201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "500720302": {
+      "id": 500720302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2653202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "570110101": {
+      "id": 570110101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        551,
+        1,
+        0
+      ],
+      "effectSpineList": [
+        "",
+        "sp_skill_summon_26551"
+      ]
+    },
+    "570110102": {
+      "id": 570110102,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        570110103
+      ],
+      "time": -1,
+      "trigger": 10,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "570110103": {
+      "id": 570110103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 1000,
+      "isControl": 0,
+      "superposition": 15
+    },
+    "570120101": {
+      "id": 570120101,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 15
+    },
+    "570120102": {
+      "id": 570120102,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 15
+    },
+    "570120201": {
+      "id": 570120201,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 1500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 10
+    },
+    "570120202": {
+      "id": 570120202,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 1500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 10
+    },
+    "570210101": {
+      "id": 570210101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        553,
+        1,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26553"
+      ]
+    },
+    "570220101": {
+      "id": 570220101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        5702201,
+        5702301
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "570220102": {
+      "id": 570220102,
+      "effectType": 35,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 1
+    },
+    "570220201": {
+      "id": 570220201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        5702202,
+        5702302
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "570220202": {
+      "id": 570220202,
+      "effectType": 35,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 1
+    },
+    "570230101": {
+      "id": 570230101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "superposition": 1
+    },
+    "570230201": {
+      "id": 570230201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "superposition": 1
+    },
+    "580110101": {
+      "id": 580110101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        561,
+        1,
+        0
+      ],
+      "effectSpineList": [
+        "",
+        "sp_skill_summon_26551"
+      ]
+    },
+    "580110102": {
+      "id": 580110102,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        580110103
+      ],
+      "time": -1,
+      "trigger": 10,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "580110103": {
+      "id": 580110103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 1000,
+      "isControl": 0,
+      "superposition": 20
+    },
+    "580120101": {
+      "id": 580120101,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 1000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 20
+    },
+    "580120102": {
+      "id": 580120102,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 500,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 20
+    },
+    "580120103": {
+      "id": 580120103,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        580120104
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110105020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "580120104": {
+      "id": 580120104,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 500,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "580120201": {
+      "id": 580120201,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 4000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 10
+    },
+    "580120202": {
+      "id": 580120202,
+      "effectType": 27,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 2000,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 10
+    },
+    "580120203": {
+      "id": 580120203,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        580120204
+      ],
+      "time": -1,
+      "trigger": 4,
+      "target": 110105020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "580120204": {
+      "id": 580120204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 500,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 10
+    },
+    "580210101": {
+      "id": 580210101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        563,
+        1,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26553"
+      ]
+    },
+    "580220101": {
+      "id": 580220101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        5802201,
+        5802301,
+        5802401
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "580220102": {
+      "id": 580220102,
+      "effectType": 35,
+      "hit": 10000,
+      "time": -1,
+      "value": 5000,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 1
+    },
+    "580220201": {
+      "id": 580220201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        5802202,
+        5802302,
+        5802402
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "580220202": {
+      "id": 580220202,
+      "effectType": 35,
+      "hit": 10000,
+      "time": -1,
+      "value": 10000,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 1
+    },
+    "580230101": {
+      "id": 580230101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "superposition": 1
+    },
+    "580230201": {
+      "id": 580230201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 8,
+      "value": 10000,
+      "trigger": 3,
+      "target": 200300020,
+      "superposition": 1
+    },
+    "580240101": {
+      "id": 580240101,
+      "effectType": 47,
+      "hit": 10000,
+      "buffList": [
+        580240102
+      ],
+      "time": -1,
+      "trigger": 13,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 3
+    },
+    "580240102": {
+      "id": 580240102,
+      "effectType": 45,
+      "hit": 10000,
+      "time": 0,
+      "value": 1,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 2,
+      "effectSpineList": [
+        "sp_skill_buff_26563"
+      ]
+    },
+    "580240201": {
+      "id": 580240201,
+      "effectType": 47,
+      "hit": 10000,
+      "buffList": [
+        580240202
+      ],
+      "time": -1,
+      "trigger": 13,
+      "isControl": 0,
+      "superposition": 2,
+      "param": 3
+    },
+    "580240202": {
+      "id": 580240202,
+      "effectType": 45,
+      "hit": 10000,
+      "time": 0,
+      "value": 2,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 2,
+      "effectSpineList": [
+        "sp_skill_buff_26563"
+      ]
+    },
+    "2624310101": {
+      "id": 2624310101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 30000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 26243
+    },
+    "2624320101": {
+      "id": 2624320101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 10,
+      "value": 1000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2624320201": {
+      "id": 2624320201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 10,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2624320301": {
+      "id": 2624320301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2624301
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2624320302": {
+      "id": 2624320302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2624302
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625210101": {
+      "id": 2625210101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 100000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 262521
+    },
+    "2625210102": {
+      "id": 2625210102,
+      "effectType": 52,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 8000
+    },
+    "2625220101": {
+      "id": 2625220101,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 3000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220102": {
+      "id": 2625220102,
+      "effectType": 53,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 262522
+    },
+    "2625220103": {
+      "id": 2625220103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": -3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220104": {
+      "id": 2625220104,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2625220101,
+        2625220102,
+        2625220105
+      ],
+      "time": -1,
+      "trigger": 1,
+      "target": 120100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220105": {
+      "id": 2625220105,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2625220103
+      ],
+      "time": -1,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220201": {
+      "id": 2625220201,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 2000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220202": {
+      "id": 2625220202,
+      "effectType": 53,
+      "hit": 10000,
+      "time": -1,
+      "value": 2000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220203": {
+      "id": 2625220203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220204": {
+      "id": 2625220204,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2625220201,
+        2625220202,
+        2625220205
+      ],
+      "time": -1,
+      "trigger": 1,
+      "target": 120100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2625220205": {
+      "id": 2625220205,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2625220203
+      ],
+      "time": -1,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 400,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626210101": {
+      "id": 2626210101,
+      "effectType": 11,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 100000,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 262621
+    },
+    "2626210102": {
+      "id": 2626210102,
+      "effectType": 54,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 8000
+    },
+    "2626220101": {
+      "id": 2626220101,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 3000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220102": {
+      "id": 2626220102,
+      "effectType": 53,
+      "hit": 10000,
+      "time": -1,
+      "value": 3000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffTriggerVFX": 262622
+    },
+    "2626220103": {
+      "id": 2626220103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": -3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220104": {
+      "id": 2626220104,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2626220101,
+        2626220102,
+        2626220105
+      ],
+      "time": -1,
+      "trigger": 1,
+      "target": 120100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220105": {
+      "id": 2626220105,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2626220103
+      ],
+      "time": -1,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220201": {
+      "id": 2626220201,
+      "effectType": 13,
+      "hit": 10000,
+      "time": -1,
+      "attr": 16,
+      "value": 2000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220202": {
+      "id": 2626220202,
+      "effectType": 53,
+      "hit": 10000,
+      "time": -1,
+      "value": 2000,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220203": {
+      "id": 2626220203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 180,
+      "attr": 7,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220204": {
+      "id": 2626220204,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2626220201,
+        2626220202,
+        2626220205
+      ],
+      "time": -1,
+      "trigger": 1,
+      "target": 120100020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2626220205": {
+      "id": 2626220205,
+      "effectType": 8,
+      "hit": 10000,
+      "buffList": [
+        2626220203
+      ],
+      "time": -1,
+      "trigger": 5,
+      "condition": 1,
+      "conditionValue": 250,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2635210101": {
+      "id": 2635210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 17500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2635210102": {
+      "id": 2635210102,
+      "effectType": 6,
+      "hit": 10000,
+      "time": 2,
+      "attr": 19,
+      "value": 50,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2635220101": {
+      "id": 2635220101,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "2635220102": {
+      "id": 2635220102,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "2635220103": {
+      "id": 2635220103,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 3000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "2635220104": {
+      "id": 2635220104,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2635220201": {
+      "id": 2635220201,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "2635220202": {
+      "id": 2635220202,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "2635220203": {
+      "id": 2635220203,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 3000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 50
+    },
+    "2635220204": {
+      "id": 2635220204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2636210101": {
+      "id": 2636210101,
+      "effectType": 1,
+      "hit": 10000,
+      "time": 0,
+      "attr": 1002,
+      "value": 17500,
+      "trigger": 1,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2636210102": {
+      "id": 2636210102,
+      "effectType": 6,
+      "hit": 10000,
+      "time": 2,
+      "attr": 19,
+      "value": 50,
+      "trigger": 2,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2636210103": {
+      "id": 2636210103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": 360,
+      "attr": 1003,
+      "value": -4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "buffAddVFX": 1030
+    },
+    "2636220101": {
+      "id": 2636220101,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 60
+    },
+    "2636220102": {
+      "id": 2636220102,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 60
+    },
+    "2636220103": {
+      "id": 2636220103,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 2500,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 60
+    },
+    "2636220104": {
+      "id": 2636220104,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 2500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2636220201": {
+      "id": 2636220201,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 60
+    },
+    "2636220202": {
+      "id": 2636220202,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 5000,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 60
+    },
+    "2636220203": {
+      "id": 2636220203,
+      "effectType": 50,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 2500,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param": 60
+    },
+    "2636220204": {
+      "id": 2636220204,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 31,
+      "value": 2500,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654310101": {
+      "id": 2654310101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        543,
+        1,
+        0
+      ],
+      "effectSpineList": [
+        "",
+        "sp_skill_summon_26543"
+      ]
+    },
+    "2654320101": {
+      "id": 2654320101,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": -2000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320102": {
+      "id": 2654320102,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 5000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320103": {
+      "id": 2654320103,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 8000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320201": {
+      "id": 2654320201,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1004,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320202": {
+      "id": 2654320202,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1001,
+      "value": 3000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320203": {
+      "id": 2654320203,
+      "effectType": 3,
+      "hit": 10000,
+      "time": -1,
+      "attr": 1002,
+      "value": 4000,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320301": {
+      "id": 2654320301,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2654301
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2654320302": {
+      "id": 2654320302,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2654302
+      ],
+      "time": -1,
+      "trigger": 3,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2655210101": {
+      "id": 2655210101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        552,
+        2,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26552"
+      ]
+    },
+    "2655220101": {
+      "id": 2655220101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2655201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2655220102": {
+      "id": 2655220102,
+      "effectType": 51,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 15,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param2": [
+        2000,
+        3000,
+        100,
+        200
+      ],
+      "buffTriggerVFX": 26552
+    },
+    "2655220201": {
+      "id": 2655220201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2655202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2655220202": {
+      "id": 2655220202,
+      "effectType": 51,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 15,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param2": [
+        2000,
+        3000,
+        100,
+        200
+      ],
+      "buffTriggerVFX": 26552
+    },
+    "2656210101": {
+      "id": 2656210101,
+      "effectType": 19,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 4,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "summonParameter": [
+        562,
+        2,
+        1
+      ],
+      "effectSpineList": [
+        "sp_skill_summon_26562"
+      ]
+    },
+    "2656220101": {
+      "id": 2656220101,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2656201
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2656220102": {
+      "id": 2656220102,
+      "effectType": 51,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 15,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param2": [
+        3000,
+        3000,
+        300,
+        300
+      ],
+      "buffTriggerVFX": 26562
+    },
+    "2656220201": {
+      "id": 2656220201,
+      "effectType": 4,
+      "hit": 10000,
+      "haloList": [
+        2656202
+      ],
+      "time": -1,
+      "trigger": 3,
+      "isControl": 0,
+      "superposition": 1
+    },
+    "2656220202": {
+      "id": 2656220202,
+      "effectType": 51,
+      "hit": 10000,
+      "time": -1,
+      "trigger": 15,
+      "target": 200300020,
+      "isControl": 0,
+      "superposition": 1,
+      "param2": [
+        3000,
+        3000,
+        300,
+        300
+      ],
+      "buffTriggerVFX": 26562
+    }
+  }
+}

@@ -1,0 +1,5223 @@
+{
+  "_table": "OldTrekSkillEffectConfig",
+  "_rows": 542,
+  "_type": "object",
+  "_firstKeys": "id,type,args",
+  "_sample": [
+    {
+      "0": {
+        "id": 0,
+        "type": 1,
+        "args": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "1000": {
+        "id": 1000,
+        "type": 4,
+        "args": [
+          101,
+          1001
+        ]
+      }
+    },
+    {
+      "1001": {
+        "id": 1001,
+        "type": 5,
+        "args": [
+          1,
+          20800
+        ],
+        "elementShow": 1
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "id": 0,
+      "type": 1,
+      "args": [
+        2,
+        0
+      ]
+    },
+    "1000": {
+      "id": 1000,
+      "type": 4,
+      "args": [
+        101,
+        1001
+      ]
+    },
+    "1001": {
+      "id": 1001,
+      "type": 5,
+      "args": [
+        1,
+        20800
+      ],
+      "elementShow": 1
+    },
+    "1002": {
+      "id": 1002,
+      "type": 2,
+      "args": [
+        2,
+        -3000
+      ],
+      "icon": "icon_buff_2002"
+    },
+    "1003": {
+      "id": 1003,
+      "type": 2,
+      "args": [
+        3,
+        -3000
+      ],
+      "icon": "icon_buff_2003"
+    },
+    "1004": {
+      "id": 1004,
+      "type": 4,
+      "args": [
+        101,
+        1002,
+        1003
+      ]
+    },
+    "1005": {
+      "id": 1005,
+      "type": 2,
+      "args": [
+        3,
+        5000
+      ],
+      "stack": 0,
+      "icon": "icon_buff_1003"
+    },
+    "1006": {
+      "id": 1006,
+      "type": 2,
+      "args": [
+        4,
+        -3000
+      ],
+      "icon": "icon_buff_2004"
+    },
+    "1007": {
+      "id": 1007,
+      "type": 4,
+      "args": [
+        102,
+        1005,
+        1006
+      ]
+    },
+    "1008": {
+      "id": 1008,
+      "type": 6,
+      "args": [
+        1,
+        45800,
+        3000
+      ],
+      "elementShow": 1,
+      "icon": "icon_buff_31495",
+      "effectEffs": [
+        {
+          "file": "sp_skill_baodian_360101",
+          "anim": "a_2"
+        }
+      ],
+      "effectSound": "effect_sailor_skill_360101",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_shihua",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 8
+    },
+    "1009": {
+      "id": 1009,
+      "type": 2,
+      "args": [
+        3,
+        5000
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "1010": {
+      "id": 1010,
+      "type": 1,
+      "args": [
+        11,
+        -1000
+      ],
+      "icon": "hgmh_buff_hit_down",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ]
+    },
+    "1011": {
+      "id": 1011,
+      "type": 7,
+      "args": [
+        5000
+      ]
+    },
+    "1012": {
+      "id": 1012,
+      "type": 8,
+      "args": [],
+      "icon": "hgmh_buff_chenmo",
+      "wordArt": "hgmh_battle_eff_chenmo",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_chenmo",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_chenmo",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_ui_hgmh_buff_chenmo",
+          "anim": "a_3"
+        }
+      ],
+      "effPos": 9
+    },
+    "1013": {
+      "id": 1013,
+      "type": 2,
+      "args": [
+        2,
+        5000
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "1014": {
+      "id": 1014,
+      "type": 2,
+      "args": [
+        3,
+        -2000
+      ],
+      "icon": "icon_buff_2003"
+    },
+    "1015": {
+      "id": 1015,
+      "type": 9,
+      "args": [
+        1,
+        25800,
+        1016,
+        1017
+      ],
+      "elementShow": 1,
+      "icon": "hgmh_buff_wudi",
+      "wordEffectArt": "battle_txt_wudi",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_wudi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1016": {
+      "id": 1016,
+      "type": 2,
+      "args": [
+        2,
+        -3000
+      ],
+      "icon": "icon_buff_2002",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1017": {
+      "id": 1017,
+      "type": 2,
+      "args": [
+        3,
+        -3000
+      ],
+      "icon": "icon_buff_2003"
+    },
+    "1018": {
+      "id": 1018,
+      "type": 10,
+      "args": [],
+      "icon": "icon_buff_2106",
+      "wordArt": "hgmh_battle_eff_xuanyun",
+      "lastEffs": [
+        {
+          "file": "sp_bf_last_stun",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 6
+    },
+    "1019": {
+      "id": 1019,
+      "type": 11,
+      "args": [
+        0
+      ],
+      "wordEffectArt": "battle_txt_wudi",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_tudun",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_ui_hgmh_buff_tudun",
+          "anim": "a_3"
+        }
+      ],
+      "effPos": 7
+    },
+    "1020": {
+      "id": 1020,
+      "type": 2,
+      "args": [
+        4,
+        -2000
+      ],
+      "icon": "icon_buff_2004",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1021": {
+      "id": 1021,
+      "type": 12,
+      "args": [
+        27
+      ],
+      "icon": "hgmh_buff_zhuoshao_Invalid",
+      "wordEffectArt": "battle_txt_mianyi"
+    },
+    "1022": {
+      "id": 1022,
+      "type": 13,
+      "args": [
+        1,
+        104,
+        200
+      ],
+      "elementShow": 1
+    },
+    "1023": {
+      "id": 1023,
+      "type": 13,
+      "args": [
+        1,
+        106,
+        200
+      ],
+      "elementShow": 1
+    },
+    "1024": {
+      "id": 1024,
+      "type": 13,
+      "args": [
+        1,
+        103,
+        200
+      ],
+      "elementShow": 1
+    },
+    "1025": {
+      "id": 1025,
+      "type": 5,
+      "args": [
+        1,
+        13000
+      ],
+      "elementShow": 1
+    },
+    "1026": {
+      "id": 1026,
+      "type": 4,
+      "args": [
+        103,
+        1025
+      ]
+    },
+    "1027": {
+      "id": 1027,
+      "type": 2,
+      "args": [
+        3,
+        4000
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "1028": {
+      "id": 1028,
+      "type": 2,
+      "args": [
+        4,
+        -1000
+      ],
+      "icon": "icon_buff_2004"
+    },
+    "1029": {
+      "id": 1029,
+      "type": 2,
+      "args": [
+        2,
+        -1000
+      ],
+      "icon": "icon_buff_2002"
+    },
+    "1030": {
+      "id": 1030,
+      "type": 10,
+      "args": [],
+      "icon": "icon_buff_2106",
+      "wordArt": "hgmh_battle_eff_xuanyun",
+      "lastEffs": [
+        {
+          "file": "sp_bf_last_stun",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 6
+    },
+    "1031": {
+      "id": 1031,
+      "type": 5,
+      "args": [
+        1,
+        8000
+      ]
+    },
+    "1032": {
+      "id": 1032,
+      "type": 14,
+      "args": [
+        11400,
+        0,
+        0,
+        0
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_5"
+        }
+      ],
+      "effPos": 8
+    },
+    "1033": {
+      "id": 1033,
+      "type": 2,
+      "args": [
+        1003,
+        1000
+      ],
+      "icon": "icon_buff_1003",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zengyi",
+          "anim": "a_2"
+        }
+      ]
+    },
+    "1034": {
+      "id": 1034,
+      "type": 15,
+      "args": [
+        5000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1035": {
+      "id": 1035,
+      "type": 1,
+      "args": [
+        11,
+        -1500
+      ],
+      "icon": "hgmh_buff_hit_down",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1036": {
+      "id": 1036,
+      "type": 3,
+      "args": [
+        1
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_fengmai",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1037": {
+      "id": 1037,
+      "type": 2,
+      "args": [
+        3,
+        -1500
+      ],
+      "icon": "icon_buff_2003"
+    },
+    "1038": {
+      "id": 1038,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "1039": {
+      "id": 1039,
+      "type": 11,
+      "args": [
+        1038
+      ],
+      "wordEffectArt": "battle_txt_wudi",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_andun",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_ui_hgmh_buff_andun",
+          "anim": "a_3"
+        }
+      ],
+      "effPos": 7
+    },
+    "1040": {
+      "id": 1040,
+      "type": 37,
+      "args": [
+        1,
+        1041
+      ]
+    },
+    "1041": {
+      "id": 1041,
+      "type": 1,
+      "args": [
+        13,
+        10000
+      ],
+      "icon": "icon_buff_1105"
+    },
+    "1042": {
+      "id": 1042,
+      "type": 19,
+      "args": [
+        1000
+      ]
+    },
+    "1043": {
+      "id": 1043,
+      "type": 37,
+      "args": [
+        1,
+        1044
+      ],
+      "icon": "hgmh_buff_anhe"
+    },
+    "1044": {
+      "id": 1044,
+      "type": 5,
+      "args": [
+        2,
+        17000
+      ],
+      "elementShow": 2
+    },
+    "1045": {
+      "id": 1045,
+      "type": 37,
+      "args": [
+        1,
+        1046
+      ]
+    },
+    "1046": {
+      "id": 1046,
+      "type": 2,
+      "args": [
+        2,
+        1500
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "1047": {
+      "id": 1047,
+      "type": 20,
+      "args": [
+        2,
+        5000,
+        5000
+      ],
+      "elementShow": 2,
+      "icon": "hgmh_buff_andu"
+    },
+    "1048": {
+      "id": 1048,
+      "type": 1,
+      "args": [
+        1,
+        0
+      ]
+    },
+    "1049": {
+      "id": 1049,
+      "type": 1,
+      "args": [
+        22,
+        2500
+      ],
+      "icon": "hgmh_buff_element2_up"
+    },
+    "1050": {
+      "id": 1050,
+      "type": 4,
+      "args": [
+        116,
+        1049
+      ]
+    },
+    "1051": {
+      "id": 1051,
+      "type": 22,
+      "args": [
+        3000
+      ],
+      "wordArt": "battle_txt_xixue",
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1052": {
+      "id": 1052,
+      "type": 22,
+      "args": [
+        5000
+      ],
+      "wordArt": "battle_txt_xixue",
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1053": {
+      "id": 1053,
+      "type": 23,
+      "args": [
+        105,
+        1052,
+        1051
+      ]
+    },
+    "1054": {
+      "id": 1054,
+      "type": 19,
+      "args": [
+        1000
+      ]
+    },
+    "1055": {
+      "id": 1055,
+      "type": 1,
+      "args": [
+        14,
+        -2000
+      ],
+      "icon": "hgmh_buff_heal_down"
+    },
+    "1056": {
+      "id": 1056,
+      "type": 17,
+      "args": [
+        -1
+      ]
+    },
+    "1057": {
+      "id": 1057,
+      "type": 24,
+      "args": [],
+      "effectEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_pingfenshengming2",
+          "anim": "a_1"
+        }
+      ],
+      "effectSound": "effect_oldTrek_battle_heal",
+      "effPos": 8
+    },
+    "1058": {
+      "id": 1058,
+      "type": 1,
+      "args": [
+        11,
+        -1000
+      ],
+      "icon": "hgmh_buff_hit_down",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1059": {
+      "id": 1059,
+      "type": 2,
+      "args": [
+        2,
+        -2000
+      ],
+      "icon": "icon_buff_2002"
+    },
+    "1060": {
+      "id": 1060,
+      "type": 25,
+      "args": [
+        2,
+        5100,
+        10,
+        7000
+      ],
+      "elementShow": 2,
+      "hitEffs": [
+        {
+          "file": "sp_skill_baodian_360211",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_360211",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 10
+    },
+    "1061": {
+      "id": 1061,
+      "type": 15,
+      "args": [
+        5000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1062": {
+      "id": 1062,
+      "type": 4,
+      "args": [
+        107,
+        1061
+      ]
+    },
+    "1063": {
+      "id": 1063,
+      "type": 1,
+      "args": [
+        14,
+        -1000
+      ],
+      "icon": "hgmh_buff_heal_down",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1064": {
+      "id": 1064,
+      "type": 1,
+      "args": [
+        1,
+        0
+      ]
+    },
+    "1065": {
+      "id": 1065,
+      "type": 26,
+      "args": [
+        2,
+        5000
+      ],
+      "elementShow": 2,
+      "icon": "icon_buff_3105",
+      "wordArt": "battle_eff_liuxue",
+      "lastEffs": [
+        {
+          "file": "sp_bf_last_bleed",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 7
+    },
+    "1066": {
+      "id": 1066,
+      "type": 4,
+      "args": [
+        117,
+        1065
+      ]
+    },
+    "1067": {
+      "id": 1067,
+      "type": 15,
+      "args": [
+        7000
+      ]
+    },
+    "1068": {
+      "id": 1068,
+      "type": 9,
+      "args": [
+        2,
+        0,
+        1067
+      ],
+      "icon": "hgmh_buff_wudi",
+      "wordEffectArt": "battle_txt_wudi",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_wudi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1069": {
+      "id": 1069,
+      "type": 22,
+      "args": [
+        2500
+      ],
+      "wordArt": "battle_txt_xixue",
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1070": {
+      "id": 1070,
+      "type": 20,
+      "args": [
+        2,
+        25300
+      ],
+      "elementShow": 2,
+      "icon": "hgmh_buff_andu",
+      "effectEffs": [
+        {
+          "file": "sp_skill_hgmh_baodian_541",
+          "anim": "a_1"
+        }
+      ],
+      "effectSound": "effect_sailor_skill_2",
+      "effPos": 7
+    },
+    "1071": {
+      "id": 1071,
+      "type": 5,
+      "args": [
+        2,
+        7000
+      ],
+      "elementShow": 2
+    },
+    "1072": {
+      "id": 1072,
+      "type": 4,
+      "args": [
+        108,
+        1071
+      ]
+    },
+    "1073": {
+      "id": 1073,
+      "type": 37,
+      "args": [
+        2,
+        1074
+      ]
+    },
+    "1074": {
+      "id": 1074,
+      "type": 27,
+      "args": [
+        3,
+        3000,
+        3,
+        -1500
+      ],
+      "elementShow": 3,
+      "icon": "icon_buff_3106",
+      "wordArt": "hgmh_battle_eff_zhuoshao",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zhuoshao",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1075": {
+      "id": 1075,
+      "type": 5,
+      "args": [
+        3,
+        13000
+      ],
+      "elementShow": 3
+    },
+    "1076": {
+      "id": 1076,
+      "type": 4,
+      "args": [
+        111,
+        1075
+      ]
+    },
+    "1077": {
+      "id": 1077,
+      "type": 1,
+      "args": [
+        15,
+        3000
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_critDmg_up"
+    },
+    "1078": {
+      "id": 1078,
+      "type": 14,
+      "args": [
+        8000,
+        0,
+        0,
+        1079
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_yandun",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_ui_hgmh_buff_yandun",
+          "anim": "a_3"
+        }
+      ],
+      "effPos": 7
+    },
+    "1079": {
+      "id": 1079,
+      "type": 27,
+      "args": [
+        3,
+        3000,
+        3,
+        -1500
+      ],
+      "elementShow": 3,
+      "icon": "icon_buff_3106",
+      "wordArt": "hgmh_battle_eff_zhuoshao",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zhuoshao",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1080": {
+      "id": 1080,
+      "type": 37,
+      "args": [
+        4,
+        1074,
+        1081
+      ],
+      "icon": "hgmh_buff_huozhong"
+    },
+    "1081": {
+      "id": 1081,
+      "type": 5,
+      "args": [
+        3,
+        12000
+      ]
+    },
+    "1082": {
+      "id": 1082,
+      "type": 4,
+      "args": [
+        113,
+        1083
+      ]
+    },
+    "1083": {
+      "id": 1083,
+      "type": 5,
+      "args": [
+        3,
+        12000
+      ],
+      "elementShow": 3
+    },
+    "1084": {
+      "id": 1084,
+      "type": 37,
+      "args": [
+        5,
+        1085
+      ],
+      "icon": "hgmh_buff_fenxue"
+    },
+    "1085": {
+      "id": 1085,
+      "type": 5,
+      "args": [
+        3,
+        8000
+      ],
+      "elementShow": 3
+    },
+    "1086": {
+      "id": 1086,
+      "type": 28,
+      "args": [
+        3,
+        1000,
+        3000
+      ],
+      "elementShow": 3
+    },
+    "1087": {
+      "id": 1087,
+      "type": 20,
+      "args": [
+        3,
+        12000,
+        18000
+      ],
+      "elementShow": 3,
+      "effectEffs": [
+        {
+          "file": "sp_skill_fly_350303",
+          "anim": "a_2"
+        }
+      ],
+      "effectSound": "effect_sailor_skill_3",
+      "hitEffs": [
+        {
+          "file": "sp_skill_baodian_350303",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 8,
+      "hitPos": 5
+    },
+    "1088": {
+      "id": 1088,
+      "type": 29,
+      "args": [
+        3,
+        8000
+      ],
+      "elementShow": 3,
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_360309",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1089": {
+      "id": 1089,
+      "type": 2,
+      "args": [
+        3,
+        -1500
+      ],
+      "icon": "icon_buff_2003",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1090": {
+      "id": 1090,
+      "type": 30,
+      "args": [],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_156201_1",
+          "anim": "a_2"
+        },
+        {
+          "file": "sp_skill_buff_156201_2",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 8
+    },
+    "1091": {
+      "id": 1091,
+      "type": 27,
+      "args": [
+        3,
+        3000,
+        3,
+        -1500
+      ],
+      "elementShow": 3,
+      "icon": "icon_buff_3106",
+      "wordArt": "hgmh_battle_eff_zhuoshao",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zhuoshao",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1092": {
+      "id": 1092,
+      "type": 4,
+      "args": [
+        109,
+        1093
+      ]
+    },
+    "1093": {
+      "id": 1093,
+      "type": 5,
+      "args": [
+        3,
+        9000
+      ]
+    },
+    "1094": {
+      "id": 1094,
+      "type": 20,
+      "args": [
+        3,
+        10500,
+        15500
+      ],
+      "elementShow": 3,
+      "effectEffs": [
+        {
+          "file": "sp_skill_fly_350303",
+          "anim": "a_1"
+        }
+      ],
+      "effectSound": "effect_attack_crit_1_mp3",
+      "hitEffs": [
+        {
+          "file": "sp_skill_baodian_43201",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1095": {
+      "id": 1095,
+      "type": 2,
+      "args": [
+        3,
+        -500
+      ],
+      "icon": "icon_buff_2003",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1096": {
+      "id": 1096,
+      "type": 15,
+      "args": [
+        11400
+      ]
+    },
+    "1097": {
+      "id": 1097,
+      "type": 1,
+      "args": [
+        13,
+        1000
+      ],
+      "icon": "icon_buff_1105",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zengyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1098": {
+      "id": 1098,
+      "type": 1,
+      "args": [
+        15,
+        2000
+      ],
+      "icon": "hgmh_buff_critDmg_up",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zengyi",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 7
+    },
+    "1099": {
+      "id": 1099,
+      "type": 27,
+      "args": [
+        3,
+        3000,
+        3,
+        -1500
+      ],
+      "elementShow": 3,
+      "icon": "icon_buff_3106",
+      "wordArt": "hgmh_battle_eff_zhuoshao",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zhuoshao",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1100": {
+      "id": 1100,
+      "type": 13,
+      "args": [
+        2,
+        102,
+        200
+      ],
+      "elementShow": 2
+    },
+    "1101": {
+      "id": 1101,
+      "type": 13,
+      "args": [
+        2,
+        106,
+        200
+      ],
+      "elementShow": 2
+    },
+    "1102": {
+      "id": 1102,
+      "type": 13,
+      "args": [
+        2,
+        105,
+        200
+      ],
+      "elementShow": 2
+    },
+    "1103": {
+      "id": 1103,
+      "type": 13,
+      "args": [
+        3,
+        105,
+        200
+      ],
+      "elementShow": 3
+    },
+    "1104": {
+      "id": 1104,
+      "type": 13,
+      "args": [
+        3,
+        104,
+        200
+      ],
+      "elementShow": 3
+    },
+    "1105": {
+      "id": 1105,
+      "type": 13,
+      "args": [
+        3,
+        102,
+        200
+      ],
+      "elementShow": 3
+    },
+    "1106": {
+      "id": 1106,
+      "type": 15,
+      "args": [
+        10000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_370401 ",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1107": {
+      "id": 1107,
+      "type": 42,
+      "args": [
+        14,
+        100,
+        100
+      ],
+      "icon": "hgmh_buff_shengguang"
+    },
+    "1108": {
+      "id": 1108,
+      "type": 15,
+      "args": [
+        6000
+      ]
+    },
+    "1109": {
+      "id": 1109,
+      "type": 42,
+      "args": [
+        14,
+        100,
+        100
+      ],
+      "icon": "hgmh_buff_shengguang"
+    },
+    "1110": {
+      "id": 1110,
+      "type": 4,
+      "args": [
+        123,
+        1108,
+        1109
+      ]
+    },
+    "1111": {
+      "id": 1111,
+      "type": 43,
+      "args": [
+        4,
+        3000
+      ],
+      "elementShow": 4
+    },
+    "1112": {
+      "id": 1112,
+      "type": 4,
+      "args": [
+        124,
+        1107,
+        1107
+      ]
+    },
+    "1113": {
+      "id": 1113,
+      "type": 15,
+      "args": [
+        14100
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1114": {
+      "id": 1114,
+      "type": 44,
+      "args": [
+        1,
+        2,
+        0
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_156101",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1115": {
+      "id": 1115,
+      "type": 1,
+      "args": [
+        17,
+        1000
+      ],
+      "icon": "hgmh_buff_finalDmgDec_up"
+    },
+    "1116": {
+      "id": 1116,
+      "type": 15,
+      "args": [
+        6000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1117": {
+      "id": 1117,
+      "type": 2,
+      "args": [
+        3,
+        2000
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "1118": {
+      "id": 1118,
+      "type": 42,
+      "args": [
+        14,
+        100,
+        100
+      ],
+      "icon": "hgmh_buff_shengguang"
+    },
+    "1119": {
+      "id": 1119,
+      "type": 15,
+      "args": [
+        10700
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1120": {
+      "id": 1120,
+      "type": 15,
+      "args": [
+        3000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1121": {
+      "id": 1121,
+      "type": 38,
+      "args": [
+        1120
+      ]
+    },
+    "1122": {
+      "id": 1122,
+      "type": 38,
+      "args": [
+        1120
+      ],
+      "icon": "hgmh_buff_fusu"
+    },
+    "1123": {
+      "id": 1123,
+      "type": 12,
+      "args": [
+        45
+      ],
+      "icon": "hgmh_buff_mianyijinliao_Invalid"
+    },
+    "1124": {
+      "id": 1124,
+      "type": 30,
+      "args": [],
+      "icon": "hgmh_buff_wudi_Invalid",
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_156201_1",
+          "anim": "a_2"
+        },
+        {
+          "file": "sp_skill_buff_156201_2",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 8
+    },
+    "1125": {
+      "id": 1125,
+      "type": 20,
+      "args": [
+        4,
+        8100,
+        8100,
+        8100
+      ],
+      "elementShow": 4
+    },
+    "1126": {
+      "id": 1126,
+      "type": 2,
+      "args": [
+        4,
+        -2000
+      ],
+      "icon": "icon_buff_2004"
+    },
+    "1127": {
+      "id": 1127,
+      "type": 1,
+      "args": [
+        13,
+        2000
+      ],
+      "icon": "icon_buff_1105",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zengyi",
+          "anim": "a_2"
+        }
+      ]
+    },
+    "1128": {
+      "id": 1128,
+      "type": 37,
+      "args": [
+        6,
+        1127
+      ],
+      "icon": "hgmh_buff_shenzhizhufu"
+    },
+    "1129": {
+      "id": 1129,
+      "type": 42,
+      "args": [
+        14,
+        100,
+        100
+      ],
+      "icon": "hgmh_buff_shengguang"
+    },
+    "1130": {
+      "id": 1130,
+      "type": 38,
+      "args": [
+        1129
+      ]
+    },
+    "1131": {
+      "id": 1131,
+      "type": 38,
+      "args": [
+        1129
+      ]
+    },
+    "1132": {
+      "id": 1132,
+      "type": 5,
+      "args": [
+        4,
+        10400
+      ],
+      "elementShow": 4,
+      "effectEffs": [
+        {
+          "file": "sp_skill_fly_360408",
+          "anim": "a_1"
+        }
+      ],
+      "effectSound": "effect_sailor_skill_3",
+      "hitEffs": [
+        {
+          "file": "sp_skill_baodian_360408",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8,
+      "hitPos": 5
+    },
+    "1133": {
+      "id": 1133,
+      "type": 38,
+      "args": [
+        1132
+      ]
+    },
+    "1134": {
+      "id": 1134,
+      "type": 38,
+      "args": [
+        1132
+      ]
+    },
+    "1135": {
+      "id": 1135,
+      "type": 2,
+      "args": [
+        3,
+        -1500
+      ]
+    },
+    "1136": {
+      "id": 1136,
+      "type": 5,
+      "args": [
+        4,
+        12000
+      ],
+      "elementShow": 4
+    },
+    "1137": {
+      "id": 1137,
+      "type": 4,
+      "args": [
+        125,
+        1136
+      ]
+    },
+    "1138": {
+      "id": 1138,
+      "type": 1,
+      "args": [
+        11,
+        -2000
+      ],
+      "icon": "hgmh_buff_hit_down",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_jianyi",
+          "anim": "a_2"
+        }
+      ]
+    },
+    "1139": {
+      "id": 1139,
+      "type": 10,
+      "args": []
+    },
+    "1140": {
+      "id": 1140,
+      "type": 4,
+      "args": [
+        123,
+        1139
+      ]
+    },
+    "1141": {
+      "id": 1141,
+      "type": 13,
+      "args": [
+        2,
+        102,
+        200
+      ],
+      "elementShow": 4
+    },
+    "1142": {
+      "id": 1142,
+      "type": 13,
+      "args": [
+        2,
+        105,
+        200
+      ],
+      "elementShow": 4
+    },
+    "1143": {
+      "id": 1143,
+      "type": 13,
+      "args": [
+        2,
+        104,
+        200
+      ],
+      "elementShow": 4
+    },
+    "1144": {
+      "id": 1144,
+      "type": 15,
+      "args": [
+        6000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1145": {
+      "id": 1145,
+      "type": 42,
+      "args": [
+        14,
+        100,
+        100
+      ],
+      "icon": "hgmh_buff_shengguang"
+    },
+    "1146": {
+      "id": 1146,
+      "type": 1,
+      "args": [
+        17,
+        1000
+      ],
+      "icon": "hgmh_buff_finalDmgDec_up",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zengyi",
+          "anim": "a_2"
+        }
+      ]
+    },
+    "1147": {
+      "id": 1147,
+      "type": 4,
+      "args": [
+        126,
+        1146
+      ]
+    },
+    "1148": {
+      "id": 1148,
+      "type": 14,
+      "args": [
+        12700,
+        0,
+        1149,
+        0
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_5"
+        }
+      ],
+      "effPos": 8
+    },
+    "1149": {
+      "id": 1149,
+      "type": 1,
+      "args": [
+        13,
+        1500
+      ],
+      "icon": "icon_buff_1105"
+    },
+    "1150": {
+      "id": 1150,
+      "type": 42,
+      "args": [
+        14,
+        100,
+        100
+      ],
+      "icon": "hgmh_buff_shengguang"
+    },
+    "1151": {
+      "id": 1151,
+      "type": 14,
+      "args": [
+        8400,
+        0,
+        0,
+        0
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_5"
+        }
+      ],
+      "effPos": 8
+    },
+    "1152": {
+      "id": 1152,
+      "type": 2,
+      "args": [
+        4,
+        3000
+      ],
+      "icon": "icon_buff_1004",
+      "attachEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zengyi",
+          "anim": "a_2"
+        }
+      ]
+    },
+    "1153": {
+      "id": 1153,
+      "type": 1,
+      "args": [
+        12,
+        3000
+      ],
+      "icon": "icon_buff_1104"
+    },
+    "1154": {
+      "id": 1154,
+      "type": 15,
+      "args": [
+        9300
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1155": {
+      "id": 1155,
+      "type": 15,
+      "args": [
+        7000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1156": {
+      "id": 1156,
+      "type": 4,
+      "args": [
+        123,
+        1155
+      ]
+    },
+    "1157": {
+      "id": 1157,
+      "type": 15,
+      "args": [
+        7600
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1158": {
+      "id": 1158,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "1159": {
+      "id": 1159,
+      "type": 38,
+      "args": [
+        1157,
+        1158
+      ]
+    },
+    "1160": {
+      "id": 1160,
+      "type": 19,
+      "args": [
+        3000
+      ]
+    },
+    "1161": {
+      "id": 1161,
+      "type": 46,
+      "args": [
+        3000
+      ]
+    },
+    "1162": {
+      "id": 1162,
+      "type": 2,
+      "args": [
+        2,
+        -3000
+      ]
+    },
+    "1163": {
+      "id": 1163,
+      "type": 22,
+      "args": [
+        5000
+      ]
+    },
+    "1164": {
+      "id": 1164,
+      "type": 5,
+      "args": [
+        5,
+        8000
+      ],
+      "elementShow": 5
+    },
+    "1165": {
+      "id": 1165,
+      "type": 4,
+      "args": [
+        106,
+        1164
+      ]
+    },
+    "1166": {
+      "id": 1166,
+      "type": 9,
+      "args": [
+        5,
+        0,
+        1067
+      ]
+    },
+    "1167": {
+      "id": 1167,
+      "type": 15,
+      "args": [
+        5100
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1168": {
+      "id": 1168,
+      "type": 14,
+      "args": [
+        0,
+        2500,
+        1169,
+        0
+      ]
+    },
+    "1169": {
+      "id": 1169,
+      "type": 47,
+      "args": [
+        1,
+        300
+      ]
+    },
+    "1170": {
+      "id": 1170,
+      "type": 15,
+      "args": [
+        13000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1171": {
+      "id": 1171,
+      "type": 44,
+      "args": [
+        2,
+        2,
+        1172
+      ]
+    },
+    "1172": {
+      "id": 1172,
+      "type": 1,
+      "args": [
+        17,
+        500
+      ]
+    },
+    "1173": {
+      "id": 1173,
+      "type": 2,
+      "args": [
+        4,
+        -2500
+      ]
+    },
+    "1174": {
+      "id": 1174,
+      "type": 12,
+      "args": [
+        27
+      ]
+    },
+    "1175": {
+      "id": 1175,
+      "type": 30,
+      "args": [],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_156201_1",
+          "anim": "a_2"
+        },
+        {
+          "file": "sp_skill_buff_156201_2",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 8
+    },
+    "1176": {
+      "id": 1176,
+      "type": 48,
+      "args": []
+    },
+    "1177": {
+      "id": 1177,
+      "type": 15,
+      "args": [
+        15000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1178": {
+      "id": 1178,
+      "type": 1,
+      "args": [
+        12,
+        1500
+      ]
+    },
+    "1179": {
+      "id": 1179,
+      "type": 1,
+      "args": [
+        14,
+        2000
+      ]
+    },
+    "1180": {
+      "id": 1180,
+      "type": 13,
+      "args": [
+        5,
+        105,
+        200
+      ]
+    },
+    "1181": {
+      "id": 1181,
+      "type": 15,
+      "args": [
+        15600
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1182": {
+      "id": 1182,
+      "type": 13,
+      "args": [
+        5,
+        103,
+        200
+      ],
+      "elementShow": 5
+    },
+    "1183": {
+      "id": 1183,
+      "type": 13,
+      "args": [
+        5,
+        106,
+        200
+      ],
+      "elementShow": 5
+    },
+    "1184": {
+      "id": 1184,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "1185": {
+      "id": 1185,
+      "type": 15,
+      "args": [
+        12200
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1186": {
+      "id": 1186,
+      "type": 4,
+      "args": [
+        127,
+        1187
+      ]
+    },
+    "1187": {
+      "id": 1187,
+      "type": 15,
+      "args": [
+        7000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1188": {
+      "id": 1188,
+      "type": 15,
+      "args": [
+        6000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1189": {
+      "id": 1189,
+      "type": 38,
+      "args": [
+        1188
+      ]
+    },
+    "1190": {
+      "id": 1190,
+      "type": 38,
+      "args": [
+        1188
+      ]
+    },
+    "1191": {
+      "id": 1191,
+      "type": 15,
+      "args": [
+        10200
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1192": {
+      "id": 1192,
+      "type": 4,
+      "args": [
+        105,
+        1193
+      ]
+    },
+    "1193": {
+      "id": 1193,
+      "type": 15,
+      "args": [
+        8000
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1194": {
+      "id": 1194,
+      "type": 1,
+      "args": [
+        25,
+        3000
+      ]
+    },
+    "1195": {
+      "id": 1195,
+      "type": 15,
+      "args": [
+        11400
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1196": {
+      "id": 1196,
+      "type": 14,
+      "args": [
+        11400,
+        0,
+        0,
+        0
+      ]
+    },
+    "1197": {
+      "id": 1197,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "1198": {
+      "id": 1198,
+      "type": 44,
+      "args": [
+        1,
+        2,
+        0
+      ]
+    },
+    "1199": {
+      "id": 1199,
+      "type": 49,
+      "args": []
+    },
+    "1200": {
+      "id": 1200,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "1201": {
+      "id": 1201,
+      "type": 51,
+      "args": []
+    },
+    "1202": {
+      "id": 1202,
+      "type": 4,
+      "args": [
+        128,
+        1201
+      ]
+    },
+    "1203": {
+      "id": 1203,
+      "type": 4,
+      "args": [
+        129,
+        1200
+      ]
+    },
+    "1204": {
+      "id": 1204,
+      "type": 2,
+      "args": [
+        3,
+        -3000
+      ]
+    },
+    "1205": {
+      "id": 1205,
+      "type": 1,
+      "args": [
+        26,
+        1000
+      ]
+    },
+    "1206": {
+      "id": 1206,
+      "type": 4,
+      "args": [
+        128,
+        1207
+      ]
+    },
+    "1207": {
+      "id": 1207,
+      "type": 5,
+      "args": [
+        6,
+        6000
+      ]
+    },
+    "1208": {
+      "id": 1208,
+      "type": 1,
+      "args": [
+        17,
+        2000
+      ]
+    },
+    "1209": {
+      "id": 1209,
+      "type": 1,
+      "args": [
+        26,
+        3000
+      ]
+    },
+    "1210": {
+      "id": 1210,
+      "type": 5,
+      "args": [
+        6,
+        14300
+      ],
+      "elementShow": 6
+    },
+    "1211": {
+      "id": 1211,
+      "type": 51,
+      "args": []
+    },
+    "1212": {
+      "id": 1212,
+      "type": 38,
+      "args": [
+        1210,
+        1211
+      ]
+    },
+    "1213": {
+      "id": 1213,
+      "type": 4,
+      "args": [
+        130,
+        1200
+      ]
+    },
+    "1214": {
+      "id": 1214,
+      "type": 1,
+      "args": [
+        26,
+        2500
+      ]
+    },
+    "1215": {
+      "id": 1215,
+      "type": 44,
+      "args": [
+        1,
+        1,
+        0
+      ]
+    },
+    "1216": {
+      "id": 1216,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "1217": {
+      "id": 1217,
+      "type": 2,
+      "args": [
+        2,
+        1000
+      ]
+    },
+    "1218": {
+      "id": 1218,
+      "type": 2,
+      "args": [
+        4,
+        1000
+      ]
+    },
+    "1219": {
+      "id": 1219,
+      "type": 4,
+      "args": [
+        131,
+        1217,
+        1218
+      ]
+    },
+    "1220": {
+      "id": 1220,
+      "type": 45,
+      "args": []
+    },
+    "1221": {
+      "id": 1221,
+      "type": 4,
+      "args": [
+        128,
+        1220
+      ]
+    },
+    "1222": {
+      "id": 1222,
+      "type": 52,
+      "args": [
+        1000,
+        20000
+      ]
+    },
+    "1223": {
+      "id": 1223,
+      "type": 38,
+      "args": [
+        1201
+      ]
+    },
+    "1224": {
+      "id": 1224,
+      "type": 53,
+      "args": [
+        1223
+      ]
+    },
+    "1225": {
+      "id": 1225,
+      "type": 37,
+      "args": [
+        7,
+        1224
+      ]
+    },
+    "1226": {
+      "id": 1226,
+      "type": 5,
+      "args": [
+        6,
+        11000
+      ],
+      "elementShow": 6
+    },
+    "1227": {
+      "id": 1227,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "1228": {
+      "id": 1228,
+      "type": 4,
+      "args": [
+        132,
+        1226,
+        1227
+      ]
+    },
+    "1229": {
+      "id": 1229,
+      "type": 8,
+      "args": []
+    },
+    "1230": {
+      "id": 1230,
+      "type": 54,
+      "args": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "1231": {
+      "id": 1231,
+      "type": 15,
+      "args": [
+        7500
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1232": {
+      "id": 1232,
+      "type": 38,
+      "args": [
+        1231
+      ]
+    },
+    "1233": {
+      "id": 1233,
+      "type": 13,
+      "args": [
+        6,
+        101,
+        200
+      ],
+      "elementShow": 6
+    },
+    "1234": {
+      "id": 1234,
+      "type": 13,
+      "args": [
+        6,
+        106,
+        200
+      ],
+      "elementShow": 6
+    },
+    "1235": {
+      "id": 1235,
+      "type": 13,
+      "args": [
+        6,
+        102,
+        200
+      ],
+      "elementShow": 6
+    },
+    "1236": {
+      "id": 1236,
+      "type": 51,
+      "args": []
+    },
+    "1237": {
+      "id": 1237,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "1238": {
+      "id": 1238,
+      "type": 55,
+      "args": [
+        6,
+        26600,
+        1237
+      ]
+    },
+    "1239": {
+      "id": 1239,
+      "type": 2,
+      "args": [
+        3,
+        -1000
+      ]
+    },
+    "1240": {
+      "id": 1240,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "1241": {
+      "id": 1241,
+      "type": 20,
+      "args": [
+        6,
+        5000,
+        5000
+      ],
+      "elementShow": 6
+    },
+    "1242": {
+      "id": 1242,
+      "type": 2,
+      "args": [
+        4,
+        -1000
+      ]
+    },
+    "1243": {
+      "id": 1243,
+      "type": 14,
+      "args": [
+        14200,
+        0,
+        0,
+        0
+      ]
+    },
+    "1244": {
+      "id": 1244,
+      "type": 15,
+      "args": [
+        10900
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_hf",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "1245": {
+      "id": 1245,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "2001": {
+      "id": 2001,
+      "type": 31,
+      "args": [
+        3000
+      ]
+    },
+    "2002": {
+      "id": 2002,
+      "type": 32,
+      "args": [
+        10000
+      ],
+      "wordEffectArt": "battle_txt_fusheng",
+      "effectEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_fusheng",
+          "anim": "a_1"
+        }
+      ],
+      "effectSound": "effect_oldTrek_battle_heal",
+      "effPos": 7
+    },
+    "2003": {
+      "id": 2003,
+      "type": 1,
+      "args": [
+        16,
+        2500
+      ],
+      "icon": "hgmh_buff_finalDmgAdd_up"
+    },
+    "2004": {
+      "id": 2004,
+      "type": 12,
+      "args": [
+        27
+      ],
+      "icon": "hgmh_buff_zhuoshao_Invalid",
+      "wordEffectArt": "battle_txt_mianyi"
+    },
+    "2005": {
+      "id": 2005,
+      "type": 1,
+      "args": [
+        15,
+        2000
+      ],
+      "icon": "hgmh_buff_critDmg_up"
+    },
+    "2006": {
+      "id": 2006,
+      "type": 37,
+      "args": [
+        6,
+        2003,
+        2007
+      ]
+    },
+    "2007": {
+      "id": 2007,
+      "type": 16,
+      "args": []
+    },
+    "2008": {
+      "id": 2008,
+      "type": 32,
+      "args": [
+        1000
+      ],
+      "wordEffectArt": "battle_txt_fuhuo",
+      "effectEffs": [
+        {
+          "file": "sp_skill_jjgc_buff_fh",
+          "anim": "a_1"
+        }
+      ],
+      "effectSound": "effect_oldTrek_battle_heal",
+      "effPos": 7
+    },
+    "2009": {
+      "id": 2009,
+      "type": 1,
+      "args": [
+        14,
+        1000
+      ]
+    },
+    "2010": {
+      "id": 2010,
+      "type": 56,
+      "args": [
+        5,
+        2000
+      ],
+      "elementShow": 5
+    },
+    "2011": {
+      "id": 2011,
+      "type": 57,
+      "args": [
+        8000,
+        13000
+      ]
+    },
+    "2012": {
+      "id": 2012,
+      "type": 57,
+      "args": [
+        10000,
+        15000
+      ]
+    },
+    "2013": {
+      "id": 2013,
+      "type": 23,
+      "args": [
+        133,
+        2012,
+        2011
+      ]
+    },
+    "3001": {
+      "id": 3001,
+      "type": 2,
+      "args": [
+        3,
+        -5000
+      ],
+      "stack": 1,
+      "icon": "icon_buff_2003",
+      "lastBottomEff": [
+        {
+          "file": "sp_ui_hgmh_buff_nining",
+          "anim": "a_2"
+        }
+      ],
+      "effPos": 8
+    },
+    "3002": {
+      "id": 3002,
+      "type": 4,
+      "args": [
+        118,
+        3001
+      ],
+      "stack": 1
+    },
+    "3003": {
+      "id": 3003,
+      "type": 1,
+      "args": [
+        21,
+        2500
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_element1_up"
+    },
+    "3004": {
+      "id": 3004,
+      "type": 1,
+      "args": [
+        11,
+        -2000
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_hit_down"
+    },
+    "3005": {
+      "id": 3005,
+      "type": 4,
+      "args": [
+        119,
+        3004
+      ],
+      "stack": 1
+    },
+    "3006": {
+      "id": 3006,
+      "type": 1,
+      "args": [
+        22,
+        2500
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_element2_up"
+    },
+    "3007": {
+      "id": 3007,
+      "type": 27,
+      "args": [
+        3,
+        3000,
+        3,
+        -1500
+      ],
+      "elementShow": 3,
+      "stack": 1,
+      "icon": "icon_buff_3106",
+      "wordArt": "hgmh_battle_eff_zhuoshao",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zhuoshao",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "3008": {
+      "id": 3008,
+      "type": 2,
+      "args": [
+        3,
+        -1500
+      ],
+      "stack": 1,
+      "icon": "icon_buff_2003"
+    },
+    "3009": {
+      "id": 3009,
+      "type": 4,
+      "args": [
+        120,
+        3007
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_zhuoshao_Invalid"
+    },
+    "3010": {
+      "id": 3010,
+      "type": 1,
+      "args": [
+        23,
+        2500
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_element3_up"
+    },
+    "3011": {
+      "id": 3011,
+      "type": 1,
+      "args": [
+        11,
+        -500
+      ],
+      "icon": "hgmh_buff_hit_down"
+    },
+    "3012": {
+      "id": 3012,
+      "type": 2,
+      "args": [
+        3,
+        -1000
+      ],
+      "icon": "icon_buff_2003"
+    },
+    "3013": {
+      "id": 3013,
+      "type": 19,
+      "args": [
+        300
+      ]
+    },
+    "3014": {
+      "id": 3014,
+      "type": 2,
+      "args": [
+        2,
+        1000
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "3015": {
+      "id": 3015,
+      "type": 1,
+      "args": [
+        13,
+        1000
+      ],
+      "stack": 1,
+      "icon": "icon_buff_1105"
+    },
+    "3016": {
+      "id": 3016,
+      "type": 1,
+      "args": [
+        15,
+        2500
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_critDmg_up"
+    },
+    "3017": {
+      "id": 3017,
+      "type": 4,
+      "args": [
+        134,
+        3016
+      ],
+      "stack": 1
+    },
+    "3018": {
+      "id": 3018,
+      "type": 1,
+      "args": [
+        24,
+        2500
+      ],
+      "stack": 1,
+      "icon": "hgmh_buff_element4_up"
+    },
+    "3019": {
+      "id": 3019,
+      "type": 1,
+      "args": [
+        14,
+        3000
+      ],
+      "stack": 1
+    },
+    "3020": {
+      "id": 3020,
+      "type": 46,
+      "args": [
+        200
+      ]
+    },
+    "3021": {
+      "id": 3021,
+      "type": 4,
+      "args": [
+        135,
+        3020
+      ]
+    },
+    "3022": {
+      "id": 3022,
+      "type": 1,
+      "args": [
+        25,
+        2500
+      ],
+      "stack": 1
+    },
+    "3023": {
+      "id": 3023,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "3024": {
+      "id": 3024,
+      "type": 4,
+      "args": [
+        136,
+        3023
+      ]
+    },
+    "3025": {
+      "id": 3025,
+      "type": 1,
+      "args": [
+        26,
+        2500
+      ],
+      "stack": 1
+    },
+    "4001": {
+      "id": 4001,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "4002": {
+      "id": 4002,
+      "type": 35,
+      "args": []
+    },
+    "4003": {
+      "id": 4003,
+      "type": 2,
+      "args": [
+        2,
+        500
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "4004": {
+      "id": 4004,
+      "type": 2,
+      "args": [
+        3,
+        500
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "4005": {
+      "id": 4005,
+      "type": 2,
+      "args": [
+        4,
+        500
+      ],
+      "icon": "icon_buff_1004"
+    },
+    "4006": {
+      "id": 4006,
+      "type": 4,
+      "args": [
+        110,
+        4003,
+        4004,
+        4005
+      ]
+    },
+    "4007": {
+      "id": 4007,
+      "type": 17,
+      "args": [
+        2
+      ]
+    },
+    "4008": {
+      "id": 4008,
+      "type": 2,
+      "args": [
+        2,
+        500
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "4009": {
+      "id": 4009,
+      "type": 2,
+      "args": [
+        2,
+        1000
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "4010": {
+      "id": 4010,
+      "type": 1,
+      "args": [
+        13,
+        3000
+      ],
+      "icon": "icon_buff_1105"
+    },
+    "4011": {
+      "id": 4011,
+      "type": 37,
+      "args": [
+        3,
+        4010
+      ]
+    },
+    "4012": {
+      "id": 4012,
+      "type": 2,
+      "args": [
+        2,
+        1500
+      ],
+      "icon": "icon_buff_1002"
+    },
+    "4013": {
+      "id": 4013,
+      "type": 1,
+      "args": [
+        13,
+        5000
+      ],
+      "icon": "icon_buff_1105"
+    },
+    "4014": {
+      "id": 4014,
+      "type": 1,
+      "args": [
+        15,
+        5000
+      ],
+      "icon": "hgmh_buff_critDmg_up"
+    },
+    "4015": {
+      "id": 4015,
+      "type": 37,
+      "args": [
+        3,
+        4013,
+        4014
+      ]
+    },
+    "4016": {
+      "id": 4016,
+      "type": 2,
+      "args": [
+        3,
+        800
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "4017": {
+      "id": 4017,
+      "type": 2,
+      "args": [
+        3,
+        1500
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "4018": {
+      "id": 4018,
+      "type": 14,
+      "args": [
+        0,
+        1000,
+        0,
+        0
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_5"
+        }
+      ],
+      "effPos": 7
+    },
+    "4019": {
+      "id": 4019,
+      "type": 37,
+      "args": [
+        3,
+        4018
+      ]
+    },
+    "4020": {
+      "id": 4020,
+      "type": 2,
+      "args": [
+        3,
+        2000
+      ],
+      "icon": "icon_buff_1003"
+    },
+    "4021": {
+      "id": 4021,
+      "type": 14,
+      "args": [
+        0,
+        1500,
+        0,
+        0
+      ],
+      "attachEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_1"
+        }
+      ],
+      "lastEffs": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_2"
+        }
+      ],
+      "endEff": [
+        {
+          "file": "sp_skill_buff_changshengjue_1411",
+          "anim": "a_5"
+        }
+      ],
+      "effPos": 7
+    },
+    "4022": {
+      "id": 4022,
+      "type": 37,
+      "args": [
+        3,
+        4021
+      ]
+    },
+    "4023": {
+      "id": 4023,
+      "type": 38,
+      "args": [
+        4001
+      ]
+    },
+    "4024": {
+      "id": 4024,
+      "type": 39,
+      "args": [
+        2000
+      ]
+    },
+    "4025": {
+      "id": 4025,
+      "type": 17,
+      "args": [
+        3
+      ]
+    },
+    "4026": {
+      "id": 4026,
+      "type": 38,
+      "args": [
+        4007
+      ]
+    },
+    "4027": {
+      "id": 4027,
+      "type": 39,
+      "args": [
+        3000
+      ]
+    },
+    "5010": {
+      "id": 5010,
+      "type": 2,
+      "args": [
+        2,
+        1500
+      ]
+    },
+    "5011": {
+      "id": 5011,
+      "type": 2,
+      "args": [
+        3,
+        1500
+      ]
+    },
+    "5012": {
+      "id": 5012,
+      "type": 2,
+      "args": [
+        4,
+        1500
+      ]
+    },
+    "5020": {
+      "id": 5020,
+      "type": 2,
+      "args": [
+        2,
+        1000
+      ]
+    },
+    "5021": {
+      "id": 5021,
+      "type": 2,
+      "args": [
+        3,
+        1000
+      ]
+    },
+    "5022": {
+      "id": 5022,
+      "type": 2,
+      "args": [
+        4,
+        1000
+      ]
+    },
+    "5030": {
+      "id": 5030,
+      "type": 2,
+      "args": [
+        2,
+        600
+      ]
+    },
+    "5031": {
+      "id": 5031,
+      "type": 2,
+      "args": [
+        3,
+        600
+      ]
+    },
+    "5032": {
+      "id": 5032,
+      "type": 2,
+      "args": [
+        4,
+        600
+      ]
+    },
+    "5040": {
+      "id": 5040,
+      "type": 2,
+      "args": [
+        2,
+        400
+      ]
+    },
+    "5041": {
+      "id": 5041,
+      "type": 2,
+      "args": [
+        3,
+        400
+      ]
+    },
+    "5042": {
+      "id": 5042,
+      "type": 2,
+      "args": [
+        4,
+        400
+      ]
+    },
+    "5050": {
+      "id": 5050,
+      "type": 2,
+      "args": [
+        2,
+        200
+      ]
+    },
+    "5051": {
+      "id": 5051,
+      "type": 2,
+      "args": [
+        3,
+        200
+      ]
+    },
+    "5052": {
+      "id": 5052,
+      "type": 2,
+      "args": [
+        4,
+        200
+      ]
+    },
+    "6001": {
+      "id": 6001,
+      "type": 40,
+      "args": [
+        121,
+        3,
+        3000
+      ]
+    },
+    "6002": {
+      "id": 6002,
+      "type": 40,
+      "args": [
+        122,
+        2,
+        500
+      ]
+    },
+    "6003": {
+      "id": 6003,
+      "type": 27,
+      "args": [
+        3,
+        3000,
+        3,
+        -1500
+      ],
+      "elementShow": 3,
+      "icon": "icon_buff_3106",
+      "wordArt": "hgmh_battle_eff_zhuoshao",
+      "lastEffs": [
+        {
+          "file": "sp_ui_hgmh_buff_zhuoshao",
+          "anim": "a_1"
+        }
+      ],
+      "effPos": 8
+    },
+    "6004": {
+      "id": 6004,
+      "type": 1,
+      "args": [
+        13,
+        500
+      ],
+      "icon": "icon_buff_1105"
+    },
+    "6005": {
+      "id": 6005,
+      "type": 37,
+      "args": [
+        8,
+        6004
+      ]
+    },
+    "6006": {
+      "id": 6006,
+      "type": 17,
+      "args": [
+        1
+      ]
+    },
+    "6007": {
+      "id": 6007,
+      "type": 37,
+      "args": [
+        5,
+        6006
+      ]
+    },
+    "6008": {
+      "id": 6008,
+      "type": 50,
+      "args": [
+        4,
+        -500,
+        5,
+        1201
+      ]
+    },
+    "7001": {
+      "id": 7001,
+      "type": 1,
+      "args": [
+        16,
+        100
+      ]
+    },
+    "7002": {
+      "id": 7002,
+      "type": 1,
+      "args": [
+        16,
+        200
+      ]
+    },
+    "7003": {
+      "id": 7003,
+      "type": 1,
+      "args": [
+        16,
+        300
+      ]
+    },
+    "7004": {
+      "id": 7004,
+      "type": 1,
+      "args": [
+        16,
+        400
+      ]
+    },
+    "7005": {
+      "id": 7005,
+      "type": 1,
+      "args": [
+        16,
+        500
+      ]
+    },
+    "7006": {
+      "id": 7006,
+      "type": 1,
+      "args": [
+        16,
+        600
+      ]
+    },
+    "7007": {
+      "id": 7007,
+      "type": 1,
+      "args": [
+        16,
+        700
+      ]
+    },
+    "7008": {
+      "id": 7008,
+      "type": 1,
+      "args": [
+        16,
+        800
+      ]
+    },
+    "7009": {
+      "id": 7009,
+      "type": 1,
+      "args": [
+        16,
+        900
+      ]
+    },
+    "7010": {
+      "id": 7010,
+      "type": 1,
+      "args": [
+        16,
+        1000
+      ]
+    },
+    "7011": {
+      "id": 7011,
+      "type": 1,
+      "args": [
+        16,
+        1100
+      ]
+    },
+    "7012": {
+      "id": 7012,
+      "type": 1,
+      "args": [
+        16,
+        1200
+      ]
+    },
+    "7013": {
+      "id": 7013,
+      "type": 1,
+      "args": [
+        16,
+        1300
+      ]
+    },
+    "7014": {
+      "id": 7014,
+      "type": 1,
+      "args": [
+        16,
+        1400
+      ]
+    },
+    "7015": {
+      "id": 7015,
+      "type": 1,
+      "args": [
+        16,
+        1500
+      ]
+    },
+    "7016": {
+      "id": 7016,
+      "type": 1,
+      "args": [
+        16,
+        1600
+      ]
+    },
+    "7017": {
+      "id": 7017,
+      "type": 1,
+      "args": [
+        16,
+        1700
+      ]
+    },
+    "7018": {
+      "id": 7018,
+      "type": 1,
+      "args": [
+        16,
+        1800
+      ]
+    },
+    "7019": {
+      "id": 7019,
+      "type": 1,
+      "args": [
+        16,
+        1900
+      ]
+    },
+    "7020": {
+      "id": 7020,
+      "type": 1,
+      "args": [
+        16,
+        2000
+      ]
+    },
+    "7021": {
+      "id": 7021,
+      "type": 1,
+      "args": [
+        16,
+        2100
+      ]
+    },
+    "7022": {
+      "id": 7022,
+      "type": 1,
+      "args": [
+        16,
+        2200
+      ]
+    },
+    "7023": {
+      "id": 7023,
+      "type": 1,
+      "args": [
+        16,
+        2300
+      ]
+    },
+    "7024": {
+      "id": 7024,
+      "type": 1,
+      "args": [
+        16,
+        2400
+      ]
+    },
+    "7025": {
+      "id": 7025,
+      "type": 1,
+      "args": [
+        16,
+        2500
+      ]
+    },
+    "7026": {
+      "id": 7026,
+      "type": 1,
+      "args": [
+        16,
+        2600
+      ]
+    },
+    "7027": {
+      "id": 7027,
+      "type": 1,
+      "args": [
+        16,
+        2700
+      ]
+    },
+    "7028": {
+      "id": 7028,
+      "type": 1,
+      "args": [
+        16,
+        2800
+      ]
+    },
+    "7029": {
+      "id": 7029,
+      "type": 1,
+      "args": [
+        16,
+        2900
+      ]
+    },
+    "7030": {
+      "id": 7030,
+      "type": 1,
+      "args": [
+        16,
+        3000
+      ]
+    },
+    "7031": {
+      "id": 7031,
+      "type": 1,
+      "args": [
+        16,
+        3100
+      ]
+    },
+    "7032": {
+      "id": 7032,
+      "type": 1,
+      "args": [
+        16,
+        3200
+      ]
+    },
+    "7033": {
+      "id": 7033,
+      "type": 1,
+      "args": [
+        16,
+        3300
+      ]
+    },
+    "7034": {
+      "id": 7034,
+      "type": 1,
+      "args": [
+        16,
+        3400
+      ]
+    },
+    "7035": {
+      "id": 7035,
+      "type": 1,
+      "args": [
+        16,
+        3500
+      ]
+    },
+    "7036": {
+      "id": 7036,
+      "type": 1,
+      "args": [
+        16,
+        3600
+      ]
+    },
+    "7037": {
+      "id": 7037,
+      "type": 1,
+      "args": [
+        16,
+        3700
+      ]
+    },
+    "7038": {
+      "id": 7038,
+      "type": 1,
+      "args": [
+        16,
+        3800
+      ]
+    },
+    "7039": {
+      "id": 7039,
+      "type": 1,
+      "args": [
+        16,
+        3900
+      ]
+    },
+    "7040": {
+      "id": 7040,
+      "type": 1,
+      "args": [
+        16,
+        4000
+      ]
+    },
+    "7041": {
+      "id": 7041,
+      "type": 1,
+      "args": [
+        16,
+        4100
+      ]
+    },
+    "7042": {
+      "id": 7042,
+      "type": 1,
+      "args": [
+        16,
+        4200
+      ]
+    },
+    "7043": {
+      "id": 7043,
+      "type": 1,
+      "args": [
+        16,
+        4300
+      ]
+    },
+    "7044": {
+      "id": 7044,
+      "type": 1,
+      "args": [
+        16,
+        4400
+      ]
+    },
+    "7045": {
+      "id": 7045,
+      "type": 1,
+      "args": [
+        16,
+        4500
+      ]
+    },
+    "7046": {
+      "id": 7046,
+      "type": 1,
+      "args": [
+        16,
+        4600
+      ]
+    },
+    "7047": {
+      "id": 7047,
+      "type": 1,
+      "args": [
+        16,
+        4700
+      ]
+    },
+    "7048": {
+      "id": 7048,
+      "type": 1,
+      "args": [
+        16,
+        4800
+      ]
+    },
+    "7049": {
+      "id": 7049,
+      "type": 1,
+      "args": [
+        16,
+        4900
+      ]
+    },
+    "7050": {
+      "id": 7050,
+      "type": 1,
+      "args": [
+        16,
+        5000
+      ]
+    },
+    "100010": {
+      "id": 100010,
+      "type": 2,
+      "args": [
+        2,
+        400
+      ]
+    },
+    "100020": {
+      "id": 100020,
+      "type": 2,
+      "args": [
+        2,
+        250
+      ]
+    },
+    "100030": {
+      "id": 100030,
+      "type": 2,
+      "args": [
+        2,
+        200
+      ]
+    },
+    "100040": {
+      "id": 100040,
+      "type": 2,
+      "args": [
+        2,
+        100
+      ]
+    },
+    "100050": {
+      "id": 100050,
+      "type": 2,
+      "args": [
+        2,
+        50
+      ]
+    },
+    "100110": {
+      "id": 100110,
+      "type": 2,
+      "args": [
+        2,
+        -400
+      ]
+    },
+    "100120": {
+      "id": 100120,
+      "type": 2,
+      "args": [
+        2,
+        -250
+      ]
+    },
+    "100130": {
+      "id": 100130,
+      "type": 2,
+      "args": [
+        2,
+        -200
+      ]
+    },
+    "100140": {
+      "id": 100140,
+      "type": 2,
+      "args": [
+        2,
+        -100
+      ]
+    },
+    "100150": {
+      "id": 100150,
+      "type": 2,
+      "args": [
+        2,
+        -50
+      ]
+    },
+    "100210": {
+      "id": 100210,
+      "type": 2,
+      "args": [
+        3,
+        400
+      ]
+    },
+    "100220": {
+      "id": 100220,
+      "type": 2,
+      "args": [
+        3,
+        250
+      ]
+    },
+    "100230": {
+      "id": 100230,
+      "type": 2,
+      "args": [
+        3,
+        200
+      ]
+    },
+    "100240": {
+      "id": 100240,
+      "type": 2,
+      "args": [
+        3,
+        100
+      ]
+    },
+    "100250": {
+      "id": 100250,
+      "type": 2,
+      "args": [
+        3,
+        50
+      ]
+    },
+    "100310": {
+      "id": 100310,
+      "type": 2,
+      "args": [
+        3,
+        -400
+      ]
+    },
+    "100320": {
+      "id": 100320,
+      "type": 2,
+      "args": [
+        3,
+        -250
+      ]
+    },
+    "100330": {
+      "id": 100330,
+      "type": 2,
+      "args": [
+        3,
+        -200
+      ]
+    },
+    "100340": {
+      "id": 100340,
+      "type": 2,
+      "args": [
+        3,
+        -100
+      ]
+    },
+    "100350": {
+      "id": 100350,
+      "type": 2,
+      "args": [
+        3,
+        -50
+      ]
+    },
+    "100410": {
+      "id": 100410,
+      "type": 2,
+      "args": [
+        4,
+        400
+      ]
+    },
+    "100420": {
+      "id": 100420,
+      "type": 2,
+      "args": [
+        4,
+        250
+      ]
+    },
+    "100430": {
+      "id": 100430,
+      "type": 2,
+      "args": [
+        4,
+        200
+      ]
+    },
+    "100440": {
+      "id": 100440,
+      "type": 2,
+      "args": [
+        4,
+        100
+      ]
+    },
+    "100450": {
+      "id": 100450,
+      "type": 2,
+      "args": [
+        4,
+        50
+      ]
+    },
+    "100510": {
+      "id": 100510,
+      "type": 2,
+      "args": [
+        4,
+        -400
+      ]
+    },
+    "100520": {
+      "id": 100520,
+      "type": 2,
+      "args": [
+        4,
+        -250
+      ]
+    },
+    "100530": {
+      "id": 100530,
+      "type": 2,
+      "args": [
+        4,
+        -200
+      ]
+    },
+    "100540": {
+      "id": 100540,
+      "type": 2,
+      "args": [
+        4,
+        -100
+      ]
+    },
+    "100550": {
+      "id": 100550,
+      "type": 2,
+      "args": [
+        4,
+        -50
+      ]
+    },
+    "100610": {
+      "id": 100610,
+      "type": 1,
+      "args": [
+        14,
+        400
+      ]
+    },
+    "100620": {
+      "id": 100620,
+      "type": 1,
+      "args": [
+        14,
+        250
+      ]
+    },
+    "100630": {
+      "id": 100630,
+      "type": 1,
+      "args": [
+        14,
+        200
+      ]
+    },
+    "100640": {
+      "id": 100640,
+      "type": 1,
+      "args": [
+        14,
+        100
+      ]
+    },
+    "100650": {
+      "id": 100650,
+      "type": 1,
+      "args": [
+        14,
+        50
+      ]
+    },
+    "100710": {
+      "id": 100710,
+      "type": 1,
+      "args": [
+        14,
+        -400
+      ]
+    },
+    "100720": {
+      "id": 100720,
+      "type": 1,
+      "args": [
+        14,
+        -250
+      ]
+    },
+    "100730": {
+      "id": 100730,
+      "type": 1,
+      "args": [
+        14,
+        -200
+      ]
+    },
+    "100740": {
+      "id": 100740,
+      "type": 1,
+      "args": [
+        14,
+        -100
+      ]
+    },
+    "100750": {
+      "id": 100750,
+      "type": 1,
+      "args": [
+        14,
+        -50
+      ]
+    },
+    "100810": {
+      "id": 100810,
+      "type": 1,
+      "args": [
+        11,
+        400
+      ]
+    },
+    "100820": {
+      "id": 100820,
+      "type": 1,
+      "args": [
+        11,
+        250
+      ]
+    },
+    "100830": {
+      "id": 100830,
+      "type": 1,
+      "args": [
+        11,
+        200
+      ]
+    },
+    "100840": {
+      "id": 100840,
+      "type": 1,
+      "args": [
+        11,
+        100
+      ]
+    },
+    "100850": {
+      "id": 100850,
+      "type": 1,
+      "args": [
+        11,
+        50
+      ]
+    },
+    "100910": {
+      "id": 100910,
+      "type": 1,
+      "args": [
+        13,
+        400
+      ]
+    },
+    "100920": {
+      "id": 100920,
+      "type": 1,
+      "args": [
+        13,
+        250
+      ]
+    },
+    "100930": {
+      "id": 100930,
+      "type": 1,
+      "args": [
+        13,
+        200
+      ]
+    },
+    "100940": {
+      "id": 100940,
+      "type": 1,
+      "args": [
+        13,
+        100
+      ]
+    },
+    "100950": {
+      "id": 100950,
+      "type": 1,
+      "args": [
+        13,
+        50
+      ]
+    },
+    "101010": {
+      "id": 101010,
+      "type": 1,
+      "args": [
+        15,
+        1000
+      ]
+    },
+    "101020": {
+      "id": 101020,
+      "type": 1,
+      "args": [
+        15,
+        625
+      ]
+    },
+    "101030": {
+      "id": 101030,
+      "type": 1,
+      "args": [
+        15,
+        500
+      ]
+    },
+    "101040": {
+      "id": 101040,
+      "type": 1,
+      "args": [
+        15,
+        250
+      ]
+    },
+    "101050": {
+      "id": 101050,
+      "type": 1,
+      "args": [
+        15,
+        125
+      ]
+    },
+    "101110": {
+      "id": 101110,
+      "type": 1,
+      "args": [
+        12,
+        600
+      ]
+    },
+    "101120": {
+      "id": 101120,
+      "type": 1,
+      "args": [
+        12,
+        375
+      ]
+    },
+    "101130": {
+      "id": 101130,
+      "type": 1,
+      "args": [
+        12,
+        300
+      ]
+    },
+    "101140": {
+      "id": 101140,
+      "type": 1,
+      "args": [
+        12,
+        150
+      ]
+    },
+    "101150": {
+      "id": 101150,
+      "type": 1,
+      "args": [
+        12,
+        75
+      ]
+    },
+    "101210": {
+      "id": 101210,
+      "type": 1,
+      "args": [
+        21,
+        600
+      ]
+    },
+    "101220": {
+      "id": 101220,
+      "type": 1,
+      "args": [
+        21,
+        375
+      ]
+    },
+    "101230": {
+      "id": 101230,
+      "type": 1,
+      "args": [
+        21,
+        300
+      ]
+    },
+    "101240": {
+      "id": 101240,
+      "type": 1,
+      "args": [
+        21,
+        150
+      ]
+    },
+    "101250": {
+      "id": 101250,
+      "type": 1,
+      "args": [
+        21,
+        75
+      ]
+    },
+    "101310": {
+      "id": 101310,
+      "type": 1,
+      "args": [
+        22,
+        600
+      ]
+    },
+    "101320": {
+      "id": 101320,
+      "type": 1,
+      "args": [
+        22,
+        375
+      ]
+    },
+    "101330": {
+      "id": 101330,
+      "type": 1,
+      "args": [
+        22,
+        300
+      ]
+    },
+    "101340": {
+      "id": 101340,
+      "type": 1,
+      "args": [
+        22,
+        150
+      ]
+    },
+    "101350": {
+      "id": 101350,
+      "type": 1,
+      "args": [
+        22,
+        75
+      ]
+    },
+    "101410": {
+      "id": 101410,
+      "type": 1,
+      "args": [
+        23,
+        600
+      ]
+    },
+    "101420": {
+      "id": 101420,
+      "type": 1,
+      "args": [
+        23,
+        375
+      ]
+    },
+    "101430": {
+      "id": 101430,
+      "type": 1,
+      "args": [
+        23,
+        300
+      ]
+    },
+    "101440": {
+      "id": 101440,
+      "type": 1,
+      "args": [
+        23,
+        150
+      ]
+    },
+    "101450": {
+      "id": 101450,
+      "type": 1,
+      "args": [
+        23,
+        75
+      ]
+    },
+    "101510": {
+      "id": 101510,
+      "type": 1,
+      "args": [
+        24,
+        600
+      ]
+    },
+    "101520": {
+      "id": 101520,
+      "type": 1,
+      "args": [
+        24,
+        375
+      ]
+    },
+    "101530": {
+      "id": 101530,
+      "type": 1,
+      "args": [
+        24,
+        300
+      ]
+    },
+    "101540": {
+      "id": 101540,
+      "type": 1,
+      "args": [
+        24,
+        150
+      ]
+    },
+    "101550": {
+      "id": 101550,
+      "type": 1,
+      "args": [
+        24,
+        75
+      ]
+    },
+    "101610": {
+      "id": 101610,
+      "type": 1,
+      "args": [
+        25,
+        600
+      ]
+    },
+    "101620": {
+      "id": 101620,
+      "type": 1,
+      "args": [
+        25,
+        375
+      ]
+    },
+    "101630": {
+      "id": 101630,
+      "type": 1,
+      "args": [
+        25,
+        300
+      ]
+    },
+    "101640": {
+      "id": 101640,
+      "type": 1,
+      "args": [
+        25,
+        150
+      ]
+    },
+    "101650": {
+      "id": 101650,
+      "type": 1,
+      "args": [
+        25,
+        75
+      ]
+    },
+    "110010": {
+      "id": 110010,
+      "type": 2,
+      "args": [
+        2,
+        200
+      ]
+    },
+    "110011": {
+      "id": 110011,
+      "type": 2,
+      "args": [
+        3,
+        200
+      ]
+    },
+    "110020": {
+      "id": 110020,
+      "type": 2,
+      "args": [
+        3,
+        -300
+      ]
+    },
+    "110021": {
+      "id": 110021,
+      "type": 1,
+      "args": [
+        21,
+        150
+      ]
+    },
+    "110030": {
+      "id": 110030,
+      "type": 2,
+      "args": [
+        2,
+        -200
+      ]
+    },
+    "110031": {
+      "id": 110031,
+      "type": 2,
+      "args": [
+        2,
+        200
+      ]
+    },
+    "110040": {
+      "id": 110040,
+      "type": 1,
+      "args": [
+        11,
+        200
+      ]
+    },
+    "110041": {
+      "id": 110041,
+      "type": 1,
+      "args": [
+        22,
+        300
+      ]
+    },
+    "110050": {
+      "id": 110050,
+      "type": 2,
+      "args": [
+        2,
+        200
+      ]
+    },
+    "110051": {
+      "id": 110051,
+      "type": 1,
+      "args": [
+        23,
+        300
+      ]
+    },
+    "110060": {
+      "id": 110060,
+      "type": 1,
+      "args": [
+        13,
+        200
+      ]
+    },
+    "110061": {
+      "id": 110061,
+      "type": 1,
+      "args": [
+        15,
+        500
+      ]
+    },
+    "110070": {
+      "id": 110070,
+      "type": 2,
+      "args": [
+        3,
+        125
+      ]
+    },
+    "110071": {
+      "id": 110071,
+      "type": 1,
+      "args": [
+        21,
+        188
+      ]
+    },
+    "110080": {
+      "id": 110080,
+      "type": 2,
+      "args": [
+        3,
+        188
+      ]
+    },
+    "110081": {
+      "id": 110081,
+      "type": 1,
+      "args": [
+        12,
+        94
+      ]
+    },
+    "110090": {
+      "id": 110090,
+      "type": 1,
+      "args": [
+        12,
+        400
+      ]
+    },
+    "110091": {
+      "id": 110091,
+      "type": 2,
+      "args": [
+        4,
+        -80
+      ]
+    },
+    "110100": {
+      "id": 110100,
+      "type": 2,
+      "args": [
+        2,
+        250
+      ]
+    },
+    "110101": {
+      "id": 110101,
+      "type": 2,
+      "args": [
+        3,
+        -50
+      ]
+    },
+    "110110": {
+      "id": 110110,
+      "type": 2,
+      "args": [
+        4,
+        100
+      ]
+    },
+    "110111": {
+      "id": 110111,
+      "type": 1,
+      "args": [
+        13,
+        100
+      ]
+    },
+    "110120": {
+      "id": 110120,
+      "type": 2,
+      "args": [
+        2,
+        300
+      ]
+    },
+    "110121": {
+      "id": 110121,
+      "type": 1,
+      "args": [
+        11,
+        -100
+      ]
+    },
+    "110130": {
+      "id": 110130,
+      "type": 2,
+      "args": [
+        3,
+        125
+      ]
+    },
+    "110131": {
+      "id": 110131,
+      "type": 1,
+      "args": [
+        12,
+        188
+      ]
+    },
+    "110140": {
+      "id": 110140,
+      "type": 2,
+      "args": [
+        4,
+        125
+      ]
+    },
+    "110141": {
+      "id": 110141,
+      "type": 1,
+      "args": [
+        12,
+        188
+      ]
+    },
+    "110150": {
+      "id": 110150,
+      "type": 2,
+      "args": [
+        2,
+        250
+      ]
+    },
+    "110151": {
+      "id": 110151,
+      "type": 2,
+      "args": [
+        3,
+        -50
+      ]
+    },
+    "110160": {
+      "id": 110160,
+      "type": 1,
+      "args": [
+        15,
+        630
+      ]
+    },
+    "110161": {
+      "id": 110161,
+      "type": 1,
+      "args": [
+        14,
+        -50
+      ]
+    },
+    "110170": {
+      "id": 110170,
+      "type": 1,
+      "args": [
+        22,
+        150
+      ]
+    },
+    "110171": {
+      "id": 110171,
+      "type": 2,
+      "args": [
+        2,
+        100
+      ]
+    },
+    "110180": {
+      "id": 110180,
+      "type": 2,
+      "args": [
+        2,
+        -250
+      ]
+    },
+    "110181": {
+      "id": 110181,
+      "type": 2,
+      "args": [
+        3,
+        -50
+      ]
+    },
+    "110190": {
+      "id": 110190,
+      "type": 1,
+      "args": [
+        12,
+        125
+      ]
+    },
+    "110191": {
+      "id": 110191,
+      "type": 1,
+      "args": [
+        13,
+        125
+      ]
+    },
+    "110200": {
+      "id": 110200,
+      "type": 2,
+      "args": [
+        3,
+        -125
+      ]
+    },
+    "110201": {
+      "id": 110201,
+      "type": 1,
+      "args": [
+        15,
+        313
+      ]
+    },
+    "110210": {
+      "id": 110210,
+      "type": 1,
+      "args": [
+        23,
+        400
+      ]
+    },
+    "110211": {
+      "id": 110211,
+      "type": 2,
+      "args": [
+        3,
+        -80
+      ]
+    },
+    "110220": {
+      "id": 110220,
+      "type": 1,
+      "args": [
+        15,
+        630
+      ]
+    },
+    "110221": {
+      "id": 110221,
+      "type": 2,
+      "args": [
+        2,
+        -50
+      ]
+    },
+    "110230": {
+      "id": 110230,
+      "type": 1,
+      "args": [
+        23,
+        400
+      ]
+    },
+    "110231": {
+      "id": 110231,
+      "type": 1,
+      "args": [
+        11,
+        -80
+      ]
+    },
+    "110240": {
+      "id": 110240,
+      "type": 2,
+      "args": [
+        2,
+        300
+      ]
+    },
+    "110241": {
+      "id": 110241,
+      "type": 1,
+      "args": [
+        15,
+        -250
+      ]
+    },
+    "110250": {
+      "id": 110250,
+      "type": 2,
+      "args": [
+        2,
+        200
+      ]
+    },
+    "110251": {
+      "id": 110251,
+      "type": 1,
+      "args": [
+        24,
+        300
+      ]
+    },
+    "110260": {
+      "id": 110260,
+      "type": 1,
+      "args": [
+        14,
+        200
+      ]
+    },
+    "110261": {
+      "id": 110261,
+      "type": 1,
+      "args": [
+        11,
+        200
+      ]
+    },
+    "110270": {
+      "id": 110270,
+      "type": 2,
+      "args": [
+        3,
+        125
+      ]
+    },
+    "110271": {
+      "id": 110271,
+      "type": 1,
+      "args": [
+        12,
+        188
+      ]
+    },
+    "110280": {
+      "id": 110280,
+      "type": 2,
+      "args": [
+        3,
+        100
+      ]
+    },
+    "110281": {
+      "id": 110281,
+      "type": 1,
+      "args": [
+        24,
+        150
+      ]
+    },
+    "110290": {
+      "id": 110290,
+      "type": 1,
+      "args": [
+        24,
+        400
+      ]
+    },
+    "110291": {
+      "id": 110291,
+      "type": 2,
+      "args": [
+        3,
+        -80
+      ]
+    },
+    "110300": {
+      "id": 110300,
+      "type": 1,
+      "args": [
+        14,
+        200
+      ]
+    },
+    "110301": {
+      "id": 110301,
+      "type": 1,
+      "args": [
+        25,
+        300
+      ]
+    },
+    "110310": {
+      "id": 110310,
+      "type": 1,
+      "args": [
+        14,
+        200
+      ]
+    },
+    "110311": {
+      "id": 110311,
+      "type": 2,
+      "args": [
+        2,
+        -200
+      ]
+    },
+    "110320": {
+      "id": 110320,
+      "type": 1,
+      "args": [
+        11,
+        100
+      ]
+    },
+    "110321": {
+      "id": 110321,
+      "type": 1,
+      "args": [
+        25,
+        150
+      ]
+    },
+    "110330": {
+      "id": 110330,
+      "type": 2,
+      "args": [
+        3,
+        100
+      ]
+    },
+    "110331": {
+      "id": 110331,
+      "type": 1,
+      "args": [
+        25,
+        150
+      ]
+    },
+    "110340": {
+      "id": 110340,
+      "type": 2,
+      "args": [
+        3,
+        -100
+      ]
+    },
+    "110341": {
+      "id": 110341,
+      "type": 1,
+      "args": [
+        25,
+        150
+      ]
+    },
+    "110350": {
+      "id": 110350,
+      "type": 1,
+      "args": [
+        25,
+        150
+      ]
+    },
+    "110351": {
+      "id": 110351,
+      "type": 2,
+      "args": [
+        2,
+        100
+      ]
+    },
+    "110360": {
+      "id": 110360,
+      "type": 1,
+      "args": [
+        25,
+        400
+      ]
+    },
+    "110361": {
+      "id": 110361,
+      "type": 2,
+      "args": [
+        3,
+        -80
+      ]
+    }
+  }
+}

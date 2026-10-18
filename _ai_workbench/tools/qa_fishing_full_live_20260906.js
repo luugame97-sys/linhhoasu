@@ -1,0 +1,34 @@
+'use strict';
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),crypto=require('crypto');
+const APP='/linhhoasu/lhs/newServer',WS=require(APP+'/node_modules/ws'),{MongoClient}=require(APP+'/node_modules/mongodb'),{Pack,Unpack}=require(APP+'/src/protocol/Codec');
+const sid=Number(process.argv[2]);assert([1001,1002].includes(sid));const dbname='lhs_s'+sid,port=sid===1001?9200:9201;
+const base='qafull_'+crypto.randomBytes(8).toString('hex'),userId=base+'_s'+sid,playerId=crypto.randomBytes(12).toString('hex'),name='FQ'+base.slice(-8);
+const c=new MongoClient('mongodb://127.0.0.1:27017');let ws,revision=0,seq=58000;const all=[],pending=new Set(),sockets=[];const wait=ms=>new Promise(r=>setTimeout(r,ms));
+function recv(tag,uid,where=()=>true){const p=new Promise((resolve,reject)=>{const w={tag,uid,where,resolve,reject,t:setTimeout(()=>{pending.delete(w);reject(Error('FULL_QA_TIMEOUT_'+tag));},12000)};pending.add(w);});p.catch(()=>{});return p;}
+async function rpc(tag,data){const uid=++seq,next=recv(tag,uid);ws.send(Pack(tag,data,uid));const r=await next;if(r.balanceRevision!=null)revision=r.balanceRevision;return r;}
+function request(){return{requestId:'full_qa_'+crypto.randomBytes(8).toString('hex'),expectedRevision:revision};}
+async function open(){ws=new WS('ws://127.0.0.1:'+port,{headers:{Origin:'http://127.0.0.1'},handshakeTimeout:12000});sockets.push(ws);ws.on('message',raw=>{const b=Buffer.from(raw);let decoded;try{decoded=Unpack(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));}catch{return;}for(const p of Array.isArray(decoded)?decoded:[decoded]){all.push(p);for(const w of [...pending])if(p.tag===w.tag&&(w.uid==null||w.uid===p.msgUid)&&w.where(p.data)){clearTimeout(w.t);pending.delete(w);w.resolve(p.data);}}});await new Promise((r,j)=>{ws.once('open',r);ws.once('error',j);});const init=recv(500),events=recv(1700,0);assert.equal((await rpc(1,{platformuid:base,userId:base,userid:base,serverid:sid,serverId:sid,firstName:name})).result,0);const player=await init,activity=await events;assert.equal(player.name,name);assert.equal(player.level,116);assert.equal(player.fishInfo.level,28);revision=player.fishInfo.balanceRevision||0;return {player,activity};}
+async function close(){if(ws&&ws.readyState!==WS.CLOSED){const done=new Promise(r=>ws.once('close',r));ws.close();await Promise.race([done,wait(1500)]);if(ws.readyState!==WS.CLOSED)ws.terminate();}await wait(1000);}
+(async()=>{await c.connect();const db=c.db(dbname),players=db.collection('players');let inserted=false,result;try{
+const tpl=await players.findOne({isBot:true});assert(tpl);delete tpl._id;delete tpl.__v;delete tpl.inviteCode;delete tpl.botWorker;
+Object.assign(tpl,{userId,playerId,name,serverId:sid,isBot:false,level:116,exp:0,accountId:'',guildId:'',guildInfo:{},arenaScore:0,swordInfo:{...tpl.swordInfo,maxlayer:0},rechargeInfo:{monthCards:{},monthCardRecords:{},records:[],totalRecharge:0},
+items:{65:200,68:100,69:10,70:6,5904:1,5905:1,5906:1,5907:1,5543:10,190001:100,214:4,215:4,216:0},currencies:{diamond:0,gold:0,silver:0},systemUnlockInfo:{unlockedSystem:[215,221,329],rewardedSystem:[],settings:{}},
+fishInfo:{level:28,scene:1,food:5543,foodBag:[5543],rodId:5901,rodLevel:1,rodRank:1,rodExp:0,rodAttrs:[],rodTempAttrs:[],raftId:6201,raftLevel:0,raftRank:1,raftExp:0,slots:{},pics:{},fishTypeQualityPic:{},fishUidSeq:9000,fishResult:{time:0,fishInfos:[],escapes:[],items:[],fashion:[]},catchResult:{time:0,infos:[],escapes:[],items:[],sailItems:{}}},homelandInfo:{lv:1,skinId:0,buildingLv:{},layout:{}}});
+await players.insertOne(tpl);inserted=true;const first=await open();const owned=await players.findOne({userId});assert.equal(owned.playerId,playerId);
+const active=first.activity.datas.filter(r=>r.id>=33000&&r.id<34000);assert.equal(active.length,1);assert(first.activity.datas.some(r=>r.id===6006));
+const list=await rpc(4050,{action:'list',id:1,page:0});assert.equal(list.result,0);
+const cast={count:3,...request()},caught=await rpc(4000,cast);assert.equal(caught.result,0);assert(caught.fishResult.fishInfos.length>=3);assert(caught.fishResult.fishInfos.every(f=>f.quality===9));
+let saved=await players.findOne({userId});assert.equal(saved.items[65],197);assert.equal(saved.items[5543],7);const rev=revision;
+assert((await rpc(4000,cast)).replayed);saved=await players.findOne({userId});assert.equal(saved.items[5543],7);
+const auto=await rpc(4008,{autoPower:true,autoPowerVersion:1,uids:caught.fishResult.fishInfos.map(f=>f.uid),...request()});assert.equal(auto.result,0);assert(revision>rev);
+const skin=await rpc(1202,{require:{13190051:1}});assert.equal(skin.result,0);assert.equal((await rpc(6751,{skinId:190051})).result,0);assert.equal((await rpc(6751,{skinId:190055})).result,1);
+assert.equal((await rpc(1202,{require:{13190051:1}})).reason,'HOMELAND_SKIN_ALREADY_OWNED');
+const soul=await rpc(4060,{count:3,...request()});assert.equal(soul.result,0);assert.equal(soul.catchResult.infos.length+soul.catchResult.escapes.length,3);
+await close();const relog=await open();assert.equal(relog.player.homelandInfo.skinId,190051);saved=await players.findOne({userId});assert.equal(saved.items[190001],0);assert.equal(saved.items[190051],1);assert.equal(saved.items[65],188);
+assert.equal((await rpc(1700,{id:33354,module:0,...request()})).reason,'FISH_EVENT_NOT_ACTIVE');
+// Exact offline QA state prepares one mini-game ticket; no real player's progress is used.
+await close();saved=await players.findOne({userId});const key=Object.keys(saved.fishInfo.eventStats).find(k=>k.startsWith('F'+active[0].id+'_'));assert(key);await players.updateOne({userId,playerId},{$set:{['fishInfo.eventStats.'+key+'.games.1']:1}});await open();
+const eventRequest={id:active[0].id,module:1,index:1,...request()},reward=await rpc(1700,eventRequest);assert.equal(reward.result,0);assert(reward.rewardInfo.items.length>0);const repeats=await rpc(1700,eventRequest);assert(repeats.replayed);saved=await players.findOne({userId});assert.equal(saved.fishInfo.eventStats[key].games[1],0);
+result={result:'PASS',serverId:sid,scheduleType33:active[0].id,contest:true,premiumCatch:true,catchReplay:true,autoDeal:true,skinUnlockSwitchRelog:true,soulCatch:true,minigameRewardReplay:true,realPlayerWrites:0,nativeVisual:false};
+}finally{await close();for(const s of sockets)if(s.readyState!==WS.CLOSED)s.terminate();for(const w of pending){clearTimeout(w.t);w.reject(Error('QA_CLEANUP'));}pending.clear();if(inserted){await players.deleteOne({userId,playerId});await db.collection('mails').deleteMany({userId});await db.collection('fishingbottles').deleteMany({owner:userId});await wait(500);assert.equal(await players.countDocuments({userId}),0);}await c.close();}
+fs.writeFileSync(path.join(__dirname,'../qa-full-'+sid+'.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));})().catch(e=>{console.error(e.stack);process.exitCode=1;});

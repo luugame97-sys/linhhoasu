@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Account case-insensitive - 01/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ng-b-t-i-kho-n-kh-ng-ph-n-bi-t-hoa-th-ng-01-09-2026">Đồng bộ tài khoản không phân biệt hoa/thường (01/09/2026)</h1>
+<h2 id="1-t-m-t-t">1. Tóm tắt</h2>
+<ul>
+<li>Đã xác minh lỗi <code>AUTH_SESSION_MISMATCH</code> khi tài khoản đăng nhập bằng <code>Ohokaka12321</code> nhưng token/server handshake dùng canonical <code>ohokaka12321</code>.</li>
+<li>Đã triển khai cơ chế account ID không phân biệt hoa/thường trên production <code>103.116.105.154</code>.</li>
+<li>Tài khoản vẫn được lưu một bản canonical lowercase; không tạo thêm bản ghi theo từng kiểu viết hoa.</li>
+<li>Mật khẩu vẫn phân biệt hoa/thường và được giữ nguyên khi xác thực; <code>userId</code>/role ID vẫn so sánh chính xác.</li>
+</ul>
+<h2 id="2-ph-m-vi-thay-i">2. Phạm vi thay đổi</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Thành phần</th>
+<th>Cách xử lý</th>
+</tr></thead><tbody>
+<tr>
+<td>Đăng ký/tìm tài khoản</td>
+<td><code>AccountService.normalizeAccountId()</code> trim + lowercase trước khi validate, tạo và truy vấn</td>
+</tr>
+<tr>
+<td>Login HTTP/SDK</td>
+<td>Xác thực bằng account ID canonical; response <code>uid</code>, token và role dùng canonical</td>
+</tr>
+<tr>
+<td>Chọn server</td>
+<td>Sau SDK auth, chuẩn hóa lại account ID từ Mongo trước khi tạo session/bind role</td>
+</tr>
+<tr>
+<td>WebSocket tag <code>1</code></td>
+<td>Chuẩn hóa <code>platformuid</code> và <code>authSession.accountId</code> rồi mới so sánh; vẫn giữ kiểm tra <code>userId</code> nhân vật chính xác</td>
+</tr>
+<tr>
+<td>Dữ liệu hiện có</td>
+<td>Không migrate/xóa dữ liệu; audit tài khoản mục tiêu chỉ có một record <code>ohokaka12321</code></td>
+</tr>
+</tbody></table></div>
+<h2 id="3-ki-m-th-production">3. Kiểm thử production</h2>
+<h3 id="3-1-login-http">3.1 Login HTTP</h3>
+<p>Đã kiểm thử với mật khẩu QA do chủ dự án cung cấp; mật khẩu không ghi vào log/báo cáo. Năm biến thể đều trả HTTP <code>200</code>, đăng nhập thành công, cùng một nhân vật và cùng canonical account ID:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Input</th>
+<th>Canonical trả về</th>
+<th>Nhân vật</th>
+<th>Token tạm</th>
+</tr></thead><tbody>
+<tr>
+<td><code>Ohokaka12321</code></td>
+<td><code>ohokaka12321</code></td>
+<td>1</td>
+<td>Đã xóa sau test</td>
+</tr>
+<tr>
+<td><code>ohokaka12321</code></td>
+<td><code>ohokaka12321</code></td>
+<td>1</td>
+<td>Đã xóa sau test</td>
+</tr>
+<tr>
+<td><code>oHokaka12321</code></td>
+<td><code>ohokaka12321</code></td>
+<td>1</td>
+<td>Đã xóa sau test</td>
+</tr>
+<tr>
+<td><code>OHOKAKA12321</code></td>
+<td><code>ohokaka12321</code></td>
+<td>1</td>
+<td>Đã xóa sau test</td>
+</tr>
+<tr>
+<td><code>ohOKaka12321</code></td>
+<td><code>ohokaka12321</code></td>
+<td>1</td>
+<td>Đã xóa sau test</td>
+</tr>
+</tbody></table></div>
+<h3 id="3-2-sdk-auth-ch-n-server-websocket">3.2 SDK auth → chọn server → WebSocket</h3>
+<ul>
+<li>Input handshake: <code>Ohokaka12321</code>.</li>
+<li>SDK trả <code>uid=ohokaka12321</code>, 1 role.</li>
+<li>WebSocket tag <code>1</code> được chấp nhận, <code>loginResult=0</code>.</li>
+<li><code>session.accountId=ohokaka12321</code> và <code>authSessionMismatch=false</code>.</li>
+<li>Token chẩn đoán đã bị revoke/xóa sau test; không tạo dữ liệu nhân vật mới.</li>
+</ul>
+<h3 id="3-3-h-u-ki-m-artifact-runtime">3.3 Hậu kiểm artifact/runtime</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Kiểm tra</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>SHA-256 candidate/live <code>account.js</code></td>
+<td><code>0831425cf06ec45c363a3691c28d15e75646018b03963ffc07a9fce9abcf09ca</code> — khớp</td>
+</tr>
+<tr>
+<td>SHA-256 candidate/live <code>serverList.js</code></td>
+<td><code>de6a1479116c3e0d494870ec2a6796b7d399d01c33eaa7db0369e51c977b6c2b</code> — khớp</td>
+</tr>
+<tr>
+<td>Node syntax trên VPS</td>
+<td><code>SYNTAX_OK</code></td>
+</tr>
+<tr>
+<td>PM2 <code>lhs-s1001</code></td>
+<td><code>online</code>, PID <code>23793</code></td>
+</tr>
+<tr>
+<td>Game HTTP readiness</td>
+<td><code>ready=200</code></td>
+</tr>
+<tr>
+<td>WebSocket health</td>
+<td><code>ws=200</code></td>
+</tr>
+<tr>
+<td>Process khác</td>
+<td>Không restart <code>lhs-dist</code>, <code>lhs-admin</code>, <code>lhs-real-bots</code></td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>Contract test local: <code>12 checks PASS</code> (canonicalization SDK, WebSocket, role ID và reject account khác).</li>
+</ul>
+<p>Evidence đầy đủ: <code>_ai_workbench/temp/account_case_insensitive_prod_verify_20260901.json</code>.</p>
+<h2 id="4-l-i-v-c-ch-tr-nh-l-p-l-i">4. Lỗi và cách tránh lặp lại</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân gốc</th>
+<th>Cách xử lý</th>
+<th>Phòng tránh</th>
+</tr></thead><tbody>
+<tr>
+<td>Đăng nhập được nhưng chọn server báo <code>AUTH_SESSION_MISMATCH</code></td>
+<td><code>platformuid</code> từ client giữ chữ hoa, token giữ lowercase; backend so sánh chuỗi trực tiếp</td>
+<td>Canonical hóa hai account ID trước khi so sánh</td>
+<td>Mọi điểm nhận account ID phải gọi <code>normalizeAccountId()</code></td>
+</tr>
+<tr>
+<td>Có nguy cơ tạo nhiều tài khoản cho các kiểu hoa/thường</td>
+<td>Nếu chỉ sửa UI/client mà không sửa truy vấn server</td>
+<td>Canonical hóa trước validate/create/find/auth</td>
+<td>Giữ unique index/lookup trên account ID lowercase</td>
+</tr>
+<tr>
+<td>Script E2E không đọc được JSON do log stdout</td>
+<td>Handler ghi log cùng stdout với kết quả JSON</td>
+<td>Parser dùng <code>JSONDecoder.raw_decode</code> tìm object có marker <code>result=PASS</code></td>
+<td>Tool chẩn đoán phải tách log và payload hoặc parse theo marker</td>
+</tr>
+</tbody></table></div>
+<h2 id="5-tr-ng-th-i-v-gi-i-h-n">5. Trạng thái và giới hạn</h2>
+<ul>
+<li>Production đã chạy bản fix và test live PASS.</li>
+<li>Không cần đổi tên tài khoản trong Mongo; tài khoản hiện tại đã là lowercase canonical.</li>
+<li>Mật khẩu không được canonical hóa. Người chơi phải nhập đúng mật khẩu; chỉ account ID được bỏ phân biệt hoa/thường.</li>
+<li>Nếu phát hiện các record cũ trùng nhau khác hoa/thường ở tài khoản khác, cần lập migration riêng có backup và chọn record giữ lại; không tự động gộp trong hotfix này.</li>
+</ul>
+<h2 id="6-file-thay-i">6. File đã thay đổi</h2>
+<ul>
+<li>Production source: <code>/linhhoasu/lhs/newServer/src/handlers/account.js</code>.</li>
+<li>Production source: <code>/linhhoasu/lhs/newServer/src/handlers/serverList.js</code>.</li>
+<li>Candidate/backup: <code>_ai_workbench/temp/account_case_insensitive_candidate_20260901/</code> và <code>/linhhoasu/_ai_workbench/backups/account_case_insensitive_pre_20260901_143330/</code>.</li>
+<li>Tool kiểm thử: <code>_ai_workbench/tools/test_login_case_ohokaka_remote.py</code>, <code>_ai_workbench/tools/e2e_account_case_server_select_remote.py</code>.</li>
+<li>Tool hậu kiểm read-only: <code>_ai_workbench/tools/verify_account_case_insensitive_prod.py</code>.</li>
+</ul></main></body></html>

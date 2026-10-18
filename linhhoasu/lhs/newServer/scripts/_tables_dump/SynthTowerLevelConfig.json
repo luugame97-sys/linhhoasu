@@ -1,0 +1,2668 @@
+{
+  "_table": "SynthTowerLevelConfig",
+  "_rows": 201,
+  "_type": "object",
+  "_firstKeys": "id,type,monsters,hpcoefficient,bosshpcoefficient,atkcoefficient,bossatkcoefficient,lineRefreshCount",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "type": 1,
+        "monsters": {
+          "id": 40001,
+          "count": 4
+        },
+        "hpcoefficient": 100,
+        "bosshpcoefficient": 0,
+        "atkcoefficient": 1,
+        "bossatkcoefficient": 0,
+        "lineRefreshCount": 2
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "type": 1,
+        "monsters": {
+          "id": 40001,
+          "count": 7
+        },
+        "hpcoefficient": 100,
+        "bosshpcoefficient": 0,
+        "atkcoefficient": 1,
+        "bossatkcoefficient": 0,
+        "lineRefreshCount": 4
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "type": 1,
+        "monsters": {
+          "id": 40001,
+          "count": 9
+        },
+        "hpcoefficient": 100,
+        "bosshpcoefficient": 0,
+        "atkcoefficient": 1,
+        "bossatkcoefficient": 0,
+        "lineRefreshCount": 5
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 4
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 2
+    },
+    "2": {
+      "id": 2,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 7
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 4
+    },
+    "3": {
+      "id": 3,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 9
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 5
+    },
+    "4": {
+      "id": 4,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 12
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 6
+    },
+    "5": {
+      "id": 5,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 14
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 7
+    },
+    "6": {
+      "id": 6,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 17
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 9
+    },
+    "7": {
+      "id": 7,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 19
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 6
+    },
+    "8": {
+      "id": 8,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 22
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 7
+    },
+    "9": {
+      "id": 9,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 24
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 8
+    },
+    "10": {
+      "id": 10,
+      "type": 2,
+      "monsters": {
+        "id": 41001,
+        "count": 1
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 1000,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 10
+    },
+    "11": {
+      "id": 11,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 27
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 9
+    },
+    "12": {
+      "id": 12,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 29
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 10
+    },
+    "13": {
+      "id": 13,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 32
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 11
+    },
+    "14": {
+      "id": 14,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 34
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 11
+    },
+    "15": {
+      "id": 15,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 37
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 12
+    },
+    "16": {
+      "id": 16,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 40
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 13
+    },
+    "17": {
+      "id": 17,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 42
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 14
+    },
+    "18": {
+      "id": 18,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 45
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 15
+    },
+    "19": {
+      "id": 19,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 47
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 16
+    },
+    "20": {
+      "id": 20,
+      "type": 2,
+      "monsters": {
+        "id": 41002,
+        "count": 1
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 1500,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 20
+    },
+    "21": {
+      "id": 21,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 50
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 17
+    },
+    "22": {
+      "id": 22,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 52
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 17
+    },
+    "23": {
+      "id": 23,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 55
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 18
+    },
+    "24": {
+      "id": 24,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 57
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 19
+    },
+    "25": {
+      "id": 25,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 60
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 20
+    },
+    "26": {
+      "id": 26,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 62
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 21
+    },
+    "27": {
+      "id": 27,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 65
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 22
+    },
+    "28": {
+      "id": 28,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 67
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 22
+    },
+    "29": {
+      "id": 29,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 70
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 23
+    },
+    "30": {
+      "id": 30,
+      "type": 2,
+      "monsters": {
+        "id": 41002,
+        "count": 1
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 2000,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "31": {
+      "id": 31,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 72
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 24
+    },
+    "32": {
+      "id": 32,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 75
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 25
+    },
+    "33": {
+      "id": 33,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 77
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 26
+    },
+    "34": {
+      "id": 34,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 80
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 27
+    },
+    "35": {
+      "id": 35,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 82
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 27
+    },
+    "36": {
+      "id": 36,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 85
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "37": {
+      "id": 37,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 87
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "38": {
+      "id": 38,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 90
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "39": {
+      "id": 39,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 92
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "40": {
+      "id": 40,
+      "type": 2,
+      "monsters": {
+        "id": 41003,
+        "count": 1
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 2500,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 40
+    },
+    "41": {
+      "id": 41,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 95
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 32
+    },
+    "42": {
+      "id": 42,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 97
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 32
+    },
+    "43": {
+      "id": 43,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 100
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "44": {
+      "id": 44,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 103
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "45": {
+      "id": 45,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 106
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 35
+    },
+    "46": {
+      "id": 46,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 110
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 37
+    },
+    "47": {
+      "id": 47,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 113
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 38
+    },
+    "48": {
+      "id": 48,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 116
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 39
+    },
+    "49": {
+      "id": 49,
+      "type": 1,
+      "monsters": {
+        "id": 40001,
+        "count": 120
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 40
+    },
+    "50": {
+      "id": 50,
+      "type": 2,
+      "monsters": {
+        "id": 41003,
+        "count": 1
+      },
+      "hpcoefficient": 100,
+      "bosshpcoefficient": 3000,
+      "atkcoefficient": 1,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 60
+    },
+    "51": {
+      "id": 51,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 50
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 13
+    },
+    "52": {
+      "id": 52,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 52
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 13
+    },
+    "53": {
+      "id": 53,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 55
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 14
+    },
+    "54": {
+      "id": 54,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 57
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 14
+    },
+    "55": {
+      "id": 55,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 60
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 15
+    },
+    "56": {
+      "id": 56,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 62
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 16
+    },
+    "57": {
+      "id": 57,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 65
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 16
+    },
+    "58": {
+      "id": 58,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 67
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 17
+    },
+    "59": {
+      "id": 59,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 70
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 18
+    },
+    "60": {
+      "id": 60,
+      "type": 2,
+      "monsters": {
+        "id": 41004,
+        "count": 1
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 3500,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 40
+    },
+    "61": {
+      "id": 61,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 70
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 18
+    },
+    "62": {
+      "id": 62,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 72
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 18
+    },
+    "63": {
+      "id": 63,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 75
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 19
+    },
+    "64": {
+      "id": 64,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 77
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 19
+    },
+    "65": {
+      "id": 65,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 80
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 20
+    },
+    "66": {
+      "id": 66,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 82
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 21
+    },
+    "67": {
+      "id": 67,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 85
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 21
+    },
+    "68": {
+      "id": 68,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 87
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 22
+    },
+    "69": {
+      "id": 69,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 90
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 23
+    },
+    "70": {
+      "id": 70,
+      "type": 2,
+      "monsters": {
+        "id": 41004,
+        "count": 1
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 4000,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 40
+    },
+    "71": {
+      "id": 71,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 90
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 23
+    },
+    "72": {
+      "id": 72,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 92
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 23
+    },
+    "73": {
+      "id": 73,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 95
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 24
+    },
+    "74": {
+      "id": 74,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 97
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 24
+    },
+    "75": {
+      "id": 75,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 100
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 25
+    },
+    "76": {
+      "id": 76,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 102
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 26
+    },
+    "77": {
+      "id": 77,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 105
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 26
+    },
+    "78": {
+      "id": 78,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 107
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 27
+    },
+    "79": {
+      "id": 79,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 110
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "80": {
+      "id": 80,
+      "type": 2,
+      "monsters": {
+        "id": 41005,
+        "count": 1
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 4500,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 75
+    },
+    "81": {
+      "id": 81,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 110
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "82": {
+      "id": 82,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 112
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "83": {
+      "id": 83,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 115
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "84": {
+      "id": 84,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 117
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "85": {
+      "id": 85,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 120
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "86": {
+      "id": 86,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 122
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "87": {
+      "id": 87,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 125
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "88": {
+      "id": 88,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 127
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 32
+    },
+    "89": {
+      "id": 89,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 130
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "90": {
+      "id": 90,
+      "type": 2,
+      "monsters": {
+        "id": 41005,
+        "count": 1
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 5000,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 75
+    },
+    "91": {
+      "id": 91,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 130
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "92": {
+      "id": 92,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 132
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "93": {
+      "id": 93,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 135
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "94": {
+      "id": 94,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 137
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "95": {
+      "id": 95,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 140
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 35
+    },
+    "96": {
+      "id": 96,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 142
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 36
+    },
+    "97": {
+      "id": 97,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 145
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 36
+    },
+    "98": {
+      "id": 98,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 147
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 37
+    },
+    "99": {
+      "id": 99,
+      "type": 1,
+      "monsters": {
+        "id": 40002,
+        "count": 150
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 38
+    },
+    "100": {
+      "id": 100,
+      "type": 2,
+      "monsters": {
+        "id": 41006,
+        "count": 1
+      },
+      "hpcoefficient": 200,
+      "bosshpcoefficient": 6000,
+      "atkcoefficient": 2,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 75
+    },
+    "101": {
+      "id": 101,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 90
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 18
+    },
+    "102": {
+      "id": 102,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 92
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 18
+    },
+    "103": {
+      "id": 103,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 95
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 19
+    },
+    "104": {
+      "id": 104,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 97
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 19
+    },
+    "105": {
+      "id": 105,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 100
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 20
+    },
+    "106": {
+      "id": 106,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 102
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 20
+    },
+    "107": {
+      "id": 107,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 105
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 21
+    },
+    "108": {
+      "id": 108,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 107
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 21
+    },
+    "109": {
+      "id": 109,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 110
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 22
+    },
+    "110": {
+      "id": 110,
+      "type": 2,
+      "monsters": {
+        "id": 41007,
+        "count": 1
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 6500,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 75
+    },
+    "111": {
+      "id": 111,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 110
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 22
+    },
+    "112": {
+      "id": 112,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 112
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 22
+    },
+    "113": {
+      "id": 113,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 115
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 23
+    },
+    "114": {
+      "id": 114,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 117
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 23
+    },
+    "115": {
+      "id": 115,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 120
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 24
+    },
+    "116": {
+      "id": 116,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 122
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 24
+    },
+    "117": {
+      "id": 117,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 125
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 25
+    },
+    "118": {
+      "id": 118,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 127
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 25
+    },
+    "119": {
+      "id": 119,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 130
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 26
+    },
+    "120": {
+      "id": 120,
+      "type": 2,
+      "monsters": {
+        "id": 41008,
+        "count": 1
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 6500,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 75
+    },
+    "121": {
+      "id": 121,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 130
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 26
+    },
+    "122": {
+      "id": 122,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 132
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 26
+    },
+    "123": {
+      "id": 123,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 135
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 27
+    },
+    "124": {
+      "id": 124,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 137
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 27
+    },
+    "125": {
+      "id": 125,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 140
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "126": {
+      "id": 126,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 142
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "127": {
+      "id": 127,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 145
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "128": {
+      "id": 128,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 147
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "129": {
+      "id": 129,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 150
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "130": {
+      "id": 130,
+      "type": 2,
+      "monsters": {
+        "id": 41009,
+        "count": 1
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 7000,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 75
+    },
+    "131": {
+      "id": 131,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 150
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "132": {
+      "id": 132,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 152
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "133": {
+      "id": 133,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 155
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "134": {
+      "id": 134,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 157
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "135": {
+      "id": 135,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 160
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 32
+    },
+    "136": {
+      "id": 136,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 162
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 32
+    },
+    "137": {
+      "id": 137,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 165
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "138": {
+      "id": 138,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 167
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "139": {
+      "id": 139,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 170
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "140": {
+      "id": 140,
+      "type": 2,
+      "monsters": {
+        "id": 41010,
+        "count": 1
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 7500,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 80
+    },
+    "141": {
+      "id": 141,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 170
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "142": {
+      "id": 142,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 172
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "143": {
+      "id": 143,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 175
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 35
+    },
+    "144": {
+      "id": 144,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 177
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 35
+    },
+    "145": {
+      "id": 145,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 180
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 36
+    },
+    "146": {
+      "id": 146,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 182
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 36
+    },
+    "147": {
+      "id": 147,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 185
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 37
+    },
+    "148": {
+      "id": 148,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 187
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 37
+    },
+    "149": {
+      "id": 149,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 190
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 38
+    },
+    "150": {
+      "id": 150,
+      "type": 2,
+      "monsters": {
+        "id": 41011,
+        "count": 1
+      },
+      "hpcoefficient": 300,
+      "bosshpcoefficient": 8500,
+      "atkcoefficient": 3,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 80
+    },
+    "151": {
+      "id": 151,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 110
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "152": {
+      "id": 152,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 112
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 28
+    },
+    "153": {
+      "id": 153,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 115
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "154": {
+      "id": 154,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 117
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 29
+    },
+    "155": {
+      "id": 155,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 120
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 30
+    },
+    "156": {
+      "id": 156,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 123
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "157": {
+      "id": 157,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 125
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 31
+    },
+    "158": {
+      "id": 158,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 128
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 32
+    },
+    "159": {
+      "id": 159,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 130
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "160": {
+      "id": 160,
+      "type": 2,
+      "monsters": {
+        "id": 41012,
+        "count": 1
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 9000,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 80
+    },
+    "161": {
+      "id": 161,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 133
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 33
+    },
+    "162": {
+      "id": 162,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 135
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 34
+    },
+    "163": {
+      "id": 163,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 138
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 35
+    },
+    "164": {
+      "id": 164,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 140
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 35
+    },
+    "165": {
+      "id": 165,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 143
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 36
+    },
+    "166": {
+      "id": 166,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 146
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 37
+    },
+    "167": {
+      "id": 167,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 148
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 37
+    },
+    "168": {
+      "id": 168,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 151
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 38
+    },
+    "169": {
+      "id": 169,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 153
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 38
+    },
+    "170": {
+      "id": 170,
+      "type": 2,
+      "monsters": {
+        "id": 41013,
+        "count": 1
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 9500,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 100
+    },
+    "171": {
+      "id": 171,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 156
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 39
+    },
+    "172": {
+      "id": 172,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 158
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 40
+    },
+    "173": {
+      "id": 173,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 161
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 40
+    },
+    "174": {
+      "id": 174,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 163
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 41
+    },
+    "175": {
+      "id": 175,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 166
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 42
+    },
+    "176": {
+      "id": 176,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 169
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 42
+    },
+    "177": {
+      "id": 177,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 171
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 43
+    },
+    "178": {
+      "id": 178,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 174
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 44
+    },
+    "179": {
+      "id": 179,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 176
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 44
+    },
+    "180": {
+      "id": 180,
+      "type": 2,
+      "monsters": {
+        "id": 41014,
+        "count": 1
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 9500,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 100
+    },
+    "181": {
+      "id": 181,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 179
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 45
+    },
+    "182": {
+      "id": 182,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 181
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 45
+    },
+    "183": {
+      "id": 183,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 184
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 46
+    },
+    "184": {
+      "id": 184,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 186
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 47
+    },
+    "185": {
+      "id": 185,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 189
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 47
+    },
+    "186": {
+      "id": 186,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 192
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 48
+    },
+    "187": {
+      "id": 187,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 194
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 49
+    },
+    "188": {
+      "id": 188,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 197
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 49
+    },
+    "189": {
+      "id": 189,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 199
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 50
+    },
+    "190": {
+      "id": 190,
+      "type": 2,
+      "monsters": {
+        "id": 41015,
+        "count": 1
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 10000,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 100
+    },
+    "191": {
+      "id": 191,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 201
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 50
+    },
+    "192": {
+      "id": 192,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 204
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 51
+    },
+    "193": {
+      "id": 193,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 206
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 52
+    },
+    "194": {
+      "id": 194,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 209
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 52
+    },
+    "195": {
+      "id": 195,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 212
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 53
+    },
+    "196": {
+      "id": 196,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 214
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 54
+    },
+    "197": {
+      "id": 197,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 217
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 54
+    },
+    "198": {
+      "id": 198,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 219
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 55
+    },
+    "199": {
+      "id": 199,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 221
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 55
+    },
+    "200": {
+      "id": 200,
+      "type": 2,
+      "monsters": {
+        "id": 41015,
+        "count": 1
+      },
+      "hpcoefficient": 500,
+      "bosshpcoefficient": 10000,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 100
+    },
+    "201": {
+      "id": 201,
+      "type": 1,
+      "monsters": {
+        "id": 40003,
+        "count": 200
+      },
+      "hpcoefficient": 800,
+      "bosshpcoefficient": 0,
+      "atkcoefficient": 4,
+      "bossatkcoefficient": 0,
+      "lineRefreshCount": 55
+    }
+  }
+}

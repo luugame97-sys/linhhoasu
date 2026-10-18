@@ -1,0 +1,27 @@
+{
+  "version": "custom-fishing-20260906-v1",
+  "provenance": "Owner approved custom missing base odds on 2026-09-06. Advertised item percentages preserved; not official CN RNG.",
+  "normal": {
+    "missBps": 400, "escapeBps": 200, "relicBps": 200, "treasureBps": 100,
+    "qualityWeights": {"2": 4000, "3": 3000, "4": 1800, "6": 800, "7": 350, "9": 50},
+    "mutationBps": 500, "bigBps": 1000, "normalWeight": [10000,11999], "bigWeight": [12000,20000],
+    "focusPointToMissBps": 1, "strengthPointToEscapeBps": 5,
+    "targetBaitWeightBonusBps": 10000, "qualityBaitWeightBonusBps": 10000,
+    "relicCoins": 50, "minIntervalMs": 1200
+  },
+  "soul": {
+    "missBps": 700, "escapeBps": 300, "mutationBps": 300,
+    "qualityWeights": {"2": 4200, "3": 3000, "4": 1700, "6": 900, "7": 200},
+    "boxDropBps": 300, "minIntervalMs": 1500
+  },
+  "advertised": {"chuTuocDoubleBps": 1000, "bachHoDoubleBps": 1000, "thanhLongMutationMultiplier": 2, "specialFishBps": 100, "premiumBaitMutationBps": 5000},
+  "treasureRewards": {"5201": {"id":1,"min":10,"max":50},"5202":{"id":4,"min":5,"max":20},"5203":{"id":69,"min":1,"max":5}},
+  "specialFamilies": [
+    {"owners":[5908,6204],"type":106,"ids":[5421,5422,5423,5424,5425],"rewardId":1,"min":10,"max":100},
+    {"owners":[6206],"type":107,"ids":[5431,5432,5433,5434,5435],"rewardId":2,"min":1000,"max":10000},
+    {"owners":[6208],"type":108,"ids":[5441,5442,5443,5444,5445],"rewardId":4,"min":10,"max":100},
+    {"owners":[6210],"type":109,"ids":[5451,5452,5453,5454,5455],"rewardId":6,"min":1,"max":10}
+  ],
+  "events": {"ticketBps":500,"kingBps":200,"bottleItemBps":500,"bottleNetBps":200,"maxTicketsPerGame":20,"kingWeight":[10000,50000],"bottleDailyThrows":10,"bottleLifetimeDays":7,"minigameRequestCap":20},
+  "schedule": {"enabled":true,"anchor":"2026-09-06T19:00:00+07:00","durationDays":90,"periodDays":7,"rotation":[33001,33002,33201,33202,33203,33204,33301,33302,33303,33304],"contestId":6006}
+}

@@ -1,0 +1,128 @@
+{
+  "version": "event-rotation-20260914-v1",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "preserveActiveCycles": true,
+  "families": [
+    {
+      "key": "fishing",
+      "kind": "fishing",
+      "enabledByEnv": "EVENT_ROTATION_ENABLED",
+      "periodDays": 7,
+      "repeatForever": true,
+      "free": true,
+      "ids": [6006, 33001, 33002, 33201, 33202, 33203, 33204, 33301, 33302, 33303, 33304]
+    },
+    {
+      "key": "mini_games",
+      "kind": "invest",
+      "persistent": true,
+      "repeatForever": false,
+      "free": true,
+      "ids": [1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      "key": "activation_pass",
+      "kind": "activity",
+      "activityType": 7,
+      "repeatForever": true,
+      "paid": true,
+      "enabled": false,
+      "ids": [7001, 7051]
+    },
+    {
+      "key": "login_privileges",
+      "kind": "activity",
+      "activityType": 9,
+      "repeatForever": true,
+      "paid": true,
+      "enabled": false,
+      "ids": [9001, 9002, 9004, 9005, 9051, 9052, 9101]
+    },
+    {
+      "key": "fortune",
+      "kind": "activity",
+      "activityType": 43,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "anchor": "2026-09-26T17:00:00+07:00",
+      "periodDays": 7,
+      "ids": [43001, 43002]
+    },
+    {
+      "key": "new_year_monster",
+      "kind": "activity",
+      "activityType": 44,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "anchor": "2026-09-26T17:00:00+07:00",
+      "periodDays": 7,
+      "ids": [44001, 44002]
+    },
+    {
+      "key": "monopoly",
+      "kind": "activity",
+      "activityType": 21,
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "periodDays": 7,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "requiresNativeQa": true,
+      "ids": [21001]
+    },
+    {
+      "key": "knife_reward",
+      "kind": "activity",
+      "activityType": 27,
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "periodDays": 7,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "requiresNativeQa": true,
+      "ids": [27001]
+    },
+    {
+      "key": "secret_treasure",
+      "kind": "activity",
+      "activityType": 30,
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "periodDays": 7,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "requiresNativeQa": true,
+      "ids": [30001]
+    },
+    {
+      "key": "alchemy_draw",
+      "kind": "activity",
+      "activityType": 37,
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "periodDays": 7,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "requiresNativeQa": true,
+      "ids": [37001]
+    },
+    {
+      "key": "box_draw",
+      "kind": "activity",
+      "activityType": 49,
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "periodDays": 7,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "requiresNativeQa": true,
+      "ids": [49001]
+    },
+    {
+      "key": "fulu",
+      "kind": "activity",
+      "activityType": 52,
+      "anchor": "2026-09-14T00:00:00+07:00",
+      "periodDays": 7,
+      "repeatForever": true,
+      "enabledByEnv": "EVENT_ROTATION_NATIVE_ENABLED",
+      "requiresNativeQa": true,
+      "ids": [52001]
+    }
+  ]
+}

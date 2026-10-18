@@ -1,0 +1,1212 @@
+{
+  "_table": "DoubleTowerPlayerAIConfig",
+  "_rows": 70,
+  "_type": "object",
+  "_firstKeys": "id,value,type,buildValue,additionId,buildExtraValue,battleExtraValue,respondId,buildRespondValue,battleRespondValue",
+  "_sample": [
+    {
+      "26111": {
+        "id": 26111,
+        "value": 50,
+        "type": [],
+        "buildValue": 10,
+        "additionId": [],
+        "buildExtraValue": [],
+        "battleExtraValue": [],
+        "respondId": [],
+        "buildRespondValue": [],
+        "battleRespondValue": []
+      }
+    },
+    {
+      "26121": {
+        "id": 26121,
+        "value": 150,
+        "type": [
+          5
+        ],
+        "buildValue": 10,
+        "additionId": [
+          [
+            26541
+          ]
+        ],
+        "buildExtraValue": [
+          30
+        ],
+        "battleExtraValue": [
+          60
+        ],
+        "respondId": [],
+        "buildRespondValue": [],
+        "battleRespondValue": []
+      }
+    },
+    {
+      "26131": {
+        "id": 26131,
+        "value": 280,
+        "type": [
+          2
+        ],
+        "buildValue": 10,
+        "additionId": [],
+        "buildExtraValue": [],
+        "battleExtraValue": [],
+        "respondId": [],
+        "buildRespondValue": [],
+        "battleRespondValue": []
+      }
+    }
+  ],
+  "data": {
+    "26111": {
+      "id": 26111,
+      "value": 50,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26121": {
+      "id": 26121,
+      "value": 150,
+      "type": [
+        5
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26541
+        ]
+      ],
+      "buildExtraValue": [
+        30
+      ],
+      "battleExtraValue": [
+        60
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26131": {
+      "id": 26131,
+      "value": 280,
+      "type": [
+        2
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26132": {
+      "id": 26132,
+      "value": 300,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26133": {
+      "id": 26133,
+      "value": 300,
+      "type": [
+        1
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26141": {
+      "id": 26141,
+      "value": 480,
+      "type": [
+        3
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26142": {
+      "id": 26142,
+      "value": 530,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26143": {
+      "id": 26143,
+      "value": 500,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26151": {
+      "id": 26151,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26152": {
+      "id": 26152,
+      "value": 600,
+      "type": [
+        7
+      ],
+      "buildValue": 25,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [
+        [
+          26141,
+          26142,
+          26143,
+          26151,
+          26153
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26153": {
+      "id": 26153,
+      "value": 550,
+      "type": [
+        6,
+        7
+      ],
+      "buildValue": 0,
+      "additionId": [
+        [
+          26111,
+          26121,
+          26131,
+          26133,
+          26132,
+          26141,
+          26142,
+          26143,
+          26151,
+          26152
+        ]
+      ],
+      "buildExtraValue": [
+        -40
+      ],
+      "battleExtraValue": [
+        -80
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26161": {
+      "id": 26161,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26162": {
+      "id": 26162,
+      "value": 600,
+      "type": [
+        7
+      ],
+      "buildValue": 25,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [
+        [
+          26141,
+          26142,
+          26143,
+          26151,
+          26153,
+          26161,
+          26163
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26163": {
+      "id": 26163,
+      "value": 550,
+      "type": [
+        6,
+        7
+      ],
+      "buildValue": 0,
+      "additionId": [
+        [
+          26111,
+          26121,
+          26131,
+          26133,
+          26132,
+          26141,
+          26142,
+          26143,
+          26151,
+          26152,
+          26161,
+          26162
+        ]
+      ],
+      "buildExtraValue": [
+        -40
+      ],
+      "battleExtraValue": [
+        -80
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26211": {
+      "id": 26211,
+      "value": 50,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26221": {
+      "id": 26221,
+      "value": 150,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26231": {
+      "id": 26231,
+      "value": 280,
+      "type": [
+        2
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26232": {
+      "id": 26232,
+      "value": 280,
+      "type": [
+        3
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26233": {
+      "id": 26233,
+      "value": 300,
+      "type": [
+        1
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26241": {
+      "id": 26241,
+      "value": 500,
+      "type": [
+        6
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26431
+        ],
+        [
+          26331
+        ],
+        [
+          26131
+        ],
+        [
+          26231
+        ],
+        [
+          26531
+        ]
+      ],
+      "buildExtraValue": [
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "battleExtraValue": [
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26242": {
+      "id": 26242,
+      "value": 500,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26243": {
+      "id": 26243,
+      "value": 500,
+      "type": [
+        3
+      ],
+      "buildValue": 15,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26251": {
+      "id": 26251,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26252": {
+      "id": 26252,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26253": {
+      "id": 26253,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26261": {
+      "id": 26261,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26262": {
+      "id": 26262,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26263": {
+      "id": 26263,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26311": {
+      "id": 26311,
+      "value": 50,
+      "type": [
+        6
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26342
+        ]
+      ],
+      "buildExtraValue": [
+        30
+      ],
+      "battleExtraValue": [
+        60
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26321": {
+      "id": 26321,
+      "value": 130,
+      "type": [
+        3
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26331": {
+      "id": 26331,
+      "value": 280,
+      "type": [
+        2
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26332": {
+      "id": 26332,
+      "value": 300,
+      "type": [
+        1,
+        6
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26342
+        ]
+      ],
+      "buildExtraValue": [
+        50
+      ],
+      "battleExtraValue": [
+        100
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26333": {
+      "id": 26333,
+      "value": 270,
+      "type": [
+        6,
+        7
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26342
+        ]
+      ],
+      "buildExtraValue": [
+        50
+      ],
+      "battleExtraValue": [
+        100
+      ],
+      "respondId": [
+        [
+          26541,
+          26542
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26341": {
+      "id": 26341,
+      "value": 480,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26342": {
+      "id": 26342,
+      "value": 480,
+      "type": [
+        5
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26311,
+          26332,
+          26333
+        ]
+      ],
+      "buildExtraValue": [
+        50
+      ],
+      "battleExtraValue": [
+        100
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26343": {
+      "id": 26343,
+      "value": 480,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26351": {
+      "id": 26351,
+      "value": 600,
+      "type": [],
+      "buildValue": 25,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26352": {
+      "id": 26352,
+      "value": 600,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26353": {
+      "id": 26353,
+      "value": 600,
+      "type": [
+        3
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26361": {
+      "id": 26361,
+      "value": 600,
+      "type": [],
+      "buildValue": 25,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26362": {
+      "id": 26362,
+      "value": 600,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26363": {
+      "id": 26363,
+      "value": 600,
+      "type": [
+        3
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26411": {
+      "id": 26411,
+      "value": 50,
+      "type": [
+        6
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26421
+        ]
+      ],
+      "buildExtraValue": [
+        30
+      ],
+      "battleExtraValue": [
+        60
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26421": {
+      "id": 26421,
+      "value": 150,
+      "type": [
+        5
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26411
+        ],
+        [
+          26541
+        ]
+      ],
+      "buildExtraValue": [
+        30,
+        20
+      ],
+      "battleExtraValue": [
+        60,
+        40
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26431": {
+      "id": 26431,
+      "value": 280,
+      "type": [
+        2
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26432": {
+      "id": 26432,
+      "value": 320,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26433": {
+      "id": 26433,
+      "value": 300,
+      "type": [
+        1,
+        6
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26342
+        ]
+      ],
+      "buildExtraValue": [
+        30
+      ],
+      "battleExtraValue": [
+        60
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26441": {
+      "id": 26441,
+      "value": 550,
+      "type": [
+        6,
+        7
+      ],
+      "buildValue": 10,
+      "additionId": [
+        [
+          26431,
+          26331,
+          26131,
+          26231,
+          26531
+        ]
+      ],
+      "buildExtraValue": [
+        -40
+      ],
+      "battleExtraValue": [
+        -80
+      ],
+      "respondId": [
+        [
+          26541,
+          26542
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26442": {
+      "id": 26442,
+      "value": 500,
+      "type": [],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26443": {
+      "id": 26443,
+      "value": 500,
+      "type": [
+        7
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [
+        [
+          26541,
+          26542
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26451": {
+      "id": 26451,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26452": {
+      "id": 26452,
+      "value": 600,
+      "type": [
+        7
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [
+        [
+          26553,
+          26551,
+          26543,
+          26542,
+          26541,
+          26532
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26453": {
+      "id": 26453,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26461": {
+      "id": 26461,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26462": {
+      "id": 26462,
+      "value": 600,
+      "type": [
+        7
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [
+        [
+          26553,
+          26551,
+          26543,
+          26542,
+          26541,
+          26532
+        ]
+      ],
+      "buildRespondValue": [
+        20
+      ],
+      "battleRespondValue": [
+        200
+      ]
+    },
+    "26463": {
+      "id": 26463,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26511": {
+      "id": 26511,
+      "value": 20,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26521": {
+      "id": 26521,
+      "value": 120,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26531": {
+      "id": 26531,
+      "value": 220,
+      "type": [
+        2
+      ],
+      "buildValue": 10,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26532": {
+      "id": 26532,
+      "value": 300,
+      "type": [
+        3
+      ],
+      "buildValue": 15,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26533": {
+      "id": 26533,
+      "value": 270,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26541": {
+      "id": 26541,
+      "value": 460,
+      "type": [
+        6
+      ],
+      "buildValue": 20,
+      "additionId": [
+        [
+          26121,
+          26342,
+          26421
+        ]
+      ],
+      "buildExtraValue": [
+        30
+      ],
+      "battleExtraValue": [
+        60
+      ],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26542": {
+      "id": 26542,
+      "value": 470,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26543": {
+      "id": 26543,
+      "value": 470,
+      "type": [
+        3
+      ],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26551": {
+      "id": 26551,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26552": {
+      "id": 26552,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26553": {
+      "id": 26553,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26561": {
+      "id": 26561,
+      "value": 600,
+      "type": [],
+      "buildValue": 20,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26562": {
+      "id": 26562,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    },
+    "26563": {
+      "id": 26563,
+      "value": 600,
+      "type": [],
+      "buildValue": 30,
+      "additionId": [],
+      "buildExtraValue": [],
+      "battleExtraValue": [],
+      "respondId": [],
+      "buildRespondValue": [],
+      "battleRespondValue": []
+    }
+  }
+}

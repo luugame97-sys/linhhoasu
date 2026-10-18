@@ -1,0 +1,73 @@
+{
+  "_table": "SpecSpiritBaseConfig",
+  "_rows": 19,
+  "_type": "object",
+  "_firstKeys": "(obj)[refineFloorScore|refineFloorAddRate|refineLuckyAddRates|refineCurios|refineCuriosTimeCount]",
+  "_sample": [
+    {
+      "refineFloorScore": 100
+    },
+    {
+      "refineFloorAddRate": 1000
+    },
+    {
+      "refineLuckyAddRates": {
+        "467": 500,
+        "468": 1000,
+        "469": 3000
+      }
+    }
+  ],
+  "data": {
+    "refineFloorScore": 100,
+    "refineFloorAddRate": 1000,
+    "refineLuckyAddRates": {
+      "467": 500,
+      "468": 1000,
+      "469": 3000
+    },
+    "refineCurios": 4,
+    "refineCuriosTimeCount": 2,
+    "refineCuriosActiveCount": 1,
+    "refineSkipLevel": 2,
+    "spiritUnlock": [
+      286,
+      361,
+      451
+    ],
+    "spiritTypeIcon": {
+      "1": "xl_bmfb_bm_po",
+      "2": "xl_bmfb_bm_shou"
+    },
+    "spiritCount": 6,
+    "spiritSuitName": {
+      "1": {
+        "icon": "xl_bmfb_bm_qiangang",
+        "name": 30150079
+      },
+      "2": {
+        "icon": "xl_bmfb_bm_xuanming",
+        "name": 30150080
+      }
+    },
+    "spiritSuitCount": [
+      3,
+      6
+    ],
+    "entryQuality": {
+      "2": 2500,
+      "3": 5000,
+      "4": 7500,
+      "6": 10000
+    },
+    "spiritBagCount": 100,
+    "spAttrCount": 2,
+    "soulPetDay": 7,
+    "resetStarItemExp": 100,
+    "resetStarItem": {
+      "1": 470,
+      "2": 471
+    },
+    "refineLuckyPlus": 473
+  }
+}

@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiểm kê gói nạp production - Linh Họa Sư</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="b-o-c-o-ki-m-k-to-n-b-g-i-n-p-t-production">Báo cáo kiểm kê toàn bộ gói nạp/tệ production</h1>
+<ul>
+<li>Thời điểm chụp ban đầu: 2026-09-01T09:43:41; hậu kiểm live: 2026-09-01T09:57–10:00 (GMT+7).</li>
+<li>Phạm vi: production <code>103.116.105.154</code>, chỉ đọc; không mua thử, không sửa DB/source/config và không restart.</li>
+<li>Server/client config: <strong>714/714 bảng</strong>, PayConfig <strong>694</strong> mã, ShopConfig <strong>1519</strong> dòng.</li>
+<li>Đối chiếu gói server/client: <strong>0 mã lệch</strong>. Có 7 bảng binary khác nhưng không thuộc PayConfig/ShopConfig/Activity9/Privilege.</li>
+</ul>
+<h2 id="k-t-lu-n-i-u-h-nh">Kết luận điều hành</h2>
+<ul>
+<li><strong>Catalog không lệch:</strong> server/client đều 714 bảng; PayConfig 694 mã, ShopConfig 1.519 dòng, 614 dòng có <code>payId</code>; <code>packageDiff=0</code>. Bảy bảng binary khác nhau đều không thuộc nhóm nạp/quà.</li>
+<li><strong>Lỗi nằm ở handler/runtime:</strong> các đường <code>1202/1210</code>, <code>1211</code>, <code>1230</code>, <code>1241</code> và callback tiền thật không dùng chung một contract quà/kích hoạt.</li>
+<li><strong>Có hai lỗ hổng P0 cần khóa trước:</strong> mua miễn phí gói trả phí qua <code>1202/1210</code>, và claim lặp vô hạn qua <code>1211/1241</code>.</li>
+<li><strong>Không đủ ledger để tự động bù:</strong> Mongo <code>transactions=0</code>, <code>rechargeproductconfigs=0</code>; WebGM <code>recharge_orders=0</code>; log <code>1230</code> không có payId/result/reward delta.</li>
+<li><strong>Tiên duyên 10501 đang đồng nhất:</strong> 2/2 player có record mua và <code>recordList[10501]</code>; không nên rollback helper Activity9 hiện tại.</li>
+</ul>
+<h2 id="k-t-lu-n-u-ti-n">Kết luận ưu tiên</h2>
+<ol>
+<li><strong>P0 – có thể nhận miễn phí quà của gói trả phí qua packet shop <code>1202/1210</code>.</strong> <code>handleMultiBuyItem()</code> kiểm goods/limit/cost nhưng không chặn <code>goods.payId&gt;0</code>; 614 gói trả phí có <code>cost=[]</code>, nên forged packet đi qua mà không trừ tệ. Handler vẫn cấp quà, tăng <code>buyRecords</code> và <code>rechargeInfo.records</code>. Trong đó <strong>486 gói có base rewards</strong> có thể bị khai thác trực tiếp. Đây cũng có thể tạo trạng thái “đã mua/kích hoạt” không có order ledger.</li>
+<li><strong>P0 – claim thẻ tháng <code>1211</code> có thể gọi lặp vô hạn.</strong> Server luôn cấp <code>ID 1 ×50</code>, không kiểm ID hợp lệ, thẻ đã mua, còn hạn hoặc đã nhận trong ngày; sau đó mới ghi timestamp. Client có chặn nút theo ngày nhưng server không được phép tin client.</li>
+<li><strong>P0 – claim gói chuỗi <code>1241</code> có thể gọi lại tùy <code>id/index</code>.</strong> Handler chỉ kiểm <code>id</code> thuộc cây 50001/50010, không kiểm index hiện tại/đã claim; cấp cứng <code>ID 1 ×(30 + index×10)</code>, xóa row khớp rồi vẫn trả thành công kể cả khi row không tồn tại. Quà thật trong 24 bước ShopGiftConfig bị bỏ.</li>
+<li><strong>P1 – callback tiền thật đang không có catalog phát quà hoạt động.</strong> Mongo <code>rechargeproductconfigs=0</code>; <code>PayConfig</code> không có trường <code>diamond/attachments</code>, nên <code>RechargeConfigService</code> dựng mọi gói built-in với <code>diamond=0</code>, <code>attachments=[]</code>. Callback nội bộ nếu được dùng sẽ ghi nạp/VIP/kích hoạt nhưng không cấp quà theo ShopConfig. Hiện <code>transactions=0</code>, WebGM <code>recharge_orders=0</code> và XTPay chưa cấu hình, nên chưa có order/player lịch sử nào xác nhận bị mất quà qua callback này.</li>
+<li><strong>P1 – đường mua bằng tệ/token tag 1230 bỏ quà khai báo.</strong> Handler chỉ dùng <code>ShopConfig.rewards</code>; bỏ <code>extraRewards</code>, <code>firstRewards</code>, <code>subsequentRewards</code>, <code>isDouble</code> và nhiều contract sự kiện. Có <strong>20 mã</strong> có ít nhất một trường quà trực tiếp bị bỏ.</li>
+<li><strong>P1 – nhóm type 14 và gói không có base rewards chưa có resolver đúng.</strong> Có 33 mã type 14; 13 mã có <code>firstRewards</code>, 6 trong số đó có <code>subsequentRewards</code>, nhưng client ép chúng sang cash path trong khi callback cash không đọc các field này. Ngoài ra 128 gói pay-linked không có base <code>rewards</code>; 115 không có bất kỳ field quà trực tiếp, phần lớn cần specialized activity/chain resolver chứ không được fallback <code>ID 1 ×60</code>.</li>
+<li><strong>P1 – 105 gói trigger type 11 không được server tạo <code>shopInfo.pack</code> đúng contract.</strong> <code>tag 1240</code> chỉ lưu trigger; chỉ tạo <code>chainPack</code> cho 50001/50010. Snapshot DB hậu kiểm có <code>shopPackIds=[]</code>, phù hợp phản ánh “gói không hiện/không kích hoạt”.</li>
+<li><strong>P1 – 112 gói có giới hạn nhưng period không được thực thi server-side thống nhất.</strong> <code>limitType=1</code>: 23; <code>2</code>: 6; <code>4</code>: 80; <code>6</code> có ba dòng limit dương. Token/cash chủ yếu chỉ tăng count lifetime, không có day/week period key; có đường mua vượt giới hạn và có đường khóa vĩnh viễn gói đáng lẽ reset.</li>
+<li><strong>P1 – gói tân thủ 11000018 chưa có Activity999 server contract.</strong> Client khai báo 3 ngày: ngày 1 <code>29001×1 + 1×60 + 1203×1</code>, ngày 2/3 <code>1×30 + 2×3000</code>; production không có handler Activity999, nên record mua có thể tăng nhưng lịch quà/kích hoạt không xuất hiện.</li>
+<li><strong>P1 – reward native không được route thống nhất.</strong> Token <code>1230</code> chỉ special-case equipment rồi đưa phần còn lại vào bag; catalog paid có fashion <code>29001</code> và các gem <code>25012/25022/25032</code>, có nguy cơ record mua tăng nhưng native ownership không kích hoạt.</li>
+<li><strong>P2 – callback cash không nguyên tử.</strong> Player và mail được save trước khi transaction success được ghi; crash giữa hai bước có thể làm player/ledger lệch và retry khó phân biệt đã cấp quà hay chưa.</li>
+</ol>
+<h2 id="th-ng-k-catalog-y">Thống kê catalog đầy đủ</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Shop type</th>
+<th>Số gói</th>
+<th>Có base rewards</th>
+<th>Ghi chú contract</th>
+</tr></thead><tbody>
+<tr>
+<td>0</td>
+<td>53</td>
+<td>43</td>
+<td>Gói thường/đặc quyền; 1 dòng có bonus field</td>
+</tr>
+<tr>
+<td>1</td>
+<td>11</td>
+<td>11</td>
+<td>Gói trực tiếp</td>
+</tr>
+<tr>
+<td>7</td>
+<td>4</td>
+<td>4</td>
+<td>Card đặc quyền; 4/4 có bonus field</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1</td>
+<td>1</td>
+<td>Thẻ vĩnh viễn; có bonus field</td>
+</tr>
+<tr>
+<td>9</td>
+<td>15</td>
+<td>14</td>
+<td>Một gói không có base reward</td>
+</tr>
+<tr>
+<td>10</td>
+<td>312</td>
+<td>235</td>
+<td>Nhiều gói sự kiện cần resolver theo Activity*</td>
+</tr>
+<tr>
+<td>11</td>
+<td>105</td>
+<td>105</td>
+<td>Trigger/limit package; thiếu seeding <code>shopInfo.pack</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>1</td>
+<td>Gói đặc quyền; có bonus field</td>
+</tr>
+<tr>
+<td>14</td>
+<td>33</td>
+<td>0</td>
+<td>Cash/web; 13 first, 6 subsequent</td>
+</tr>
+<tr>
+<td>16</td>
+<td>7</td>
+<td>0</td>
+<td>Các bước trả phí của hai cây chain 50001/50010</td>
+</tr>
+<tr>
+<td>17</td>
+<td>4</td>
+<td>4</td>
+<td>Gói có limit</td>
+</tr>
+<tr>
+<td>18</td>
+<td>8</td>
+<td>8</td>
+<td>Gói có limit</td>
+</tr>
+<tr>
+<td>19</td>
+<td>10</td>
+<td>10</td>
+<td>Gói có limit</td>
+</tr>
+<tr>
+<td>20</td>
+<td>6</td>
+<td>6</td>
+<td>Horse-race package</td>
+</tr>
+<tr>
+<td>21</td>
+<td>44</td>
+<td>44</td>
+<td>Old Trek/pass packages</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>614 gói pay-linked được client hiển thị/điều hướng; 80 PayConfig không có ShopConfig row được coi là dormant/legacy, không tự động mở hoặc tự điền quà.</li>
+<li>486/614 có base <code>rewards</code>; 128/614 không có base; 20 mã có secondary fields <code>extra/first/subsequent</code>; 15 mã dùng <code>isDouble</code>.</li>
+<li>Toàn bộ reward ID/count/giá trong catalog đã qua scan cấu trúc; không tìm thấy ID quà không tồn tại trong AssetsConfig.</li>
+</ul>
+<h2 id="m-c-tr-ng-qu-ang-b-server-b">Mã có trường quà đang bị server bỏ</h2>
+<ul>
+<li>Có <code>extraRewards</code>: 7 mã — 11000001–11000002, 11000007–11000009, 11000012, 11026000.</li>
+<li>Có <code>firstRewards</code>: 14 mã — 2000101–2000107, 2000258–2000263, 11000007.</li>
+<li>Có <code>subsequentRewards</code>: 6 mã — 2000258–2000263.</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>Pay ID</th>
+<th>Giá R</th>
+<th>rewards hiện được đọc</th>
+<th>extra bị bỏ</th>
+<th>first bị bỏ</th>
+<th>subsequent bị bỏ</th>
+</tr></thead><tbody>
+<tr>
+<td>2000101</td>
+<td>6</td>
+<td>—</td>
+<td>—</td>
+<td>1×60</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000102</td>
+<td>30</td>
+<td>—</td>
+<td>—</td>
+<td>1×300</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000103</td>
+<td>68</td>
+<td>—</td>
+<td>—</td>
+<td>1×680</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000104</td>
+<td>128</td>
+<td>—</td>
+<td>—</td>
+<td>1×1280</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000105</td>
+<td>328</td>
+<td>—</td>
+<td>—</td>
+<td>1×3280</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000106</td>
+<td>648</td>
+<td>—</td>
+<td>—</td>
+<td>1×6480</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000107</td>
+<td>1998</td>
+<td>—</td>
+<td>—</td>
+<td>1×19980</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2000258</td>
+<td>1000</td>
+<td>—</td>
+<td>—</td>
+<td>1×2000, 23022×1, 62×10</td>
+<td>1×1500, 62×5, 81×1, 53×1</td>
+</tr>
+<tr>
+<td>2000259</td>
+<td>2000</td>
+<td>—</td>
+<td>—</td>
+<td>1×5000, 24126×1, 11430×1, 62×20</td>
+<td>1×3000, 62×10, 82×1, 53×2</td>
+</tr>
+<tr>
+<td>2000260</td>
+<td>4000</td>
+<td>—</td>
+<td>—</td>
+<td>1×10000, 22023×1, 11530×1, 62×40</td>
+<td>1×6000, 62×20, 82×2, 53×4</td>
+</tr>
+<tr>
+<td>2000261</td>
+<td>10000</td>
+<td>—</td>
+<td>—</td>
+<td>1×30000, 21126×1, 12034×1, 62×100</td>
+<td>1×15000, 62×40, 82×4, 53×8, 101308×1</td>
+</tr>
+<tr>
+<td>2000262</td>
+<td>16000</td>
+<td>—</td>
+<td>—</td>
+<td>1×48000, 21×1000, 92×800, 62×160</td>
+<td>1×24000, 62×60, 82×6, 53×12, 101308×1</td>
+</tr>
+<tr>
+<td>2000263</td>
+<td>20000</td>
+<td>—</td>
+<td>—</td>
+<td>1×60000, 29160×1, 92×1000, 62×200</td>
+<td>1×30000, 62×80, 82×8, 53×16, 101308×2</td>
+</tr>
+<tr>
+<td>11000001</td>
+<td>198</td>
+<td>1×1980</td>
+<td>1×100, 4×100</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11000002</td>
+<td>30</td>
+<td>1×300</td>
+<td>4×100</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11000007</td>
+<td>68</td>
+<td>1×680</td>
+<td>55×40, 56×2</td>
+<td>100043×1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11000008</td>
+<td>18</td>
+<td>1×100</td>
+<td>4×150</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11000009</td>
+<td>68</td>
+<td>1×680</td>
+<td>65×50, 70×2</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11000012</td>
+<td>68</td>
+<td>1×680</td>
+<td>100×5</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11026000</td>
+<td>68</td>
+<td>1×680</td>
+<td>415×1000</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h2 id="th-th-ng-c-quy-n">Thẻ tháng/đặc quyền</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Player có record mua</th>
+<th>Player đã kích hoạt thời hạn</th>
+<th>Có record nhận ngày</th>
+<th>Lệch</th>
+</tr></thead><tbody>
+<tr>
+<td>11000001</td>
+<td>16</td>
+<td>16</td>
+<td>16</td>
+<td>Không lệch kích hoạt</td>
+</tr>
+<tr>
+<td>11000002</td>
+<td>37</td>
+<td>37</td>
+<td>36</td>
+<td>1 chưa từng nhận ngày</td>
+</tr>
+<tr>
+<td>11000007</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>Không lệch kích hoạt</td>
+</tr>
+<tr>
+<td>11000008</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Không lệch kích hoạt</td>
+</tr>
+<tr>
+<td>11000009</td>
+<td>10</td>
+<td>10</td>
+<td>10</td>
+<td>Không lệch kích hoạt</td>
+</tr>
+<tr>
+<td>11000012</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>Không lệch kích hoạt</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>Hậu kiểm live có 80 ID-player rows của năm loại thẻ đang có người mua; 0 record mua mà thiếu thời hạn kích hoạt. Số người duy nhất tối thiểu 39, nhưng một người có thể sở hữu nhiều loại.</li>
+<li>Riêng <code>11000002</code>: 37 player active, 36 player có <code>monthCardRecords</code>; 1 player chưa từng nhận quà ngày. Đây có thể là trạng thái hợp lệ chưa claim, không phải lỗi kích hoạt.</li>
+<li><code>11000008</code> có trong <code>PrivilegeConfig</code>/ShopConfig nhưng client <code>MonthIdList</code> và server <code>KNOWN_MONTH_CARD_IDS</code> không bao gồm; DB cũng chưa có người mua. Cần xác định đây là gói legacy hay gói phải hỗ trợ trước khi mở bán.</li>
+</ul>
+<h3 id="l-i-b-o-m-t-claim-c-a-th-th-ng">Lỗi bảo mật/claim của thẻ tháng</h3>
+<ul>
+<li>Client chỉ hiện nút claim khi card active và chưa claim trong ngày, nhưng packet <code>1211 {id}</code> có thể được gửi trực tiếp.</li>
+<li>Server không kiểm <code>monthCards[id]</code>, không kiểm expiry, không kiểm same-day và không whitelist card ID; bất kỳ player đã đăng nhập nào cũng có thể gọi lặp cùng ID hoặc ID tùy ý để nhận <code>50 Nguyên bảo/lần</code>.</li>
+<li>Do log hiện không ghi tag 1211 theo user/id/result nên chưa thể định lượng lịch sử khai thác; đây là lỗ hổng code chắc chắn, không phải bằng chứng một player cụ thể đã gian lận.</li>
+</ul>
+<h2 id="hai-c-y-g-i-chu-i-sai-qu">Hai cây gói chuỗi sai quà</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Cây</th>
+<th>Số bước</th>
+<th>Bước trả phí</th>
+<th>Quà client/config</th>
+<th>Quà server hiện tại</th>
+</tr></thead><tbody>
+<tr>
+<td>50001</td>
+<td>10</td>
+<td>shop 50001, 50002, 50003</td>
+<td>Nguyên bảo + mảnh tinh linh; các bước miễn phí có mảnh/Baozi/Linh tủy</td>
+<td><code>ID 1 ×(30 + index×10)</code></td>
+</tr>
+<tr>
+<td>50010</td>
+<td>14</td>
+<td>shop 50011–50014</td>
+<td>Nguyên bảo + mảnh yêu linh; các bước miễn phí có Baozi/phù tốc/Linh tủy</td>
+<td><code>ID 1 ×(30 + index×10)</code></td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><code>tag 1241</code> không đọc <code>ShopGiftConfig</code>, không xác minh index hiện hành, không advance state và có thể được gọi lại cùng <code>id/index</code>.</li>
+<li>DB hậu kiểm không có <code>shopInfo.pack</code>; chain state chỉ được tạo khi client gửi đúng trigger/param, vì vậy còn có lỗi “gói không hiện/kích hoạt”.</li>
+</ul>
+<h2 id="g-i-t-n-th-11000018">Gói tân thủ 11000018</h2>
+<ul>
+<li>Giá catalog: <code>priceR=6</code>, <code>priceD=99</code>, <code>priceNT=33</code>.</li>
+<li>Client <code>Activity999TypeConfig</code> ánh xạ tới 999001/999051.</li>
+<li>Ngày 1: Đồ Long Đao <code>29001×1</code>, Nguyên bảo <code>1×60</code>, thẻ bỏ quảng cáo <code>1203×1</code>.</li>
+<li>Ngày 2 và 3: Nguyên bảo <code>1×30</code>, bạc <code>2×3000</code> mỗi ngày.</li>
+<li>Production không có <code>Activity999</code>/<code>999001</code>/<code>11000018</code> handler; generic token path vì base rewards rỗng chỉ fallback <code>ID 1×60</code>, còn record mua vẫn tăng. Đây là ứng viên rất mạnh cho phản ánh “mua nhưng không kích hoạt/không nhận đủ quà”.</li>
+</ul>
+<h2 id="gi-i-h-n-mua-v-tr-ng-th-i-k-ch-ho-t">Giới hạn mua và trạng thái kích hoạt</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>limitType</th>
+<th>Số gói có limit dương</th>
+<th>Rủi ro hiện tại</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>23</td>
+<td>Count lifetime, không có reset ngày</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>Count lifetime, không có reset tuần</td>
+</tr>
+<tr>
+<td>4</td>
+<td>80</td>
+<td>Gói kích hoạt/one-shot; cần state owner chuyên biệt</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>Giới hạn đặc thù; handler dùng chung chưa có period contract</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><code>tag 1230</code> và cash callback không kiểm <code>ShopConfig.limit/limitType</code>; <code>handleMultiBuyItem</code> kiểm một lifetime <code>buyRecords</code> nhưng cũng là đường bypass payment.</li>
+<li>Hệ quả là cùng một catalog nhưng các đường mua có semantics khác nhau: đường token/cash có thể mua vượt hạn, còn đường shop có thể khóa vĩnh viễn gói lẽ ra reset.</li>
+</ul>
+<h3 id="d-u-v-t-mua-trong-20-m-l-i-contract">Dấu vết mua trong 20 mã lỗi contract</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Pay ID</th>
+<th>Player có record</th>
+<th>Tổng lượt mua ghi nhận</th>
+<th>Mua tối đa/player</th>
+</tr></thead><tbody>
+<tr>
+<td>11000001</td>
+<td>16</td>
+<td>16</td>
+<td>1</td>
+</tr>
+<tr>
+<td>11000002</td>
+<td>37</td>
+<td>41</td>
+<td>3</td>
+</tr>
+<tr>
+<td>11000007</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>11000009</td>
+<td>10</td>
+<td>12</td>
+<td>3</td>
+</tr>
+<tr>
+<td>11000012</td>
+<td>12</td>
+<td>17</td>
+<td>6</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>Chỉ 5/20 mã lỗi contract đang có dấu vết mua trong DB; đó là 5 thẻ đặc quyền ở bảng trên. Tổng cộng 91 lượt; không thể cộng các cột “player có record” để suy ra chính xác số người duy nhất vì một người có thể mua nhiều loại.</li>
+<li>15 mã còn lại, gồm toàn bộ nhóm type 14 và <code>11000008</code>, <code>11026000</code>, có 0 record mua trong snapshot hiện tại.</li>
+<li>Các player sở hữu năm loại card là <strong>phạm vi cần kiểm tra/bù tiềm năng</strong>, chưa thể khẳng định mỗi người thiếu chính xác món nào vì server không lưu reward snapshot và không có order ledger; lịch sử có thể đã chạy phiên bản handler khác.</li>
+</ul>
+<h2 id="ti-n-duy-n">Tiên duyên</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Pay ID</th>
+<th>Player có record</th>
+<th>Player active</th>
+<th>Mua nhưng chưa active</th>
+<th>Active không có mua</th>
+</tr></thead><tbody>
+<tr>
+<td>10501</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10502</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table></div>
+<h2 id="ledger-mail-v-ph-m-vi-ng-i-ch-i-b-nh-h-ng">Ledger, mail và phạm vi người chơi bị ảnh hưởng</h2>
+<ul>
+<li>Hậu kiểm Mongo <code>lhs_s1001</code>: 797 player; 152 player có <code>rechargeInfo.records</code>; không record malformed hoặc trùng ID trong cùng player.</li>
+<li>Có 36 payId catalog xuất hiện trong DB, tổng 190 ID-player rows và 221 lượt mua ghi nhận. Đây là state mua, không phải ledger thanh toán và không chứng minh quà thực tế đã cấp.</li>
+<li>Mongo game: <code>transactions=0</code>, <code>rechargeproductconfigs=0</code>; Mongo dist: <code>transactions=0</code>, <code>rechargeorders=0</code>.</li>
+<li>MySQL WebGM: <code>recharge_orders=0</code>; SePay có 20 dòng nhưng toàn bộ là <code>topup_xu</code>, không có product/pay ID game để nối về từng gói.</li>
+<li>Mail game: 523 tổng ở hậu kiểm; 26 mail giống recharge đều là <code>webgm_recharge</code>, 26/26 có attachment và đã claim; không có mail phát gói nạp riêng.</li>
+<li>Log có 1.639 request tag 1230, nhưng log hiện không lưu ID gói, kết quả và delta quà. Vì vậy <strong>không thể xác định danh sách player/order bị thiếu quà cho 20 mã từ log hiện có</strong>. Có bằng chứng contract code chắc chắn, nhưng không có ledger lịch sử đủ an toàn để tự bù.</li>
+</ul>
+<h2 id="ph-n-lo-i-m-c-ch-c-ch-n">Phân loại mức chắc chắn</h2>
+<h3 id="ch-ng-minh-b-ng-code-config">Đã chứng minh bằng code + config</h3>
+<ul>
+<li>Bypass thanh toán <code>1202/1210</code> cho gói <code>payId&gt;0</code>.</li>
+<li>Claim lặp <code>1211/1241</code> và quà hardcode sai config.</li>
+<li>Token handler bỏ <code>extra/first/subsequent/isDouble</code>; cash callback không đọc ShopConfig.</li>
+<li>Activity999 gói 11000018 không có handler; 10501 Activity9 hiện hoạt động đúng.</li>
+<li>Server/client paid catalog khớp; lỗi không phải do hai file config lệch logic nạp.</li>
+</ul>
+<h3 id="th-y-d-u-v-t-player-nh-ng-ch-a-t-nh-b">Đã thấy dấu vết player nhưng chưa đủ để tính bù</h3>
+<ul>
+<li>Năm loại card có 91 lượt mua ghi nhận và kích hoạt thời hạn đầy đủ; handler claim ngày sai contract.</li>
+<li>36 payId paid có state mua trong DB, nhưng không có order/reward snapshot để biết mỗi lần nhận gì.</li>
+</ul>
+<h3 id="ch-a-c-b-ng-ch-ng-l-ch-s">Chưa có bằng chứng lịch sử</h3>
+<ul>
+<li>Không có transaction cash/XTPay/recharge_orders cho gói game; callback cash là lỗi latent, chưa có order đủ chứng minh player cụ thể bị mất quà.</li>
+<li>Không có log chi tiết để gán các request 1230/1211/1241 cho payId, result và reward delta.</li>
+</ul>
+<h2 id="ph-ng-n-s-a-xu-t">Phương án sửa đề xuất</h2>
+<ol>
+<li><strong>Hotfix P0 trước:</strong> chặn <code>goods.payId&gt;0</code> trong <code>1202/1210</code>; khóa whitelist/active/expiry/same-day cho 1211; khóa current index/claim ledger cho 1241.</li>
+<li>Tạo một <code>RechargeRewardResolver</code> server-authoritative dùng chung cho token và cash callback: chọn đúng ShopConfig row theo payId/privilege; quyết định <code>firstRewards</code> hoặc <code>subsequentRewards</code>; cộng <code>rewards</code> + <code>extraRewards</code>; không dùng fallback ID 1×60.</li>
+<li>Tạo <code>RechargeActivationResolver</code> theo family: Activity 1/7/8/9/999, pass 29/51/54, Old Trek, Horse Race, trigger/chain và month-card. Mỗi family có state + packet + persistence riêng.</li>
+<li>Với callback tiền thật, bỏ dependency vào custom row rỗng hoặc seed catalog đã kiểm duyệt; ghi transaction <strong>trước/đồng thời</strong> với player mutation, kèm <code>productId</code>, <code>rewardSnapshot</code>, <code>activationSnapshot</code>, version resolver và idempotency key.</li>
+<li>Thẻ tháng: 1211 lấy đúng daily <code>rewards + extraRewards</code>; <code>firstRewards</code> chỉ phát một lần khi mua; không phát cố định <code>ID 1×50</code>.</li>
+<li>Giữ Tiên duyên helper hiện có; thêm regression cho 10501/10502, không trộn fallback generic.</li>
+<li>Trước deploy: fixture toàn bộ 694 PayConfig, 614 Shop packages, mọi Shop type, 24 chain steps, Activity999, native fashion/gem, first/subsequent, limit day/week, duplicate/concurrency/relog/restart.</li>
+<li>Chỉ bù khi có order/provider ledger hoặc evidence player đủ chắc kèm reward snapshot; không bù tự động chỉ từ <code>rechargeInfo.records</code>.</li>
+</ol>
+<h2 id="artifact-b-ng-ch-ng">Artifact bằng chứng</h2>
+<ul>
+<li>Config report: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_config_audit_20260901.json</code></li>
+<li>Runtime aggregate: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_runtime_audit_20260901_094057.json</code></li>
+<li>Runtime hậu kiểm: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_runtime_audit_20260901_095730.json</code></li>
+<li>Catalog 614 gói: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_client_audit_20260901\pay_shop_catalog.json</code></li>
+<li>Family mapping: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_client_audit_20260901\activity_pay_families.json</code></li>
+<li>Activity999: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_client_audit_20260901\activity999_catalog.json</code></li>
+<li>Chain 50001/50010: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_client_audit_20260901\chain_shopgift_catalog.json</code></li>
+<li>Source production snapshot: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\paid_package_server_prod_20260901_094411\</code></li>
+<li>Contract matrix: <code>I:\Linhhoasu\server\server\_ai_workbench\temp\recharge_catalog_audit_20260901\recharge_contract_matrix.json</code></li>
+</ul></main></body></html>

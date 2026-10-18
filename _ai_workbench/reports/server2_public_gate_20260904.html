@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Public S2 - khóa đến 17:00 04/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-public-s2-v-kh-a-v-o-n-17-00-04-09-2026">Session Report — Public S2 và khóa vào đến 17:00 04/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã cho S2 (<code>serverId=1002</code>) xuất hiện công khai trong danh sách server.</li>
+<li>S2 hiển thị trạng thái chưa mở (<code>state=4</code>) trước <code>17:00 ngày 04/09/2026</code>, múi giờ Asia/Bangkok (UTC+7).</li>
+<li>Đã khóa server-authoritative trên cả HTTP và WebSocket: trước giờ mở trả <code>SERVER_NOT_OPEN</code>; từ đúng timestamp <code>1788516000000</code> trở đi tự cho phép, không dùng cron và không cần restart.</li>
+<li>Đã định tuyến S2 đúng endpoint <code>lhs.mg365.fun:81/ws-s2</code>; Nginx <code>/ws-s2</code> trỏ riêng tới <code>127.0.0.1:9201</code>.</li>
+<li>Account/GameServer và auth session dùng chung từ identity S1; MongoDB/Redis gameplay S2 vẫn tách riêng.</li>
+<li>Không tạo account/player S2 trong kiểm thử trước giờ mở và không phát sinh giao dịch/phần thưởng.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<ul>
+<li><code>linhhoasu/lhs/newServer/src/services/ServerAccessService.js</code>: gate theo <code>running/status/openTime</code>.</li>
+<li><code>src/handlers/serverList.js</code>: state theo giờ, endpoint theo server, chặn protocol <code>2820/2818/2819</code> trước giờ mở.</li>
+<li><code>src/handlers/account.js</code>: chặn trực tiếp tag đăng nhập WebSocket trước giờ mở.</li>
+<li><code>src/net/WSServer.js</code>: trả <code>code/openTime</code> khi login bị gate và đóng socket xác thực thất bại.</li>
+<li><code>src/net/HTTPServer.js</code>: proxy fail-closed các protocol account/role của S2 tới HTTP node <code>8083</code>.</li>
+<li><code>src/services/AuthSessionService.js</code>: cho phép auth session dùng prefix Redis identity chung trong khi gameplay giữ prefix riêng.</li>
+<li><code>src/db/models/Account.js</code>, <code>src/db/models/GameServer.js</code>: dùng identity database cấu hình bởi <code>IDENTITY_MONGO_DB</code>.</li>
+<li><code>linhhoasu/lhs/newServer/ecosystem.config.js</code>: endpoint S2, node router, auth prefix và identity DB.</li>
+<li>Production Nginx <code>/www/server/panel/vhost/nginx/game.lhs.conf</code>: thêm <code>/ws-s2 -&gt; 127.0.0.1:9201</code>.</li>
+<li>Production MongoDB <code>lhs_s1001.gameservers</code>: S2 <code>running=true</code>, <code>status=1</code>, <code>isNew=true</code>, <code>openTime=1788516000000</code>.</li>
+</ul>
+<h3 id="tool-evidence">Tool/evidence</h3>
+<ul>
+<li><code>_ai_workbench/tools/test_server_scheduled_access.js</code>.</li>
+<li><code>_ai_workbench/tools/qa_server2_public_gate.js</code>.</li>
+<li><code>_ai_workbench/tools/publish_server2_schedule.js</code>.</li>
+<li><code>_ai_workbench/tools/deploy_server2_public_gate_20260904.py</code>.</li>
+<li><code>_ai_workbench/tools/audit_server2_postdeploy.py</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/server2_public_gate_deploy_20260903_172734.json</code>.</li>
+<li>Snapshot hậu kiểm: <code>_ai_workbench/temp/server2_public_gate_snapshot_20260903_214725/</code>.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/server2_public_gate_pre_20260903_172734/</code>.</li>
+<li>Backup local: <code>_ai_workbench/backups/server2_public_gate_pre_20260903_170000/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Core contract lỗi <code>connection.models</code></td>
+<td>Mock Mongoose của contract không cung cấp <code>connection</code></td>
+<td>Model identity fallback an toàn sang <code>mongoose.model</code> khi connection mock không tồn tại</td>
+<td>Model dùng connection tùy chọn phải tương thích test double</td>
+</tr>
+<tr>
+<td>Local không nạp được native <code>bcrypt_lib.node</code> khi instantiate toàn HTTPServer</td>
+<td><code>node_modules</code> local thiếu binary bcrypt phù hợp Windows</td>
+<td>Dùng syntax/unit/core local và live integration trên đúng runtime CentOS production</td>
+<td>Native addon phải test trên runtime đích, không lấy lỗi ABI local làm kết luận production</td>
+</tr>
+<tr>
+<td>Một số bot timeout handshake sau restart S1</td>
+<td>580 socket reconnect rải tải trong khi listener vừa khởi động</td>
+<td>Không restart worker; chờ cơ chế reconnect/backoff tự hồi phục</td>
+<td>Hậu kiểm restart S1 phải đợi realBots đạt lại 580 và backlog socket về 0</td>
+</tr>
+<tr>
+<td>Local có một số file hạ tầng cũ hơn production</td>
+<td>Các phiên trước deploy trực tiếp rồi chưa đồng bộ đủ local</td>
+<td>Tạo candidate từ snapshot production, không upload đè bằng bản local cũ; sau deploy mới đồng bộ source</td>
+<td>Luôn hash local/remote và abort khi production drift</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Public visibility và quyền vào game là hai trạng thái độc lập: <code>running=true</code> để hiển thị, còn <code>openTime</code> được enforce ở mọi đường đăng nhập.</li>
+<li>Multi-server an toàn cần dùng chung identity/auth nhưng tách Player/gameplay MongoDB và Redis.</li>
+<li>Proxy protocol sang node khác phải fail-closed; không fallback về S1 khi S2 lỗi vì có thể tạo nhân vật sai database.</li>
+<li>Gate được kiểm tra ở cả HTTP cấp token và WebSocket tag đăng nhập để không thể bypass bằng client sửa đổi hoặc token cũ.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Lúc hậu kiểm <code>04:48 ngày 04/09/2026 +07</code>: S2 công khai, <code>running=1</code>, <code>status=1</code>, <code>state=4</code>, <code>openTime=1788516000000</code>.</li>
+<li>Kiểm thử live trước giờ mở: HTTP <code>2820</code> và WebSocket tag login đều trả <code>SERVER_NOT_OPEN</code> cùng đúng <code>openTime</code>.</li>
+<li>Contract mô phỏng đúng mốc: trước 17:00 bị khóa; từ đúng 17:00 trả trạng thái mở.</li>
+<li><code>lhs-s1001</code> PID <code>29479</code>, <code>lhs-s1002</code> PID <code>28386</code>, cả hai online; chỉ mỗi process được restart đúng một lần trong deploy.</li>
+<li><code>lhs-real-bots</code>, <code>lhs-dist</code>, <code>lhs-admin</code> không restart.</li>
+<li>S1 và S2 <code>/ready=200</code>; MongoDB/Redis healthy; <code>9200/9201</code> listen loopback; route <code>/ws-s2</code> có mặt.</li>
+<li>Bot S1 đã hồi phục <code>580/580</code>; cửa sổ hậu kiểm cuối không có handshake timeout mới.</li>
+<li>S2 còn <code>0</code> account và <code>0</code> player gameplay; không có dữ liệu QA rác.</li>
+<li>Evidence SHA-256: <code>12c717a3f572b38db4246e18675a5b176d95b7e3cc93d2d0a652430c27fb7275</code>.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Chủ server không cần thao tác lúc 17:00; gate tự mở theo timestamp server.</li>
+<li>Ngay sau 17:00, thực hiện native acceptance: mở danh sách → chọn S2 → tạo nhân vật → vào thành chính → relog.</li>
+<li>Xác minh Player mới chỉ xuất hiện trong <code>lhs_s1002</code>, S1 không đổi inventory/progress.</li>
+<li>Tiếp tục kiểm tra WebGM/mail/Webshop/Giftcode/Donate theo <code>serverId=1002</code> trước khi quảng bá đầy đủ các dịch vụ phụ.</li>
+</ol></main></body></html>

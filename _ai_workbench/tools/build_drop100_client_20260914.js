@@ -1,0 +1,27 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),vm=require('vm');
+const root=path.resolve(__dirname,'../temp/drop100_release_20260914');
+const generator=require('../../linhhoasu/lhs/newServer/src/config/dropLevel100').extendTables;
+const acorn=require('../../linhhoasu/lhs/newServer/node_modules/acorn');
+let source=fs.readFileSync(root+'/linhhoasu/webgame/game/js/main.min_drop46_s1.js','utf8');
+const marker='m.applyDrop46Config=';const at=source.indexOf(marker);if(at<0)throw Error('BASE_MARKER');
+let ast=acorn.parseExpressionAt(source,at+marker.length,{ecmaVersion:'latest'});if(ast.expressions)ast=ast.expressions[0];
+const fn=Function('serverId',`if ([1001,1002,1003].indexOf(Number(serverId)) < 0) return;
+var meta=(${generator.toString()})(Y.Config);
+Object.keys(meta.qualityNames).forEach(function(q){x.EQUIP_QUALITY_NAME[q]=meta.qualityNames[q];});
+Object.keys(meta.qualityNames).forEach(function(q){['QUAILTY_COLOR','QUAILTY_STROKE_COLOR','QUAILTY_COLOR_LIGHT'].forEach(function(key){if(x[key])x[key][q]=x[key][Y.Config.QualityConfig[q].qualityBg];});});
+U9.qualityData=Array.from({length:98},function(_,i){return i+2;});
+U9.maxQualityData=Array.from({length:93},function(_,i){return i+7;});`);
+source=source.slice(0,at+marker.length)+fn.toString()+source.slice(ast.end);
+// Some generic item views pass raw quality rather than QualityConfig.qualityBg.
+const frame='pDt.GetItemQualityFrameBg=function(t){return"common_frame_"+t}';
+if(source.split(frame).length!==2)throw Error('FRAME_MARKER');
+source=source.replace(frame,'pDt.GetItemQualityFrameBg=function(t){if(t>=46&&Y.Config.DropLevelExtensionConfig&&Y.Config.QualityConfig[t])t=Y.Config.QualityConfig[t].qualityBg;return"common_frame_"+t}');
+new vm.Script(source);
+fs.writeFileSync(root+'/main.min_drop100.js',source);
+fs.writeFileSync(root+'/client_function.js','module.exports='+fn.toString());
+let index=fs.readFileSync(root+'/linhhoasu/webgame/game/index.html','utf8');
+const old='js/main.min_drop46_s1.js?v=20260914_drop46_s1_v2';if(index.split(old).length!==2)throw Error('INDEX_MARKER');
+index=index.replace(old,'js/main.min_drop100.js?v=20260914_drop100_v1');
+fs.writeFileSync(root+'/index_drop100.html',index);
+console.log(JSON.stringify({result:'BUILT',sha256:crypto.createHash('sha256').update(source).digest('hex')}));

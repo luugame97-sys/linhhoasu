@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kế hoạch sửa thưởng, nạp gói và kích hoạt</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="k-ho-ch-s-a-to-n-di-n-nh-n-th-ng-v-k-ch-ho-t-05-09-2026">Kế hoạch sửa toàn diện nhận thưởng và kích hoạt — 05/09/2026</h1>
+<h2 id="1-m-c-ti-u-v-tr-ng-th-i">1. Mục tiêu và trạng thái</h2>
+<p>Mục tiêu: khép kín chuỗi nạp gói / đổi code / nhận mail / mua shop / nhận sự kiện / mở rương → phát đúng thưởng → ghi đúng quyền sở hữu hoặc đặc quyền → đồng bộ client → sử dụng được → giữ đúng sau đăng nhập lại. Đồng thời xử lý dữ liệu đã nhận sai mà không phát trùng, không làm mất tiến trình.</p>
+<p><strong>Trạng thái phiên này: đã kiểm tra bổ sung production read-only và lập kế hoạch triển khai có tiêu chí nghiệm thu. Chưa sửa source game, chưa deploy, chưa repair DB, chưa mua gói hay đổi code thật.</strong> Các bước triển khai bên dưới chưa được coi là hoàn thành.</p>
+<p>Không đánh đồng “nhận vào túi”, “kích hoạt sở hữu”, “mặc/xuất chiến” và “mua quyền lợi”. Mảnh cần ghép và rương tự chọn không được tự biến thành nguyên thân; gói đặc quyền phải có entitlement riêng. Không tự mặc đè trang bị/ngoại quan đang dùng chỉ để làm hình sáng.</p>
+<h2 id="2-b-ng-ch-ng-hi-n-c">2. Bằng chứng hiện có</h2>
+<h3 id="2-1-item-r-ng">2.1 Item/rương</h3>
+<ul>
+<li>Audit trước trên source/config production: 7.951 asset, 940 use config, 2.439 case.</li>
+<li>311 ID lỗi trực tiếp: 47 rương route sai collection native, 1 rương trả placeholder chưa resolve, 111 rương thiếu pool, 150 đan chưa hoàn thiện, 2 rương thiếu option.</li>
+<li>Thêm 2 rương cha ảnh hưởng dây chuyền; 5 ID pending; 622 ID còn lại chỉ qua fixture cơ bản, chưa bảo đảm E2E.</li>
+<li>Danh sách đầy đủ: <a href="items_deep_audit_20260905.html">Báo cáo audit item</a> và <a href="items_need_fix_deep_20260905.txt">311 ID</a>.</li>
+</ul>
+<h3 id="2-2-ki-m-tra-b-sung-n-p-code">2.2 Kiểm tra bổ sung nạp/code</h3>
+<ul>
+<li>Source production hiện tại có 694 PayConfig, 1.519 ShopConfig, 614 shop row liên kết payId.</li>
+<li>28 shop/payId có nhánh thưởng chạm nhóm native thiếu route, placeholder Linh trục hoặc rương bị chặn. Đây là <strong>phơi nhiễm theo catalog</strong>, chưa chứng minh cả 28 gói đang active hay đã có người mua.</li>
+<li>Trong 4 bảng Elf/Curios/Orb/Connect có <strong>470 asset native đang bị getRewardKind phân loại thành item thường</strong>. Đây là phạm vi router cần kiểm tra; không cộng 470 vào số rương lỗi vì khác loại đơn vị.</li>
+<li>Chạy 10 probe thuần bộ nhớ trên production: 5 đầu ra × 2 đường <code>item.addRewardRowsToPlayer</code> (được nạp dùng) và <code>activity.grantRewardRows</code> (được giftcode dùng). Tất cả cộng vào túi, không cập nhật collection native. Đầu ra: 154101, 131301, 9101, 200101, 100721.</li>
+<li>Probe chứng minh lỗi tại bộ cấp thưởng dùng chung, <strong>không phải E2E thanh toán/giftcode</strong>.</li>
+<li>Runtime S1: 621 người thật; 4 người có item nằm trong phạm vi kiểm tra. Túi thường đang chứa <code>9166 ×1</code>, <code>130601 ×2</code>, <code>156502 ×1</code>, <code>200414 ×1</code>; còn rương <code>90027 ×1</code>, <code>90202 ×1</code>, <code>90214 ×1</code>, <code>100139 ×823</code>.</li>
+<li>Đây là <strong>ứng viên đối chiếu repair</strong>. Chưa đọc đủ ownership/lịch sử của từng người để xác định cách bù hoặc chuyển từng bản sao.</li>
+<li>S2: 1 người thật, không thấy item thuộc phạm vi này.</li>
+<li>5 code hiện còn trong Mongo S1 không chứa nhánh lỗi thuộc phép dò trên; không có code ở S2. Không thể suy ra code đã xóa/đã dùng, ngoại quan khác hoặc đặc quyền đều đúng.</li>
+<li><code>transactions</code> success hiện đếm 0 trong hai DB và custom recharge product 0. <strong>Không kết luận người dùng chưa nạp</strong>: cần truy nguồn token/Xu, log gói, WebGM hoặc cổng order đang thực dùng. Không tạo callback thanh toán giả để lấp bằng chứng.</li>
+<li>Evidence: <code>_ai_workbench/temp/reward_fix_scope_20260905.json</code>; chỉ chứa tổng hợp, ID sản phẩm/item và hash; không xuất mã code có thể đổi hoặc thông tin đăng nhập.</li>
+</ul>
+<h3 id="2-3-b-n-g-i-p0-u-ti-n">2.3 Bốn gói P0 ưu tiên</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>PayId / shopId</th>
+<th>Thưởng liên quan</th>
+<th>Lỗi cần tái hiện và sửa</th>
+</tr></thead><tbody>
+<tr>
+<td>11000015</td>
+<td>Bí bảo 130601</td>
+<td>Thân Bí bảo bị ghi vào items, thiếu quyền sở hữu native</td>
+</tr>
+<tr>
+<td>11000016</td>
+<td>Rương Yêu linh 90027</td>
+<td>Nhận rương được nhưng mở chưa cấp Yêu linh native</td>
+</tr>
+<tr>
+<td>11000017</td>
+<td>Rương Thần văn 90202</td>
+<td>Nhận rương được nhưng mở chưa cấp Thần văn native</td>
+</tr>
+<tr>
+<td>11000020</td>
+<td>Rương Linh trục 90214</td>
+<td>Nhận rương được nhưng mở chưa cộng Connect native</td>
+</tr>
+</tbody></table></div>
+<h3 id="2-4-28-g-i-c-n-i-h-t-chu-i-th-ng">2.4 28 gói cần đi hết chuỗi thưởng</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>PayId</th>
+<th>Đầu ra có rủi ro</th>
+<th>Nhóm</th>
+</tr></thead><tbody>
+<tr>
+<td>11000015</td>
+<td>130601</td>
+<td>Native thành item túi</td>
+</tr>
+<tr>
+<td>11000016</td>
+<td>90027</td>
+<td>Rương dẫn tới native sai</td>
+</tr>
+<tr>
+<td>11000017</td>
+<td>90202</td>
+<td>Rương dẫn tới native sai</td>
+</tr>
+<tr>
+<td>11000020</td>
+<td>90214</td>
+<td>Rương dẫn tới native sai</td>
+</tr>
+<tr>
+<td>11000552</td>
+<td>100020</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000553</td>
+<td>100020</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000561</td>
+<td>94802</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000562</td>
+<td>94802</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000563</td>
+<td>94802</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000564</td>
+<td>94802</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000565</td>
+<td>94802</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000571</td>
+<td>100641</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000572</td>
+<td>100641</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000573</td>
+<td>100641</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000574</td>
+<td>100642</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000575</td>
+<td>100642</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11000581</td>
+<td>100721</td>
+<td>Placeholder Linh trục</td>
+</tr>
+<tr>
+<td>11000582</td>
+<td>100722</td>
+<td>Placeholder Linh trục</td>
+</tr>
+<tr>
+<td>11000583</td>
+<td>100722</td>
+<td>Placeholder Linh trục</td>
+</tr>
+<tr>
+<td>11000584</td>
+<td>100723</td>
+<td>Placeholder Linh trục</td>
+</tr>
+<tr>
+<td>11000585</td>
+<td>100723</td>
+<td>Placeholder Linh trục</td>
+</tr>
+<tr>
+<td>11023009</td>
+<td>100723</td>
+<td>Placeholder Linh trục</td>
+</tr>
+<tr>
+<td>11023010</td>
+<td>94709</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11030001</td>
+<td>94725</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11030002</td>
+<td>94725</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11030003</td>
+<td>94725</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11030004</td>
+<td>94725</td>
+<td>Rương đang chặn</td>
+</tr>
+<tr>
+<td>11030005</td>
+<td>94725</td>
+<td>Rương đang chặn</td>
+</tr>
+</tbody></table></div>
+<h2 id="3-ki-n-tr-c-s-a-trong-ph-m-vi-hi-n-c">3. Kiến trúc sửa trong phạm vi hiện có</h2>
+<p>Giữ các handler/giao thức hiện tại; thống nhất contract thưởng qua RewardGrantService và các adapter nhỏ của từng hệ. Không rewrite toàn bộ server.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Nguồn</th>
+<th>Luồng cần kiểm tra</th>
+<th>Điểm dùng chung</th>
+</tr></thead><tbody>
+<tr>
+<td>Nạp tiền/callback</td>
+<td>recharge → RechargeRewardResolver → item.addRewardRowsToPlayer + RechargeBenefitService</td>
+<td>RewardGrantService; entitlement; order ledger</td>
+</tr>
+<tr>
+<td>Mua Xu/token</td>
+<td>compat purchase → resolver → grant + benefit</td>
+<td>Cùng reward plan và entitlement như route hợp lệ tương ứng</td>
+</tr>
+<tr>
+<td>Giftcode</td>
+<td>activity.handleActivityGiftCode → grantRewardRows → persist + sync</td>
+<td>Cùng router; code ledger gắn cùng reward state</td>
+</tr>
+<tr>
+<td>Mail</td>
+<td>mail claim → native/fashion/default grant → player save → finalize mail</td>
+<td>Cùng router và duplicate policy; giữ mail claim ledger</td>
+</tr>
+<tr>
+<td>Mở rương/shop/sự kiện</td>
+<td>item/activity và các handler cấp quà</td>
+<td>Cùng phân loại ID; resolve có kiểm chứng; cùng native sync</td>
+</tr>
+</tbody></table></div>
+<p>Contract tối thiểu cho mỗi reward: sourceId, itemId, count, rewardKind, target collection, ánh xạ ID, first-owned/duplicate policy, thời hạn nếu có, client sync contract, persistence và khóa chống trùng. RewardInfo phải phản ánh đúng state đã cấp; không chỉ thêm trường trả về để test xanh.</p>
+<p>Lưu player/ledger tuần tự có xác nhận. Không chuyển cấp thưởng, tiêu item, kích hoạt gói thành background save. Không tự giả định Mongo hỗ trợ multi-document transaction: đọc topology trước; dùng phương án single-writer/per-player ledger + recovery phù hợp deployment.</p>
+<h2 id="4-checkpoint-tri-n-khai-v-ti-u-ch-chuy-n-b-c">4. Checkpoint triển khai và tiêu chí chuyển bước</h2>
+<h3 id="cp0-ch-t-baseline-v-t-i-hi-n-u-ti-n-ngay">CP0 — Chốt baseline và tái hiện (ưu tiên ngay)</h3>
+<ol>
+<li>Chụp manifest production source/config/client đúng release; local từng khác 49 file và base config nên không deploy trực tiếp cả cây local.</li>
+<li>Tạo candidate riêng dưới <code>_ai_workbench/temp/</code>, backup source và snapshot phục hồi đúng phạm vi; giữ cây CN tham chiếu bất biến.</li>
+<li>Xác định nguồn nạp thực tế (token/Xu/cash/WebGM), payId, itemId, nhân vật, thời điểm và order/code ledger được phép đọc. Thêm ví dụ người dùng gửi vào regression.</li>
+<li>Reproducer cho bốn gói P0, giftcode/mail cấp trực tiếp bốn họ native, mở 48 rương và placeholder 100721–100723.</li>
+<li>Phân biệt lỗi quyền sở hữu, thiếu sync, thiếu resource, điều kiện level/feature, chưa mặc và thiếu entitlement.</li>
+</ol>
+<p><strong>Gate:</strong> từng lỗi có input → reward → state trước/sau → packet/exception; fixture không ghi người thật. Lưu danh sách route/sản phẩm đang active để không nhầm catalog ẩn với gói bán thực tế.</p>
+<h3 id="cp1-s-a-chung-native-grant-v-sync-p0">CP1 — Sửa chung native grant và sync (P0)</h3>
+<ol>
+<li>Bổ sung phân loại, adapter grant cho Elf, Curios, Orb và Connect; quét cả 470 asset của bốn họ, không hard-code chỉ các ID đã gặp.</li>
+<li>Dùng schema/default/UID và duplicate conversion đã xác nhận từ config/handler chuẩn. Không tự nâng phẩm chất hoặc đổi mảnh thành thân.</li>
+<li>Mọi nguồn nhận quà phải dùng đúng adapter; các wrapper item/activity/mail/recharge cần merge đủ kết quả native. Kiểm cả caller khác còn tự cộng items.</li>
+<li>Tách grant khỏi auto-equip. Trường hợp chồng Fashion/native cần sở hữu cả hai lớp nhưng không tạo hai phần thưởng giá trị.</li>
+<li>Đọc receiver client trước khi thêm packet: gửi đúng payload, state push trước callback kết thúc; không dùng request tag làm push tùy ý.</li>
+<li>Resolve placeholder qua plan được xác minh. Thiếu pool thì lỗi rõ trước consume/commit, không giả phần thưởng thay thế.</li>
+</ol>
+<p><strong>Gate:</strong> 47 rương/474 case cũ không còn body-ID rơi vào items; đúng ID/count/quality/native state; lần đầu và sở hữu sẵn đúng; 90151 và 100721–100723 chỉ được mở nếu có pool chuẩn. Nạp/code/mail dùng cùng các case và cho cùng ownership.</p>
+<h3 id="cp2-quy-n-l-i-g-i-v-giao-d-ch-nh-n-th-ng-p0-p1">CP2 — Quyền lợi gói và giao dịch nhận thưởng (P0/P1)</h3>
+<ol>
+<li>Kiểm độc lập reward item với quyền lợi: month card, lifetime card, Activity7 10301, Activity9, gói chuỗi, gói trigger và các family chưa có resolver.</li>
+<li>Đối chiếu payId/shopId, route được phép, số tiền/token, kỳ mua, first/subsequent/double/extra rewards và trạng thái active. Không coi tăng recharge record là đã kích hoạt gói.</li>
+<li>Tạo ma trận đủ 694 payId/614 pay-linked shop; mọi mục có trạng thái supported+tested, disabled/not-active, hoặc pending-source rõ ràng. Từng gói đang bán phải có contract đầy đủ.</li>
+<li>Với code: kiểm admin/config-backed code, số lượt tổng/per-player, hết hạn, ownership, server/role, claim đồng thời và lỗi cập nhật thống kê. Không log code raw.</li>
+<li>Xử lý cửa sổ lỗi sau player.save trước Mail.create/Transaction success: thêm/hoàn thiện ledger idempotent và recovery, không grant lại khi trạng thái commit chưa rõ. Unique orderId đơn lẻ không chứng minh không phát trùng.</li>
+<li>Xác nhận online session và DB không ghi đè nhau khi cash callback chạy ngoài queue gameplay. Khóa theo người chơi/order phải bao phủ các route liên quan.</li>
+<li>Những gói đang bán nhưng phần thưởng còn bị giữ cần quyết định hiển thị/khả dụng rõ ràng. Nếu hạn chế mua mới, chỉ chặn đúng sản phẩm và giữ quyền lợi đơn đã thanh toán; không tự trả callback thất bại sau khi nhà cung cấp đã thu tiền.</li>
+</ol>
+<p><strong>Gate:</strong> mua hợp lệ → đúng quà + entitlement + record; chưa mua không claim được; retry/concurrent không phát hai lần; ngày/kỳ mới reset đúng; lỗi save/mail/order không làm mất quà hay nhân đôi. Chưa có credential/cổng thanh toán thật thì đánh dấu cash upstream E2E pending, không dùng mock để tuyên bố pass.</p>
+<h3 id="cp3-ph-c-h-i-to-n-b-r-ng-an-c-n-thi-u-p1-p2">CP3 — Phục hồi toàn bộ rương/đan còn thiếu (P1/P2)</h3>
+<ol>
+<li>111 rương: lập registry theo ID/nhóm, nguồn pool, tỷ lệ, số lượng, giới hạn chất lượng/cấp, duplicate policy. Ưu tiên 100139, sau đó các rương nằm trong 28 gói và rương event đang phát.</li>
+<li>Tìm nguồn có thẩm quyền trong dữ liệu gốc/server drop tables đã có; giữ cây tham chiếu chỉ đọc. Mô tả/icon chỉ dùng để tìm kiếm, không đủ để quyết định pool hay tỷ lệ chia đều.</li>
+<li>150 đan: phát reward đúng đồng thời hạn mức chung -802/-804, đặc quyền, ngày server, login/day push; giữ logic 308 đan thuộc tính vĩnh viễn.</li>
+<li>90021/90022: yêu cầu option/catalog gốc đúng quality; thiếu nguồn thì ghi blocker cụ thể, không tự fallback quality cao hơn.</li>
+<li>93065/100803: test toàn chuỗi đến thưởng cuối; 94821–94825 cần đúng flow câu cá, không tự bật useType.</li>
+<li>227 dùng flow riêng; 94355–94358 cần xác định orphan hay item phát thực tế; catalog ngôn ngữ/asset tách lane hiển thị.</li>
+</ol>
+<p><strong>Gate:</strong> từng ID có source-of-truth + test đúng giá trị thưởng và đường sử dụng. “Đã chặn an toàn” được ghi riêng, không đánh dấu fixed. Thiếu dữ liệu chuẩn là blocker của ID đó, không chặn sửa các nhóm đã đủ bằng chứng.</p>
+<h3 id="cp4-s-a-d-li-u-ng-i-nh-n-sai-ch-y-sau-cp1-cp2">CP4 — Sửa dữ liệu người đã nhận sai (chạy sau CP1/CP2)</h3>
+<ol>
+<li>Read-only inventory đầy đủ cả bag, native ownership, expiry/entitlement, player claim ledger, mail đã nhận/chưa nhận, order/record. Tạo dry-run theo nhân vật và nguồn giao dịch; báo số lượng/value trước và sau.</li>
+<li>Với body-ID còn trong túi như 9166/130601/156502/200414: xác minh receipt hợp lệ, quan hệ với native đã có và duplicate conversion trước khi chuyển. Không mặc định mọi copy trong túi đều được cộng mới.</li>
+<li>Với rương đã tiêu: chỉ recover nếu có ledger/backup đủ chứng minh nguồn và thưởng. RNG không có kết quả gốc thì không tự reroll/bù theo phỏng đoán; tách danh sách cần chủ game quyết định.</li>
+<li>Mỗi repair có repairId bất biến, preimage, postcondition, item delta, code version và dấu hoàn tất chống chạy lặp.</li>
+<li>Khóa/maintenance ngắn đúng server/role cần repair để online session không ghi đè. Không restore toàn DB hoặc sửa hàng loạt dựa trên log performance.</li>
+<li>Sau commit: đọc lại DB, login/relog, sử dụng native, chạy dry-run lần hai không còn dòng có thể sửa; rollback chỉ preimage/field đúng scope và không ghi đè tiến trình mới.</li>
+</ol>
+<p><strong>Gate:</strong> preview được duyệt trước mutation dữ liệu thật; mọi delta giải thích được; chạy lại không phát thêm; người đã có native không mất level/star/UID/expiry. Bù/thu hồi giá trị khi thiếu chứng cứ cần quyết định riêng của chủ game.</p>
+<h3 id="cp5-tri-n-khai-theo-t-v-nghi-m-thu">CP5 — Triển khai theo đợt và nghiệm thu</h3>
+<ol>
+<li>Trước deploy đối chiếu hash từng file và dependency, backup config/source, xác nhận schema tương thích rollback; không chép toàn cây local lên VPS.</li>
+<li>Canary S1 theo release nhỏ: native/router trước, entitlement/recovery sau, từng họ random/pill khi đủ nguồn. Chỉ restart process game liên quan; không restart dist/admin/DB.</li>
+<li>Test E2E trên tài khoản QA riêng, quantity nhỏ, không dùng tiền thật/người thật khi chưa có lựa chọn tài khoản và phạm vi phù hợp. Không bypass lịch mở S2 để test.</li>
+<li>Check <code>/ready</code>, Mongo/Redis, WebSocket, error log, reward ledger, session sync; kiểm bot/quái/Ủy thác/ngoại quan để tránh regression.</li>
+<li>Sang S2 sau khi S1 đạt gate và đúng cửa sổ được phép; snapshot/log/hash cho từng checkpoint.</li>
+<li>Nếu lỗi correctness/persistence/duplicate: dừng promotion, rollback source đúng manifest; dữ liệu đã grant cần reconcile riêng, không rollback DB mù.</li>
+</ol>
+<h2 id="5-ma-tr-n-ki-m-th-b-t-bu-c">5. Ma trận kiểm thử bắt buộc</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Chiều kiểm tra</th>
+<th>Trường hợp tối thiểu</th>
+<th>Điều kiện đạt</th>
+</tr></thead><tbody>
+<tr>
+<td>Nguồn thưởng</td>
+<td>cash/token/code admin/code config/mail/shop/event/item</td>
+<td>Cùng asset cho cùng loại ownership và giá trị hợp lệ</td>
+</tr>
+<tr>
+<td>Chủng loại</td>
+<td>item/currency/equip/Fashion/native/body/piece/placeholder/entitlement</td>
+<td>Không trộn thân với mảnh, túi với native, hiển thị với quyền lợi</td>
+</tr>
+<tr>
+<td>Trạng thái người chơi</td>
+<td>mới, đã sở hữu, chưa mở feature, level đủ/thiếu, hết hạn, đang online/offline</td>
+<td>Từ chối hoặc cấp đúng điều kiện server; không tự mở mọi feature</td>
+</tr>
+<tr>
+<td>Rương</td>
+<td>mọi option, thiếu/sai option, multi-count, nested box, pool rỗng, capacity nếu có</td>
+<td>Không consume trước khi plan hợp lệ; đúng số và loại thưởng</td>
+</tr>
+<tr>
+<td>Giá trị số</td>
+<td>0, âm, lẻ, string, quá lớn, overflow</td>
+<td>Reject input không hợp lệ trước mutation</td>
+</tr>
+<tr>
+<td>Chống trùng</td>
+<td>cùng msgUid, cùng source/order/code, đổi msgUid, concurrent/two sessions</td>
+<td>Một giao dịch hợp lệ đúng một lần; code quota đúng</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>save fail/timeout, crash sau save trước ledger phụ, mail finalize fail, reconnect/restart</td>
+<td>Không mất quà, không nhân đôi; trạng thái không chắc chắn được reconcile</td>
+</tr>
+<tr>
+<td>RNG</td>
+<td>mọi nhánh/drop row, đúng grade/level/count, sampled distribution</td>
+<td>Kỳ vọng lấy từ bảng gốc; test sample không thay bằng chứng tỷ lệ</td>
+</tr>
+<tr>
+<td>Native client</td>
+<td>hiển thị sở hữu, kích hoạt, mặc/xuất chiến/dùng/ghép, duplicate, reopen/relog</td>
+<td>Đúng state thực và packet, không chỉ popup hoặc response result=0</td>
+</tr>
+<tr>
+<td>Không hồi quy</td>
+<td>940 use config, 2.192 ngoại quan theo catalog hiện tại, Activity7/9, tháng/chuỗi, core 714 bảng</td>
+<td>Gate cũ giữ nguyên và tăng assertion theo lỗi mới</td>
+</tr>
+</tbody></table></div>
+<h2 id="6-nh-ngh-a-s-a-tri-t">6. Định nghĩa “sửa triệt để”</h2>
+<ul>
+<li>Mỗi item/gói/code trong phạm vi có trạng thái cuối rõ: đã sửa và đủ gate, chưa hoạt động theo thiết kế, hoặc còn chờ dữ liệu chuẩn. Không để mục chưa hỗ trợ bị coi là PASS.</li>
+<li>Mọi nguồn đang phát/bán phần thưởng phải bảo đảm toàn chuỗi dùng được; nếu còn rương bị chặn trong gói, gói đó chưa đạt hoàn tất.</li>
+<li>Đúng ownership/entitlement, đúng value và sync; giữ đúng sau relog/restart; retry/concurrent/save failure không mất hay nhân đôi.</li>
+<li>Dữ liệu lịch sử có chứng cứ được repair idempotent; trường hợp thiếu bằng chứng ghi danh sách riêng, không tự bù.</li>
+<li>Bàn giao source/package thật, manifest hash, test logs, evidence E2E, dry-run/repair ledger, rollback và session report MD/HTML. Một kế hoạch hoặc “chặn hết item lỗi” không được gọi là sửa xong.</li>
+</ul>
+<h2 id="7-u-ti-n-tri-n-khai-ngay-sau-k-ho-ch">7. Ưu tiên triển khai ngay sau kế hoạch</h2>
+<ol>
+<li>CP0 → CP1: bốn gói 11000015/16/17/20, grant native dùng chung, 47 rương và code/mail tương ứng; xử lý nguồn gây nhận đồ nhưng không kích hoạt.</li>
+<li>CP2: audit quyền lợi các gói người dùng báo; ledger/recovery và sync. Bảo vệ source trả phí chưa đủ contract.</li>
+<li>CP4 dry-run dữ liệu lịch sử; commit chỉ sau kiểm giá trị và phê duyệt preview.</li>
+<li>CP3 theo từng họ, ưu tiên 100139 và 28 gói có nhánh lỗi; không đoán pool để mở cho nhanh.</li>
+<li>CP5 chạy lặp sau từng checkpoint đạt gate. Thời gian hoàn thành phần thiếu dữ liệu gốc phụ thuộc việc lấy được bảng chuẩn; không hứa hoàn thành toàn bộ ngay bằng fallback.</li>
+</ol>
+<h2 id="8-file-h-tr-v-l-i-c-n-nh">8. File hỗ trợ và lỗi cần nhớ</h2>
+<ul>
+<li>Tool mới: <code>_ai_workbench/tools/inspect_reward_fix_scope_20260905.js</code>, <code>_ai_workbench/tools/run_reward_fix_scope_20260905.py</code>.</li>
+<li>Tool tái sử dụng: execute SSH stdin của <code>recheck_items_readonly_20260905.py</code>; HTML renderer <code>render_session_report.py</code>.</li>
+<li>Probe đã chạy: node --check PASS; 10/10 probe tái hiện reward rơi vào bag; inventory/catalog DB chỉ đọc. Không gọi route mua/claim thật.</li>
+<li>Lỗi thiết kế cần tránh: các wrapper grant và phép merge reward có thể bỏ mất collection mới; test từng entry point, không chỉ test service.</li>
+<li>Lỗi kết luận cần tránh: <code>transactions=0</code> không phủ định báo lỗi nạp của người dùng; 5 code hiện tại không chứa nhóm lỗi không phủ định code lịch sử; catalog risk không đồng nghĩa đã có giao dịch mất thưởng.</li>
+</ul></main></body></html>

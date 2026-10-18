@@ -1,0 +1,54 @@
+{
+  "_table": "TempleOpenConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "area,timeType,startTime,endTime,limitStartTime,limitEndTime,exchangeStartTime,exchangeEndTime",
+  "_sample": [
+    {
+      "1": {
+        "area": 1,
+        "timeType": 2,
+        "startTime": 1728835200000,
+        "endTime": 1729612800000,
+        "limitStartTime": 1706630400000,
+        "limitEndTime": 1729180800000,
+        "exchangeStartTime": 1729612800000,
+        "exchangeEndTime": 1729699200000
+      }
+    },
+    {
+      "2": {
+        "area": 2,
+        "timeType": 2,
+        "startTime": 1728835200000,
+        "endTime": 1729612800000,
+        "limitStartTime": 1706630400000,
+        "limitEndTime": 1729180800000,
+        "exchangeStartTime": 1729612800000,
+        "exchangeEndTime": 1729699200000
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "area": 1,
+      "timeType": 2,
+      "startTime": 1728835200000,
+      "endTime": 1729612800000,
+      "limitStartTime": 1706630400000,
+      "limitEndTime": 1729180800000,
+      "exchangeStartTime": 1729612800000,
+      "exchangeEndTime": 1729699200000
+    },
+    "2": {
+      "area": 2,
+      "timeType": 2,
+      "startTime": 1728835200000,
+      "endTime": 1729612800000,
+      "limitStartTime": 1706630400000,
+      "limitEndTime": 1729180800000,
+      "exchangeStartTime": 1729612800000,
+      "exchangeEndTime": 1729699200000
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_table": "ExorciseBaseConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "(obj)[playLevel|dailyRewards|dailyRewardCount|waitGuide]",
+  "_sample": [
+    {
+      "playLevel": 1
+    },
+    {
+      "dailyRewards": [
+        {
+          "id": 4,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "dailyRewardCount": 1
+    }
+  ],
+  "data": {
+    "playLevel": 1,
+    "dailyRewards": [
+      {
+        "id": 4,
+        "count": 5
+      }
+    ],
+    "dailyRewardCount": 1,
+    "waitGuide": 3
+  },
+  "dailyRewards": [
+    {
+      "id": 4,
+      "count": 50
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "_table": "PetSoulSpecialConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "special,hardGuaranteed,drop,specialAdd,refiningCostRate",
+  "_sample": [
+    {
+      "0": {
+        "special": 0,
+        "hardGuaranteed": 80,
+        "drop": 0,
+        "specialAdd": 0,
+        "refiningCostRate": 1
+      }
+    },
+    {
+      "1": {
+        "special": 1,
+        "hardGuaranteed": 80,
+        "drop": 0,
+        "specialAdd": 2000,
+        "refiningCostRate": 2
+      }
+    },
+    {
+      "2": {
+        "special": 2,
+        "hardGuaranteed": 0,
+        "drop": 1,
+        "specialAdd": 3000,
+        "refiningCostRate": 4
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "special": 0,
+      "hardGuaranteed": 80,
+      "drop": 0,
+      "specialAdd": 0,
+      "refiningCostRate": 1
+    },
+    "1": {
+      "special": 1,
+      "hardGuaranteed": 80,
+      "drop": 0,
+      "specialAdd": 2000,
+      "refiningCostRate": 2
+    },
+    "2": {
+      "special": 2,
+      "hardGuaranteed": 0,
+      "drop": 1,
+      "specialAdd": 3000,
+      "refiningCostRate": 4
+    }
+  }
+}

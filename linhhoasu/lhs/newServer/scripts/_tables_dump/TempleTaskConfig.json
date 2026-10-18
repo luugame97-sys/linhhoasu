@@ -1,0 +1,72 @@
+{
+  "_table": "TempleTaskConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,type,content,times,name,icon",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "type": 1,
+        "content": 1,
+        "times": 10,
+        "name": 30080016,
+        "icon": "temple_icon_fireworks"
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "type": 1,
+        "content": 2,
+        "times": 3,
+        "name": 30080017,
+        "icon": "temple_icon_answer"
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "type": 1,
+        "content": 4,
+        "times": 3,
+        "name": 30080025,
+        "icon": "temple_icon_emoji"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "type": 1,
+      "content": 1,
+      "times": 10,
+      "name": 30080016,
+      "icon": "temple_icon_fireworks"
+    },
+    "2": {
+      "id": 2,
+      "type": 1,
+      "content": 2,
+      "times": 3,
+      "name": 30080017,
+      "icon": "temple_icon_answer"
+    },
+    "3": {
+      "id": 3,
+      "type": 1,
+      "content": 4,
+      "times": 3,
+      "name": 30080025,
+      "icon": "temple_icon_emoji"
+    },
+    "4": {
+      "id": 4,
+      "type": 2,
+      "content": 100,
+      "times": 1,
+      "name": 30080024,
+      "icon": "temple_icon_youyi"
+    }
+  }
+}

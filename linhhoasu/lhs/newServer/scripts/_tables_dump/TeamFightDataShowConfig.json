@@ -1,0 +1,1305 @@
+{
+  "_table": "TeamFightDataShowConfig",
+  "_rows": 55,
+  "_type": "object",
+  "_firstKeys": "id,skillType,text,PlHolder",
+  "_sample": [
+    {
+      "10011": {
+        "id": 10011,
+        "skillType": 1,
+        "text": 10150001,
+        "PlHolder": [
+          {
+            "params": [
+              5,
+              10,
+              20
+            ],
+            "type": 0,
+            "rate": 0
+          }
+        ]
+      }
+    },
+    {
+      "10021": {
+        "id": 10021,
+        "skillType": 1,
+        "text": 10150002,
+        "PlHolder": [
+          {
+            "params": [
+              5,
+              10,
+              20
+            ],
+            "type": 0,
+            "rate": 1
+          },
+          {
+            "params": [
+              5,
+              10,
+              20
+            ],
+            "type": 0,
+            "rate": 1
+          }
+        ]
+      }
+    },
+    {
+      "10031": {
+        "id": 10031,
+        "skillType": 1,
+        "text": 10150003,
+        "PlHolder": [
+          {
+            "params": [
+              5,
+              10,
+              20
+            ],
+            "type": 0,
+            "rate": 1
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "10011": {
+      "id": 10011,
+      "skillType": 1,
+      "text": 10150001,
+      "PlHolder": [
+        {
+          "params": [
+            5,
+            10,
+            20
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10021": {
+      "id": 10021,
+      "skillType": 1,
+      "text": 10150002,
+      "PlHolder": [
+        {
+          "params": [
+            5,
+            10,
+            20
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            5,
+            10,
+            20
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10031": {
+      "id": 10031,
+      "skillType": 1,
+      "text": 10150003,
+      "PlHolder": [
+        {
+          "params": [
+            5,
+            10,
+            20
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10041": {
+      "id": 10041,
+      "skillType": 1,
+      "text": 10150004,
+      "PlHolder": [
+        {
+          "params": [
+            60,
+            75,
+            110
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10051": {
+      "id": 10051,
+      "skillType": 1,
+      "text": 10150005,
+      "PlHolder": [
+        {
+          "params": [
+            10,
+            15,
+            20
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            2,
+            3,
+            4
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            10,
+            12,
+            15
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "10111": {
+      "id": 10111,
+      "skillType": 1,
+      "text": 10150011,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10121": {
+      "id": 10121,
+      "skillType": 1,
+      "text": 10150012,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10131": {
+      "id": 10131,
+      "skillType": 1,
+      "text": 10150013,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10141": {
+      "id": 10141,
+      "skillType": 1,
+      "text": 10150014,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10151": {
+      "id": 10151,
+      "skillType": 1,
+      "text": 10150015,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10211": {
+      "id": 10211,
+      "skillType": 1,
+      "text": 10150021,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10221": {
+      "id": 10221,
+      "skillType": 1,
+      "text": 10150022,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10231": {
+      "id": 10231,
+      "skillType": 1,
+      "text": 10150023,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10241": {
+      "id": 10241,
+      "skillType": 1,
+      "text": 10150024,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10251": {
+      "id": 10251,
+      "skillType": 1,
+      "text": 10150025,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10311": {
+      "id": 10311,
+      "skillType": 1,
+      "text": 10150031,
+      "PlHolder": [
+        {
+          "params": [
+            5,
+            10,
+            20
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10321": {
+      "id": 10321,
+      "skillType": 1,
+      "text": 10150032,
+      "PlHolder": [
+        {
+          "params": [
+            6,
+            8,
+            10
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            10,
+            15,
+            20
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10331": {
+      "id": 10331,
+      "skillType": 1,
+      "text": 10150033,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            3,
+            5
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            5,
+            10,
+            15
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            5,
+            10,
+            15
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10341": {
+      "id": 10341,
+      "skillType": 1,
+      "text": 10150034,
+      "PlHolder": [
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "10351": {
+      "id": 10351,
+      "skillType": 1,
+      "text": 10150035,
+      "PlHolder": [
+        {
+          "params": [
+            5,
+            10,
+            20
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            5,
+            10,
+            15
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            2,
+            5,
+            10
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10411": {
+      "id": 10411,
+      "skillType": 1,
+      "text": 10150041,
+      "PlHolder": [
+        {
+          "params": [
+            8,
+            16,
+            24
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10421": {
+      "id": 10421,
+      "skillType": 1,
+      "text": 10150042,
+      "PlHolder": [
+        {
+          "params": [
+            20,
+            30,
+            40
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10431": {
+      "id": 10431,
+      "skillType": 1,
+      "text": 10150043,
+      "PlHolder": [
+        {
+          "params": [
+            8,
+            12,
+            16
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10441": {
+      "id": 10441,
+      "skillType": 1,
+      "text": 10150044,
+      "PlHolder": [
+        {
+          "params": [
+            1,
+            2,
+            3
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            9,
+            12,
+            15
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "10451": {
+      "id": 10451,
+      "skillType": 1,
+      "text": 10150045,
+      "PlHolder": [
+        {
+          "params": [
+            15,
+            25,
+            40
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "41011": {
+      "id": 41011,
+      "skillType": 0,
+      "name": 300940700,
+      "text": 300940600,
+      "PlHolder": [
+        {
+          "params": [
+            280,
+            420,
+            630
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "41021": {
+      "id": 41021,
+      "skillType": 0,
+      "name": 300940701,
+      "text": 300940601,
+      "PlHolder": [
+        {
+          "params": [
+            140,
+            150,
+            160
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            240,
+            360,
+            540
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "42011": {
+      "id": 42011,
+      "skillType": 0,
+      "name": 300940702,
+      "text": 300940602,
+      "PlHolder": [
+        {
+          "params": [
+            180,
+            270,
+            405
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "42021": {
+      "id": 42021,
+      "skillType": 0,
+      "name": 300940703,
+      "text": 300940603,
+      "PlHolder": [
+        {
+          "params": [
+            160,
+            240,
+            360
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            10,
+            15,
+            20
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "43011": {
+      "id": 43011,
+      "skillType": 0,
+      "name": 300940704,
+      "text": 300940604,
+      "PlHolder": [
+        {
+          "params": [
+            100,
+            150,
+            225
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            200,
+            300,
+            450
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "43021": {
+      "id": 43021,
+      "skillType": 0,
+      "name": 300940705,
+      "text": 300940605,
+      "PlHolder": [
+        {
+          "params": [
+            110,
+            130,
+            160
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            170,
+            255,
+            380
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "44011": {
+      "id": 44011,
+      "skillType": 0,
+      "name": 300940706,
+      "text": 300940606,
+      "PlHolder": [
+        {
+          "params": [
+            360,
+            360,
+            360
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            70,
+            105,
+            155
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "44014": {
+      "id": 44014,
+      "skillType": 1,
+      "name": 300940707,
+      "text": 300940607,
+      "PlHolder": []
+    },
+    "44021": {
+      "id": 44021,
+      "skillType": 0,
+      "name": 300940708,
+      "text": 300940608,
+      "PlHolder": [
+        {
+          "params": [
+            180,
+            270,
+            405
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            180,
+            270,
+            405
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            150,
+            225,
+            340
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "45011": {
+      "id": 45011,
+      "skillType": 0,
+      "name": 300940709,
+      "text": 300940609,
+      "PlHolder": [
+        {
+          "params": [
+            220,
+            330,
+            500
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            13,
+            20,
+            30
+          ],
+          "type": 1,
+          "rate": 1
+        }
+      ]
+    },
+    "45021": {
+      "id": 45021,
+      "skillType": 0,
+      "name": 300940710,
+      "text": 300940610,
+      "PlHolder": [
+        {
+          "params": [
+            25,
+            40,
+            65
+          ],
+          "type": 1,
+          "rate": 1
+        }
+      ]
+    },
+    "61011": {
+      "id": 61011,
+      "skillType": 0,
+      "name": 300940711,
+      "text": 300940611,
+      "PlHolder": [
+        {
+          "params": [
+            240,
+            360,
+            540
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            200,
+            300,
+            450
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "61021": {
+      "id": 61021,
+      "skillType": 0,
+      "name": 300940712,
+      "text": 300940612,
+      "PlHolder": [
+        {
+          "params": [
+            150,
+            248,
+            450
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            150,
+            225,
+            335
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            100,
+            150,
+            225
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "62011": {
+      "id": 62011,
+      "skillType": 0,
+      "name": 300940713,
+      "text": 300940613,
+      "PlHolder": [
+        {
+          "params": [
+            150,
+            225,
+            335
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            150,
+            225,
+            335
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "62021": {
+      "id": 62021,
+      "skillType": 0,
+      "name": 300940714,
+      "text": 300940614,
+      "PlHolder": [
+        {
+          "params": [
+            180,
+            300,
+            450
+          ],
+          "type": 1,
+          "rate": 1
+        }
+      ]
+    },
+    "63011": {
+      "id": 63011,
+      "skillType": 0,
+      "name": 300940715,
+      "text": 300940615,
+      "PlHolder": [
+        {
+          "params": [
+            180,
+            220,
+            280
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            100,
+            150,
+            225
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "63021": {
+      "id": 63021,
+      "skillType": 1,
+      "name": 300940716,
+      "text": 300940616,
+      "PlHolder": [
+        {
+          "params": [
+            2,
+            2,
+            4
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "63024": {
+      "id": 63024,
+      "skillType": 0,
+      "name": 300940717,
+      "text": 300940617,
+      "PlHolder": [
+        {
+          "params": [
+            60,
+            90,
+            135
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "64011": {
+      "id": 64011,
+      "skillType": 0,
+      "name": 300940718,
+      "text": 300940618,
+      "PlHolder": [
+        {
+          "params": [
+            370,
+            370,
+            370
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            150,
+            225,
+            335
+          ],
+          "type": 1,
+          "rate": 1
+        }
+      ]
+    },
+    "64021": {
+      "id": 64021,
+      "skillType": 0,
+      "name": 300940719,
+      "text": 300940619,
+      "PlHolder": [
+        {
+          "params": [
+            40,
+            50,
+            60
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            180,
+            270,
+            405
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "65011": {
+      "id": 65011,
+      "skillType": 0,
+      "name": 300940720,
+      "text": 300940620,
+      "PlHolder": [
+        {
+          "params": [
+            50,
+            60,
+            70
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            200,
+            300,
+            450
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "65021": {
+      "id": 65021,
+      "skillType": 0,
+      "name": 300940721,
+      "text": 300940621,
+      "PlHolder": [
+        {
+          "params": [
+            240,
+            360,
+            540
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            1,
+            2,
+            4
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "71011": {
+      "id": 71011,
+      "skillType": 0,
+      "name": 300940722,
+      "text": 300940622,
+      "PlHolder": [
+        {
+          "params": [
+            225,
+            280,
+            560
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            380,
+            570,
+            1140
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            170,
+            255,
+            510
+          ],
+          "type": 1,
+          "rate": 0
+        },
+        {
+          "params": [
+            2,
+            2,
+            1
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            200,
+            300,
+            600
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "72011": {
+      "id": 72011,
+      "skillType": 0,
+      "name": 300940723,
+      "text": 300940623,
+      "PlHolder": [
+        {
+          "params": [
+            185,
+            190,
+            570
+          ],
+          "type": 0,
+          "rate": 1
+        },
+        {
+          "params": [
+            25,
+            40,
+            120
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "72014": {
+      "id": 72014,
+      "skillType": 1,
+      "name": 300940724,
+      "text": 300940624,
+      "PlHolder": []
+    },
+    "73011": {
+      "id": 73011,
+      "skillType": 1,
+      "name": 300940725,
+      "text": 300940625,
+      "PlHolder": [
+        {
+          "params": [
+            300,
+            300,
+            1200
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "73014": {
+      "id": 73014,
+      "skillType": 0,
+      "name": 300940726,
+      "text": 300940626,
+      "PlHolder": [
+        {
+          "params": [
+            180,
+            180,
+            720
+          ],
+          "type": 0,
+          "rate": 1
+        }
+      ]
+    },
+    "74011": {
+      "id": 74011,
+      "skillType": 0,
+      "name": 300940727,
+      "text": 300940627,
+      "PlHolder": [
+        {
+          "params": [
+            10,
+            15,
+            18
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            250,
+            375,
+            888
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    },
+    "75011": {
+      "id": 75011,
+      "skillType": 1,
+      "name": 300940728,
+      "text": 300940628,
+      "PlHolder": [
+        {
+          "params": [
+            2,
+            4,
+            8
+          ],
+          "type": 0,
+          "rate": 0
+        }
+      ]
+    },
+    "75014": {
+      "id": 75014,
+      "skillType": 0,
+      "name": 300940729,
+      "text": 300940629,
+      "PlHolder": [
+        {
+          "params": [
+            3,
+            3,
+            5
+          ],
+          "type": 0,
+          "rate": 0
+        },
+        {
+          "params": [
+            333,
+            555,
+            1000
+          ],
+          "type": 1,
+          "rate": 0
+        }
+      ]
+    }
+  }
+}

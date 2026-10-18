@@ -1,0 +1,13 @@
+const assert=require('assert');
+const fs=require('fs');
+const vm=require('vm');
+const source=fs.readFileSync(require('path').resolve(__dirname,'..','temp','ui_freeze_20261013','lhs-artifact-forge-cn.js'),'utf8');
+const rows=[{uid:1,id:23103,fit:23009},{uid:2,id:23103,fit:0}];
+function Socket(){} Socket.prototype.Rpc=function(){};
+const model={getAllCanForgeArtifact(){return rows;},getArtifactDataByUId(uid){return rows.find(x=>x.uid===uid);},getArtifactFitSkillGroupIdByData(row){return row&&row.fit;},checkArtifactCanForge(){return false;}};
+const win={GameSocket:Socket,setInterval(fn){fn();return 1;},clearInterval(){},setTimeout(){return 1;},clearTimeout(){},localStorage:{getItem(){return null;},setItem(){},removeItem(){}},W:{ActorModel:{actorID:'qa'},Config:{ArtifactBaseConfig:{forgeLevel:20,forgeCountMax:7},ArtifactConfig:{23103:{quality:7}}},ArtifactModel:model}};
+vm.runInNewContext(source,{window:win,Number,Date,JSON,Object,Array,Math});
+assert.strictEqual(win.W.ArtifactModel.getAllCanForgeArtifact(),rows,'CN native list must remain untouched');
+assert.strictEqual(win.W.ArtifactModel.checkArtifactCanForge(1),true);
+assert.strictEqual(win.W.ArtifactModel.checkArtifactCanForge(2),false);
+console.log(JSON.stringify({result:'PASS',checks:3,productionWrites:0,networkAttempts:0}));

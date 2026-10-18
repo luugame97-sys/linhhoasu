@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>灵画师-GM授权后台</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="static/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="static/xm-select.js" type="text/javascript"></script>
+    <script type="text/javascript" src="static/selectpage/selectpage.js?v=2"></script>
+    <script src="static/layer/layer.js"></script>
+    <script src="static/layer/cannotcopy.js"></script>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/selectpage/selectpage.bootstrap3.css" type="text/css">
+    <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+    <style type="text/css">
+    body{background-image:url("static/selectpage/bj.jpg");background-size:cover;}
+    </style>
+    <style>
+    main{
+        width:100%;
+        max-width:700px;
+        position:fixed;
+        left:50%;
+        transform: translate(-50%,0);
+        height:100%;
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
+    main::-webkit-scrollbar { display: none; }
+    @media screen and (max-width: 700px) { main { width:98%; } }
+    .function-tab{ display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
+    .function-tab button{ flex:1 1 48%; }
+    .text-muted-xs{ font-size:12px; color:#888; margin-top:4px; display:block; line-height:1.5; }
+    .kv-list{ font-size:13px; line-height:1.8; }
+    .kv-list b{ color:#337ab7; min-width:90px; display:inline-block; }
+    .warn-box{ background:#fffbe6; border:1px solid #ffe58f; color:#874d00; font-size:12px; padding:8px 10px; border-radius:4px; line-height:1.6; }
+    .yuan-hint{ color:#d9534f; font-weight:700; }
+    </style>
+</head>
+<body>
+<main class="main-content">
+<div style="height:2rem;line-height:2rem;display:block;"></div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title gamename"></h4></div>
+</div>
+
+<!-- 基础信息 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title namecol"></h4></div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <select class="form-control" id="qid" name="qid"></select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="password" class="form-control" id="gmcode" name="gmcode" placeholder="请输入GM密码" value="">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-9">
+                <input type="text" class="form-control" id="lookup_key"
+                       placeholder="请输入游戏账号或角色名">
+            </div>
+            <div class="col col-md-3">
+                <button type="button" class="btn btn-info" id="btnLookup"
+                        style="width:100%" onclick="doLookup()">查找玩家</button>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="text" class="form-control" id="uid" name="uid" readonly="readonly"
+                       style="background:#f8f9fa;cursor:not-allowed;color:#495057;"
+                       placeholder="请先使用上方 查找玩家自动填入" value="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 充值货币 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">充值 / 发放货币</h4></div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <select class="form-control" id="chargetype" name="chargetype">
+                    <option value="0">请选择货币类型</option>
+                    <option value="2">元宝</option>
+                    <option value="1">银币</option>
+                    <option value="1001">天衍令</option>
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="number" class="form-control" id="chargenum" name="chargenum" min="1" max="999999"
+                       onKeyUp="value=value.replace(/[^0-9]+/g,'')" placeholder="请输入发放数量" value="">
+                <div id="yuanHintBox" class="warn-box" style="margin-top:8px;display:none;"></div>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <button class="btn btn-warning sendbtn" style="width:100%">充值 / 发放货币</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 多功能操作 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">多功能操作面板</h4></div>
+    <div class="panel-body">
+        <div class="function-tab">
+            <button class="btn btn-info function-btn active" data-tab="sendMail">发送邮件</button>
+            <button class="btn btn-info function-btn"        data-tab="broadMail">全服邮件</button>
+            <button class="btn btn-info function-btn"        data-tab="queryRc">查询充值</button>
+            <button class="btn btn-info function-btn"        data-tab="queryPl">查询详情</button>
+        </div>
+
+        <!-- 发送邮件 -->
+        <div id="tab-sendMail" class="function-container" style="display:block;">
+            <div class="row form-group">
+                <div class="col col-md-12"><div id="mailItemId" class="xm-select-demo"></div></div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <input type="number" class="form-control" id="mailItemNum" min="1" max="99999999" step="1"
+                           placeholder="附件数量" value="1">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12"><button class="btn btn-warning sendmailbtn" style="width:100%">发送物品</button></div>
+            </div>
+        </div>
+
+        <!-- 查询充值 -->
+        <div id="tab-queryRc" class="function-container" style="display:none;">
+            <div class="row form-group">
+                <div class="col col-md-12"><button class="btn btn-success queryrcbtn" style="width:100%">查询充值概览</button></div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <div class="well well-sm kv-list" id="rcResult" style="display:none;max-height:260px;overflow:auto;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 查询详情 -->
+        <div id="tab-queryPl" class="function-container" style="display:none;">
+            <div class="row form-group">
+                <div class="col col-md-12"><button class="btn btn-success queryplbtn" style="width:100%">查询玩家详情（货币/背包/VIP）</button></div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <div class="well well-sm kv-list" id="plResult" style="display:none;max-height:360px;overflow:auto;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全服邮件（群发，仅按服发送，SERVER_ID 跟随顶部选区从 config.php 读取） -->
+        <div id="tab-broadMail" class="function-container" style="display:none;">
+            <div class="row form-group">
+                <div class="col col-md-12"><input type="text" class="form-control" id="broadTitle" placeholder="邮件标题（必填）" value="系统邮件"></div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12"><textarea class="form-control" id="broadContent" rows="4" placeholder="邮件正文（必填）">您有新的运营发放物品，请查收！</textarea></div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12"><div id="broadItemId" class="xm-select-demo"></div></div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-8">
+                    <input type="number" class="form-control" id="broadItemNum" min="0" step="1" placeholder="附件数量（仅发文字时留空）" value="">
+                </div>
+                <div class="col col-md-4">
+                    <input type="number" class="form-control" id="broadExpire" min="1" max="365" step="1" placeholder="有效期(天)，默认30" value="30">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12"><button class="btn btn-warning btn-broadmail" style="width:100%">发送物品</button></div>
+            </div>
+        </div>
+
+        <!-- 操作须知 -->
+        <div class="row form-group" style="margin-top:10px;">
+            <div class="col col-md-12">
+                <button class="btn btn-danger infobtn" style="width:100%">操作须知（必读）</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 授权 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">授权相关</h4></div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="text" class="form-control" id="vipUid" name="vipUid"
+                       placeholder="请输入游戏账号或角色名" value="">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <select class="form-control" id="vip" name="vip">
+                    <option value="0">请选择权限等级</option>
+                    <option value="1">lv=1</option>
+                    <option value="2">lv=2</option>
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="text" class="form-control" id="vippswd" name="vippswd"
+                       placeholder="设置该用户的后台密码" value="">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <button class="btn btn-warning sendvipbtn" style="width:100%">添加授权</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 跳转 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">后台跳转</h4></div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input class="btn btn-block btn-success" value="前往玩家后台"
+                       type="button" onclick="window.location.href='index.html'">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-body">
+        <h4 class="text-center text-danger" id="copyright"></h4>
+    </div>
+</div>
+</main>
+
+<script>
+var namecol = '';
+var items = [];
+var mailItemSelect;
+var qid = '';
+var gmcode = '';
+
+$('#qid').on('change', function () { qid = $(this).val(); });
+$('#gmcode').on('change keyup blur', function () { gmcode = $.trim($(this).val()); });
+
+// 加载区服/物品
+$(document).ready(function () {
+    $.get('getitems.php', function (text, status) {
+        $(document).attr("title", text.gamename + '-GM授权后台');
+        $('.gamename').html(text.gamename + '-GM物品后台');
+        namecol = text.namecol;
+        $('.namecol').html(namecol);
+        $('#copyright').html(text.copyright);
+        $('#uid').attr('placeholder', '请输入' + text.namecol);
+        var html = '';
+        qus = text.qus;
+        for (var x in text.qus) {
+            html = '<option value="' + x + '">' + qus[x] + '</option>';
+            $('#qid').append(html);
+        }
+        qid = $('#qid').val();
+        items = text.items;
+        // 单人邮件附件选择器：去掉"无附件"选项（单人邮件强制必须选 1 个物品）
+        var mailItems = items.map(function (it) {
+            return { value: it.value, name: (it.name || '') + '（ID=' + it.value + '）' };
+        });
+        mailItemSelect = xmSelect.render({
+            el: '#mailItemId',
+            tips: '请选择物品',
+            empty: '未选择（单人邮件必须至少选择 1 个附件）',
+            searchTips: '输入物品名模糊搜索',
+            theme: { color: '#1e9fff' },
+            filterable: true,
+            radio: true,
+            clickClose: true,
+            paging: true,
+            pageSize: 50,
+            filterMethod: function (val, item) { return (item.name || '').indexOf(val) != -1; },
+            data: mailItems,
+            initValue: []   // 不预选，强制用户手动选一个
+        });
+        // 【全服邮件】附件 xmSelect（复用同一个 items 数据源，支持搜索/分页）
+        var broadMailItems = [{ value: 0, name: '无附件（仅发文字）' }].concat(
+            items.map(function (it) {
+                return { value: it.value, name: (it.name || '') + '（ID=' + it.value + '）' };
+            })
+        );
+        xmSelect.render({
+            el: '#broadItemId',
+            tips: '请选择物品',
+            empty: '未选择',
+            searchTips: '输入物品名模糊搜索',
+            theme: { color: '#ff5722' },
+            filterable: true,
+            radio: true,
+            clickClose: true,
+            paging: true,
+            pageSize: 50,
+            filterMethod: function (val, item) { return (item.name || '').indexOf(val) != -1; },
+            data: broadMailItems,
+            initValue: [0]
+        });
+    }, 'json');
+});
+
+// Tab 切换
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".function-btn");
+    const tabMap = {
+        sendMail: "tab-sendMail",
+        broadMail: "tab-broadMail",
+        queryRc: "tab-queryRc",
+        queryPl: "tab-queryPl"
+    };
+    buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            buttons.forEach(function (b) { b.classList.remove("active"); });
+            Object.values(tabMap).forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) el.style.display = "none"; // 判空：就算某 Tab DOM 已删也不报错
+            });
+            btn.classList.add("active");
+            var tabName = btn.getAttribute("data-tab");
+            var target = tabMap[tabName];
+            var el = target ? document.getElementById(target) : null;
+            if (el) el.style.display = "block";
+        });
+    });
+
+    // 元宝实时换算提示
+    function updateYuanHint() {
+        var ct = $('#chargetype').val();
+        var num = parseInt($('#chargenum').val()) || 0;
+        var box = $('#yuanHintBox');
+        if (ct === '2' && num > 0) {
+            var yuan = (num / 10).toFixed(2);
+            box.html("按服务端真实比例 1元=10钻 计算，本次将计为 <b>" + yuan + " 元</b> 累计充值额（首充玩家自动双倍元宝）。");
+            box.show();
+        } else {
+            box.hide();
+        }
+    }
+    $('#chargetype').on('change', updateYuanHint);
+    $('#chargenum').on('input keyup blur', updateYuanHint);
+    updateYuanHint();
+});
+
+/* ============================================================
+ * 通用：请求 gmquery.php（所有 errno=0 视为成功，含 sendvip）
+ *   requireUid：群发 / 清整服邮件 / 清整服邮件 / 全服背包…这些场景不需要 UID，传 true 可跳过 uid 必填校验
+ * ============================================================ */
+function postGM(action, extra, okMsg, cb, requireUid) {
+    if (requireUid !== false) requireUid = true;
+    if (requireUid) {
+        var user = $.trim($('#uid').val());
+        if (!user) { layer.alert('请输入角色UID', { icon: 2 }); $('#uid').focus(); return false; }
+    }
+    if (!gmcode) { layer.alert('请输入GM密码', { icon: 2 }); $('#gmcode').focus(); return false; }
+    if (!qid) { layer.alert('请选择区服', { icon: 2 }); return false; }
+    var data = $.extend({ action: action, qid: qid, gmcode: gmcode }, extra || {});
+    if (requireUid) data.uid = user;
+    $.post('gmquery.php', data, function (text) {
+        if (!text || typeof text.errno === 'undefined') {
+            try { text = typeof text === 'string' ? JSON.parse(text) : text; } catch (e) {
+                layer.alert('返回格式异常: ' + JSON.stringify(text), { icon: 2 }); return;
+            }
+        }
+        if (text.errno == 0) {
+            var msg = (okMsg ? okMsg : '') + (text.message || '');
+            if (cb) cb(text);
+            else layer.alert(msg || '操作成功', { icon: 1 });
+        } else {
+            layer.alert(text.message || ('失败 errno=' + text.errno), { icon: 2 });
+        }
+    }, 'json').fail(function (xhr) { layer.alert('请求失败 HTTP ' + xhr.status, { icon: 2 }); });
+}
+
+// 充值/发放货币
+$('.sendbtn').on('click', function () {
+    var chargetype = $.trim($('#chargetype').val());
+    if (chargetype === '' || chargetype === '0') {
+        layer.alert('请选择货币类型', { icon: 2 }); $('#chargetype').focus(); return;
+    }
+    var chargenum = $.trim($('#chargenum').val());
+    if (chargenum === '' || isNaN(chargenum) || parseInt(chargenum) < 1) {
+        layer.alert('请输入货币数量', { icon: 2 }); $('#chargenum').focus(); return;
+    }
+    postGM('sendmoney', { chargetype: chargetype, chargenum: chargenum });
+});
+
+// 发送邮件（标题/正文使用 config.php $title/$contents，前端不再手动输入）
+// 单人邮件：必须至少 1 个附件（禁止空附件/纯文字）
+$('.sendmailbtn').on('click', function () {
+    // 邮件附件从 mailItemSelect 取（支持 player.txt 中所有物品）
+    var midVal = mailItemSelect ? mailItemSelect.getValue('valueStr') : '0';
+    var mid = parseInt(midVal) || 0;
+    var rawNum = $.trim($('#mailItemNum').val());
+    var mnum = (rawNum === '' || rawNum === null || rawNum === undefined) ? 0 : (parseInt(rawNum) || 0);
+    if (mid <= 0) { layer.alert('单人邮件必须选择附件，不允许发送空邮件（请从下拉框选择一个物品）', { icon: 2 }); return; }
+    if (mnum < 1) { layer.alert('已选择附件（ID=' + mid + '），请填写附件数量（必须 ≥ 1）', { icon: 2 }); $('#mailItemNum').focus(); return; }
+    var attachments = [{ id: mid, count: mnum }];
+    postGM('sendmail', {
+        attachments: JSON.stringify(attachments)
+    });
+});
+
+// 查询充值
+$('.queryrcbtn').on('click', function () {
+    postGM('query_recharge', {}, null, function (text) {
+        var d = text;
+        var html = '';
+        html += '<b>UserId:</b> ' + (d.userId || '-') + ' <b>PlayerId:</b> ' + (d.playerId || '-') + '<br>';
+        html += '<b>角色名:</b> ' + (d.name || '-') + ' <b>等级:</b> ' + (d.level || 1) + '<br>';
+        html += '<b>VIP等级:</b> ' + (d.vipLevel || 0) + ' <b>累计充值(元):</b> <span class="yuan-hint">' + (d.totalRecharge || 0) + '</span><br>';
+        html += '<b>首充金额(元):</b> ' + (d.firstRecharge || 0) + '<br>';
+        var c = d.currencies || {};
+        html += '<b>当前元宝:</b> ' + (c.diamond || 0) + ' <b>金币:</b> ' + (c.gold || 0) + ' <b>银币:</b> ' + (c.silver || 0) + '<br>';
+        html += '<b>注册时间:</b> ' + (d.createTime ? new Date(Number(d.createTime)).toLocaleString() : '-') + '<br>';
+        $('#rcResult').html(html).show();
+        layer.alert('查询成功：\n' + (text.message || ''), { icon: 1 });
+    });
+});
+
+// 查询玩家详情
+$('.queryplbtn').on('click', function () {
+    postGM('query_player', {}, null, function (p) {
+        var html = '';
+        html += '<b>UserId:</b> ' + (p.userId || '-') + ' <b>PlayerId:</b> ' + (p.playerId || '-') + '<br>';
+        html += '<b>角色名:</b> ' + (p.name || '-') + ' <b>等级:</b> ' + (p.level || 1) + ' <b>经验:</b> ' + (p.exp || 0) + '<br>';
+        html += '<b>邀请码:</b> ' + (p.inviteCode || '-') + ' <b>代理ID:</b> ' + (p.agentId || '-') + '<br>';
+        var ri = p.rechargeInfo || {};
+        html += '<b>累计充值(元):</b> ' + (ri.totalRecharge || 0) + ' <b>VIP:</b> ' + (ri.vipLevel || 0) + ' <b>首充:</b> ' + (ri.firstRecharge || 0) + '<br>';
+        var c = p.currencies || {};
+        html += '<b>货币:</b> 元宝=' + (c.diamond || 0) + ' / 金币=' + (c.gold || 0) + ' / 银币=' + (c.silver || 0) + '<br>';
+        var itemLines = [];
+        var its = p.items || {};
+        Object.keys(its).forEach(function (k) { if (its[k] > 0) itemLines.push(k + '×' + its[k]); });
+        html += '<b>背包:</b> ' + (itemLines.length ? itemLines.join('， ') : '(空)') + '<br>';
+        html += '<b>最后登录:</b> ' + (p.lastLoginTime ? new Date(Number(p.lastLoginTime)).toLocaleString() : '-') + '<br>';
+        $('#plResult').html(html).show();
+        layer.alert('查询成功：\n' + (p.message || ''), { icon: 1 });
+    });
+});
+
+// 生成授权
+$('.sendvipbtn').on('click', function () {
+    var vipUid = $.trim($('#vipUid').val());
+    var vipLv  = $.trim($('#vip').val());
+    var pwd    = $.trim($('#vippswd').val());
+    if (!vipUid) { layer.alert('请输入游戏账号或角色名', { icon: 2 }); $('#vipUid').focus(); return; }
+    if (!vipLv || vipLv === '0') { layer.alert('请选择权限等级', { icon: 2 }); $('#vip').focus(); return; }
+    if (!pwd)    { layer.alert('请输入后台密码', { icon: 2 }); $('#vippswd').focus(); return; }
+    postGM('sendvip', {
+        uid:     vipUid,
+        vip:     vipLv,
+        vippswd: pwd
+    }, null, null, false);  // requireUid=false：不强制读取顶部全局 #uid 输入框（cdk.uid 存账号/角色名字符串即可）
+});
+
+// ========== 查找玩家：按 登录账号 / 角色名 查，命中后把 userId 填回 #uid ==========
+function applyRoleChoice(one) {
+    if (!one || !one.userId) return;
+    $('#uid').val(one.userId);
+}
+function renderRolesModal(roles) {
+    if (!roles || !roles.length) return;
+    var rows = [];
+    rows.push('<table class="table table-condensed table-bordered table-hover" style="margin:0;font-size:13px;">');
+    rows.push('<thead><tr class="active">' +
+              '<th style="width:40px;text-align:center;">#</th>' +
+              '<th>账号(accountId)</th><th>角色名</th>' +
+              '<th style="width:60px;text-align:center;">等级</th>' +
+              '<th style="width:58px;text-align:center;">区服</th>' +
+              '<th style="width:64px;text-align:center;">VIP</th>' +
+              '<th style="width:96px;text-align:right;">累计充值</th>' +
+              '<th style="width:104px;text-align:center;">创建/最后登录</th>' +
+              '<th style="width:78px;text-align:center;">操作</th></tr></thead>');
+    rows.push('<tbody>');
+    function fmtTs(ts) {
+        if (!ts) return '—';
+        var d = new Date(Number(ts));
+        if (isNaN(d.getTime())) return '—';
+        function pad(n){ return n<10?'0'+n:''+n; }
+        return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes());
+    }
+    for (var i = 0; i < roles.length; i++) {
+        var o = roles[i];
+        var acc = o.accountId ? String(o.accountId) : '';
+        var nm  = o.name      ? String(o.name)      : '';
+        var lv  = Number(o.level) || 1;
+        var sv  = Number(o.serverId) || 1;
+        var vip = Number(o.vipLevel) || 0;
+        var tot = (typeof o.totalRecharge === 'number') ? o.totalRecharge : 0;
+        var yuan = tot ? ' / ¥' + (tot / 10).toFixed(2) : '';
+        var cre  = fmtTs(o.createTime);
+        var lgo  = fmtTs(o.lastLoginTime);
+        var jqAcc = $('<div/>').text(acc || '—').html();
+        var jqNm  = $('<div/>').text(nm  || '—').html();
+        var jqUid = $('<div/>').text(String(o.userId)).html();
+        rows.push(
+            '<tr data-idx="' + i + '">' +
+              '<td style="text-align:center;">' + (i + 1) + '</td>' +
+              '<td><code>' + jqAcc + '</code></td>' +
+              '<td>' + jqNm + '</td>' +
+              '<td style="text-align:center;">Lv' + lv + '</td>' +
+              '<td style="text-align:center;">S' + sv + '</td>' +
+              '<td style="text-align:center;">' + (vip || '—') + '</td>' +
+              '<td style="text-align:right;">' + tot + yuan + '</td>' +
+              '<td style="text-align:center;font-size:11px;">创:' + cre + '<br>登:' + lgo + '</td>' +
+              '<td style="text-align:center;"><button type="button" class="btn btn-xs btn-primary pickBtn" data-uid="' + jqUid + '">选中</button></td>' +
+            '</tr>'
+        );
+    }
+    rows.push('</tbody></table>');
+    var html = '<div style="padding:10px 14px;">' +
+               '<div style="margin-bottom:8px;color:#6c757d;font-size:12px;">共命中 <b style="color:#0d47a1;">' + roles.length + '</b> 位玩家，请点击右侧“选中”按钮，将 userId 自动填入下方“角色UID”输入框。</div>' +
+               rows.join('') +
+               '</div>';
+    var idx = layer.open({
+        type: 1,
+        title: '查找玩家 - 请选择要操作的角色',
+        area: ['980px', '600px'],
+        shade: 0.3,
+        content: html,
+        success: function (layero) {
+            $(layero).off('click.pick').on('click.pick', '.pickBtn', function (e) {
+                var i = Number($(e.target).closest('tr').attr('data-idx'));
+                if (!isFinite(i) || i < 0 || i >= roles.length) return;
+                applyRoleChoice(roles[i]);
+                layer.close(idx);
+            });
+        }
+    });
+}
+function doLookup() {
+    var gmcode = $.trim($('#gmcode').val());
+    var qid    = $.trim($('#qid').val());
+    var lk     = $.trim($('#lookup_key').val());
+    if (!gmcode) { layer.alert('请先输入 GM 密码', { icon: 2 }); $('#gmcode').focus(); return; }
+    if (!qid)    { layer.alert('请先选择区服', { icon: 2 }); return; }
+    if (!lk)     { layer.alert('请输入正确的登录账号或角色名', { icon: 2 }); $('#lookup_key').focus(); return; }
+    var payload = { action: 'lookup_account', qid: qid, gmcode: gmcode, key: lk };
+
+    $('#btnLookup').attr('disabled','disabled').text('查询中…');
+
+    // 只允许使用 登录账号 / 角色名 两种匹配方式（后端 gmquery 决定顺序：先 accountId 精确，再 name 精确+模糊）
+    $.post('gmquery.php', payload, function (text) {
+        if (!text || typeof text.errno === 'undefined') {
+            try { text = typeof text === 'string' ? JSON.parse(text) : text; } catch (e) {
+                $('#btnLookup').removeAttr('disabled').text('查找玩家');
+                layer.alert('返回格式异常: ' + JSON.stringify(text), { icon: 2 }); return;
+            }
+        }
+        $('#btnLookup').removeAttr('disabled').text('查找玩家');
+
+        if (text.errno == 0) {
+            var d = text || {};
+            var roles = (d.roles && $.isArray(d.roles)) ? d.roles : [];
+            if (d.unique === true && roles.length === 1) {
+                applyRoleChoice(roles[0]);
+                layer.msg('已自动找到玩家并填入 UID', { icon: 1, time: 1200 });
+                return;
+            }
+            if (roles.length) {
+                renderRolesModal(roles);
+                return;
+            }
+            layer.alert(text.message || '未找到任何玩家', { icon: 0 });
+            return;
+        }
+
+        layer.alert(text.message || ('查询失败 errno=' + text.errno), { icon: 2 });
+    }, 'json').fail(function (xhr) {
+        $('#btnLookup').removeAttr('disabled').text('查找玩家');
+        layer.alert('请求失败 HTTP ' + xhr.status, { icon: 2 });
+    });
+}
+// 回车触发查找
+$('#lookup_key').on('keydown', function (e) {
+    if (e.keyCode === 13) { e.preventDefault(); doLookup(); }
+});
+// #uid 输入框：Ctrl+Enter 时，如果内容看起来像账号/角色名，丢给 lookup_key 反查一次
+$('#uid').on('keydown', function (e) {
+    if (e.keyCode === 13 && e.ctrlKey) {
+        var v = $.trim($('#uid').val());
+        if (!v) return;
+        // 禁止直接按 userId 查（按需求仅允许 账号/角色名 两种）
+        if (v.indexOf('u_Wk_') === 0 || v.indexOf('u_wk_') === 0) {
+            layer.alert('本查询仅支持 登录账号 / 角色名，不允许按 userId 查询', { icon: 2 });
+            return;
+        }
+        $('#lookup_key').val(v);
+        doLookup();
+    }
+});
+
+// ==================== 全服邮件群发（仅按服发送，SERVER_ID 跟随顶部选区从 config.php 读取，前端不传）====================
+$('.btn-broadmail').on('click', function () {
+    var title = $.trim($('#broadTitle').val());
+    var content = $.trim($('#broadContent').val());
+    var expire = $.trim($('#broadExpire').val());
+    if (!title) { layer.alert('请填写邮件标题', { icon: 2 }); return; }
+    if (!content) { layer.alert('请填写邮件正文', { icon: 2 }); return; }
+    // 全服邮件附件（从 broadItemId 取，单选 xmSelect）
+    var broadInst = xmSelect.get('#broadItemId', true);
+    var midVal = broadInst ? broadInst.getValue('valueStr') : '0';
+    var mid = parseInt(midVal) || 0;
+    var rawNum = $.trim($('#broadItemNum').val());
+    var mnum = (rawNum === '' || rawNum === null || rawNum === undefined) ? 0 : (parseInt(rawNum) || 0);
+    var attachments = [];
+    if (mid > 0) {
+        if (mnum < 1) { layer.alert('已选择附件（ID=' + mid + '），请填写附件数量（≥1），或改选“无附件（仅发文字）”', { icon: 2 }); $('#broadItemNum').focus(); return; }
+        attachments = [{ id: mid, count: mnum }];
+    } else {
+        mnum = 0; attachments = [];
+    }
+    var expDays = (expire === '' || isNaN(expire)) ? 30 : Math.max(1, Math.min(365, parseInt(expire)));
+    var extra = {
+        title: title,
+        content: content,
+        expire_days: expDays,
+        attachments: JSON.stringify(attachments)
+    };
+    // 按服群发：不需要 uid，SERVER_ID 由 gmquery.php 从 config.php 当前选区 $qus[$qu] 里取
+    postGM('sendmail_all', extra, null, function (text) {
+        var d = text.data || {};
+        var attTxt = (d.attachmentCount || 0) > 0
+            ? '，附件 ' + d.attachmentCount + ' 种'
+            : '（纯文字邮件）';
+        var scopeDesc = '';
+        if (d.quName) scopeDesc = d.quName + '（SERVER_ID=' + (d.serverId || '?') + '）';
+        else scopeDesc = d.serverId ? ('区服 S' + d.serverId) : '按服';
+        layer.alert(
+            '【全服邮件发送成功】\n' +
+            '目标范围：' + scopeDesc + '\n' +
+            '发送总数：' + (d.total || 0) + ' 封' + attTxt + '\n' +
+            '批次号：' + (d.batchId || '-') + '\n\n' +
+            '提示：玩家在线立即收到 WS 推送；离线玩家上线自动拉取。',
+            { icon: 1 }
+        );
+    }, false); // 群发不需要 uid
+});
+
+// 操作须知
+	$('.infobtn').on('click',function(){
+			layer.alert('进行上面操作之前请先认真看此说明!<br>1.充值元宝自动到账！<br>2.发物品邮件领取！', {icon: 0});
+　　});
+
+// 禁止 F12 / 右键
+window.onload = function () {
+    document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        if (e.keyCode == 123) return false;
+        if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) return false;
+    };
+    document.oncontextmenu = function () { return false; };
+};
+</script>
+</body>
+</html>

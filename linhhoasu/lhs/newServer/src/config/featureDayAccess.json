@@ -1,0 +1,152 @@
+{
+  "version": "20261007_feature_day1_v2",
+  "excludedSystems": [
+    315,
+    322
+  ],
+  "sentinelDay": 9999,
+  "rowPolicies": [
+    {
+      "table": "ElfFieldConfig",
+      "field": "openDay"
+    },
+    {
+      "table": "ValhallaFieldConfig",
+      "field": "openDay"
+    },
+    {
+      "table": "ValhallaConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "ValhallaConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionColorConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionColorConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionChangeColorConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionChangeColorConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionBathConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionBathConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionEndDressConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionEndDressConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionDressConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionDressConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionDressLevelConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionDressLevelConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionBgConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionBgConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FashionBubbleConfig",
+      "field": "openDay",
+      "selector": "showType",
+      "value": 3
+    },
+    {
+      "table": "FashionBubbleConfig",
+      "field": "openDayTw",
+      "selector": "showTypeTw",
+      "value": 3
+    },
+    {
+      "table": "FishSceneConfig",
+      "field": "openDay",
+      "selector": "isActivity",
+      "value": 1
+    },
+    {
+      "table": "GuildBattleConfig",
+      "field": "serverDay",
+      "rootOnly": true
+    }
+  ],
+  "systemOpenDayOverrides": [
+    231
+  ]
+}

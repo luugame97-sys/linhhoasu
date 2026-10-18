@@ -1,0 +1,70 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QA native số lượng vật phẩm</title><style>html,body{margin:0;height:100%;background:#20353b;color:#fff;font:14px Arial}.egret-player{position:absolute;top:0;left:0;height:88%;width:100%}#status{position:fixed;bottom:0;left:0;right:0;height:12%;overflow:auto;padding:4px;box-sizing:border-box;white-space:pre-wrap;background:#17252a}</style></head><body>
+<div class="egret-player" data-entry-class="QuantityMain" data-content-width="720" data-content-height="1150" data-scale-mode="showAll" data-frame-rate="30"></div><div id="status">Đang tải fixture native, không kết nối tài khoản...</div>
+<script>window.qaErrors=[];window.addEventListener('error',function(e){qaErrors.push(e.message);document.getElementById('status').textContent=qaErrors.join('\n');});window.addEventListener('unhandledrejection',function(e){qaErrors.push(String(e.reason&&e.reason.stack||e.reason));document.getElementById('status').textContent=qaErrors.join('\n');});window.AppInfo={params:{},ckState:false,inChina:0,lang:'cn'};window.platform={};</script>
+<script src="/game/js/egret.min_7d668222.js"></script><script src="/game/js/egret.web.min_587897e9.js"></script><script src="/game/js/egretex.min_37b3ee13.js"></script><script src="/game/js/thirds.min_b052d442.js"></script><script src="/game/js/start.min_52ac8d58.js"></script><script src="/game/js/main.min_a6195824.js"></script>
+<script>
+(async function(){
+ const params=new URLSearchParams(location.search);if(!params.has('baseline'))await new Promise((resolve,reject)=>{let script=document.createElement('script');script.src=params.has('live')?'http://103.116.105.154:81/js/lhs-item-quantity-v1.js?v=20260907_item_quantity_v2':'/game/js/lhs-item-quantity-v1.js';script.onload=resolve;script.onerror=reject;document.head.appendChild(script);});
+ const [cfg,resources,skins,fonts]=await Promise.all(['/config.json','/visual-assets.json','/skins.json','/fonts.json'].map(p=>fetch(p).then(r=>r.json())));
+ const textures={},pending={};window.qaAssetsMissing=[];
+ function texture(name){
+  if(textures[name])return Promise.resolve(textures[name]);if(pending[name])return pending[name];
+  let src=resources[name]||resources[name.replace(/_png$/,'')];if(!src)return Promise.reject(Error('IMAGE_MISSING_'+name));
+  return pending[name]=new Promise((resolve,reject)=>{let loader=new egret.ImageLoader;loader.addEventListener(egret.Event.COMPLETE,()=>{let t=new egret.Texture;t._setBitmapData(loader.data);textures[name]=t;resolve(t);},null);loader.addEventListener(egret.IOErrorEvent.IO_ERROR,reject,null);loader.load(src);});
+ }
+ async function asset(name){if(fonts[name]){let t=await texture(name.replace(/_fnt$/,''));return new egret.BitmapFont(t,{frames:fonts[name]});}return texture(name);}
+ RES.hasRes=name=>!!resources[name]||!!fonts[name];RES.getRes=name=>textures[name];RES.getResAsync=asset;RES.destroyRes=()=>true;
+ egret.registerImplementation('eui.IAssetAdapter',{getAsset:function(name,cb,obj){asset(name).then(t=>cb.call(obj,t,name)).catch(e=>{qaAssetsMissing.push(name);cb.call(obj,null,name);});}});
+ // No combat or network: only dormant cosmetic animation is disabled in this fixture.
+ spine.SkeletonAnimation.prototype.setAnimation=function(){};
+ spine.SkeletonAnimation.prototype.load=function(){return Promise.resolve();};
+ Object.defineProperty(GlobalManager,'Config',{get:()=>cfg,configurable:true});GlobalManager.LanguageConfig=cfg.LanguageConfig;
+ Object.defineProperty(GlobalManager,'ItemModel',{get:()=>({GetItemCount:()=>987654321}),configurable:true});
+ const messageCenter=new MessageCenter;Object.defineProperty(GlobalManager,'MessageCenter',{get:()=>messageCenter,configurable:true});
+ JSONParseClass.setData(skins);
+ window.QuantityMain=function(){let self=eui.UILayer.call(this)||this;self.addEventListener(egret.Event.ADDED_TO_STAGE,self.ready,self);return self;};__extends(QuantityMain,eui.UILayer);
+ QuantityMain.prototype.ready=async function(){
+  const root=this,checks=[],icons=[];window.qaRoot=root;Main.getInstance=function(){return root;};
+  function caption(text,x,y,size=24){let l=new eui.Label;l.text=text;l.fontFamily='Arial';l.size=size;l.x=x;l.y=y;l.textColor=0xffffff;root.addChild(l);return l;}
+  if(params.has('rank')){
+   caption(params.has('baseline')?'BXH CÂU CÁ — TRƯỚC SỬA':'BXH CÂU CÁ — SAU SỬA',50,12,26);
+   const ranks=[];for(const row of Object.values(cfg.Activity6RankConfig[6006])){let item=new RankRewardItem;root.addChild(item);item.x=59;item.y=60+ranks.length*134;item.validateNow();item.data={from:row.rankMin,rewardList:row.rewards,text:row.rankShow};item.validateNow();item.list.validateNow();ranks.push(item);}
+   await Promise.allSettled(Object.values(pending));await new Promise(resolve=>egret.callLater(resolve,null));root.validateNow();
+   let rows=[];for(const rank of ranks){rank.validateNow();rank.list.validateNow();for(let i=0;i<rank.list.numElements;i++){let item=rank.list.getElementAt(i);if(item&&item.data&&item.countLab){item.validateNow();rows.push({rank:rank.data.from,id:item.data.id,count:item.data.count,text:item.countLab.text,className:egret.getQualifiedClassName(item.countLab),width:item.countLab.width,textWidth:item.countLab.textWidth});}}}
+   let result={mode:params.has('baseline')?'rank-before':params.has('live')?'rank-live-asset':'rank-after',patchSha256:params.has('baseline')?null:await fetch('/patch-hash').then(r=>r.text()),rows,errors:qaErrors,missingAssets:[...new Set(qaAssetsMissing)]};
+   result.pass=rows.length===30&&!qaErrors.length&&(params.has('baseline')||rows.every(row=>row.text===LhsItemQuantity.compact(row.count)));
+   document.getElementById('status').textContent=JSON.stringify(result,null,2);await fetch('/result',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(result)});return;
+  }
+  caption('SỐ LƯỢNG VẬT PHẨM — NATIVE EUI',35,20,28);caption('Fixture không tài khoản • bấm icon để xem nguyên số',35,60,19);
+  const values=[1000000,800000,600000,500000,400000,300000,680000,99999,999999,100000000,1000000000,1000000000000];
+  for(let i=0;i<values.length;i++){
+   const x=45+(i%4)*172,y=105+Math.floor(i/4)*190;
+   let item=new ItemIcon;root.addChild(item);item.x=x;item.y=y;item.scaleX=item.scaleY=.9;item.validateNow();item.data={id:i%2?6:1,count:values[i]};item.validateNow();icons.push(item);
+   item.setShowInfo(false);item.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>showTip(item),null);
+   caption(LhsItemQuantity.full(values[i]),x-5,y+135,19);
+  }
+  caption('Kiểm tái sử dụng, callback màu và số 0',35,685,24);
+  let reused=new ItemIcon;root.addChild(reused);reused.x=65;reused.y=735;reused.validateNow();reused.data={id:1,count:9007199254740991};reused.validateNow();reused.data={id:1,count:30};reused.validateNow();checks.push({name:'recycle restores font',pass:reused.countLab.size===30&&reused.countLab.text==='30'});
+  let custom=new ItemIcon;root.addChild(custom);custom.x=280;custom.y=735;custom.validateNow();custom.data={id:6,count:500000,labelShow:function(n,label){label.tint=0xffdd55;return '5/10';}};custom.validateNow();checks.push({name:'callback tint preserved',pass:custom.countLab.text==='5/10'&&custom.countLab.tint===0xffdd55});
+  let zero=new ItemIcon;root.addChild(zero);zero.x=500;zero.y=735;zero.validateNow();zero.data={id:1,count:0,countAlwaysShow:true};zero.validateNow();checks.push({name:'zero explicit',pass:zero.countLab.visible&&zero.countLab.text==='0'});
+  function showTip(item){
+   if(window.qaTip&&window.qaTip.parent)window.qaTip.parent.removeChild(window.qaTip);
+   let tip=new ItemTipsView;root.addChild(tip);tip.validateNow();tip.OnOpen({id:item.data.id,count:item.data.count,notShowGetWat:true},item);window.qaTip=tip;
+   document.getElementById('status').textContent='CHI TIẾT NATIVE: '+tip.descLabel.text+' | '+tip.countLabel.text;
+   tip.maskGroup.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{if(tip.parent)tip.parent.removeChild(tip);},null);
+  }
+  // Wait for real texture loads and EUI's validation pass before collecting metrics.
+  await Promise.allSettled(Object.values(pending));await new Promise(resolve=>egret.callLater(resolve,null));
+  root.validateNow();
+  const rows=icons.map((item,i)=>{item.validateNow();let label=item.countLab;const expected=LhsItemQuantity.compact(values[i]);return {count:values[i],text:label.text,expected,width:label.width,textWidth:label.textWidth,height:label.height,size:label.size,className:egret.getQualifiedClassName(label),pass:label.text===expected&&label.textWidth<=118&&label.width>=label.textWidth};});
+  const details=new ItemTipsView;root.addChild(details);details.validateNow();details.OnOpen({id:1,count:1000000,notShowGetWat:true},icons[0]);
+  checks.push({name:'native exact tooltip',pass:details.descLabel.text.indexOf('Số lượng: 1.000.000')===0});
+  details.OnOpen({id:6,count:800000,notShowGetWat:true},icons[1]);checks.push({name:'tooltip reused no stale count',pass:details.descLabel.text.indexOf('Số lượng: 800.000')===0&&details.descLabel.text.indexOf('1.000.000')<0});
+  details.OnOpen({id:1,count:680000,isOwner:true,hideExtraCount:1,notShowGetWat:true},icons[0]);checks.push({name:'bag exact stack count while owned total hidden',pass:details.descLabel.text.indexOf('Số lượng: 680.000')===0&&!details.countLabel.visible});root.removeChild(details);
+  let result={patch:LhsItemQuantity.version,patchSha256:await fetch('/patch-hash').then(r=>r.text()),rows,checks,errors:qaErrors,missingAssets:[...new Set(qaAssetsMissing)],patchedParts:LhsItemQuantity.patchedParts};result.pass=rows.every(r=>r.pass)&&checks.every(c=>c.pass)&&!qaErrors.length;
+  document.getElementById('status').textContent=JSON.stringify(result,null,2);await fetch('/result',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(result)});
+ };
+ egret.runEgret({renderMode:'webgl',audioType:0});
+})().catch(e=>{qaErrors.push(e.stack);document.getElementById('status').textContent=e.stack;});
+</script></body></html>

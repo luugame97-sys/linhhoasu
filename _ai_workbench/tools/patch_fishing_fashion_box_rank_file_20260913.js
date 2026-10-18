@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('fs'),zlib=require('zlib'),crypto=require('crypto'),assert=require('node:assert/strict'),path=require('path');
+const {BinJsonUtil:B,ByteArray:A}=require(path.resolve(__dirname,'../../linhhoasu/lhs/newServer/src/protocol/BinJsonUtil'));
+const input=process.argv[2],output=process.argv[3]; if(!input||!output)throw Error('USAGE input output');
+const counts={1:10,2:7,3:5,4:3,11:2,51:2,101:2,501:2};
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+function decode(b){let p=0,o=[];while(p<b.length){const s=p,n=b[p++],name=b.toString('utf8',p,p+n);p+=n;const len=b.readUInt32BE(p);p+=4;const x=zlib.inflateSync(b.subarray(p,p+len));p+=len;o.push({name,value:B.readFullJson(new A(x.buffer.slice(x.byteOffset,x.byteOffset+x.byteLength))),raw:b.subarray(s,p)});}assert.equal(p,b.length);return o;}
+function encode(name,v){const a=new A(undefined,1024*1024);B.json2bin(v,a);const body=zlib.deflateSync(Buffer.from(a.buffer)),n=Buffer.from(name),h=Buffer.alloc(1+n.length+4);h[0]=n.length;n.copy(h,1);h.writeUInt32BE(body.length,n.length+1);return Buffer.concat([h,body]);}
+const before=fs.readFileSync(input),parts=decode(before),entry=parts.find(x=>x.name==='Activity6RankConfig'),table=entry?.value?.[6006];assert(table,'TABLE_MISSING');const changed=[];
+for(const [rank,count] of Object.entries(counts)){const row=table[rank];assert(row&&row.rankMin===Number(rank),'RANK_'+rank);const found=row.rewards.filter(x=>x.id===99002);if(found.length===1){assert.equal(found[0].count,count,'EXISTING_'+rank);const idx=row.rewards.findIndex(x=>x.id===99002);if(idx!==0){const [box]=row.rewards.splice(idx,1);row.rewards.unshift(box);changed.push({rank,count,order:'first'});}}else{assert.equal(found.length,0,'DUPLICATE_'+rank);row.rewards.unshift({id:99002,count});changed.push({rank,count,order:'first'});}}
+const after=Buffer.concat(parts.map(x=>x===entry?encode(x.name,x.value):x.raw));const check=decode(after);for(let i=0;i<parts.length;i++){assert.equal(check[i].name,parts[i].name);if(parts[i]!==entry)assert(check[i].raw.equals(parts[i].raw),'UNRELATED_'+parts[i].name);}fs.writeFileSync(output,after);console.log(JSON.stringify({result:'PASS',beforeHash:hash(before),afterHash:hash(after),bytes:after.length,tables:parts.length,changed}));

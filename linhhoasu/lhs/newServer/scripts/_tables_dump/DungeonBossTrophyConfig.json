@@ -1,0 +1,96 @@
+{
+  "_table": "DungeonBossTrophyConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,rewards,item",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "rewards": [
+          {
+            "id": 101101,
+            "count": 1
+          }
+        ],
+        "item": 101101
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "rewards": [
+          {
+            "id": 101102,
+            "count": 1
+          }
+        ],
+        "item": 101102
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "rewards": [
+          {
+            "id": 101103,
+            "count": 1
+          }
+        ],
+        "item": 101103
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "rewards": [
+        {
+          "id": 101101,
+          "count": 1
+        }
+      ],
+      "item": 101101
+    },
+    "2": {
+      "id": 2,
+      "rewards": [
+        {
+          "id": 101102,
+          "count": 1
+        }
+      ],
+      "item": 101102
+    },
+    "3": {
+      "id": 3,
+      "rewards": [
+        {
+          "id": 101103,
+          "count": 1
+        }
+      ],
+      "item": 101103
+    },
+    "4": {
+      "id": 4,
+      "rewards": [
+        {
+          "id": 101104,
+          "count": 1
+        }
+      ],
+      "item": 101104
+    },
+    "5": {
+      "id": 5,
+      "rewards": [
+        {
+          "id": 101105,
+          "count": 1
+        }
+      ],
+      "item": 101105
+    }
+  }
+}

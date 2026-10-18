@@ -1,0 +1,82 @@
+{
+  "_table": "TopCombatConfig",
+  "_rows": 16,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "combatCost": {
+        "id": 88,
+        "count": 1
+      }
+    },
+    {
+      "combatRefreshCost": {
+        "id": 1,
+        "count": 10
+      }
+    },
+    {
+      "combatReward": [
+        {
+          "id": 89,
+          "count": 10
+        }
+      ]
+    }
+  ],
+  "data": {
+    "combatCost": {
+      "id": 88,
+      "count": 1
+    },
+    "combatRefreshCost": {
+      "id": 1,
+      "count": 10
+    },
+    "combatReward": [
+      {
+        "id": 89,
+        "count": 10
+      }
+    ],
+    "combatFailReward": [
+      {
+        "id": 89,
+        "count": 5
+      }
+    ],
+    "combatRefreshTime": 3,
+    "combatDayRankMail": 17,
+    "combatWeekRankMail": 18,
+    "matchEnemyNum": 5,
+    "matchEnemyRange": [
+      2000,
+      2000,
+      2000,
+      2000,
+      2000
+    ],
+    "initialRank": 9999,
+    "messageRank": 10,
+    "initialRobotId": 1,
+    "robotSever": [
+      30036510,
+      30036511,
+      30036512,
+      30036513,
+      30036514,
+      30036515,
+      30036516,
+      30036517,
+      30036518,
+      30036519
+    ],
+    "robotSweepRatio": 5000,
+    "combatClose": [
+      7,
+      82800
+    ],
+    "combatCloseDuration": 46800
+  }
+}

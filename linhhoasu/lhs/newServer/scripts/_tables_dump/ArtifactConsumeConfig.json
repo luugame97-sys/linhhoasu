@@ -1,0 +1,6084 @@
+{
+  "_table": "ArtifactConsumeConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+  "_sample": [
+    {
+      "4": {
+        "1": {
+          "quality": 4,
+          "level": 1,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 38
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 40
+            }
+          ],
+          "rate": 95,
+          "returns": [
+            {
+              "id": 52,
+              "count": 10
+            }
+          ]
+        },
+        "2": {
+          "quality": 4,
+          "level": 2,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 48
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 50
+            }
+          ],
+          "rate": 95,
+          "returns": [
+            {
+              "id": 52,
+              "count": 22
+            }
+          ]
+        },
+        "3": {
+          "quality": 4,
+          "level": 3,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 54
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 60
+            }
+          ],
+          "rate": 90,
+          "returns": [
+            {
+              "id": 52,
+              "count": 37
+            }
+          ]
+        },
+        "4": {
+          "quality": 4,
+          "level": 4,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 72
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 80
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ],
+          "rate": 90,
+          "returns": [
+            {
+              "id": 52,
+              "count": 55
+            }
+          ]
+        },
+        "5": {
+          "quality": 4,
+          "level": 5,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 85
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 100
+            }
+          ],
+          "rate": 85,
+          "returns": [
+            {
+              "id": 52,
+              "count": 79
+            }
+          ]
+        },
+        "6": {
+          "quality": 4,
+          "level": 6,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 111
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 130
+            }
+          ],
+          "rate": 85,
+          "returns": [
+            {
+              "id": 52,
+              "count": 109
+            }
+          ]
+        },
+        "7": {
+          "quality": 4,
+          "level": 7,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 128
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 160
+            }
+          ],
+          "rate": 80,
+          "returns": [
+            {
+              "id": 52,
+              "count": 148
+            }
+          ]
+        },
+        "8": {
+          "quality": 4,
+          "level": 8,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 160
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 200
+            }
+          ],
+          "rate": 80,
+          "returns": [
+            {
+              "id": 52,
+              "count": 196
+            }
+          ]
+        },
+        "9": {
+          "quality": 4,
+          "level": 9,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 180
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 240
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ],
+          "rate": 75,
+          "returns": [
+            {
+              "id": 52,
+              "count": 256
+            }
+          ]
+        },
+        "10": {
+          "quality": 4,
+          "level": 10,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 218
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 290
+            }
+          ],
+          "rate": 75,
+          "returns": [
+            {
+              "id": 52,
+              "count": 328
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "11": {
+          "quality": 4,
+          "level": 11,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 238
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 340
+            }
+          ],
+          "rate": 70,
+          "returns": [
+            {
+              "id": 52,
+              "count": 415
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "12": {
+          "quality": 4,
+          "level": 12,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 280
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 400
+            }
+          ],
+          "rate": 70,
+          "returns": [
+            {
+              "id": 52,
+              "count": 517
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "13": {
+          "quality": 4,
+          "level": 13,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 299
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 460
+            }
+          ],
+          "rate": 65,
+          "returns": [
+            {
+              "id": 52,
+              "count": 637
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "14": {
+          "quality": 4,
+          "level": 14,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 345
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 530
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ],
+          "rate": 65,
+          "returns": [
+            {
+              "id": 52,
+              "count": 775
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "15": {
+          "quality": 4,
+          "level": 15,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 360
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 600
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 934
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "16": {
+          "quality": 4,
+          "level": 16,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 408
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 680
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1114
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "17": {
+          "quality": 4,
+          "level": 17,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 456
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 760
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1318
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "18": {
+          "quality": 4,
+          "level": 18,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 510
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 850
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1546
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "19": {
+          "quality": 4,
+          "level": 19,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 564
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 940
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1801
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "20": {
+          "quality": 4,
+          "level": 20,
+          "consumes": [],
+          "totalConsumes": [],
+          "rate": 0,
+          "returns": [
+            {
+              "id": 52,
+              "count": 2083
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "6": {
+        "1": {
+          "quality": 6,
+          "level": 1,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 57
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 60
+            }
+          ],
+          "rate": 95,
+          "returns": [
+            {
+              "id": 52,
+              "count": 15
+            }
+          ]
+        },
+        "2": {
+          "quality": 6,
+          "level": 2,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 67
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 70
+            }
+          ],
+          "rate": 95,
+          "returns": [
+            {
+              "id": 52,
+              "count": 33
+            }
+          ]
+        },
+        "3": {
+          "quality": 6,
+          "level": 3,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 81
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 90
+            }
+          ],
+          "rate": 90,
+          "returns": [
+            {
+              "id": 52,
+              "count": 54
+            }
+          ]
+        },
+        "4": {
+          "quality": 6,
+          "level": 4,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 99
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 110
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ],
+          "rate": 90,
+          "returns": [
+            {
+              "id": 52,
+              "count": 81
+            }
+          ]
+        },
+        "5": {
+          "quality": 6,
+          "level": 5,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 119
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 140
+            }
+          ],
+          "rate": 85,
+          "returns": [
+            {
+              "id": 52,
+              "count": 114
+            }
+          ]
+        },
+        "6": {
+          "quality": 6,
+          "level": 6,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 153
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 180
+            }
+          ],
+          "rate": 85,
+          "returns": [
+            {
+              "id": 52,
+              "count": 156
+            }
+          ]
+        },
+        "7": {
+          "quality": 6,
+          "level": 7,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 184
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 230
+            }
+          ],
+          "rate": 80,
+          "returns": [
+            {
+              "id": 52,
+              "count": 210
+            }
+          ]
+        },
+        "8": {
+          "quality": 6,
+          "level": 8,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 232
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 290
+            }
+          ],
+          "rate": 80,
+          "returns": [
+            {
+              "id": 52,
+              "count": 279
+            }
+          ]
+        },
+        "9": {
+          "quality": 6,
+          "level": 9,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 263
+            },
+            {
+              "id": 53,
+              "count": 4
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 350
+            },
+            {
+              "id": 53,
+              "count": 4
+            }
+          ],
+          "rate": 75,
+          "returns": [
+            {
+              "id": 52,
+              "count": 366
+            }
+          ]
+        },
+        "10": {
+          "quality": 6,
+          "level": 10,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 315
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 420
+            }
+          ],
+          "rate": 75,
+          "returns": [
+            {
+              "id": 52,
+              "count": 471
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "11": {
+          "quality": 6,
+          "level": 11,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 350
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 500
+            }
+          ],
+          "rate": 70,
+          "returns": [
+            {
+              "id": 52,
+              "count": 597
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "12": {
+          "quality": 6,
+          "level": 12,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 413
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 590
+            }
+          ],
+          "rate": 70,
+          "returns": [
+            {
+              "id": 52,
+              "count": 747
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "13": {
+          "quality": 6,
+          "level": 13,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 449
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 690
+            }
+          ],
+          "rate": 65,
+          "returns": [
+            {
+              "id": 52,
+              "count": 924
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "14": {
+          "quality": 6,
+          "level": 14,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 514
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 790
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ],
+          "rate": 65,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1131
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "15": {
+          "quality": 6,
+          "level": 15,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 540
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 900
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1368
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "16": {
+          "quality": 6,
+          "level": 16,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 612
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1020
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1638
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "17": {
+          "quality": 6,
+          "level": 17,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 690
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1150
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1944
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "18": {
+          "quality": 6,
+          "level": 18,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 774
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1290
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 2289
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "19": {
+          "quality": 6,
+          "level": 19,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 858
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1430
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 2676
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "20": {
+          "quality": 6,
+          "level": 20,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 916
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1580
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 3105
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ]
+        },
+        "21": {
+          "quality": 6,
+          "level": 21,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1009
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1740
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 3579
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ]
+        },
+        "22": {
+          "quality": 6,
+          "level": 22,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1108
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1910
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 4101
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ]
+        },
+        "23": {
+          "quality": 6,
+          "level": 23,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1212
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2090
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 4674
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ]
+        },
+        "24": {
+          "quality": 6,
+          "level": 24,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1317
+            },
+            {
+              "id": 53,
+              "count": 4
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2270
+            },
+            {
+              "id": 53,
+              "count": 4
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 5301
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ]
+        },
+        "25": {
+          "quality": 6,
+          "level": 25,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1378
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2460
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 5982
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "26": {
+          "quality": 6,
+          "level": 26,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1490
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2660
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 6720
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "27": {
+          "quality": 6,
+          "level": 27,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1607
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2870
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 7518
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "28": {
+          "quality": 6,
+          "level": 28,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1730
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 3090
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 8379
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "29": {
+          "quality": 6,
+          "level": 29,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1854
+            },
+            {
+              "id": 53,
+              "count": 16
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 3310
+            },
+            {
+              "id": 53,
+              "count": 16
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 9306
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "30": {
+          "quality": 6,
+          "level": 30,
+          "consumes": [],
+          "totalConsumes": [],
+          "rate": 0,
+          "returns": [
+            {
+              "id": 52,
+              "count": 10299
+            },
+            {
+              "id": 53,
+              "count": 11
+            }
+          ]
+        }
+      }
+    },
+    {
+      "7": {
+        "1": {
+          "quality": 7,
+          "level": 1,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 95
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 100
+            }
+          ],
+          "rate": 95,
+          "returns": [
+            {
+              "id": 52,
+              "count": 25
+            }
+          ]
+        },
+        "2": {
+          "quality": 7,
+          "level": 2,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 105
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 110
+            }
+          ],
+          "rate": 95,
+          "returns": [
+            {
+              "id": 52,
+              "count": 55
+            }
+          ]
+        },
+        "3": {
+          "quality": 7,
+          "level": 3,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 117
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 130
+            }
+          ],
+          "rate": 90,
+          "returns": [
+            {
+              "id": 52,
+              "count": 88
+            }
+          ]
+        },
+        "4": {
+          "quality": 7,
+          "level": 4,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 144
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 160
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ],
+          "rate": 90,
+          "returns": [
+            {
+              "id": 52,
+              "count": 127
+            }
+          ]
+        },
+        "5": {
+          "quality": 7,
+          "level": 5,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 170
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 200
+            }
+          ],
+          "rate": 85,
+          "returns": [
+            {
+              "id": 52,
+              "count": 175
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "6": {
+          "quality": 7,
+          "level": 6,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 213
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 250
+            }
+          ],
+          "rate": 85,
+          "returns": [
+            {
+              "id": 52,
+              "count": 235
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "7": {
+          "quality": 7,
+          "level": 7,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 248
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 310
+            }
+          ],
+          "rate": 80,
+          "returns": [
+            {
+              "id": 52,
+              "count": 310
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "8": {
+          "quality": 7,
+          "level": 8,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 304
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 380
+            }
+          ],
+          "rate": 80,
+          "returns": [
+            {
+              "id": 52,
+              "count": 403
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "9": {
+          "quality": 7,
+          "level": 9,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 345
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 460
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ],
+          "rate": 75,
+          "returns": [
+            {
+              "id": 52,
+              "count": 517
+            },
+            {
+              "id": 53,
+              "count": 1
+            }
+          ]
+        },
+        "10": {
+          "quality": 7,
+          "level": 10,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 413
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 550
+            }
+          ],
+          "rate": 75,
+          "returns": [
+            {
+              "id": 52,
+              "count": 655
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "11": {
+          "quality": 7,
+          "level": 11,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 455
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 650
+            }
+          ],
+          "rate": 70,
+          "returns": [
+            {
+              "id": 52,
+              "count": 820
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "12": {
+          "quality": 7,
+          "level": 12,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 532
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 760
+            }
+          ],
+          "rate": 70,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1015
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "13": {
+          "quality": 7,
+          "level": 13,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 572
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 880
+            }
+          ],
+          "rate": 65,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1243
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "14": {
+          "quality": 7,
+          "level": 14,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 657
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1010
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ],
+          "rate": 65,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1507
+            },
+            {
+              "id": 53,
+              "count": 2
+            }
+          ]
+        },
+        "15": {
+          "quality": 7,
+          "level": 15,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 690
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1150
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 1810
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ]
+        },
+        "16": {
+          "quality": 7,
+          "level": 16,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 780
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1300
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 2155
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ]
+        },
+        "17": {
+          "quality": 7,
+          "level": 17,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 876
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1460
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 2545
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ]
+        },
+        "18": {
+          "quality": 7,
+          "level": 18,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 978
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1630
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 2983
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ]
+        },
+        "19": {
+          "quality": 7,
+          "level": 19,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1086
+            },
+            {
+              "id": 53,
+              "count": 10
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 1810
+            },
+            {
+              "id": 53,
+              "count": 10
+            }
+          ],
+          "rate": 60,
+          "returns": [
+            {
+              "id": 52,
+              "count": 3472
+            },
+            {
+              "id": 53,
+              "count": 3
+            }
+          ]
+        },
+        "20": {
+          "quality": 7,
+          "level": 20,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1160
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2000
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 4015
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "21": {
+          "quality": 7,
+          "level": 21,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1276
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2200
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 4615
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "22": {
+          "quality": 7,
+          "level": 22,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1398
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2410
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 5275
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "23": {
+          "quality": 7,
+          "level": 23,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1525
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2630
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 5998
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "24": {
+          "quality": 7,
+          "level": 24,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1659
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 2860
+            },
+            {
+              "id": 53,
+              "count": 5
+            }
+          ],
+          "rate": 58,
+          "returns": [
+            {
+              "id": 52,
+              "count": 6787
+            },
+            {
+              "id": 53,
+              "count": 6
+            }
+          ]
+        },
+        "25": {
+          "quality": 7,
+          "level": 25,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1736
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 3100
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 7645
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ]
+        },
+        "26": {
+          "quality": 7,
+          "level": 26,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 1876
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 3350
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 8575
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ]
+        },
+        "27": {
+          "quality": 7,
+          "level": 27,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2022
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 3610
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 9580
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ]
+        },
+        "28": {
+          "quality": 7,
+          "level": 28,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2173
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 3880
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 10663
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ]
+        },
+        "29": {
+          "quality": 7,
+          "level": 29,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2330
+            },
+            {
+              "id": 53,
+              "count": 20
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 4160
+            },
+            {
+              "id": 53,
+              "count": 20
+            }
+          ],
+          "rate": 56,
+          "returns": [
+            {
+              "id": 52,
+              "count": 11827
+            },
+            {
+              "id": 53,
+              "count": 8
+            }
+          ]
+        },
+        "30": {
+          "quality": 7,
+          "level": 30,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2403
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 4450
+            }
+          ],
+          "rate": 54,
+          "returns": [
+            {
+              "id": 52,
+              "count": 13075
+            },
+            {
+              "id": 53,
+              "count": 14
+            }
+          ]
+        },
+        "31": {
+          "quality": 7,
+          "level": 31,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2565
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 4750
+            }
+          ],
+          "rate": 54,
+          "returns": [
+            {
+              "id": 52,
+              "count": 14410
+            },
+            {
+              "id": 53,
+              "count": 14
+            }
+          ]
+        },
+        "32": {
+          "quality": 7,
+          "level": 32,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2732
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 5060
+            }
+          ],
+          "rate": 54,
+          "returns": [
+            {
+              "id": 52,
+              "count": 15835
+            },
+            {
+              "id": 53,
+              "count": 14
+            }
+          ]
+        },
+        "33": {
+          "quality": 7,
+          "level": 33,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 2905
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 5380
+            }
+          ],
+          "rate": 54,
+          "returns": [
+            {
+              "id": 52,
+              "count": 17353
+            },
+            {
+              "id": 53,
+              "count": 14
+            }
+          ]
+        },
+        "34": {
+          "quality": 7,
+          "level": 34,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3083
+            },
+            {
+              "id": 53,
+              "count": 10
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 5710
+            },
+            {
+              "id": 53,
+              "count": 10
+            }
+          ],
+          "rate": 54,
+          "returns": [
+            {
+              "id": 52,
+              "count": 18967
+            },
+            {
+              "id": 53,
+              "count": 14
+            }
+          ]
+        },
+        "35": {
+          "quality": 7,
+          "level": 35,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3146
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 6050
+            }
+          ],
+          "rate": 52,
+          "returns": [
+            {
+              "id": 52,
+              "count": 20680
+            },
+            {
+              "id": 53,
+              "count": 17
+            }
+          ]
+        },
+        "36": {
+          "quality": 7,
+          "level": 36,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3328
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 6400
+            }
+          ],
+          "rate": 52,
+          "returns": [
+            {
+              "id": 52,
+              "count": 22495
+            },
+            {
+              "id": 53,
+              "count": 17
+            }
+          ]
+        },
+        "37": {
+          "quality": 7,
+          "level": 37,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3515
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 6760
+            }
+          ],
+          "rate": 52,
+          "returns": [
+            {
+              "id": 52,
+              "count": 24415
+            },
+            {
+              "id": 53,
+              "count": 17
+            }
+          ]
+        },
+        "38": {
+          "quality": 7,
+          "level": 38,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3708
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 7130
+            }
+          ],
+          "rate": 52,
+          "returns": [
+            {
+              "id": 52,
+              "count": 26443
+            },
+            {
+              "id": 53,
+              "count": 17
+            }
+          ]
+        },
+        "39": {
+          "quality": 7,
+          "level": 39,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3905
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 7510
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ],
+          "rate": 52,
+          "returns": [
+            {
+              "id": 52,
+              "count": 28582
+            },
+            {
+              "id": 53,
+              "count": 17
+            }
+          ]
+        },
+        "40": {
+          "quality": 7,
+          "level": 40,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 3950
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 7900
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 30835
+            },
+            {
+              "id": 53,
+              "count": 26
+            }
+          ]
+        },
+        "41": {
+          "quality": 7,
+          "level": 41,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 4150
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 8300
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 33205
+            },
+            {
+              "id": 53,
+              "count": 26
+            }
+          ]
+        },
+        "42": {
+          "quality": 7,
+          "level": 42,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 4355
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 8710
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 35695
+            },
+            {
+              "id": 53,
+              "count": 26
+            }
+          ]
+        },
+        "43": {
+          "quality": 7,
+          "level": 43,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 4565
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 9130
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 38308
+            },
+            {
+              "id": 53,
+              "count": 26
+            }
+          ]
+        },
+        "44": {
+          "quality": 7,
+          "level": 44,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 4780
+            },
+            {
+              "id": 53,
+              "count": 15
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 9560
+            },
+            {
+              "id": 53,
+              "count": 15
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 41047
+            },
+            {
+              "id": 53,
+              "count": 26
+            }
+          ]
+        },
+        "45": {
+          "quality": 7,
+          "level": 45,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 5000
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 10000
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 43915
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ]
+        },
+        "46": {
+          "quality": 7,
+          "level": 46,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 5225
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 10450
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 46915
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ]
+        },
+        "47": {
+          "quality": 7,
+          "level": 47,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 5455
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 10910
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 50050
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ]
+        },
+        "48": {
+          "quality": 7,
+          "level": 48,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 5690
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 11380
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 53323
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ]
+        },
+        "49": {
+          "quality": 7,
+          "level": 49,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 5930
+            },
+            {
+              "id": 53,
+              "count": 40
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 11860
+            },
+            {
+              "id": 53,
+              "count": 40
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 56737
+            },
+            {
+              "id": 53,
+              "count": 30
+            }
+          ]
+        },
+        "50": {
+          "quality": 7,
+          "level": 50,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 6175
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 12350
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 60295
+            },
+            {
+              "id": 53,
+              "count": 42
+            }
+          ]
+        },
+        "51": {
+          "quality": 7,
+          "level": 51,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 6425
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 12850
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 64000
+            },
+            {
+              "id": 53,
+              "count": 42
+            }
+          ]
+        },
+        "52": {
+          "quality": 7,
+          "level": 52,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 6680
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 13360
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 67855
+            },
+            {
+              "id": 53,
+              "count": 42
+            }
+          ]
+        },
+        "53": {
+          "quality": 7,
+          "level": 53,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 6940
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 13880
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 71863
+            },
+            {
+              "id": 53,
+              "count": 42
+            }
+          ]
+        },
+        "54": {
+          "quality": 7,
+          "level": 54,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 7205
+            },
+            {
+              "id": 53,
+              "count": 20
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 14410
+            },
+            {
+              "id": 53,
+              "count": 20
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 76027
+            },
+            {
+              "id": 53,
+              "count": 42
+            }
+          ]
+        },
+        "55": {
+          "quality": 7,
+          "level": 55,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 7475
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 14950
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 80350
+            },
+            {
+              "id": 53,
+              "count": 48
+            }
+          ]
+        },
+        "56": {
+          "quality": 7,
+          "level": 56,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 7750
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 15500
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 84835
+            },
+            {
+              "id": 53,
+              "count": 48
+            }
+          ]
+        },
+        "57": {
+          "quality": 7,
+          "level": 57,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 8030
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 16060
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 89485
+            },
+            {
+              "id": 53,
+              "count": 48
+            }
+          ]
+        },
+        "58": {
+          "quality": 7,
+          "level": 58,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 8315
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 16630
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 94303
+            },
+            {
+              "id": 53,
+              "count": 48
+            }
+          ]
+        },
+        "59": {
+          "quality": 7,
+          "level": 59,
+          "consumes": [
+            {
+              "id": 52,
+              "count": 8605
+            },
+            {
+              "id": 53,
+              "count": 50
+            }
+          ],
+          "totalConsumes": [
+            {
+              "id": 52,
+              "count": 17210
+            },
+            {
+              "id": 53,
+              "count": 50
+            }
+          ],
+          "rate": 50,
+          "returns": [
+            {
+              "id": 52,
+              "count": 99292
+            },
+            {
+              "id": 53,
+              "count": 48
+            }
+          ]
+        },
+        "60": {
+          "quality": 7,
+          "level": 60,
+          "consumes": [],
+          "totalConsumes": [],
+          "rate": 0,
+          "returns": [
+            {
+              "id": 52,
+              "count": 104455
+            },
+            {
+              "id": 53,
+              "count": 63
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "data": {
+    "4": {
+      "1": {
+        "quality": 4,
+        "level": 1,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 38
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 40
+          }
+        ],
+        "rate": 95,
+        "returns": [
+          {
+            "id": 52,
+            "count": 10
+          }
+        ]
+      },
+      "2": {
+        "quality": 4,
+        "level": 2,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 48
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 50
+          }
+        ],
+        "rate": 95,
+        "returns": [
+          {
+            "id": 52,
+            "count": 22
+          }
+        ]
+      },
+      "3": {
+        "quality": 4,
+        "level": 3,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 54
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 60
+          }
+        ],
+        "rate": 90,
+        "returns": [
+          {
+            "id": 52,
+            "count": 37
+          }
+        ]
+      },
+      "4": {
+        "quality": 4,
+        "level": 4,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 72
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 80
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ],
+        "rate": 90,
+        "returns": [
+          {
+            "id": 52,
+            "count": 55
+          }
+        ]
+      },
+      "5": {
+        "quality": 4,
+        "level": 5,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 85
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 100
+          }
+        ],
+        "rate": 85,
+        "returns": [
+          {
+            "id": 52,
+            "count": 79
+          }
+        ]
+      },
+      "6": {
+        "quality": 4,
+        "level": 6,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 111
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 130
+          }
+        ],
+        "rate": 85,
+        "returns": [
+          {
+            "id": 52,
+            "count": 109
+          }
+        ]
+      },
+      "7": {
+        "quality": 4,
+        "level": 7,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 128
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 160
+          }
+        ],
+        "rate": 80,
+        "returns": [
+          {
+            "id": 52,
+            "count": 148
+          }
+        ]
+      },
+      "8": {
+        "quality": 4,
+        "level": 8,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 160
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 200
+          }
+        ],
+        "rate": 80,
+        "returns": [
+          {
+            "id": 52,
+            "count": 196
+          }
+        ]
+      },
+      "9": {
+        "quality": 4,
+        "level": 9,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 180
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 240
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ],
+        "rate": 75,
+        "returns": [
+          {
+            "id": 52,
+            "count": 256
+          }
+        ]
+      },
+      "10": {
+        "quality": 4,
+        "level": 10,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 218
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 290
+          }
+        ],
+        "rate": 75,
+        "returns": [
+          {
+            "id": 52,
+            "count": 328
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "11": {
+        "quality": 4,
+        "level": 11,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 238
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 340
+          }
+        ],
+        "rate": 70,
+        "returns": [
+          {
+            "id": 52,
+            "count": 415
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "12": {
+        "quality": 4,
+        "level": 12,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 280
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 400
+          }
+        ],
+        "rate": 70,
+        "returns": [
+          {
+            "id": 52,
+            "count": 517
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "13": {
+        "quality": 4,
+        "level": 13,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 299
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 460
+          }
+        ],
+        "rate": 65,
+        "returns": [
+          {
+            "id": 52,
+            "count": 637
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "14": {
+        "quality": 4,
+        "level": 14,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 345
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 530
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ],
+        "rate": 65,
+        "returns": [
+          {
+            "id": 52,
+            "count": 775
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "15": {
+        "quality": 4,
+        "level": 15,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 360
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 600
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 934
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "16": {
+        "quality": 4,
+        "level": 16,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 408
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 680
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1114
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "17": {
+        "quality": 4,
+        "level": 17,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 456
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 760
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1318
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "18": {
+        "quality": 4,
+        "level": 18,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 510
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 850
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1546
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "19": {
+        "quality": 4,
+        "level": 19,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 564
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 940
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1801
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "20": {
+        "quality": 4,
+        "level": 20,
+        "consumes": [],
+        "totalConsumes": [],
+        "rate": 0,
+        "returns": [
+          {
+            "id": 52,
+            "count": 2083
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ]
+      }
+    },
+    "6": {
+      "1": {
+        "quality": 6,
+        "level": 1,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 57
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 60
+          }
+        ],
+        "rate": 95,
+        "returns": [
+          {
+            "id": 52,
+            "count": 15
+          }
+        ]
+      },
+      "2": {
+        "quality": 6,
+        "level": 2,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 67
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 70
+          }
+        ],
+        "rate": 95,
+        "returns": [
+          {
+            "id": 52,
+            "count": 33
+          }
+        ]
+      },
+      "3": {
+        "quality": 6,
+        "level": 3,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 81
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 90
+          }
+        ],
+        "rate": 90,
+        "returns": [
+          {
+            "id": 52,
+            "count": 54
+          }
+        ]
+      },
+      "4": {
+        "quality": 6,
+        "level": 4,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 99
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 110
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ],
+        "rate": 90,
+        "returns": [
+          {
+            "id": 52,
+            "count": 81
+          }
+        ]
+      },
+      "5": {
+        "quality": 6,
+        "level": 5,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 119
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 140
+          }
+        ],
+        "rate": 85,
+        "returns": [
+          {
+            "id": 52,
+            "count": 114
+          }
+        ]
+      },
+      "6": {
+        "quality": 6,
+        "level": 6,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 153
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 180
+          }
+        ],
+        "rate": 85,
+        "returns": [
+          {
+            "id": 52,
+            "count": 156
+          }
+        ]
+      },
+      "7": {
+        "quality": 6,
+        "level": 7,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 184
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 230
+          }
+        ],
+        "rate": 80,
+        "returns": [
+          {
+            "id": 52,
+            "count": 210
+          }
+        ]
+      },
+      "8": {
+        "quality": 6,
+        "level": 8,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 232
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 290
+          }
+        ],
+        "rate": 80,
+        "returns": [
+          {
+            "id": 52,
+            "count": 279
+          }
+        ]
+      },
+      "9": {
+        "quality": 6,
+        "level": 9,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 263
+          },
+          {
+            "id": 53,
+            "count": 4
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 350
+          },
+          {
+            "id": 53,
+            "count": 4
+          }
+        ],
+        "rate": 75,
+        "returns": [
+          {
+            "id": 52,
+            "count": 366
+          }
+        ]
+      },
+      "10": {
+        "quality": 6,
+        "level": 10,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 315
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 420
+          }
+        ],
+        "rate": 75,
+        "returns": [
+          {
+            "id": 52,
+            "count": 471
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "11": {
+        "quality": 6,
+        "level": 11,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 350
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 500
+          }
+        ],
+        "rate": 70,
+        "returns": [
+          {
+            "id": 52,
+            "count": 597
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "12": {
+        "quality": 6,
+        "level": 12,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 413
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 590
+          }
+        ],
+        "rate": 70,
+        "returns": [
+          {
+            "id": 52,
+            "count": 747
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "13": {
+        "quality": 6,
+        "level": 13,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 449
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 690
+          }
+        ],
+        "rate": 65,
+        "returns": [
+          {
+            "id": 52,
+            "count": 924
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "14": {
+        "quality": 6,
+        "level": 14,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 514
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 790
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ],
+        "rate": 65,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1131
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "15": {
+        "quality": 6,
+        "level": 15,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 540
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 900
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1368
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "16": {
+        "quality": 6,
+        "level": 16,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 612
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1020
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1638
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "17": {
+        "quality": 6,
+        "level": 17,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 690
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1150
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1944
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "18": {
+        "quality": 6,
+        "level": 18,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 774
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1290
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 2289
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "19": {
+        "quality": 6,
+        "level": 19,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 858
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1430
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 2676
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "20": {
+        "quality": 6,
+        "level": 20,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 916
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1580
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 3105
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ]
+      },
+      "21": {
+        "quality": 6,
+        "level": 21,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1009
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1740
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 3579
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ]
+      },
+      "22": {
+        "quality": 6,
+        "level": 22,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1108
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1910
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 4101
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ]
+      },
+      "23": {
+        "quality": 6,
+        "level": 23,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1212
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2090
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 4674
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ]
+      },
+      "24": {
+        "quality": 6,
+        "level": 24,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1317
+          },
+          {
+            "id": 53,
+            "count": 4
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2270
+          },
+          {
+            "id": 53,
+            "count": 4
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 5301
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ]
+      },
+      "25": {
+        "quality": 6,
+        "level": 25,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1378
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2460
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 5982
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "26": {
+        "quality": 6,
+        "level": 26,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1490
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2660
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 6720
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "27": {
+        "quality": 6,
+        "level": 27,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1607
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2870
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 7518
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "28": {
+        "quality": 6,
+        "level": 28,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1730
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 3090
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 8379
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "29": {
+        "quality": 6,
+        "level": 29,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1854
+          },
+          {
+            "id": 53,
+            "count": 16
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 3310
+          },
+          {
+            "id": 53,
+            "count": 16
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 9306
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "30": {
+        "quality": 6,
+        "level": 30,
+        "consumes": [],
+        "totalConsumes": [],
+        "rate": 0,
+        "returns": [
+          {
+            "id": 52,
+            "count": 10299
+          },
+          {
+            "id": 53,
+            "count": 11
+          }
+        ]
+      }
+    },
+    "7": {
+      "1": {
+        "quality": 7,
+        "level": 1,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 95
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 100
+          }
+        ],
+        "rate": 95,
+        "returns": [
+          {
+            "id": 52,
+            "count": 25
+          }
+        ]
+      },
+      "2": {
+        "quality": 7,
+        "level": 2,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 105
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 110
+          }
+        ],
+        "rate": 95,
+        "returns": [
+          {
+            "id": 52,
+            "count": 55
+          }
+        ]
+      },
+      "3": {
+        "quality": 7,
+        "level": 3,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 117
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 130
+          }
+        ],
+        "rate": 90,
+        "returns": [
+          {
+            "id": 52,
+            "count": 88
+          }
+        ]
+      },
+      "4": {
+        "quality": 7,
+        "level": 4,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 144
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 160
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ],
+        "rate": 90,
+        "returns": [
+          {
+            "id": 52,
+            "count": 127
+          }
+        ]
+      },
+      "5": {
+        "quality": 7,
+        "level": 5,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 170
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 200
+          }
+        ],
+        "rate": 85,
+        "returns": [
+          {
+            "id": 52,
+            "count": 175
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "6": {
+        "quality": 7,
+        "level": 6,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 213
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 250
+          }
+        ],
+        "rate": 85,
+        "returns": [
+          {
+            "id": 52,
+            "count": 235
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "7": {
+        "quality": 7,
+        "level": 7,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 248
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 310
+          }
+        ],
+        "rate": 80,
+        "returns": [
+          {
+            "id": 52,
+            "count": 310
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "8": {
+        "quality": 7,
+        "level": 8,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 304
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 380
+          }
+        ],
+        "rate": 80,
+        "returns": [
+          {
+            "id": 52,
+            "count": 403
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "9": {
+        "quality": 7,
+        "level": 9,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 345
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 460
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ],
+        "rate": 75,
+        "returns": [
+          {
+            "id": 52,
+            "count": 517
+          },
+          {
+            "id": 53,
+            "count": 1
+          }
+        ]
+      },
+      "10": {
+        "quality": 7,
+        "level": 10,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 413
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 550
+          }
+        ],
+        "rate": 75,
+        "returns": [
+          {
+            "id": 52,
+            "count": 655
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "11": {
+        "quality": 7,
+        "level": 11,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 455
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 650
+          }
+        ],
+        "rate": 70,
+        "returns": [
+          {
+            "id": 52,
+            "count": 820
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "12": {
+        "quality": 7,
+        "level": 12,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 532
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 760
+          }
+        ],
+        "rate": 70,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1015
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "13": {
+        "quality": 7,
+        "level": 13,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 572
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 880
+          }
+        ],
+        "rate": 65,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1243
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "14": {
+        "quality": 7,
+        "level": 14,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 657
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1010
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ],
+        "rate": 65,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1507
+          },
+          {
+            "id": 53,
+            "count": 2
+          }
+        ]
+      },
+      "15": {
+        "quality": 7,
+        "level": 15,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 690
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1150
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 1810
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ]
+      },
+      "16": {
+        "quality": 7,
+        "level": 16,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 780
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1300
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 2155
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ]
+      },
+      "17": {
+        "quality": 7,
+        "level": 17,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 876
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1460
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 2545
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ]
+      },
+      "18": {
+        "quality": 7,
+        "level": 18,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 978
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1630
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 2983
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ]
+      },
+      "19": {
+        "quality": 7,
+        "level": 19,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1086
+          },
+          {
+            "id": 53,
+            "count": 10
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 1810
+          },
+          {
+            "id": 53,
+            "count": 10
+          }
+        ],
+        "rate": 60,
+        "returns": [
+          {
+            "id": 52,
+            "count": 3472
+          },
+          {
+            "id": 53,
+            "count": 3
+          }
+        ]
+      },
+      "20": {
+        "quality": 7,
+        "level": 20,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1160
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2000
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 4015
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "21": {
+        "quality": 7,
+        "level": 21,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1276
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2200
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 4615
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "22": {
+        "quality": 7,
+        "level": 22,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1398
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2410
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 5275
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "23": {
+        "quality": 7,
+        "level": 23,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1525
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2630
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 5998
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "24": {
+        "quality": 7,
+        "level": 24,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1659
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 2860
+          },
+          {
+            "id": 53,
+            "count": 5
+          }
+        ],
+        "rate": 58,
+        "returns": [
+          {
+            "id": 52,
+            "count": 6787
+          },
+          {
+            "id": 53,
+            "count": 6
+          }
+        ]
+      },
+      "25": {
+        "quality": 7,
+        "level": 25,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1736
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 3100
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 7645
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ]
+      },
+      "26": {
+        "quality": 7,
+        "level": 26,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 1876
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 3350
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 8575
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ]
+      },
+      "27": {
+        "quality": 7,
+        "level": 27,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2022
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 3610
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 9580
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ]
+      },
+      "28": {
+        "quality": 7,
+        "level": 28,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2173
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 3880
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 10663
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ]
+      },
+      "29": {
+        "quality": 7,
+        "level": 29,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2330
+          },
+          {
+            "id": 53,
+            "count": 20
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 4160
+          },
+          {
+            "id": 53,
+            "count": 20
+          }
+        ],
+        "rate": 56,
+        "returns": [
+          {
+            "id": 52,
+            "count": 11827
+          },
+          {
+            "id": 53,
+            "count": 8
+          }
+        ]
+      },
+      "30": {
+        "quality": 7,
+        "level": 30,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2403
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 4450
+          }
+        ],
+        "rate": 54,
+        "returns": [
+          {
+            "id": 52,
+            "count": 13075
+          },
+          {
+            "id": 53,
+            "count": 14
+          }
+        ]
+      },
+      "31": {
+        "quality": 7,
+        "level": 31,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2565
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 4750
+          }
+        ],
+        "rate": 54,
+        "returns": [
+          {
+            "id": 52,
+            "count": 14410
+          },
+          {
+            "id": 53,
+            "count": 14
+          }
+        ]
+      },
+      "32": {
+        "quality": 7,
+        "level": 32,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2732
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 5060
+          }
+        ],
+        "rate": 54,
+        "returns": [
+          {
+            "id": 52,
+            "count": 15835
+          },
+          {
+            "id": 53,
+            "count": 14
+          }
+        ]
+      },
+      "33": {
+        "quality": 7,
+        "level": 33,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 2905
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 5380
+          }
+        ],
+        "rate": 54,
+        "returns": [
+          {
+            "id": 52,
+            "count": 17353
+          },
+          {
+            "id": 53,
+            "count": 14
+          }
+        ]
+      },
+      "34": {
+        "quality": 7,
+        "level": 34,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3083
+          },
+          {
+            "id": 53,
+            "count": 10
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 5710
+          },
+          {
+            "id": 53,
+            "count": 10
+          }
+        ],
+        "rate": 54,
+        "returns": [
+          {
+            "id": 52,
+            "count": 18967
+          },
+          {
+            "id": 53,
+            "count": 14
+          }
+        ]
+      },
+      "35": {
+        "quality": 7,
+        "level": 35,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3146
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 6050
+          }
+        ],
+        "rate": 52,
+        "returns": [
+          {
+            "id": 52,
+            "count": 20680
+          },
+          {
+            "id": 53,
+            "count": 17
+          }
+        ]
+      },
+      "36": {
+        "quality": 7,
+        "level": 36,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3328
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 6400
+          }
+        ],
+        "rate": 52,
+        "returns": [
+          {
+            "id": 52,
+            "count": 22495
+          },
+          {
+            "id": 53,
+            "count": 17
+          }
+        ]
+      },
+      "37": {
+        "quality": 7,
+        "level": 37,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3515
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 6760
+          }
+        ],
+        "rate": 52,
+        "returns": [
+          {
+            "id": 52,
+            "count": 24415
+          },
+          {
+            "id": 53,
+            "count": 17
+          }
+        ]
+      },
+      "38": {
+        "quality": 7,
+        "level": 38,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3708
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 7130
+          }
+        ],
+        "rate": 52,
+        "returns": [
+          {
+            "id": 52,
+            "count": 26443
+          },
+          {
+            "id": 53,
+            "count": 17
+          }
+        ]
+      },
+      "39": {
+        "quality": 7,
+        "level": 39,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3905
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 7510
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ],
+        "rate": 52,
+        "returns": [
+          {
+            "id": 52,
+            "count": 28582
+          },
+          {
+            "id": 53,
+            "count": 17
+          }
+        ]
+      },
+      "40": {
+        "quality": 7,
+        "level": 40,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 3950
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 7900
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 30835
+          },
+          {
+            "id": 53,
+            "count": 26
+          }
+        ]
+      },
+      "41": {
+        "quality": 7,
+        "level": 41,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 4150
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 8300
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 33205
+          },
+          {
+            "id": 53,
+            "count": 26
+          }
+        ]
+      },
+      "42": {
+        "quality": 7,
+        "level": 42,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 4355
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 8710
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 35695
+          },
+          {
+            "id": 53,
+            "count": 26
+          }
+        ]
+      },
+      "43": {
+        "quality": 7,
+        "level": 43,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 4565
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 9130
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 38308
+          },
+          {
+            "id": 53,
+            "count": 26
+          }
+        ]
+      },
+      "44": {
+        "quality": 7,
+        "level": 44,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 4780
+          },
+          {
+            "id": 53,
+            "count": 15
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 9560
+          },
+          {
+            "id": 53,
+            "count": 15
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 41047
+          },
+          {
+            "id": 53,
+            "count": 26
+          }
+        ]
+      },
+      "45": {
+        "quality": 7,
+        "level": 45,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 5000
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 10000
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 43915
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ]
+      },
+      "46": {
+        "quality": 7,
+        "level": 46,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 5225
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 10450
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 46915
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ]
+      },
+      "47": {
+        "quality": 7,
+        "level": 47,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 5455
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 10910
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 50050
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ]
+      },
+      "48": {
+        "quality": 7,
+        "level": 48,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 5690
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 11380
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 53323
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ]
+      },
+      "49": {
+        "quality": 7,
+        "level": 49,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 5930
+          },
+          {
+            "id": 53,
+            "count": 40
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 11860
+          },
+          {
+            "id": 53,
+            "count": 40
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 56737
+          },
+          {
+            "id": 53,
+            "count": 30
+          }
+        ]
+      },
+      "50": {
+        "quality": 7,
+        "level": 50,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 6175
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 12350
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 60295
+          },
+          {
+            "id": 53,
+            "count": 42
+          }
+        ]
+      },
+      "51": {
+        "quality": 7,
+        "level": 51,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 6425
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 12850
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 64000
+          },
+          {
+            "id": 53,
+            "count": 42
+          }
+        ]
+      },
+      "52": {
+        "quality": 7,
+        "level": 52,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 6680
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 13360
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 67855
+          },
+          {
+            "id": 53,
+            "count": 42
+          }
+        ]
+      },
+      "53": {
+        "quality": 7,
+        "level": 53,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 6940
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 13880
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 71863
+          },
+          {
+            "id": 53,
+            "count": 42
+          }
+        ]
+      },
+      "54": {
+        "quality": 7,
+        "level": 54,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 7205
+          },
+          {
+            "id": 53,
+            "count": 20
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 14410
+          },
+          {
+            "id": 53,
+            "count": 20
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 76027
+          },
+          {
+            "id": 53,
+            "count": 42
+          }
+        ]
+      },
+      "55": {
+        "quality": 7,
+        "level": 55,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 7475
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 14950
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 80350
+          },
+          {
+            "id": 53,
+            "count": 48
+          }
+        ]
+      },
+      "56": {
+        "quality": 7,
+        "level": 56,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 7750
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 15500
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 84835
+          },
+          {
+            "id": 53,
+            "count": 48
+          }
+        ]
+      },
+      "57": {
+        "quality": 7,
+        "level": 57,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 8030
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 16060
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 89485
+          },
+          {
+            "id": 53,
+            "count": 48
+          }
+        ]
+      },
+      "58": {
+        "quality": 7,
+        "level": 58,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 8315
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 16630
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 94303
+          },
+          {
+            "id": 53,
+            "count": 48
+          }
+        ]
+      },
+      "59": {
+        "quality": 7,
+        "level": 59,
+        "consumes": [
+          {
+            "id": 52,
+            "count": 8605
+          },
+          {
+            "id": 53,
+            "count": 50
+          }
+        ],
+        "totalConsumes": [
+          {
+            "id": 52,
+            "count": 17210
+          },
+          {
+            "id": 53,
+            "count": 50
+          }
+        ],
+        "rate": 50,
+        "returns": [
+          {
+            "id": 52,
+            "count": 99292
+          },
+          {
+            "id": 53,
+            "count": 48
+          }
+        ]
+      },
+      "60": {
+        "quality": 7,
+        "level": 60,
+        "consumes": [],
+        "totalConsumes": [],
+        "rate": 0,
+        "returns": [
+          {
+            "id": 52,
+            "count": 104455
+          },
+          {
+            "id": 53,
+            "count": 63
+          }
+        ]
+      }
+    }
+  }
+}

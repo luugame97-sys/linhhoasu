@@ -1,0 +1,17 @@
+'use strict';
+const fs=require('fs'),path=require('path'),assert=require('assert/strict'),vm=require('vm');
+const ROOT=path.resolve(__dirname,'../..');
+const acorn=require(path.join(ROOT,'linhhoasu/lhs/newServer/node_modules/acorn'));
+const source=fs.readFileSync(path.join(ROOT,'linhhoasu/webgame/game/js/main.min_a6195824.js'),'utf8');
+const token='pOt.calcSingleConditionType=function',offset=source.indexOf(token);assert(offset>=0);
+let expression=acorn.parseExpressionAt(source,offset+'pOt.calcSingleConditionType='.length,{ecmaVersion:'latest'});
+if(expression.type==='SequenceExpression')expression=expression.expressions[0];assert.equal(expression.type,'FunctionExpression');
+const context={Y:{Config:{TaskConfig:{10002:{type:1}}},TaskModel:{getMainTask:()=>({id:10001})}},console};
+const fn=vm.runInNewContext('('+source.slice(expression.start,expression.end)+')',context);
+assert.equal(fn.call({},2,10002,4,0),false);
+context.Y.TaskModel.getMainTask=()=>({id:10002});assert.equal(fn.call({},2,10002,4,0),true);
+context.Y.TaskModel.getMainTask=()=>({id:10083});assert.equal(fn.call({},2,10002,4,0),true);
+context.Y.TaskModel.getMainTask=()=>null;assert.equal(fn.call({},2,10002,4,0),false);
+assert(source.includes('Y.UnlockSystem.sendConditionSystems(2)'));
+assert(source.includes('E.SYSTEM_UNLOCK_UPDATE+107'));
+console.log(JSON.stringify({result:'PASS',clientReceiver:true,firstTaskNotClaimed:false,afterFirstClaim:true,existingProgress:true,taskUpdateTriggersRecheck:true}));

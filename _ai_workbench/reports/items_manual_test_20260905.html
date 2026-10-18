@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hướng dẫn test item — bản đã sửa và phần còn chờ</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="h-ng-d-n-t-ki-m-nghi-m-item-05-09-2026">Hướng dẫn tự kiểm nghiệm item — 05/09/2026</h1>
+<h2 id="1-tr-ng-th-i-b-n-hi-n-t-i">1. Trạng thái bản hiện tại</h2>
+<ul>
+<li>Đã triển khai tiếp trên S1/S2: sửa lại ánh xạ hồn ngọc cấp 1–6, mở nhiều viên chọn riêng từng lần; 6 item hồn ngọc trung gian được cấp native qua router chung; mở 8 hộp biểu cảm vĩnh viễn và Xích Viêm Tường Long.</li>
+<li>Các đợt trước đã phục hồi luồng server cho 47 rương native và 150 đan; đợt này thêm 9 item cố định, tổng 206 ID đã khôi phục chức năng server trong danh sách 311 lỗi trực tiếp.</li>
+<li><strong>Chưa phải toàn bộ item đã sửa xong.</strong> Còn 105 ID fail-closed (102 random, 90021/90022 và option Linh trục của 90151), 2 rương cha bị ảnh hưởng, 5 ID pending và quy đổi Bí bảo trùng chưa có nguồn chuẩn. 830/940 qua fixture cơ bản không đồng nghĩa 830 ID đều đã được nghiệm thu UI hoặc tỷ lệ gốc.</li>
+<li>Bạn tự test trong game; agent không tiếp tục bấm mua/dùng/bán item hoặc đăng nhập QA. Source/test tự động vẫn được kiểm tra, không ghi nhân vật thật.</li>
+</ul>
+<h2 id="2-nh-ch-nh-h-n-ng-c">2. Đính chính hồn ngọc</h2>
+<p><strong>Hồn ngọc cấp 5 là item <code>100085</code>, không phải <code>100084</code>.</strong> Nhận định trước rằng <code>random_gem_05</code> là cấp 5 đã sai: suffix là phẩm chất, tên/mô tả và item synthetic param xác nhận cấp thực thấp hơn 1. Bản sửa sai <code>073354</code> đã được thay bằng bản đúng <code>074023</code>, tiếp theo bản fixed-items <code>074307</code>.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Item dùng trong túi</th>
+<th>Cấp đúng</th>
+<th>Item trung gian cùng cấp</th>
+<th>Đầu ra native</th>
+</tr></thead><tbody>
+<tr>
+<td>100081</td>
+<td>1</td>
+<td>100091</td>
+<td>25001–25004</td>
+</tr>
+<tr>
+<td>100082</td>
+<td>2</td>
+<td>100092</td>
+<td>25011–25014</td>
+</tr>
+<tr>
+<td>100083</td>
+<td>3</td>
+<td>100093</td>
+<td>25021–25024</td>
+</tr>
+<tr>
+<td>100084</td>
+<td>4</td>
+<td>100094</td>
+<td>25031–25034</td>
+</tr>
+<tr>
+<td>100085</td>
+<td>5</td>
+<td>100095</td>
+<td>25041–25044</td>
+</tr>
+<tr>
+<td>100086</td>
+<td>6</td>
+<td>100096</td>
+<td>25051–25054</td>
+</tr>
+</tbody></table></div>
+<p>Item trung gian type 99 dùng trong phần thưởng, không phải thứ cần phát vào túi rồi bấm dùng. Server giờ resolve chúng thành Hồn ngọc native qua các luồng cấp thưởng chung. Bốn loại hiện được chọn đều; chưa có bằng chứng xác suất giống server gốc, không dùng việc ra đủ bốn loại để xác nhận tỷ lệ chính thức.</p>
+<h2 id="3-chu-n-b">3. Chuẩn bị</h2>
+<ol>
+<li>Đăng nhập lại một lần sau khi server cập nhật. Không cần xóa cache client vì không sửa client trong đợt này.</li>
+<li>Dùng nhân vật test hoặc số item bạn chấp nhận tiêu. Chụp số lượng túi và số lượng trong hệ tương ứng trước mỗi ca.</li>
+<li>Bắt đầu với <strong>1 item</strong>. Không bán đồ trong thời gian test. Không mua gói bằng tiền thật chỉ để thử; ưu tiên quà/rương đã có hoặc tài khoản kiểm thử riêng.</li>
+<li>Mở đủ hệ tương ứng trước khi nghiệm thu UI (Hồn ngọc, Yêu linh, Bí bảo, Thần văn, Linh trục). Nhận đồ và tự mặc/xuất chiến là hai thao tác khác nhau.</li>
+<li>Nếu trừ item mà không có thưởng đúng, dừng ca đó, ghi giờ + server + ID/tên + số lượng, không spam dùng tiếp.</li>
+</ol>
+<h2 id="4-c-c-ca-test-n-n-l-m-theo-th-t">4. Các ca test nên làm theo thứ tự</h2>
+<h3 id="a-h-n-ng-c-c-p-5-u-ti-n-tr-c">A. Hồn ngọc cấp 5 — ưu tiên trước</h3>
+<ol>
+<li>Tìm đúng tên <strong>Hồn ngọc cấp 5 ngẫu nhiên</strong>, ID 100085. Ghi số lượng A trong túi và số Hồn ngọc cấp 5 B đang sở hữu.</li>
+<li>Dùng 1 cái. Túi còn A−1; hệ Hồn ngọc thêm đúng 1 viên <strong>cấp 5</strong>, thuộc Sinh mệnh/Công/Thủ/Tốc (25041/25042/25043/25044).</li>
+<li>Đóng/mở lại bảng Hồn ngọc; thử đặt/khảm viên đó vào vị trí phù hợp nếu có ô trống. Không ghi đè bố trí đang dùng nếu không muốn.</li>
+<li>Nếu đã đạt, dùng nhiều 3 cái trong một lượt. Phải thêm đúng 3 viên, tất cả cấp 5, mỗi viên có định danh riêng. Có thể trùng loại; trùng 3 lần không đủ kết luận RNG lỗi.</li>
+<li>Đăng xuất/đăng nhập lại; giữ nguyên số lượng và trạng thái khảm. Không yêu cầu đủ 4 loại trong một mẫu nhỏ.</li>
+<li>Kiểm thêm 100084 phải ra <strong>cấp 4</strong>, 100086 phải ra <strong>cấp 6</strong>. Không chấp nhận tự nâng cấp vì nhìn có lợi hơn.</li>
+</ol>
+<h3 id="b-r-ng-ch-n-y-u-linh-b-b-o-th-n-v-n-linh-tr-c">B. Rương chọn Yêu linh / Bí bảo / Thần văn / Linh trục</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm</th>
+<th>Item mẫu</th>
+<th>Cách thử</th>
+<th>Kết quả cần thấy</th>
+</tr></thead><tbody>
+<tr>
+<td>Yêu linh</td>
+<td>90027</td>
+<td>Chọn một Yêu linh đang chưa sở hữu, mở 1</td>
+<td>Đúng lựa chọn xuất hiện trong Yêu linh, có thể xếp đội khi đủ điều kiện; không chỉ hiện item thân trong túi</td>
+</tr>
+<tr>
+<td>Bí bảo</td>
+<td>90101 hoặc quà trực tiếp 130601</td>
+<td>Nhận đúng 1 thân chưa sở hữu</td>
+<td>Hiện trong Bí bảo, xem được thuộc tính/đặc quyền; relog vẫn sở hữu</td>
+</tr>
+<tr>
+<td>Thần văn</td>
+<td>90202</td>
+<td>Chọn một loại, mở 1</td>
+<td>Hiện trong hệ Thần văn, có thể đặt vào slot phù hợp</td>
+</tr>
+<tr>
+<td>Linh trục</td>
+<td>90214</td>
+<td>Chọn một hình, mở 1</td>
+<td>Số lượng hình/cấp đúng tăng 1 trong Linh trục, không nằm sai ở túi thường</td>
+</tr>
+</tbody></table></div>
+<p>Chỉ kiểm duplicate Yêu linh nếu bạn đồng ý nhận mảnh: cấu hình ElfConfig.piece của ID được chọn dùng làm full-body conversion. Bí bảo đã sở hữu nhận thêm hiện được giữ ở <code>unconvertedRewardCopies</code>, <strong>chưa quy đổi chính thức</strong>; không dùng ca Bí bảo trùng làm tiêu chí hoàn thành hoặc thử tiêu số lượng lớn.</p>
+<h3 id="c-g-i-n-p-mail-v-code">C. Gói nạp, mail và code</h3>
+<ul>
+<li>Bốn gói ưu tiên: <strong>11000015 → 130601</strong>, <strong>11000016 → 90027</strong>, <strong>11000017 → 90202</strong>, <strong>11000020 → 90214</strong>.</li>
+<li>Trên tài khoản kiểm thử/nguồn quà đã có: nhận gói → nếu là rương thì mở/chọn → vào đúng hệ và kiểm ownership. Không yêu cầu rương tự mở ngay khi nhận.</li>
+<li>Code/mail chứa item native trực tiếp phải cấp đúng hệ; chứa rương thường thì vào túi chờ dùng. Nhận lại cùng code/mail không được tăng thưởng thêm.</li>
+<li>Gói đặc quyền/thẻ khác cần kiểm cả trạng thái được kích hoạt và mốc claim; không chỉ nhìn record nạp hoặc popup.</li>
+<li>Không reset đơn/code thật, không gửi mã code còn dùng được trong báo lỗi. Chỉ gửi tên gói/payId hoặc item ID và giờ.</li>
+</ul>
+<h3 id="d-an-exp-v-an-b-nh-bao">D. Đan EXP và đan bánh bao</h3>
+<ol>
+<li>Dùng 1 đan EXP (ví dụ 110122); trừ đúng 1, EXP/thanh cấp thay đổi theo thưởng và luật lên cấp. Nếu lên cấp, EXP hiện tại có thể reset theo logic game, không chỉ so số EXP trước/sau.</li>
+<li>Dùng 1 đan bánh bao (ví dụ 110142); trừ đúng 1, bánh bao tăng theo mô tả/cấu hình.</li>
+<li>Hạn mức cơ bản mỗi nhóm là 10/ngày; bonus thẻ/Bí bảo/áo tắm có thể tăng. Dùng xen kẽ hai ID cùng nhóm phải dùng <strong>chung</strong> hạn mức, không được reset bằng đổi ID.</li>
+<li>Hết hạn mức: bị từ chối và không trừ đan. Relog không reset; qua ngày server mới reset. Hai nhóm EXP và bánh bao độc lập.</li>
+</ol>
+<h3 id="e-t-m-h-p-bi-u-c-m">E. Tám hộp biểu cảm</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Nhóm</th>
+<th>Emoji nhận</th>
+</tr></thead><tbody>
+<tr>
+<td>94702</td>
+<td>Công Tử</td>
+<td>50–59</td>
+</tr>
+<tr>
+<td>94704</td>
+<td>Rắn nhỏ</td>
+<td>60–69</td>
+</tr>
+<tr>
+<td>94707</td>
+<td>Pháp Hải</td>
+<td>70–79</td>
+</tr>
+<tr>
+<td>94712</td>
+<td>Bát Giới</td>
+<td>80–89</td>
+</tr>
+<tr>
+<td>94716</td>
+<td>Chồn Tuyết</td>
+<td>90–99</td>
+</tr>
+<tr>
+<td>94720</td>
+<td>Tiểu mã</td>
+<td>100–109</td>
+</tr>
+<tr>
+<td>94722</td>
+<td>Bà ngoại</td>
+<td>110–119</td>
+</tr>
+<tr>
+<td>94727</td>
+<td>Cửu U Tước</td>
+<td>120–129</td>
+</tr>
+</tbody></table></div>
+<p>Dùng <strong>1 hộp mỗi lần</strong>: mở khóa 10 biểu cảm vĩnh viễn, không trừ Nguyên bảo. Vào bảng chọn emoji để xem, không cần gửi chat. Nếu đã có một phần, chỉ thêm phần thiếu. Đã đủ 10 hoặc dùng nhiều hộp một lúc: từ chối, giữ nguyên hộp. Các emoji đã sở hữu phải còn sau relog.</p>
+<h3 id="f-x-ch-vi-m-t-ng-long">F. Xích Viêm Tường Long</h3>
+<p>Dùng 100019 ×1 → hệ Linh sủng/Pet nhận <strong>85401</strong> đúng phẩm chất 5, không rơi vào túi và không biến thành một Yêu linh ngẫu nhiên khác. Khi dùng 2 cái trên nhân vật test, phải có 2 UID riêng. Chỉ bố trí xuất chiến nếu bạn muốn.</p>
+<h3 id="g-item-ch-a-c-d-li-u-chu-n">G. Item chưa có dữ liệu chuẩn</h3>
+<p>Không mua gói có chứa các item này để thử. 100139, 90021/90022, 90151 option Linh trục và các ID trong <a href="items_remaining_manual_20260905.txt">danh sách 105 ID</a> chưa khôi phục hoàn chỉnh. Nếu kiểm an toàn bằng 1 cái sẵn có: server phải từ chối và giữ item. <strong>Đây không phải ca PASS gameplay</strong>.</p>
+<h2 id="5-g-i-k-t-qu-l-i">5. Gửi kết quả lại</h2>
+<pre><code>Server:
+Nhân vật/ID nhân vật:
+Giờ thao tác (UTC+7):
+Item ID + tên / PayId:
+Nguồn: túi / code / mail / gói
+Số lượng mở hoặc nhận:
+Túi trước → sau:
+Hệ sở hữu trước → sau:
+Thưởng mong đợi / thực tế:
+Sau đăng nhập lại:
+Ảnh trước/sau hoặc clip:</code></pre>
+<p>Không gửi mật khẩu/token/mã code còn hiệu lực. Nếu không biết ID, chụp tên/mô tả item và màn hình nguồn nhận.</p>
+<h2 id="6-vi-c-agent-ch-a-t-l-m">6. Việc agent chưa tự làm</h2>
+<ul>
+<li>Không kiểm bằng cách dùng/bán item trên nhân vật nicky; không sửa đăng nhập/client vì bạn xác nhận game chạy được.</li>
+<li>Không chuyển/bù dữ liệu 2 người / 5 bản sao khi preview chưa được duyệt.</li>
+<li>Không tự dựng pool cho 105 item còn thiếu. Cần bảng thưởng/tỷ lệ/option gốc; nếu chủ game muốn thiết kế khác thì phải chốt giá trị/phân bố riêng trước khi implement.</li>
+</ul></main></body></html>

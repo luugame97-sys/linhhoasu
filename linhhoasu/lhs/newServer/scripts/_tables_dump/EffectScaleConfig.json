@@ -1,0 +1,1592 @@
+{
+  "_table": "EffectScaleConfig",
+  "_rows": 391,
+  "_type": "object",
+  "_firstKeys": "id,scale",
+  "_sample": [
+    {
+      "sp_bt_skill_up": {
+        "id": "sp_bt_skill_up",
+        "scale": 0.3
+      }
+    },
+    {
+      "sp_skill_fly_normal_1001": {
+        "id": "sp_skill_fly_normal_1001",
+        "scale": 0.3
+      }
+    },
+    {
+      "sp_skill_hit_normal_1001": {
+        "id": "sp_skill_hit_normal_1001",
+        "scale": 0.3
+      }
+    }
+  ],
+  "data": {
+    "sp_bt_skill_up": {
+      "id": "sp_bt_skill_up",
+      "scale": 0.3
+    },
+    "sp_skill_fly_normal_1001": {
+      "id": "sp_skill_fly_normal_1001",
+      "scale": 0.3
+    },
+    "sp_skill_hit_normal_1001": {
+      "id": "sp_skill_hit_normal_1001",
+      "scale": 0.3
+    },
+    "sp_skill_row_xingchenbian_1111": {
+      "id": "sp_skill_row_xingchenbian_1111",
+      "scale": 0.3
+    },
+    "sp_skill_hit_xingchenbian_1111": {
+      "id": "sp_skill_hit_xingchenbian_1111",
+      "scale": 0.3
+    },
+    "sp_skill_hit_xingchenbian_1121": {
+      "id": "sp_skill_hit_xingchenbian_1121",
+      "scale": 0.3
+    },
+    "sp_skill_hit_changshengjue_1411": {
+      "id": "sp_skill_hit_changshengjue_1411",
+      "scale": 0.3
+    },
+    "sp_skill_buff_changshengjue_1411": {
+      "id": "sp_skill_buff_changshengjue_1411",
+      "scale": 0.55
+    },
+    "sp_skill_fly_canglongjue_1511": {
+      "id": "sp_skill_fly_canglongjue_1511",
+      "scale": 0.3
+    },
+    "sp_skill_hit_canglongjue_1511": {
+      "id": "sp_skill_hit_canglongjue_1511",
+      "scale": 0.3
+    },
+    "sp_skill_full_canglongjue_1521": {
+      "id": "sp_skill_full_canglongjue_1521",
+      "scale": 1
+    },
+    "sp_skill_hit_canglongjue_1521": {
+      "id": "sp_skill_hit_canglongjue_1521",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5rigui": {
+      "id": "sp_sk_hit_5rigui",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5srigui": {
+      "id": "sp_sk_hit_5srigui",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6dxzbao_1": {
+      "id": "sp_sk_hit_6dxzbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sdxzbao_1": {
+      "id": "sp_sk_hit_6sdxzbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6dqbao_1": {
+      "id": "sp_sk_hit_6dqbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5sdqbao_1": {
+      "id": "sp_sk_hit_5sdqbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5sdqbao_2": {
+      "id": "sp_sk_hit_5sdqbao_2",
+      "scale": 0.3
+    },
+    "sp_sk_fly_6szgb": {
+      "id": "sp_sk_fly_6szgb",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6szbao_1": {
+      "id": "sp_sk_hit_6szbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_fly_6sszdaoguang": {
+      "id": "sp_sk_fly_6sszdaoguang",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sszbao_1": {
+      "id": "sp_sk_hit_6sszbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_fly_5lhshuiqiu": {
+      "id": "sp_sk_fly_5lhshuiqiu",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5lhbao_1": {
+      "id": "sp_sk_hit_5lhbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_stand_5slhlang": {
+      "id": "sp_sk_stand_5slhlang",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6afbinglun_stand": {
+      "id": "sp_sk_shot_6afbinglun_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6afbao_1": {
+      "id": "sp_sk_hit_6afbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_stand_6safbingzhu": {
+      "id": "sp_sk_stand_6safbingzhu",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5fuzbao_1": {
+      "id": "sp_sk_hit_5fuzbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_full_5sfuzshan_2": {
+      "id": "sp_sk_full_5sfuzshan_2",
+      "scale": 0.3
+    },
+    "sp_sk_fly_5bczbingzhui": {
+      "id": "sp_sk_fly_5bczbingzhui",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5bczbao_1": {
+      "id": "sp_sk_hit_5bczbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_stand_5sbczbingzhui": {
+      "id": "sp_sk_stand_5sbczbingzhui",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6stybao_1": {
+      "id": "sp_sk_hit_6stybao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6stybao_2": {
+      "id": "sp_sk_hit_6stybao_2",
+      "scale": 0.3
+    },
+    "sp_sk_fly_6dvsshuye": {
+      "id": "sp_sk_fly_6dvsshuye",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6dvsbao_1": {
+      "id": "sp_sk_hit_6dvsbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_full_6dvsyezi": {
+      "id": "sp_sk_full_6dvsyezi",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sdvsbao_1": {
+      "id": "sp_sk_hit_6sdvsbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6jiaobai_1": {
+      "id": "sp_sk_hit_6jiaobai_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sjiaobai_1": {
+      "id": "sp_sk_hit_6sjiaobai_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sjiaobai_2": {
+      "id": "sp_sk_hit_6sjiaobai_2",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6dxbao_1": {
+      "id": "sp_sk_hit_6dxbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6dxbao_2": {
+      "id": "sp_sk_hit_6dxbao_2",
+      "scale": 0.3
+    },
+    "sp_sk_full_6sdxtengman": {
+      "id": "sp_sk_full_6sdxtengman",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sdxbao_1": {
+      "id": "sp_sk_hit_6sdxbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6jmbao_1": {
+      "id": "sp_sk_hit_6jmbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sjmbao_1": {
+      "id": "sp_sk_hit_6sjmbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6shgbao_1": {
+      "id": "sp_sk_hit_6shgbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_full_6sshgmozhua": {
+      "id": "sp_sk_full_6sshgmozhua",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sshgbao_1": {
+      "id": "sp_sk_hit_6sshgbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6lsgbao_1": {
+      "id": "sp_sk_hit_6lsgbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6slsgbao_1": {
+      "id": "sp_sk_hit_6slsgbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6slsgbao_2": {
+      "id": "sp_sk_hit_6slsgbao_2",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6lzbao_1": {
+      "id": "sp_sk_hit_6lzbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_stand_6slzxuan": {
+      "id": "sp_sk_stand_6slzxuan",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6qysheji_stand": {
+      "id": "sp_sk_shot_6qysheji_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6qybao_1": {
+      "id": "sp_sk_hit_6qybao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sqybao_1": {
+      "id": "sp_sk_hit_6sqybao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sqybao_2": {
+      "id": "sp_sk_hit_6sqybao_2",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6fengwu_stand": {
+      "id": "sp_sk_shot_6fengwu_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6fengwu": {
+      "id": "sp_sk_hit_6fengwu",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6sfengwu_stand": {
+      "id": "sp_sk_shot_6sfengwu_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sfengwu_1": {
+      "id": "sp_sk_hit_6sfengwu_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sfengwu_2": {
+      "id": "sp_sk_hit_6sfengwu_2",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6gcfbao_1": {
+      "id": "sp_sk_hit_6gcfbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_stand_6sgcfxuan": {
+      "id": "sp_sk_stand_6sgcfxuan",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6qi_stand": {
+      "id": "sp_sk_shot_6qi_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6qi": {
+      "id": "sp_sk_hit_6qi",
+      "scale": 0.3
+    },
+    "sp_sk_full_6sqi_1": {
+      "id": "sp_sk_full_6sqi_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sqi": {
+      "id": "sp_sk_hit_6sqi",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6zlongbao_1": {
+      "id": "sp_sk_hit_6zlongbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_stand_6szlongdaoguang": {
+      "id": "sp_sk_stand_6szlongdaoguang",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6cxwuqi_stand": {
+      "id": "sp_sk_shot_6cxwuqi_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6cxbao_1": {
+      "id": "sp_sk_hit_6cxbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_full_6scxbj": {
+      "id": "sp_sk_full_6scxbj",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6scxbao_1": {
+      "id": "sp_sk_hit_6scxbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6scxbao_2": {
+      "id": "sp_sk_hit_6scxbao_2",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6clbao_1": {
+      "id": "sp_sk_hit_6clbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_fly_6sclhulu": {
+      "id": "sp_sk_fly_6sclhulu",
+      "scale": 0.3
+    },
+    "sp_sk_full_6sclyanwu": {
+      "id": "sp_sk_full_6sclyanwu",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sclbao_1": {
+      "id": "sp_sk_hit_6sclbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6alzhan_stand": {
+      "id": "sp_sk_shot_6alzhan_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6albao_1": {
+      "id": "sp_sk_hit_6albao_1",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6salzhan_stand": {
+      "id": "sp_sk_shot_6salzhan_stand",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6salbao_1": {
+      "id": "sp_sk_hit_6salbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6yrbbao_1": {
+      "id": "sp_sk_hit_6yrbbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_full_6syrbguang": {
+      "id": "sp_sk_full_6syrbguang",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6syrbbao_1": {
+      "id": "sp_sk_hit_6syrbbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_fly_6hjmhuoqiu": {
+      "id": "sp_sk_fly_6hjmhuoqiu",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sudaji": {
+      "id": "sp_sk_hit_6sudaji",
+      "scale": 0.3
+    },
+    "sp_sk_full_6ssudaji": {
+      "id": "sp_sk_full_6ssudaji",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6aoxing": {
+      "id": "sp_sk_hit_6aoxing",
+      "scale": 0.3
+    },
+    "sp_sk_full_6saoxing": {
+      "id": "sp_sk_full_6saoxing",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6saoxing": {
+      "id": "sp_sk_hit_6saoxing",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6ttfaqiu": {
+      "id": "sp_sk_shot_6ttfaqiu",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6ttbao_1": {
+      "id": "sp_sk_hit_6ttbao_1",
+      "scale": 0.3
+    },
+    "sp_sk_full_6sttbing_1": {
+      "id": "sp_sk_full_6sttbing_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5zhurong": {
+      "id": "sp_sk_hit_5zhurong",
+      "scale": 0.3
+    },
+    "sp_sk_full_5szhurong_1": {
+      "id": "sp_sk_full_5szhurong_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_5szhurong": {
+      "id": "sp_sk_hit_5szhurong",
+      "scale": 0.3
+    },
+    "sp_sk_fly_6dishitain": {
+      "id": "sp_sk_fly_6dishitain",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6dishitian": {
+      "id": "sp_sk_hit_6dishitian",
+      "scale": 0.3
+    },
+    "sp_sk_full_6sdishitian": {
+      "id": "sp_sk_full_6sdishitian",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6sdishitian": {
+      "id": "sp_sk_hit_6sdishitian",
+      "scale": 0.3
+    },
+    "sp_sk_shot_6yanming": {
+      "id": "sp_sk_shot_6yanming",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6yanming": {
+      "id": "sp_sk_hit_6yanming",
+      "scale": 0.3
+    },
+    "sp_sk_full_6syanming_1": {
+      "id": "sp_sk_full_6syanming_1",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6syanming_1": {
+      "id": "sp_sk_hit_6syanming_1",
+      "scale": 0.3
+    },
+    "sp_skill_buff_changshengjue_1421": {
+      "id": "sp_skill_buff_changshengjue_1421",
+      "scale": 0.3
+    },
+    "sp_bf_hit_freeze": {
+      "id": "sp_bf_hit_freeze",
+      "scale": 0.3
+    },
+    "sp_bf_last_freeze": {
+      "id": "sp_bf_last_freeze",
+      "scale": 0.3
+    },
+    "sp_bf_end_freeze": {
+      "id": "sp_bf_end_freeze",
+      "scale": 0.3
+    },
+    "sp_bf_hit_burn": {
+      "id": "sp_bf_hit_burn",
+      "scale": 0.3
+    },
+    "sp_bf_last_burn": {
+      "id": "sp_bf_last_burn",
+      "scale": 0.3
+    },
+    "sp_bf_last_poison": {
+      "id": "sp_bf_last_poison",
+      "scale": 1
+    },
+    "sp_bf_hit_silence": {
+      "id": "sp_bf_hit_silence",
+      "scale": 0.3
+    },
+    "sp_bf_last_silence": {
+      "id": "sp_bf_last_silence",
+      "scale": 0.3
+    },
+    "sp_bf_end_silence": {
+      "id": "sp_bf_end_silence",
+      "scale": 0.3
+    },
+    "sp_bf_last_bleed": {
+      "id": "sp_bf_last_bleed",
+      "scale": 0.3
+    },
+    "sp_bf_last_stun": {
+      "id": "sp_bf_last_stun",
+      "scale": 0.3
+    },
+    "sp_sk_hit_6btbao_1": {
+      "id": "sp_sk_hit_6btbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_6mdbao_1": {
+      "id": "sp_sk_hit_6mdbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5hgbao_1": {
+      "id": "sp_sk_hit_5hgbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5gcfbao_1": {
+      "id": "sp_sk_hit_5gcfbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5lxbao_1": {
+      "id": "sp_sk_hit_5lxbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_6shguanbao_1": {
+      "id": "sp_sk_hit_6shguanbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_6tqbao_1": {
+      "id": "sp_sk_hit_6tqbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5zrbao_1": {
+      "id": "sp_sk_hit_5zrbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5zrbao_2": {
+      "id": "sp_sk_hit_5zrbao_2",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5pszbao_1": {
+      "id": "sp_sk_hit_5pszbao_1",
+      "scale": 0.5
+    },
+    "sp_sk_fly_5pszdan": {
+      "id": "sp_sk_fly_5pszdan",
+      "scale": 0.5
+    },
+    "sp_sk_hit_5nfbao_1": {
+      "id": "sp_sk_hit_5nfbao_1",
+      "scale": 1
+    },
+    "sp_sk_hit_6tybao_1": {
+      "id": "sp_sk_hit_6tybao_1",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_201": {
+      "id": "sp_skill_baodian_201",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_202": {
+      "id": "sp_skill_baodian_202",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_203": {
+      "id": "sp_skill_baodian_203",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_204": {
+      "id": "sp_skill_baodian_204",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_205": {
+      "id": "sp_skill_baodian_205",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_206": {
+      "id": "sp_skill_baodian_206",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_207": {
+      "id": "sp_skill_baodian_207",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_208": {
+      "id": "sp_skill_baodian_208",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_209": {
+      "id": "sp_skill_baodian_209",
+      "scale": 0.8
+    },
+    "sp_skill_baodian_210": {
+      "id": "sp_skill_baodian_210",
+      "scale": 0.8
+    },
+    "sp_skill_yanwu_1": {
+      "id": "sp_skill_yanwu_1",
+      "scale": 0.8
+    },
+    "sp_skill_yanwu_2_1": {
+      "id": "sp_skill_yanwu_2_1",
+      "scale": 0.8
+    },
+    "sp_skill_yanwu_2_2": {
+      "id": "sp_skill_yanwu_2_2",
+      "scale": 0.8
+    },
+    "sp_skill_buff_zl": {
+      "id": "sp_skill_buff_zl",
+      "scale": 0.5
+    },
+    "sp_skill_buff_fh": {
+      "id": "sp_skill_buff_fh",
+      "scale": 0.6
+    },
+    "sp_sk_hit_skin1_btbao_1": {
+      "id": "sp_sk_hit_skin1_btbao_1",
+      "scale": 1
+    },
+    "sp_skill_fly_23101": {
+      "id": "sp_skill_fly_23101",
+      "scale": 0.6
+    },
+    "sp_skill_fly_23111": {
+      "id": "sp_skill_fly_23111",
+      "scale": 0.6
+    },
+    "sp_skill_fly_23121": {
+      "id": "sp_skill_fly_23121",
+      "scale": 0.6
+    },
+    "sp_skill_fly_23131": {
+      "id": "sp_skill_fly_23131",
+      "scale": 0.6
+    },
+    "sp_skill_fly_23141": {
+      "id": "sp_skill_fly_23141",
+      "scale": 0.6
+    },
+    "sp_skill_fly_23151": {
+      "id": "sp_skill_fly_23151",
+      "scale": 0.6
+    },
+    "sp_skill_baodian_23101": {
+      "id": "sp_skill_baodian_23101",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23111": {
+      "id": "sp_skill_baodian_23111",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23121": {
+      "id": "sp_skill_baodian_23121",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23131": {
+      "id": "sp_skill_baodian_23131",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23141": {
+      "id": "sp_skill_baodian_23141",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23151": {
+      "id": "sp_skill_baodian_23151",
+      "scale": 0.625
+    },
+    "sp_skill_effect_23101": {
+      "id": "sp_skill_effect_23101",
+      "scale": 1
+    },
+    "sp_skill_effect_23111": {
+      "id": "sp_skill_effect_23111",
+      "scale": 0.4
+    },
+    "sp_skill_effect_23121": {
+      "id": "sp_skill_effect_23121",
+      "scale": 0.6
+    },
+    "sp_skill_effect_23131": {
+      "id": "sp_skill_effect_23131",
+      "scale": 0.6
+    },
+    "sp_skill_effect_23141": {
+      "id": "sp_skill_effect_23141",
+      "scale": 0.6
+    },
+    "sp_skill_effect_23151": {
+      "id": "sp_skill_effect_23151",
+      "scale": 0.6
+    },
+    "sp_skill_shenqi_yanwu": {
+      "id": "sp_skill_shenqi_yanwu",
+      "scale": 0.6
+    },
+    "sp_skill_shenqi_dilie": {
+      "id": "sp_skill_shenqi_dilie",
+      "scale": 0.6
+    },
+    "sp_skill_baodian_82001": {
+      "id": "sp_skill_baodian_82001",
+      "scale": 1.2
+    },
+    "sp_skill_baodian_82101": {
+      "id": "sp_skill_baodian_82101",
+      "scale": 1.2
+    },
+    "sp_skill_baodian_84101": {
+      "id": "sp_skill_baodian_84101",
+      "scale": 1
+    },
+    "sp_skill_baodian_84201": {
+      "id": "sp_skill_baodian_84201",
+      "scale": 1
+    },
+    "sp_skill_baodian_84301": {
+      "id": "sp_skill_baodian_84301",
+      "scale": 1
+    },
+    "sp_skill_baodian_84401": {
+      "id": "sp_skill_baodian_84401",
+      "scale": 1
+    },
+    "sp_skill_baodian_84501": {
+      "id": "sp_skill_baodian_84501",
+      "scale": 1
+    },
+    "sp_skill_baodian_85101": {
+      "id": "sp_skill_baodian_85101",
+      "scale": 1
+    },
+    "sp_skill_baodian_85201": {
+      "id": "sp_skill_baodian_85201",
+      "scale": 1
+    },
+    "sp_skill_baodian_85301": {
+      "id": "sp_skill_baodian_85301",
+      "scale": 1
+    },
+    "sp_skill_baodian_85401": {
+      "id": "sp_skill_baodian_85401",
+      "scale": 1
+    },
+    "sp_skill_baodian_85501": {
+      "id": "sp_skill_baodian_85501",
+      "scale": 1
+    },
+    "sp_skill_baodian_86101": {
+      "id": "sp_skill_baodian_86101",
+      "scale": 1
+    },
+    "sp_skill_baodian_86201": {
+      "id": "sp_skill_baodian_86201",
+      "scale": 1
+    },
+    "sp_skill_baodian_86301": {
+      "id": "sp_skill_baodian_86301",
+      "scale": 1
+    },
+    "sp_skill_baodian_86401": {
+      "id": "sp_skill_baodian_86401",
+      "scale": 1
+    },
+    "sp_skill_baodian_86501": {
+      "id": "sp_skill_baodian_86501",
+      "scale": 1
+    },
+    "sp_skill_baodian_87101": {
+      "id": "sp_skill_baodian_87101",
+      "scale": 1
+    },
+    "sp_skill_baodian_87201": {
+      "id": "sp_skill_baodian_87201",
+      "scale": 1
+    },
+    "sp_skill_baodian_87301": {
+      "id": "sp_skill_baodian_87301",
+      "scale": 1
+    },
+    "sp_skill_baodian_87401": {
+      "id": "sp_skill_baodian_87401",
+      "scale": 1
+    },
+    "sp_skill_baodian_87501": {
+      "id": "sp_skill_baodian_87501",
+      "scale": 1
+    },
+    "sp_skill_baodian_89101": {
+      "id": "sp_skill_baodian_89101",
+      "scale": 1
+    },
+    "sp_skill_baodian_89201": {
+      "id": "sp_skill_baodian_89201",
+      "scale": 1
+    },
+    "sp_skill_baodian_89301_1": {
+      "id": "sp_skill_baodian_89301_1",
+      "scale": 1
+    },
+    "sp_skill_baodian_89301_2": {
+      "id": "sp_skill_baodian_89301_2",
+      "scale": 1
+    },
+    "sp_skill_baodian_89401": {
+      "id": "sp_skill_baodian_89401",
+      "scale": 1
+    },
+    "sp_skill_baodian_89501": {
+      "id": "sp_skill_baodian_89501",
+      "scale": 1
+    },
+    "sp_skill_fly_84101": {
+      "id": "sp_skill_fly_84101",
+      "scale": 1
+    },
+    "sp_skill_fly_84201": {
+      "id": "sp_skill_fly_84201",
+      "scale": 1
+    },
+    "sp_skill_fly_84301": {
+      "id": "sp_skill_fly_84301",
+      "scale": 1
+    },
+    "sp_skill_fly_84401": {
+      "id": "sp_skill_fly_84401",
+      "scale": 1
+    },
+    "sp_skill_fly_84501": {
+      "id": "sp_skill_fly_84501",
+      "scale": 1
+    },
+    "sp_skill_fly_85101": {
+      "id": "sp_skill_fly_85101",
+      "scale": 1
+    },
+    "sp_skill_fly_85201": {
+      "id": "sp_skill_fly_85201",
+      "scale": 1
+    },
+    "sp_skill_fly_85301": {
+      "id": "sp_skill_fly_85301",
+      "scale": 1
+    },
+    "sp_skill_fly_85401": {
+      "id": "sp_skill_fly_85401",
+      "scale": 1
+    },
+    "sp_skill_fly_85501": {
+      "id": "sp_skill_fly_85501",
+      "scale": 1
+    },
+    "sp_skill_fly_86101": {
+      "id": "sp_skill_fly_86101",
+      "scale": 1
+    },
+    "sp_skill_fly_86201": {
+      "id": "sp_skill_fly_86201",
+      "scale": 1
+    },
+    "sp_skill_fly_86301": {
+      "id": "sp_skill_fly_86301",
+      "scale": 1
+    },
+    "sp_skill_fly_86401": {
+      "id": "sp_skill_fly_86401",
+      "scale": 1
+    },
+    "sp_skill_fly_86501": {
+      "id": "sp_skill_fly_86501",
+      "scale": 1
+    },
+    "sp_skill_fly_87101": {
+      "id": "sp_skill_fly_87101",
+      "scale": 1
+    },
+    "sp_skill_fly_87201": {
+      "id": "sp_skill_fly_87201",
+      "scale": 1
+    },
+    "sp_skill_fly_87301": {
+      "id": "sp_skill_fly_87301",
+      "scale": 1
+    },
+    "sp_skill_fly_87401": {
+      "id": "sp_skill_fly_87401",
+      "scale": 1
+    },
+    "sp_skill_fly_87501": {
+      "id": "sp_skill_fly_87501",
+      "scale": 1
+    },
+    "sp_skill_fly_89101": {
+      "id": "sp_skill_fly_89101",
+      "scale": 1
+    },
+    "sp_skill_fly_89201": {
+      "id": "sp_skill_fly_89201",
+      "scale": 1
+    },
+    "sp_skill_fly_89501": {
+      "id": "sp_skill_fly_89501",
+      "scale": 1
+    },
+    "sp_skill_juqi_89301": {
+      "id": "sp_skill_juqi_89301",
+      "scale": 1
+    },
+    "sp_skill_effect_89401": {
+      "id": "sp_skill_effect_89401",
+      "scale": 1
+    },
+    "sp_skill_buff_82201": {
+      "id": "sp_skill_buff_82201",
+      "scale": 1
+    },
+    "sp_skill_buff_84201": {
+      "id": "sp_skill_buff_84201",
+      "scale": 1
+    },
+    "sp_skill_buff_85201": {
+      "id": "sp_skill_buff_85201",
+      "scale": 1
+    },
+    "sp_skill_buff_86201": {
+      "id": "sp_skill_buff_86201",
+      "scale": 1
+    },
+    "sp_skill_buff_87201": {
+      "id": "sp_skill_buff_87201",
+      "scale": 1
+    },
+    "sp_skill_buff_ranshao": {
+      "id": "sp_skill_buff_ranshao",
+      "scale": 0.5
+    },
+    "sp_skill_buff_jianren_1": {
+      "id": "sp_skill_buff_jianren_1",
+      "scale": 0.5
+    },
+    "sp_skill_buff_jianren_2": {
+      "id": "sp_skill_buff_jianren_2",
+      "scale": 0.5
+    },
+    "sp_skill_shenqi_dilie3": {
+      "id": "sp_skill_shenqi_dilie3",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_10403": {
+      "id": "sp_skill_baodian_10403",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_10404": {
+      "id": "sp_skill_baodian_10404",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_10416": {
+      "id": "sp_skill_baodian_10416",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_10419": {
+      "id": "sp_skill_baodian_10419",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_10431": {
+      "id": "sp_skill_baodian_10431",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_10434": {
+      "id": "sp_skill_baodian_10434",
+      "scale": 0.5
+    },
+    "sp_skill_buff_jianren": {
+      "id": "sp_skill_buff_jianren",
+      "scale": 0.5
+    },
+    "sp_skill_buff_89101": {
+      "id": "sp_skill_buff_89101",
+      "scale": 1
+    },
+    "sp_skill_buff_89201_a": {
+      "id": "sp_skill_buff_89201_a",
+      "scale": 1
+    },
+    "sp_skill_buff_89201_b": {
+      "id": "sp_skill_buff_89201_b",
+      "scale": 1
+    },
+    "sp_skill_buff_89301": {
+      "id": "sp_skill_buff_89301",
+      "scale": 1
+    },
+    "sp_skill_buff_89401": {
+      "id": "sp_skill_buff_89401",
+      "scale": 1
+    },
+    "sp_skill_buff_89501": {
+      "id": "sp_skill_buff_89501",
+      "scale": 1
+    },
+    "sp_skill_baodian_154101": {
+      "id": "sp_skill_baodian_154101",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_154102": {
+      "id": "sp_skill_baodian_154102",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_154202": {
+      "id": "sp_skill_baodian_154202",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_154302": {
+      "id": "sp_skill_baodian_154302",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_154401": {
+      "id": "sp_skill_baodian_154401",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_154501": {
+      "id": "sp_skill_baodian_154501",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_154502": {
+      "id": "sp_skill_baodian_154502",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156101": {
+      "id": "sp_skill_baodian_156101",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156102": {
+      "id": "sp_skill_baodian_156102",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156201": {
+      "id": "sp_skill_baodian_156201",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156202": {
+      "id": "sp_skill_baodian_156202",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156301": {
+      "id": "sp_skill_baodian_156301",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156401": {
+      "id": "sp_skill_baodian_156401",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_156402_a": {
+      "id": "sp_skill_baodian_156402_a",
+      "scale": 0.3
+    },
+    "sp_skill_baodian_156402_b": {
+      "id": "sp_skill_baodian_156402_b",
+      "scale": 0.3
+    },
+    "sp_skill_baodian_157101": {
+      "id": "sp_skill_baodian_157101",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_157201_a": {
+      "id": "sp_skill_baodian_157201_a",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_157201_b": {
+      "id": "sp_skill_baodian_157201_b",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_157301": {
+      "id": "sp_skill_baodian_157301",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_157401": {
+      "id": "sp_skill_baodian_157401",
+      "scale": 0.5
+    },
+    "sp_skill_full_157401": {
+      "id": "sp_skill_full_157401",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_157501": {
+      "id": "sp_skill_baodian_157501",
+      "scale": 0.5
+    },
+    "sp_skill_baodian_23001": {
+      "id": "sp_skill_baodian_23001",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23002": {
+      "id": "sp_skill_baodian_23002",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23003": {
+      "id": "sp_skill_baodian_23003",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23004": {
+      "id": "sp_skill_baodian_23004",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23005": {
+      "id": "sp_skill_baodian_23005",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23006": {
+      "id": "sp_skill_baodian_23006",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23007": {
+      "id": "sp_skill_baodian_23007",
+      "scale": 1
+    },
+    "sp_skill_baodian_23008": {
+      "id": "sp_skill_baodian_23008",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23009": {
+      "id": "sp_skill_baodian_23009",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23010": {
+      "id": "sp_skill_baodian_23010",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23011": {
+      "id": "sp_skill_baodian_23011",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23012": {
+      "id": "sp_skill_baodian_23012",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23013": {
+      "id": "sp_skill_baodian_23013",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23014": {
+      "id": "sp_skill_baodian_23014",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23017": {
+      "id": "sp_skill_baodian_23017",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23018": {
+      "id": "sp_skill_baodian_23018",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23019": {
+      "id": "sp_skill_baodian_23019",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23020": {
+      "id": "sp_skill_baodian_23020",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23021": {
+      "id": "sp_skill_baodian_23021",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23022": {
+      "id": "sp_skill_baodian_23022",
+      "scale": 1
+    },
+    "sp_skill_baodian_23023": {
+      "id": "sp_skill_baodian_23023",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23024": {
+      "id": "sp_skill_baodian_23024",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_23025": {
+      "id": "sp_skill_baodian_23025",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_2814": {
+      "id": "sp_skill_baodian_2814",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_2815": {
+      "id": "sp_skill_baodian_2815",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_290": {
+      "id": "sp_skill_baodian_290",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2901": {
+      "id": "sp_skill_baodian_2901",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2902": {
+      "id": "sp_skill_baodian_2902",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2903": {
+      "id": "sp_skill_baodian_2903",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2904": {
+      "id": "sp_skill_baodian_2904",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2905": {
+      "id": "sp_skill_baodian_2905",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2906": {
+      "id": "sp_skill_baodian_2906",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2907": {
+      "id": "sp_skill_baodian_2907",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2908": {
+      "id": "sp_skill_baodian_2908",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2909": {
+      "id": "sp_skill_baodian_2909",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2910": {
+      "id": "sp_skill_baodian_2910",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2911": {
+      "id": "sp_skill_baodian_2911",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2912": {
+      "id": "sp_skill_baodian_2912",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2913": {
+      "id": "sp_skill_baodian_2913",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2914": {
+      "id": "sp_skill_baodian_2914",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2915": {
+      "id": "sp_skill_baodian_2915",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_2916": {
+      "id": "sp_skill_baodian_2916",
+      "scale": 0.53
+    },
+    "sp_skill_baodian_29901": {
+      "id": "sp_skill_baodian_29901",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012899": {
+      "id": "sp_skill_baodian_8012899",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_80129001": {
+      "id": "sp_skill_baodian_80129001",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8022900": {
+      "id": "sp_skill_baodian_8022900",
+      "scale": 1
+    },
+    "sp_skill_baodian_8012901": {
+      "id": "sp_skill_baodian_8012901",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012903": {
+      "id": "sp_skill_baodian_8012903",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012904": {
+      "id": "sp_skill_baodian_8012904",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8022904": {
+      "id": "sp_skill_baodian_8022904",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8032904": {
+      "id": "sp_skill_baodian_8032904",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012905": {
+      "id": "sp_skill_baodian_8012905",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8022905": {
+      "id": "sp_skill_baodian_8022905",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012906": {
+      "id": "sp_skill_baodian_8012906",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012907": {
+      "id": "sp_skill_baodian_8012907",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012908": {
+      "id": "sp_skill_baodian_8012908",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012909": {
+      "id": "sp_skill_baodian_8012909",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012910": {
+      "id": "sp_skill_baodian_8012910",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012911": {
+      "id": "sp_skill_baodian_8012911",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012912": {
+      "id": "sp_skill_baodian_8012912",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012913": {
+      "id": "sp_skill_baodian_8012913",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012914": {
+      "id": "sp_skill_baodian_8012914",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012915": {
+      "id": "sp_skill_baodian_8012915",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_8012916": {
+      "id": "sp_skill_baodian_8012916",
+      "scale": 1
+    },
+    "sp_skill_baodian_80130101": {
+      "id": "sp_skill_baodian_80130101",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_80130111": {
+      "id": "sp_skill_baodian_80130111",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_80130511": {
+      "id": "sp_skill_baodian_80130511",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_80230101": {
+      "id": "sp_skill_baodian_80230101",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_80230111": {
+      "id": "sp_skill_baodian_80230111",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_80230511": {
+      "id": "sp_skill_baodian_80230511",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_30101": {
+      "id": "sp_skill_baodian_30101",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_30111": {
+      "id": "sp_skill_baodian_30111",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_30511": {
+      "id": "sp_skill_baodian_30511",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_31201": {
+      "id": "sp_skill_baodian_31201",
+      "scale": 1
+    },
+    "sp_skill_baodian_32201": {
+      "id": "sp_skill_baodian_32201",
+      "scale": 1
+    },
+    "sp_skill_baodian_33201": {
+      "id": "sp_skill_baodian_33201",
+      "scale": 1
+    },
+    "sp_skill_baodian_34201": {
+      "id": "sp_skill_baodian_34201",
+      "scale": 1
+    },
+    "sp_skill_baodian_35201": {
+      "id": "sp_skill_baodian_35201",
+      "scale": 1
+    },
+    "sp_skill_baodian_36201": {
+      "id": "sp_skill_baodian_36201",
+      "scale": 1
+    },
+    "sp_skill_baodian_37201": {
+      "id": "sp_skill_baodian_37201",
+      "scale": 1
+    },
+    "sp_skill_baodian_38201": {
+      "id": "sp_skill_baodian_38201",
+      "scale": 1
+    },
+    "sp_skill_baodian_43201": {
+      "id": "sp_skill_baodian_43201",
+      "scale": 1
+    },
+    "sp_skill_baodian_47201": {
+      "id": "sp_skill_baodian_47201",
+      "scale": 1
+    },
+    "sp_skill_baodian_51201": {
+      "id": "sp_skill_baodian_51201",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_56201": {
+      "id": "sp_skill_baodian_56201",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_60201": {
+      "id": "sp_skill_baodian_60201",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_64201": {
+      "id": "sp_skill_baodian_64201",
+      "scale": 0.625
+    },
+    "sp_skill_baodian_68201": {
+      "id": "sp_skill_baodian_68201",
+      "scale": 0.625
+    },
+    "sp_skill_buff_154402": {
+      "id": "sp_skill_buff_154402",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156101": {
+      "id": "sp_skill_buff_156101",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156102": {
+      "id": "sp_skill_buff_156102",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156201_1": {
+      "id": "sp_skill_buff_156201_1",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156201_2": {
+      "id": "sp_skill_buff_156201_2",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156202_a": {
+      "id": "sp_skill_buff_156202_a",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156202_b": {
+      "id": "sp_skill_buff_156202_b",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156301": {
+      "id": "sp_skill_buff_156301",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156402": {
+      "id": "sp_skill_buff_156402",
+      "scale": 0.5
+    },
+    "sp_skill_buff_156501": {
+      "id": "sp_skill_buff_156501",
+      "scale": 0.5
+    },
+    "sp_skill_buff_end_157101": {
+      "id": "sp_skill_buff_end_157101",
+      "scale": 0.4
+    },
+    "sp_skill_buff_hit_157101": {
+      "id": "sp_skill_buff_hit_157101",
+      "scale": 0.4
+    },
+    "sp_skill_buff_js_normal": {
+      "id": "sp_skill_buff_js_normal",
+      "scale": 0.5
+    },
+    "sp_skill_buff_last_157101": {
+      "id": "sp_skill_buff_last_157101",
+      "scale": 0.4
+    },
+    "sp_skill_effectEffs_157101": {
+      "id": "sp_skill_effectEffs_157101",
+      "scale": 0.4
+    },
+    "sp_skill_fly_154101": {
+      "id": "sp_skill_fly_154101",
+      "scale": 0.5
+    },
+    "sp_skill_fly_154202": {
+      "id": "sp_skill_fly_154202",
+      "scale": 0.5
+    },
+    "sp_skill_fly_154302": {
+      "id": "sp_skill_fly_154302",
+      "scale": 0.5
+    },
+    "sp_skill_fly_154501": {
+      "id": "sp_skill_fly_154501",
+      "scale": 0.5
+    },
+    "sp_skill_fly_154502": {
+      "id": "sp_skill_fly_154502",
+      "scale": 0.5
+    },
+    "sp_skill_fly_156101": {
+      "id": "sp_skill_fly_156101",
+      "scale": 0.5
+    },
+    "sp_skill_fly_156102": {
+      "id": "sp_skill_fly_156102",
+      "scale": 0.5
+    },
+    "sp_skill_fly_156201": {
+      "id": "sp_skill_fly_156201",
+      "scale": 0.5
+    },
+    "sp_skill_fly_156301": {
+      "id": "sp_skill_fly_156301",
+      "scale": 0.5
+    },
+    "sp_skill_fly_156401": {
+      "id": "sp_skill_fly_156401",
+      "scale": 0.5
+    },
+    "sp_skill_fly_157201": {
+      "id": "sp_skill_fly_157201",
+      "scale": 1
+    },
+    "sp_skill_fly_157401": {
+      "id": "sp_skill_fly_157401",
+      "scale": 0.5
+    },
+    "sp_skill_fly_157501": {
+      "id": "sp_skill_fly_157501",
+      "scale": 0.5
+    },
+    "sp_skill_full_baodian_157201": {
+      "id": "sp_skill_full_baodian_157201",
+      "scale": 0.8
+    },
+    "sp_skill_full_fly_157201": {
+      "id": "sp_skill_full_fly_157201",
+      "scale": 1
+    },
+    "sp_skill_artfact_baodian_lei": {
+      "id": "sp_skill_artfact_baodian_lei",
+      "scale": 1
+    },
+    "sp_skill_artfact_baodian_mu": {
+      "id": "sp_skill_artfact_baodian_mu",
+      "scale": 1
+    },
+    "sp_skill_artifact_baodian_shui": {
+      "id": "sp_skill_artifact_baodian_shui",
+      "scale": 1
+    },
+    "sp_skill_artifact_baodian_huo": {
+      "id": "sp_skill_artifact_baodian_huo",
+      "scale": 1
+    },
+    "sp_skill_artifact_baodian_tu": {
+      "id": "sp_skill_artifact_baodian_tu",
+      "scale": 1
+    }
+  }
+}

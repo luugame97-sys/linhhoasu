@@ -1,0 +1,268 @@
+{
+  "_table": "SubscribeConfig",
+  "_rows": 9,
+  "_type": "object",
+  "_firstKeys": "id,settleType,settleName,templateId,pushOpen,pushCondition",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "settleType": 30031529,
+        "settleName": 30031536,
+        "templateId": {
+          "0": "zrLZznXCOazzoa1MaZSThx4qjqHkbZuM-Y_oOECCYdw",
+          "1": "MSG1919267159037408932125992503606",
+          "2": "dfdef267213148e2a4e24a055cafd715",
+          "3": "10016_10016",
+          "4": "lhs_game_crops_mature",
+          "5": "4531773885417252_7331773813389666"
+        },
+        "pushOpen": 1,
+        "pushCondition": [
+          {
+            "type": 5,
+            "value": 2,
+            "cond": 4
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "settleType": 30031529,
+        "settleName": 30031537,
+        "templateId": {
+          "0": "yMh-D06zSc2PM4Bxz5r6CqPA69ZD8bDocE5k901btds",
+          "1": "MSG1919267746207408447604977092891",
+          "2": "da2bae3138364f00b75f0533accf9093",
+          "3": "10015_10017",
+          "4": "lhs_game_crops_stolen",
+          "5": "4621773885402529_7801773813389666"
+        },
+        "pushOpen": 1,
+        "pushCondition": [
+          {
+            "type": 5,
+            "value": 3,
+            "cond": 4
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "settleType": 30031530,
+        "settleName": 30031538,
+        "templateId": {
+          "0": "H9iTIwqOBEgcmKZT7LKiWPJIoEBMTCgvWFshTlbAk0c",
+          "1": "MSG1919267137277408932075858004224",
+          "2": "9abdfccabb914c1587e53c827a07ce58",
+          "3": "10017_10018",
+          "4": "lhs_game_box_levelup",
+          "5": "7021773813546344_2111773799944720"
+        },
+        "pushOpen": 1,
+        "pushCondition": [
+          {
+            "type": 5,
+            "value": 2,
+            "cond": 4
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "settleType": 30031529,
+      "settleName": 30031536,
+      "templateId": {
+        "0": "zrLZznXCOazzoa1MaZSThx4qjqHkbZuM-Y_oOECCYdw",
+        "1": "MSG1919267159037408932125992503606",
+        "2": "dfdef267213148e2a4e24a055cafd715",
+        "3": "10016_10016",
+        "4": "lhs_game_crops_mature",
+        "5": "4531773885417252_7331773813389666"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 2,
+          "cond": 4
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "settleType": 30031529,
+      "settleName": 30031537,
+      "templateId": {
+        "0": "yMh-D06zSc2PM4Bxz5r6CqPA69ZD8bDocE5k901btds",
+        "1": "MSG1919267746207408447604977092891",
+        "2": "da2bae3138364f00b75f0533accf9093",
+        "3": "10015_10017",
+        "4": "lhs_game_crops_stolen",
+        "5": "4621773885402529_7801773813389666"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 3,
+          "cond": 4
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "settleType": 30031530,
+      "settleName": 30031538,
+      "templateId": {
+        "0": "H9iTIwqOBEgcmKZT7LKiWPJIoEBMTCgvWFshTlbAk0c",
+        "1": "MSG1919267137277408932075858004224",
+        "2": "9abdfccabb914c1587e53c827a07ce58",
+        "3": "10017_10018",
+        "4": "lhs_game_box_levelup",
+        "5": "7021773813546344_2111773799944720"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 2,
+          "cond": 4
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "settleType": 30031531,
+      "settleName": 30031539,
+      "templateId": {
+        "0": "zrLZznXCOazzoa1MaZSTh2GnaB53H0ivFfwx9huNGb0",
+        "1": "MSG1919267137207408383359853938970",
+        "2": "3fb80d932e4546dfac66b636377c7404",
+        "3": "10016_10019",
+        "4": "lhs_game_poyunfu_limit",
+        "5": "4531773885417252_2401773798811464"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 4,
+          "cond": 4
+        }
+      ]
+    },
+    "5": {
+      "id": 5,
+      "settleType": 30031532,
+      "settleName": 30031540,
+      "templateId": {
+        "0": "zrLZznXCOazzoa1MaZSTh1_D6yGpD0-jOsVXUSdzwxc",
+        "1": "MSG1919267137197408932125992487222",
+        "2": "af1823c089fd49fd882d0413b2608d72",
+        "3": "10016_10020",
+        "4": "lhs_game_jitui_limit|1A8ACF002C02",
+        "5": "4531773885417252_6681773798811463"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 3,
+          "cond": 4
+        }
+      ]
+    },
+    "6": {
+      "id": 6,
+      "settleType": 30031533,
+      "settleName": 30031541,
+      "templateId": {
+        "0": "UCBplyVxK0MkSUibXAYVx8olNFS4sYVMfA5oAWEe3B8",
+        "1": "MSG1919267137247408932075858020608",
+        "2": "0ea989fedc1b4e3f99b1ca3e5f2cd2d7",
+        "3": "10014_10021",
+        "4": "lhs_game_wudaohui_false",
+        "5": "8561773898900812_0011773813389666"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 2,
+          "cond": 4
+        }
+      ]
+    },
+    "7": {
+      "id": 7,
+      "settleType": 30031534,
+      "settleName": 30031542,
+      "templateId": {
+        "0": "UCBplyVxK0MkSUibXAYVx_t8qYOFqW0IuuBN2We-Pac",
+        "1": "MSG1919267137247408932075858020608",
+        "2": "4c3d3d654c3f4c93b18ca5445173e4ed",
+        "3": "10014_10022",
+        "4": "lhs_game_dianfengyanwu_false",
+        "5": "8561773898900812_5821773813389666"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 8,
+          "cond": 4
+        }
+      ]
+    },
+    "8": {
+      "id": 8,
+      "settleType": 30031535,
+      "settleName": 30031543,
+      "templateId": {
+        "0": "89GxyyCWwDdhwCcnMbam2dyaIS_p9aMmPb0S0-TrNPE",
+        "1": "MSG1919267137287408932125992519990",
+        "2": "b8a82cf65a6d4ae690938eddbbc56ea2",
+        "3": "10018_10025",
+        "4": "lhs_game_boss",
+        "5": "2101773813552884_9441773647586551"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 16,
+          "cond": 4
+        }
+      ]
+    },
+    "9": {
+      "id": 9,
+      "settleType": 30031560,
+      "settleName": 30031561,
+      "templateId": {
+        "0": "UCBplyVxK0MkSUibXAYVx3HEekfuCGxks4IkEvzzdBc",
+        "1": "MSG1919267137247469700369027844362",
+        "2": "c8c9b2337ab54ccba1c7a1100c265d93",
+        "3": "10014_10024",
+        "4": "lhs_game_rank_down",
+        "5": "8561773898900812_0931773829237701"
+      },
+      "pushOpen": 1,
+      "pushCondition": [
+        {
+          "type": 5,
+          "value": 22,
+          "cond": 4
+        }
+      ]
+    }
+  }
+}

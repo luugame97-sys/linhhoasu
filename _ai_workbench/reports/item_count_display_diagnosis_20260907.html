@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chẩn đoán hiển thị số lượng vật phẩm</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ch-n-o-n-s-l-ng-v-t-ph-m-l-n-07-09-2026">Chẩn đoán số lượng vật phẩm lớn — 07/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Phạm vi: người dùng yêu cầu tìm phương án sửa số lượng chỉ hiện đầu số trong ảnh bảng thưởng Đại hội câu cá. Phiên này chỉ chẩn đoán; không sửa source game, không triển khai, không thay đổi quà hoặc dữ liệu người chơi.</p>
+<p>Đã đọc báo cáo phiên trước: bản kinh tế câu cá đã phát hành. Đã xem ảnh người dùng, truy vết formatter, skin, atlas font và phép đo chữ của Egret. Đọc VPS qua SFTP: 8/8 file liên quan khớp SHA-256 với local. Không restart hoặc đăng nhập tài khoản người chơi.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Tool mới: <code>_ai_workbench/tools/audit_item_count_font_20260907.py</code> giải mã font theo loader thật.</li>
+<li>Tool mới: <code>_ai_workbench/tools/test_item_count_display_20260907.js</code> chạy formatter và phép đo Egret trích từ bundle.</li>
+<li>Tool mới: <code>_ai_workbench/tools/check_item_count_live_20260907.py</code> đọc/hash 8 file client trên VPS, không ghi remote.</li>
+<li>Log fixture: <code>_ai_workbench/logs/item_count_display_diagnosis_20260907.json</code>.</li>
+<li>Báo cáo này và bản HTML tương ứng; cập nhật <code>session_report.md/.html</code>.</li>
+<li>Backup báo cáo cũ: <code>_ai_workbench/backups/item_count_diagnosis_20260907/</code>.</li>
+<li>Không thay đổi source chính, config hoặc asset game.</li>
+</ul>
+<p>Các file đã kiểm tra nằm dưới <code>linhhoasu/webgame/game/</code>: <code>js/main.min_a6195824.js</code>, <code>js/egret.min_7d668222.js</code>, config và language config, <code>gameEui_18e11b8e.bin</code>, hai font pack và PNG <code>font_num_prop_d1529ac2.png</code>.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân/bằng chứng</th>
+<th>Cách xử lý đề xuất</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Mất đơn vị trên icon</td>
+<td>ItemIcon.labelShow gọi overLength; countLab là eui.BitmapLabel dùng font_num_prop_fnt. Font có số và đơn vị Trung nhưng không có V/ạ/n, T/ỷ, T/r/i/ệ/u</td>
+<td>Formatter số lượng riêng kết hợp font hỗ trợ đủ ký tự; ưu tiên nhãn native eui.Label cho số lượng</td>
+<td>Test chuỗi formatter luôn được renderer thể hiện đủ</td>
+</tr>
+<tr>
+<td>Chiều rộng bị đo hụt</td>
+<td>letterSpacing=-2.5; Egret cộng khoảng cách âm cho cả glyph bị thiếu. 100Vạn đo 44.5, trong khi các chữ số cần 52 đơn vị local</td>
+<td>Không đưa ký tự thiếu vào BitmapLabel; ràng buộc chiều rộng, căn phải, một dòng</td>
+<td>Test đo/layout ở nhiều scale và khi tái sử dụng renderer</td>
+</tr>
+<tr>
+<td>Dịch sai bậc lớn</td>
+<td>Nhánh chia 10^8 nối LanguageConfig 30020171='Tỷ'; chia 10^12 nối 30020322='Triệu'</td>
+<td>Chuẩn hóa số lượng theo nghìn/triệu/tỷ/nghìn tỷ, rà các nơi dùng chung trước sửa bản dịch</td>
+<td>Test mốc chuyển đơn vị; không đổi toàn bộ formatter lực chiến thiếu kiểm tra</td>
+</tr>
+<tr>
+<td>Đổi sang K/M đơn thuần vẫn mất chữ</td>
+<td>Font hiện tại cũng không có K/M/B/T</td>
+<td>Thay loại nhãn số lượng hoặc bổ sung atlas + metadata đúng quy trình</td>
+<td>Test font trước khi đổi hậu tố</td>
+</tr>
+<tr>
+<td>Giải mã font pack bằng decoder config lỗi version 5734</td>
+<td>Format khác nhau: font pack là zlib rồi danh sách font/glyph, không có header object version 2</td>
+<td>Dùng loader FntHelper làm nguồn chuẩn cho decoder đọc-only mới</td>
+<td>Không dùng một decoder cho mọi file bin</td>
+</tr>
+<tr>
+<td>Console Python lỗi UnicodeEncodeError</td>
+<td>Encoding stdout mặc định GBK không chứa ký tự Việt</td>
+<td>Chạy python -X utf8</td>
+<td>Không chuyển encoding asset để sửa lỗi console</td>
+</tr>
+</tbody></table></div>
+<p>Đây là lỗi tương thích font ảnh và bản địa hóa, không phải bằng chứng file tiếng Việt bị mojibake. Không chạy chuyển mã đại trà.</p>
+<h3 id="b-ng-ch-ng-nh-d-ng-s">Bằng chứng định dạng số</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Số lượng gốc</th>
+<th>Chuỗi hiện tại</th>
+<th>Ký tự font có thể vẽ</th>
+<th>Đề xuất trên icon</th>
+<th>Chi tiết đầy đủ</th>
+</tr></thead><tbody>
+<tr>
+<td>100000</td>
+<td>10Vạn</td>
+<td>10</td>
+<td>100K</td>
+<td>100.000</td>
+</tr>
+<tr>
+<td>300000</td>
+<td>30Vạn</td>
+<td>30</td>
+<td>300K</td>
+<td>300.000</td>
+</tr>
+<tr>
+<td>680000</td>
+<td>68Vạn</td>
+<td>68</td>
+<td>680K</td>
+<td>680.000</td>
+</tr>
+<tr>
+<td>800000</td>
+<td>80Vạn</td>
+<td>80</td>
+<td>800K</td>
+<td>800.000</td>
+</tr>
+<tr>
+<td>1000000</td>
+<td>100Vạn</td>
+<td>100</td>
+<td>1M</td>
+<td>1.000.000</td>
+</tr>
+<tr>
+<td>100000000</td>
+<td>1Tỷ, sai bậc</td>
+<td>1</td>
+<td>100M</td>
+<td>100.000.000</td>
+</tr>
+<tr>
+<td>1000000000</td>
+<td>10Tỷ, sai bậc</td>
+<td>10</td>
+<td>1B</td>
+<td>1.000.000.000</td>
+</tr>
+<tr>
+<td>1000000000000</td>
+<td>1Triệu, sai bậc</td>
+<td>1</td>
+<td>1T</td>
+<td>1.000.000.000.000</td>
+</tr>
+</tbody></table></div>
+<p>K=nghìn, M=triệu, B=tỷ, T=nghìn tỷ. Đây là phương án đề xuất, chưa được triển khai. Chi tiết phải dùng số gốc, không khôi phục từ chuỗi rút gọn hoặc làm tròn lên.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Đổi chữ dịch không bổ sung được glyph cho font bitmap. Tăng chiều rộng đơn thuần cũng không sửa việc thiếu glyph.</li>
+<li>Có thể chạy trực tiếp hàm formatter và phép đo trong bundle bằng VM nhỏ để tách lỗi logic khỏi hình ảnh.</li>
+<li>Bảo toàn callback data.labelShow của từng item; reset text/style khi renderer tái sử dụng. Không thay mọi BitmapLabel toàn client.</li>
+<li>Ưu tiên helper cho số lượng item, sau đó áp dụng các renderer riêng đang dùng cùng font: túi, quà, bảng hạng, shop, thư. Nhãn lực chiến hoặc chiến đấu cần kiểm tra riêng.</li>
+<li>Không giảm số thưởng để vừa UI; không sửa logic cấp thưởng/save chỉ để sửa cách hiển thị.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>PASS: giải mã hai font pack; kiểm font thiếu ký tự; chạy 10 mốc số với hàm gốc; tái hiện đo chiều rộng hụt; 8/8 hash VPS khớp local.</li>
+<li>Config client hiện tại: BXH6006 hạng1 nhận item1 và item6 mỗi loại 1.000.000; hạng2 800.000; hạng3 600.000. Đây là cấu hình, chưa phải xác minh giao dịch nhận thưởng của tài khoản trong ảnh.</li>
+<li>Bundle chính SHA-256: <code>2cc9a3811fd61cc421c3ce240982aae84582593e38d5d8c679a7a2af8c9d6c42</code>.</li>
+<li>Config client SHA-256: <code>1432e7bac4f7e1c1f3c296e39d0fd61858a4104e0153f7b667a8335348e9e897</code>.</li>
+<li>Language SHA-256: <code>fdc925b6f8aaf568b05e08923f2dd10867164fb04dcda74ed8055b2f85c575fe</code>.</li>
+<li>Chưa tái hiện trực tiếp renderer của phiên người dùng: fixture cho 100Vạn/80Vạn/60Vạn chỉ chứng minh mất đơn vị và đo hụt, chưa giải thích đầy đủ vì sao ảnh còn 10/8/6 thay vì 100/80/60. Cần đọc text, width, bounds và cache runtime để kết luận phần chữ số cuối bị mất. Không suy ngược số quà từ ảnh.</li>
+<li>Chưa chạy build hoặc native UI acceptance vì chưa sửa game. Chưa sửa hoặc deploy lên máy chủ.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Khi được yêu cầu triển khai: làm candidate số lượng native riêng; icon dùng K/M/B/T, chi tiết dùng đầy đủ dấu phân nhóm hàng nghìn. Giữ số nhỏ theo dạng thường và không làm tròn tăng số quà.</li>
+<li>Kiểm tra native text/count/bounds trên đúng BXH6006; xác minh cả cache/config đang nạp và các skin riêng. Không dùng tài khoản người thật để nhận thử quà.</li>
+<li>Test biên đơn vị, số0, render tái sử dụng, custom labelShow, font load chậm, máy nhỏ; kiểm túi/quà/thư/shop/BXH và mở chi tiết đúng số lượng gốc.</li>
+<li>Backup và phát hành đúng client asset kèm cache token; kiểm hash và UI sau reload. Không cần thay dữ liệu thưởng hoặc restart game server chỉ vì sửa presentation.</li>
+</ol></main></body></html>

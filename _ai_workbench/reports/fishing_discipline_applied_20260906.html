@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thu hồi Bánh Bao và khóa tài khoản - 06/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="thu-h-i-b-nh-bao-v-k-lu-t-t-i-kho-n-06-09-2026">Thu hồi Bánh Bao và kỷ luật tài khoản — 06/09/2026</h1>
+<p><strong>Đã thu hồi đủ 231.860 Bánh Bao của 19 nhân vật; áp khóa cả game và web cho 18 tài khoản. vanduc97 được miễn khóa, vẫn thu hồi 130 Bánh Bao.</strong></p>
+<p>Thực thi từ 23:33:29 6/9/26 đến 23:34:57 6/9/26 GMT+7. Hậu kiểm lúc 23:40:19 6/9/26 xác nhận 19 biên nhận, 19 thư và 29 nhân vật của 18 tài khoản bị từ chối đăng nhập khi còn hạn khóa. Thời hạn tính từ lúc áp lệnh cho từng tài khoản, không tính từ thời điểm user gửi yêu cầu và không kéo dài do kiểm thử/restart.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Thu hồi đúng phần nhận vượt đã kiểm kê, không lấy tổng tồn túi làm số thu hồi; không trừ Nguyên Bảo hoặc tiền web, không động đến các nhân vật nhận hợp lệ. Vẫn giữ lượt nhận đúng quy định phát sinh sau khi game đổi ngày. Tất cả mục tiêu còn đủ Bánh Bao lúc commit, không có số âm hoặc phần nợ.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Bánh Bao nhận dư</th>
+<th>Thời gian khóa</th>
+<th>Số tài khoản</th>
+</tr></thead><tbody>
+<tr>
+<td>1–100</td>
+<td>10 phút</td>
+<td>6</td>
+</tr>
+<tr>
+<td>101–500</td>
+<td>20 phút</td>
+<td>8, không tính vanduc97</td>
+</tr>
+<tr>
+<td>501–1.000</td>
+<td>30 phút</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1.001–2.000</td>
+<td>2 giờ</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2.001–30.000</td>
+<td>12 giờ</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Trên 30.000 và dưới 200.000</td>
+<td>1 ngày</td>
+<td>1</td>
+</tr>
+</tbody></table></div>
+<p>Các khoảng cụ thể đã thông báo trước khi xử lý; ngoại lệ cuối cùng của user là không khóa vanduc97, không phải miễn thu hồi. Đây là kỷ luật theo yêu cầu chủ dự án đối với số nhận vượt đã xác minh, không kết luận loại công cụ/ý định sử dụng của người chơi.</p>
+<h3 id="k-t-qu-t-ng-t-i-kho-n">Kết quả từng tài khoản</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Server / nhân vật</th>
+<th>Tài khoản</th>
+<th>Thu hồi</th>
+<th>Túi trước → sau commit</th>
+<th>Phạt</th>
+<th>Mở khóa GMT+7</th>
+</tr></thead><tbody>
+<tr>
+<td>S2 / Đại Đế</td>
+<td>nood100</td>
+<td>197.220</td>
+<td>472.760 → 275.540</td>
+<td>1 ngày</td>
+<td>23:33:49 7/9/26</td>
+</tr>
+<tr>
+<td>S1 / KawaiiNo1</td>
+<td>kawaiino1</td>
+<td>29.640</td>
+<td>92.821 → 63.181</td>
+<td>12 giờ</td>
+<td>11:33:54 7/9/26</td>
+</tr>
+<tr>
+<td>S2 / HG Quýt</td>
+<td>conthinhno11</td>
+<td>1.510</td>
+<td>310.441 → 308.931</td>
+<td>2 giờ</td>
+<td>01:33:58 7/9/26</td>
+</tr>
+<tr>
+<td>S2 / HanhGia_1002_19ff1c354d_</td>
+<td>kienandcom</td>
+<td>870</td>
+<td>27.145 → 26.275</td>
+<td>30 phút</td>
+<td>00:04:03 7/9/26</td>
+</tr>
+<tr>
+<td>S1 / Lily</td>
+<td>anhvietdb</td>
+<td>480</td>
+<td>18.106 → 17.626</td>
+<td>20 phút</td>
+<td>23:54:06 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / yeupevit</td>
+<td>yeupevit</td>
+<td>410</td>
+<td>126.132 → 125.722</td>
+<td>20 phút</td>
+<td>23:54:10 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / HanhGia_1001_a2e34ec5ce_</td>
+<td>yuuyuu123</td>
+<td>300</td>
+<td>17.461 → 17.161</td>
+<td>20 phút</td>
+<td>23:54:14 6/9/26</td>
+</tr>
+<tr>
+<td>S2 / HanhGia_1002_18d3c24427_</td>
+<td>okla12</td>
+<td>280</td>
+<td>19.131 → 18.851</td>
+<td>20 phút</td>
+<td>23:54:17 6/9/26</td>
+</tr>
+<tr>
+<td>S2 / Đế Thích</td>
+<td>haica79</td>
+<td>220</td>
+<td>290.220 → 290.000</td>
+<td>20 phút</td>
+<td>23:54:21 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / gc__2_0dc9</td>
+<td>mrte96</td>
+<td>210</td>
+<td>607.316 → 607.106</td>
+<td>20 phút</td>
+<td>23:54:24 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / HanhGia_1001_7b5ca796fe_</td>
+<td>noobdbp</td>
+<td>210</td>
+<td>18.443 → 18.233</td>
+<td>20 phút</td>
+<td>23:54:27 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / nicky</td>
+<td>vanduc97</td>
+<td>130</td>
+<td>3.104 → 2.974</td>
+<td>Miễn khóa</td>
+<td>Không khóa</td>
+</tr>
+<tr>
+<td>S2 / HanhGia_1002_8726b5014f_</td>
+<td>toantran912</td>
+<td>120</td>
+<td>561.038 → 560.918</td>
+<td>20 phút</td>
+<td>23:54:32 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / MNGH99</td>
+<td>tychuot000</td>
+<td>80</td>
+<td>20.653 → 20.573</td>
+<td>10 phút</td>
+<td>23:44:37 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / VươngLâm</td>
+<td>phuhoitrung</td>
+<td>50</td>
+<td>73.947 → 73.897</td>
+<td>10 phút</td>
+<td>23:44:40 6/9/26</td>
+</tr>
+<tr>
+<td>S2 / OneHit</td>
+<td>hungyen96</td>
+<td>50</td>
+<td>2.777.020 → 2.776.970</td>
+<td>10 phút</td>
+<td>23:44:44 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / Vân Muội</td>
+<td>heodhqt1</td>
+<td>40</td>
+<td>20.209 → 20.169</td>
+<td>10 phút</td>
+<td>23:44:47 6/9/26</td>
+</tr>
+<tr>
+<td>S1 / Lazada</td>
+<td>phongpg01051994</td>
+<td>20</td>
+<td>471.217 → 471.197</td>
+<td>10 phút</td>
+<td>23:44:50 6/9/26</td>
+</tr>
+<tr>
+<td>S2 / Tiny-BánhMì</td>
+<td>trantri193</td>
+<td>20</td>
+<td>21.351 → 21.331</td>
+<td>10 phút</td>
+<td>23:44:53 6/9/26</td>
+</tr>
+</tbody></table></div>
+<p>Tồn túi trong bảng là tại đúng thời điểm giao dịch, không phải số dư hiện tại sau các hoạt động hợp lệ tiếp theo. Các tài khoản có nhiều nhân vật bị khóa ở cấp Account chung, không chỉ nhân vật đã nhận sai. Không khóa FangZi hoặc tài khoản khác ngoài allowlist.</p>
+<p>Đã thu hồi 72 token đăng nhập và gửi lệnh ngắt 3 phiên đang online. Hai tài khoản yuuyuu123/noobdbp chưa có bản ghi tài khoản web vẫn có timed-ban theo tên tài khoản, không tạo tài khoản giả. Trạng thái web và game dùng cùng timestamp hết hạn tới mili-giây.</p>
+<p>Thông báo: game gửi lý do qua packet9 trước khi ngắt phiên; web trả lý do và mốc mở khóa khi bị chặn; 19 thư không có vật phẩm đính kèm ghi rõ số Bánh Bao thu hồi, thời hạn và mã đối soát. vanduc97 nhận thư ghi miễn khóa.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-tri-n-khai">Source triển khai</h3>
+<ul>
+<li><code>linhhoasu/lhs/newServer/src/config/fishingFreeRecovery20260906.json</code>: allowlist cố định 19 mục tiêu, số thu hồi/mức phạt, checksum bằng chứng và ngoại lệ vanduc97.</li>
+<li><code>linhhoasu/lhs/newServer/src/services/FishingFreeRecoveryService.js</code>: giao dịch trong process game với khóa nhân vật, drain save, lưu biên nhận cùng vật phẩm, sync session, ban idempotent, enforce cả hai server và thông báo.</li>
+<li><code>linhhoasu/lhs/newServer/src/net/HTTPServer.js</code>: endpoint incident riêng, nằm sau xác thực API key/HMAC; không cho client tự chọn số thu hồi hoặc mức phạt.</li>
+<li><code>linhhoasu/lhs/newServer/src/handlers/account.js</code>: bổ sung kiểm AccountBan cho đường đăng nhập cũ/no-token trước khi normalize/save player, trả notice+ACK từ chối. Tài khoản active/đã hết hạn/guest và bot hợp lệ giữ luồng cũ.</li>
+<li>Production <code>/linhhoasu/webgame/gm/config.php</code>: kiểm ban theo account_name ngay cả khi tài khoản chưa có dòng trong bảng account web.</li>
+<li>Đồng bộ local thêm AccountBanService.js vốn đã tồn tại trên production nhưng thiếu ở bundle local; không thay nội dung service này trên production. Không đổi main/index client, RNG, gameplay, gói hàng hoặc giá.</li>
+</ul>
+<h3 id="c-ng-c-d-li-u-v-backup">Công cụ, dữ liệu và backup</h3>
+<p>Tools chính trong <code>_ai_workbench/tools/</code>: prepare_fishing_recovery, test_fishing_recovery, test_fishing_web_ban, release_fishing_recovery_service, fishing_incident_api, fishing_web_discipline_atomic, run_fishing_incident, test_legacy_ban_gate, deploy_legacy_ban_gate, verify_fishing_recovery_final, sync_fishing_recovery_local, report_fishing_discipline (hậu tố20260906).</p>
+<p>Evidence/checkpoint trong <code>_ai_workbench/temp/fishing_recovery_20260906/</code>; backup local trong <code>_ai_workbench/backups/fishing_recovery_20260906/</code>. Không viết tool rác ở root, không sửa global memory.</p>
+<p>Backup nguồn production: <code>/linhhoasu/_ai_workbench/backups/fishing_recovery_service_20260906/</code>, chốt legacy thêm trong <code>legacy-gate/</code>. Backup dữ liệu đúng trước từng commit: <code>/linhhoasu/_ai_workbench/backups/fishing_free_recovery_20260906/</code> — 55 file (19 player,18 account không passwordHash,18 web). Băm backup được giữ trong final-native-and-db-verify.json. Không khôi phục cả player từ snapshot cũ nếu người chơi đã phát sinh tiến độ; rollback phải theo marker và delta có kiểm tra.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi / rủi ro</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Luồng thử ban bị HTTP401</td>
+<td>Tool đọc API_KEY trong .env khác env hiệu lực của process</td>
+<td>Đọc cấu hình process hiện chạy, HMAC preview cả S1/S2 đạt200 trước mutation</td>
+<td>Không in key hoặc giả định .env là runtime</td>
+</tr>
+<tr>
+<td>16 status web đổi nhưng không có ban thời hạn</td>
+<td>Batch cũ thừa tham số SQL; PDO silent; rollback chỉ kiểm marker nên không phục hồi status</td>
+<td>Đối chiếu backup của đúng lần lỗi, phục hồi đủ16 status về active, vanduc97 nguyên; rút tool cũ khỏi sử dụng</td>
+<td>PDO ERRMODE_EXCEPTION, số placeholder đúng, transaction và readback</td>
+</tr>
+<tr>
+<td>Trừ DB ngoài process có nguy cơ bị save online ghi đè</td>
+<td>Bộ nhớ game/live-close còn snapshot riêng</td>
+<td>Không chạy phần thu hồi cũ; dùng service trong game dưới PlayerMutationService, save xác nhận và sync cả session closing</td>
+<td>Không trừ thẳng DB của player online rồi chờ3giây</td>
+</tr>
+<tr>
+<td>Web chưa có account row có thể bỏ qua ban</td>
+<td>Hàm trả unbanned trước khi đọc bảng ban</td>
+<td>Bỏ riêng early-return này, kiểm cả2 tài khoản chưa có row</td>
+<td>Test missing/existing account, legacy lock, người không bị khóa</td>
+</tr>
+<tr>
+<td>Đường login cũ không token bỏ qua khóa</td>
+<td>Chỉ token resolver kiểm ban</td>
+<td>Guard AccountBan theo player.accountId hoặc roles.userId trước mutation</td>
+<td>7 test và29 request thật bị từ chối, không player500/save</td>
+</tr>
+<tr>
+<td>Tool path/JSON/encoding lỗi</td>
+<td>Path staging hardcode, dotenv stdout, mặc định GBK, fixture path Windows</td>
+<td>Dừng trước thao tác tiếp; sửa path/runtime auth/UTF-8 và fixture</td>
+<td>Không chạy tiếp từ summary thành công, kiểm evidence/action thật</td>
+</tr>
+</tbody></table></div>
+<p>Lần dở lúc23:17 chỉ tác động status của16 tài khoản web, chưa có khóa game hoặc thu hồi; phục hồi đầy đủ lúc23:19 trước lần xử lý chính. Không tuyên bố lần lỗi đã thành công. Ba script execute_fishing_recovery_20260906.py, fishing_recovery_game_20260906.js và fishing_recovery_web_20260906.php đã đánh dấu WITHDRAWN bằng lỗi ngay đầu, không dùng lại.</p>
+<p>Không có mojibake mới trong nội dung thêm; lỗi GBK là công cụ đọc JSON và đã sửa UTF-8. Không sửa các comment mã hóa cũ hoặc điều tra input-freeze đang tạm dừng ngoài phạm vi.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Khóa toàn tài khoản cần chung Account cho nhiều role, revoke/kick ở cả hai process và chặn cả legacy/no-token; chỉ thay status web hoặc một role không đủ.</li>
+<li>Không kéo dài hình phạt khi retry: banHistory/evidenceId là biên nhận để tái sử dụng timestamp đã lưu, SQL lấy đúng timestamp game.</li>
+<li>Giao dịch thu hồi phải dùng số dư live và biên nhận idempotent; backup có trước commit, lỗi save không xác định phải vô hiệu hóa snapshot cũ, không ghi rollback mù.</li>
+<li>Qua ngày game mới vẫn chỉ thu phần dư của bằng chứng incident cũ. Giữ nguyên reward mới hợp lệ và marker xử lý incident trước đây.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Kiểm chứng</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Unit recovery/sanction</td>
+<td>19 PASS, gồm retry, đồng thời, save-null/throw/commit-timeout, miễn khóa admin, shortfall và notice một lần</td>
+</tr>
+<tr>
+<td>Web ban</td>
+<td>4 PASS trên PHP staging: có/không account row, legacy lock và người không bị khóa</td>
+</tr>
+<tr>
+<td>Legacy login guard</td>
+<td>7 PASS, có ca tái hiện baseline bỏ qua ban</td>
+</tr>
+<tr>
+<td>Core và cú pháp</td>
+<td>PASS local/Linux; đọc714bảng cấu hình, không phải714test; JS/PHP syntax đạt</td>
+</tr>
+<tr>
+<td>Thu hồi thật</td>
+<td>19/19 marker có tổng231.860, before−after khớp; khôngthu currency khác</td>
+</tr>
+<tr>
+<td>Khóa/thông báo thật</td>
+<td>18 game banHistory và 18 web-ban cùng thời hạn; 19 thư không đính kèm vật phẩm; vanduc97 không ban/không revoke</td>
+</tr>
+<tr>
+<td>Đăng nhập cũ</td>
+<td>29/29 role của18 account bị từ chối bằng packet9+tag1; đối chiếu items/moderation/updatedAt không thay</td>
+</tr>
+<tr>
+<td>Backup/hash/ready</td>
+<td>55 backup cósha;167artifact đúng,ready8080/8083=200</td>
+</tr>
+</tbody></table></div>
+<p>PM2 hậu kiểm: lhs-s1001 PID17789/restart1383; lhs-s1002 PID17688/restart53. Trong đợt triển khai này mỗi server tăng2 restart (service vàguardlogin); bốn process dist/admin/botS1/botS2 giữ nguyên. Restart không tạo ban mới hoặc thu hồi lại.</p>
+<p>Các khóa tự hết hạn theo mốc trong bảng; 10phút sớm nhất kết thúc23:44:37 ngày06/09, không được chạy lại để gia hạn. Endpoint incident giữ allowlist/HMAC và marker cố định; request ngoài danh sách hoặc thiếu xác nhận bị từ chối. Không tạo automation theo dõi/gia hạn.</p>
+<p><a href="../temp/fishing_recovery_20260906/plan.json">Kế hoạch cố định</a> · <a href="../temp/fishing_recovery_20260906/incident-progress.json">Kết quả từng bước</a> · <a href="../temp/fishing_recovery_20260906/incident-verify.json">Đối soát game/web</a> · <a href="../temp/fishing_recovery_20260906/final-native-and-db-verify.json">Hậu kiểm DB, thư, token và29login</a>.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người bị khóa có thể đọc lý do/thời điểm mở khóa khi đăng nhập; thư trong game lưu thông tin thu hồi sau khi vào lại. Tài khoản vanduc97 tiếp tục dùng game/web/admin bình thường.</li>
+<li>Không chạy lại tool WITHDRAWN hoặc điều chỉnh thời hạn đã áp khi chỉ cần kiểm trạng thái. Nếu cần kiểm lại dùng mode verify; với ban đã hết hạn phải chấp nhận đăng nhập hợp lệ, không thử no-token khi đã hết hạn trên dữ liệu người thật.</li>
+<li>Mọi khiếu nại/điều chỉnh sau này phải bám accountId+server+marker, lưu delta đối soát mới, không phục hồi toàn bộ túi từ backup cũ.</li>
+</ol></main></body></html>

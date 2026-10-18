@@ -1,0 +1,232 @@
+{
+  "_table": "CrossRivalOpenConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,startTime,endTime,limitCrossId,area,roomScale,firstStageStart,firstStageEnd,secondtStageStart,secondtStageEnd",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "startTime": 1777686900000,
+        "endTime": 1777824000000,
+        "limitCrossId": [
+          [
+            60001,
+            60015
+          ],
+          [
+            80001,
+            80013
+          ],
+          [
+            70001,
+            70009
+          ],
+          [
+            159001,
+            159006
+          ]
+        ],
+        "area": 1,
+        "roomScale": 4,
+        "firstStageStart": 36000,
+        "firstStageEnd": 71700,
+        "secondtStageStart": 72000,
+        "secondtStageEnd": 73800
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "startTime": 3403562400000,
+        "endTime": 3403699200000,
+        "limitCrossId": [
+          [
+            6666,
+            6666
+          ],
+          [
+            7777,
+            7777
+          ],
+          [
+            10001,
+            10001
+          ]
+        ],
+        "area": 2,
+        "roomScale": 4,
+        "firstStageStart": 36000,
+        "firstStageEnd": 71700,
+        "secondtStageStart": 72000,
+        "secondtStageEnd": 73800
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "startTime": 1781315700000,
+        "endTime": 1781452800000,
+        "limitCrossId": [
+          [
+            60001,
+            60015
+          ],
+          [
+            80001,
+            80015
+          ],
+          [
+            70001,
+            70009
+          ],
+          [
+            159001,
+            159007
+          ]
+        ],
+        "area": 1,
+        "roomScale": 4,
+        "firstStageStart": 36000,
+        "firstStageEnd": 71700,
+        "secondtStageStart": 72000,
+        "secondtStageEnd": 73800
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "startTime": 1777686900000,
+      "endTime": 1777824000000,
+      "limitCrossId": [
+        [
+          60001,
+          60015
+        ],
+        [
+          80001,
+          80013
+        ],
+        [
+          70001,
+          70009
+        ],
+        [
+          159001,
+          159006
+        ]
+      ],
+      "area": 1,
+      "roomScale": 4,
+      "firstStageStart": 36000,
+      "firstStageEnd": 71700,
+      "secondtStageStart": 72000,
+      "secondtStageEnd": 73800
+    },
+    "2": {
+      "id": 2,
+      "startTime": 3403562400000,
+      "endTime": 3403699200000,
+      "limitCrossId": [
+        [
+          6666,
+          6666
+        ],
+        [
+          7777,
+          7777
+        ],
+        [
+          10001,
+          10001
+        ]
+      ],
+      "area": 2,
+      "roomScale": 4,
+      "firstStageStart": 36000,
+      "firstStageEnd": 71700,
+      "secondtStageStart": 72000,
+      "secondtStageEnd": 73800
+    },
+    "3": {
+      "id": 3,
+      "startTime": 1781315700000,
+      "endTime": 1781452800000,
+      "limitCrossId": [
+        [
+          60001,
+          60015
+        ],
+        [
+          80001,
+          80015
+        ],
+        [
+          70001,
+          70009
+        ],
+        [
+          159001,
+          159007
+        ]
+      ],
+      "area": 1,
+      "roomScale": 4,
+      "firstStageStart": 36000,
+      "firstStageEnd": 71700,
+      "secondtStageStart": 72000,
+      "secondtStageEnd": 73800
+    },
+    "4": {
+      "id": 4,
+      "startTime": 1784944500000,
+      "endTime": 1785081600000,
+      "limitCrossId": [
+        [
+          60001,
+          60017
+        ],
+        [
+          80001,
+          80018
+        ],
+        [
+          70001,
+          70010
+        ],
+        [
+          159001,
+          159007
+        ],
+        [
+          99999,
+          99999
+        ]
+      ],
+      "area": 1,
+      "roomScale": 4,
+      "firstStageStart": 36000,
+      "firstStageEnd": 71700,
+      "secondtStageStart": 72000,
+      "secondtStageEnd": 73800
+    },
+    "6": {
+      "id": 6,
+      "startTime": 1784304000000,
+      "endTime": 1784563200000,
+      "limitCrossId": [
+        [
+          10001,
+          10001
+        ]
+      ],
+      "area": 1,
+      "roomScale": 4,
+      "firstStageStart": 36000,
+      "firstStageEnd": 71700,
+      "secondtStageStart": 72000,
+      "secondtStageEnd": 73800
+    }
+  }
+}

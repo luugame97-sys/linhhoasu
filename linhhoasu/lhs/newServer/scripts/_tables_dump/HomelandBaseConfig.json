@@ -1,0 +1,111 @@
+{
+  "_table": "HomelandBaseConfig",
+  "_rows": 34,
+  "_type": "object",
+  "_firstKeys": "(obj)[messageBoardCount|messageBoardLevel|messageBoardWords|qualityPiece|initMap]",
+  "_sample": [
+    {
+      "messageBoardCount": 10
+    },
+    {
+      "messageBoardLevel": 105
+    },
+    {
+      "messageBoardWords": 40
+    }
+  ],
+  "data": {
+    "messageBoardCount": 10,
+    "messageBoardLevel": 105,
+    "messageBoardWords": 40,
+    "qualityPiece": {
+      "2": 170001,
+      "3": 170002,
+      "4": 170003,
+      "6": 170004,
+      "7": 170005
+    },
+    "initMap": 1001,
+    "incomeShow": 5000,
+    "statueFreeCount": 3,
+    "statuePayCount": 2,
+    "statueTransformParam": [
+      9500,
+      10500
+    ],
+    "buff_quality": 4,
+    "attrName": {
+      "1001": 11001,
+      "1002": 11002,
+      "1003": 11003,
+      "1004": 11004
+    },
+    "attrDesc": {
+      "1001": 10011001,
+      "1002": 10011002,
+      "1003": 10011003,
+      "1004": 10011004
+    },
+    "styleName": {
+      "1": 30107602,
+      "2": 30107603,
+      "3": 30107604,
+      "4": 30107605,
+      "5": 30107606
+    },
+    "buildingCountMax": 1500,
+    "drawContinuous": 10,
+    "drawPay": 225,
+    "drawFloorCount": 100,
+    "drawPieceShow": {
+      "2": 3793,
+      "3": 2097,
+      "4": 1411,
+      "6": 442,
+      "7": 297
+    },
+    "drawItemShow": 1960,
+    "drawItem": [
+      {
+        "id": 100653,
+        "count": 1
+      },
+      {
+        "id": 100652,
+        "count": 1
+      },
+      {
+        "id": 100651,
+        "count": 1
+      }
+    ],
+    "drawFreeCount": 2,
+    "drawLuckCount": 1,
+    "drawLuckOffset": 50,
+    "praiseRewards": {
+      "id": 1,
+      "count": 10
+    },
+    "praiseCountMax": 30,
+    "taskId": 140001,
+    "loadWeight": [
+      3000,
+      3000,
+      3000,
+      1000
+    ],
+    "exchangeCount": 1,
+    "exchangeQuality": 6,
+    "beautyCondition": 2,
+    "beautyExchangeCount": [
+      1,
+      3
+    ],
+    "beautyWishQuality": 2,
+    "oldTrekBuilding": [
+      170014,
+      170015
+    ],
+    "oldTrekBuildingGuide": 1106
+  }
+}

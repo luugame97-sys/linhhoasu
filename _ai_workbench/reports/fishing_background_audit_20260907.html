@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiểm tra auto câu cá khi train quái</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="ki-m-tra-auto-c-u-c-khi-ra-map-train-qu-i-07-09-2026">Kiểm tra auto câu cá khi ra map train quái — 07/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Yêu cầu: kiểm tra auto câu cá có tiếp tục sau khi rời màn câu cá ra map đánh quái hay không. Đây là phiên chẩn đoán, không được yêu cầu sửa hành vi.</p>
+<p>Kết luận theo source hiện tại đã đối chiếu VPS và kiểm thử các hàm thật: <strong>có tiếp tục, nếu bấm nút quay lại khi auto đang bật và phiên game vẫn online</strong>. Nhánh này ẩn màn câu cá nhưng giữ bộ điều khiển, phòng câu và timer. Map thường/đánh quái có vòng cập nhật riêng, không xóa vòng câu cá.</p>
+<p>Đây không phải auto offline phía server: đóng game, mất kết nối hoặc reconnect sẽ không tự duy trì chuỗi câu. Nhãn auto đang bật cũng không đảm bảo luôn phát lượt mới nếu còn cá chờ xử lý thủ công.</p>
+<p>Không sửa source/config, không deploy/restart, không nhận thưởng/bán cá bằng tài khoản thật, không ghi DB người chơi.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<p>Chỉ tạo tool và báo cáo trong <code>_ai_workbench/</code>:</p>
+<ul>
+<li><code>tools/inspect_fishing_background_20260907.js</code>: trích xuất có giới hạn các hàm thật từ bundle bằng parser, không dump toàn bộ bundle.</li>
+<li><code>tools/check_fishing_background_live_20260907.py</code>: đọc hash 11 file liên quan trên VPS, health/PID; không ghi remote.</li>
+<li><code>tools/test_fishing_background_client_20260907.js</code>: 12 ca với hàm client thật, bộ timer/RPC giả lập cô lập và không truy cập mạng.</li>
+<li><code>tools/test_fishing_background_server_20260907.js</code>: 4 ca tích hợp handler thật, lưu trong bộ nhớ, cấm socket ra ngoài.</li>
+<li><code>temp/fishing_background_audit_20260907/</code>: <code>client-methods.json</code>, <code>client-tests.json</code>, <code>server-tests.json</code>, <code>live-hashes.json</code>.</li>
+<li><code>reports/fishing_background_audit_20260907.md/.html</code> và cập nhật <code>reports/session_report.md/.html</code>.</li>
+<li>Backup báo cáo cũ: <code>backups/fishing_background_audit_reports_20260907/</code>.</li>
+</ul>
+<p>Source đã đọc, không chỉnh: main client, fish/basic/raid handlers, WSServer, FishingAutoService, FishingRoomService, FishingEventService và FishingGameplayService.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Bằng chứng/nguyên nhân</th>
+<th>Kết quả xử lý</th>
+<th>Cách tránh kết luận sai</th>
+</tr></thead><tbody>
+<tr>
+<td>Dễ nhầm đóng màn câu cá với tắt auto</td>
+<td>Nút quay lại kiểm isAutoFish; true gọi backExit, false gọi RPC4051</td>
+<td>Xác minh hai nhánh bằng hàm thật</td>
+<td>Không suy từ việc nhân vật/hoạt ảnh câu cá biến mất</td>
+</tr>
+<tr>
+<td>Dễ nhầm auto xử lý cá với auto offline</td>
+<td>FishingAutoService chỉ lập kế hoạch trang bị/bán; chuỗi phát lượt nằm ở client</td>
+<td>Đối chiếu callback4000 → timer →4008 → lượt4000 mới</td>
+<td>Không hứa tiếp tục khi tắt app/mất mạng</td>
+</tr>
+<tr>
+<td>Có thể thấy auto bật nhưng không có lượt mới</td>
+<td>Bộ lọc giữ cá cần xử lý; auto thường có thể giữ cờ bật khi cá còn chờ</td>
+<td>Negative test xác nhận không phát lượt tiếp</td>
+<td>Kiểm lượt/UID/tiêu hao, không chỉ icon trạng thái</td>
+</tr>
+<tr>
+<td>Index local/VPS khác hash</td>
+<td>Chỉ khác CRLF/LF; nội dung chuẩn hóa giống nhau</td>
+<td>Ghi rõ10/11 hash khớp, index tương đương nội dung; không tự ghi đè</td>
+<td>Phân biệt sai khác logic với dòng kết thúc</td>
+</tr>
+<tr>
+<td>Cảnh báo Mongoose isNew trong fixture</td>
+<td>Schema hiện hành dùng tên reserved</td>
+<td>Ghi nhận warning; test vẫn PASS, không sửa schema ngoài phạm vi</td>
+<td>Không gọi warning là lỗi auto hoặc báo log sạch hoàn toàn</td>
+</tr>
+</tbody></table></div>
+<p>Không có bằng chứng mojibake mới và không chuyển mã file nào.</p>
+<h3 id="b-ng-ch-ng-lu-ng-client">Bằng chứng luồng client</h3>
+<ul>
+<li><code>FishMainPanel.onClick</code>, offset766545: nhấn returnBtn đóng panel; nếu isAutoFish=true gọi <code>RaidMgr.mFishRaid.backExit()</code>, nếu false mới gọi <code>cs_fish_map_leave()</code>.</li>
+<li><code>FishMapRaid.backExit</code>, offset1703591: chỉ RemoveAllEntity và đặt fishMainView=null; không xóa mFishRaid, không hủy timer.</li>
+<li><code>FishMapRaid.startFishing</code>, offset1704803: gọi hoạt ảnh chỉ khi có entity, nhưng luôn tạo timer hoàn tất lượt. Vì vậy không có entity vẫn có callback tiếp tục.</li>
+<li><code>FishingModel.sendFishing</code>, offset4592818: sau ACK4000 và timer, nếu auto=true thì câu tiếp khi hụt hoặc xử lý cá rồi tiếp tục.</li>
+<li><code>sendAutoPowerFish</code>, offset4598045: cập nhật state từ ACK4008; khi không có cá giữ lại và auto=true thì doNext(startAutoFish). Hiệu ứng bị bỏ qua nếu panel không còn, không bỏ phần cập nhật state/lượt tiếp.</li>
+<li><code>RaidMgr.UpdateTime</code>, offset7276454: cập nhật map thường, battle, fish riêng. Nhánh đổi map thường không xóa mFishRaid.</li>
+<li><code>reconnectSuccess</code>, offset4590298: tắt auto, tăng generation, hủy hiệu lực callback cũ.</li>
+<li><code>isNeedSlientMode</code>, offset4611089: phân biệt ngoài màn câu cá để giảm hiển thị thưởng, không tự tắt auto.</li>
+</ul>
+<h3 id="b-ng-ch-ng-lu-ng-server">Bằng chứng luồng server</h3>
+<ul>
+<li><code>handlers/basic.js::handleEnterMap</code>: đặt session._mapId và vị trí map thường; không đổi fishInfo.scene hoặc phòng câu.</li>
+<li><code>handlers/fish.js::handleFishCatch</code>: kiểm count, cá đang chờ, cooldown, ngư trường hợp lệ và Đùi Gà. Không yêu cầu giao diện câu cá phải mở hay map thường phải trùng ngư trường.</li>
+<li><code>handleFishLeaveMap</code> chỉ khi có RPC4051 mới giải phóng phòng và đặt fishInfo.scene=1. Nút quay lại khi đang auto không gửi RPC này.</li>
+<li>Heartbeat phía server hồi năng lượng/đồng bộ/kết toán sự kiện; không tự gọi phát lượt câu mới.</li>
+</ul>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Tách ba trạng thái: ẩn panel, rời phòng câu thật sự, và ngắt kết nối game. Chúng không tương đương.</li>
+<li>Sự tồn tại của controller/timer quyết định auto tiếp tục; sự tồn tại của entity/hoạt ảnh chỉ quyết định phần vẽ.</li>
+<li>Auto-power và auto bán thường có nhánh callback khác nhau; đã kiểm cả hai, gồm trường hợp đóng panel trước ACK lượt đầu.</li>
+<li>Tính năng online phía client có thể bị trình duyệt/điện thoại hạn chế khi khóa màn hình hoặc đưa app nền. Phiên này không kiểm thiết bị vật lý và không cam kết hành vi đó.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="ki-m-ch-ng">Đã kiểm chứng</h3>
+<ul>
+<li>Live read-only lúc10:17:16 GMT+7:10/11 file khớp SHA-256; index chỉ khác kết thúc dòng và nội dung chuẩn hóa khớp.</li>
+<li>Main client SHA-256: <code>2cc9a3811fd61cc421c3ce240982aae84582593e38d5d8c679a7a2af8c9d6c42</code>; test trích đúng bundle này.</li>
+</ul>
+<p>-12 ca client PASS: quay lại không leave/hủy timer; auto-power3chu kỳ mới khi ẩn; auto bán thường3chu kỳ; hụt vẫn tiếp tục; đổi map/battle tick vẫn còn controller; tắt auto+leave; reconnect; hết năng lượng; cá giữ; bộ lọc; silentmode; server error. -4 ca server PASS: serverId1001 và1002 vào map10001 trong khi vẫn ở ngư trường101; mỗi bên3lượt câu, tiêu3Đùi Gà, UID tăng và room được giữ; heartbeat riêng không tự câu; leave4051 giải phóng phòng.</p>
+<ul>
+<li>S1/S2 ready HTTP200; chỉ đọc trạng thái, không restart. Source, config và tiền/quà không thay đổi.</li>
+</ul>
+<h3 id="gi-i-h-n-b-ng-ch-ng">Giới hạn bằng chứng</h3>
+<ul>
+<li>Chưa quan sát trực tiếp tài khoản người dùng hoặc packet đang phát từ phiên game của họ. Kết luận về cơ chế hiện tại, không chứng nhận rằng một tài khoản cụ thể đang câu tại thời điểm hỏi.</li>
+<li>Client test chạy hàm thật với timer/RPC/metadata hoạt ảnh giả lập; server test dùng session và lưu trong bộ nhớ. Đây không phải native UI E2E hoặc cuộc đánh quái thật.</li>
+<li>Không thử đóng app, tắt trình duyệt, khóa điện thoại hoặc background throttling. Khi reconnect, code xác nhận auto bị tắt.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Khi muốn vừa train vừa câu: bật auto trong ngư trường, dùng nút quay lại, giữ game kết nối. Đảm bảo còn Đùi Gà và không có cá chờ xử lý.</li>
+<li>Nếu thực tế một tài khoản không tăng lượt: ghi rõ auto thường hay auto theo lực chiến, có thông báo giữ cá/hết Đùi Gà hay không, và có reconnect không; đối chiếu lượt câu/tiêu hao trước-sau, không chỉ nhìn trạng thái nút.</li>
+<li>Chỉ triển khai thay đổi nếu người dùng yêu cầu sửa. Auto offline/tiếp tục sau mất mạng là phạm vi khác, chưa thực hiện trong phiên này.</li>
+</ol></main></body></html>

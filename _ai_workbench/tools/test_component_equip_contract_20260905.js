@@ -1,0 +1,9 @@
+'use strict';
+const fs=require('fs'),path=require('path'),assert=require('assert/strict');
+const app=path.resolve(__dirname,'../../linhhoasu/lhs/newServer'),dir=path.resolve(__dirname,'../temp/component_client_fix_20260905');
+process.env.CONFIG_BIN_PATH=path.join(dir,'client.bin.before');process.env.NODE_ENV='test';process.env.LOG_DIR='';
+const log=require.resolve(path.join(app,'src/logger'));require.cache[log]={id:log,filename:log,loaded:true,exports:{info(){},warn(){},debug(){},error(){}}};
+const ps=require(path.join(app,'src/services/PlayerService'));let saves=0;ps.savePlayer=async(_,p)=>{saves++;return p;};
+const fashion=require(path.join(app,'src/handlers/fashion'));
+const base=parts=>({userId:'component-memory',level:99,roleInfo:{kungfuId:8,subJob:1},items:{},currencies:{diamond:0,silver:0,gold:0},fashionInfo:{activateFashion:parts,fashions:Object.fromEntries(parts.map(id=>[id,1])),fashion:{303:-1},curFashion:{},fashionMap:{},fashionData:[],dress:[]}});
+(async()=>{let p=base([28043,28049]),out=await fashion.handleChangeSuit({id:28040,color:0,set:0},{userId:p.userId,player:p},1);assert.equal(out.data.result,-1);assert.equal(saves,0);assert(!p.fashionInfo.activateFashion.includes(28041));p=base([28041,28042,28043,28049]);out=await fashion.handleChangeSuit({id:28040,color:0,set:0},{userId:p.userId,player:p},2);assert.equal(out.data.result,0);assert.equal(saves,1);assert.equal(p.fashionInfo.fashion[301],28041);assert.equal(p.fashionInfo.fashion[303],28043);const result={result:'PASS',incompleteRejected:true,fullSetEquips:true,noAutoGrant:true,savesInMemory:1,databaseWrites:0,serverSourceChanged:false};fs.writeFileSync(path.join(dir,'equip_contract.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));})().catch(e=>{console.error(e.stack);process.exitCode=1;});

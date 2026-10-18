@@ -1,0 +1,106 @@
+"""Level-only normal fishing scenes. Stage + guard + S2 canary then S1. No FX change."""
+import json,re,shlex,sys
+from pathlib import Path
+from datetime import datetime,timezone
+import paramiko
+from release_huyenvu_daily_20260906 import run,hashes,pm2,ready,wait_ready,digest
+
+WB=Path(__file__).resolve().parents[1];ROOT=WB/'temp/fishing_level_only_20260906'
+APP='/linhhoasu/lhs/newServer';GAME='/linhhoasu/webgame/game';REL='src/services/FishingIntegrityService.js'
+VERSION='20260906_fishing_level_only_v1'
+def write(name,data):
+    (ROOT/name).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def main():
+    sys.stdout.reconfigure(encoding='utf-8');action=sys.argv[1] if len(sys.argv)>1 else 'stage'
+    assert action in ['stage','deploy','verify']
+    c=(WB/'VPS103.116.105.154.txt').read_text(encoding='utf-8-sig').splitlines()
+    s=paramiko.SSHClient();s.load_system_host_keys();s.set_missing_host_key_policy(paramiko.RejectPolicy())
+    s.connect(c[0].strip(),username='root',password=c[2],look_for_keys=False,allow_agent=False,timeout=20)
+    manifest=json.loads((ROOT/'manifest.json').read_text());baseline={v['remote']:v['sha256']for v in manifest['files'].values()}
+    installed=[];restarted=[];report={}
+    try:
+        owner=json.loads(run(s,'pm2 jlist | node -e '+shlex.quote("let x='';process.stdin.on('data',b=>x+=b).on('end',()=>console.log(JSON.stringify(JSON.parse(x).map(p=>({name:p.name,cwd:p.pm2_env.pm_cwd,script:p.pm2_env.pm_exec_path})))));")))
+        for name in ['lhs-s1001','lhs-s1002']:
+            row=next(p for p in owner if p['name']==name);assert row['cwd']==APP and row['script']==APP+'/src/app.js'
+        if action=='stage':
+            assert hashes(s,list(baseline))==baseline,'BASELINE_DRIFT'
+            stage='/linhhoasu/_ai_workbench/temp/fishing_level_only_'+datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')
+            run(s,f'install -d -m 700 {stage}/app {stage}/tools; cp -a {APP}/src {stage}/app/src; cp -a {APP}/scripts {stage}/app/scripts')
+            f=s.open_sftp()
+            try:
+                f.put(str(ROOT/'app'/REL),stage+'/app/'+REL)
+                for name in ['server.bin','main.js','main.fixed.js','fish.before.js','integrity.before.js','client-build.json']:f.put(str(ROOT/name),stage+'/'+name)
+                for name in ['test_fishing_level_only_20260906.js','test_fishing_map_fix_20260906.js','test_fishing_auto_20260906.js','test_fishing_gear_fix_20260906.js','test_fishing_balance_20260906.js','test_huyenvu_daily_20260906.js','qa_fishing_level_only_live_20260906.js']:
+                    f.put(str(WB/'tools'/name),stage+'/tools/'+name)
+                f.put(str(WB/'temp/fishing_auto_20260906/main.js'),stage+'/auto-original.js')
+                f.put(str(WB/'temp/fishing_audit_20260906T041024Z/app/src/handlers/commerce-compat.js'),stage+'/commerce-baseline.js')
+                f.put(str(WB.parent/'linhhoasu/lhs/newServer/node_modules/acorn/dist/acorn.js'),stage+'/tools/acorn.js')
+                f.get(GAME+'/index.html',str(ROOT/'index.before.html'))
+            finally:f.close()
+            old=(ROOT/'index.before.html').read_text(encoding='utf-8')
+            updated,count=re.subn(r'(js/main\.min_a6195824\.js)(?:\?[^\s\"\'<>]*)?',r'\1?v='+VERSION,old);assert count==1
+            (ROOT/'index.fixed.html').write_text(updated,encoding='utf-8')
+            baseline[GAME+'/index.html']=digest(ROOT/'index.before.html')
+            env=f'NODE_PATH={APP}/node_modules FISH_ACORN_PATH={stage}/tools/acorn.js FISH_SCENE_POLICY=level-only AUTO_ORIGINAL_MAIN={stage}/auto-original.js AUTO_SKIP_COMMERCE_DIAGNOSTICS=1 DAILY_BASE_SOURCE={stage}/commerce-baseline.js'
+            tests={}
+            for name in ['level_only','map_fix','auto','gear_fix','balance','daily']:
+                script='test_huyenvu_daily_20260906.js' if name=='daily' else 'test_fishing_'+name+'_20260906.js'
+                result=json.loads(run(s,f'{env} node {stage}/tools/{script} {stage}',timeout=60));assert result['result']=='PASS',name+'_FAIL'
+                tests[name]=result;print(json.dumps({'test':name,'count':result['count'],'result':'PASS'}),flush=True)
+            run(s,f'node --check {stage}/app/{REL} && node --check {stage}/main.fixed.js')
+            run(s,f'ln -s {APP}/node_modules {stage}/app/node_modules')
+            core=run(s,f'cd {stage}/app && NODE_ENV=test LOG_DIR= CONFIG_BIN_PATH={stage}/server.bin node scripts/test-core-gameplay-contract.js',timeout=60)
+            assert json.loads(core)['result']=='ok';assert hashes(s,list(baseline))==baseline
+            report={'result':'STAGED','stage':stage,'baseline':baseline,'ownership':owner,'tests':tests,'core':json.loads(core),'beforePm2':pm2(s),'ready':ready(s),
+                    'serverHash':digest(ROOT/'app'/REL),'mainHash':digest(ROOT/'main.fixed.js'),'indexHash':digest(ROOT/'index.fixed.html'),
+                    'qaHash':digest(WB/'tools/qa_fishing_level_only_live_20260906.js')}
+            write('stage.json',report);print(json.dumps({'result':'STAGED','stage':stage,'tests':sum(v['count']for v in tests.values()),'fxAudit':tests['level_only']['auditCount']}));return
+        stageInfo=json.loads((ROOT/'stage.json').read_text(encoding='utf-8'));baseline=stageInfo['baseline'];stage=stageInfo['stage']
+        expected={**baseline,APP+'/'+REL:stageInfo['serverHash'],GAME+'/js/main.min_a6195824.js':stageInfo['mainHash'],GAME+'/index.html':stageInfo['indexHash']}
+        if action=='verify':
+            assert hashes(s,list(expected))==expected,'POSTDEPLOY_DRIFT';after=pm2(s)
+            deployed=json.loads((ROOT/'deploy.json').read_text(encoding='utf-8'));assert after==deployed['afterPm2']
+            served={k:run(s,f'curl -fsS --max-time 15 http://127.0.0.1:81/{p} | sha256sum').split()[0]for k,p in [('main','js/main.min_a6195824.js'),('index','')]}
+            assert served=={'main':stageInfo['mainHash'],'index':stageInfo['indexHash']}
+            qa="""const{MongoClient}=require('/linhhoasu/lhs/newServer/node_modules/mongodb');(async()=>{const c=new MongoClient('mongodb://127.0.0.1:27017');await c.connect();const r={};for(const n of ['lhs_s1001','lhs_s1002'])r[n]={players:await c.db(n).collection('players').countDocuments({userId:/^qa_fish_level_/}),mails:await c.db(n).collection('mails').countDocuments({userId:/^qa_fish_level_/})};await c.close();console.log(JSON.stringify(r));})().catch(e=>{console.error(e.message);process.exitCode=1;});"""
+            remaining=json.loads(run(s,'node -',qa));assert all(v=={'players':0,'mails':0}for v in remaining.values())
+            report={'result':'VERIFIED','time':datetime.now(timezone.utc).isoformat(),'hashCount':len(expected),'changed':3,'unchanged':len(expected)-3,'ready':ready(s),'pm2':after,'served':served,'qaRemaining':remaining}
+            assert report['ready']=={'8080':200,'8083':200};write('verify.json',report);print(json.dumps(report));return
+        assert digest(ROOT/'app'/REL)==stageInfo['serverHash'] and digest(ROOT/'main.fixed.js')==stageInfo['mainHash'] and digest(ROOT/'index.fixed.html')==stageInfo['indexHash']
+        assert digest(WB/'tools/qa_fishing_level_only_live_20260906.js')==stageInfo['qaHash']
+        assert hashes(s,[stage+'/tools/qa_fishing_level_only_live_20260906.js'])[stage+'/tools/qa_fishing_level_only_live_20260906.js']==stageInfo['qaHash']
+        assert hashes(s,list(baseline))==baseline,'PREINSTALL_DRIFT';before=pm2(s);assert ready(s)=={'8080':200,'8083':200}
+        backup=stage.replace('/temp/','/backups/');run(s,f'install -d -m 700 {backup}')
+        report={'result':'INSTALLING','startedAt':datetime.now(timezone.utc).isoformat(),'backup':backup,'stage':stage,'beforePm2':before,'liveQa':{},'fxChanged':False,'compensation':False}
+        targets=[(ROOT/'app'/REL,APP+'/'+REL),(ROOT/'main.fixed.js',GAME+'/js/main.min_a6195824.js'),(ROOT/'index.fixed.html',GAME+'/index.html')]
+        f=s.open_sftp()
+        try:
+            for i,(local,target)in enumerate(targets):
+                run(s,f'cp -a {target} {backup}/{i}.before');f.put(str(local),stage+f'/install-{i}')
+                assert hashes(s,[backup+f'/{i}.before'])[backup+f'/{i}.before']==baseline[target]
+                assert hashes(s,[stage+f'/install-{i}'])[stage+f'/install-{i}']==digest(local)
+        finally:f.close()
+        for i,(_,target)in enumerate(targets):installed.append((i,target));run(s,f'install -m 644 {stage}/install-{i} {target}')
+        assert hashes(s,list(expected))==expected
+        for name,port,serverId in [('lhs-s1002',8083,1002),('lhs-s1001',8080,1001)]:
+            restarted.append(name);print(json.dumps({'step':'restart-canary','name':name}),flush=True)
+            run(s,'pm2 restart '+name,timeout=60);wait_ready(s,port)
+            qa=json.loads(run(s,f'node {stage}/tools/qa_fishing_level_only_live_20260906.js {serverId}',timeout=60))
+            assert qa['result']=='PASS' and qa['qaCleanupRemaining']==0,'LEVEL_ONLY_CANARY_FAILED'
+            report['liveQa'][str(serverId)]=qa;write('canary-progress.json',report);print(json.dumps({'step':'qa-pass','server':serverId}),flush=True)
+        after=pm2(s)
+        assert all(next((r for r in after if r['name']==p['name']),None)==p for p in before if p['name']not in restarted),'UNRELATED_PROCESS_CHANGED'
+        assert all(p['status']=='online'for p in after) and hashes(s,list(expected))==expected
+        report.update(result='DEPLOYED',afterPm2=after,expected=expected,ready=ready(s),restarted=restarted,finishedAt=datetime.now(timezone.utc).isoformat())
+        assert report['ready']=={'8080':200,'8083':200};write('deploy.json',report);print(json.dumps({'result':'DEPLOYED','backup':backup,'ready':report['ready']}))
+    except Exception as error:
+        report.update(result='FAIL',error=str(error));write('release-error.json',report)
+        if installed:
+            try:
+                for i,target in reversed(installed):run(s,f'install -m 644 {report["backup"]}/{i}.before {target}')
+                for name in restarted:run(s,'pm2 restart '+name,timeout=60);wait_ready(s,8083 if name=='lhs-s1002'else 8080)
+                report['rollbackReady']=ready(s);report['rollbackHashes']=hashes(s,list(baseline));assert report['rollbackHashes']==baseline
+            except Exception as rollback_error:report['rollbackError']=str(rollback_error)
+        write('release-error.json',report);raise
+    finally:s.close()
+if __name__=='__main__':main()

@@ -1,0 +1,12 @@
+'use strict';
+const path=require('path'),assert=require('assert/strict');
+const app=path.resolve(process.env.LHS_APP_ROOT);
+process.env.CONFIG_BIN_PATH=process.env.LHS_CONFIG_PATH;
+const logger=require.resolve(path.join(app,'src/logger'));
+require.cache[logger]={id:logger,filename:logger,loaded:true,exports:{info(){},warn(){},debug(){},error(){}}};
+const r=require(path.join(app,'src/services/FashionInventoryRepairService'));
+const base=()=>({items:{29001:1,11274:2},fashionInfo:{fashions:{},activateFashion:[],fashionData:[]},rechargeInfo:{records:[{id:11000003,count:1}]},taskInfo:{progress:99}});
+let p=base(),q=r.plan(p);assert.equal(q.items.length,2);r.apply(p,q);assert.equal(p.items[29001],undefined);assert.equal(p.items[11274],1);assert(p.fashionInfo.activateFashion.includes(29001)&&p.fashionInfo.activateFashion.includes(11274));assert.equal(p.taskInfo.progress,99);assert(r.plan(p).alreadyApplied);const after=JSON.stringify(p);r.apply(p,q);assert.equal(JSON.stringify(p),after);
+p=base();p.fashionInfo.activateFashion=[11274];assert.equal(r.plan(p).items.length,1);p.rechargeInfo.records=[];assert.equal(r.plan(p).items.length,0);
+p=base();q=r.plan(p);p.items[11274]=3;assert.throws(()=>r.apply(p,q),/STATE_CHANGED/);
+console.log(JSON.stringify({result:'PASS',checks:10,conversion:true,noDoubleGrant:true,ownedWithheld:true,evidenceGuard:true,unrelatedPreserved:true,changedInventoryRejected:true}));

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo sửa sự kiện Kim Mã Chúc Phúc</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="b-o-c-o-s-a-to-n-b-s-ki-n-kim-m-ch-c-ph-c">Báo cáo sửa toàn bộ sự kiện Kim Mã Chúc Phúc</h1>
+<p>Thời gian triển khai: 02/09/2026 16:28–19:28 (GMT+7) Production: <code>103.116.105.154</code>, S1 Activity: <code>43001</code> (Kim Mã/Vận May), <code>44001</code> (Niên Thú)</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Audit ảnh, bundle client, 714 bảng config, source và log production.</li>
+<li>Xác định nhiều lỗi độc lập ở gói vận may, nhiệm vụ ngày, quay thưởng, mốc thưởng, Niên Thú, bảng xếp hạng và cửa hàng đổi.</li>
+<li>Sửa server-authoritative trên snapshot production mới nhất; không sửa config phần thưởng và không mua gói trả phí khi QA.</li>
+<li>Backup source cùng toàn bộ document Player của tài khoản QA trước khi thử.</li>
+<li>Chỉ restart <code>lhs-s1001</code>; giữ nguyên <code>lhs-real-bots</code>, <code>lhs-dist</code>, <code>lhs-admin</code>.</li>
+<li>QA protocol thật bằng tài khoản <code>vanduc97</code>, sau đó khôi phục chính xác trạng thái Player trước QA.</li>
+<li>QA trực quan trong client: đăng nhập S1, mở Gói Vận May, Nhiệm vụ ngày, Vận May Mắn, Niên Thú và bảng xếp hạng.</li>
+</ul>
+<h2 id="2-l-i-t-m-th-y-v-c-ch-s-a">2. Lỗi đã tìm thấy và cách sửa</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Khu vực</th>
+<th>Lỗi trước sửa</th>
+<th>Nguyên nhân gốc</th>
+<th>Cách xử lý</th>
+</tr></thead><tbody>
+<tr>
+<td>Gói miễn phí</td>
+<td>Hiện <code>getActiveDailyShopPolicy is not a function</code>, không nhận được</td>
+<td><code>item.js</code> gọi helper nhưng <code>activity.js</code> live bị lùi phiên bản và không export helper</td>
+<td>Khôi phục helper policy/ledger, export đầy đủ, đồng bộ <code>buyRecords</code>, giữ giới hạn 1 lần/ngày GMT+8 và chống request đồng thời</td>
+</tr>
+<tr>
+<td>Nhiệm vụ ngày</td>
+<td>Làm nhiệm vụ nhưng luôn <code>0/x</code></td>
+<td>Task sự kiện có type `43001</td>
+<td>1&lt;&lt;30<code>; progress service chỉ refresh type </code>1/2/9`</td>
+<td>Cho phép task type activity, giữ baseline theo ngày và nối đúng counter của từng gameplay</td>
+</tr>
+<tr>
+<td>Nhiệm vụ đăng nhập</td>
+<td>Đăng nhập nhưng <code>0/1</code></td>
+<td>Không có resolver <code>activeId=101</code> cho Activity 43</td>
+<td>Hoàn thành đúng khi ngày mới/login normalize</td>
+</tr>
+<tr>
+<td>Võ đạo hội</td>
+<td>Tiến độ không tăng</td>
+<td>Activity task không đọc <code>arenaChallengeCount</code></td>
+<td>Nối <code>61002</code> với counter Võ đạo hội hiện hữu</td>
+</tr>
+<tr>
+<td>Quái tinh anh</td>
+<td>Tiến độ không tăng</td>
+<td>Không có counter <code>activeId=76</code></td>
+<td>Thêm <code>eliteMonsterKillCount</code>, tăng khi Niên thú/quái tinh anh triệu hồi được kết toán qua <code>2003 -&gt; 2001</code></td>
+</tr>
+<tr>
+<td>Tiêu Bánh bao</td>
+<td>Tiến độ không đúng</td>
+<td>Không theo dõi riêng lượng item <code>4</code> đã giảm trong mọi handler</td>
+<td>Theo dõi chênh lệch số dư trong pipeline save, chỉ cộng khi số dư giảm</td>
+</tr>
+<tr>
+<td>Tiêu Đùi gà</td>
+<td>Không tăng</td>
+<td>Dễ map nhầm item <code>6</code>; Đùi gà thật là item <code>65</code></td>
+<td>Theo dõi item <code>65</code> qua mọi luồng tiêu/save</td>
+</tr>
+<tr>
+<td>Tiêu Phá Vân Phù</td>
+<td>Không tăng</td>
+<td>Không có counter theo item <code>55</code></td>
+<td>Theo dõi item <code>55</code> qua mọi luồng tiêu/save</td>
+</tr>
+<tr>
+<td>Bang hội</td>
+<td>Không tăng</td>
+<td>Không có counter <code>activeId=77</code></td>
+<td>Thêm <code>guildChallengeCount</code> tại luồng chiến đấu Bang hội type 6</td>
+</tr>
+<tr>
+<td>Yêu Vương/Ma Linh</td>
+<td>Không tăng ổn định</td>
+<td>Activity task bị bỏ qua dù counter gameplay đã có</td>
+<td>Tái sử dụng <code>dungeonBossChallengeCount</code> và <code>crossRivalChallengeCount</code> với baseline riêng của sự kiện</td>
+</tr>
+<tr>
+<td>Nhận nhiệm vụ</td>
+<td>Trả EXP giả hoặc chỉ tăng <code>row.record</code></td>
+<td>Generic Activity 43 dùng <code>{id:3,count:10}</code>; <code>TaskConfig.reward=[]</code>, quà thật nằm ở <code>Activity43TaskConfig</code></td>
+<td>Module 1 nhận toàn bộ task đủ điều kiện, phát item <code>176</code> đúng config, cộng điểm ngày đúng <code>score</code>, chống nhận lại</td>
+</tr>
+<tr>
+<td>Quà tích lũy lượt quay</td>
+<td>Không rõ/không nhận đúng</td>
+<td>Module 1 không xử lý <code>loopRewards</code></td>
+<td>Mỗi lượt quay cộng <code>record</code>; module 1 đổi đúng <code>loopRewards</code> và reset record nguyên tử</td>
+</tr>
+<tr>
+<td>Mốc ngày 20–100</td>
+<td>Nhận EXP giả, quà không về</td>
+<td>Module 2 không đọc <code>Activity43TaskRewardConfig</code></td>
+<td>Phát đúng 5 mốc, dùng bitmask <code>records[11]</code>, nhận một lần, reset GMT+8</td>
+</tr>
+<tr>
+<td>Mốc lượt quay</td>
+<td>Nhận EXP giả</td>
+<td>Module 3 cố định EXP <code>3×20</code></td>
+<td>Đọc <code>ActivityScoreConfig</code>: mốc 10/25/50/75/100 và vòng lặp, ghi <code>recordList</code>, chống nhận lại</td>
+</tr>
+<tr>
+<td>Quà ngoại quan</td>
+<td>Có thể rơi thành item túi nhưng không kích hoạt avatar/khung/chat bubble</td>
+<td>Reward helper chỉ cộng bag item</td>
+<td>Nhận diện <code>FashionConfig</code>, ghi ownership native và đẩy tag <code>1800</code>; không để item ngoại quan giả trong túi</td>
+</tr>
+<tr>
+<td>Quay Vận May</td>
+<td>Hiệu ứng quay có nhưng quà/điểm dễ lệch</td>
+<td>Chọn đều từ <code>rewardPoolShow</code>, bỏ qua <code>weightShow/rewardShow</code>; special pool/limit không đúng</td>
+<td>Roll theo nhóm trọng số config, lưu score/record, trừ item <code>178</code>, đẩy <code>1796</code>, <code>1202</code>, <code>1701</code> đồng bộ</td>
+</tr>
+<tr>
+<td>Bảo hiểm lượt 40</td>
+<td>Phần thưởng đặc biệt sai pool hoặc sai bộ đếm</td>
+<td>Fallback lấy phần tử cuối pool thường và random 8% tự đặt</td>
+<td>Dùng <code>rewardPoolShow1</code>, đếm chính xác từng lượt kể cả quay 10, giới hạn số special theo config</td>
+</tr>
+<tr>
+<td>Niên Thú</td>
+<td>Trừ pháo nhưng sát thương/quà không theo config</td>
+<td>Server cộng damage/merit tự đặt và chỉ phát item <code>177</code></td>
+<td>Dùng <code>blood=10000</code>, <code>rankScore=10</code>, HP theo <code>Activity44MonsterConfig</code>; hạ boss phát đầy đủ token/Nguyên bảo/Bánh bao/đùi gà</td>
+</tr>
+<tr>
+<td>Xếp hạng Niên Thú</td>
+<td>Chỉ hiện chính người gọi</td>
+<td>Rank packet dựng một row giả</td>
+<td>Query Player Activity 44001, xếp theo công huân, cache 5 giây, trộn phiên online mới nhất</td>
+</tr>
+<tr>
+<td>Cửa hàng đổi</td>
+<td>Có thể mua quá giới hạn</td>
+<td><code>ShopConfig.limit=0</code>, giới hạn thật nằm ở <code>ActivityShopConfig</code></td>
+<td>Dùng policy Activity 43 cho 18 mặt hàng đổi, ghi <code>activity.buyRecords</code>, chặn mua lại theo limit</td>
+</tr>
+</tbody></table></div>
+<h2 id="3-file-th-m-c-thay-i">3. File/thư mục đã thay đổi</h2>
+<h3 id="production">Production</h3>
+<ul>
+<li><code>/linhhoasu/lhs/newServer/src/handlers/activity.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/handlers/item.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/handlers/playerPayload.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/handlers/box.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/handlers/raid.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/services/MainTaskProgressService.js</code></li>
+<li><code>/linhhoasu/lhs/newServer/src/services/PlayerService.js</code></li>
+</ul>
+<h3 id="candidate-tool-v-evidence">Candidate, tool và evidence</h3>
+<ul>
+<li>Candidate: <code>_ai_workbench/temp/fortune_event_full_candidate_20260902/</code></li>
+<li>Snapshot live: <code>_ai_workbench/temp/fortune_event_sources_20260902_082208/</code></li>
+<li>Config matrix: <code>_ai_workbench/temp/fortune_event_audit_20260902_153000/type43_44_matrix.json</code></li>
+<li>Contract: <code>_ai_workbench/tools/test_fortune_event_full.js</code></li>
+<li>Contract config thật: <code>_ai_workbench/tools/test_fortune_event_real_config.js</code></li>
+<li>Contract theo dõi tiêu vật phẩm: <code>_ai_workbench/tools/test_fortune_player_consumption_tracking.js</code></li>
+<li>QA live: <code>_ai_workbench/tools/qa_fortune_event_live_account_20260902.js</code></li>
+<li>Deploy/rollback: <code>_ai_workbench/tools/deploy_fortune_event_full_fix_20260902.py</code></li>
+<li>Evidence deploy: <code>_ai_workbench/temp/fortune_event_full_deploy_20260902_092801.json</code></li>
+<li>Evidence QA: <code>_ai_workbench/temp/fortune_event_live_qa_20260902_112800.json</code></li>
+</ul>
+<p>Backup production:</p>
+<ul>
+<li><code>/linhhoasu/_ai_workbench/backups/fortune_event_full_fix_pre_20260902_092801/</code></li>
+</ul>
+<h2 id="4-ki-m-th-v-k-t-qu">4. Kiểm thử và kết quả</h2>
+<h3 id="contract-local-v-production">Contract local và production</h3>
+<ul>
+<li>Giới hạn gói miễn phí: <strong>38 PASS</strong>.</li>
+<li>Toàn bộ Activity 43/44: <strong>51 PASS</strong>.</li>
+<li>Theo dõi tiêu item <code>4/65/55</code>: <strong>8 PASS</strong>.</li>
+<li>Đối chiếu config thật: <strong>27 PASS</strong>, đủ <strong>714 bảng</strong>.</li>
+<li>Core gameplay contract: <strong>PASS</strong>, đủ <strong>714 bảng</strong>.</li>
+<li><code>node --check</code>: PASS cho toàn bộ 7 file triển khai.</li>
+</ul>
+<h3 id="qa-th-t-b-ng-vanduc97">QA thật bằng <code>vanduc97</code></h3>
+<ul>
+<li>Đăng nhập HTTP + WebSocket S1: PASS.</li>
+<li>Gói miễn phí đã nhận trong ngày: request lặp bị chặn, không đổi Bánh bao.</li>
+<li>9 nhiệm vụ: nhận đúng tổng <code>20</code> pháo hoa và <code>120</code> điểm hoạt động.</li>
+<li>5 mốc ngày: bitmask <code>31</code>, quà đúng config.</li>
+<li>Quay 1 và quay 10: trừ đúng item <code>178</code>, trả đúng số reward, tăng/lưu score.</li>
+<li>Mốc quay: avatar <code>113114</code> kích hoạt native; nhận lại bị chặn.</li>
+<li>Niên Thú: trừ 1 pháo; nhận <code>10</code> công huân và đủ quà boss level 1; tiến level boss từ 1 lên 2.</li>
+<li>Xếp hạng: trả 100 row, có hạng của tài khoản test.</li>
+<li>Cửa hàng đổi: trừ 200 item <code>179</code>, kích hoạt chat bubble <code>11548</code>, mua lại bị chặn.</li>
+<li>Sau QA: <strong>khôi phục Player thành công</strong>, evidence ghi <code>restored=true</code>; password không được ghi vào artifact/log.</li>
+</ul>
+<h3 id="qa-giao-di-n-client">QA giao diện client</h3>
+<ul>
+<li>Gói Vận May mở bình thường; không còn text exception <code>getActiveDailyShopPolicy is not a function</code>.</li>
+<li>Nhiệm vụ ngày hiển thị điểm, progress và nút nhận/đi đến đúng trạng thái.</li>
+<li>Vận May Mắn hiển thị số lượt bảo hiểm, score và các mốc đã nhận/chưa nhận.</li>
+<li>Niên Thú hiển thị đúng pháo, công huân, HP, phần thưởng và bảng xếp hạng.</li>
+<li>Không bấm mua gói trả phí và không phát sinh giao dịch tài chính.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Deploy production: <strong>PASS</strong>, rollback không được dùng.</li>
+<li><code>lhs-s1001</code> online, PID sau deploy <code>32544</code>.</li>
+<li><code>lhs-dist=30824</code>, <code>lhs-admin=30856</code>, <code>lhs-real-bots=19097</code> giữ nguyên PID/restart count trong deploy và QA.</li>
+<li><code>/ready</code> HTTP <code>200</code>; MongoDB và Redis healthy. Port health WS <code>9200</code> chỉ bind localhost nên probe ngoài VPS trả <code>000</code>, probe nội bộ trong deploy/QA trả <code>200</code>.</li>
+<li>Không có <code>SyntaxError</code>, <code>ReferenceError</code>, <code>TypeError</code>, unhandled hoặc lỗi handler mới trong phần log sau deploy.</li>
+<li>SHA-256 production:</li>
+<li><code>activity.js</code>: <code>1e7af70a7c5c75efcb411d6a322af98f1d81bc3a3acf479837cfeb86943a9cb8</code></li>
+<li><code>item.js</code>: <code>06330978c628bf6869781d373594c182309547c8c4194dd94784043f04ab89eb</code></li>
+<li><code>playerPayload.js</code>: <code>1f42c2c4ec5d9c69d5d394315d3453d5f45eed8cf11110f51da63c3e6c934f3f</code></li>
+<li><code>box.js</code>: <code>9047989603ec0797f81439cd6e7df343c53a47e51beacc20b196fda56f99a39f</code></li>
+<li><code>raid.js</code>: <code>13c74c059472462995eb8da2031e4a0fdcf16152ea5d305d88f0e3eead93f318</code></li>
+<li><code>MainTaskProgressService.js</code>: <code>dcecebe0e3c4532ac1c837f6bfed7f93e82cf84e69c893e38d6f0e01981664b6</code></li>
+<li><code>PlayerService.js</code>: <code>0a78c5bf2ff90a5592d23d8d36c949553d2cc1db6d6bd4723dc1676139b5b1bc</code></li>
+</ul>
+<h2 id="6-k-n-ng-kinh-nghi-m-m-i">6. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Task sự kiện dùng type ghép bit <code>activityId | 1&lt;&lt;30</code>, không thể chỉ whitelist type task thường.</li>
+<li><code>TaskConfig.reward=[]</code> là hợp lệ với Activity 43; quà nằm ở <code>Activity43TaskConfig</code>.</li>
+<li>Đùi gà là item <code>65</code>; item <code>6</code> là phù tăng tốc/vàng trong mapping server.</li>
+<li>Ngoại quan phải ghi ownership qua <code>FashionConfig</code> và đẩy packet native; thêm vào bag không đủ.</li>
+<li>Giới hạn shop sự kiện lấy từ <code>ActivityShopConfig</code>, không lấy <code>ShopConfig.limit</code>.</li>
+<li>QA gameplay cần xác nhận đồng thời response packet, Mongo readback, inventory/ownership và UI client; popup reward đơn lẻ không đủ chứng minh quà đã về.</li>
+</ul>
+<h2 id="7-b-c-ti-p-theo">7. Bước tiếp theo</h2>
+<ol>
+<li>Theo dõi log Activity <code>1700/1200</code> và save queue trong 24 giờ đầu.</li>
+<li>Không chỉnh tay <code>record</code>, <code>records[10]</code>, <code>records[11]</code>, <code>recordList</code> hoặc <code>buyRecords</code>; đây là các ledger chống nhận lặp.</li>
+<li>Nếu muốn kiểm thử gói trả phí, dùng một giao dịch test được phê duyệt riêng; phiên này chủ động không mua.</li>
+</ol></main></body></html>

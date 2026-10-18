@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "20261015_vn_system_formula_v1",
+  "status": "approved",
+  "approvalRequired": false,
+  "source": {
+    "cnServerExport": "not_found_in_workspace_or_vps_scoped_search",
+    "vnFormula": "AuctionBaseConfig + ArtifactConfig + SpecialArtifactConfig + ArtifactForge*Config",
+    "approvalReference": "user-approved-formula-catalog-20261015",
+    "generatedAt": "2026-10-15T05:29:09.134Z"
+  },
+  "scope": {
+    "mode": "system_only",
+    "serverIds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008
+    ],
+    "serverPool": {
+      "autoInclude": true,
+      "mode": "page",
+      "pageId": 1,
+      "minServerId": 1001,
+      "maxServerId": 1099
+    },
+    "area": 1,
+    "payId": 1001,
+    "playerConsignment": false,
+    "recycle": false
+  },
+  "rules": {
+    "openTime": [
+      43200,
+      79200
+    ],
+    "royalOpenTime": [
+      72000,
+      79200
+    ],
+    "royalOnshelfTime": 43200,
+    "delay": 60,
+    "stopOnShelf": 3600,
+    "onShelfLimit": 5,
+    "bidLimit": 10,
+    "bidAdjustValue": 600,
+    "royalBidAdjustValue": 600,
+    "taxRate": 500,
+    "activeConfigRows": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "lots": [
+    {
+      "lotId": "vn-system-1",
+      "id": 1,
+      "type": 1,
+      "status": 1,
+      "item": {
+        "id": 23103,
+        "count": 1
+      },
+      "detail": {
+        "artifact": {
+          "uid": 90051301,
+          "id": 23103,
+          "count": 7,
+          "lock": 0,
+          "attr": {
+            "type": 106,
+            "level": 20,
+            "value": 2030
+          },
+          "extraAttrs": [
+            {
+              "type": 241,
+              "value": 35,
+              "level": 5
+            },
+            {
+              "type": 241,
+              "value": 70,
+              "level": 10
+            },
+            {
+              "type": 241,
+              "value": 105,
+              "level": 15
+            },
+            {
+              "type": 241,
+              "value": 140,
+              "level": 20
+            }
+          ],
+          "skillGroup": 23006,
+          "skillLv": 10,
+          "forgeTime": 0,
+          "forgeName": "ArtifactForgeRobotIndex_1",
+          "quenchLv": 0,
+          "eSkillGroup": 0,
+          "element": 0,
+          "sourceSpecialArtifactId": 51301
+        }
+      },
+      "price": 3978,
+      "fixedValue": 10000,
+      "payType": 0,
+      "payId": 1001,
+      "bidderId": "",
+      "bidderName": "",
+      "playerId": "",
+      "hideName": 0,
+      "hasOffer": 0,
+      "timeOffsetSec": 72000,
+      "closeOffsetSec": 79200,
+      "systemPriceStone": 30600,
+      "systemPriceToken": 3060,
+      "sourceSpecialArtifactId": 51301,
+      "sourceRobotId": 1
+    },
+    {
+      "lotId": "vn-system-2",
+      "id": 2,
+      "type": 1,
+      "status": 1,
+      "item": {
+        "id": 23113,
+        "count": 1
+      },
+      "detail": {
+        "artifact": {
+          "uid": 90051302,
+          "id": 23113,
+          "count": 7,
+          "lock": 0,
+          "attr": {
+            "type": 104,
+            "level": 20,
+            "value": 2030
+          },
+          "extraAttrs": [
+            {
+              "type": 241,
+              "value": 35,
+              "level": 5
+            },
+            {
+              "type": 241,
+              "value": 70,
+              "level": 10
+            },
+            {
+              "type": 241,
+              "value": 105,
+              "level": 15
+            },
+            {
+              "type": 241,
+              "value": 140,
+              "level": 20
+            }
+          ],
+          "skillGroup": 23004,
+          "skillLv": 10,
+          "forgeTime": 0,
+          "forgeName": "ArtifactForgeRobotIndex_2",
+          "quenchLv": 0,
+          "eSkillGroup": 0,
+          "element": 0,
+          "sourceSpecialArtifactId": 51302
+        }
+      },
+      "price": 3978,
+      "fixedValue": 10000,
+      "payType": 0,
+      "payId": 1001,
+      "bidderId": "",
+      "bidderName": "",
+      "playerId": "",
+      "hideName": 0,
+      "hasOffer": 0,
+      "timeOffsetSec": 72000,
+      "closeOffsetSec": 79200,
+      "systemPriceStone": 30600,
+      "systemPriceToken": 3060,
+      "sourceSpecialArtifactId": 51302,
+      "sourceRobotId": 2
+    },
+    {
+      "lotId": "vn-system-3",
+      "id": 3,
+      "type": 1,
+      "status": 1,
+      "item": {
+        "id": 23123,
+        "count": 1
+      },
+      "detail": {
+        "artifact": {
+          "uid": 90051303,
+          "id": 23123,
+          "count": 7,
+          "lock": 0,
+          "attr": {
+            "type": 103,
+            "level": 20,
+            "value": 2030
+          },
+          "extraAttrs": [
+            {
+              "type": 241,
+              "value": 35,
+              "level": 5
+            },
+            {
+              "type": 241,
+              "value": 70,
+              "level": 10
+            },
+            {
+              "type": 241,
+              "value": 105,
+              "level": 15
+            },
+            {
+              "type": 241,
+              "value": 140,
+              "level": 20
+            }
+          ],
+          "skillGroup": 23003,
+          "skillLv": 10,
+          "forgeTime": 0,
+          "forgeName": "ArtifactForgeRobotIndex_3",
+          "quenchLv": 0,
+          "eSkillGroup": 0,
+          "element": 0,
+          "sourceSpecialArtifactId": 51303
+        }
+      },
+      "price": 3978,
+      "fixedValue": 10000,
+      "payType": 0,
+      "payId": 1001,
+      "bidderId": "",
+      "bidderName": "",
+      "playerId": "",
+      "hideName": 0,
+      "hasOffer": 0,
+      "timeOffsetSec": 72000,
+      "closeOffsetSec": 79200,
+      "systemPriceStone": 30600,
+      "systemPriceToken": 3060,
+      "sourceSpecialArtifactId": 51303,
+      "sourceRobotId": 3
+    },
+    {
+      "lotId": "vn-system-4",
+      "id": 4,
+      "type": 1,
+      "status": 1,
+      "item": {
+        "id": 23133,
+        "count": 1
+      },
+      "detail": {
+        "artifact": {
+          "uid": 90051304,
+          "id": 23133,
+          "count": 7,
+          "lock": 0,
+          "attr": {
+            "type": 105,
+            "level": 20,
+            "value": 2030
+          },
+          "extraAttrs": [
+            {
+              "type": 241,
+              "value": 35,
+              "level": 5
+            },
+            {
+              "type": 241,
+              "value": 70,
+              "level": 10
+            },
+            {
+              "type": 241,
+              "value": 105,
+              "level": 15
+            },
+            {
+              "type": 241,
+              "value": 140,
+              "level": 20
+            }
+          ],
+          "skillGroup": 23005,
+          "skillLv": 10,
+          "forgeTime": 0,
+          "forgeName": "ArtifactForgeRobotIndex_4",
+          "quenchLv": 0,
+          "eSkillGroup": 0,
+          "element": 0,
+          "sourceSpecialArtifactId": 51304
+        }
+      },
+      "price": 3978,
+      "fixedValue": 10000,
+      "payType": 0,
+      "payId": 1001,
+      "bidderId": "",
+      "bidderName": "",
+      "playerId": "",
+      "hideName": 0,
+      "hasOffer": 0,
+      "timeOffsetSec": 72000,
+      "closeOffsetSec": 79200,
+      "systemPriceStone": 30600,
+      "systemPriceToken": 3060,
+      "sourceSpecialArtifactId": 51304,
+      "sourceRobotId": 4
+    },
+    {
+      "lotId": "vn-system-5",
+      "id": 5,
+      "type": 1,
+      "status": 1,
+      "item": {
+        "id": 23143,
+        "count": 1
+      },
+      "detail": {
+        "artifact": {
+          "uid": 90051305,
+          "id": 23143,
+          "count": 7,
+          "lock": 0,
+          "attr": {
+            "type": 101,
+            "level": 20,
+            "value": 2030
+          },
+          "extraAttrs": [
+            {
+              "type": 241,
+              "value": 35,
+              "level": 5
+            },
+            {
+              "type": 241,
+              "value": 70,
+              "level": 10
+            },
+            {
+              "type": 241,
+              "value": 105,
+              "level": 15
+            },
+            {
+              "type": 241,
+              "value": 140,
+              "level": 20
+            }
+          ],
+          "skillGroup": 23001,
+          "skillLv": 10,
+          "forgeTime": 0,
+          "forgeName": "ArtifactForgeRobotIndex_5",
+          "quenchLv": 0,
+          "eSkillGroup": 0,
+          "element": 0,
+          "sourceSpecialArtifactId": 51305
+        }
+      },
+      "price": 3978,
+      "fixedValue": 10000,
+      "payType": 0,
+      "payId": 1001,
+      "bidderId": "",
+      "bidderName": "",
+      "playerId": "",
+      "hideName": 0,
+      "hasOffer": 0,
+      "timeOffsetSec": 72000,
+      "closeOffsetSec": 79200,
+      "systemPriceStone": 30600,
+      "systemPriceToken": 3060,
+      "sourceSpecialArtifactId": 51305,
+      "sourceRobotId": 5
+    }
+  ]
+}

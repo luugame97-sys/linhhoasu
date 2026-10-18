@@ -1,0 +1,223 @@
+{
+  "_table": "TempleGameRoomConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,name,guidePoint,roomPoint,conditions,gameBanner,gameEnterEffect,isEffectMirror,isShow",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "name": 30080321,
+        "guidePoint": {
+          "x": 1755,
+          "y": 1216
+        },
+        "roomPoint": {
+          "x": 1666,
+          "y": 1104
+        },
+        "conditions": [
+          {
+            "type": 5,
+            "value": 1,
+            "cond": 4
+          }
+        ],
+        "gameBanner": "yy_bm_banner_bwzg",
+        "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+        "isEffectMirror": 0,
+        "isShow": 1
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "name": 30080323,
+        "guidePoint": {
+          "x": 2934,
+          "y": 1707
+        },
+        "roomPoint": {
+          "x": 3156,
+          "y": 1500
+        },
+        "conditions": [
+          {
+            "type": 5,
+            "value": 1,
+            "cond": 4
+          }
+        ],
+        "gameBanner": "yy_bm_banner_arxh",
+        "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+        "isEffectMirror": 1,
+        "isShow": 1
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "name": 30080324,
+        "guidePoint": {
+          "x": 2213,
+          "y": 1205
+        },
+        "roomPoint": {
+          "x": 2273,
+          "y": 1065
+        },
+        "conditions": [
+          {
+            "type": 5,
+            "value": 1,
+            "cond": 4
+          }
+        ],
+        "gameBanner": "yy_bm_banner_hdmz",
+        "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+        "isEffectMirror": 1,
+        "isShow": 1
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "name": 30080321,
+      "guidePoint": {
+        "x": 1755,
+        "y": 1216
+      },
+      "roomPoint": {
+        "x": 1666,
+        "y": 1104
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 1,
+          "cond": 4
+        }
+      ],
+      "gameBanner": "yy_bm_banner_bwzg",
+      "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+      "isEffectMirror": 0,
+      "isShow": 1
+    },
+    "2": {
+      "id": 2,
+      "name": 30080323,
+      "guidePoint": {
+        "x": 2934,
+        "y": 1707
+      },
+      "roomPoint": {
+        "x": 3156,
+        "y": 1500
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 1,
+          "cond": 4
+        }
+      ],
+      "gameBanner": "yy_bm_banner_arxh",
+      "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+      "isEffectMirror": 1,
+      "isShow": 1
+    },
+    "3": {
+      "id": 3,
+      "name": 30080324,
+      "guidePoint": {
+        "x": 2213,
+        "y": 1205
+      },
+      "roomPoint": {
+        "x": 2273,
+        "y": 1065
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 1,
+          "cond": 4
+        }
+      ],
+      "gameBanner": "yy_bm_banner_hdmz",
+      "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+      "isEffectMirror": 1,
+      "isShow": 1
+    },
+    "4": {
+      "id": 4,
+      "name": 30080325,
+      "guidePoint": {
+        "x": 1097,
+        "y": 1715
+      },
+      "roomPoint": {
+        "x": 1090,
+        "y": 1620
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 1,
+          "cond": 4
+        }
+      ],
+      "gameBanner": "yy_bm_banner_yjcf",
+      "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+      "isEffectMirror": 0,
+      "isShow": 1
+    },
+    "5": {
+      "id": 5,
+      "name": 30080326,
+      "guidePoint": {
+        "x": 1074,
+        "y": 2367
+      },
+      "roomPoint": {
+        "x": 890,
+        "y": 2105
+      },
+      "conditions": [
+        {
+          "type": 5,
+          "value": 1,
+          "cond": 4
+        }
+      ],
+      "gameBanner": "yy_bm_banner_mlgb",
+      "gameEnterEffect": "sp_ui_miaohui_jiejing_mg",
+      "isEffectMirror": 0,
+      "isShow": 1
+    },
+    "101": {
+      "id": 101,
+      "name": 30080327,
+      "guidePoint": {
+        "x": 677,
+        "y": 2881
+      },
+      "roomPoint": {
+        "x": 776,
+        "y": 3073
+      },
+      "conditions": [
+        {
+          "type": 7,
+          "value": 330,
+          "cond": 0
+        }
+      ],
+      "gameBanner": "",
+      "gameEnterEffect": "sp_ui_miaohui_ycxj",
+      "isEffectMirror": 0,
+      "isShow": 0
+    }
+  }
+}

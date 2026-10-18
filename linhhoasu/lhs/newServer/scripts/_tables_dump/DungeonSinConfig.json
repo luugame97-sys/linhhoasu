@@ -1,0 +1,94 @@
+{
+  "_table": "DungeonSinConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "id,sinMin,sinMax,sinName",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "sinMin": 0,
+        "sinMax": 100,
+        "sinName": 30036880
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "sinMin": 101,
+        "sinMax": 300,
+        "sinName": 30036881
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "sinMin": 301,
+        "sinMax": 330,
+        "star": 1,
+        "jailTime": 300,
+        "sinName": 30036882,
+        "sinDesc": 30037301
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "sinMin": 0,
+      "sinMax": 100,
+      "sinName": 30036880
+    },
+    "2": {
+      "id": 2,
+      "sinMin": 101,
+      "sinMax": 300,
+      "sinName": 30036881
+    },
+    "3": {
+      "id": 3,
+      "sinMin": 301,
+      "sinMax": 330,
+      "star": 1,
+      "jailTime": 300,
+      "sinName": 30036882,
+      "sinDesc": 30037301
+    },
+    "4": {
+      "id": 4,
+      "sinMin": 331,
+      "sinMax": 360,
+      "star": 2,
+      "jailTime": 600,
+      "sinName": 30036883,
+      "sinDesc": 30037302
+    },
+    "5": {
+      "id": 5,
+      "sinMin": 361,
+      "sinMax": 390,
+      "star": 3,
+      "jailTime": 900,
+      "sinName": 30036884,
+      "sinDesc": 30037303
+    },
+    "6": {
+      "id": 6,
+      "sinMin": 391,
+      "sinMax": 450,
+      "star": 4,
+      "jailTime": 1200,
+      "sinName": 30036885,
+      "sinDesc": 30037304
+    },
+    "7": {
+      "id": 7,
+      "sinMin": 451,
+      "sinMax": -1,
+      "star": 5,
+      "jailTime": 1800,
+      "sinName": 30036886,
+      "sinDesc": 30037305
+    }
+  }
+}

@@ -1,0 +1,2554 @@
+{
+  "_table": "ValhallaFormationSkillConfig",
+  "_rows": 36,
+  "_type": "object",
+  "_firstKeys": "0,10,20,30,40",
+  "_sample": [
+    {
+      "90101": {
+        "0": {
+          "id": 90101,
+          "activeLevel": 0,
+          "type": 1,
+          "skillId": [
+            2691001
+          ],
+          "name": 30104620,
+          "desc": 102691001,
+          "res": "whlz_skill_base_01",
+          "element": 0
+        },
+        "10": {
+          "id": 90101,
+          "activeLevel": 10,
+          "type": 1,
+          "skillId": [
+            2691002
+          ],
+          "name": 30104620,
+          "desc": 102691002,
+          "res": "whlz_skill_base_01",
+          "element": 0
+        },
+        "20": {
+          "id": 90101,
+          "activeLevel": 20,
+          "type": 1,
+          "skillId": [
+            2691003
+          ],
+          "name": 30104620,
+          "desc": 102691003,
+          "res": "whlz_skill_base_01",
+          "element": 0
+        },
+        "30": {
+          "id": 90101,
+          "activeLevel": 30,
+          "type": 1,
+          "skillId": [
+            2691004
+          ],
+          "name": 30104620,
+          "desc": 102691004,
+          "res": "whlz_skill_base_01",
+          "element": 0
+        },
+        "40": {
+          "id": 90101,
+          "activeLevel": 40,
+          "type": 1,
+          "skillId": [
+            2691005
+          ],
+          "name": 30104620,
+          "desc": 102691005,
+          "res": "whlz_skill_base_01",
+          "element": 0
+        }
+      }
+    },
+    {
+      "90102": {
+        "0": {
+          "id": 90102,
+          "activeLevel": 0,
+          "type": 2,
+          "skillId": [
+            9010201
+          ],
+          "name": 30104638,
+          "desc": 99300200,
+          "res": "whlz_skill_base_02",
+          "sourceTier": 1,
+          "element": 0
+        },
+        "10": {
+          "id": 90102,
+          "activeLevel": 10,
+          "type": 2,
+          "skillId": [
+            9010202
+          ],
+          "name": 30104638,
+          "desc": 99300201,
+          "res": "whlz_skill_base_02",
+          "sourceTier": 1,
+          "element": 0
+        },
+        "20": {
+          "id": 90102,
+          "activeLevel": 20,
+          "type": 2,
+          "skillId": [
+            9010203
+          ],
+          "name": 30104638,
+          "desc": 99300202,
+          "res": "whlz_skill_base_02",
+          "sourceTier": 1,
+          "element": 0
+        },
+        "30": {
+          "id": 90102,
+          "activeLevel": 30,
+          "type": 2,
+          "skillId": [
+            9010204
+          ],
+          "name": 30104638,
+          "desc": 99300203,
+          "res": "whlz_skill_base_02",
+          "sourceTier": 1,
+          "element": 0
+        },
+        "40": {
+          "id": 90102,
+          "activeLevel": 40,
+          "type": 2,
+          "skillId": [
+            9010205
+          ],
+          "name": 30104638,
+          "desc": 99300204,
+          "res": "whlz_skill_base_02",
+          "sourceTier": 1,
+          "element": 0
+        }
+      }
+    },
+    {
+      "90111": {
+        "0": {
+          "id": 90111,
+          "activeLevel": 0,
+          "type": 1,
+          "skillId": [
+            2691101
+          ],
+          "name": 30104621,
+          "desc": 102691101,
+          "res": "whlz_skill_base_11",
+          "element": 1
+        },
+        "10": {
+          "id": 90111,
+          "activeLevel": 10,
+          "type": 1,
+          "skillId": [
+            2691102
+          ],
+          "name": 30104621,
+          "desc": 102691102,
+          "res": "whlz_skill_base_11",
+          "element": 1
+        },
+        "20": {
+          "id": 90111,
+          "activeLevel": 20,
+          "type": 1,
+          "skillId": [
+            2691103
+          ],
+          "name": 30104621,
+          "desc": 102691103,
+          "res": "whlz_skill_base_11",
+          "element": 1
+        },
+        "30": {
+          "id": 90111,
+          "activeLevel": 30,
+          "type": 1,
+          "skillId": [
+            2691104
+          ],
+          "name": 30104621,
+          "desc": 102691104,
+          "res": "whlz_skill_base_11",
+          "element": 1
+        },
+        "40": {
+          "id": 90111,
+          "activeLevel": 40,
+          "type": 1,
+          "skillId": [
+            2691105
+          ],
+          "name": 30104621,
+          "desc": 102691105,
+          "res": "whlz_skill_base_11",
+          "element": 1
+        }
+      }
+    }
+  ],
+  "data": {
+    "90101": {
+      "0": {
+        "id": 90101,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2691001
+        ],
+        "name": 30104620,
+        "desc": 102691001,
+        "res": "whlz_skill_base_01",
+        "element": 0
+      },
+      "10": {
+        "id": 90101,
+        "activeLevel": 10,
+        "type": 1,
+        "skillId": [
+          2691002
+        ],
+        "name": 30104620,
+        "desc": 102691002,
+        "res": "whlz_skill_base_01",
+        "element": 0
+      },
+      "20": {
+        "id": 90101,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2691003
+        ],
+        "name": 30104620,
+        "desc": 102691003,
+        "res": "whlz_skill_base_01",
+        "element": 0
+      },
+      "30": {
+        "id": 90101,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2691004
+        ],
+        "name": 30104620,
+        "desc": 102691004,
+        "res": "whlz_skill_base_01",
+        "element": 0
+      },
+      "40": {
+        "id": 90101,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2691005
+        ],
+        "name": 30104620,
+        "desc": 102691005,
+        "res": "whlz_skill_base_01",
+        "element": 0
+      }
+    },
+    "90102": {
+      "0": {
+        "id": 90102,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9010201
+        ],
+        "name": 30104638,
+        "desc": 99300200,
+        "res": "whlz_skill_base_02",
+        "sourceTier": 1,
+        "element": 0
+      },
+      "10": {
+        "id": 90102,
+        "activeLevel": 10,
+        "type": 2,
+        "skillId": [
+          9010202
+        ],
+        "name": 30104638,
+        "desc": 99300201,
+        "res": "whlz_skill_base_02",
+        "sourceTier": 1,
+        "element": 0
+      },
+      "20": {
+        "id": 90102,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9010203
+        ],
+        "name": 30104638,
+        "desc": 99300202,
+        "res": "whlz_skill_base_02",
+        "sourceTier": 1,
+        "element": 0
+      },
+      "30": {
+        "id": 90102,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9010204
+        ],
+        "name": 30104638,
+        "desc": 99300203,
+        "res": "whlz_skill_base_02",
+        "sourceTier": 1,
+        "element": 0
+      },
+      "40": {
+        "id": 90102,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9010205
+        ],
+        "name": 30104638,
+        "desc": 99300204,
+        "res": "whlz_skill_base_02",
+        "sourceTier": 1,
+        "element": 0
+      }
+    },
+    "90111": {
+      "0": {
+        "id": 90111,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2691101
+        ],
+        "name": 30104621,
+        "desc": 102691101,
+        "res": "whlz_skill_base_11",
+        "element": 1
+      },
+      "10": {
+        "id": 90111,
+        "activeLevel": 10,
+        "type": 1,
+        "skillId": [
+          2691102
+        ],
+        "name": 30104621,
+        "desc": 102691102,
+        "res": "whlz_skill_base_11",
+        "element": 1
+      },
+      "20": {
+        "id": 90111,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2691103
+        ],
+        "name": 30104621,
+        "desc": 102691103,
+        "res": "whlz_skill_base_11",
+        "element": 1
+      },
+      "30": {
+        "id": 90111,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2691104
+        ],
+        "name": 30104621,
+        "desc": 102691104,
+        "res": "whlz_skill_base_11",
+        "element": 1
+      },
+      "40": {
+        "id": 90111,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2691105
+        ],
+        "name": 30104621,
+        "desc": 102691105,
+        "res": "whlz_skill_base_11",
+        "element": 1
+      }
+    },
+    "90112": {
+      "0": {
+        "id": 90112,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9011201,
+          90112011
+        ],
+        "name": 30104639,
+        "desc": 99300205,
+        "res": "whlz_skill_base_12",
+        "sourceTier": 1,
+        "element": 1
+      },
+      "10": {
+        "id": 90112,
+        "activeLevel": 10,
+        "type": 2,
+        "skillId": [
+          9011202,
+          90112021
+        ],
+        "name": 30104639,
+        "desc": 99300206,
+        "res": "whlz_skill_base_12",
+        "sourceTier": 1,
+        "element": 1
+      },
+      "20": {
+        "id": 90112,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9011203,
+          90112031
+        ],
+        "name": 30104639,
+        "desc": 99300207,
+        "res": "whlz_skill_base_12",
+        "sourceTier": 1,
+        "element": 1
+      },
+      "30": {
+        "id": 90112,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9011204,
+          90112041
+        ],
+        "name": 30104639,
+        "desc": 99300208,
+        "res": "whlz_skill_base_12",
+        "sourceTier": 1,
+        "element": 1
+      },
+      "40": {
+        "id": 90112,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9011205,
+          90112051
+        ],
+        "name": 30104639,
+        "desc": 99300209,
+        "res": "whlz_skill_base_12",
+        "sourceTier": 1,
+        "element": 1
+      }
+    },
+    "90121": {
+      "0": {
+        "id": 90121,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2691201
+        ],
+        "name": 30104622,
+        "desc": 102691201,
+        "res": "whlz_skill_base_21",
+        "element": 2
+      },
+      "10": {
+        "id": 90121,
+        "activeLevel": 10,
+        "type": 1,
+        "skillId": [
+          2691202
+        ],
+        "name": 30104622,
+        "desc": 102691202,
+        "res": "whlz_skill_base_21",
+        "element": 2
+      },
+      "20": {
+        "id": 90121,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2691203
+        ],
+        "name": 30104622,
+        "desc": 102691203,
+        "res": "whlz_skill_base_21",
+        "element": 2
+      },
+      "30": {
+        "id": 90121,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2691204
+        ],
+        "name": 30104622,
+        "desc": 102691204,
+        "res": "whlz_skill_base_21",
+        "element": 2
+      },
+      "40": {
+        "id": 90121,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2691205
+        ],
+        "name": 30104622,
+        "desc": 102691205,
+        "res": "whlz_skill_base_21",
+        "element": 2
+      }
+    },
+    "90122": {
+      "0": {
+        "id": 90122,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9012201,
+          90122011
+        ],
+        "name": 30104640,
+        "desc": 99300210,
+        "res": "whlz_skill_base_22",
+        "sourceTier": 1,
+        "element": 2
+      },
+      "10": {
+        "id": 90122,
+        "activeLevel": 10,
+        "type": 2,
+        "skillId": [
+          9012202,
+          90122021
+        ],
+        "name": 30104640,
+        "desc": 99300211,
+        "res": "whlz_skill_base_22",
+        "sourceTier": 1,
+        "element": 2
+      },
+      "20": {
+        "id": 90122,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9012203,
+          90122031
+        ],
+        "name": 30104640,
+        "desc": 99300212,
+        "res": "whlz_skill_base_22",
+        "sourceTier": 1,
+        "element": 2
+      },
+      "30": {
+        "id": 90122,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9012204,
+          90122041
+        ],
+        "name": 30104640,
+        "desc": 99300213,
+        "res": "whlz_skill_base_22",
+        "sourceTier": 1,
+        "element": 2
+      },
+      "40": {
+        "id": 90122,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9012205,
+          90122051
+        ],
+        "name": 30104640,
+        "desc": 99300214,
+        "res": "whlz_skill_base_22",
+        "sourceTier": 1,
+        "element": 2
+      }
+    },
+    "90131": {
+      "0": {
+        "id": 90131,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2691301
+        ],
+        "name": 30104623,
+        "desc": 102691301,
+        "res": "whlz_skill_base_31",
+        "element": 3
+      },
+      "10": {
+        "id": 90131,
+        "activeLevel": 10,
+        "type": 1,
+        "skillId": [
+          2691302
+        ],
+        "name": 30104623,
+        "desc": 102691302,
+        "res": "whlz_skill_base_31",
+        "element": 3
+      },
+      "20": {
+        "id": 90131,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2691303
+        ],
+        "name": 30104623,
+        "desc": 102691303,
+        "res": "whlz_skill_base_31",
+        "element": 3
+      },
+      "30": {
+        "id": 90131,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2691304
+        ],
+        "name": 30104623,
+        "desc": 102691304,
+        "res": "whlz_skill_base_31",
+        "element": 3
+      },
+      "40": {
+        "id": 90131,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2691305
+        ],
+        "name": 30104623,
+        "desc": 102691305,
+        "res": "whlz_skill_base_31",
+        "element": 3
+      }
+    },
+    "90132": {
+      "0": {
+        "id": 90132,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9013201,
+          90132011
+        ],
+        "name": 30104641,
+        "desc": 99300215,
+        "res": "whlz_skill_base_32",
+        "sourceTier": 1,
+        "element": 3
+      },
+      "10": {
+        "id": 90132,
+        "activeLevel": 10,
+        "type": 2,
+        "skillId": [
+          9013202,
+          90132021
+        ],
+        "name": 30104641,
+        "desc": 99300216,
+        "res": "whlz_skill_base_32",
+        "sourceTier": 1,
+        "element": 3
+      },
+      "20": {
+        "id": 90132,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9013203,
+          90132031
+        ],
+        "name": 30104641,
+        "desc": 99300217,
+        "res": "whlz_skill_base_32",
+        "sourceTier": 1,
+        "element": 3
+      },
+      "30": {
+        "id": 90132,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9013204,
+          90132041
+        ],
+        "name": 30104641,
+        "desc": 99300218,
+        "res": "whlz_skill_base_32",
+        "sourceTier": 1,
+        "element": 3
+      },
+      "40": {
+        "id": 90132,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9013205,
+          90132051
+        ],
+        "name": 30104641,
+        "desc": 99300219,
+        "res": "whlz_skill_base_32",
+        "sourceTier": 1,
+        "element": 3
+      }
+    },
+    "90141": {
+      "0": {
+        "id": 90141,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2691401
+        ],
+        "name": 30104624,
+        "desc": 102691401,
+        "res": "whlz_skill_base_41",
+        "element": 4
+      },
+      "10": {
+        "id": 90141,
+        "activeLevel": 10,
+        "type": 1,
+        "skillId": [
+          2691402
+        ],
+        "name": 30104624,
+        "desc": 102691402,
+        "res": "whlz_skill_base_41",
+        "element": 4
+      },
+      "20": {
+        "id": 90141,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2691403
+        ],
+        "name": 30104624,
+        "desc": 102691403,
+        "res": "whlz_skill_base_41",
+        "element": 4
+      },
+      "30": {
+        "id": 90141,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2691404
+        ],
+        "name": 30104624,
+        "desc": 102691404,
+        "res": "whlz_skill_base_41",
+        "element": 4
+      },
+      "40": {
+        "id": 90141,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2691405
+        ],
+        "name": 30104624,
+        "desc": 102691405,
+        "res": "whlz_skill_base_41",
+        "element": 4
+      }
+    },
+    "90142": {
+      "0": {
+        "id": 90142,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9014201,
+          90142011
+        ],
+        "name": 30104642,
+        "desc": 99300220,
+        "res": "whlz_skill_base_42",
+        "sourceTier": 1,
+        "element": 4
+      },
+      "10": {
+        "id": 90142,
+        "activeLevel": 10,
+        "type": 2,
+        "skillId": [
+          9014202,
+          90142021
+        ],
+        "name": 30104642,
+        "desc": 99300221,
+        "res": "whlz_skill_base_42",
+        "sourceTier": 1,
+        "element": 4
+      },
+      "20": {
+        "id": 90142,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9014203,
+          90142031
+        ],
+        "name": 30104642,
+        "desc": 99300222,
+        "res": "whlz_skill_base_42",
+        "sourceTier": 1,
+        "element": 4
+      },
+      "30": {
+        "id": 90142,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9014204,
+          90142041
+        ],
+        "name": 30104642,
+        "desc": 99300223,
+        "res": "whlz_skill_base_42",
+        "sourceTier": 1,
+        "element": 4
+      },
+      "40": {
+        "id": 90142,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9014205,
+          90142051
+        ],
+        "name": 30104642,
+        "desc": 99300224,
+        "res": "whlz_skill_base_42",
+        "sourceTier": 1,
+        "element": 4
+      }
+    },
+    "90151": {
+      "0": {
+        "id": 90151,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2691501
+        ],
+        "name": 30104625,
+        "desc": 102691501,
+        "res": "whlz_skill_base_51",
+        "element": 5
+      },
+      "10": {
+        "id": 90151,
+        "activeLevel": 10,
+        "type": 1,
+        "skillId": [
+          2691502
+        ],
+        "name": 30104625,
+        "desc": 102691502,
+        "res": "whlz_skill_base_51",
+        "element": 5
+      },
+      "20": {
+        "id": 90151,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2691503
+        ],
+        "name": 30104625,
+        "desc": 102691503,
+        "res": "whlz_skill_base_51",
+        "element": 5
+      },
+      "30": {
+        "id": 90151,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2691504
+        ],
+        "name": 30104625,
+        "desc": 102691504,
+        "res": "whlz_skill_base_51",
+        "element": 5
+      },
+      "40": {
+        "id": 90151,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2691505
+        ],
+        "name": 30104625,
+        "desc": 102691505,
+        "res": "whlz_skill_base_51",
+        "element": 5
+      }
+    },
+    "90152": {
+      "0": {
+        "id": 90152,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9015201,
+          90152011
+        ],
+        "name": 30104643,
+        "desc": 99300225,
+        "res": "whlz_skill_base_52",
+        "sourceTier": 1,
+        "element": 5
+      },
+      "10": {
+        "id": 90152,
+        "activeLevel": 10,
+        "type": 2,
+        "skillId": [
+          9015202,
+          90152021
+        ],
+        "name": 30104643,
+        "desc": 99300226,
+        "res": "whlz_skill_base_52",
+        "sourceTier": 1,
+        "element": 5
+      },
+      "20": {
+        "id": 90152,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9015203,
+          90152031
+        ],
+        "name": 30104643,
+        "desc": 99300227,
+        "res": "whlz_skill_base_52",
+        "sourceTier": 1,
+        "element": 5
+      },
+      "30": {
+        "id": 90152,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9015204,
+          90152041
+        ],
+        "name": 30104643,
+        "desc": 99300228,
+        "res": "whlz_skill_base_52",
+        "sourceTier": 1,
+        "element": 5
+      },
+      "40": {
+        "id": 90152,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9015205,
+          90152051
+        ],
+        "name": 30104643,
+        "desc": 99300229,
+        "res": "whlz_skill_base_52",
+        "sourceTier": 1,
+        "element": 5
+      }
+    },
+    "90201": {
+      "0": {
+        "id": 90201,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2692001
+        ],
+        "name": 30104626,
+        "desc": 102692001,
+        "res": "whlz_skill_mid_01",
+        "element": 0
+      },
+      "20": {
+        "id": 90201,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2692002
+        ],
+        "name": 30104626,
+        "desc": 102692002,
+        "res": "whlz_skill_mid_01",
+        "element": 0
+      },
+      "40": {
+        "id": 90201,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2692003
+        ],
+        "name": 30104626,
+        "desc": 102692003,
+        "res": "whlz_skill_mid_01",
+        "element": 0
+      },
+      "60": {
+        "id": 90201,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2692004
+        ],
+        "name": 30104626,
+        "desc": 102692004,
+        "res": "whlz_skill_mid_01",
+        "element": 0
+      },
+      "80": {
+        "id": 90201,
+        "activeLevel": 80,
+        "type": 1,
+        "skillId": [
+          2692005
+        ],
+        "name": 30104626,
+        "desc": 102692005,
+        "res": "whlz_skill_mid_01",
+        "element": 0
+      }
+    },
+    "90202": {
+      "0": {
+        "id": 90202,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9020201
+        ],
+        "name": 30104644,
+        "desc": 99300230,
+        "res": "whlz_skill_mid_02",
+        "sourceTier": 2,
+        "element": 0
+      },
+      "20": {
+        "id": 90202,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9020202
+        ],
+        "name": 30104644,
+        "desc": 99300231,
+        "res": "whlz_skill_mid_02",
+        "sourceTier": 2,
+        "element": 0
+      },
+      "40": {
+        "id": 90202,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9020203
+        ],
+        "name": 30104644,
+        "desc": 99300232,
+        "res": "whlz_skill_mid_02",
+        "sourceTier": 2,
+        "element": 0
+      },
+      "60": {
+        "id": 90202,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9020204
+        ],
+        "name": 30104644,
+        "desc": 99300233,
+        "res": "whlz_skill_mid_02",
+        "sourceTier": 2,
+        "element": 0
+      },
+      "80": {
+        "id": 90202,
+        "activeLevel": 80,
+        "type": 2,
+        "skillId": [
+          9020205
+        ],
+        "name": 30104644,
+        "desc": 99300234,
+        "res": "whlz_skill_mid_02",
+        "sourceTier": 2,
+        "element": 0
+      }
+    },
+    "90211": {
+      "0": {
+        "id": 90211,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2692101
+        ],
+        "name": 30104627,
+        "desc": 102692101,
+        "res": "whlz_skill_mid_11",
+        "element": 1
+      },
+      "20": {
+        "id": 90211,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2692102
+        ],
+        "name": 30104627,
+        "desc": 102692102,
+        "res": "whlz_skill_mid_11",
+        "element": 1
+      },
+      "40": {
+        "id": 90211,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2692103
+        ],
+        "name": 30104627,
+        "desc": 102692103,
+        "res": "whlz_skill_mid_11",
+        "element": 1
+      },
+      "60": {
+        "id": 90211,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2692104
+        ],
+        "name": 30104627,
+        "desc": 102692104,
+        "res": "whlz_skill_mid_11",
+        "element": 1
+      },
+      "80": {
+        "id": 90211,
+        "activeLevel": 80,
+        "type": 1,
+        "skillId": [
+          2692105
+        ],
+        "name": 30104627,
+        "desc": 102692105,
+        "res": "whlz_skill_mid_11",
+        "element": 1
+      }
+    },
+    "90212": {
+      "0": {
+        "id": 90212,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9021201
+        ],
+        "name": 30104645,
+        "desc": 99300235,
+        "res": "whlz_skill_mid_12",
+        "sourceTier": 2,
+        "element": 1
+      },
+      "20": {
+        "id": 90212,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9021202
+        ],
+        "name": 30104645,
+        "desc": 99300236,
+        "res": "whlz_skill_mid_12",
+        "sourceTier": 2,
+        "element": 1
+      },
+      "40": {
+        "id": 90212,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9021203
+        ],
+        "name": 30104645,
+        "desc": 99300237,
+        "res": "whlz_skill_mid_12",
+        "sourceTier": 2,
+        "element": 1
+      },
+      "60": {
+        "id": 90212,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9021204
+        ],
+        "name": 30104645,
+        "desc": 99300238,
+        "res": "whlz_skill_mid_12",
+        "sourceTier": 2,
+        "element": 1
+      },
+      "80": {
+        "id": 90212,
+        "activeLevel": 80,
+        "type": 2,
+        "skillId": [
+          9021205
+        ],
+        "name": 30104645,
+        "desc": 99300239,
+        "res": "whlz_skill_mid_12",
+        "sourceTier": 2,
+        "element": 1
+      }
+    },
+    "90221": {
+      "0": {
+        "id": 90221,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2692201
+        ],
+        "name": 30104628,
+        "desc": 102692201,
+        "res": "whlz_skill_mid_21",
+        "element": 2
+      },
+      "20": {
+        "id": 90221,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2692202
+        ],
+        "name": 30104628,
+        "desc": 102692202,
+        "res": "whlz_skill_mid_21",
+        "element": 2
+      },
+      "40": {
+        "id": 90221,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2692203
+        ],
+        "name": 30104628,
+        "desc": 102692203,
+        "res": "whlz_skill_mid_21",
+        "element": 2
+      },
+      "60": {
+        "id": 90221,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2692204
+        ],
+        "name": 30104628,
+        "desc": 102692204,
+        "res": "whlz_skill_mid_21",
+        "element": 2
+      },
+      "80": {
+        "id": 90221,
+        "activeLevel": 80,
+        "type": 1,
+        "skillId": [
+          2692205
+        ],
+        "name": 30104628,
+        "desc": 102692205,
+        "res": "whlz_skill_mid_21",
+        "element": 2
+      }
+    },
+    "90222": {
+      "0": {
+        "id": 90222,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9022201
+        ],
+        "name": 30104646,
+        "desc": 99300240,
+        "res": "whlz_skill_mid_22",
+        "sourceTier": 2,
+        "element": 2
+      },
+      "20": {
+        "id": 90222,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9022202
+        ],
+        "name": 30104646,
+        "desc": 99300241,
+        "res": "whlz_skill_mid_22",
+        "sourceTier": 2,
+        "element": 2
+      },
+      "40": {
+        "id": 90222,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9022203
+        ],
+        "name": 30104646,
+        "desc": 99300242,
+        "res": "whlz_skill_mid_22",
+        "sourceTier": 2,
+        "element": 2
+      },
+      "60": {
+        "id": 90222,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9022204
+        ],
+        "name": 30104646,
+        "desc": 99300243,
+        "res": "whlz_skill_mid_22",
+        "sourceTier": 2,
+        "element": 2
+      },
+      "80": {
+        "id": 90222,
+        "activeLevel": 80,
+        "type": 2,
+        "skillId": [
+          9022205
+        ],
+        "name": 30104646,
+        "desc": 99300244,
+        "res": "whlz_skill_mid_22",
+        "sourceTier": 2,
+        "element": 2
+      }
+    },
+    "90231": {
+      "0": {
+        "id": 90231,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2692301
+        ],
+        "name": 30104629,
+        "desc": 102692301,
+        "res": "whlz_skill_mid_31",
+        "element": 3
+      },
+      "20": {
+        "id": 90231,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2692302
+        ],
+        "name": 30104629,
+        "desc": 102692302,
+        "res": "whlz_skill_mid_31",
+        "element": 3
+      },
+      "40": {
+        "id": 90231,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2692303
+        ],
+        "name": 30104629,
+        "desc": 102692303,
+        "res": "whlz_skill_mid_31",
+        "element": 3
+      },
+      "60": {
+        "id": 90231,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2692304
+        ],
+        "name": 30104629,
+        "desc": 102692304,
+        "res": "whlz_skill_mid_31",
+        "element": 3
+      },
+      "80": {
+        "id": 90231,
+        "activeLevel": 80,
+        "type": 1,
+        "skillId": [
+          2692305
+        ],
+        "name": 30104629,
+        "desc": 102692305,
+        "res": "whlz_skill_mid_31",
+        "element": 3
+      }
+    },
+    "90232": {
+      "0": {
+        "id": 90232,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9023201
+        ],
+        "name": 30104647,
+        "desc": 99300245,
+        "res": "whlz_skill_mid_32",
+        "sourceTier": 2,
+        "element": 3
+      },
+      "20": {
+        "id": 90232,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9023202
+        ],
+        "name": 30104647,
+        "desc": 99300246,
+        "res": "whlz_skill_mid_32",
+        "sourceTier": 2,
+        "element": 3
+      },
+      "40": {
+        "id": 90232,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9023203
+        ],
+        "name": 30104647,
+        "desc": 99300247,
+        "res": "whlz_skill_mid_32",
+        "sourceTier": 2,
+        "element": 3
+      },
+      "60": {
+        "id": 90232,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9023204
+        ],
+        "name": 30104647,
+        "desc": 99300248,
+        "res": "whlz_skill_mid_32",
+        "sourceTier": 2,
+        "element": 3
+      },
+      "80": {
+        "id": 90232,
+        "activeLevel": 80,
+        "type": 2,
+        "skillId": [
+          9023205
+        ],
+        "name": 30104647,
+        "desc": 99300249,
+        "res": "whlz_skill_mid_32",
+        "sourceTier": 2,
+        "element": 3
+      }
+    },
+    "90241": {
+      "0": {
+        "id": 90241,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2692401
+        ],
+        "name": 30104630,
+        "desc": 102692401,
+        "res": "whlz_skill_mid_41",
+        "element": 4
+      },
+      "20": {
+        "id": 90241,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2692402
+        ],
+        "name": 30104630,
+        "desc": 102692402,
+        "res": "whlz_skill_mid_41",
+        "element": 4
+      },
+      "40": {
+        "id": 90241,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2692403
+        ],
+        "name": 30104630,
+        "desc": 102692403,
+        "res": "whlz_skill_mid_41",
+        "element": 4
+      },
+      "60": {
+        "id": 90241,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2692404
+        ],
+        "name": 30104630,
+        "desc": 102692404,
+        "res": "whlz_skill_mid_41",
+        "element": 4
+      },
+      "80": {
+        "id": 90241,
+        "activeLevel": 80,
+        "type": 1,
+        "skillId": [
+          2692405
+        ],
+        "name": 30104630,
+        "desc": 102692405,
+        "res": "whlz_skill_mid_41",
+        "element": 4
+      }
+    },
+    "90242": {
+      "0": {
+        "id": 90242,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9024201
+        ],
+        "name": 30104648,
+        "desc": 99300250,
+        "res": "whlz_skill_mid_42",
+        "sourceTier": 2,
+        "element": 4
+      },
+      "20": {
+        "id": 90242,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9024202
+        ],
+        "name": 30104648,
+        "desc": 99300251,
+        "res": "whlz_skill_mid_42",
+        "sourceTier": 2,
+        "element": 4
+      },
+      "40": {
+        "id": 90242,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9024203
+        ],
+        "name": 30104648,
+        "desc": 99300252,
+        "res": "whlz_skill_mid_42",
+        "sourceTier": 2,
+        "element": 4
+      },
+      "60": {
+        "id": 90242,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9024204
+        ],
+        "name": 30104648,
+        "desc": 99300253,
+        "res": "whlz_skill_mid_42",
+        "sourceTier": 2,
+        "element": 4
+      },
+      "80": {
+        "id": 90242,
+        "activeLevel": 80,
+        "type": 2,
+        "skillId": [
+          9024205
+        ],
+        "name": 30104648,
+        "desc": 99300254,
+        "res": "whlz_skill_mid_42",
+        "sourceTier": 2,
+        "element": 4
+      }
+    },
+    "90251": {
+      "0": {
+        "id": 90251,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2692501
+        ],
+        "name": 30104631,
+        "desc": 102692501,
+        "res": "whlz_skill_mid_51",
+        "element": 5
+      },
+      "20": {
+        "id": 90251,
+        "activeLevel": 20,
+        "type": 1,
+        "skillId": [
+          2692502
+        ],
+        "name": 30104631,
+        "desc": 102692502,
+        "res": "whlz_skill_mid_51",
+        "element": 5
+      },
+      "40": {
+        "id": 90251,
+        "activeLevel": 40,
+        "type": 1,
+        "skillId": [
+          2692503
+        ],
+        "name": 30104631,
+        "desc": 102692503,
+        "res": "whlz_skill_mid_51",
+        "element": 5
+      },
+      "60": {
+        "id": 90251,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2692504
+        ],
+        "name": 30104631,
+        "desc": 102692504,
+        "res": "whlz_skill_mid_51",
+        "element": 5
+      },
+      "80": {
+        "id": 90251,
+        "activeLevel": 80,
+        "type": 1,
+        "skillId": [
+          2692505
+        ],
+        "name": 30104631,
+        "desc": 102692505,
+        "res": "whlz_skill_mid_51",
+        "element": 5
+      }
+    },
+    "90252": {
+      "0": {
+        "id": 90252,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9025201
+        ],
+        "name": 30104649,
+        "desc": 99300255,
+        "res": "whlz_skill_mid_52",
+        "sourceTier": 2,
+        "element": 5
+      },
+      "20": {
+        "id": 90252,
+        "activeLevel": 20,
+        "type": 2,
+        "skillId": [
+          9025202
+        ],
+        "name": 30104649,
+        "desc": 99300256,
+        "res": "whlz_skill_mid_52",
+        "sourceTier": 2,
+        "element": 5
+      },
+      "40": {
+        "id": 90252,
+        "activeLevel": 40,
+        "type": 2,
+        "skillId": [
+          9025203
+        ],
+        "name": 30104649,
+        "desc": 99300257,
+        "res": "whlz_skill_mid_52",
+        "sourceTier": 2,
+        "element": 5
+      },
+      "60": {
+        "id": 90252,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9025204
+        ],
+        "name": 30104649,
+        "desc": 99300258,
+        "res": "whlz_skill_mid_52",
+        "sourceTier": 2,
+        "element": 5
+      },
+      "80": {
+        "id": 90252,
+        "activeLevel": 80,
+        "type": 2,
+        "skillId": [
+          9025205
+        ],
+        "name": 30104649,
+        "desc": 99300259,
+        "res": "whlz_skill_mid_52",
+        "sourceTier": 2,
+        "element": 5
+      }
+    },
+    "90301": {
+      "0": {
+        "id": 90301,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2693001
+        ],
+        "name": 30104632,
+        "desc": 102693001,
+        "res": "whlz_skill_high_01",
+        "element": 0
+      },
+      "30": {
+        "id": 90301,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2693002
+        ],
+        "name": 30104632,
+        "desc": 102693002,
+        "res": "whlz_skill_high_01",
+        "element": 0
+      },
+      "60": {
+        "id": 90301,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2693003
+        ],
+        "name": 30104632,
+        "desc": 102693003,
+        "res": "whlz_skill_high_01",
+        "element": 0
+      },
+      "90": {
+        "id": 90301,
+        "activeLevel": 90,
+        "type": 1,
+        "skillId": [
+          2693004
+        ],
+        "name": 30104632,
+        "desc": 102693004,
+        "res": "whlz_skill_high_01",
+        "element": 0
+      },
+      "120": {
+        "id": 90301,
+        "activeLevel": 120,
+        "type": 1,
+        "skillId": [
+          2693005
+        ],
+        "name": 30104632,
+        "desc": 102693005,
+        "res": "whlz_skill_high_01",
+        "element": 0
+      }
+    },
+    "90302": {
+      "0": {
+        "id": 90302,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9030201
+        ],
+        "name": 30104650,
+        "desc": 99300260,
+        "res": "whlz_skill_high_02",
+        "sourceTier": 3,
+        "element": 0
+      },
+      "30": {
+        "id": 90302,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9030202
+        ],
+        "name": 30104650,
+        "desc": 99300261,
+        "res": "whlz_skill_high_02",
+        "sourceTier": 3,
+        "element": 0
+      },
+      "60": {
+        "id": 90302,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9030203
+        ],
+        "name": 30104650,
+        "desc": 99300262,
+        "res": "whlz_skill_high_02",
+        "sourceTier": 3,
+        "element": 0
+      },
+      "90": {
+        "id": 90302,
+        "activeLevel": 90,
+        "type": 2,
+        "skillId": [
+          9030204
+        ],
+        "name": 30104650,
+        "desc": 99300263,
+        "res": "whlz_skill_high_02",
+        "sourceTier": 3,
+        "element": 0
+      },
+      "120": {
+        "id": 90302,
+        "activeLevel": 120,
+        "type": 2,
+        "skillId": [
+          9030205
+        ],
+        "name": 30104650,
+        "desc": 99300264,
+        "res": "whlz_skill_high_02",
+        "sourceTier": 3,
+        "element": 0
+      }
+    },
+    "90311": {
+      "0": {
+        "id": 90311,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2693101
+        ],
+        "name": 30104633,
+        "desc": 102693101,
+        "res": "whlz_skill_high_11",
+        "element": 1
+      },
+      "30": {
+        "id": 90311,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2693102
+        ],
+        "name": 30104633,
+        "desc": 102693102,
+        "res": "whlz_skill_high_11",
+        "element": 1
+      },
+      "60": {
+        "id": 90311,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2693103
+        ],
+        "name": 30104633,
+        "desc": 102693103,
+        "res": "whlz_skill_high_11",
+        "element": 1
+      },
+      "90": {
+        "id": 90311,
+        "activeLevel": 90,
+        "type": 1,
+        "skillId": [
+          2693104
+        ],
+        "name": 30104633,
+        "desc": 102693104,
+        "res": "whlz_skill_high_11",
+        "element": 1
+      },
+      "120": {
+        "id": 90311,
+        "activeLevel": 120,
+        "type": 1,
+        "skillId": [
+          2693105
+        ],
+        "name": 30104633,
+        "desc": 102693105,
+        "res": "whlz_skill_high_11",
+        "element": 1
+      }
+    },
+    "90312": {
+      "0": {
+        "id": 90312,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9031201
+        ],
+        "name": 30104651,
+        "desc": 99300265,
+        "res": "whlz_skill_high_12",
+        "sourceTier": 3,
+        "element": 1
+      },
+      "30": {
+        "id": 90312,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9031202
+        ],
+        "name": 30104651,
+        "desc": 99300266,
+        "res": "whlz_skill_high_12",
+        "sourceTier": 3,
+        "element": 1
+      },
+      "60": {
+        "id": 90312,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9031203
+        ],
+        "name": 30104651,
+        "desc": 99300267,
+        "res": "whlz_skill_high_12",
+        "sourceTier": 3,
+        "element": 1
+      },
+      "90": {
+        "id": 90312,
+        "activeLevel": 90,
+        "type": 2,
+        "skillId": [
+          9031204
+        ],
+        "name": 30104651,
+        "desc": 99300268,
+        "res": "whlz_skill_high_12",
+        "sourceTier": 3,
+        "element": 1
+      },
+      "120": {
+        "id": 90312,
+        "activeLevel": 120,
+        "type": 2,
+        "skillId": [
+          9031205
+        ],
+        "name": 30104651,
+        "desc": 99300269,
+        "res": "whlz_skill_high_12",
+        "sourceTier": 3,
+        "element": 1
+      }
+    },
+    "90321": {
+      "0": {
+        "id": 90321,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2693201
+        ],
+        "name": 30104634,
+        "desc": 102693201,
+        "res": "whlz_skill_high_21",
+        "element": 2
+      },
+      "30": {
+        "id": 90321,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2693202
+        ],
+        "name": 30104634,
+        "desc": 102693202,
+        "res": "whlz_skill_high_21",
+        "element": 2
+      },
+      "60": {
+        "id": 90321,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2693203
+        ],
+        "name": 30104634,
+        "desc": 102693203,
+        "res": "whlz_skill_high_21",
+        "element": 2
+      },
+      "90": {
+        "id": 90321,
+        "activeLevel": 90,
+        "type": 1,
+        "skillId": [
+          2693204
+        ],
+        "name": 30104634,
+        "desc": 102693204,
+        "res": "whlz_skill_high_21",
+        "element": 2
+      },
+      "120": {
+        "id": 90321,
+        "activeLevel": 120,
+        "type": 1,
+        "skillId": [
+          2693205
+        ],
+        "name": 30104634,
+        "desc": 102693205,
+        "res": "whlz_skill_high_21",
+        "element": 2
+      }
+    },
+    "90322": {
+      "0": {
+        "id": 90322,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9032201
+        ],
+        "name": 30104652,
+        "desc": 99300270,
+        "res": "whlz_skill_high_22",
+        "sourceTier": 3,
+        "element": 2
+      },
+      "30": {
+        "id": 90322,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9032202
+        ],
+        "name": 30104652,
+        "desc": 99300271,
+        "res": "whlz_skill_high_22",
+        "sourceTier": 3,
+        "element": 2
+      },
+      "60": {
+        "id": 90322,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9032203
+        ],
+        "name": 30104652,
+        "desc": 99300272,
+        "res": "whlz_skill_high_22",
+        "sourceTier": 3,
+        "element": 2
+      },
+      "90": {
+        "id": 90322,
+        "activeLevel": 90,
+        "type": 2,
+        "skillId": [
+          9032204
+        ],
+        "name": 30104652,
+        "desc": 99300273,
+        "res": "whlz_skill_high_22",
+        "sourceTier": 3,
+        "element": 2
+      },
+      "120": {
+        "id": 90322,
+        "activeLevel": 120,
+        "type": 2,
+        "skillId": [
+          9032205
+        ],
+        "name": 30104652,
+        "desc": 99300274,
+        "res": "whlz_skill_high_22",
+        "sourceTier": 3,
+        "element": 2
+      }
+    },
+    "90331": {
+      "0": {
+        "id": 90331,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2693301
+        ],
+        "name": 30104635,
+        "desc": 102693301,
+        "res": "whlz_skill_high_31",
+        "element": 3
+      },
+      "30": {
+        "id": 90331,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2693302
+        ],
+        "name": 30104635,
+        "desc": 102693302,
+        "res": "whlz_skill_high_31",
+        "element": 3
+      },
+      "60": {
+        "id": 90331,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2693303
+        ],
+        "name": 30104635,
+        "desc": 102693303,
+        "res": "whlz_skill_high_31",
+        "element": 3
+      },
+      "90": {
+        "id": 90331,
+        "activeLevel": 90,
+        "type": 1,
+        "skillId": [
+          2693304
+        ],
+        "name": 30104635,
+        "desc": 102693304,
+        "res": "whlz_skill_high_31",
+        "element": 3
+      },
+      "120": {
+        "id": 90331,
+        "activeLevel": 120,
+        "type": 1,
+        "skillId": [
+          2693305
+        ],
+        "name": 30104635,
+        "desc": 102693305,
+        "res": "whlz_skill_high_31",
+        "element": 3
+      }
+    },
+    "90332": {
+      "0": {
+        "id": 90332,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9033201
+        ],
+        "name": 30104653,
+        "desc": 99300275,
+        "res": "whlz_skill_high_32",
+        "sourceTier": 3,
+        "element": 3
+      },
+      "30": {
+        "id": 90332,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9033202
+        ],
+        "name": 30104653,
+        "desc": 99300276,
+        "res": "whlz_skill_high_32",
+        "sourceTier": 3,
+        "element": 3
+      },
+      "60": {
+        "id": 90332,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9033203
+        ],
+        "name": 30104653,
+        "desc": 99300277,
+        "res": "whlz_skill_high_32",
+        "sourceTier": 3,
+        "element": 3
+      },
+      "90": {
+        "id": 90332,
+        "activeLevel": 90,
+        "type": 2,
+        "skillId": [
+          9033204
+        ],
+        "name": 30104653,
+        "desc": 99300278,
+        "res": "whlz_skill_high_32",
+        "sourceTier": 3,
+        "element": 3
+      },
+      "120": {
+        "id": 90332,
+        "activeLevel": 120,
+        "type": 2,
+        "skillId": [
+          9033205
+        ],
+        "name": 30104653,
+        "desc": 99300279,
+        "res": "whlz_skill_high_32",
+        "sourceTier": 3,
+        "element": 3
+      }
+    },
+    "90341": {
+      "0": {
+        "id": 90341,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2693401
+        ],
+        "name": 30104636,
+        "desc": 102693401,
+        "res": "whlz_skill_high_41",
+        "element": 4
+      },
+      "30": {
+        "id": 90341,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2693402
+        ],
+        "name": 30104636,
+        "desc": 102693402,
+        "res": "whlz_skill_high_41",
+        "element": 4
+      },
+      "60": {
+        "id": 90341,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2693403
+        ],
+        "name": 30104636,
+        "desc": 102693403,
+        "res": "whlz_skill_high_41",
+        "element": 4
+      },
+      "90": {
+        "id": 90341,
+        "activeLevel": 90,
+        "type": 1,
+        "skillId": [
+          2693404
+        ],
+        "name": 30104636,
+        "desc": 102693404,
+        "res": "whlz_skill_high_41",
+        "element": 4
+      },
+      "120": {
+        "id": 90341,
+        "activeLevel": 120,
+        "type": 1,
+        "skillId": [
+          2693405
+        ],
+        "name": 30104636,
+        "desc": 102693405,
+        "res": "whlz_skill_high_41",
+        "element": 4
+      }
+    },
+    "90342": {
+      "0": {
+        "id": 90342,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9034201
+        ],
+        "name": 30104654,
+        "desc": 99300280,
+        "res": "whlz_skill_high_42",
+        "sourceTier": 3,
+        "element": 4
+      },
+      "30": {
+        "id": 90342,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9034202
+        ],
+        "name": 30104654,
+        "desc": 99300281,
+        "res": "whlz_skill_high_42",
+        "sourceTier": 3,
+        "element": 4
+      },
+      "60": {
+        "id": 90342,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9034203
+        ],
+        "name": 30104654,
+        "desc": 99300282,
+        "res": "whlz_skill_high_42",
+        "sourceTier": 3,
+        "element": 4
+      },
+      "90": {
+        "id": 90342,
+        "activeLevel": 90,
+        "type": 2,
+        "skillId": [
+          9034204
+        ],
+        "name": 30104654,
+        "desc": 99300283,
+        "res": "whlz_skill_high_42",
+        "sourceTier": 3,
+        "element": 4
+      },
+      "120": {
+        "id": 90342,
+        "activeLevel": 120,
+        "type": 2,
+        "skillId": [
+          9034205
+        ],
+        "name": 30104654,
+        "desc": 99300284,
+        "res": "whlz_skill_high_42",
+        "sourceTier": 3,
+        "element": 4
+      }
+    },
+    "90351": {
+      "0": {
+        "id": 90351,
+        "activeLevel": 0,
+        "type": 1,
+        "skillId": [
+          2693501
+        ],
+        "name": 30104637,
+        "desc": 102693501,
+        "res": "whlz_skill_high_51",
+        "element": 5
+      },
+      "30": {
+        "id": 90351,
+        "activeLevel": 30,
+        "type": 1,
+        "skillId": [
+          2693502
+        ],
+        "name": 30104637,
+        "desc": 102693502,
+        "res": "whlz_skill_high_51",
+        "element": 5
+      },
+      "60": {
+        "id": 90351,
+        "activeLevel": 60,
+        "type": 1,
+        "skillId": [
+          2693503
+        ],
+        "name": 30104637,
+        "desc": 102693503,
+        "res": "whlz_skill_high_51",
+        "element": 5
+      },
+      "90": {
+        "id": 90351,
+        "activeLevel": 90,
+        "type": 1,
+        "skillId": [
+          2693504
+        ],
+        "name": 30104637,
+        "desc": 102693504,
+        "res": "whlz_skill_high_51",
+        "element": 5
+      },
+      "120": {
+        "id": 90351,
+        "activeLevel": 120,
+        "type": 1,
+        "skillId": [
+          2693505
+        ],
+        "name": 30104637,
+        "desc": 102693505,
+        "res": "whlz_skill_high_51",
+        "element": 5
+      }
+    },
+    "90352": {
+      "0": {
+        "id": 90352,
+        "activeLevel": 0,
+        "type": 2,
+        "skillId": [
+          9035201
+        ],
+        "name": 30104655,
+        "desc": 99300285,
+        "res": "whlz_skill_high_52",
+        "sourceTier": 3,
+        "element": 5
+      },
+      "30": {
+        "id": 90352,
+        "activeLevel": 30,
+        "type": 2,
+        "skillId": [
+          9035202
+        ],
+        "name": 30104655,
+        "desc": 99300286,
+        "res": "whlz_skill_high_52",
+        "sourceTier": 3,
+        "element": 5
+      },
+      "60": {
+        "id": 90352,
+        "activeLevel": 60,
+        "type": 2,
+        "skillId": [
+          9035203
+        ],
+        "name": 30104655,
+        "desc": 99300287,
+        "res": "whlz_skill_high_52",
+        "sourceTier": 3,
+        "element": 5
+      },
+      "90": {
+        "id": 90352,
+        "activeLevel": 90,
+        "type": 2,
+        "skillId": [
+          9035204
+        ],
+        "name": 30104655,
+        "desc": 99300288,
+        "res": "whlz_skill_high_52",
+        "sourceTier": 3,
+        "element": 5
+      },
+      "120": {
+        "id": 90352,
+        "activeLevel": 120,
+        "type": 2,
+        "skillId": [
+          9035205
+        ],
+        "name": 30104655,
+        "desc": 99300289,
+        "res": "whlz_skill_high_52",
+        "sourceTier": 3,
+        "element": 5
+      }
+    }
+  }
+}

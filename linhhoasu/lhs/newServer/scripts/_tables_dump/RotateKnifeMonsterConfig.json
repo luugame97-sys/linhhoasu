@@ -1,0 +1,193 @@
+{
+  "_table": "RotateKnifeMonsterConfig",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "id,roleShow,knifeCount,moveSpeed,knifeSpeed,radius",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "roleShow": {
+          "1": 31101,
+          "2": 31102,
+          "3": 31103,
+          "4": 31109
+        },
+        "knifeCount": 0,
+        "moveSpeed": 300,
+        "knifeSpeed": 100,
+        "radius": 50
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "roleShow": {
+          "1": 32101,
+          "2": 32102,
+          "3": 32103,
+          "4": 32109
+        },
+        "knifeCount": 2,
+        "moveSpeed": 300,
+        "knifeSpeed": 110,
+        "radius": 50
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "roleShow": {
+          "1": 33101,
+          "2": 33102,
+          "3": 33103,
+          "4": 33109
+        },
+        "knifeCount": 4,
+        "moveSpeed": 300,
+        "knifeSpeed": 120,
+        "radius": 50
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "roleShow": {
+        "1": 31101,
+        "2": 31102,
+        "3": 31103,
+        "4": 31109
+      },
+      "knifeCount": 0,
+      "moveSpeed": 300,
+      "knifeSpeed": 100,
+      "radius": 50
+    },
+    "2": {
+      "id": 2,
+      "roleShow": {
+        "1": 32101,
+        "2": 32102,
+        "3": 32103,
+        "4": 32109
+      },
+      "knifeCount": 2,
+      "moveSpeed": 300,
+      "knifeSpeed": 110,
+      "radius": 50
+    },
+    "3": {
+      "id": 3,
+      "roleShow": {
+        "1": 33101,
+        "2": 33102,
+        "3": 33103,
+        "4": 33109
+      },
+      "knifeCount": 4,
+      "moveSpeed": 300,
+      "knifeSpeed": 120,
+      "radius": 50
+    },
+    "4": {
+      "id": 4,
+      "roleShow": {
+        "1": 34101,
+        "2": 34102,
+        "3": 34103,
+        "4": 34109
+      },
+      "knifeCount": 6,
+      "moveSpeed": 300,
+      "knifeSpeed": 130,
+      "radius": 50
+    },
+    "5": {
+      "id": 5,
+      "roleShow": {
+        "1": 47101,
+        "2": 47102,
+        "3": 47103,
+        "4": 47109
+      },
+      "knifeCount": 8,
+      "moveSpeed": 300,
+      "knifeSpeed": 140,
+      "radius": 50
+    },
+    "6": {
+      "id": 6,
+      "roleShow": {
+        "1": 51101,
+        "2": 51102,
+        "3": 51103,
+        "4": 51109
+      },
+      "knifeCount": 12,
+      "moveSpeed": 300,
+      "knifeSpeed": 150,
+      "radius": 50
+    },
+    "7": {
+      "id": 7,
+      "res": "sp_cr_u_batian_6",
+      "knifeCount": 2,
+      "moveSpeed": 250,
+      "knifeSpeed": 100,
+      "radius": 50,
+      "patrolRadius": 300,
+      "atkRadius": 450
+    },
+    "8": {
+      "id": 8,
+      "res": "sp_cr_u_houge_5",
+      "knifeCount": 4,
+      "moveSpeed": 250,
+      "knifeSpeed": 110,
+      "radius": 50,
+      "patrolRadius": 300,
+      "atkRadius": 450
+    },
+    "9": {
+      "id": 9,
+      "res": "sp_cr_u_modi_6",
+      "knifeCount": 6,
+      "moveSpeed": 250,
+      "knifeSpeed": 120,
+      "radius": 50,
+      "patrolRadius": 300,
+      "atkRadius": 450
+    },
+    "10": {
+      "id": 10,
+      "res": "sp_cr_e_shihunguan_6",
+      "knifeCount": 8,
+      "moveSpeed": 250,
+      "knifeSpeed": 130,
+      "radius": 50,
+      "patrolRadius": 300,
+      "atkRadius": 450
+    },
+    "11": {
+      "id": 11,
+      "res": "sp_cr_o_zhurong_5",
+      "knifeCount": 10,
+      "moveSpeed": 250,
+      "knifeSpeed": 140,
+      "radius": 50,
+      "patrolRadius": 300,
+      "atkRadius": 450
+    },
+    "12": {
+      "id": 12,
+      "res": "sp_cr_d_pusuanzi_5",
+      "knifeCount": 12,
+      "moveSpeed": 250,
+      "knifeSpeed": 150,
+      "radius": 50,
+      "patrolRadius": 300,
+      "atkRadius": 450
+    }
+  }
+}

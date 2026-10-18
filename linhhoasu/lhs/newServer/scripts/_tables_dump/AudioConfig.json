@@ -1,0 +1,52 @@
+{
+  "_table": "AudioConfig",
+  "_rows": 6,
+  "_type": "object",
+  "_firstKeys": "id,replace",
+  "_sample": [
+    {
+      "bgm_loading_1": {
+        "id": "bgm_loading_1",
+        "replace": "bgm_loading_1_new"
+      }
+    },
+    {
+      "bgm_arena": {
+        "id": "bgm_arena",
+        "replace": "bgm_arena_new"
+      }
+    },
+    {
+      "battle_bg": {
+        "id": "battle_bg",
+        "replace": "battle_bg_new"
+      }
+    }
+  ],
+  "data": {
+    "bgm_loading_1": {
+      "id": "bgm_loading_1",
+      "replace": "bgm_loading_1_new"
+    },
+    "bgm_arena": {
+      "id": "bgm_arena",
+      "replace": "bgm_arena_new"
+    },
+    "battle_bg": {
+      "id": "battle_bg",
+      "replace": "battle_bg_new"
+    },
+    "mapBgm003": {
+      "id": "mapBgm003",
+      "replace": "mapBgm003_new"
+    },
+    "bgm_mine": {
+      "id": "bgm_mine",
+      "replace": "bgm_mine_new"
+    },
+    "mapBgm005": {
+      "id": "mapBgm005",
+      "replace": "mapBgm005_new"
+    }
+  }
+}

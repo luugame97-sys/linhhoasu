@@ -1,0 +1,317 @@
+{
+  "_table": "DoubleTowerEquipConfig",
+  "_rows": 24,
+  "_type": "object",
+  "_firstKeys": "id,nameDesc,quality,equipType,haloList,equipSkillDesc,equipIcon",
+  "_sample": [
+    {
+      "101": {
+        "id": 101,
+        "nameDesc": 99500101,
+        "quality": 1,
+        "equipType": 1,
+        "haloList": [
+          2001001
+        ],
+        "equipSkillDesc": 99510101,
+        "equipIcon": "dt_equi_jia_1"
+      }
+    },
+    {
+      "102": {
+        "id": 102,
+        "nameDesc": 99500102,
+        "quality": 2,
+        "equipType": 1,
+        "haloList": [
+          2002001
+        ],
+        "equipSkillDesc": 99510102,
+        "equipIcon": "dt_equi_jia_1"
+      }
+    },
+    {
+      "103": {
+        "id": 103,
+        "nameDesc": 99500103,
+        "quality": 3,
+        "equipType": 1,
+        "haloList": [
+          2003001
+        ],
+        "equipSkillDesc": 99510103,
+        "equipIcon": "dt_equi_jia_1"
+      }
+    }
+  ],
+  "data": {
+    "101": {
+      "id": 101,
+      "nameDesc": 99500101,
+      "quality": 1,
+      "equipType": 1,
+      "haloList": [
+        2001001
+      ],
+      "equipSkillDesc": 99510101,
+      "equipIcon": "dt_equi_jia_1"
+    },
+    "102": {
+      "id": 102,
+      "nameDesc": 99500102,
+      "quality": 2,
+      "equipType": 1,
+      "haloList": [
+        2002001
+      ],
+      "equipSkillDesc": 99510102,
+      "equipIcon": "dt_equi_jia_1"
+    },
+    "103": {
+      "id": 103,
+      "nameDesc": 99500103,
+      "quality": 3,
+      "equipType": 1,
+      "haloList": [
+        2003001
+      ],
+      "equipSkillDesc": 99510103,
+      "equipIcon": "dt_equi_jia_1"
+    },
+    "104": {
+      "id": 104,
+      "nameDesc": 99500104,
+      "quality": 4,
+      "equipType": 1,
+      "haloList": [
+        2004001,
+        2004002
+      ],
+      "equipSkillDesc": 99510104,
+      "equipIcon": "dt_equi_jia_2"
+    },
+    "201": {
+      "id": 201,
+      "nameDesc": 99500201,
+      "quality": 1,
+      "equipType": 2,
+      "haloList": [
+        2005001
+      ],
+      "equipSkillDesc": 99510201,
+      "equipIcon": "dt_equi_dao_1"
+    },
+    "202": {
+      "id": 202,
+      "nameDesc": 99500202,
+      "quality": 2,
+      "equipType": 2,
+      "haloList": [
+        2006001
+      ],
+      "equipSkillDesc": 99510202,
+      "equipIcon": "dt_equi_dao_1"
+    },
+    "203": {
+      "id": 203,
+      "nameDesc": 99500203,
+      "quality": 3,
+      "equipType": 2,
+      "haloList": [
+        2007001
+      ],
+      "equipSkillDesc": 99510203,
+      "equipIcon": "dt_equi_dao_1"
+    },
+    "204": {
+      "id": 204,
+      "nameDesc": 99500204,
+      "quality": 4,
+      "equipType": 2,
+      "haloList": [
+        2008001
+      ],
+      "equipSkillDesc": 99510204,
+      "equipIcon": "dt_equi_dao_2"
+    },
+    "301": {
+      "id": 301,
+      "nameDesc": 99500301,
+      "quality": 1,
+      "equipType": 3,
+      "haloList": [
+        2009001
+      ],
+      "equipSkillDesc": 99510301,
+      "equipIcon": "dt_equi_jian_1"
+    },
+    "302": {
+      "id": 302,
+      "nameDesc": 99500302,
+      "quality": 2,
+      "equipType": 3,
+      "haloList": [
+        2010001
+      ],
+      "equipSkillDesc": 99510302,
+      "equipIcon": "dt_equi_jian_1"
+    },
+    "303": {
+      "id": 303,
+      "nameDesc": 99500303,
+      "quality": 3,
+      "equipType": 3,
+      "haloList": [
+        2011001
+      ],
+      "equipSkillDesc": 99510303,
+      "equipIcon": "dt_equi_jian_1"
+    },
+    "304": {
+      "id": 304,
+      "nameDesc": 99500304,
+      "quality": 4,
+      "equipType": 3,
+      "haloList": [
+        2012001,
+        2012002
+      ],
+      "equipSkillDesc": 99510304,
+      "equipIcon": "dt_equi_jian_2"
+    },
+    "401": {
+      "id": 401,
+      "nameDesc": 99500401,
+      "quality": 1,
+      "equipType": 4,
+      "haloList": [
+        2013001
+      ],
+      "equipSkillDesc": 99510401,
+      "equipIcon": "dt_equi_jiezhi_1"
+    },
+    "402": {
+      "id": 402,
+      "nameDesc": 99500402,
+      "quality": 2,
+      "equipType": 4,
+      "haloList": [
+        2014001
+      ],
+      "equipSkillDesc": 99510402,
+      "equipIcon": "dt_equi_jiezhi_1"
+    },
+    "403": {
+      "id": 403,
+      "nameDesc": 99500403,
+      "quality": 3,
+      "equipType": 4,
+      "haloList": [
+        2015001
+      ],
+      "equipSkillDesc": 99510403,
+      "equipIcon": "dt_equi_jiezhi_1"
+    },
+    "404": {
+      "id": 404,
+      "nameDesc": 99500404,
+      "quality": 4,
+      "equipType": 4,
+      "haloList": [
+        2016001
+      ],
+      "equipSkillDesc": 99510404,
+      "equipIcon": "dt_equi_jiezhi_2"
+    },
+    "501": {
+      "id": 501,
+      "nameDesc": 99500501,
+      "quality": 1,
+      "equipType": 5,
+      "haloList": [
+        2017001
+      ],
+      "equipSkillDesc": 99510501,
+      "equipIcon": "dt_equi_gong_1"
+    },
+    "502": {
+      "id": 502,
+      "nameDesc": 99500502,
+      "quality": 2,
+      "equipType": 5,
+      "haloList": [
+        2018001
+      ],
+      "equipSkillDesc": 99510502,
+      "equipIcon": "dt_equi_gong_1"
+    },
+    "503": {
+      "id": 503,
+      "nameDesc": 99500503,
+      "quality": 3,
+      "equipType": 5,
+      "haloList": [
+        2019001
+      ],
+      "equipSkillDesc": 99510503,
+      "equipIcon": "dt_equi_gong_1"
+    },
+    "504": {
+      "id": 504,
+      "nameDesc": 99500504,
+      "quality": 4,
+      "equipType": 5,
+      "haloList": [
+        2020001,
+        2020002
+      ],
+      "equipSkillDesc": 99510504,
+      "equipIcon": "dt_equi_gong_2"
+    },
+    "601": {
+      "id": 601,
+      "nameDesc": 99500601,
+      "quality": 1,
+      "equipType": 6,
+      "haloList": [
+        2021001
+      ],
+      "equipSkillDesc": 99510601,
+      "equipIcon": "dt_equi_toukui_1"
+    },
+    "602": {
+      "id": 602,
+      "nameDesc": 99500602,
+      "quality": 2,
+      "equipType": 6,
+      "haloList": [
+        2022001
+      ],
+      "equipSkillDesc": 99510602,
+      "equipIcon": "dt_equi_toukui_1"
+    },
+    "603": {
+      "id": 603,
+      "nameDesc": 99500603,
+      "quality": 3,
+      "equipType": 6,
+      "haloList": [
+        2023001
+      ],
+      "equipSkillDesc": 99510603,
+      "equipIcon": "dt_equi_toukui_1"
+    },
+    "604": {
+      "id": 604,
+      "nameDesc": 99500604,
+      "quality": 4,
+      "equipType": 6,
+      "haloList": [
+        2024001,
+        2024002
+      ],
+      "equipSkillDesc": 99510604,
+      "equipIcon": "dt_equi_toukui_2"
+    }
+  }
+}

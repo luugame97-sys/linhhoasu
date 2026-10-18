@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fix triệt để ngoại quan - Linh Họa Sư</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="fix-tri-t-ngo-i-quan-05-09-2026">Fix triệt để ngoại quan — 05/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Hợp nhất đường cấp ngoại quan cho nạp gói, giftcode, sự kiện, shop, dùng item và nhận mail.</li>
+<li>Khi ID trùng <code>FashionConfig</code> và collection gameplay, server cấp đồng thời quyền hiển thị Fashion và object native của pháp trận, thú cưỡi, pháp bảo hoặc pháp tướng.</li>
+<li>Danh hiệu có thời hạn được lưu <code>fashionData.limitValues[10]</code> bằng epoch server; nhận thêm gia hạn nối tiếp thời gian còn lại.</li>
+<li>Sửa 59 suit: item mở component, mặc đúng component, đổi màu có ownership/cost, nâng sao tuần tự có cost/cap và <code>dress</code> đúng schema array.</li>
+<li>Chặn mặc ID chưa sở hữu, client khai hết hạn giả, màu/sao giả và emoji group không có config.</li>
+<li>Repair 150 người S1 có state lệch; S2 không có người cần repair. Audit sau repair còn 0.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-ch-nh">Source chính</h3>
+<ul>
+<li><code>src/services/RoleAppearanceService.js</code></li>
+<li><code>src/services/RewardGrantService.js</code></li>
+<li><code>src/services/FormationService.js</code></li>
+<li><code>src/handlers/spirit.js</code></li>
+<li><code>src/handlers/item.js</code></li>
+<li><code>src/handlers/mail.js</code></li>
+<li><code>src/handlers/activity.js</code></li>
+<li><code>src/handlers/fashion.js</code></li>
+<li><code>src/handlers/official-compat.js</code></li>
+<li><code>src/handlers/playerPayload.js</code></li>
+<li><code>src/handlers/recharge.js</code></li>
+<li><code>src/handlers/compat.js</code></li>
+</ul>
+<h3 id="tool-evidence-h-tr">Tool/evidence hỗ trợ</h3>
+<ul>
+<li>Tool test/deploy/repair/QA đặt trong <code>_ai_workbench/tools/</code>.</li>
+<li>Evidence deploy: <code>_ai_workbench/temp/appearance_fix_deploy_20260905_002742.json</code>.</li>
+<li>Hậu kiểm độc lập: <code>_ai_workbench/temp/appearance_fix_postdeploy_20260905_003433.json</code>.</li>
+<li>Audit runtime sạch: <code>_ai_workbench/temp/appearance_runtime_audit_20260905_003105.json</code>.</li>
+<li>Health cuối: <code>_ai_workbench/temp/appearance_postdeploy_health_20260905_003329.json</code>.</li>
+</ul>
+<h3 id="backup-production">Backup production</h3>
+<ul>
+<li><code>/linhhoasu/_ai_workbench/backups/appearance_fix_20260905_002742/</code> — khoảng 95 MB.</li>
+<li>Có 12 source trước sửa, <code>mongodump</code> collection <code>players</code> S1/S2 và preimage 150 player trước repair.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhận gói/code nhưng chỉ sáng hình, không có tính năng native</td>
+<td>ID tồn tại đồng thời trong Fashion và collection; router xét Fashion trước</td>
+<td>Native thắng route, sau đó cấp thêm Fashion hiển thị</td>
+<td>Mọi kênh phải gọi một router chung và test cả hai lớp</td>
+</tr>
+<tr>
+<td>Danh hiệu thời hạn không kích hoạt chuẩn</td>
+<td>Unlock chỉ ghi ownership, thiếu <code>fashionData.limitValues</code></td>
+<td>Tạo expiry server-authoritative và gia hạn từ <code>max(now, expiry)</code></td>
+<td>Contract mọi Fashion có condition 10</td>
+</tr>
+<tr>
+<td>Suit ID bị ghi vào slot type 1</td>
+<td><code>handleChangeSuit</code> mặc chính suit ID thay vì component</td>
+<td>Resolve component theo đúng bảng từng loại suit</td>
+<td>Test dùng item → mặc → relog cho toàn bộ suit</td>
+</tr>
+<tr>
+<td>Đổi màu/nâng sao không tốn nguyên liệu</td>
+<td>Server tin tham số client</td>
+<td>Kiểm config, ownership, bước kế tiếp, cost, cap; trừ và sync item</td>
+<td>Không dùng client làm nguồn authority</td>
+</tr>
+<tr>
+<td>Client xóa Fashion vĩnh viễn qua tag 1811</td>
+<td>Handler tin danh sách ID client gửi</td>
+<td>Bỏ qua danh sách client; tự tính expiry từ timestamp server</td>
+<td>Expiry chỉ do server quyết định</td>
+</tr>
+<tr>
+<td>Giftcode có nguy cơ grant lặp nếu cập nhật thống kê code lỗi</td>
+<td>Thống kê code và snapshot player lưu khác thời điểm</td>
+<td>Lưu reward + per-player ledger trước; lỗi aggregate không biến thành retry grant</td>
+<td>Ledger người chơi là nguồn chống trùng chính</td>
+</tr>
+<tr>
+<td>Deploy lần 1 rollback dù code/E2E đã PASS</td>
+<td>Gate đợi bot 580/580 hết 720 giây khi S1 còn 565</td>
+<td>Rollback byte-for-byte; deploy v2 tách bot reconnect khỏi gate mutation</td>
+<td>Bot reconnect là hậu kiểm dài, không dùng làm nguyên nhân rollback source tốt</td>
+</tr>
+<tr>
+<td>Repair khi player online có thể bị snapshot cũ ghi đè</td>
+<td>Session game còn chạy trong lúc DB update</td>
+<td>Dừng riêng S1/S2, repair có preimage rồi khởi động lại</td>
+<td>Mutation player phải có maintenance window ngắn</td>
+</tr>
+<tr>
+<td>Contract giftcode cũ báo bộ thời trang rỗng</td>
+<td>Test chỉ đếm item/native cũ, không đếm Fashion</td>
+<td>Bổ sung <code>fashion/formations/spirits</code> vào assertion</td>
+<td>Test contract phải theo schema reward hiện hành</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Ngoại quan overlap phải cấp hai lớp: collection gameplay trước, Fashion hiển thị sau.</li>
+<li>Reward response và packet sync phải cùng dùng một <code>rewardInfo</code>; đặc biệt giftcode ngoại quan không được chỉ gửi <code>1202</code> item.</li>
+<li>Repair native phải dùng helper thật để tạo UID/default attrs, không tự chắp object gần đúng.</li>
+<li>Preimage từng player phải ghi ra file trước mỗi update, ngoài full <code>mongodump</code>.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Contract ngoại quan: <strong>2.192 ID</strong>, lỗi 0; 234 assertion.</li>
+<li>Suit: 56 item dùng/mặc, 37 biến thể màu gửi được và 54 bước nâng sao PASS.</li>
+<li>E2E S1: 45 check gồm nạp gói <code>11000003</code>, giftcode, mail, title thời hạn, pháp trận/thú cưỡi/pháp bảo/pháp tướng, suit, duplicate, relog và cleanup.</li>
+<li>S2 dùng cùng source/config: full contract 2.192 ID PASS; entry vẫn theo lịch mở S2.</li>
+<li>Repair S1: 150 người, gồm 18 pháp trận, 93 thú cưỡi, 128 pháp bảo, 32 pháp tướng và 23 slot suit; verify còn 0. S2: 0 → 0.</li>
+<li>Runtime audit độc lập: S1 1.769 player/609 người thật, issue 0; S2 581/1, issue 0.</li>
+<li>12/12 hash source production khớp candidate.</li>
+<li>PM2 online; <code>/ready</code> S1/S2 đều HTTP 200.</li>
+<li>Bot S1/S2 580/580; quái 2.466 slot/server, hệ số ×2, invalid 0.</li>
+<li>Log lỗi S1/S2 rỗng; QA player/code/mail residue bằng 0.</li>
+<li>Regression PASS: Activity 7 58 assertion, Activity 9, event 43/44, core 714 bảng, Ủy thác/auto-equip, bot combat, quái ×2, guide và Tĩnh lặng.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người chơi đang online lúc maintenance nên đăng nhập lại để tải state ngoại quan đã repair.</li>
+<li>Test thực tế một gói nạp và một giftcode có ngoại quan trên tài khoản người chơi; không cần phát bù lại các ID đã repair.</li>
+<li>Tiếp tục test hiển thị native 309 ID asset trong atlas theo danh sách audit trước; phần này độc lập với lỗi kích hoạt đã sửa.</li>
+</ol></main></body></html>

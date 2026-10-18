@@ -1,0 +1,144 @@
+{
+  "_table": "DungeonRewardRecoverConfig",
+  "_rows": 4,
+  "_type": "object",
+  "_firstKeys": "id,type,cost,rewards",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "type": 1,
+        "cost": [
+          {
+            "id": 2,
+            "count": 1000
+          }
+        ],
+        "rewards": [
+          {
+            "id": 92,
+            "count": 1
+          },
+          {
+            "id": 96,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "type": 1,
+        "cost": [
+          {
+            "id": 2,
+            "count": 1000
+          }
+        ],
+        "rewards": [
+          {
+            "id": 96,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "type": 2,
+        "cost": [
+          {
+            "id": 2,
+            "count": 2000
+          }
+        ],
+        "rewards": [
+          {
+            "id": 101090,
+            "count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "type": 1,
+      "cost": [
+        {
+          "id": 2,
+          "count": 1000
+        }
+      ],
+      "rewards": [
+        {
+          "id": 92,
+          "count": 1
+        },
+        {
+          "id": 96,
+          "count": 1
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "type": 1,
+      "cost": [
+        {
+          "id": 2,
+          "count": 1000
+        }
+      ],
+      "rewards": [
+        {
+          "id": 96,
+          "count": 1
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "type": 2,
+      "cost": [
+        {
+          "id": 2,
+          "count": 2000
+        }
+      ],
+      "rewards": [
+        {
+          "id": 101090,
+          "count": 1
+        }
+      ]
+    },
+    "4": {
+      "id": 4,
+      "type": 2,
+      "cost": [
+        {
+          "id": 98,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 92,
+          "count": 20
+        },
+        {
+          "id": 100130,
+          "count": 3
+        },
+        {
+          "id": 94,
+          "count": 300
+        }
+      ]
+    }
+  }
+}

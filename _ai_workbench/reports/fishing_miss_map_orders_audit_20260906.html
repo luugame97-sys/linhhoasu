@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cau hut, doi ngu truong va phieu don</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-c-u-h-t-i-ng-tr-ng-v-phi-u-l-m-m-i">Session Report — câu hụt, đổi ngư trường và phiếu làm mới</h1>
+<p>Ngày 06/09/2026. Snapshot11:23:31 và hậu kiểm trạng thái11:26:57 UTC+7. <strong>Phiên này chỉ kiểm tra, không sửa source/DB/client, không câu, bán cá, đổi map hay dùng phiếu trên tài khoản người chơi.</strong></p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<h3 id="1-1-c-u-kh-ng-th-y-c-c-n-ph-n-bi-t-c-u-h-t-v-i-t-b-n">1.1 Câu không thấy cá: cần phân biệt câu hụt với tự bán</h3>
+<p><strong>Bản gốc có cơ chế/trạng thái câu hụt và cá thoát</strong>, nhưng <strong>server hiện tại chưa sinh kết quả hụt trong hai handler câu cá đang kiểm</strong>:</p>
+<ul>
+<li>Client Trung tham chiếu có FishEscapeState: Scuess0, konggan1, Taotuo2 và nhánh hoạt ảnh tương ứng.</li>
+<li>Mô tả gốc của cần nói tập trung tăng độ chính xác, cường độ giúp cá cắn câu/không giãy thoát; help Hoang Cổ30033154 nêu rõ câu trống vẫn tiêu hao Đùi Gà. Không suy từ đó rằng mọi lần người dùng thấy trống hiện nay là tính năng hụt đã hoạt động đúng.</li>
+<li>Handler câu thường4000 hiện luôn đẩy một entity vào fishInfos cho mỗi lượt được chấp nhận; escapes luôn rỗng.60 batch thử với count1/3/10 tạo đủ280 cá, không batch thành công nào rỗng.</li>
+<li>Handler linh hồn4060 hiện cũng tạo đủ số entity và escapes rỗng. RNG/empty catch bản gốc chưa được triển khai đầy đủ; không tự đặt tỷ lệ hụt trong phiên audit.</li>
+<li>Trường hợp bị từ chối vì pending hoặc không đủ Đùi Gà không trừ thêm mồi trong probe.</li>
+</ul>
+<p><strong>Dữ liệu thực tế gần đây của nicky phù hợp với tự bán, không phải mất cá sau câu:</strong></p>
+<div class="table-wrap"><table><thead><tr>
+<th>Dữ liệu trong20 lần xử lý auto gần nhất</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Tổng entity đã bán</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Lần không có cá nào được trang bị, toàn bộ bán đi</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Lần có thay một cá mạnh hơn</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Khoảng thời gian lịch sử</td>
+<td>11:17:13–11:19:22 UTC+7</td>
+</tr>
+<tr>
+<td>Cá đang chờ tại snapshot</td>
+<td>3</td>
+</tr>
+</tbody></table></div>
+<p>Các60 entity bán gồm cả cá cũ bị thay ra ở một lượt, không phải60 cá mới độc lập. Theo giá bán handler hiện hành, tổng giá trị những entity trong lịch sử là300 Ngư Tệ; không coi đây là số tăng đo trực tiếp trước/sau số dư vì người chơi có hoạt động khác.</p>
+<p>Probe tương ứng: câu3 →nhận3 →auto xác định cả3 yếu hơn →bán3, không thêm vào giỏ; mồi và Đùi Gà vẫn được dùng đúng lượt, Ngư Tệ tăng theo giá bán. Vì vậy chỉ nhìn giỏ không thêm cá không đồng nghĩa câu trượt hoặc mất phần thưởng.</p>
+<p>Chưa có timestamp/packet trước-sau cho chính lượt người dùng thấy hụt. Nếu tắt tự bán mà vẫn bị trừ mồi, không có cá chờ và không có quà/Ngư Tệ, cần mốc giờ cụ thể để truy tiếp; chưa loại trừ lỗi UI/lifecycle ở trường hợp đó.</p>
+<h3 id="1-2-i-map-ph-i-t-i-l-i-l-i-x-c-nh-n">1.2 Đổi map phải tải lại: lỗi đã xác nhận</h3>
+<p>Trong handleFishChangeScene/tag4002, server chỉ:</p>
+<ol>
+<li>Kiểm điều kiện khu.</li>
+<li>Gán fishInfo.scene mới và lưu.</li>
+<li>Trả ACK4002.</li>
+</ol>
+<p>Nhưng không chuyển session._fishRoomMapId và không gửi packet4050 chứa dữ liệu vào map. Native sendChangeScene chỉ cập nhật ID lựa chọn; màn cảnh thật chỉ được tạo lại trong sc_fish_map_enter khi nhận4050.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Probe đổi khu1→2</th>
+<th>Sau ACK4002</th>
+</tr></thead><tbody>
+<tr>
+<td>ID ngư trường đã lưu</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ID room của session</td>
+<td>Vẫn1</td>
+</tr>
+<tr>
+<td>Client fishInfo.scene</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Packet vào map4050</td>
+<td>Không có</td>
+</tr>
+<tr>
+<td>EnterFishMapRaid được gọi</td>
+<td>Không</td>
+</tr>
+<tr>
+<td>changeSceneCallBack được gọi</td>
+<td>Không</td>
+</tr>
+</tbody></table></div>
+<p>Khi cấp packet4050 đúng qua handler vào map trên fixture, hàm native tạo map2 và callback chạy. Đây là nguyên nhân ảnh có thể ghi “Vị trí hiện tại” ở <strong>Kim Sa Lệ Thủy — map2</strong>, trong khi cảnh phía sau chưa đổi. Reload làm luồng vào map chạy lại nên người dùng mới thấy map đã chọn.</p>
+<p><strong>Chưa sửa trong phiên này.</strong> Hướng sửa cần đồng bộ server room, gói vào map và lifecycle native, không chỉ ép thay ảnh nền.</p>
+<h3 id="1-3-c-6-phi-u-nh-ng-ch-a-th-y-d-ng-ng-i-u-ki-n-n-n-t">1.3 Có6 phiếu nhưng chưa thấy dùng: đúng điều kiện ẩn nút</h3>
+<ul>
+<li>Item70 là <strong>Phiếu làm mới đơn</strong>.</li>
+<li>Từ màn câu cá, mở <strong>Giỏ cá của tôi →bấm một biểu tượng đơn trong hàng “Đơn hàng hôm nay” hoặc nút chi tiết đơn</strong>. Cả hai mở FishOrderPanel có tiêu đề <strong>“Đơn hàng mỗi ngày”</strong>.</li>
+<li>Trên đơn <strong>chưa nhận thưởng</strong>, bấm <strong>Làm mới đơn hàng</strong> và xác nhận: mỗi lần tốn1 phiếu. Màn chọn ngư trường trong ảnh không phải nơi dùng phiếu.</li>
+<li>Đơn đã nhận thưởng không được làm mới để nhận quà thêm; native ẩn refreshButton và server cũng từ chối.</li>
+<li>Snapshot hiện tại: vé70=6, cả3 đơn đều received=true. Vì vậy nút làm mới ẩn ở cả3 đơn; chờ lượt đơn ngày mới/chưa nhận thưởng mới dùng được. Không khuyên reset nhận thưởng hoặc mở lại đơn đã nhận.</li>
+<li>Probe đơn chưa nhận với6 phiếu: refresh hiện nút, trừ6→5, đổi ID đơn và tiến độ về0. Probe3 đơn đã nhận: tất cả nút ẩn, server từ chối, phiếu vẫn6.</li>
+<li>Tùy chọn tự trang bị/bán cá mới ưu tiên hơn tự nộp đơn. Nếu muốn nộp cá làm nhiệm vụ ngày, cần tắt tùy chọn đó và dùng luồng nộp đơn/ủy thác đơn hiện có.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<p>Chỉ artifact phân tích:</p>
+<ul>
+<li>_ai_workbench/tools/audit_fishing_miss_map_orders_20260906.js:9 probe trên source snapshot/nativefunctions, save giả và socket bị chặn.</li>
+<li>_ai_workbench/tools/read_fishing_map_order_state_20260906.py:đọc item70, đơn, lịch sử auto và log giới hạn; kiểm hash.</li>
+<li>Dùng lại snapshot_fishing_audit_20260906.py.</li>
+<li>Evidence: _ai_workbench/temp/fishing_audit_20260906T042330Z/:manifest.json,runtime.json,miss-map-orders-audit.json,map-order-state.json.</li>
+<li>Báo cáo này và session_report.md, cả hai có HTML đầy đủ.</li>
+<li>Backup report: _ai_workbench/backups/fishing_miss_map_order_reports_20260906/.</li>
+</ul>
+<p>Không đổi source, config, tốc độ, DB, vật phẩm, ngày nhận, auto settings hoặc cá. Không deploy/restart/gameplayRPC/compensation. File runtime/log chỉ dành cho quản trị nội bộ.</p>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Nguyên nhân/bằng chứng</th>
+<th>Xử lý trong phiên</th>
+<th>Chống lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>Không thấy cá mới nhưng trừ mồi</td>
+<td>19/20 lượt auto gần nhất bán hết, server có sinh cá</td>
+<td>Giải thích và kiểm lịch sử, không gán mọi lần trống là hụt</td>
+<td>So fishInfos,auto sale history,Ngư Tệ thay vì chỉ giỏ</td>
+</tr>
+<tr>
+<td>Luật hụt gốc chưa đầy đủ ở server</td>
+<td>Client có0/1/2; handler hiện escapes=[]</td>
+<td>Ghi rõ khác biệt, không chế tỷ lệ hụt</td>
+<td>Phân biệt “gốc có” với “runtime đã làm”</td>
+</tr>
+<tr>
+<td>Đổi map chỉ đổi ID, không dựng cảnh</td>
+<td>4002 thiếu4050 và roomID không đổi</td>
+<td>Tái hiện bằng handler + nativecallback</td>
+<td>Fix đồng bộ room/entry/lifecycle, không chỉ nền</td>
+</tr>
+<tr>
+<td>Không thấy nút dùng phiếu</td>
+<td>Cả3 đơn đã nhận, native cố ý ẩn</td>
+<td>Chỉ vị trí dùng và điều kiện, test6→5 trênclone</td>
+<td>Không mở lại reward đã nhận</td>
+</tr>
+<tr>
+<td>Thiếu log chính lượt hụt</td>
+<td>Tail giới hạn không còn request của tài khoản</td>
+<td>Không suy đoán giao dịch cụ thể</td>
+<td>Cần giờ xảy ra + số dư/pending trước-sau</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Giá trị lựa chọn fishInfo.scene và map đang render là hai trạng thái khác nhau. ACK đổi ID chưa phải sự kiện vào map.</li>
+<li>Callback đổi cảnh chỉ chạy khi native nhận entry4050; kiểm riêng nó thay vì nhìn nhãn “Vị trí hiện tại”.</li>
+<li>Cùng một batch có thể nhận cá rồi bán ngay trong auto: không giữ cá mới là hành vi hợp lệ nếu cá yếu hơn.</li>
+<li>Phiếu tồn không bảo đảm có thao tác hợp lệ: quyền làm mới phụ thuộc đơn chưa nhận thưởng.</li>
+<li>Nguồn native tham chiếu là bằng chứng có thiết kế hụt/cá thoát, không đủ suy ra tỷ lệ RNG server gốc.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p>-9 probe hoàn thành,0 lỗi harness; gồm60 batch/280 cá thường,3 linh hồn, no-consume rejection, auto sale, map4002/4050 vàrefresh conditions.</p>
+<ul>
+<li>“PASS” trong probe nghĩa là tái hiện đúng điều kiện cần kiểm; không gọi đổi map hoặc toàn bộ câu cá đã PASS.</li>
+<li>Snapshot11:26:57: nicky cấp117/câu8,scene2,phiếu6,3 pending,3 đơn received=true. Dữ liệu có thể tiếp tục đổi theo thao tác người chơi sau snapshot.</li>
+</ul>
+<p>-153artifact trong snapshot được hậu kiểm không đổi. HTTPready8080/8083=200. Không ghi player, không restart, không fix source trong phiên. -Không nativevisual/tài khoản thật/WSgameplaytest. Đã chạy hàm native thật trongVM và snapshot server; chưa đủ kết luận từng lần hụt cụ thể. -Mô tả Hoang Cổ nói hụt vẫn tiêu Đùi Gà, không dùng nó để tự thêm tỷ lệ hụt hoặc thay đổi mồi hiện hành.</p>
+<p><strong>Kết luận:</strong> đổi ngư trường cần reload là lỗi; phiếu làm mới đang bị ẩn đúng do các đơn đã nhận; nhiều lượt không thấy cá trong dữ liệu gần đây là tự bán cá yếu, không phải server sinh câu hụt.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Khi user yêu cầu sửa map: backup/refresh baseline, sửa4002 để luồng room-entry đồng nhất4050, test map1↔2↔3, đang có pending, đang auto, callback, relog và không đổi số cá/tài nguyên.</li>
+<li>Muốn thấy cá nhận trước khi quyết định thì tắt “Tự trang bị cá mạnh, bán cá yếu”. Nếu tắt mà vẫn mất mồi và không có bất kỳ cá/quà/coin, ghi giờ cụ thể để truy.</li>
+<li>Dùng phiếu ở Đơn hàng mỗi ngày, trước khi nhận thưởng đơn; ngày hiện tại đã nhận cả3 thì không có nút làm mới.</li>
+<li>Không reset đơn, không phát bù, không tự thêm RNG hụt. Muốn phục hồi đầy đủ luật gốc cần nguồn xác suất/contract riêng.</li>
+</ol></main></body></html>

@@ -1,0 +1,968 @@
+{
+  "_table": "Activity31Config",
+  "_rows": 11,
+  "_type": "object",
+  "_firstKeys": "0,1,2,3,4,5,6,7,8,9,10",
+  "_sample": [
+    {
+      "31001": {
+        "0": {
+          "activityId": 31001,
+          "index": 0,
+          "score": 0,
+          "rewards": 1000
+        },
+        "1": {
+          "activityId": 31001,
+          "index": 1,
+          "score": 10,
+          "rewards": 1200
+        },
+        "2": {
+          "activityId": 31001,
+          "index": 2,
+          "score": 40,
+          "rewards": 1400
+        },
+        "3": {
+          "activityId": 31001,
+          "index": 3,
+          "score": 50,
+          "rewards": 1600
+        },
+        "4": {
+          "activityId": 31001,
+          "index": 4,
+          "score": 100,
+          "rewards": 1800
+        },
+        "5": {
+          "activityId": 31001,
+          "index": 5,
+          "score": 100,
+          "rewards": 2000
+        },
+        "6": {
+          "activityId": 31001,
+          "index": 6,
+          "score": 100,
+          "rewards": 2200
+        },
+        "7": {
+          "activityId": 31001,
+          "index": 7,
+          "score": 100,
+          "rewards": 2400
+        },
+        "8": {
+          "activityId": 31001,
+          "index": 8,
+          "score": 100,
+          "rewards": 2600
+        },
+        "9": {
+          "activityId": 31001,
+          "index": 9,
+          "score": 200,
+          "rewards": 2800
+        },
+        "10": {
+          "activityId": 31001,
+          "index": 10,
+          "score": 200,
+          "rewards": 3000
+        }
+      }
+    },
+    {
+      "31002": {
+        "0": {
+          "activityId": 31002,
+          "index": 0,
+          "score": 0,
+          "rewards": 1000
+        },
+        "1": {
+          "activityId": 31002,
+          "index": 1,
+          "score": 10,
+          "rewards": 1200
+        },
+        "2": {
+          "activityId": 31002,
+          "index": 2,
+          "score": 40,
+          "rewards": 1400
+        },
+        "3": {
+          "activityId": 31002,
+          "index": 3,
+          "score": 50,
+          "rewards": 1600
+        },
+        "4": {
+          "activityId": 31002,
+          "index": 4,
+          "score": 100,
+          "rewards": 1800
+        },
+        "5": {
+          "activityId": 31002,
+          "index": 5,
+          "score": 100,
+          "rewards": 2000
+        },
+        "6": {
+          "activityId": 31002,
+          "index": 6,
+          "score": 100,
+          "rewards": 2200
+        },
+        "7": {
+          "activityId": 31002,
+          "index": 7,
+          "score": 100,
+          "rewards": 2400
+        },
+        "8": {
+          "activityId": 31002,
+          "index": 8,
+          "score": 100,
+          "rewards": 2600
+        },
+        "9": {
+          "activityId": 31002,
+          "index": 9,
+          "score": 200,
+          "rewards": 2800
+        },
+        "10": {
+          "activityId": 31002,
+          "index": 10,
+          "score": 200,
+          "rewards": 3000
+        }
+      }
+    },
+    {
+      "31003": {
+        "0": {
+          "activityId": 31003,
+          "index": 0,
+          "score": 0,
+          "rewards": 1000
+        },
+        "1": {
+          "activityId": 31003,
+          "index": 1,
+          "score": 10,
+          "rewards": 1200
+        },
+        "2": {
+          "activityId": 31003,
+          "index": 2,
+          "score": 40,
+          "rewards": 1400
+        },
+        "3": {
+          "activityId": 31003,
+          "index": 3,
+          "score": 50,
+          "rewards": 1600
+        },
+        "4": {
+          "activityId": 31003,
+          "index": 4,
+          "score": 100,
+          "rewards": 1800
+        },
+        "5": {
+          "activityId": 31003,
+          "index": 5,
+          "score": 100,
+          "rewards": 2000
+        },
+        "6": {
+          "activityId": 31003,
+          "index": 6,
+          "score": 100,
+          "rewards": 2200
+        },
+        "7": {
+          "activityId": 31003,
+          "index": 7,
+          "score": 100,
+          "rewards": 2400
+        },
+        "8": {
+          "activityId": 31003,
+          "index": 8,
+          "score": 100,
+          "rewards": 2600
+        },
+        "9": {
+          "activityId": 31003,
+          "index": 9,
+          "score": 200,
+          "rewards": 2800
+        },
+        "10": {
+          "activityId": 31003,
+          "index": 10,
+          "score": 200,
+          "rewards": 3000
+        }
+      }
+    }
+  ],
+  "data": {
+    "31001": {
+      "0": {
+        "activityId": 31001,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31001,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31001,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31001,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31001,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31001,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31001,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31001,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31001,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31001,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31001,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31002": {
+      "0": {
+        "activityId": 31002,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31002,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31002,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31002,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31002,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31002,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31002,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31002,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31002,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31002,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31002,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31003": {
+      "0": {
+        "activityId": 31003,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31003,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31003,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31003,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31003,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31003,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31003,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31003,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31003,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31003,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31003,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31051": {
+      "0": {
+        "activityId": 31051,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31051,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31051,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31051,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31051,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31051,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31051,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31051,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31051,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31051,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31051,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31052": {
+      "0": {
+        "activityId": 31052,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31052,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31052,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31052,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31052,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31052,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31052,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31052,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31052,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31052,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31052,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31053": {
+      "0": {
+        "activityId": 31053,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31053,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31053,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31053,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31053,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31053,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31053,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31053,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31053,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31053,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31053,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31101": {
+      "0": {
+        "activityId": 31101,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31101,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31101,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31101,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31101,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31101,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31101,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31101,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31101,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31101,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31101,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31151": {
+      "0": {
+        "activityId": 31151,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31151,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31151,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31151,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31151,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31151,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31151,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31151,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31151,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31151,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31151,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31951": {
+      "0": {
+        "activityId": 31951,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31951,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31951,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31951,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31951,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31951,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31951,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31951,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31951,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31951,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31951,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31952": {
+      "0": {
+        "activityId": 31952,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31952,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31952,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31952,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31952,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31952,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31952,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31952,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31952,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31952,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31952,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    },
+    "31953": {
+      "0": {
+        "activityId": 31953,
+        "index": 0,
+        "score": 0,
+        "rewards": 1000
+      },
+      "1": {
+        "activityId": 31953,
+        "index": 1,
+        "score": 10,
+        "rewards": 1200
+      },
+      "2": {
+        "activityId": 31953,
+        "index": 2,
+        "score": 40,
+        "rewards": 1400
+      },
+      "3": {
+        "activityId": 31953,
+        "index": 3,
+        "score": 50,
+        "rewards": 1600
+      },
+      "4": {
+        "activityId": 31953,
+        "index": 4,
+        "score": 100,
+        "rewards": 1800
+      },
+      "5": {
+        "activityId": 31953,
+        "index": 5,
+        "score": 100,
+        "rewards": 2000
+      },
+      "6": {
+        "activityId": 31953,
+        "index": 6,
+        "score": 100,
+        "rewards": 2200
+      },
+      "7": {
+        "activityId": 31953,
+        "index": 7,
+        "score": 100,
+        "rewards": 2400
+      },
+      "8": {
+        "activityId": 31953,
+        "index": 8,
+        "score": 100,
+        "rewards": 2600
+      },
+      "9": {
+        "activityId": 31953,
+        "index": 9,
+        "score": 200,
+        "rewards": 2800
+      },
+      "10": {
+        "activityId": 31953,
+        "index": 10,
+        "score": 200,
+        "rewards": 3000
+      }
+    }
+  }
+}

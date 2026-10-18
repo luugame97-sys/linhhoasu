@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thưởng xếp hạng x10 và Tiền đồng 2%</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="th-ng-m-i-h-ng-10-v-ti-n-ng-2-07-09-2026">Thưởng mọi hạng ×10 và Tiền đồng 2% — 07/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Đã triển khai lên S1/S2 hai yêu cầu trong cùng bản <code>20260907_fishing_rank10_coin2_v1</code>:</p>
+<ul>
+<li>Nhân thêm ×10 Nguyên bảo (item1) và vé tăng tốc (item6) ở toàn bộ 8 nhóm hạng Đại hội câu cá, bảng <code>Activity6RankConfig[6006]</code>.</li>
+<li>Giảm tỷ lệ Tiền đồng khi bán cá mới câu trong ngư trường sự kiện từ20% xuống2%: <code>saleChanceBps=200/10000</code>.</li>
+<li>Giữ nguyên số lượng1–3 mỗi lần rơi, bonus số lượng Huyền Vũ25%, đổi cuối kỳ1:1.000 Bạc, mọi quà khác và năm gói mua.</li>
+<li>Mô tả Tiền đồng trong client cập nhật thành2%; giữ bản sửa hiển thị K/M/B/T đang chạy.</li>
+</ul>
+<h3 id="th-ng-m-i-t-t-c-nh-m-h-ng">Thưởng mới ở tất cả nhóm hạng</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>Hạng</th>
+<th>Nguyên bảo</th>
+<th>Vé tăng tốc</th>
+<th>Hiển thị mỗi loại</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td>
+<td>10.000.000</td>
+<td>10.000.000</td>
+<td>10M</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8.000.000</td>
+<td>8.000.000</td>
+<td>8M</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6.000.000</td>
+<td>6.000.000</td>
+<td>6M</td>
+</tr>
+<tr>
+<td>4–10</td>
+<td>5.000.000</td>
+<td>5.000.000</td>
+<td>5M</td>
+</tr>
+<tr>
+<td>11–50</td>
+<td>4.000.000</td>
+<td>4.000.000</td>
+<td>4M</td>
+</tr>
+<tr>
+<td>51–100</td>
+<td>3.500.000</td>
+<td>3.500.000</td>
+<td>3.5M</td>
+</tr>
+<tr>
+<td>101–500</td>
+<td>3.000.000</td>
+<td>3.000.000</td>
+<td>3M</td>
+</tr>
+<tr>
+<td>501 trở đi</td>
+<td>2.000.000</td>
+<td>2.000.000</td>
+<td>2M</td>
+</tr>
+</tbody></table></div>
+<p>Không thay đổi lịch sự kiện, điều kiện xếp hạng hoặc quà khác. Không cấp bù/thu hồi/reset bản ghi đã nhận thưởng, không sửa nhân vật người thật.</p>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="source-config-ch-nh-5-file">Source/config chính — 5 file</h3>
+<ul>
+<li><code>linhhoasu/lhs/newServer/src/config/fishingEconomy.json</code>: saleChanceBps200, versionv2-coin2; các trường khác giữ nguyên.</li>
+<li><code>linhhoasu/lhs/update/resource/assets/excel/config_e5ac72c2.bin</code>: chỉ16count item1/item6 thuộc8nhóm hạng6006.</li>
+<li><code>linhhoasu/webgame/game/update/resource/assets/excel/config_e5ac72c2.bin</code>: cùng bảng thưởng với server.</li>
+<li><code>linhhoasu/webgame/game/update/resource/assets/excel/lang_cn/config_lang_c2fa8585.bin</code>: chỉ câu mô tả10000119 đổi20%→2%.</li>
+<li><code>linhhoasu/webgame/game/index.html</code>: thay translationVersion để tải lại config/lang; giữ manifest module số lượngv2.</li>
+</ul>
+<p>Binary local server có <code>SystemConfig</code> khác sẵn so với VPS. Đã giữ nguyên khác biệt đó; chỉ ghép bảng mục tiêu, không overwrite cả file bằng bản VPS.</p>
+<h3 id="tool-evidence">Tool/evidence</h3>
+<ul>
+<li><code>_ai_workbench/tools/preflight_fishing_rank_x10_20260907.py</code>: baseline, runtime config path, PID/health; mở rộng thêm nguồn currency trước deploy.</li>
+<li><code>_ai_workbench/tools/build_fishing_rank_x10_20260907.js</code>: build rank-only; guard số cũ ngăn nhân lần hai; roundtrip714bảng.</li>
+<li><code>_ai_workbench/tools/build_fishing_currency_2percent_20260907.js</code>: language và quy tắc Tiền đồng, so sánh chống đổi ngoài phạm vi.</li>
+<li><code>_ai_workbench/tools/test_fishing_rank_x10_20260907.js</code>:34ca rank/currency với cấm kết nối mạng và fixture save; không ghi DB.</li>
+<li><code>_ai_workbench/tools/verify_fishing_rank10_coin2_client_20260907.js</code>:16giá trị client và formatter thật, mô tả2%, manifest không mất patch hiển thị.</li>
+<li><code>_ai_workbench/tools/release_fishing_rank_x10_20260907.py</code>: staging/deploy/verify có baseline, backup, atomic rename, restart tuần tự, rollback tự động nếu rollout lỗi.</li>
+<li><code>_ai_workbench/tools/sync_fishing_rank10_coin2_local_20260907.js</code>: đồng bộ binary local sau deploy, giữ bảng khác.</li>
+<li><code>_ai_workbench/tools/check_fishing_rank10_restart_warnings_20260907.py</code>: phân loại phần stderr mới, không xuất log tài khoản.</li>
+<li>Evidence: <code>_ai_workbench/temp/fishing_rank_x10_20260907/</code> gồm preflight, build, currency-build, client-check, stage, release, local-sync, restart-warnings. Tên thư mục giữ theo yêu cầu đầu; bản cuối chứa cả×10 và2%.</li>
+<li>Báo cáo này và HTML; cập nhật <code>session_report.md/.html</code>.</li>
+</ul>
+<h3 id="backup-v-artifact">Backup và artifact</h3>
+<ul>
+<li>VPS: <code>/linhhoasu/_ai_workbench/backups/fishing_rank_x10_20260907_030647/</code>.</li>
+<li>Local: <code>_ai_workbench/backups/fishing_rank10_coin2_local_20260907/</code> gồm source JSON,3binary,index và báo cáo cũ.</li>
+<li>Candidate đầy đủ: <code>server.next.bin</code>, <code>economy.next.json</code>, <code>client.next.bin</code>, <code>lang.next.bin</code>, <code>index.next.html</code> trong thư mục evidence. Không có credential trong các artifact này.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Vấn đề</th>
+<th>Nguyên nhân/bằng chứng</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Dễ chỉ tăng hạng1</td>
+<td>Yêu cầu được làm rõ là mọi hạng</td>
+<td>8nhóm×2item=16count; test hạng đầu/cuối nhóm</td>
+<td>Guard đủ8key và đủ2item mỗi nhóm</td>
+</tr>
+<tr>
+<td>Nguy cơ nhân×10 lần hai</td>
+<td>Build theo giá trị hiện tại nếu chạy lại không guard</td>
+<td>Assert baseline1M/800K/…; deploy chặn state đã tồn tại</td>
+<td>Không chạy lại generator trên config mới</td>
+</tr>
+<tr>
+<td>Server còn tỷ lệ cũ sau sửa file</td>
+<td>FishingEconomyService require JSON và ConfigService cache trong process</td>
+<td>Cài binary/rules trước; restart riêng S2 rồi S1</td>
+<td>Kiểm config path từ process, health và PID/restart</td>
+</tr>
+<tr>
+<td>UI vẫn ghi20%</td>
+<td>Tỷ lệ server và LanguageConfig là hai nguồn khác nhau</td>
+<td>Cập nhật đúng10000119 và cache token</td>
+<td>Test mô tả2%, HTTP hash config/lang</td>
+</tr>
+<tr>
+<td>Local config có khác biệt độc lập</td>
+<td>SystemConfig local khác VPS trước phiên</td>
+<td>Preserve toàn bộ chunk ngoài bảng mục tiêu</td>
+<td>So raw bytes713bảng không đổi</td>
+</tr>
+<tr>
+<td>Cảnh báo Mongoose khi restart</td>
+<td>stderr mới309bytes mỗi server, có marker MONGOOSE</td>
+<td>Ghi nhận, không sửa schema ngoài phạm vi;0fatal marker trong mẫu</td>
+<td>Không tuyên bố log hoàn toàn trống hoặc đã fix warning</td>
+</tr>
+</tbody></table></div>
+<p>Không phát hiện mojibake mới. Mô tả tiếng Việt được giải mã/ghi lại đúng binary schema, chỉ thay20% thành2%, không convert encoding đại trà.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Tỷ lệ2% được kiểm định bằng cách duyệt đủ10.000 kết quả RNG: đúng200kết quả trúng. Đây là kiểm logic ngưỡng, không phải mẫu ngẫu nhiên live.</li>
+<li>Bonus Huyền Vũ là tăng số lượng25% có lưu phần lẻ, không tăng xác suất rơi; giữ nguyên phân biệt này.</li>
+<li>Bán tay và bán tự động dùng chung saleBonus/provenance. Cá cũ, sai ngư trường, cá khóa, quá kỳ hoặc bán lại không tạo thêm Tiền đồng.</li>
+<li>Không làm tròn tăng số thưởng trên client; formatter đang chạy cho đúng10M/8M/6M/5M/4M/3.5M/3M/2M.</li>
+<li>Test fixture không được gọi là giao dịch người thật; keep save/replay/commit-timeout cases độc lập với kiểm HTTP/health.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<h3 id="x-c-minh">Đã xác minh</h3>
+<p>-34ca local PASS;34ca staging Linux PASS;34ca chạy source runtime trong process test riêng sau mỗi restart PASS.</p>
+<ul>
+<li>Core gameplay contract:714bảng, PASS trên staging.</li>
+</ul>
+<p>-16giá trị rank giữa client/server đúng; các row/item khác trong Activity6RankConfig và713bảng khác giữ nguyên. Mô tả2% được kiểm từ binary.</p>
+<ul>
+<li>Test gồm tất cả nhóm hạng trên serverId1001/1002, biên cuối10/50/100/500/999999, đã settled không cấp lại, score0 không nhận, chưa hết kỳ không phát, savefail và timeout đã commit không nhân đôi.</li>
+<li>Currency: exact200/10.000, boundary199/200,1–3,bonus25%/phần lẻ/relog, sai scene/cũ/locked/expired/replay, đổi cuối kỳ, bán tay và tự động ở cả hai phía ngưỡng.</li>
+<li>Đĩa VPS16file được guard và đối chiếu expected; HTTP nội bộ/công khai của client bin,lang,index khớp hash mới.</li>
+<li>S2 PID15439/restart58, S1 PID17235/restart1386: mỗi game server restart đúng1lần. Bốn process dist/admin/bots giữ nguyên PID/restart. Ready8080/8083 đều200.</li>
+<li>Hậu kiểm lúc10:07:57 GMT+7; số liệu mới hơn nếu có nằm trong <code>release.json</code>.</li>
+<li>Local sync PASS; giữ SystemConfig khác sẵn. Module hiển thị số lượng và bundle main không đổi.</li>
+</ul>
+<h3 id="sha-256">SHA-256</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>File trên VPS</th>
+<th>SHA-256</th>
+</tr></thead><tbody>
+<tr>
+<td>Server config bin</td>
+<td>6e357dfc321709aa0fcd8cdcb36e624522d1aa65fb71abd0e711c3f209d03fd6</td>
+</tr>
+<tr>
+<td>fishingEconomy.json</td>
+<td>e8fca4674398f94c665ba930345e57afd094a04ce45b5aebc99fbc9d1f5127d0</td>
+</tr>
+<tr>
+<td>Client config bin</td>
+<td>9a405adfbd064e74afaf25819b005d826590fdbbed31542f8653b013c6111c7b</td>
+</tr>
+<tr>
+<td>Language bin</td>
+<td>17be1f47ce9de5d3b60c0328688f48dd0c2259be83b2ac5c269884b59fcb7cf4</td>
+</tr>
+<tr>
+<td>index.html</td>
+<td>f69a4f8f17e2f84a65eea77a6e64acbb53621d9a52b642a8cd2ee1935f4fe232</td>
+</tr>
+</tbody></table></div>
+<h3 id="gi-i-h-n">Giới hạn</h3>
+<ul>
+<li>Không đăng nhập/nhận thưởng/bán cá bằng tài khoản thật; test settlement/RNG/save là fixture cấm network trong process riêng.</li>
+<li>Không mở lại native UI ở phiên này; đã kiểm data/formatter thật và HTTP. Phần renderer native là bảnv2 đã kiểm ở phiên trước, không bị sửa.</li>
+<li>Không kiểm nhận thưởng cuối kỳ thật trong tương lai; không tự chạy bù lịch sử. Cờ settled cũ giữ nguyên.</li>
+<li>Chưa xử lý cảnh báo Mongoose startup vì ngoài phạm vi.0fatal marker không đồng nghĩa mọi log toàn hệ thống không có cảnh báo.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Reload game/Ctrl+F5 để nhận token <code>20260907_fishing_rank10_coin2_v1</code>; không cần xóa dữ liệu tài khoản.</li>
+<li>Kiểm bảng thưởng Đại hội câu cá: mọi nhóm hạng dùng số trong bảng trên; mô tả Tiền đồng ghi2%.</li>
+<li>2% là xác suất mỗi lần bán cá đủ điều kiện, không cam kết cứ 50 con chắc chắn rơi 1 lần. Quyền lợi Huyền Vũ và số lượng 1–3 không đổi.</li>
+<li>Nếu có lỗi mới, dùng manifest release hiện tại để kiểm. Không chạy verify release cũ rồi coi hash khác do bản mới là lỗi, không reapply multiplier cũ.</li>
+<li>Khi cần rollback sau phát hành, phải kiểm hash hiện tại, khôi phục đúng5file backup và chỉ nạp lại hai game server. Tool hiện có rollback tự động trong quá trình deploy, không có lệnh rollback hậu kỳ độc lập; không tự rollback khi đã có giao dịch với thiết kế mới.</li>
+</ol></main></body></html>

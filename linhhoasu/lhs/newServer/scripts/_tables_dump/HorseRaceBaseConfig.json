@@ -1,0 +1,128 @@
+{
+  "_table": "HorseRaceBaseConfig",
+  "_rows": 31,
+  "_type": "object",
+  "_firstKeys": "(obj)[initialHandCardQuantity|totalDistance|drawCardDistance|playCardCoolDownTime|insideRankScore]",
+  "_sample": [
+    {
+      "initialHandCardQuantity": 8
+    },
+    {
+      "totalDistance": 4000000000
+    },
+    {
+      "drawCardDistance": [
+        1000000000,
+        2000000000,
+        3000000000
+      ]
+    }
+  ],
+  "data": {
+    "initialHandCardQuantity": 8,
+    "totalDistance": 4000000000,
+    "drawCardDistance": [
+      1000000000,
+      2000000000,
+      3000000000
+    ],
+    "playCardCoolDownTime": 5000,
+    "insideRankScore": [
+      5,
+      3,
+      2,
+      1
+    ],
+    "privilegeDailyProtectTimes": 3,
+    "payId": 11026000,
+    "baseCost": {
+      "id": 415,
+      "count": 500
+    },
+    "rankReturn": [
+      {
+        "id": 415,
+        "count": 250
+      },
+      {
+        "id": 415,
+        "count": 125
+      },
+      {
+        "id": 415,
+        "count": 50
+      }
+    ],
+    "taskIds": [
+      76001,
+      76002,
+      76003,
+      76004,
+      76005
+    ],
+    "firstRequiredScore": 1500,
+    "prohibitedTime": 30,
+    "selectTime": [
+      15,
+      15,
+      5
+    ],
+    "settlementTime": 5,
+    "displayTime": 3,
+    "countdownTime": 3,
+    "rankMinScore": 100,
+    "totalDistanceShow": 800,
+    "matchingTime": [
+      2,
+      5
+    ],
+    "matchingSuccessTime": 3,
+    "tipsLibrary": [
+      20075265,
+      20075266,
+      20075267,
+      20075268,
+      20075269,
+      20075270,
+      20075271,
+      20075272,
+      20075273
+    ],
+    "rankLimitation": 50,
+    "multiPrivilege": {
+      "11026003": 2,
+      "11026004": 3,
+      "11026005": 4,
+      "11026006": 5,
+      "11026007": 10
+    },
+    "shopShow": [
+      11026001,
+      11026002,
+      11026003,
+      11026004,
+      11026005,
+      11026006,
+      11026007
+    ],
+    "cooldownTime": 30,
+    "cooldownRoom": 10,
+    "cooldownLocked": 120,
+    "spectatorLimitation": 5,
+    "smartCardAmount": 3,
+    "danmaku": [
+      20075400,
+      20075401,
+      20075402,
+      20075403,
+      20075404,
+      20075405,
+      20075406,
+      20075407,
+      20075408,
+      20075409,
+      20075410
+    ],
+    "refreshTime": 1
+  }
+}

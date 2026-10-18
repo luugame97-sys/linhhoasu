@@ -1,0 +1,123 @@
+{
+  "_table": "RebornSimBaseConfig",
+  "_rows": 11,
+  "_type": "object",
+  "_firstKeys": "id,count",
+  "_sample": [
+    {
+      "entryRethrow": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ]
+    },
+    {
+      "freeEntryTime": 1
+    },
+    {
+      "openBag": [
+        {
+          "id": 0,
+          "value": 5
+        },
+        {
+          "id": 10,
+          "value": 6
+        },
+        {
+          "id": 20,
+          "value": 7
+        },
+        {
+          "id": 40,
+          "value": 8
+        },
+        {
+          "id": 60,
+          "value": 9
+        },
+        {
+          "id": 80,
+          "value": 10
+        }
+      ]
+    }
+  ],
+  "data": {
+    "entryRethrow": [
+      {
+        "id": 1,
+        "count": 20
+      }
+    ],
+    "freeEntryTime": 1,
+    "openBag": [
+      {
+        "id": 0,
+        "value": 5
+      },
+      {
+        "id": 10,
+        "value": 6
+      },
+      {
+        "id": 20,
+        "value": 7
+      },
+      {
+        "id": 40,
+        "value": 8
+      },
+      {
+        "id": 60,
+        "value": 9
+      },
+      {
+        "id": 80,
+        "value": 10
+      }
+    ],
+    "entryNum": 7,
+    "raceWeight": [
+      {
+        "weight": 1000,
+        "value": 1
+      },
+      {
+        "weight": 1000,
+        "value": 2
+      },
+      {
+        "weight": 1000,
+        "value": 3
+      },
+      {
+        "weight": 1000,
+        "value": 4
+      }
+    ],
+    "renameCost": [
+      {
+        "id": 1,
+        "count": 20
+      }
+    ],
+    "freeRenameTime": 1,
+    "freeTalentPoint": 5,
+    "maxTalentPointPerType": 5,
+    "dailyRewards": [
+      {
+        "id": 4,
+        "count": 5
+      }
+    ],
+    "dailyRewardCount": 1
+  },
+  "dailyRewards": [
+    {
+      "id": 4,
+      "count": 50
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "_table": "TopArenaOpenConfig",
+  "_rows": 7,
+  "_type": "object",
+  "_firstKeys": "id,startTime,endTime,limitCrossId,area,matchMode,promotionStartTime,attrsLockTime,gamePassStartTime,settleTime",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "startTime": 1770609600000,
+        "endTime": 1771171200000,
+        "limitCrossId": [
+          [
+            60001,
+            60018
+          ],
+          [
+            80001,
+            80012
+          ],
+          [
+            70001,
+            70007
+          ],
+          [
+            159001,
+            159005
+          ]
+        ],
+        "area": 1,
+        "matchMode": 512,
+        "promotionStartTime": 1770825600000,
+        "attrsLockTime": 1770955200000,
+        "gamePassStartTime": 1770739200000,
+        "settleTime": 1771071000000
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "startTime": 1776052800000,
+        "endTime": 1776614400000,
+        "limitCrossId": [
+          [
+            60001,
+            60015
+          ],
+          [
+            80001,
+            80015
+          ],
+          [
+            70001,
+            70008
+          ],
+          [
+            159001,
+            159008
+          ]
+        ],
+        "area": 1,
+        "matchMode": 512,
+        "promotionStartTime": 1776268800000,
+        "attrsLockTime": 1776398400000,
+        "gamePassStartTime": 1776182400000,
+        "settleTime": 1776514200000
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "startTime": 1779681600000,
+        "endTime": 1780243200000,
+        "limitCrossId": [
+          [
+            60001,
+            60014
+          ],
+          [
+            80001,
+            80013
+          ],
+          [
+            70001,
+            70009
+          ],
+          [
+            159001,
+            159008
+          ]
+        ],
+        "area": 1,
+        "matchMode": 512,
+        "promotionStartTime": 1779897600000,
+        "attrsLockTime": 1780027200000,
+        "gamePassStartTime": 1779811200000,
+        "settleTime": 1780143000000
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "startTime": 1770609600000,
+      "endTime": 1771171200000,
+      "limitCrossId": [
+        [
+          60001,
+          60018
+        ],
+        [
+          80001,
+          80012
+        ],
+        [
+          70001,
+          70007
+        ],
+        [
+          159001,
+          159005
+        ]
+      ],
+      "area": 1,
+      "matchMode": 512,
+      "promotionStartTime": 1770825600000,
+      "attrsLockTime": 1770955200000,
+      "gamePassStartTime": 1770739200000,
+      "settleTime": 1771071000000
+    },
+    "2": {
+      "id": 2,
+      "startTime": 1776052800000,
+      "endTime": 1776614400000,
+      "limitCrossId": [
+        [
+          60001,
+          60015
+        ],
+        [
+          80001,
+          80015
+        ],
+        [
+          70001,
+          70008
+        ],
+        [
+          159001,
+          159008
+        ]
+      ],
+      "area": 1,
+      "matchMode": 512,
+      "promotionStartTime": 1776268800000,
+      "attrsLockTime": 1776398400000,
+      "gamePassStartTime": 1776182400000,
+      "settleTime": 1776514200000
+    },
+    "3": {
+      "id": 3,
+      "startTime": 1779681600000,
+      "endTime": 1780243200000,
+      "limitCrossId": [
+        [
+          60001,
+          60014
+        ],
+        [
+          80001,
+          80013
+        ],
+        [
+          70001,
+          70009
+        ],
+        [
+          159001,
+          159008
+        ]
+      ],
+      "area": 1,
+      "matchMode": 512,
+      "promotionStartTime": 1779897600000,
+      "attrsLockTime": 1780027200000,
+      "gamePassStartTime": 1779811200000,
+      "settleTime": 1780143000000
+    },
+    "4": {
+      "id": 4,
+      "startTime": 1783310400000,
+      "endTime": 1783872000000,
+      "limitCrossId": [
+        [
+          60001,
+          60017
+        ],
+        [
+          80001,
+          80016
+        ],
+        [
+          70001,
+          70010
+        ],
+        [
+          159001,
+          159007
+        ]
+      ],
+      "area": 1,
+      "matchMode": 512,
+      "promotionStartTime": 1783526400000,
+      "attrsLockTime": 1783656000000,
+      "gamePassStartTime": 1783440000000,
+      "settleTime": 1783771800000
+    },
+    "5": {
+      "id": 5,
+      "startTime": 3403137600000,
+      "endTime": 3403699200000,
+      "limitCrossId": [
+        [
+          6666,
+          7777
+        ],
+        [
+          10001,
+          10001
+        ]
+      ],
+      "area": 1,
+      "matchMode": 512,
+      "promotionStartTime": 3403353600000,
+      "attrsLockTime": 3403483200000,
+      "gamePassStartTime": 3381321600000,
+      "settleTime": 3403599000000
+    },
+    "6": {
+      "id": 6,
+      "startTime": 3403137600000,
+      "endTime": 3403699200000,
+      "limitCrossId": [
+        [
+          6666,
+          7777
+        ],
+        [
+          10001,
+          10001
+        ]
+      ],
+      "area": 2,
+      "matchMode": 512,
+      "promotionStartTime": 3403353600000,
+      "attrsLockTime": 3403483200000,
+      "gamePassStartTime": 3381321600000,
+      "settleTime": 3403599000000
+    },
+    "7": {
+      "id": 7,
+      "startTime": 1784293200000,
+      "endTime": 1784563200000,
+      "limitCrossId": [
+        [
+          6666,
+          7777
+        ],
+        [
+          10001,
+          10001
+        ]
+      ],
+      "area": 1,
+      "matchMode": 512,
+      "promotionStartTime": 1784304000000,
+      "attrsLockTime": 1784433600000,
+      "gamePassStartTime": 1784293200000,
+      "settleTime": 1784549400000
+    }
+  }
+}

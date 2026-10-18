@@ -1,0 +1,14 @@
+'use strict';
+const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),cp=require('child_process');
+const APP='/linhhoasu/lhs/newServer',TASK='/linhhoasu/_ai_workbench/temp/baodian_reset_20261017';
+const {MongoClient}=require(APP+'/node_modules/mongodb'),env=JSON.parse(cp.execFileSync('pm2',['jlist'],{encoding:'utf8',maxBuffer:8e6})).find(n=>n.name==='lhs-s1001').pm2_env;
+const day=require(APP+'/src/services/GameDayService'),moduleFixture={exports:{}};
+vm.runInNewContext(fs.readFileSync(TASK+'/candidate/src/services/TowerDailyResetService.js','utf8'),{module:moduleFixture,require:n=>n==='./GameDayService'?day:require(n),Object,JSON,Date,Number,Math,Error});
+const svc=moduleFixture.exports,clone=x=>JSON.parse(JSON.stringify(x)),DB='qa_tower_daily_20261017_owned',OWNER='tower_daily_20261017';
+(async()=>{const c=new MongoClient(env.MONGO_URI,{serverSelectionTimeoutMS:5000,maxPoolSize:2});let created=false;try{await c.connect();const names=await c.db('admin').admin().listDatabases({nameOnly:true});assert(!names.databases.some(d=>d.name===DB),'QA_DB_EXISTS');const db=c.db(DB);created=true;await db.collection('owner').insertOne({_id:OWNER});const rows=db.collection('players');
+ const p={userId:'QA_ONLY',playerId:'QA_ONLY',swordInfo:{curlayer:800,maxlayer:800,score:3204000,dailyCount:800,slotlist:[{id:101,lv:3}],skills:[1,2],skillCount:1,data:[{uid:1,id:22506,star:5,skills:[{id:106,quality:6,level:2}]}],equippedUid:1},items:{60:10,61:2},currencies:{diamond:100}};await rows.insertOne(clone(p));
+ const result=await Promise.allSettled([svc.recoverLoaded(clone(p),rows),svc.recoverLoaded(clone(p),rows)]);assert.equal(result.filter(r=>r.status==='fulfilled').length,1);assert.equal(result.filter(r=>r.status==='rejected').length,1);
+ const after=await rows.findOne({userId:'QA_ONLY'});assert.equal(after.swordInfo.curlayer,0);assert.equal(after.swordInfo.maxlayer,800);assert.equal(after.swordInfo.towerDay,day.key());assert.deepEqual(after.swordInfo.data,p.swordInfo.data);assert.deepEqual(after.items,p.items);assert.deepEqual(after.currencies,p.currencies);assert.deepEqual(after.swordInfo.slotlist,[]);assert.equal(after.swordInfo.towerResetV1.before.curlayer,800);
+ await svc.recoverLoaded(clone(after),rows);const second=await rows.findOne({userId:'QA_ONLY'});assert.equal(second.swordInfo.towerResetV1.at,after.swordInfo.towerResetV1.at);
+ console.log(JSON.stringify({status:'PASS',realMongo:true,resetWriters:1,idempotent:true,highWaterPreserved:800,mountsPreserved:true,inventoryPreserved:true,productionWrites:0,fixtureDatabase:DB}));
+ }finally{if(created){assert(await c.db(DB).collection('owner').findOne({_id:OWNER}));await c.db(DB).dropDatabase();}await c.close();}})().catch(e=>{console.error(e.stack);process.exitCode=1;});

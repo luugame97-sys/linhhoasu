@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triển khai sửa thưởng và kích hoạt — 05/09/2026</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="b-o-c-o-tri-n-khai-p1-p5-nh-n-th-ng-v-k-ch-ho-t-05-09-2026">Báo cáo triển khai P1–P5 nhận thưởng và kích hoạt — 05/09/2026</h1>
+<h2 id="1-k-t-lu-n-tri-n-khai-ph-n-ki-m-ch-ng-ch-a-ho-n-t-t-to-n-b-p1-p5">1. Kết luận: đã triển khai phần kiểm chứng; chưa hoàn tất toàn bộ P1–P5</h2>
+<p>Đã triển khai <strong>15 file</strong> lên S1/S2, source local được áp dụng cùng các hunk và kiểm nội dung logic khớp. Sửa cấp sở hữu native cho 47 rương và phục hồi 150 đan thưởng tức thời: <strong>197 ID đã phục hồi luồng server</strong>. Bổ sung bảo vệ cho 90151 và placeholder Linh trục, không tự phát thưởng đoán. Không gọi 197 ID là đã hoàn tất mọi trường hợp native UI hoặc duplicate policy.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Nhóm công việc</th>
+<th>Trạng thái</th>
+<th>Bằng chứng/việc còn thiếu</th>
+</tr></thead><tbody>
+<tr>
+<td>P1: cấp thưởng chung/native</td>
+<td>Triển khai; contract + WS E2E đạt trong scope</td>
+<td>470 native asset, 940 lượt grant, 474 case rương. Bí bảo trùng chưa có quy tắc quy đổi gốc; giữ surplus trong unconvertedRewardCopies, chưa coi trùng là hoàn tất</td>
+</tr>
+<tr>
+<td>P2: nạp/code/quyền lợi và recovery</td>
+<td>Triển khai phần grant/recovery; hồi quy đạt</td>
+<td>Mua 4 gói, code/mail/retry/relog S1 PASS; cash crash recovery là fixture, chưa upstream thanh toán thật; toàn bộ 694 gói/specialized entitlement chưa có E2E đầy đủ</td>
+</tr>
+<tr>
+<td>P3: toàn bộ rương/đan</td>
+<td>150 đan phục hồi; 114 ID còn giữ an toàn</td>
+<td>111 random + 90021/90022 + option Linh trục của 90151 còn thiếu nguồn chuẩn</td>
+</tr>
+<tr>
+<td>P4: dữ liệu lịch sử</td>
+<td>Chỉ dry-run; CHƯA COMMIT</td>
+<td>2 người có 5 bản sao native ở túi thường, có record 4 gói; cần duyệt preview và đối chiếu receipt trước chuyển</td>
+</tr>
+<tr>
+<td>P5: triển khai/nghiệm thu</td>
+<td>S1/S2 deployed; WS S1 PASS; native visual BLOCKED</td>
+<td>Native client ở trình duyệt tích hợp dừng 100% với Illegal invocation tại index.html:682; S2 chưa bypass lịch mở để QA</td>
+</tr>
+</tbody></table></div>
+<h2 id="2-thay-i-th-c-hi-n">2. Thay đổi đã thực hiện</h2>
+<ul>
+<li>NativeItemRewardService: nhận diện Elf/Curios/Orb/Connect theo config, grant vào đúng collection. Elf lần đầu unlock; trùng dùng ElfConfig.piece của cùng ID, không nâng quality. Orb tăng subCount; Connect tăng count; không tự mặc/xuất chiến.</li>
+<li>Curios lần đầu unlock; bản sao dư không tự đổi tỷ lệ: bảo toàn trong other_attr_info.curiosInfo.unconvertedRewardCopies. Đây là trạng thái pending conversion, không phải phần thưởng đã dùng được hoàn toàn.</li>
+<li>RewardInfo.items được dùng để hiển thị đúng asset native theo client; RewardSync/mail loại body-ID khỏi delta túi để tránh nhận hai lần.</li>
+<li>Packet được đối chiếu receiver client: Elf 6001 {elfData}; Curios full init 5200; Orb 6401 {data}; Connect 6801 {connects}. Không thêm packet tự đoán như 5209.</li>
+<li>ItemPillService: cap chung -802/-804, config expPillDailyCount/energyPillDailyCount, bonus PrivilegeConfig + CuriosEcho + FashionBath; reset ngày theo lịch server như alchemy. Login/1200 trả useRecords; heartbeat chuyển ngày gửi refresh 1201.</li>
+<li>Phát exp/item4 của đan theo AssetsUseConfig.rewards; giữ 308 đan thuộc tính vĩnh viễn. EXP vẫn theo luật level/stage hiện hữu, chưa thay logic tiêu EXP khi lên cấp.</li>
+<li>Lỗi save item/activity/token làm session phải đọc lại state khi retry, không tiếp tục tin snapshot đã mutate.</li>
+<li>Cash callback lưu fulfillment receipt cùng player reward/entitlement; retry sau lỗi mail/Transaction chỉ finalize từ receipt, không grant lại. Mail phụ dùng eventKey idempotent; amount/user/product mismatch bị reject.</li>
+<li>Placeholder random_connect chưa có pool chuẩn được preflight trước consume của item/mail và resolver nạp. Các gói có loại placeholder này chưa thể hoàn tất mua; không coi chặn là đã sửa gameplay. Luồng callback đã-thu-tiền cho sản phẩm chưa hỗ trợ cần chính sách pending fulfillment riêng trước mở bán.</li>
+</ul>
+<h2 id="3-ki-m-th-ch-y">3. Kiểm thử đã chạy</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Kiểm tra</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>Native theo config</td>
+<td>470 ID × 2 route = 940 lượt; body-ID không nằm trong items</td>
+</tr>
+<tr>
+<td>Toàn bộ case lỗi native trước đó</td>
+<td>474 case / 47 rương PASS đúng ownership và consume</td>
+</tr>
+<tr>
+<td>Đan tức thời</td>
+<td>150/150; thưởng ×count, cap đổi ID, reset ngày, bonus thẻ/Bí bảo/áo tắm</td>
+</tr>
+<tr>
+<td>Receiver native từ bundle client</td>
+<td>4 hàm thật chạy isolated VM PASS; không thay cho UI E2E</td>
+</tr>
+<tr>
+<td>Cash crash/retry</td>
+<td>Lỗi finalize Transaction và Mail, load player mới khi retry; 2 lần save/2 order/2 mail, không grant lại</td>
+</tr>
+<tr>
+<td>Token/cash regression</td>
+<td>11 + 11 checks PASS</td>
+</tr>
+<tr>
+<td>Activity7</td>
+<td>58 assertions PASS; concurrent cash 8 checks PASS</td>
+</tr>
+<tr>
+<td>Ngoại quan</td>
+<td>2.192 ID, 234 assertions PASS</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>714 bảng PASS</td>
+</tr>
+<tr>
+<td>Production WS S1</td>
+<td>Mua 11000015/16/17/20, mở 90027/90202/90214, code+mail+retry, pill shared cap, DB/readback/relog PASS</td>
+</tr>
+<tr>
+<td>Cleanup QA WS</td>
+<td>player/code/mail remaining=0</td>
+</tr>
+<tr>
+<td>Native UI</td>
+<td>Đã thử đăng nhập bằng account QA riêng, dừng ở 100%; chưa PASS</td>
+</tr>
+<tr>
+<td>Cleanup QA UI</td>
+<td>Account và player remaining=0; tab đã đóng</td>
+</tr>
+<tr>
+<td>Full production fixture cuối</td>
+<td>940 row: 821 basic fixture, 114 fail-closed, 5 pending; không coi 821 là native-OK toàn bộ</td>
+</tr>
+</tbody></table></div>
+<p>Lưu ý hồi quy: Activity7 test cũ ban đầu phát sinh background save thiếu mock; đã thêm preload đúng PlayerService cho fixture và chạy lại sạch. Các câu kiểm đan dùng RoleLevelConfig.lv để tách grant khỏi luật EXP khi lên cấp; không dùng test đó làm bằng chứng đổi luật level.</p>
+<h2 id="4-native-ui-blocker-v-ph-m-vi-ch-a-ki-m-ch-ng">4. Native UI blocker và phạm vi chưa kiểm chứng</h2>
+<p>Client log: TypeError: Illegal invocation tại prototype.send (index.html:682) → egret flush → sendCheckAccount. Lỗi xuất hiện trước khi vào game, không phải phản hồi mở rương. Đã xem source: _nativeSend được bind ở egret wrapper, nên chưa có đủ bằng chứng để đoán sửa receiver. Không thay wrapper/client hoặc điều tra input-freeze đang tạm dừng. Chỉ có Codex In-app Browser trong danh sách trình duyệt kết nối ở lượt thử này. Các số PASS ở trên là contract/WS, không che native-visual failure. Cần test trên trình duyệt/client hoạt động hoặc xử lý riêng lỗi đăng nhập này trước khi nghiệm thu UI. Chưa tự bypass cảnh báo hay đăng nhập người thật.</p>
+<h2 id="5-p4-preview-chuy-n-d-li-u-nh-n-sai-ch-a-p-d-ng">5. P4: preview chuyển dữ liệu nhận sai — chưa áp dụng</h2>
+<p>Đọc cả bag, native ownership và purchase records. Hai subject S1 sau đều có record 11000015/16/17/20; toàn bộ ID dưới đây hiện chưa có trong collection native. Không xuất account/name/code.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Subject ẩn danh</th>
+<th>Item túi</th>
+<th>Native trước</th>
+<th>Dự kiến sau khi duyệt</th>
+</tr></thead><tbody>
+<tr>
+<td>db9ea1d9a9dc3d45</td>
+<td>9166 ×1</td>
+<td>Chưa có</td>
+<td>Bỏ đúng lượng túi và grant native tương ứng; lưu preimage + repairId</td>
+</tr>
+<tr>
+<td>db9ea1d9a9dc3d45</td>
+<td>130601 ×1</td>
+<td>Chưa có</td>
+<td>Bỏ đúng lượng túi và grant native tương ứng; lưu preimage + repairId</td>
+</tr>
+<tr>
+<td>db9ea1d9a9dc3d45</td>
+<td>156502 ×1</td>
+<td>Chưa có</td>
+<td>Bỏ đúng lượng túi và grant native tương ứng; lưu preimage + repairId</td>
+</tr>
+<tr>
+<td>db9ea1d9a9dc3d45</td>
+<td>200414 ×1</td>
+<td>Chưa có</td>
+<td>Bỏ đúng lượng túi và grant native tương ứng; lưu preimage + repairId</td>
+</tr>
+<tr>
+<td>a4e820b25e4407de</td>
+<td>130601 ×1</td>
+<td>Chưa có</td>
+<td>Bỏ đúng lượng túi và grant native tương ứng; lưu preimage + repairId</td>
+</tr>
+</tbody></table></div>
+<p>Chưa ghi DB người thật. Nếu duyệt chuyển, cần chặn ghi chồng từ session, backup preimage và commit idempotent; không reroll rương đã mất hoặc bù các giao dịch thiếu ledger. 100139 ×823 vẫn được giữ nguyên, không tự mở.</p>
+<h2 id="6-id-ch-a-x-l-xong">6. ID chưa xử lý xong</h2>
+<p>Danh sách 114 ID: <a href="reward_release_remaining_20260905.txt">reward_release_remaining_20260905.txt</a>. Rương 90151 chỉ option index 1 bị giữ, option 0 vẫn hoạt động. 111 random, 90021/90022 giữ nguyên. 93065/100803 vẫn gián tiếp bị ảnh hưởng qua rương con. Nguồn đã kiểm: config production 714 bảng, scripts/_tables_dump, cây local-run2 và inventory hai archive server.zip/1server.zip. Chưa có bảng drop/pool xác suất chuẩn cho các rương này; không coi config tham chiếu phần thưởng đầu vào là bảng rơi hoàn chỉnh. Không tự chia đều xác suất, nâng quality hay chuyển mảnh thành thân.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>ID</th>
+<th>Tên</th>
+<th>Việc còn thiếu</th>
+</tr></thead><tbody>
+<tr>
+<td>412</td>
+<td>Hộp quà tuyển chọn Tuyết Bảo</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Hộp quà tuyển chọn Tuyết Bảo</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>90021</td>
+<td>Tự chọn Mảnh tinh linh Ưu tú</td>
+<td>Thiếu option gốc; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>90022</td>
+<td>Tự chọn Mảnh yêu tinh tinh xảo</td>
+<td>Thiếu option gốc; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>90151</td>
+<td>Tự chọn hồn ngọc linh trục</td>
+<td>Chọn Linh trục: placeholder chưa có pool gốc; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94301</td>
+<td>Túi Phúc Thiên Cơ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94401</td>
+<td>Cẩm nang Nghê Thường</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94416</td>
+<td>Túi Phúc Trăng tròn</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94418</td>
+<td>Hộp quà phá kén·Nguyên Bảo</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94419</td>
+<td>Hộp quà phá kén·Đùi Gà</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94420</td>
+<td>Hộp quà Phá Kiển · Phù Tốc Độ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94421</td>
+<td>Hộp quà Phá Kén · Baozi</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94422</td>
+<td>Hộp quà Phá Kién - Tiền bạc</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94515</td>
+<td>Dịch Lôi kiếp song phẩm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94701</td>
+<td>Túi phúc Thu Ý Nồng</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94702</td>
+<td>Biểu cảm Công Tử</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94703</td>
+<td>Túi phúc Nguyên Tuế mãn</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94704</td>
+<td>Biểu cảm rắn nhỏ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94705</td>
+<td>Túi Phúc Chúc Xuân</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94706</td>
+<td>Túi Phúc Hoa Mệnh</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94707</td>
+<td>Biểu cảm Pháp Hải</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94708</td>
+<td>Chăm chỉ luyện túi phúc</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94709</td>
+<td>Thiên Diễn Bảo Sảo</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94711</td>
+<td>Tông tình gia lễ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94712</td>
+<td>Biểu cảm Bát Giới</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94713</td>
+<td>Hộp quà kỷ niệm</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94715</td>
+<td>Hộp quà Thu Ái</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94716</td>
+<td>Biểu cảm Chồn Tuyết</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94718</td>
+<td>Khánh lễ Nguyên Chính</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94719</td>
+<td>Huyền Cơ Bảo Sao</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94720</td>
+<td>Biểu cảm tiểu mã</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94721</td>
+<td>Đại lễ năm mới</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94722</td>
+<td>Biểu cảm Bà ngoại</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94724</td>
+<td>Quà ấm Thanh Dương</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94725</td>
+<td>Bạc Tố Ngân Bảo Sào</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94726</td>
+<td>Mộc Lan đoan lễ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94727</td>
+<td>Biểu cảm Cửu U Tước</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94729</td>
+<td>Hộp quà kỷ niệm 2 năm</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94801</td>
+<td>Rương quyết đấu Bang hội</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94802</td>
+<td>Hộp Khởi Nguyên Thần Văn</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94821</td>
+<td>Kho báu Vùng biển tham lam</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94822</td>
+<td>Kho báu Nộ Hải hải vực</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94823</td>
+<td>Kho báu vùng biển Trí Vọng</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94824</td>
+<td>Kho báu hải vực ngạo mạn</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94825</td>
+<td>Kho báu vùng biển Nghi Cụ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94902</td>
+<td>Mảnh Long Châu ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94904</td>
+<td>Mảnh Thần Nông ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94908</td>
+<td>Mảnh tiên thực ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94911</td>
+<td>Mảnh mài ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94923</td>
+<td>Mảnh bắt ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94926</td>
+<td>Mảnh luyện đạo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94929</td>
+<td>Mảnh Thiền luyện ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94932</td>
+<td>Mảnh tu luyện bếp ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94935</td>
+<td>Mảnh đan luyện ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94938</td>
+<td>Ngẫu nhiên nhận mảnh cỏ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>94941</td>
+<td>Mảnh phong thình ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100019</td>
+<td>Xích Viêm Tường Long</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100020</td>
+<td>Mảnh yêu linh ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100021</td>
+<td>Mảnh yêu linh ưu tú</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100022</td>
+<td>Mảnh tinh linh Tinh xảo</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100023</td>
+<td>Mảnh yêu tinh Hiếm</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100024</td>
+<td>Mảnh tinh linh Sử Thi</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100025</td>
+<td>Mảnh yêu linh Truyền Thuyết</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100026</td>
+<td>Mảnh Yêu linh cao cấp ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100030</td>
+<td>Yêu linh ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100031</td>
+<td>Yêu linh Ưu tú ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100032</td>
+<td>Ngẫu nhiên Tinh linh tinh xảo</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100033</td>
+<td>Yêu linh hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100034</td>
+<td>Yêu linh sử thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100035</td>
+<td>Yêu linh Truyền Thuyết ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100036</td>
+<td>Yêu linh cao cấp ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100040</td>
+<td>Thần binh ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100060</td>
+<td>Thần binh đồng hành ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100061</td>
+<td>Thần binh đồng hành hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100062</td>
+<td>Thần binh đồng hành Sử Thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100063</td>
+<td>Ngẫu nhiên Thần binh đồng hành Truyền Thuyết</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100139</td>
+<td>Mảnh huyết mạch ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100160</td>
+<td>Mảnh bí bảo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100170</td>
+<td>Bí bảo Đồng ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100171</td>
+<td>Mảnh bí bảo đồng tinh xảo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100172</td>
+<td>Bí bảo đồng hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100173</td>
+<td>Bí bảo Đồng Sử Thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100174</td>
+<td>Bí bảo Truyền Thuyết ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100185</td>
+<td>Mảnh bí bảo Đồng ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100190</td>
+<td>Mảnh bí bảo hải trân ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100200</td>
+<td>Bí bảo hải trân ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100201</td>
+<td>Bí bảo hải trân phẩm chất Hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100202</td>
+<td>Bí bảo hải trân quý hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100203</td>
+<td>Bí bảo hải trân sử thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100230</td>
+<td>Bí bảo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100231</td>
+<td>Bí bảo tinh xảo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100232</td>
+<td>Bí bảo hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100233</td>
+<td>Bí bảo Sử Thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100250</td>
+<td>Bí bảo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100251</td>
+<td>Bí bảo tinh xảo ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100252</td>
+<td>Bí bảo hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100253</td>
+<td>Bí bảo Sử Thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100501</td>
+<td>Thần văn Hiếm ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100502</td>
+<td>Thần văn Sử Thi ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100503</td>
+<td>Ngẫu nhiên Thần văn Truyền Thuyết</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100641</td>
+<td>Tài nguyên ngẫu nhiên 30 phút</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100642</td>
+<td>Tài nguyên ngẫu nhiên 2 giờ</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100643</td>
+<td>8 giờ tài nguyên ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100701</td>
+<td>Ngẫu nhiên 1 cấp Linh Trục</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100702</td>
+<td>Tinh trục cấp 2 ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100703</td>
+<td>Trục linh cấp 3 ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100704</td>
+<td>Linh Xu cấp 4 ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100705</td>
+<td>Tinh linh 5 cấp ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100706</td>
+<td>Linh trục cấp 6 ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100707</td>
+<td>Linh trục cấp 7 ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100708</td>
+<td>Linh trục 8 cấp ngẫu nhiên</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>100709</td>
+<td>Ngẫu nhiên linh trục cấp 9</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>101000</td>
+<td>Rương tiêu diệt Yêu Tôn tầng 1</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+<tr>
+<td>101310</td>
+<td>Cẩm nang phòng thủ tranh phong</td>
+<td>Pool chưa xác minh; giữ nguyên rương</td>
+</tr>
+</tbody></table></div>
+<h2 id="7-deploy-backup-v-an-to-n">7. Deploy, backup và an toàn</h2>
+<ul>
+<li>Production backup: /linhhoasu/_ai_workbench/backups/reward_release_20260905_063510. Có preimage của 13 file cũ; 2 service mới có rollback xóa đúng đường dẫn.</li>
+<li>Staging đã kiểm: /linhhoasu/_ai_workbench/temp/reward_release_20260905_063510. Không đụng dist/admin/DB process.</li>
+<li>S1/S2 chung source: dừng cả hai, copy đúng file, khởi động S1 và QA rồi khởi động S2. Không rollback đã xảy ra trong deploy thành công.</li>
+<li>Postcheck hash 15/15 khớp, ready S1/S2 HTTP 200, PM2 6/6 online. Bot reconnect tăng dần sau restart; không báo 580/580 trước khi đủ.</li>
+<li>Health snapshot cuối: [{"status":"ok","real":580,"virtual":580,"totalSlots":2466,"multiplier":2,"invalid":0},{"status":"ok","real":580,"virtual":580,"totalSlots":2466,"multiplier":2,"invalid":0}].</li>
+<li>Local source được áp dụng patch theo baseline production, không chép đè toàn cây; 15 file nội dung khớp candidate khi chuẩn hóa CRLF.</li>
+<li>Backup local source: _ai_workbench/backups/reward_release_local_pre_20260905/; production baseline candidate: _ai_workbench/temp/reward_release_20260905/baseline.json.</li>
+<li>Không sửa client/config bin, không restart Nginx/Mongo/Redis, không commit repair/bù người thật.</li>
+</ul>
+<h2 id="8-file-source-thay-i">8. File source thay đổi</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>File</th>
+<th>SHA-256 production</th>
+</tr></thead><tbody>
+<tr>
+<td>src/handlers/activity.js</td>
+<td>33e63f8f259dc6b58ac4a0cc3fb3aa5c384230a2d2623d07227b15b777ca7536</td>
+</tr>
+<tr>
+<td>src/handlers/artifact.js</td>
+<td>790d9d5c2e7f7d97bb68274b31454a82d3398834c021c28f79f963e18a08f7e8</td>
+</tr>
+<tr>
+<td>src/handlers/basic.js</td>
+<td>ad753ff0daaf2033ad7f8b7a86302c65fd0c85eeb5f1e96d93984b07dc9f3001</td>
+</tr>
+<tr>
+<td>src/handlers/compat.js</td>
+<td>1281a70597613cb05f5ad3fa18eb6d1c4298a3016744f3785100c40b24ab6cfe</td>
+</tr>
+<tr>
+<td>src/handlers/curios.js</td>
+<td>cca0e2dfe124b34183ee3b07e48401498c3d204fc6bac8e76d8631cfb47d5753</td>
+</tr>
+<tr>
+<td>src/handlers/elf.js</td>
+<td>11180bfd882a7c8047352c4d321897cbd5137c932cc37abb322b9134874602c8</td>
+</tr>
+<tr>
+<td>src/handlers/item.js</td>
+<td>effea17b9201aaa00aeb8b90101ecd1e00266e9643b191b04f0172f4711c7abf</td>
+</tr>
+<tr>
+<td>src/handlers/mail.js</td>
+<td>e1ec936b73a7fcd6c284efed59b7f8b5f7134c01e068e4a0685bdf7d85cc6ab2</td>
+</tr>
+<tr>
+<td>src/handlers/recharge.js</td>
+<td>43c3fc0eb114d688aea1f64edaa159a0c047c1fb70c1a86be565602864e51ae5</td>
+</tr>
+<tr>
+<td>src/handlers/valhalla-formation.js</td>
+<td>9f0186a6d1602b40b51987258af8868bfec62c28aa879f755e2f5849ad9a6590</td>
+</tr>
+<tr>
+<td>src/services/ItemPillService.js</td>
+<td>3690e7f35a80ff6225dd5d4a749fe54c51adc2f90e937c6026165cc7905204dc</td>
+</tr>
+<tr>
+<td>src/services/NativeItemRewardService.js</td>
+<td>12ef3f83e4e26cf0e3b0ec4d79330b3ee832e8fb5a139c51997b5de328bfdf3a</td>
+</tr>
+<tr>
+<td>src/services/RechargeRewardResolver.js</td>
+<td>8ef5e74a014f9858a590b2580ebac946064246d199d99988d33e9ae14365de9f</td>
+</tr>
+<tr>
+<td>src/services/RewardGrantService.js</td>
+<td>f25929821bbc643d358b8d5f398b1d0f67113439249895e5a58ba91f38d3b6e6</td>
+</tr>
+<tr>
+<td>src/services/RewardSync.js</td>
+<td>c9e327f4caf68b69764c39c796874a6db8c8eca3403dfe6550a99262c2247dcd</td>
+</tr>
+</tbody></table></div>
+<h2 id="9-l-i-tri-n-khai-test-v-ch-ng-l-p">9. Lỗi triển khai/test và chống lặp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Xử lý</th>
+<th>Tránh lặp</th>
+</tr></thead><tbody>
+<tr>
+<td>VPS thiếu acorn</td>
+<td>Dependency QA chỉ có local</td>
+<td>Upload parser vào staging/tools, không cài vào app production</td>
+<td>Kiểm runtime dependencies trước test</td>
+</tr>
+<tr>
+<td>Trích client function bị kéo cả comma expression</td>
+<td>parseExpressionAt trả SequenceExpression</td>
+<td>Chọn FunctionExpression đầu tiên rồi kiểm node type</td>
+<td>Không eval cả chuỗi minify</td>
+</tr>
+<tr>
+<td>Test exp sai kỳ vọng</td>
+<td>Fixture vượt ngưỡng level, RoleLevelConfig dùng lv</td>
+<td>Kiểm dưới ngưỡng rồi giữ test logic level riêng</td>
+<td>Không đổi logic game chỉ để test xanh</td>
+</tr>
+<tr>
+<td>Cash regression lệch mã lỗi</td>
+<td>Thêm mismatch guard trả mã mới cho amount</td>
+<td>Giữ AMOUNT_MISMATCH contract</td>
+<td>Test error contract trước deploy</td>
+</tr>
+<tr>
+<td>Activity7 test phát sinh save timeout</td>
+<td>Fixture chưa mock savePlayer</td>
+<td>Preload stub memory và chạy lại</td>
+<td>Fixture không kết nối DB</td>
+</tr>
+<tr>
+<td>UI dừng 100%</td>
+<td>Illegal invocation ở WebSocket wrapper</td>
+<td>Ghi blocker, cleanup exact QA; chưa sửa client</td>
+<td>Không gọi WS PASS là UI PASS</td>
+</tr>
+</tbody></table></div>
+<h2 id="10-b-c-ti-p-theo-ho-n-t-t">10. Bước tiếp theo để hoàn tất</h2>
+<ol>
+<li>Duyệt preview 2 subject / 5 bản sao để chuyển đúng native, không bù trùng; hiện chưa sửa dữ liệu cũ.</li>
+<li>Cung cấp/định vị bảng drop chuẩn cho 114 ID pending và quy tắc Curios duplicate; triển khai từng họ sau đủ contract.</li>
+<li>Kiểm native UI trên trình duyệt/client hoạt động; mở khóa nghiệm thu S2 sau giờ mở, không bypass.</li>
+<li>Khép kín toàn bộ 694 payId, specialized entitlement, quota code đồng thời đa process và paid callback pending fulfillment; các phần này chưa đủ acceptance để gọi P2 hoàn tất.</li>
+<li>Reconcile cash receipt/log và cleanup retention có thiết kế; không xóa receipt chống trùng tùy tiện.</li>
+</ol></main></body></html>

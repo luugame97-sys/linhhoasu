@@ -1,0 +1,1438 @@
+{
+  "_table": "DungeonFloorConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "id,map,bossRefresh,bossAttackRewards,bossKillRewards,bloodLineQuality,portal,effectPosition,floorName,mapLabelPosition,mapIconPosition,miniMapRes,bigMapRes",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "map": 20001,
+        "bossRefresh": {
+          "1": [
+            401301
+          ],
+          "2": [
+            401302
+          ],
+          "3": [
+            401303
+          ],
+          "4": [
+            401304
+          ],
+          "5": [
+            401305
+          ],
+          "6": [
+            401301,
+            401302,
+            401303,
+            401304,
+            401305
+          ],
+          "7": [
+            401301,
+            401302,
+            401303,
+            401304,
+            401305
+          ]
+        },
+        "bossAttackRewards": [
+          {
+            "id": 92,
+            "count": 10
+          },
+          {
+            "id": 100130,
+            "count": 1
+          },
+          {
+            "id": 94,
+            "count": 100
+          }
+        ],
+        "bossKillRewards": [
+          {
+            "id": 101000,
+            "count": 1
+          }
+        ],
+        "bloodLineQuality": 3,
+        "portal": [
+          {
+            "x": 3988,
+            "y": 3163,
+            "res": "sp_ui_jingjuegucheng_csm"
+          }
+        ],
+        "effectPosition": [
+          {
+            "x": 2211,
+            "y": 3453,
+            "res": "sp_ui_jingjuegucheng_cjtx_a"
+          },
+          {
+            "x": 1374,
+            "y": 3828,
+            "res": "sp_ui_jingjuegucheng_cjtx_a"
+          },
+          {
+            "x": 6015,
+            "y": 1757,
+            "res": "sp_ui_jingjuegucheng_cjtx_c"
+          },
+          {
+            "x": 5663,
+            "y": 2340,
+            "res": "sp_ui_jingjuegucheng_cjtx_a"
+          },
+          {
+            "x": 1545,
+            "y": 2204,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 1859,
+            "y": 2039,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 2651,
+            "y": 1286,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 3014,
+            "y": 1070,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5000,
+            "y": 1154,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 4909,
+            "y": 1207,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5262,
+            "y": 1266,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5167,
+            "y": 1307,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 6885,
+            "y": 2880,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 6730,
+            "y": 2693,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 6401,
+            "y": 2927,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5757,
+            "y": 3315,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5935,
+            "y": 3871,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 6350,
+            "y": 4099,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5935,
+            "y": 4351,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5525,
+            "y": 4113,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 4716,
+            "y": 3964,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5935,
+            "y": 3871,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 6350,
+            "y": 4099,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 5935,
+            "y": 4351,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 5525,
+            "y": 4113,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 5255,
+            "y": 3485,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 5224,
+            "y": 3043,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 4584,
+            "y": 2670,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 4494,
+            "y": 3494,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 4221,
+            "y": 3680,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 3530,
+            "y": 3470,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 3919,
+            "y": 3725,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 3907,
+            "y": 3911,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 3555,
+            "y": 4109,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 2995,
+            "y": 3242,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 2960,
+            "y": 2889,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 3509,
+            "y": 2573,
+            "res": "sp_ui_jingjuegucheng_cjtx_b"
+          },
+          {
+            "x": 3088,
+            "y": 2816,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3300,
+            "y": 2689,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3049,
+            "y": 3461,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3213,
+            "y": 3554,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4104,
+            "y": 3938,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4819,
+            "y": 3526,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4979,
+            "y": 3437,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4844,
+            "y": 2810,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 5043,
+            "y": 2923,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          }
+        ],
+        "floorName": 30037101,
+        "mapLabelPosition": [
+          {
+            "x": 1956,
+            "y": 2426,
+            "label": 30037201
+          },
+          {
+            "x": 2068,
+            "y": 3966,
+            "label": 30037202
+          },
+          {
+            "x": 5808,
+            "y": 2407,
+            "label": 30037203
+          },
+          {
+            "x": 5741,
+            "y": 4171,
+            "label": 30037204
+          },
+          {
+            "x": 3797,
+            "y": 5193,
+            "label": 30037205
+          },
+          {
+            "x": 3988,
+            "y": 3167,
+            "label": 30037206
+          },
+          {
+            "x": 3966,
+            "y": 1326,
+            "label": 30037207
+          }
+        ],
+        "mapIconPosition": [
+          {
+            "x": 1956,
+            "y": 2426,
+            "res": "head_10401"
+          },
+          {
+            "x": 2068,
+            "y": 3966,
+            "res": "head_10402"
+          },
+          {
+            "x": 5808,
+            "y": 2407,
+            "res": "head_10403"
+          },
+          {
+            "x": 5741,
+            "y": 4171,
+            "res": "head_10404"
+          },
+          {
+            "x": 3797,
+            "y": 5193,
+            "res": "head_10405"
+          }
+        ],
+        "miniMapRes": "minimap_dungeon_001",
+        "bigMapRes": "syt_bm_dt01"
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "map": 20002,
+        "portal": [
+          {
+            "x": 4213,
+            "y": 3226,
+            "res": "sp_ui_jingjuegucheng_csm"
+          }
+        ],
+        "effectPosition": [
+          {
+            "x": 4623,
+            "y": 3811,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 5126,
+            "y": 3517,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 5490,
+            "y": 3722,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 4419,
+            "y": 4666,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 3982,
+            "y": 4952,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 3607,
+            "y": 5067,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 2046,
+            "y": 3153,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 2597,
+            "y": 3521,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 3787,
+            "y": 4297,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 6657,
+            "y": 4287,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 6751,
+            "y": 4341,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 5082,
+            "y": 1174,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 2501,
+            "y": 3458,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 2538,
+            "y": 3479,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 1469,
+            "y": 4516,
+            "res": "sp_ui_jingjuegucheng_cjtx_e"
+          },
+          {
+            "x": 4989,
+            "y": 2939,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4864,
+            "y": 2868,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 5050,
+            "y": 3671,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4945,
+            "y": 3734,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4849,
+            "y": 3789,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4759,
+            "y": 3847,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3459,
+            "y": 3641,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3319,
+            "y": 3563,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3418,
+            "y": 2954,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4242,
+            "y": 2522,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4088,
+            "y": 2539,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 6352,
+            "y": 2599,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 6058,
+            "y": 2113,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 6277,
+            "y": 2119,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 7068,
+            "y": 2348,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4967,
+            "y": 4105,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5592,
+            "y": 3880,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5692,
+            "y": 3937,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 4600,
+            "y": 4552,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 6672,
+            "y": 4355,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5211,
+            "y": 3174,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5180,
+            "y": 1316,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 5229,
+            "y": 1286,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 4892,
+            "y": 1174,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 4939,
+            "y": 1149,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 4563,
+            "y": 997,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 3803,
+            "y": 1249,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 3957,
+            "y": 1157,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 3498,
+            "y": 1418,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 1995,
+            "y": 1915,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 1488,
+            "y": 2230,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 1123,
+            "y": 2491,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 1083,
+            "y": 3241,
+            "res": "sp_ui_jingjuegucheng_cjtx_d"
+          },
+          {
+            "x": 6617,
+            "y": 2160,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 6923,
+            "y": 2493,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 6429,
+            "y": 2364,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4817,
+            "y": 1074,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4479,
+            "y": 870,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 4174,
+            "y": 734,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          },
+          {
+            "x": 3938,
+            "y": 839,
+            "res": "sp_ui_jingjuegucheng_aqq"
+          }
+        ],
+        "floorName": 30037102,
+        "mapLabelPosition": [
+          {
+            "x": 5379,
+            "y": 4487,
+            "label": 30037208
+          },
+          {
+            "x": 4315,
+            "y": 1692,
+            "label": 30037209
+          },
+          {
+            "x": 6483,
+            "y": 2755,
+            "label": 30037210
+          },
+          {
+            "x": 1833,
+            "y": 2907,
+            "label": 30037211
+          },
+          {
+            "x": 2320,
+            "y": 4356,
+            "label": 30037212
+          },
+          {
+            "x": 4376,
+            "y": 3302,
+            "label": 30037206
+          }
+        ],
+        "mapIconPosition": [
+          {
+            "x": 5379,
+            "y": 4487,
+            "res": "head_210301"
+          },
+          {
+            "x": 4315,
+            "y": 1692,
+            "res": "head_220301"
+          },
+          {
+            "x": 6483,
+            "y": 2755,
+            "res": "head_230301"
+          },
+          {
+            "x": 1833,
+            "y": 2907,
+            "res": "head_240301"
+          },
+          {
+            "x": 2320,
+            "y": 4356,
+            "res": "head_250301"
+          }
+        ],
+        "miniMapRes": "minimap_dungeon_002",
+        "bigMapRes": "syt_bm_dt02"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "map": 20001,
+      "bossRefresh": {
+        "1": [
+          401301
+        ],
+        "2": [
+          401302
+        ],
+        "3": [
+          401303
+        ],
+        "4": [
+          401304
+        ],
+        "5": [
+          401305
+        ],
+        "6": [
+          401301,
+          401302,
+          401303,
+          401304,
+          401305
+        ],
+        "7": [
+          401301,
+          401302,
+          401303,
+          401304,
+          401305
+        ]
+      },
+      "bossAttackRewards": [
+        {
+          "id": 92,
+          "count": 10
+        },
+        {
+          "id": 100130,
+          "count": 1
+        },
+        {
+          "id": 94,
+          "count": 100
+        }
+      ],
+      "bossKillRewards": [
+        {
+          "id": 101000,
+          "count": 1
+        }
+      ],
+      "bloodLineQuality": 3,
+      "portal": [
+        {
+          "x": 3988,
+          "y": 3163,
+          "res": "sp_ui_jingjuegucheng_csm"
+        }
+      ],
+      "effectPosition": [
+        {
+          "x": 2211,
+          "y": 3453,
+          "res": "sp_ui_jingjuegucheng_cjtx_a"
+        },
+        {
+          "x": 1374,
+          "y": 3828,
+          "res": "sp_ui_jingjuegucheng_cjtx_a"
+        },
+        {
+          "x": 6015,
+          "y": 1757,
+          "res": "sp_ui_jingjuegucheng_cjtx_c"
+        },
+        {
+          "x": 5663,
+          "y": 2340,
+          "res": "sp_ui_jingjuegucheng_cjtx_a"
+        },
+        {
+          "x": 1545,
+          "y": 2204,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 1859,
+          "y": 2039,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 2651,
+          "y": 1286,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 3014,
+          "y": 1070,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5000,
+          "y": 1154,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 4909,
+          "y": 1207,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5262,
+          "y": 1266,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5167,
+          "y": 1307,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 6885,
+          "y": 2880,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 6730,
+          "y": 2693,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 6401,
+          "y": 2927,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5757,
+          "y": 3315,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5935,
+          "y": 3871,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 6350,
+          "y": 4099,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5935,
+          "y": 4351,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5525,
+          "y": 4113,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 4716,
+          "y": 3964,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5935,
+          "y": 3871,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 6350,
+          "y": 4099,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 5935,
+          "y": 4351,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 5525,
+          "y": 4113,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 5255,
+          "y": 3485,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 5224,
+          "y": 3043,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 4584,
+          "y": 2670,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 4494,
+          "y": 3494,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 4221,
+          "y": 3680,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 3530,
+          "y": 3470,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 3919,
+          "y": 3725,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 3907,
+          "y": 3911,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 3555,
+          "y": 4109,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 2995,
+          "y": 3242,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 2960,
+          "y": 2889,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 3509,
+          "y": 2573,
+          "res": "sp_ui_jingjuegucheng_cjtx_b"
+        },
+        {
+          "x": 3088,
+          "y": 2816,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3300,
+          "y": 2689,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3049,
+          "y": 3461,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3213,
+          "y": 3554,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4104,
+          "y": 3938,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4819,
+          "y": 3526,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4979,
+          "y": 3437,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4844,
+          "y": 2810,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 5043,
+          "y": 2923,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        }
+      ],
+      "floorName": 30037101,
+      "mapLabelPosition": [
+        {
+          "x": 1956,
+          "y": 2426,
+          "label": 30037201
+        },
+        {
+          "x": 2068,
+          "y": 3966,
+          "label": 30037202
+        },
+        {
+          "x": 5808,
+          "y": 2407,
+          "label": 30037203
+        },
+        {
+          "x": 5741,
+          "y": 4171,
+          "label": 30037204
+        },
+        {
+          "x": 3797,
+          "y": 5193,
+          "label": 30037205
+        },
+        {
+          "x": 3988,
+          "y": 3167,
+          "label": 30037206
+        },
+        {
+          "x": 3966,
+          "y": 1326,
+          "label": 30037207
+        }
+      ],
+      "mapIconPosition": [
+        {
+          "x": 1956,
+          "y": 2426,
+          "res": "head_10401"
+        },
+        {
+          "x": 2068,
+          "y": 3966,
+          "res": "head_10402"
+        },
+        {
+          "x": 5808,
+          "y": 2407,
+          "res": "head_10403"
+        },
+        {
+          "x": 5741,
+          "y": 4171,
+          "res": "head_10404"
+        },
+        {
+          "x": 3797,
+          "y": 5193,
+          "res": "head_10405"
+        }
+      ],
+      "miniMapRes": "minimap_dungeon_001",
+      "bigMapRes": "syt_bm_dt01"
+    },
+    "2": {
+      "id": 2,
+      "map": 20002,
+      "portal": [
+        {
+          "x": 4213,
+          "y": 3226,
+          "res": "sp_ui_jingjuegucheng_csm"
+        }
+      ],
+      "effectPosition": [
+        {
+          "x": 4623,
+          "y": 3811,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 5126,
+          "y": 3517,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 5490,
+          "y": 3722,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 4419,
+          "y": 4666,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 3982,
+          "y": 4952,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 3607,
+          "y": 5067,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 2046,
+          "y": 3153,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 2597,
+          "y": 3521,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 3787,
+          "y": 4297,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 6657,
+          "y": 4287,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 6751,
+          "y": 4341,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 5082,
+          "y": 1174,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 2501,
+          "y": 3458,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 2538,
+          "y": 3479,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 1469,
+          "y": 4516,
+          "res": "sp_ui_jingjuegucheng_cjtx_e"
+        },
+        {
+          "x": 4989,
+          "y": 2939,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4864,
+          "y": 2868,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 5050,
+          "y": 3671,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4945,
+          "y": 3734,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4849,
+          "y": 3789,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4759,
+          "y": 3847,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3459,
+          "y": 3641,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3319,
+          "y": 3563,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3418,
+          "y": 2954,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4242,
+          "y": 2522,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4088,
+          "y": 2539,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 6352,
+          "y": 2599,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 6058,
+          "y": 2113,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 6277,
+          "y": 2119,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 7068,
+          "y": 2348,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4967,
+          "y": 4105,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5592,
+          "y": 3880,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5692,
+          "y": 3937,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 4600,
+          "y": 4552,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 6672,
+          "y": 4355,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5211,
+          "y": 3174,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5180,
+          "y": 1316,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 5229,
+          "y": 1286,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 4892,
+          "y": 1174,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 4939,
+          "y": 1149,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 4563,
+          "y": 997,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 3803,
+          "y": 1249,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 3957,
+          "y": 1157,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 3498,
+          "y": 1418,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 1995,
+          "y": 1915,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 1488,
+          "y": 2230,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 1123,
+          "y": 2491,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 1083,
+          "y": 3241,
+          "res": "sp_ui_jingjuegucheng_cjtx_d"
+        },
+        {
+          "x": 6617,
+          "y": 2160,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 6923,
+          "y": 2493,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 6429,
+          "y": 2364,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4817,
+          "y": 1074,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4479,
+          "y": 870,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 4174,
+          "y": 734,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        },
+        {
+          "x": 3938,
+          "y": 839,
+          "res": "sp_ui_jingjuegucheng_aqq"
+        }
+      ],
+      "floorName": 30037102,
+      "mapLabelPosition": [
+        {
+          "x": 5379,
+          "y": 4487,
+          "label": 30037208
+        },
+        {
+          "x": 4315,
+          "y": 1692,
+          "label": 30037209
+        },
+        {
+          "x": 6483,
+          "y": 2755,
+          "label": 30037210
+        },
+        {
+          "x": 1833,
+          "y": 2907,
+          "label": 30037211
+        },
+        {
+          "x": 2320,
+          "y": 4356,
+          "label": 30037212
+        },
+        {
+          "x": 4376,
+          "y": 3302,
+          "label": 30037206
+        }
+      ],
+      "mapIconPosition": [
+        {
+          "x": 5379,
+          "y": 4487,
+          "res": "head_210301"
+        },
+        {
+          "x": 4315,
+          "y": 1692,
+          "res": "head_220301"
+        },
+        {
+          "x": 6483,
+          "y": 2755,
+          "res": "head_230301"
+        },
+        {
+          "x": 1833,
+          "y": 2907,
+          "res": "head_240301"
+        },
+        {
+          "x": 2320,
+          "y": 4356,
+          "res": "head_250301"
+        }
+      ],
+      "miniMapRes": "minimap_dungeon_002",
+      "bigMapRes": "syt_bm_dt02"
+    }
+  }
+}

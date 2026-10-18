@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hồn ngọc cấp 5 — vì sao không có nút sử dụng</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="item-h-n-ng-c-c-p-5-kh-ng-c-n-t-s-d-ng">Item Hồn ngọc cấp 5 không có nút sử dụng</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Chẩn đoán ảnh người dùng, đối chiếu config/client và đọc tồn kho MongoDB; không sửa source hoặc dữ liệu game.</li>
+<li>Xác nhận lúc 08:11:33 UTC: nhân vật nicky ở S1 đang có <strong>100095 ×30</strong>, không có 100085 trong projection tồn kho. Nhân vật đã lên cấp110 tại thời điểm đọc; ảnh là thời điểm trước đó.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Tool read-only: <code>_ai_workbench/tools/check_nicky_gem_item_20260905.py</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/nicky_gem_item_diagnosis_20260905.json</code>.</li>
+<li>Báo cáo MD/HTML này và cập nhật session_report.md/.html. Không sửa game/DB, không consume hoặc restart.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Item</th>
+<th>Cấu hình</th>
+<th>Kết quả</th>
+</tr></thead><tbody>
+<tr>
+<td>100085</td>
+<td>type1,useType102,có AssetsUseConfig</td>
+<td>Rương usable, có nút sử dụng</td>
+</tr>
+<tr>
+<td>100095</td>
+<td>type99,param1075,không useType,không AssetsUseConfig</td>
+<td>Placeholder thưởng cấp5, không có nút sử dụng</td>
+</tr>
+</tbody></table></div>
+<p>Hai ID trùng tên/icon. Ảnh có mô tả ngắn “Nhận ngẫu nhiên 1 hồn ngọc cấp 5” đúng100095;100085 có thêm câu dùng trong túi. Client chỉ cho sử dụng khi có cấu hình useType/AssetsUseConfig.</p>
+<p>100095 phải được chuyển thành Hồn ngọc native khi cấp thưởng. Bản router mới xử lý các lần cấp qua router đã sửa, không tự chuyển placeholder đã tồn tại trong bag. Chưa xác định30 cái này được nhận trước deploy hay từ một luồng hiện vẫn bỏ qua router; không quy nguyên nhân lịch sử khi chưa có receipt.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Không nhận diện item chỉ bằng tên/icon. Phải đối chiếu ID và mô tả/loại/config sử dụng.</li>
+<li>Fix cấp mới không tự repair inventory cũ; kiểm test phải phân biệt hai đối tượng.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Đã chứng minh nguyên nhân không có nút:100095 không phải rươngusable100085. Đây không phải do thiếu cấp/VIP hay lỗi nút.</li>
+</ul>
+<p>-30 item giữ nguyên. Không thêm nút bằng client hoặc bù tự động.</p>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ul>
+<li>Đối chiếu nguồn phát100095 và quyền sở hữu native; sửa luồng còn bypass router nếu có.</li>
+<li>Chuyển/resolve đúng30placeholder theo preview được duyệt, hoặc thống nhất đổi1:1 sang100085; bảo đảm không phát hai lần. Chưa áp dụng trong phiên chẩn đoán này.</li>
+</ul></main></body></html>

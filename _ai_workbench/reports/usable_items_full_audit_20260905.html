@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audit toàn bộ item và rương - Linh Họa Sư</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="audit-to-n-b-item-s-d-ng-v-r-ng-05-09-2026">Audit toàn bộ item sử dụng và rương — 05/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Quét đúng source/config production, không kết nối database trong fixture: <strong>940 item có <code>AssetsUseConfig</code></strong>.</li>
+<li>Với rương chọn, đã chạy từng lựa chọn riêng; tổng ca test lớn hơn số item.</li>
+<li>Kết quả: <strong>664 item PASS</strong>, <strong>271 item lỗi code đã xác nhận</strong>, <strong>5 item cần test native/orphan config</strong>.</li>
+<li>Nhóm lỗi: 116 rương ngẫu nhiên bị trừ nhưng thưởng rỗng; 150 item type 103 có reward cấu hình nhưng handler bỏ qua; 3 rương tự chọn phát toàn bộ; 2 rương tự chọn không có option.</li>
+<li>Audit runtime Mongo chỉ đọc, ẩn danh; không mở rương trên người chơi thật, không sửa production.</li>
+</ul>
+<h2 id="2-ph-m-vi-theo-usetype">2. Phạm vi theo useType</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>useType</th>
+<th>Số item</th>
+<th>Ý nghĩa chính</th>
+</tr></thead><tbody>
+<tr>
+<td>101</td>
+<td>246</td>
+<td>Rương tự chọn chuẩn</td>
+</tr>
+<tr>
+<td>102</td>
+<td>153</td>
+<td>Rương/túi ngẫu nhiên</td>
+</tr>
+<tr>
+<td>103</td>
+<td>458</td>
+<td>Đan/đồ ăn hoặc vật phẩm cộng thuộc tính lâu dài</td>
+</tr>
+<tr>
+<td>104</td>
+<td>2</td>
+<td>Rương thần binh cố định thuộc tính</td>
+</tr>
+<tr>
+<td>105</td>
+<td>59</td>
+<td>Bộ thời trang</td>
+</tr>
+<tr>
+<td>106</td>
+<td>1</td>
+<td>Rương thần binh tối thượng</td>
+</tr>
+<tr>
+<td>107</td>
+<td>12</td>
+<td>Gói tài nguyên công trình</td>
+</tr>
+<tr>
+<td>108</td>
+<td>1</td>
+<td>Luồng client đặc biệt Thất Tịch</td>
+</tr>
+<tr>
+<td>110</td>
+<td>8</td>
+<td>Rương chọn hệ Old Trek/thuỷ thủ</td>
+</tr>
+</tbody></table></div>
+<h2 id="3-l-i-x-c-nh-n">3. Lỗi đã xác nhận</h2>
+<h3 id="p0-r-ng-t-ch-n-ph-t-to-n-b-3-id">P0 — Rương tự chọn phát toàn bộ (3 ID)</h3>
+<pre><code>90044,90045,90046</code></pre>
+<ul>
+<li><code>90044</code>: chọn một thần binh nhưng server tạo cả 6.</li>
+<li><code>90045</code>: chọn một thần binh tối thượng nhưng server tạo cả 18.</li>
+<li><code>90046</code>: chọn một thần binh trác việt nhưng server tạo cả 18.</li>
+<li>Nguyên nhân: handler chỉ coi useType 101/110 là chọn một; type 104/106 rơi vào nhánh cấp toàn bộ <code>rewards</code>.</li>
+</ul>
+<h3 id="p0-p1-r-ng-ng-u-nhi-n-b-tr-nh-ng-kh-ng-c-qu-116-id">P0/P1 — Rương ngẫu nhiên bị trừ nhưng không có quà (116 ID)</h3>
+<pre><code>412,413,94301,94401,94416,94418,94419,94420,94421,94422,94515,94701,94702,94703,94704,94705,94706,94707,94708,94709
+94711,94712,94713,94715,94716,94718,94719,94720,94721,94722,94724,94725,94726,94727,94729,94801,94802,94821,94822,94823
+94824,94825,94902,94904,94908,94911,94923,94926,94929,94932,94935,94938,94941,100019,100020,100021,100022,100023,100024,100025
+100026,100030,100031,100032,100033,100034,100035,100036,100040,100060,100061,100062,100063,100080,100139,100160,100170,100171,100172,100173
+100174,100185,100190,100200,100201,100202,100203,100230,100231,100232,100233,100250,100251,100252,100253,100501,100502,100503,100641,100642
+100643,100701,100702,100703,100704,100705,100706,100707,100708,100709,100810,100811,100812,100813,101000,101310</code></pre>
+<ul>
+<li>Khi dùng: response <code>result=0</code>, item nguồn giảm 1, packet có <code>1202/1300</code>, nhưng <code>rewardInfo</code> rỗng và state không đổi.</li>
+<li>41 ID trong nhóm này đang được ít nhất một bảng config khác tham chiếu; 75 ID hiện chưa có tham chiếu catalog ngoài chính item/use row.</li>
+<li>Một số rương 944xx đã có pool hard-code và PASS; không phải toàn bộ useType 102 đều lỗi.</li>
+</ul>
+<h3 id="p1-r-ng-ch-n-kh-ng-c-l-a-ch-n-2-id">P1 — Rương chọn không có lựa chọn (2 ID)</h3>
+<pre><code>90021,90022</code></pre>
+<ul>
+<li><code>90021</code>, <code>90022</code>: <code>AssetsUseConfig.rewards=[]</code>; client không thể dựng option và server trả <code>selection required</code> mà không trừ item.</li>
+</ul>
+<h3 id="p2-item-type-103-b-qua-reward-150-id">P2 — Item type 103 bỏ qua reward (150 ID)</h3>
+<pre><code>110122,110123,110124,110126,110127,110142,110143,110144,110146,110147,110222,110223,110224,110226,110227,110242,110243,110244,110246,110247
+110322,110323,110324,110326,110327,110342,110343,110344,110346,110347,110422,110423,110424,110426,110427,110442,110443,110444,110446,110447
+110522,110523,110524,110526,110527,110542,110543,110544,110546,110547,110622,110623,110624,110626,110627,110642,110643,110644,110646,110647
+110722,110723,110724,110726,110727,110742,110743,110744,110746,110747,110822,110823,110824,110826,110827,110842,110843,110844,110846,110847
+110922,110923,110924,110926,110927,110942,110943,110944,110946,110947,111022,111023,111024,111026,111027,111042,111043,111044,111046,111047
+111122,111123,111124,111126,111127,111142,111143,111144,111146,111147,111222,111223,111224,111226,111227,111242,111243,111244,111246,111247
+111322,111323,111324,111326,111327,111342,111343,111344,111346,111347,111422,111423,111424,111426,111427,111442,111443,111444,111446,111447
+111522,111523,111524,111526,111527,111542,111543,111544,111546,111547</code></pre>
+<ul>
+<li>Đây là 75 đan tu vi và 75 đan Tịch Cốc thuộc asset type 8/subType 2 hoặc 4.</li>
+<li>Config có reward như tu vi ID 3 hoặc Baozi ID 4, nhưng handler type 103 chỉ tăng <code>itemUseRecords/other_attr_info</code>, không gọi router cấp reward.</li>
+<li>Cả 150 ID hiện không có inbound reference ngoài AssetsUse/Assets trong bản config này, nhưng nếu GM/mail cấp trực tiếp thì người chơi dùng sẽ mất item mà không nhận reward mô tả.</li>
+</ul>
+<h2 id="4-item-c-n-test-native-orphan-ch-a-g-n-l-i-ch-c-ch-n-5-id">4. Item cần test native/orphan, chưa gắn lỗi chắc chắn (5 ID)</h2>
+<pre><code>227,94355,94356,94357,94358</code></pre>
+<ul>
+<li><code>227</code> dùng màn tương tác Thất Tịch riêng, không nên kết luận bằng tag 1300 generic.</li>
+<li><code>94355–94358</code> có <code>AssetsUseConfig</code> nhưng thiếu <code>AssetsConfig</code> và không có inbound reference; hiện là orphan config, không xuất hiện như item bình thường.</li>
+</ul>
+<h2 id="5-nh-h-ng-runtime-production">5. Ảnh hưởng runtime production</h2>
+<ul>
+<li>S1: 1774 player/614 người thật; 4 người thật đang giữ ID lỗi.</li>
+<li>Item lỗi đang có trên người thật: <code>100080 ×1</code>, <code>100139 ×823</code>.</li>
+<li>S2: 581 player/1 người thật; affected=0.</li>
+<li>Thư chưa nhận chứa ID lỗi: S1=0, S2=0.</li>
+<li>RedemptionCode active chứa ID lỗi: S1=0, S2=0.</li>
+<li>Một người có thể giữ nhiều item; audit không công khai account/UID.</li>
+</ul>
+<h2 id="6-file-th-m-c-thay-i">6. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source game/production: <strong>không thay đổi</strong>.</li>
+<li>Tool audit catalog/runtime/runner/report đặt trong <code>_ai_workbench/tools/</code>.</li>
+<li>Evidence: <code>_ai_workbench/temp/usable_item_audit_prod_20260905.json</code> và <code>_ai_workbench/temp/usable_item_runtime_audit_20260905_015937.json</code>.</li>
+<li>Danh sách: <code>usable_items_full_audit_20260905.csv</code>, <code>usable_items_confirmed_problems_20260905.csv</code>, <code>usable_items_confirmed_problem_ids_20260905.txt</code>.</li>
+</ul>
+<h2 id="7-l-i-g-p-gi-i-ph-p">7. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi khi audit</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Fixture đứng ở rương pet 90011</td>
+<td>Ép <code>Math.random=0</code> khiến vòng chọn skill unique lặp vô hạn</td>
+<td>Dùng PRNG xác định có biến thiên</td>
+<td>Không ép random hằng số khi code có vòng unique</td>
+</tr>
+<tr>
+<td>Chạy một rương một lần không đủ</td>
+<td>Rương chọn có 1–40 option</td>
+<td>Chạy từng index lựa chọn</td>
+<td>Contract bao phủ mọi option</td>
+</tr>
+<tr>
+<td>Type 102 config rewards rỗng chưa chắc lỗi</td>
+<td>Một số rương có pool hard-code theo ID/icon</td>
+<td>Đo item delta + rewardInfo + state</td>
+<td>Kết luận theo behavior, không chỉ config rỗng</td>
+</tr>
+<tr>
+<td>Orphan use row nhìn như item lỗi</td>
+<td>Thiếu AssetsConfig và không có nguồn phát</td>
+<td>Tách <code>CAN_TEST_NATIVE/orphan</code></td>
+<td>Không trộn item không thể nhận với item đang nuốt quà</td>
+</tr>
+</tbody></table></div>
+<h2 id="8-k-n-ng-kinh-nghi-m-m-i">8. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Rương ngẫu nhiên phải có registry/pool server-authoritative; không nên suy reward từ text dịch lúc runtime.</li>
+<li>useType 104/106 vẫn là chọn một dù khác giao diện 101; server phải xác minh selection đúng schema.</li>
+<li>Item permanent attr và item có reward tức thời cần tách nhánh theo nội dung config, không chỉ theo useType.</li>
+</ul>
+<h2 id="9-tr-ng-th-i-hi-n-t-i">9. Trạng thái hiện tại</h2>
+<ul>
+<li>Audit production 940/940 item: PASS về độ phủ.</li>
+<li>271 ID lỗi đã xuất đầy đủ tên, mô tả, route, option, packet và nguồn tham chiếu.</li>
+<li>Source hashes: item handler <code>700a0c86c3c3a2f4a7b8473e890b3b208ae3cd97c577c2dc268d3f9b47274277</code>, RewardGrant <code>ae42d855c6e295aa0e2aa23a1a5091fe739dea6f5de66c2dca1cdc1422a8868d</code>.</li>
+<li>Production vẫn healthy; không gửi item, không sửa DB, không restart.</li>
+</ul>
+<h2 id="10-b-c-ti-p-theo">10. Bước tiếp theo</h2>
+<ol>
+<li>Fix P0 <code>90044/90045/90046</code> trước để chặn phát thừa.</li>
+<li>Fix <code>100080</code> và <code>100139</code> trước trong nhóm nuốt quà vì người thật đang giữ; sau đó triển khai registry cho đủ 116 rương ngẫu nhiên.</li>
+<li>Sửa 150 item type 103 theo hai nhánh: reward tức thời dùng router chung; attrs lâu dài giữ ledger/cap hiện tại.</li>
+<li>Bổ sung option đúng cho <code>90021/90022</code>; chỉ repair/hoàn rương cũ sau khi có ledger hoặc bằng chứng sử dụng, tránh phát bù trùng.</li>
+</ol></main></body></html>

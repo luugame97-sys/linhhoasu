@@ -1,0 +1,2868 @@
+{
+  "_table": "FishSoulConfig",
+  "_rows": 80,
+  "_type": "object",
+  "_firstKeys": "id,icon,quality,type,minKg,exp,direction,scale,minAddRate,maxKgValue,atlasReward,minAttrs,day,show,index,levelShow",
+  "_sample": [
+    {
+      "7011": {
+        "id": 7011,
+        "icon": "icon_7011",
+        "quality": 2,
+        "type": 1,
+        "minKg": 100,
+        "exp": 30,
+        "direction": 1,
+        "scale": 0.9,
+        "minAddRate": [
+          400,
+          400,
+          400,
+          400,
+          400
+        ],
+        "maxKgValue": 12500,
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ],
+        "minAttrs": {
+          "1": 1000,
+          "2": 1000,
+          "3": 1000,
+          "4": 1000
+        },
+        "day": 1,
+        "show": 0,
+        "index": 0,
+        "levelShow": 1
+      }
+    },
+    {
+      "7012": {
+        "id": 7012,
+        "icon": "icon_7012",
+        "quality": 3,
+        "type": 1,
+        "minKg": 200,
+        "exp": 30,
+        "direction": 1,
+        "scale": 0.9,
+        "minAddRate": [
+          500,
+          500,
+          500,
+          500,
+          500
+        ],
+        "maxKgValue": 15000,
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 20
+          }
+        ],
+        "minAttrs": {
+          "1": 2000,
+          "2": 2000,
+          "3": 2000,
+          "4": 2000
+        },
+        "day": 1,
+        "show": 0,
+        "index": 0,
+        "levelShow": 1
+      }
+    },
+    {
+      "7013": {
+        "id": 7013,
+        "icon": "icon_7013",
+        "quality": 4,
+        "type": 1,
+        "minKg": 400,
+        "exp": 30,
+        "direction": 1,
+        "scale": 0.9,
+        "minAddRate": [
+          750,
+          750,
+          750,
+          750,
+          750
+        ],
+        "maxKgValue": 16000,
+        "atlasReward": [
+          {
+            "id": 1,
+            "count": 30
+          }
+        ],
+        "minAttrs": {
+          "1": 3000,
+          "2": 3000,
+          "3": 3000,
+          "4": 3000
+        },
+        "day": 1,
+        "show": 0,
+        "index": 0,
+        "levelShow": 1
+      }
+    }
+  ],
+  "data": {
+    "7011": {
+      "id": 7011,
+      "icon": "icon_7011",
+      "quality": 2,
+      "type": 1,
+      "minKg": 100,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7012": {
+      "id": 7012,
+      "icon": "icon_7012",
+      "quality": 3,
+      "type": 1,
+      "minKg": 200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7013": {
+      "id": 7013,
+      "icon": "icon_7013",
+      "quality": 4,
+      "type": 1,
+      "minKg": 400,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7014": {
+      "id": 7014,
+      "icon": "icon_7014",
+      "quality": 6,
+      "type": 1,
+      "minKg": 800,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7015": {
+      "id": 7015,
+      "icon": "icon_7015",
+      "quality": 7,
+      "type": 1,
+      "minKg": 1600,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7016": {
+      "id": 7016,
+      "icon": "icon_7016",
+      "quality": 7,
+      "type": 1,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 1,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7017": {
+      "id": 7017,
+      "icon": "icon_7017",
+      "quality": 7,
+      "type": 1,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 1,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7018": {
+      "id": 7018,
+      "icon": "icon_7018",
+      "quality": 7,
+      "type": 1,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 1,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7021": {
+      "id": 7021,
+      "icon": "icon_7021",
+      "quality": 2,
+      "type": 2,
+      "minKg": 500,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7022": {
+      "id": 7022,
+      "icon": "icon_7022",
+      "quality": 3,
+      "type": 2,
+      "minKg": 1000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7023": {
+      "id": 7023,
+      "icon": "icon_7023",
+      "quality": 4,
+      "type": 2,
+      "minKg": 2000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7024": {
+      "id": 7024,
+      "icon": "icon_7024",
+      "quality": 6,
+      "type": 2,
+      "minKg": 4000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7025": {
+      "id": 7025,
+      "icon": "icon_7025",
+      "quality": 7,
+      "type": 2,
+      "minKg": 8000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7026": {
+      "id": 7026,
+      "icon": "icon_7026",
+      "quality": 7,
+      "type": 2,
+      "minKg": 16000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 1,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7027": {
+      "id": 7027,
+      "icon": "icon_7027",
+      "quality": 7,
+      "type": 2,
+      "minKg": 16000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 1,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7028": {
+      "id": 7028,
+      "icon": "icon_7028",
+      "quality": 7,
+      "type": 2,
+      "minKg": 16000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 1,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7031": {
+      "id": 7031,
+      "icon": "icon_7031",
+      "quality": 2,
+      "type": 3,
+      "minKg": 300,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7032": {
+      "id": 7032,
+      "icon": "icon_7032",
+      "quality": 3,
+      "type": 3,
+      "minKg": 600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7033": {
+      "id": 7033,
+      "icon": "icon_7033",
+      "quality": 4,
+      "type": 3,
+      "minKg": 1200,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7034": {
+      "id": 7034,
+      "icon": "icon_7034",
+      "quality": 6,
+      "type": 3,
+      "minKg": 2400,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7035": {
+      "id": 7035,
+      "icon": "icon_7035",
+      "quality": 7,
+      "type": 3,
+      "minKg": 4800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7036": {
+      "id": 7036,
+      "icon": "icon_7036",
+      "quality": 7,
+      "type": 3,
+      "minKg": 9600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 2,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7037": {
+      "id": 7037,
+      "icon": "icon_7037",
+      "quality": 7,
+      "type": 3,
+      "minKg": 9600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 2,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7038": {
+      "id": 7038,
+      "icon": "icon_7038",
+      "quality": 7,
+      "type": 3,
+      "minKg": 9600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 0.9,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 2,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7041": {
+      "id": 7041,
+      "icon": "icon_7041",
+      "quality": 2,
+      "type": 4,
+      "minKg": 400,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7042": {
+      "id": 7042,
+      "icon": "icon_7042",
+      "quality": 3,
+      "type": 4,
+      "minKg": 800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7043": {
+      "id": 7043,
+      "icon": "icon_7043",
+      "quality": 4,
+      "type": 4,
+      "minKg": 1600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7044": {
+      "id": 7044,
+      "icon": "icon_7044",
+      "quality": 6,
+      "type": 4,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7045": {
+      "id": 7045,
+      "icon": "icon_7045",
+      "quality": 7,
+      "type": 4,
+      "minKg": 6400,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7046": {
+      "id": 7046,
+      "icon": "icon_7046",
+      "quality": 7,
+      "type": 4,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 2,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7047": {
+      "id": 7047,
+      "icon": "icon_7047",
+      "quality": 7,
+      "type": 4,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 2,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7048": {
+      "id": 7048,
+      "icon": "icon_7048",
+      "quality": 7,
+      "type": 4,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 2,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7051": {
+      "id": 7051,
+      "icon": "icon_7051",
+      "quality": 2,
+      "type": 5,
+      "minKg": 400,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7052": {
+      "id": 7052,
+      "icon": "icon_7052",
+      "quality": 3,
+      "type": 5,
+      "minKg": 800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7053": {
+      "id": 7053,
+      "icon": "icon_7053",
+      "quality": 4,
+      "type": 5,
+      "minKg": 1600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7054": {
+      "id": 7054,
+      "icon": "icon_7054",
+      "quality": 6,
+      "type": 5,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7055": {
+      "id": 7055,
+      "icon": "icon_7055",
+      "quality": 7,
+      "type": 5,
+      "minKg": 6400,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7056": {
+      "id": 7056,
+      "icon": "icon_7056",
+      "quality": 7,
+      "type": 5,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 3,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7057": {
+      "id": 7057,
+      "icon": "icon_7057",
+      "quality": 7,
+      "type": 5,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 3,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7058": {
+      "id": 7058,
+      "icon": "icon_7058",
+      "quality": 7,
+      "type": 5,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 3,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7061": {
+      "id": 7061,
+      "icon": "icon_7061",
+      "quality": 2,
+      "type": 6,
+      "minKg": 800,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7062": {
+      "id": 7062,
+      "icon": "icon_7062",
+      "quality": 3,
+      "type": 6,
+      "minKg": 1600,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7063": {
+      "id": 7063,
+      "icon": "icon_7063",
+      "quality": 4,
+      "type": 6,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7064": {
+      "id": 7064,
+      "icon": "icon_7064",
+      "quality": 6,
+      "type": 6,
+      "minKg": 6400,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7065": {
+      "id": 7065,
+      "icon": "icon_7065",
+      "quality": 7,
+      "type": 6,
+      "minKg": 12800,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7066": {
+      "id": 7066,
+      "icon": "icon_7066",
+      "quality": 7,
+      "type": 6,
+      "minKg": 25600,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 3,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7067": {
+      "id": 7067,
+      "icon": "icon_7067",
+      "quality": 7,
+      "type": 6,
+      "minKg": 25600,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 3,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7068": {
+      "id": 7068,
+      "icon": "icon_7068",
+      "quality": 7,
+      "type": 6,
+      "minKg": 25600,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 3,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7071": {
+      "id": 7071,
+      "icon": "icon_7071",
+      "quality": 2,
+      "type": 7,
+      "minKg": 200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7072": {
+      "id": 7072,
+      "icon": "icon_7072",
+      "quality": 3,
+      "type": 7,
+      "minKg": 400,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7073": {
+      "id": 7073,
+      "icon": "icon_7073",
+      "quality": 4,
+      "type": 7,
+      "minKg": 800,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7074": {
+      "id": 7074,
+      "icon": "icon_7074",
+      "quality": 6,
+      "type": 7,
+      "minKg": 1600,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7075": {
+      "id": 7075,
+      "icon": "icon_7075",
+      "quality": 7,
+      "type": 7,
+      "minKg": 3200,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7076": {
+      "id": 7076,
+      "icon": "icon_7076",
+      "quality": 7,
+      "type": 7,
+      "minKg": 6400,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 4,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7077": {
+      "id": 7077,
+      "icon": "icon_7077",
+      "quality": 7,
+      "type": 7,
+      "minKg": 6400,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 4,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7078": {
+      "id": 7078,
+      "icon": "icon_7078",
+      "quality": 7,
+      "type": 7,
+      "minKg": 6400,
+      "exp": 30,
+      "direction": 1,
+      "scale": 1.1,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 4,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7081": {
+      "id": 7081,
+      "icon": "icon_7081",
+      "quality": 2,
+      "type": 8,
+      "minKg": 300,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7082": {
+      "id": 7082,
+      "icon": "icon_7082",
+      "quality": 3,
+      "type": 8,
+      "minKg": 600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7083": {
+      "id": 7083,
+      "icon": "icon_7083",
+      "quality": 4,
+      "type": 8,
+      "minKg": 1200,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7084": {
+      "id": 7084,
+      "icon": "icon_7084",
+      "quality": 6,
+      "type": 8,
+      "minKg": 2400,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7085": {
+      "id": 7085,
+      "icon": "icon_7085",
+      "quality": 7,
+      "type": 8,
+      "minKg": 4800,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7086": {
+      "id": 7086,
+      "icon": "icon_7086",
+      "quality": 7,
+      "type": 8,
+      "minKg": 9600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 4,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7087": {
+      "id": 7087,
+      "icon": "icon_7087",
+      "quality": 7,
+      "type": 8,
+      "minKg": 9600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 4,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7088": {
+      "id": 7088,
+      "icon": "icon_7088",
+      "quality": 7,
+      "type": 8,
+      "minKg": 9600,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 4,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7091": {
+      "id": 7091,
+      "icon": "icon_7091",
+      "quality": 2,
+      "type": 9,
+      "minKg": 2000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7092": {
+      "id": 7092,
+      "icon": "icon_7092",
+      "quality": 3,
+      "type": 9,
+      "minKg": 4000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7093": {
+      "id": 7093,
+      "icon": "icon_7093",
+      "quality": 4,
+      "type": 9,
+      "minKg": 8000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7094": {
+      "id": 7094,
+      "icon": "icon_7094",
+      "quality": 6,
+      "type": 9,
+      "minKg": 16000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7095": {
+      "id": 7095,
+      "icon": "icon_7095",
+      "quality": 7,
+      "type": 9,
+      "minKg": 32000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7096": {
+      "id": 7096,
+      "icon": "icon_7096",
+      "quality": 7,
+      "type": 9,
+      "minKg": 64000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 5,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7097": {
+      "id": 7097,
+      "icon": "icon_7097",
+      "quality": 7,
+      "type": 9,
+      "minKg": 64000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 5,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7098": {
+      "id": 7098,
+      "icon": "icon_7098",
+      "quality": 7,
+      "type": 9,
+      "minKg": 64000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 5,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    },
+    "7101": {
+      "id": 7101,
+      "icon": "icon_7101",
+      "quality": 2,
+      "type": 10,
+      "minKg": 5000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "maxKgValue": 12500,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "minAttrs": {
+        "1": 1000,
+        "2": 1000,
+        "3": 1000,
+        "4": 1000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7102": {
+      "id": 7102,
+      "icon": "icon_7102",
+      "quality": 3,
+      "type": 10,
+      "minKg": 10000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "maxKgValue": 15000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "minAttrs": {
+        "1": 2000,
+        "2": 2000,
+        "3": 2000,
+        "4": 2000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7103": {
+      "id": 7103,
+      "icon": "icon_7103",
+      "quality": 4,
+      "type": 10,
+      "minKg": 20000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        750,
+        750,
+        750,
+        750,
+        750
+      ],
+      "maxKgValue": 16000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "minAttrs": {
+        "1": 3000,
+        "2": 3000,
+        "3": 3000,
+        "4": 3000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 1
+    },
+    "7104": {
+      "id": 7104,
+      "icon": "icon_7104",
+      "quality": 6,
+      "type": 10,
+      "minKg": 40000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        1200,
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "maxKgValue": 16650,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 6
+    },
+    "7105": {
+      "id": 7105,
+      "icon": "icon_7105",
+      "quality": 7,
+      "type": 10,
+      "minKg": 80000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 0,
+      "index": 0,
+      "levelShow": 18
+    },
+    "7106": {
+      "id": 7106,
+      "icon": "icon_7106",
+      "quality": 7,
+      "type": 10,
+      "minKg": 160000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 5,
+      "isUnusual": 1,
+      "index": 1,
+      "levelShow": 18
+    },
+    "7107": {
+      "id": 7107,
+      "icon": "icon_7107",
+      "quality": 7,
+      "type": 10,
+      "minKg": 160000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 5,
+      "isUnusual": 1,
+      "index": 2,
+      "levelShow": 18
+    },
+    "7108": {
+      "id": 7108,
+      "icon": "icon_7108",
+      "quality": 7,
+      "type": 10,
+      "minKg": 160000,
+      "exp": 30,
+      "direction": 2,
+      "scale": 1.4,
+      "minAddRate": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "maxKgValue": 20000,
+      "atlasReward": [
+        {
+          "id": 1,
+          "count": 100
+        }
+      ],
+      "minAttrs": {
+        "1": 4000,
+        "2": 4000,
+        "3": 4000,
+        "4": 4000
+      },
+      "day": 1,
+      "show": 5,
+      "isUnusual": 1,
+      "index": 3,
+      "levelShow": 18
+    }
+  }
+}

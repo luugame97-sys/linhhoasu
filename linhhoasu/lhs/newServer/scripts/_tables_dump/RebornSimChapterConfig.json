@@ -1,0 +1,1837 @@
+{
+  "_table": "RebornSimChapterConfig",
+  "_rows": 52,
+  "_type": "object",
+  "_firstKeys": "id,show,victoryScore,initialTalentPoint,initialEntryChooseTime,rebornCost,rewards,name,titleIcon,bannerIcon",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "show": {
+          "0": [
+            90010102,
+            90010103,
+            90010109
+          ],
+          "1": [
+            90020102,
+            90020103,
+            90020109
+          ]
+        },
+        "victoryScore": 140,
+        "initialTalentPoint": 5,
+        "initialEntryChooseTime": 1,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 10
+          }
+        ],
+        "name": 30090742,
+        "titleIcon": "reborn_chapterName_101",
+        "bannerIcon": "xllb_bm_banner1"
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "show": {
+          "0": [
+            90010202,
+            90010203,
+            90010209
+          ],
+          "1": [
+            90020202,
+            90020203,
+            90020209
+          ]
+        },
+        "victoryScore": 180,
+        "initialTalentPoint": 6,
+        "initialEntryChooseTime": 1,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 15
+          }
+        ],
+        "name": 30090743,
+        "titleIcon": "reborn_chapterName_102",
+        "bannerIcon": "xllb_bm_banner2"
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "show": {
+          "0": [
+            90010302,
+            90010303,
+            90010309
+          ],
+          "1": [
+            90020302,
+            90020303,
+            90020309
+          ]
+        },
+        "victoryScore": 220,
+        "initialTalentPoint": 7,
+        "initialEntryChooseTime": 1,
+        "rebornCost": [
+          {
+            "id": 137,
+            "count": 1
+          }
+        ],
+        "rewards": [
+          {
+            "id": 1,
+            "count": 20
+          }
+        ],
+        "name": 30090744,
+        "titleIcon": "reborn_chapterName_103",
+        "bannerIcon": "xllb_bm_banner3"
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "show": {
+        "0": [
+          90010102,
+          90010103,
+          90010109
+        ],
+        "1": [
+          90020102,
+          90020103,
+          90020109
+        ]
+      },
+      "victoryScore": 140,
+      "initialTalentPoint": 5,
+      "initialEntryChooseTime": 1,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "name": 30090742,
+      "titleIcon": "reborn_chapterName_101",
+      "bannerIcon": "xllb_bm_banner1"
+    },
+    "2": {
+      "id": 2,
+      "show": {
+        "0": [
+          90010202,
+          90010203,
+          90010209
+        ],
+        "1": [
+          90020202,
+          90020203,
+          90020209
+        ]
+      },
+      "victoryScore": 180,
+      "initialTalentPoint": 6,
+      "initialEntryChooseTime": 1,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 15
+        }
+      ],
+      "name": 30090743,
+      "titleIcon": "reborn_chapterName_102",
+      "bannerIcon": "xllb_bm_banner2"
+    },
+    "3": {
+      "id": 3,
+      "show": {
+        "0": [
+          90010302,
+          90010303,
+          90010309
+        ],
+        "1": [
+          90020302,
+          90020303,
+          90020309
+        ]
+      },
+      "victoryScore": 220,
+      "initialTalentPoint": 7,
+      "initialEntryChooseTime": 1,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "name": 30090744,
+      "titleIcon": "reborn_chapterName_103",
+      "bannerIcon": "xllb_bm_banner3"
+    },
+    "4": {
+      "id": 4,
+      "show": {
+        "0": [
+          90010402,
+          90010403,
+          90010409
+        ],
+        "1": [
+          90020402,
+          90020403,
+          90020409
+        ]
+      },
+      "victoryScore": 260,
+      "initialTalentPoint": 8,
+      "initialEntryChooseTime": 1,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 25
+        }
+      ],
+      "name": 30090745,
+      "titleIcon": "reborn_chapterName_104",
+      "bannerIcon": "xllb_bm_banner4"
+    },
+    "5": {
+      "id": 5,
+      "show": {
+        "0": [
+          90010502,
+          90010503,
+          90010509
+        ],
+        "1": [
+          90020502,
+          90020503,
+          90020509
+        ]
+      },
+      "victoryScore": 300,
+      "initialTalentPoint": 9,
+      "initialEntryChooseTime": 1,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "name": 30090746,
+      "titleIcon": "reborn_chapterName_105",
+      "bannerIcon": "xllb_bm_banner5"
+    },
+    "6": {
+      "id": 6,
+      "show": {
+        "0": [
+          90010602,
+          90010603,
+          90010609
+        ],
+        "1": [
+          90020602,
+          90020603,
+          90020609
+        ]
+      },
+      "victoryScore": 340,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 35
+        }
+      ],
+      "name": 30090747,
+      "titleIcon": "reborn_chapterName_106",
+      "bannerIcon": "xllb_bm_banner6"
+    },
+    "7": {
+      "id": 7,
+      "show": {
+        "0": [
+          90010702,
+          90010703,
+          90010709
+        ],
+        "1": [
+          90020702,
+          90020703,
+          90020709
+        ]
+      },
+      "victoryScore": 380,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ],
+      "name": 30090748,
+      "titleIcon": "reborn_chapterName_107",
+      "bannerIcon": "xllb_bm_banner7"
+    },
+    "8": {
+      "id": 8,
+      "show": {
+        "0": [
+          90010802,
+          90010803,
+          90010809
+        ],
+        "1": [
+          90020802,
+          90020803,
+          90020809
+        ]
+      },
+      "victoryScore": 420,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 45
+        }
+      ],
+      "name": 30090749,
+      "titleIcon": "reborn_chapterName_108",
+      "bannerIcon": "xllb_bm_banner8"
+    },
+    "9": {
+      "id": 9,
+      "show": {
+        "0": [
+          90010902,
+          90010903,
+          90010909
+        ],
+        "1": [
+          90020902,
+          90020903,
+          90020909
+        ]
+      },
+      "victoryScore": 460,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "name": 30090750,
+      "titleIcon": "reborn_chapterName_109",
+      "bannerIcon": "xllb_bm_banner9"
+    },
+    "10": {
+      "id": 10,
+      "show": {
+        "0": [
+          90011002,
+          90011003,
+          90011009
+        ],
+        "1": [
+          90021002,
+          90021003,
+          90021009
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 60
+        }
+      ],
+      "name": 30090751,
+      "titleIcon": "reborn_chapterName_110",
+      "bannerIcon": "xllb_bm_banner10"
+    },
+    "11": {
+      "id": 11,
+      "show": {
+        "0": [
+          90010102,
+          90010103,
+          90010109
+        ],
+        "1": [
+          90020102,
+          90020103,
+          90020109
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "name": 30090752,
+      "titleIcon": "reborn_chapterName_101",
+      "bannerIcon": "xllb_bm_banner1"
+    },
+    "12": {
+      "id": 12,
+      "show": {
+        "0": [
+          90010202,
+          90010203,
+          90010209
+        ],
+        "1": [
+          90020202,
+          90020203,
+          90020209
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 15
+        }
+      ],
+      "name": 30090753,
+      "titleIcon": "reborn_chapterName_102",
+      "bannerIcon": "xllb_bm_banner2"
+    },
+    "13": {
+      "id": 13,
+      "show": {
+        "0": [
+          90010302,
+          90010303,
+          90010309
+        ],
+        "1": [
+          90020302,
+          90020303,
+          90020309
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "name": 30090754,
+      "titleIcon": "reborn_chapterName_103",
+      "bannerIcon": "xllb_bm_banner3"
+    },
+    "14": {
+      "id": 14,
+      "show": {
+        "0": [
+          90010402,
+          90010403,
+          90010409
+        ],
+        "1": [
+          90020402,
+          90020403,
+          90020409
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 25
+        }
+      ],
+      "name": 30090755,
+      "titleIcon": "reborn_chapterName_104",
+      "bannerIcon": "xllb_bm_banner4"
+    },
+    "15": {
+      "id": 15,
+      "show": {
+        "0": [
+          90010502,
+          90010503,
+          90010509
+        ],
+        "1": [
+          90020502,
+          90020503,
+          90020509
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "name": 30090756,
+      "titleIcon": "reborn_chapterName_105",
+      "bannerIcon": "xllb_bm_banner5"
+    },
+    "16": {
+      "id": 16,
+      "show": {
+        "0": [
+          90010602,
+          90010603,
+          90010609
+        ],
+        "1": [
+          90020602,
+          90020603,
+          90020609
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 35
+        }
+      ],
+      "name": 30090757,
+      "titleIcon": "reborn_chapterName_106",
+      "bannerIcon": "xllb_bm_banner6"
+    },
+    "17": {
+      "id": 17,
+      "show": {
+        "0": [
+          90010702,
+          90010703,
+          90010709
+        ],
+        "1": [
+          90020702,
+          90020703,
+          90020709
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ],
+      "name": 30090758,
+      "titleIcon": "reborn_chapterName_107",
+      "bannerIcon": "xllb_bm_banner7"
+    },
+    "18": {
+      "id": 18,
+      "show": {
+        "0": [
+          90010802,
+          90010803,
+          90010809
+        ],
+        "1": [
+          90020802,
+          90020803,
+          90020809
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 45
+        }
+      ],
+      "name": 30090759,
+      "titleIcon": "reborn_chapterName_108",
+      "bannerIcon": "xllb_bm_banner8"
+    },
+    "19": {
+      "id": 19,
+      "show": {
+        "0": [
+          90010902,
+          90010903,
+          90010909
+        ],
+        "1": [
+          90020902,
+          90020903,
+          90020909
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "name": 30090760,
+      "titleIcon": "reborn_chapterName_109",
+      "bannerIcon": "xllb_bm_banner9"
+    },
+    "20": {
+      "id": 20,
+      "show": {
+        "0": [
+          90011002,
+          90011003,
+          90011009
+        ],
+        "1": [
+          90021002,
+          90021003,
+          90021009
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 60
+        }
+      ],
+      "name": 30090761,
+      "titleIcon": "reborn_chapterName_110",
+      "bannerIcon": "xllb_bm_banner10"
+    },
+    "21": {
+      "id": 21,
+      "show": {
+        "0": [
+          90010102,
+          90010103,
+          90010109
+        ],
+        "1": [
+          90020102,
+          90020103,
+          90020109
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "name": 30090762,
+      "titleIcon": "reborn_chapterName_101",
+      "bannerIcon": "xllb_bm_banner1"
+    },
+    "22": {
+      "id": 22,
+      "show": {
+        "0": [
+          90010202,
+          90010203,
+          90010209
+        ],
+        "1": [
+          90020202,
+          90020203,
+          90020209
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 15
+        }
+      ],
+      "name": 30090763,
+      "titleIcon": "reborn_chapterName_102",
+      "bannerIcon": "xllb_bm_banner2"
+    },
+    "23": {
+      "id": 23,
+      "show": {
+        "0": [
+          90010302,
+          90010303,
+          90010309
+        ],
+        "1": [
+          90020302,
+          90020303,
+          90020309
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "name": 30090764,
+      "titleIcon": "reborn_chapterName_103",
+      "bannerIcon": "xllb_bm_banner3"
+    },
+    "24": {
+      "id": 24,
+      "show": {
+        "0": [
+          90010402,
+          90010403,
+          90010409
+        ],
+        "1": [
+          90020402,
+          90020403,
+          90020409
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 25
+        }
+      ],
+      "name": 30090765,
+      "titleIcon": "reborn_chapterName_104",
+      "bannerIcon": "xllb_bm_banner4"
+    },
+    "25": {
+      "id": 25,
+      "show": {
+        "0": [
+          90010502,
+          90010503,
+          90010509
+        ],
+        "1": [
+          90020502,
+          90020503,
+          90020509
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "name": 30090766,
+      "titleIcon": "reborn_chapterName_105",
+      "bannerIcon": "xllb_bm_banner5"
+    },
+    "26": {
+      "id": 26,
+      "show": {
+        "0": [
+          90010602,
+          90010603,
+          90010609
+        ],
+        "1": [
+          90020602,
+          90020603,
+          90020609
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 35
+        }
+      ],
+      "name": 30090767,
+      "titleIcon": "reborn_chapterName_106",
+      "bannerIcon": "xllb_bm_banner6"
+    },
+    "27": {
+      "id": 27,
+      "show": {
+        "0": [
+          90010702,
+          90010703,
+          90010709
+        ],
+        "1": [
+          90020702,
+          90020703,
+          90020709
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ],
+      "name": 30090768,
+      "titleIcon": "reborn_chapterName_107",
+      "bannerIcon": "xllb_bm_banner7"
+    },
+    "28": {
+      "id": 28,
+      "show": {
+        "0": [
+          90010802,
+          90010803,
+          90010809
+        ],
+        "1": [
+          90020802,
+          90020803,
+          90020809
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 45
+        }
+      ],
+      "name": 30090769,
+      "titleIcon": "reborn_chapterName_108",
+      "bannerIcon": "xllb_bm_banner8"
+    },
+    "29": {
+      "id": 29,
+      "show": {
+        "0": [
+          90010902,
+          90010903,
+          90010909
+        ],
+        "1": [
+          90020902,
+          90020903,
+          90020909
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "name": 30090770,
+      "titleIcon": "reborn_chapterName_109",
+      "bannerIcon": "xllb_bm_banner9"
+    },
+    "30": {
+      "id": 30,
+      "show": {
+        "0": [
+          90011002,
+          90011003,
+          90011009
+        ],
+        "1": [
+          90021002,
+          90021003,
+          90021009
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 60
+        }
+      ],
+      "name": 30090771,
+      "titleIcon": "reborn_chapterName_110",
+      "bannerIcon": "xllb_bm_banner10"
+    },
+    "31": {
+      "id": 31,
+      "show": {
+        "0": [
+          90010102,
+          90010103,
+          90010109
+        ],
+        "1": [
+          90020102,
+          90020103,
+          90020109
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "name": 30090772,
+      "titleIcon": "reborn_chapterName_101",
+      "bannerIcon": "xllb_bm_banner1"
+    },
+    "32": {
+      "id": 32,
+      "show": {
+        "0": [
+          90010202,
+          90010203,
+          90010209
+        ],
+        "1": [
+          90020202,
+          90020203,
+          90020209
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 15
+        }
+      ],
+      "name": 30090773,
+      "titleIcon": "reborn_chapterName_102",
+      "bannerIcon": "xllb_bm_banner2"
+    },
+    "33": {
+      "id": 33,
+      "show": {
+        "0": [
+          90010302,
+          90010303,
+          90010309
+        ],
+        "1": [
+          90020302,
+          90020303,
+          90020309
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "name": 30090774,
+      "titleIcon": "reborn_chapterName_103",
+      "bannerIcon": "xllb_bm_banner3"
+    },
+    "34": {
+      "id": 34,
+      "show": {
+        "0": [
+          90010402,
+          90010403,
+          90010409
+        ],
+        "1": [
+          90020402,
+          90020403,
+          90020409
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 25
+        }
+      ],
+      "name": 30090775,
+      "titleIcon": "reborn_chapterName_104",
+      "bannerIcon": "xllb_bm_banner4"
+    },
+    "35": {
+      "id": 35,
+      "show": {
+        "0": [
+          90010502,
+          90010503,
+          90010509
+        ],
+        "1": [
+          90020502,
+          90020503,
+          90020509
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "name": 30090776,
+      "titleIcon": "reborn_chapterName_105",
+      "bannerIcon": "xllb_bm_banner5"
+    },
+    "36": {
+      "id": 36,
+      "show": {
+        "0": [
+          90010602,
+          90010603,
+          90010609
+        ],
+        "1": [
+          90020602,
+          90020603,
+          90020609
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 35
+        }
+      ],
+      "name": 30090777,
+      "titleIcon": "reborn_chapterName_106",
+      "bannerIcon": "xllb_bm_banner6"
+    },
+    "37": {
+      "id": 37,
+      "show": {
+        "0": [
+          90010702,
+          90010703,
+          90010709
+        ],
+        "1": [
+          90020702,
+          90020703,
+          90020709
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ],
+      "name": 30090778,
+      "titleIcon": "reborn_chapterName_107",
+      "bannerIcon": "xllb_bm_banner7"
+    },
+    "38": {
+      "id": 38,
+      "show": {
+        "0": [
+          90010802,
+          90010803,
+          90010809
+        ],
+        "1": [
+          90020802,
+          90020803,
+          90020809
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 45
+        }
+      ],
+      "name": 30090779,
+      "titleIcon": "reborn_chapterName_108",
+      "bannerIcon": "xllb_bm_banner8"
+    },
+    "39": {
+      "id": 39,
+      "show": {
+        "0": [
+          90010902,
+          90010903,
+          90010909
+        ],
+        "1": [
+          90020902,
+          90020903,
+          90020909
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "name": 30090780,
+      "titleIcon": "reborn_chapterName_109",
+      "bannerIcon": "xllb_bm_banner9"
+    },
+    "40": {
+      "id": 40,
+      "show": {
+        "0": [
+          90011002,
+          90011003,
+          90011009
+        ],
+        "1": [
+          90021002,
+          90021003,
+          90021009
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 60
+        }
+      ],
+      "name": 30090781,
+      "titleIcon": "reborn_chapterName_110",
+      "bannerIcon": "xllb_bm_banner10"
+    },
+    "41": {
+      "id": 41,
+      "show": {
+        "0": [
+          90010102,
+          90010103,
+          90010109
+        ],
+        "1": [
+          90020102,
+          90020103,
+          90020109
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "name": 30090782,
+      "titleIcon": "reborn_chapterName_101",
+      "bannerIcon": "xllb_bm_banner1"
+    },
+    "42": {
+      "id": 42,
+      "show": {
+        "0": [
+          90010202,
+          90010203,
+          90010209
+        ],
+        "1": [
+          90020202,
+          90020203,
+          90020209
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 15
+        }
+      ],
+      "name": 30090783,
+      "titleIcon": "reborn_chapterName_102",
+      "bannerIcon": "xllb_bm_banner2"
+    },
+    "43": {
+      "id": 43,
+      "show": {
+        "0": [
+          90010302,
+          90010303,
+          90010309
+        ],
+        "1": [
+          90020302,
+          90020303,
+          90020309
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 20
+        }
+      ],
+      "name": 30090784,
+      "titleIcon": "reborn_chapterName_103",
+      "bannerIcon": "xllb_bm_banner3"
+    },
+    "44": {
+      "id": 44,
+      "show": {
+        "0": [
+          90010402,
+          90010403,
+          90010409
+        ],
+        "1": [
+          90020402,
+          90020403,
+          90020409
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 25
+        }
+      ],
+      "name": 30090785,
+      "titleIcon": "reborn_chapterName_104",
+      "bannerIcon": "xllb_bm_banner4"
+    },
+    "45": {
+      "id": 45,
+      "show": {
+        "0": [
+          90010502,
+          90010503,
+          90010509
+        ],
+        "1": [
+          90020502,
+          90020503,
+          90020509
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 30
+        }
+      ],
+      "name": 30090786,
+      "titleIcon": "reborn_chapterName_105",
+      "bannerIcon": "xllb_bm_banner5"
+    },
+    "46": {
+      "id": 46,
+      "show": {
+        "0": [
+          90010602,
+          90010603,
+          90010609
+        ],
+        "1": [
+          90020602,
+          90020603,
+          90020609
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 35
+        }
+      ],
+      "name": 30090787,
+      "titleIcon": "reborn_chapterName_106",
+      "bannerIcon": "xllb_bm_banner6"
+    },
+    "47": {
+      "id": 47,
+      "show": {
+        "0": [
+          90010702,
+          90010703,
+          90010709
+        ],
+        "1": [
+          90020702,
+          90020703,
+          90020709
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 40
+        }
+      ],
+      "name": 30090788,
+      "titleIcon": "reborn_chapterName_107",
+      "bannerIcon": "xllb_bm_banner7"
+    },
+    "48": {
+      "id": 48,
+      "show": {
+        "0": [
+          90010802,
+          90010803,
+          90010809
+        ],
+        "1": [
+          90020802,
+          90020803,
+          90020809
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 12,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 45
+        }
+      ],
+      "name": 30090789,
+      "titleIcon": "reborn_chapterName_108",
+      "bannerIcon": "xllb_bm_banner8"
+    },
+    "49": {
+      "id": 49,
+      "show": {
+        "0": [
+          90010902,
+          90010903,
+          90010909
+        ],
+        "1": [
+          90020902,
+          90020903,
+          90020909
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 13,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 50
+        }
+      ],
+      "name": 30090790,
+      "titleIcon": "reborn_chapterName_109",
+      "bannerIcon": "xllb_bm_banner9"
+    },
+    "50": {
+      "id": 50,
+      "show": {
+        "0": [
+          90011002,
+          90011003,
+          90011009
+        ],
+        "1": [
+          90021002,
+          90021003,
+          90021009
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 14,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 60
+        }
+      ],
+      "name": 30090791,
+      "titleIcon": "reborn_chapterName_110",
+      "bannerIcon": "xllb_bm_banner10"
+    },
+    "51": {
+      "id": 51,
+      "show": {
+        "0": [
+          90010102,
+          90010103,
+          90010109
+        ],
+        "1": [
+          90020102,
+          90020103,
+          90020109
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 10,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 10
+        }
+      ],
+      "name": 30090792,
+      "titleIcon": "reborn_chapterName_101",
+      "bannerIcon": "xllb_bm_banner1"
+    },
+    "52": {
+      "id": 52,
+      "show": {
+        "0": [
+          90010202,
+          90010203,
+          90010209
+        ],
+        "1": [
+          90020202,
+          90020203,
+          90020209
+        ]
+      },
+      "victoryScore": 500,
+      "initialTalentPoint": 11,
+      "initialEntryChooseTime": 2,
+      "rebornCost": [
+        {
+          "id": 137,
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": 1,
+          "count": 15
+        }
+      ],
+      "name": 30090793,
+      "titleIcon": "reborn_chapterName_102",
+      "bannerIcon": "xllb_bm_banner2"
+    },
+    "rewards": [
+      {
+        "id": 1,
+        "count": 1000
+      }
+    ]
+  }
+}

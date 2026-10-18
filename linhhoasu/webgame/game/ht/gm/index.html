@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>灵画师-玩家后台</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="static/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="static/xm-select.js" type="text/javascript"></script>
+    <script type="text/javascript" src="static/selectpage/selectpage.js?v=2" ></script>
+    <script src="static/layer/layer.js"></script>
+    <script src="static/layer/cannotcopy.js"></script>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/selectpage/selectpage.bootstrap3.css" type="text/css">
+    <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css"  type="text/css">
+    <style type="text/css">
+        body { background-image: url("static/selectpage/bj.jpg"); background-size: cover; }
+    </style>
+    <style>
+    main {
+        width: 100%;
+        max-width: 700px;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    main::-webkit-scrollbar { display: none; }
+    .yuan-hint { color: #e6a23c; font-weight: bold; }
+    .text-muted-xs { color: #909399; font-size: 12px; line-height: 1.5; display: block; margin-top: 4px; }
+    @media screen and (max-width: 700px) {
+        main { width: 98%; }
+    }
+    </style>
+</head>
+<body>
+<main class="main-content">
+<div style="height:2rem;line-height:2rem;display:block;"></div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title gamename"></h4></div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title namecol"></h4></div>
+    <div class="panel-body">
+        <!-- 区服 -->
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <select class="form-control" id="qid" name="qid"></select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-8">
+                <input type="text" class="form-control" id="uid" name="uid"
+                       placeholder="请输入游戏账号或角色名" value="">
+            </div>
+            <div class="col col-md-4">
+                <button class="btn btn-success btn-lookup" style="width:100%">查找玩家</button>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="text" class="form-control" id="userId" name="userId"
+                       readonly style="background:#f5f7fa;color:#606266;"
+                       placeholder="请输入游戏账号或角色名" value="">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="text" class="form-control" id="vippswd" name="vippswd" placeholder="请输入后台密码" value="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 充值/发货币 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">充值 / 发放货币</h4></div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <select class="form-control" id="chargetype" name="chargetype">
+                    <option value="0">请选择货币类型</option>
+                    <option value="2">钻石</option>
+                    <option value="1">银币</option>
+                    <option value="1001">天衍令</option>
+                </select>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input type="number" class="form-control" id="chargenum" name="chargenum"
+                       min="1" max="99999999" onKeyUp="value=value.replace(/[^0-9]+/g,'')"
+                       placeholder="请输入货币数量" value="">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <button class="btn btn-warning sendbtn" style="width:100%">确认充值 / 发放</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 多功能操作面板 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">多功能操作面板</h4></div>
+    <div class="panel-body">
+        <!-- 发送邮件 -->
+        <div id="sendMailContainer" style="display:block;">
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <div id="mailItemId" class="xm-select-demo"></div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <input type="number" class="form-control" id="mailItemNum" name="mailItemNum"
+                           min="1" max="999999" onKeyUp="value=value.replace(/[^0-9]+/g,'')"
+                           placeholder="请输入附件数量（≥ 1）" value="1">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-12">
+                    <button class="btn btn-success sendmailbtn" style="width:100%">发送邮件</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作须知 -->
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <button class="btn btn-danger infobtn" style="width:100%">操作须知（必读）</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 跳转 -->
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4 class="panel-title">授权跳转</h4></div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col col-md-12">
+                <input class="btn btn-block btn-success" value="前往授权" type="button" onclick="window.location.href='../pay'">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-body"><h4 class="text-center text-danger" id="copyright"></h4></div>
+</div>
+</main>
+
+<script>
+var namecol = '';
+var items   = [];
+var mailItemSelect;
+var qid      = '';
+var vippswd  = '';
+
+$('#qid').on('change', function () { qid = $(this).val(); });
+$('#vippswd').on('change keyup blur', function () { vippswd = $.trim($(this).val()); });
+
+// ========== 通用：请求 query.php（CDK 玩家后台专用） ==========
+function postProxy(action, extra, okMsg, cb, requireTargetUserId) {
+    if (requireTargetUserId !== false) requireTargetUserId = true;
+
+    var cdkUid   = $.trim($('#uid').val());
+    var pwd      = $.trim($('#vippswd').val());
+    var targetId = $.trim($('#userId').val());
+
+    if (!cdkUid) { layer.alert('请输入角色UID', { icon: 2 }); $('#uid').focus(); return false; }
+    if (!pwd)    { layer.alert('请输入后台密码', { icon: 2 }); $('#vippswd').focus(); return false; }
+    if (!qid)    { layer.alert('请选择区服', { icon: 2 }); return false; }
+    if (requireTargetUserId) {
+        if (!targetId) {
+            layer.alert('请先点击「查找玩家（精确匹配）」并成功锁定 UserId 后，再进行此操作', { icon: 2 });
+            return false;
+        }
+    }
+
+    var data = $.extend(
+        { action: action, qid: qid, uid: cdkUid, pswd: pwd },
+        requireTargetUserId ? { target_userid: targetId } : {},
+        extra || {}
+    );
+    $.post('query.php', data, function (text) {
+        if (!text || typeof text.errno === 'undefined') {
+            try { text = typeof text === 'string' ? JSON.parse(text) : text; } catch (e) {
+                layer.alert('返回格式异常：' + JSON.stringify(text), { icon: 2 }); return;
+            }
+        }
+        if (text.errno == 0) {
+            var msg = (okMsg ? okMsg : '') + (text.message || '');
+            if (cb) cb(text); else layer.alert(msg || '操作成功', { icon: 1 });
+        } else {
+            layer.alert(text.message || ('失败 errno=' + text.errno), { icon: 2 });
+        }
+    }, 'json').fail(function (xhr) { layer.alert('请求失败 HTTP ' + xhr.status, { icon: 2 }); });
+}
+
+$(document).ready(function () {
+    $.get('getitems.php', function (text, status) {
+        $(document).attr("title", text.gamename + '-玩家后台');
+        $('.gamename').html(text.gamename + '-玩家物品后台');
+        namecol = text.namecol;
+        $('.namecol').html(namecol);
+        $('#copyright').html(text.copyright);
+        $('#uid').attr('placeholder', '请输入' + text.namecol + '（你的 CDK 授权账号）');
+
+        var html = '';
+        for (var x in text.qus) {
+            html = '<option value="' + x + '">' + text.qus[x] + '</option>';
+            $('#qid').append(html);
+        }
+        qid = $('#qid').val();
+        items = text.items;
+
+        // 发送邮件：附件 xmSelect（去掉"无附件"，单人邮件必填）
+        var mailItems = items.map(function (it) {
+            return { value: it.value, name: (it.name || '') + '（ID=' + it.value + '）' };
+        });
+        mailItemSelect = xmSelect.render({
+            el: '#mailItemId',
+            tips: '请选择物品',
+            empty: '呀, 没有选择物品呢',
+            searchTips: '你要找什么物品?(模糊搜索)',
+            theme: { color: '#1e9fff' },
+            filterable: true,
+            radio: true,
+            clickClose: true,
+            paging: true,
+            pageSize: 50,
+            filterMethod: function (val, item) { return (item.name || '').indexOf(val) != -1; },
+            data: mailItems,
+            initValue: []
+        });
+    }, 'json');
+});
+
+// ================ 查找玩家（取顶部面板 #uid 输入框的值做精确匹配 → 锁定到下面一行的 #userId 只读框） ================
+$('.btn-lookup').on('click', function () {
+    var accountName = $.trim($('#uid').val());
+    if (!accountName) { layer.alert('请输入游戏账号或角色名', { icon: 2 }); $('#uid').focus(); return; }
+    $('#userId').val('');
+    postProxy('lookup_player', { account: accountName }, null, function (data) {
+        var list = data.list || (data && data.roles ? data.roles : []);
+        if (!list.length) {
+            layer.alert('没有找到符合条件的玩家（必须精确完整输入游戏账号或角色名，区分大小写）', { icon: 2 });
+            return;
+        }
+        var p   = list[0];
+        var uid = String(p.userId || '');
+        if (!uid) { layer.alert('返回结果缺少 userId', { icon: 2 }); return; }
+        $('#userId').val(uid);
+        layer.alert('查找成功，已锁定 UserId = ' + uid + '（角色名=' + (p.name || '-') + '，等级=' + (p.level || '1') + '）', { icon: 1 });
+    }, false);
+});
+
+	$('.infobtn').on('click',function(){
+			layer.alert('进行上面操作之前请先认真看此说明!<br>1.充值元宝自动到账！<br>2.发物品邮件领取！', {icon: 0});
+　　});
+
+// 充值/发货币（requireTargetUserId 默认 true → 必须先锁定 userId）
+$('.sendbtn').on('click', function () {
+    var chargetype = $.trim($('#chargetype').val());
+    if (chargetype === '' || chargetype === '0') {
+        layer.alert('请选择货币类型', { icon: 2 }); $('#chargetype').focus(); return;
+    }
+    var chargenum = $.trim($('#chargenum').val());
+    if (chargenum === '' || isNaN(chargenum) || parseInt(chargenum) < 1) {
+        layer.alert('请输入正确的货币数量（正整数 ≥ 1）', { icon: 2 }); $('#chargenum').focus(); return;
+    }
+    postProxy('sendmoney', { chargetype: chargetype, chargenum: chargenum });
+});
+
+// 发送邮件（带附件，标题/正文由 config.php 控制）
+$('.sendmailbtn').on('click', function () {
+    var midVal = mailItemSelect ? mailItemSelect.getValue('valueStr') : '';
+    var mid    = parseInt(midVal) || 0;
+    var rawNum = $.trim($('#mailItemNum').val());
+    var mnum   = (rawNum === '' || rawNum === null || rawNum === undefined) ? 0 : (parseInt(rawNum) || 0);
+    if (mid <= 0) { layer.alert('单人邮件必须选择附件', { icon: 2 }); return; }
+    if (mnum < 1) { layer.alert('已选择附件（ID=' + mid + '），请填写附件数量（必须 ≥ 1）', { icon: 2 }); $('#mailItemNum').focus(); return; }
+    var attachments = [{ id: mid, count: mnum }];
+    postProxy('sendmail', { attachments: JSON.stringify(attachments) });
+});
+
+// 屏蔽右键/F12/控制台快捷键
+window.onload = function () {
+    document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        if (e.keyCode == 123) return false;
+        else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) return false;
+    };
+    document.oncontextmenu = function () { return false; };
+};
+</script>
+</body>
+</html>

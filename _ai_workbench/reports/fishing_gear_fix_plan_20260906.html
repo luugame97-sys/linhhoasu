@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ke hoach sua cuong hoa can va be</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-k-ho-ch-s-a-c-ng-h-a-c-n-c-u-v-b">Session Report — kế hoạch sửa cường hóa cần câu và bè</h1>
+<p>Ngày 06/09/2026. <strong>Phiên này lập kế hoạch theo audit đã xác nhận, chưa sửa source, triển khai hoặc thay dữ liệu người chơi.</strong> Bằng chứng nguồn: <a href="fishing_gear_audit_20260906.html">audit cường hóa</a>, snapshot07:24:34 UTC+7.</p>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<p>Thứ tự đề xuất: sửa hợp đồng thao tác/chi phí → chuyển bậc/chỉ số/tối đa → hiệu ứng bè → kiểm thử đầy đủ → triển khai S2 rồi S1. Chỉ sửa logic cho thao tác mới; không tự hạ cấp, thu hồi chỉ số, hoàn tiền hoặc phát bù cho lịch sử.</p>
+<h3 id="giai-o-n-1-th-ng-nh-t-thao-t-c-v-chi-ph">Giai đoạn 1 — thống nhất thao tác và chi phí</h3>
+<p>Tạo một bộ xử lý dùng chung cho cần/bè, lấy giới hạn và giá từ FishRodGradeConfig/FishRaftGradeConfig hiện có. Không đổi giá hoặc tỉ lệ cân bằng trong công việc này.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Trạng thái</th>
+<th>Thao tác được phép</th>
+<th>Chi phí và kết quả dự kiến</th>
+</tr></thead><tbody>
+<tr>
+<td>Chưa tới cấp trần của bậc</td>
+<td>Cường hóa thường/nhanh</td>
+<td>Dùng Ngư Tệ68; tăng exp, đủ thanh thì tăng cấp và bắt đầu thanh tiếp theo</td>
+</tr>
+<tr>
+<td>Đã tới cấp trần nhưng exp chưa đầy</td>
+<td>Cường hóa thường/nhanh để hoàn thành thanh cuối</td>
+<td>Vẫn dùng68; giữ nguyên cấp, tăng exp tới giới hạn; tuyệt đối không tự đổi sang trừ69</td>
+</tr>
+<tr>
+<td>Đã tới cấp trần và exp đầy, còn bậc tiếp theo</td>
+<td>Chỉ thao tác nâng bậc</td>
+<td>Dùng tinh thể69 đúng gradeUpCost; tăng bậc, bắt đầu cấp1/exp0 theo native</td>
+</tr>
+<tr>
+<td>Bậc cuối đã hoàn thành cấp và thanh exp cuối</td>
+<td>Tối đa</td>
+<td>Không trừ gì, không có nút nâng; server từ chối mọi yêu cầu nâng thêm</td>
+</tr>
+</tbody></table></div>
+<p>Client sẽ gửi rõ ý định nâng thường, nâng nhanh hay nâng bậc, kèm trạng thái đã nhìn thấy. Server kiểm lại trước khi trừ; request cũ/chậm không được tự chuyển thành một giao dịch khác loại tiền. Validate upgradeAll đúng kiểu, không coi chuỗi “false” là nâng nhanh.</p>
+<p>Nâng nhanh chỉ hoàn thành thanh/cấp kế tiếp như UI hiện tại, hoặc dùng phần Ngư Tệ hiện có để tăng exp tương ứng; không tự chạy xuyên sang nâng bậc. Khi đạt thanh cuối, dừng và chờ người chơi chủ động chọn nâng bậc.</p>
+<p>Ví dụ dựa trên state nicky trong audit, không phải thao tác đã thực hiện:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Đồ</th>
+<th>Đang có</th>
+<th>Sau bản sửa, bước kế tiếp đúng với UI</th>
+</tr></thead><tbody>
+<tr>
+<td>Cần</td>
+<td>Bậc2/cấp20/exp0</td>
+<td>Nạp đủ200 exp bằng200 Ngư Tệ; sau đó mới có thể chủ động dùng30 tinh thể lên bậc3/cấp1</td>
+</tr>
+<tr>
+<td>Bè</td>
+<td>Bậc1/cấp10/exp0</td>
+<td>Nạp đủ100 exp bằng100 Ngư Tệ; sau đó mới có thể chủ động dùng15 tinh thể lên bậc2/cấp1</td>
+</tr>
+</tbody></table></div>
+<p>Ví dụ giữ nguyên cấu hình hiện hành và không khuyên mua thêm tinh thể khi lỗi chưa sửa. Nếu hết tinh thể, trạng thái sẵn sàng nâng bậc phải được giữ sau relog, không làm mất thanh exp đã nạp.</p>
+<h3 id="giai-o-n-2-c-p-thu-c-t-nh-v-tr-ng-th-i-t-i-a">Giai đoạn 2 — cấp, thuộc tính và trạng thái tối đa</h3>
+<ul>
+<li>Khi thao tác nâng bậc mới thành công: dùng cấp nội bậc1/exp0 như native preview, không mang cấp của bậc cũ sang cộng lần nữa.</li>
+<li>Kiểm fullLevelAttrs đã chứa tích lũy trước đó; so mọi mốc để việc chuyển bậc đúng không làm giảm tổng chỉ số. Không sửa theo cảm tính chỉ một rank.</li>
+<li>Chỉ số xem trước, phản hồi server, BattleService và payload đăng nhập phải cho cùng kết quả.</li>
+<li>Mốc rank10/cấp1400 và thanh cuối dùng một điều kiện MAX thống nhất; nút, thanh exp, thông báo và server cùng hiểu một trạng thái.</li>
+<li>Kiểm riêng dữ liệu legacy đã chạm trần nhưng exp0: trước khi phát hành phải thống kê có ai từng được coi là hoàn tất hay không. Không tự buộc một trạng thái đã hoàn tất lịch sử trả thêm phí; trường hợp cần chuyển đổi phải có preview và quyết định riêng.</li>
+</ul>
+<h3 id="giai-o-n-3-hi-u-ng-b-v-ph-m-vi-gi-i-h-n">Giai đoạn 3 — hiệu ứng bè và phạm vi giới hạn</h3>
+<ul>
+<li>Bổ sung attrs104 của bậc bè vào xác suất tiết kiệm mồi phụ khi bè/tính năng thực sự đã mở.</li>
+<li>Cộng cùng dòng tẩy104, giữ cap25% của bảng riêng hiện tại; không cho hưởng bonus bè khi chưa mở.</li>
+<li>Test xác suất theo điểm biên xác định: bè bậc10 có15%, kết hợp dòng tẩy6% là21%, không nhầm thành được miễn chắc chắn mỗi lượt.</li>
+<li>Bonus101 Hải thần tiếp tục theo công thức đã dùng. Tập trung, sức mạnh, cá lớn, hiệu suất mồi/di vật/sự kiện ngoài các lỗi đã xác nhận cần audit riêng, không hứa sửa toàn bộ RNG trong gói này.</li>
+</ul>
+<h3 id="giai-o-n-4-b-o-v-giao-d-ch-v-d-li-u-c">Giai đoạn 4 — bảo vệ giao dịch và dữ liệu đã có</h3>
+<ul>
+<li>Có mã giao dịch và kiểm phiên bản/trạng thái; gửi lại không bị trừ hoặc nâng lần hai. Tái sử dụng mô hình biên nhận đã có cho tẩy/hộp, không thay global queue.</li>
+<li>Tính trước cost/state trên bản sao, lưu inventory + state + biên nhận cùng lần save xác nhận. Chỉ trả thành công sau save; khi null/timeout/throw không tái sử dụng state chưa rõ đã commit.</li>
+<li>Giữ nguyên rank/level/exp và chỉ số của đồ hiện có khi tải nhân vật; không chạy normalizer hạ cấp hàng loạt.</li>
+<li>Ví dụ cần2/20 hiện tại vẫn là2/20 sau triển khai. Chỉ khi người chơi thực hiện nâng bậc mới, bộ xử lý mới áp quy tắc chuyển bậc.</li>
+<li>Lịch sử từng bị trừ sai loại tiền hoặc giữ sai cấp được ghi nhận riêng. Không tự hoàn tiền, thu hồi hoặc điều chỉnh vì user hiện không yêu cầu đền bù.</li>
+</ul>
+<h3 id="giai-o-n-5-ki-m-th-v-tri-n-khai">Giai đoạn 5 — kiểm thử và triển khai</h3>
+<ol>
+<li>Làm candidate từ source production đã kiểm hash; backup đúng file trước khi sửa.</li>
+<li>Chạy matrix2 loại ×10 bậc: trước trần, chạm trần, exp thiếu1, đầy exp, chuyển bậc, cuối cùng MAX.</li>
+<li>Mỗi trường hợp kiểm tiền0/thiếu1/vừa đủ/dư, nâng thường/nhanh/nâng bậc, boolean sai, click đôi, request chậm, retry sau relog và save null/throw.</li>
+<li>Chạy native functions thật trong VM để so nút hiển thị, cost preview, chỉ số và ACK; giữ phân biệt push4010 và ACK4010.</li>
+<li>Hồi quy mồi FIFO, tẩy/hộp, đơn có vé, linh hồn reserve, giữ cá/stat và ngoại quan để không phá các bản sửa trước.</li>
+<li>Staging trên VPS trước; đạt kiểm tra mới phát hành S2 rồi S1. Chỉ restart hai tiến trình game, không dist/admin/bot worker/DB.</li>
+<li>Dùng nhân vật QA riêng qua WebSocket, DB/relog; nghiệm thu UI native. Chỉ thử giữ QA xuyên restart trong cửa sổ triển khai phù hợp, không restart thêm hệ thống người chơi chỉ để có một dấu PASS.</li>
+<li>Hậu kiểm hash, listener/HTTP/WSready, log, PID của dịch vụ ngoài phạm vi; dọn đúng QA và cập nhật MD/HTML. Có rollback source, không rollback document người chơi đang hoạt động từ snapshot cũ.</li>
+</ol>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="thay-i-trong-phi-n-l-p-k-ho-ch">Đã thay đổi trong phiên lập kế hoạch</h3>
+<ul>
+<li>Tạo báo cáo kế hoạch này và bản HTML.</li>
+<li>Cập nhật <code>_ai_workbench/reports/session_report.md</code> và <code>.html</code>.</li>
+<li>Backup báo cáo cũ: <code>_ai_workbench/backups/fishing_gear_plan_reports_20260906/</code>.</li>
+<li>Không sửa code/config, không remote mutation, gameplay, deploy, restart hoặc bù.</li>
+</ul>
+<h3 id="d-ki-n-khi-tri-n-khai">Dự kiến khi triển khai</h3>
+<ul>
+<li><code>src/handlers/fish.js</code>: validate input, chuyển tiếp sang bộ xử lý, ACK và sync.</li>
+<li>Một helper hẹp cho nâng cần/bè, ưu tiên trong <code>src/services/</code>; không refactor các module khác.</li>
+<li><code>src/services/FishingBalanceService.js</code> / <code>FishingIntegrityService.js</code>: bonus bè/cap và giao dịch chỉ khi cần.</li>
+<li><code>src/handlers/playerPayload.js</code> và <code>BattleService.js</code>: chỉ chỉnh những điểm cần đồng nhất state/chỉ số, không thay công thức ngoài phạm vi.</li>
+<li>Client <code>main.min_a6195824.js</code> và cachekey ở <code>index.html</code>: tách thao tác, request id/state, MAX và thông báo.</li>
+<li>Tests/tools/evidence mới đều trong <code>_ai_workbench/</code>; candidate dùng cây snapshot, không upload toàn bộ source local.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi đã xác nhận</th>
+<th>Sửa dự kiến</th>
+<th>Điều kiện chấp nhận</th>
+</tr></thead><tbody>
+<tr>
+<td>Nút68 nhưng server đòi/trừ69</td>
+<td>Tách ý định thao tác, cùng điều kiện cấp+exp</td>
+<td>Không giao dịch nào trừ khác loại đang xác nhận</td>
+</tr>
+<tr>
+<td>Exp tại cap không nạp được</td>
+<td>Cho hoàn thành thanh cuối bằng68</td>
+<td>Cần/bè đang kẹt có thể tăng exp mà không cần69</td>
+</tr>
+<tr>
+<td>GradeUp giữ cấp cũ, chỉ số vượt preview</td>
+<td>Cấp nội bậc mới1, tính base đúng</td>
+<td>Preview=ACK=combat=payload relog</td>
+</tr>
+<tr>
+<td>MAX server/UI khác nhau</td>
+<td>Dùng terminal state thống nhất</td>
+<td>HiệnMAX đúng, mọi request sauMAX không trừ gì</td>
+</tr>
+<tr>
+<td>Bè104 chưa miễn mồi</td>
+<td>Cộng bonus khi mở đúng, chung cap hiện hành</td>
+<td>Fixed-RNG chứng minh hiệu lực, không hưởng khi chưa mở</td>
+</tr>
+<tr>
+<td>upgradeAll truthy</td>
+<td>Validate kiểu</td>
+<td>“false” dạngchuỗi không gây bulk consume</td>
+</tr>
+<tr>
+<td>Nguy cơ sửa lịch sử làm giảm stat</td>
+<td>Không migration tự động</td>
+<td>Nạp/relog sau deploy không đổi đồ cũ</td>
+</tr>
+</tbody></table></div>
+<p>Không gặp hoặc fix lỗi source mới trong lượt lập kế hoạch. Bằng chứng bug vẫn là audit trước, không có kết quả triển khai mới.</p>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Chỉ so final save là chưa đủ: đúng tiền đang hiển thị, loại thao tác và state trước khi người chơi bấm cũng là điều kiện an toàn.</li>
+<li>Sửa logic cho thao tác tương lai và sửa document lịch sử là hai phạm vi khác nhau. Một yêu cầu sửa bug không tự cho phép hạ rank/level hoặc thu hồi tài sản lịch sử.</li>
+<li>Terminal state cần thống nhất client/server và chú ý legacy, không chỉ chặn rank lớn hơn10.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Kế hoạch đã lập, dựa trên27 probe audit và native/config đã đọc. Chưa chạy test sửa mới hoặc live QA.</li>
+<li>Không refresh số liệu người chơi trong lượt này. Ví dụ nicky và số profile ảnh hưởng là snapshot07:24, không trình bày như trạng thái live mới.</li>
+<li>Chưa thay source, DB, client, giá hoặc cân bằng. Bản lỗi được audit vẫn chưa được fix bởi phiên kế hoạch này.</li>
+<li>Khuyến nghị triển khai gói sửa logic an toàn trước, giữ nguyên dữ liệu lịch sử và không đền bù.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<p>Khi user yêu cầu bắt đầu: lấy baseline production mới, tạo candidate và testRED từ các probe trước; sửa giai đoạn1–3 rồi hoàn thành các chốt giao dịch/QA ở giai đoạn4–5. Nếu xuất hiện yêu cầu chuyển đổi dữ liệu legacy ngoài nguyên tắc giữ nguyên, dừng riêng nhánh đó để xin quyết định; không trì hoãn các phần sửa an toàn độc lập.</p></main></body></html>

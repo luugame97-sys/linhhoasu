@@ -1,0 +1,244 @@
+{
+  "_table": "TempleBaseConfig",
+  "_rows": 39,
+  "_type": "object",
+  "_firstKeys": "(obj)[celebrateTime|freeFireworkNum|celebrateDay|defaultFireworkText|fightTime]",
+  "_sample": [
+    {
+      "celebrateTime": [
+        73800,
+        77400
+      ]
+    },
+    {
+      "freeFireworkNum": 3
+    },
+    {
+      "celebrateDay": [
+        6,
+        7
+      ]
+    }
+  ],
+  "data": {
+    "celebrateTime": [
+      73800,
+      77400
+    ],
+    "freeFireworkNum": 3,
+    "celebrateDay": [
+      6,
+      7
+    ],
+    "defaultFireworkText": [
+      30080300,
+      30080301,
+      30080302,
+      30080303,
+      30080304,
+      30080305,
+      30080306
+    ],
+    "fightTime": [
+      43200,
+      82800
+    ],
+    "fightCD": 30,
+    "fightMasterReward": [
+      {
+        "id": 11226,
+        "count": 1
+      },
+      {
+        "id": 136,
+        "count": 100
+      }
+    ],
+    "fightPosition": {
+      "x": 2007,
+      "y": 1894
+    },
+    "randomTask": 1,
+    "visiblePlayerNum": 10,
+    "visibleNPCNum": 6,
+    "mapLabelPosition": [
+      {
+        "x": 1571,
+        "y": 1018,
+        "label": 30080321
+      },
+      {
+        "x": 2015,
+        "y": 1893,
+        "label": 30080322
+      },
+      {
+        "x": 3060,
+        "y": 1569,
+        "label": 30080323
+      },
+      {
+        "x": 2273,
+        "y": 1065,
+        "label": 30080324
+      },
+      {
+        "x": 1032,
+        "y": 1537,
+        "label": 30080325
+      },
+      {
+        "x": 944,
+        "y": 2232,
+        "label": 30080326
+      },
+      {
+        "x": 807,
+        "y": 3199,
+        "label": 30080327
+      }
+    ],
+    "miniMapRes": "minimap_temple",
+    "miniMapName": 30080320,
+    "bigMapRes": "temple_bm_map",
+    "rankSettle": 82800,
+    "fireworkMaxCharNum": 15,
+    "manNormalTalk": [
+      30080310,
+      30080311,
+      30080312,
+      30080313,
+      30080314,
+      30080315,
+      30080316,
+      30080317,
+      30080318,
+      30080319
+    ],
+    "npcRewardsTime": 5,
+    "extraFireworkCost": {
+      "id": 1,
+      "count": 50
+    },
+    "guessOpen": 8,
+    "guessDay": [
+      6,
+      7
+    ],
+    "guessFightTime": 8,
+    "guessTime": [
+      [
+        43200,
+        54008
+      ],
+      [
+        57600,
+        68408
+      ],
+      [
+        72000,
+        82808
+      ]
+    ],
+    "lastGuessContinue": 1800,
+    "festivalCelebrateOpen": 1771171200000,
+    "festivalCelebrateClose": 1771516800000,
+    "festivalCelebrateTime": [
+      72000,
+      18000
+    ],
+    "festivalFireworkText": [
+      30080026,
+      30080027,
+      30080028,
+      30080029,
+      30080030,
+      30080031,
+      30080032,
+      30080033,
+      30080034,
+      30080035,
+      30080036,
+      30080037,
+      30080038,
+      30080039,
+      30080040,
+      30080041,
+      30080042,
+      30080043,
+      30080044,
+      30080045
+    ],
+    "festivalFreeFireworkNum": 6,
+    "festivalFireworkRewards": [
+      {
+        "id": 136,
+        "count": 15
+      }
+    ],
+    "festivalFireworkCost": [
+      {
+        "id": 1,
+        "count": 50
+      }
+    ],
+    "festivalGiftOpen": 1771257600000,
+    "festivalGiftClose": 1771516800000,
+    "festivalGiftNum": 10,
+    "festivalGiftPoint": [
+      {
+        "x": 1930,
+        "y": 1164
+      },
+      {
+        "x": 2559,
+        "y": 1331
+      },
+      {
+        "x": 1004,
+        "y": 1843,
+        "type": 1
+      },
+      {
+        "x": 1019,
+        "y": 2805,
+        "type": 1
+      },
+      {
+        "x": 1746,
+        "y": 3177,
+        "type": 1
+      },
+      {
+        "x": 2802,
+        "y": 2946
+      },
+      {
+        "x": 2922,
+        "y": 2439
+      },
+      {
+        "x": 1406,
+        "y": 1445,
+        "type": 1
+      },
+      {
+        "x": 3015,
+        "y": 1921
+      },
+      {
+        "x": 2005,
+        "y": 2228,
+        "type": 1
+      }
+    ],
+    "festivalGiftContent": [
+      {
+        "id": 94721,
+        "count": 1
+      }
+    ],
+    "weekFireworkRes": "sp_ui_miaohui_tyyh",
+    "festivalFireworkRes": "sp_ui_miaohui_mnyh"
+  }
+}

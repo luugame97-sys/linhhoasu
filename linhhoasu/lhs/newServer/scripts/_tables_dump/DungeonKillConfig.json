@@ -1,0 +1,64 @@
+{
+  "_table": "DungeonKillConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,times,killedSin,notKilledSin",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "times": 1,
+        "killedSin": 5,
+        "notKilledSin": 3
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "times": 2,
+        "killedSin": 10,
+        "notKilledSin": 6
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "times": 3,
+        "killedSin": 15,
+        "notKilledSin": 9
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "times": 1,
+      "killedSin": 5,
+      "notKilledSin": 3
+    },
+    "2": {
+      "id": 2,
+      "times": 2,
+      "killedSin": 10,
+      "notKilledSin": 6
+    },
+    "3": {
+      "id": 3,
+      "times": 3,
+      "killedSin": 15,
+      "notKilledSin": 9
+    },
+    "4": {
+      "id": 4,
+      "times": 4,
+      "killedSin": 30,
+      "notKilledSin": 18
+    },
+    "5": {
+      "id": 5,
+      "times": 5,
+      "killedSin": 40,
+      "notKilledSin": 24
+    }
+  }
+}

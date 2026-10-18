@@ -1,0 +1,103 @@
+{
+  "_table": "CrossRivalSceneItemConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "id,attTime,income,resetTime,initialNum,assistRate,sin,prohibitRadius,name",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "attTime": 10,
+        "income": 50,
+        "resetTime": 30,
+        "initialNum": 10,
+        "assistRate": -1,
+        "sin": 3,
+        "prohibitRadius": 0,
+        "name": 30104521
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "attTime": 15,
+        "income": 150,
+        "resetTime": 60,
+        "initialNum": 4,
+        "assistRate": -1,
+        "sin": 6,
+        "prohibitRadius": 0,
+        "name": 30104522
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "attTime": 10,
+        "income": 120,
+        "resetTime": 1800,
+        "initialNum": 6,
+        "assistRate": 5000,
+        "sin": 15,
+        "prohibitRadius": 250,
+        "name": 30104523
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "attTime": 10,
+      "income": 50,
+      "resetTime": 30,
+      "initialNum": 10,
+      "assistRate": -1,
+      "sin": 3,
+      "prohibitRadius": 0,
+      "name": 30104521
+    },
+    "2": {
+      "id": 2,
+      "attTime": 15,
+      "income": 150,
+      "resetTime": 60,
+      "initialNum": 4,
+      "assistRate": -1,
+      "sin": 6,
+      "prohibitRadius": 0,
+      "name": 30104522
+    },
+    "3": {
+      "id": 3,
+      "attTime": 10,
+      "income": 120,
+      "resetTime": 1800,
+      "initialNum": 6,
+      "assistRate": 5000,
+      "sin": 15,
+      "prohibitRadius": 250,
+      "name": 30104523
+    },
+    "4": {
+      "id": 4,
+      "attTime": 10,
+      "income": 0,
+      "resetTime": 300,
+      "initialNum": 1,
+      "assistRate": -1,
+      "sin": 15,
+      "prohibitRadius": 336,
+      "name": 30104524
+    },
+    "5": {
+      "id": 5,
+      "attTime": -1,
+      "income": -1,
+      "resetTime": 60,
+      "initialNum": 12,
+      "assistRate": 5000,
+      "sin": 30,
+      "prohibitRadius": 0
+    }
+  }
+}

@@ -1,0 +1,1135 @@
+{
+  "_table": "DoubleTowerSkillTargetConfig",
+  "_rows": 71,
+  "_type": "object",
+  "_firstKeys": "id,targetType,enemy,occupation,rangeType,numLimit,includeTarget",
+  "_sample": [
+    {
+      "110100020": {
+        "id": 110100020,
+        "targetType": [
+          1
+        ],
+        "enemy": 1,
+        "occupation": 0,
+        "rangeType": 2,
+        "numLimit": -1,
+        "includeTarget": 1
+      }
+    },
+    {
+      "110100021": {
+        "id": 110100021,
+        "targetType": [
+          1
+        ],
+        "enemy": 1,
+        "occupation": 0,
+        "rangeType": 2,
+        "numLimit": 1,
+        "includeTarget": 0
+      }
+    },
+    {
+      "110101020": {
+        "id": 110101020,
+        "targetType": [
+          1
+        ],
+        "enemy": 1,
+        "occupation": 3,
+        "rangeType": 2,
+        "numLimit": -1,
+        "includeTarget": 1
+      }
+    }
+  ],
+  "data": {
+    "110100020": {
+      "id": 110100020,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110100021": {
+      "id": 110100021,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": 1,
+      "includeTarget": 0
+    },
+    "110101020": {
+      "id": 110101020,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 3,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110102020": {
+      "id": 110102020,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 2,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110103020": {
+      "id": 110103020,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 1,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110104020": {
+      "id": 110104020,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 4,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110105020": {
+      "id": 110105020,
+      "targetType": [
+        1
+      ],
+      "enemy": 1,
+      "occupation": 5,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110200020": {
+      "id": 110200020,
+      "targetType": [
+        1
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110201020": {
+      "id": 110201020,
+      "targetType": [
+        1
+      ],
+      "enemy": 2,
+      "occupation": 3,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110202020": {
+      "id": 110202020,
+      "targetType": [
+        1
+      ],
+      "enemy": 2,
+      "occupation": 2,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110203020": {
+      "id": 110203020,
+      "targetType": [
+        1
+      ],
+      "enemy": 2,
+      "occupation": 1,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110204020": {
+      "id": 110204020,
+      "targetType": [
+        1
+      ],
+      "enemy": 2,
+      "occupation": 4,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "110205020": {
+      "id": 110205020,
+      "targetType": [
+        1
+      ],
+      "enemy": 2,
+      "occupation": 5,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "120100020": {
+      "id": 120100020,
+      "targetType": [
+        2
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "120200020": {
+      "id": 120200020,
+      "targetType": [
+        2
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "130100010": {
+      "id": 130100010,
+      "targetType": [
+        3,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "130100020": {
+      "id": 130100020,
+      "targetType": [
+        3,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "130200010": {
+      "id": 130200010,
+      "targetType": [
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "130200020": {
+      "id": 130200020,
+      "targetType": [
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "140100010": {
+      "id": 140100010,
+      "targetType": [
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "140100020": {
+      "id": 140100020,
+      "targetType": [
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "140200010": {
+      "id": 140200010,
+      "targetType": [
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "140200020": {
+      "id": 140200020,
+      "targetType": [
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "150100010": {
+      "id": 150100010,
+      "targetType": [
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "150100020": {
+      "id": 150100020,
+      "targetType": [
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "150200010": {
+      "id": 150200010,
+      "targetType": [
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "150200020": {
+      "id": 150200020,
+      "targetType": [
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "160100020": {
+      "id": 160100020,
+      "targetType": [
+        1,
+        2
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "160200020": {
+      "id": 160200020,
+      "targetType": [
+        1,
+        2
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "170100010": {
+      "id": 170100010,
+      "targetType": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "170100020": {
+      "id": 170100020,
+      "targetType": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "170200010": {
+      "id": 170200010,
+      "targetType": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "170200020": {
+      "id": 170200020,
+      "targetType": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "180100010": {
+      "id": 180100010,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "180100020": {
+      "id": 180100020,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "180200010": {
+      "id": 180200010,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "180200011": {
+      "id": 180200011,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": 1,
+      "includeTarget": 1
+    },
+    "180200015": {
+      "id": 180200015,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": 5,
+      "includeTarget": 1
+    },
+    "180200020": {
+      "id": 180200020,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "180201011": {
+      "id": 180201011,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        800,
+        1000
+      ],
+      "numLimit": 1,
+      "includeTarget": 1
+    },
+    "180202011": {
+      "id": 180202011,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        50,
+        50
+      ],
+      "numLimit": 1,
+      "includeTarget": 1
+    },
+    "190100010": {
+      "id": 190100010,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "190100020": {
+      "id": 190100020,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "190200010": {
+      "id": 190200010,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "190200011": {
+      "id": 190200011,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": 1,
+      "includeTarget": 1
+    },
+    "190200012": {
+      "id": 190200012,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": 2,
+      "includeTarget": 1
+    },
+    "190200015": {
+      "id": 190200015,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": 5,
+      "includeTarget": 1
+    },
+    "190200020": {
+      "id": 190200020,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "190300020": {
+      "id": 190300020,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 0,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "190400020": {
+      "id": 190400020,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 0,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "200300020": {
+      "id": 200300020,
+      "targetType": [
+        5
+      ],
+      "enemy": 3,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210100010": {
+      "id": 210100010,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210100020": {
+      "id": 210100020,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200010": {
+      "id": 210200010,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200011": {
+      "id": 210200011,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        101
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200012": {
+      "id": 210200012,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        102
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200013": {
+      "id": 210200013,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        103
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200014": {
+      "id": 210200014,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        101,
+        102
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200015": {
+      "id": 210200015,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        101,
+        103
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200016": {
+      "id": 210200016,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        102,
+        103
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200017": {
+      "id": 210200017,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "buffState": [
+        101,
+        102,
+        103
+      ],
+      "buffStateSelection": 2,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "210200020": {
+      "id": 210200020,
+      "targetType": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "220100010": {
+      "id": 220100010,
+      "targetType": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "220100020": {
+      "id": 220100020,
+      "targetType": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "220200010": {
+      "id": 220200010,
+      "targetType": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        150,
+        150
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "220200020": {
+      "id": 220200020,
+      "targetType": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "230100020": {
+      "id": 230100020,
+      "targetType": [
+        6
+      ],
+      "enemy": 1,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "230200020": {
+      "id": 230200020,
+      "targetType": [
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": -1,
+      "includeTarget": 1
+    },
+    "230200021": {
+      "id": 230200021,
+      "targetType": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 2,
+      "numLimit": 5,
+      "includeTarget": 1
+    },
+    "230200022": {
+      "id": 230200022,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        800,
+        1000
+      ],
+      "numLimit": 3,
+      "includeTarget": 1
+    },
+    "230200023": {
+      "id": 230200023,
+      "targetType": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "enemy": 2,
+      "occupation": 0,
+      "rangeType": 1,
+      "rangeSize": [
+        800,
+        1000
+      ],
+      "numLimit": -1,
+      "includeTarget": 1
+    }
+  }
+}

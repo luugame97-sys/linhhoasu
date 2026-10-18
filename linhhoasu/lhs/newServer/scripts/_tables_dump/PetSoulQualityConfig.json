@@ -1,0 +1,114 @@
+{
+  "_table": "PetSoulQualityConfig",
+  "_rows": 5,
+  "_type": "object",
+  "_firstKeys": "quality,point,refiningCost,special,unlockConditions",
+  "_sample": [
+    {
+      "3": {
+        "quality": 3,
+        "point": 10,
+        "refiningCost": {
+          "id": 261,
+          "count": 10
+        },
+        "special": 0,
+        "unlockConditions": [
+          5
+        ]
+      }
+    },
+    {
+      "4": {
+        "quality": 4,
+        "point": 15,
+        "refiningCost": {
+          "id": 261,
+          "count": 12
+        },
+        "special": 0,
+        "unlockConditions": [
+          5
+        ]
+      }
+    },
+    {
+      "5": {
+        "quality": 5,
+        "point": 25,
+        "refiningCost": {
+          "id": 261,
+          "count": 15
+        },
+        "special": 0,
+        "unlockConditions": [
+          5
+        ]
+      }
+    }
+  ],
+  "data": {
+    "3": {
+      "quality": 3,
+      "point": 10,
+      "refiningCost": {
+        "id": 261,
+        "count": 10
+      },
+      "special": 0,
+      "unlockConditions": [
+        5
+      ]
+    },
+    "4": {
+      "quality": 4,
+      "point": 15,
+      "refiningCost": {
+        "id": 261,
+        "count": 12
+      },
+      "special": 0,
+      "unlockConditions": [
+        5
+      ]
+    },
+    "5": {
+      "quality": 5,
+      "point": 25,
+      "refiningCost": {
+        "id": 261,
+        "count": 15
+      },
+      "special": 0,
+      "unlockConditions": [
+        5
+      ]
+    },
+    "6": {
+      "quality": 6,
+      "point": 80,
+      "refiningCost": {
+        "id": 261,
+        "count": 20
+      },
+      "special": 1,
+      "unlockConditions": [
+        5,
+        10
+      ]
+    },
+    "7": {
+      "quality": 7,
+      "point": 150,
+      "refiningCost": {
+        "id": 261,
+        "count": 25
+      },
+      "special": 1,
+      "unlockConditions": [
+        5,
+        10
+      ]
+    }
+  }
+}

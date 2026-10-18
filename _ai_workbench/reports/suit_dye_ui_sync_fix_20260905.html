@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fix hiển thị thời trang sau nhuộm màu - Linh Họa Sư</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="fix-hi-n-th-th-i-trang-sau-nhu-m-m-u-05-09-2026">Fix hiển thị thời trang sau nhuộm màu — 05/09/2026</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Sửa <code>handleSuitColorUnlock</code> để sau khi nhuộm thành công gửi full Fashion state qua tag <code>1800</code> trước response <code>1803</code>.</li>
+<li>Áp dụng cả nhánh mở màu mới và nhánh bấm lại màu đã sở hữu.</li>
+<li>Giữ nguyên logic ownership, cost và persistence; màu đã sở hữu không bị trừ nguyên liệu lần hai.</li>
+<li>Triển khai production S2 rồi S1 và chạy E2E suit <code>29030</code>, màu <code>2 – Thương Minh Thám Nhược</code>.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<ul>
+<li>Source chính: <code>linhhoasu/lhs/newServer/src/handlers/fashion.js</code>.</li>
+<li>Tool test/deploy/E2E đặt trong <code>_ai_workbench/tools/</code>.</li>
+<li>Evidence deploy: <code>_ai_workbench/temp/suit_dye_ui_sync_fix_deploy_20260905_012109.json</code>.</li>
+<li>Health cuối: <code>_ai_workbench/temp/appearance_postdeploy_health_20260905_012835.json</code>.</li>
+<li>Audit state sau deploy: <code>_ai_workbench/temp/suit_dye_audit_20260905_012913.json</code>.</li>
+<li>Backup production: <code>/linhhoasu/_ai_workbench/backups/suit_dye_ui_sync_fix_20260905_012109/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+<th>Cách tránh lặp lại</th>
+</tr></thead><tbody>
+<tr>
+<td>Nhuộm xong vẫn thấy khóa</td>
+<td>Response chỉ có <code>1202 + 1803</code>; client chưa nhận component mới trong <code>activateFashion</code></td>
+<td>Thêm <code>1800</code> với <code>fashionData</code> và full <code>activateFashion</code></td>
+<td>Contract bắt buộc <code>1800</code> sau mọi unlock màu</td>
+</tr>
+<tr>
+<td>Bấm lại màu đã có vẫn cần tự đồng bộ</td>
+<td>Nhánh early-return chỉ trả <code>1803</code></td>
+<td>Trả <code>1800 + 1803</code>, không trừ cost</td>
+<td>Test idempotency và packet order</td>
+</tr>
+<tr>
+<td>Dễ chỉ kiểm DB mà bỏ sót UI model</td>
+<td>Server state đúng nhưng cache client cũ</td>
+<td>Fixture mô phỏng client trước/sau packet</td>
+<td>Test cả persistence và state client</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-n-ng-kinh-nghi-m-m-i">4. Kỹ năng / kinh nghiệm mới</h2>
+<ul>
+<li>Packet <code>1800</code> phải đến trước callback <code>1803</code> để callback dispatch refresh trên state mới.</li>
+<li>Với thao tác idempotent, server vẫn nên tự heal state client mà không tái trừ nguyên liệu.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<ul>
+<li>Hash <code>fashion.js</code>: trước <code>c7665133…</code>, sau <code>4573ce53…</code>; hash production khớp local.</li>
+<li>Fixture màu 2: response tags <code>[1202,1800,1803]</code>, client ownership <code>false → true</code> ngay trong phiên.</li>
+<li>Bấm lại màu đã có: <code>[1800,1803]</code>, chi phí lần hai bằng 0.</li>
+<li>E2E S1: 16/16 PASS; trừ đúng <code>118×40</code>, khóa biến mất ngay, persist/relog đúng, cleanup 0.</li>
+<li>Full ngoại quan: 2.192 ID/234 assertion PASS; 56 suit, 37 màu, 54 bước sao PASS.</li>
+<li>Activity 7: 58 assertion PASS; core contract: 714 bảng PASS.</li>
+<li>S1/S2 ready 200, PM2 online, bot 580/580, quái 2.466 ×2, invalid 0, error log rỗng.</li>
+<li>Audit state S1/S2: affected 0; suit 29030 sở hữu đủ màu 0/1/2, không partial.</li>
+</ul>
+<h2 id="6-b-c-ti-p-theo">6. Bước tiếp theo</h2>
+<ol>
+<li>Người chơi Ctrl+F5 hoặc đóng/mở game một lần để nạp code server mới.</li>
+<li>Lần nhuộm tiếp theo, khóa màu phải biến mất ngay mà không cần relog.</li>
+<li>Bấm lại màu đã sở hữu để xác nhận không mất thêm Ngọc Hoa Nhiễm.</li>
+</ol></main></body></html>

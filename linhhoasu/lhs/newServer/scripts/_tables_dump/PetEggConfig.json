@@ -1,0 +1,78 @@
+{
+  "_table": "PetEggConfig",
+  "_rows": 3,
+  "_type": "object",
+  "_firstKeys": "id,pools",
+  "_sample": [
+    {
+      "24": {
+        "id": 24,
+        "pools": [
+          {
+            "id": 1001,
+            "weight": 100
+          }
+        ]
+      }
+    },
+    {
+      "25": {
+        "id": 25,
+        "pools": [
+          {
+            "id": 1002,
+            "weight": 100
+          }
+        ],
+        "consume": {
+          "id": 1,
+          "count": 100
+        }
+      }
+    },
+    {
+      "26": {
+        "id": 26,
+        "pools": [
+          {
+            "id": 1003,
+            "weight": 100
+          }
+        ]
+      }
+    }
+  ],
+  "data": {
+    "24": {
+      "id": 24,
+      "pools": [
+        {
+          "id": 1001,
+          "weight": 100
+        }
+      ]
+    },
+    "25": {
+      "id": 25,
+      "pools": [
+        {
+          "id": 1002,
+          "weight": 100
+        }
+      ],
+      "consume": {
+        "id": 1,
+        "count": 100
+      }
+    },
+    "26": {
+      "id": 26,
+      "pools": [
+        {
+          "id": 1003,
+          "weight": 100
+        }
+      ]
+    }
+  }
+}

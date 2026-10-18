@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dựng nền Server 2 private canary</title>
+<style>
+:root{--bg:#eef3f6;--card:#fff;--ink:#1f2937;--muted:#64748b;--line:#d9e2e8;--brand:#155e75;--code:#edf4f6}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Segoe UI",Arial,sans-serif}
+main{max-width:1120px;margin:28px auto;padding:38px 48px;background:var(--card);border-radius:18px;box-shadow:0 10px 35px #0f172a14}
+h1{font-size:30px;color:#0f4c5c;border-bottom:3px solid #8dd3df;padding-bottom:10px;margin-top:48px} h1:first-child{margin-top:0}
+h2{font-size:22px;color:var(--brand);margin-top:32px} h3{font-size:18px;color:#334155} p{margin:9px 0}
+ul,ol{padding-left:24px} li{margin:4px 0} code{background:var(--code);padding:2px 5px;border-radius:5px;color:#0f4c5c}
+pre{overflow:auto;background:#102a33;color:#e6f4f1;padding:16px;border-radius:10px} pre code{background:none;color:inherit;padding:0}
+.table-wrap{overflow:auto;margin:14px 0} table{border-collapse:collapse;width:100%;min-width:620px} th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top} th{background:#e8f4f6;color:#164e63}
+hr{border:0;border-top:1px solid var(--line);margin:38px 0} a{color:#0369a1} strong{color:#0f172a}
+@media(max-width:720px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:25px}}
+</style></head><body><main><h1 id="session-report-d-ng-n-n-server-2-private-canary">Session Report — Dựng nền Server 2 private canary</h1>
+<h2 id="1-t-m-t-t-c-ng-vi-c">1. Tóm tắt công việc</h2>
+<ul>
+<li>Đã tạo database <code>lhs_s1002</code> và seed duy nhất cấu hình S2 (<code>serverId=1002</code>, <code>running=false</code>, <code>status=0</code>).</li>
+<li>Đã bật riêng process <code>lhs-s1002</code> để kiểm tra boot/health, chưa public server list, chưa thêm Nginx route và chưa cho client vào.</li>
+<li>S2 dùng WS <code>127.0.0.1:9201</code>, HTTP <code>127.0.0.1:8083</code>, <code>AGENT_HTTP_PORT=0</code>; bot S2 chưa bật.</li>
+<li>Đã thêm bind loopback cho HTTP node phụ; S1 vẫn giữ bind và process hiện tại.</li>
+<li>Chưa tạo account/player S2, chưa copy dữ liệu S1, chưa phát quà hay giao dịch.</li>
+</ul>
+<h2 id="2-file-th-m-c-thay-i">2. File/thư mục đã thay đổi</h2>
+<h3 id="production">Production</h3>
+<ul>
+<li><code>/linhhoasu/lhs/newServer/ecosystem.config.js</code>: bật block <code>lhs-s1002</code> private, WS 9201, HTTP 8083, agent tắt, WS path dự kiến <code>/ws-s2</code>.</li>
+<li><code>/linhhoasu/lhs/newServer/src/net/HTTPServer.js</code>: hỗ trợ host bind theo node.</li>
+<li><code>/linhhoasu/lhs/newServer/src/app.js</code>: node <code>SERVER_ID=1002</code> bind HTTP loopback.</li>
+<li>MongoDB: tạo DB <code>lhs_s1002</code> và một bản ghi <code>gameservers</code> S2 với <code>running=false</code>, <code>status=0</code>.</li>
+</ul>
+<h3 id="tool-evidence">Tool/evidence</h3>
+<ul>
+<li><code>_ai_workbench/tools/seed_server2_private.js</code>: seed idempotent cấu hình S2.</li>
+<li><code>_ai_workbench/tools/audit_server2_remote.sh</code>: audit PM2/port/DB/Nginx read-only.</li>
+<li><code>_ai_workbench/temp/server2_private_boot_20260903/evidence.json</code>.</li>
+<li>Backup: <code>/linhhoasu/_ai_workbench/backups/server2_private_boot_pre_20260903/</code>.</li>
+</ul>
+<h2 id="3-l-i-g-p-gi-i-ph-p">3. Lỗi đã gặp &amp; giải pháp</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Lỗi/rủi ro</th>
+<th>Nguyên nhân</th>
+<th>Cách xử lý</th>
+</tr></thead><tbody>
+<tr>
+<td>HTTP S2 ban đầu bind <code>0.0.0.0:8083</code></td>
+<td>HTTPServer hard-code host 0.0.0.0</td>
+<td>Thêm host bind và ép <code>SERVER_ID=1002</code> về <code>127.0.0.1</code></td>
+</tr>
+<tr>
+<td>DB S2 rỗng có thể seed nhầm 12 server</td>
+<td><code>initializeDefaults()</code> seed toàn bộ khi collection trống</td>
+<td>Seed trước đúng một row S2, để app bỏ qua default seed</td>
+</tr>
+<tr>
+<td>S2 có thể bị hiểu là đã mở</td>
+<td>Process online không đồng nghĩa public</td>
+<td>Giữ <code>running=false</code>, không Nginx route, kiểm tra TCP ngoài VPS thất bại</td>
+</tr>
+</tbody></table></div>
+<h2 id="4-k-t-qu-ki-m-tra">4. Kết quả kiểm tra</h2>
+<ul>
+<li><code>lhs-s1002</code>: online, restart count 3 sau các lần nạp cấu hình private; không có crash loop.</li>
+<li>WS: <code>127.0.0.1:9201</code>.</li>
+<li>HTTP: <code>127.0.0.1:8083</code>.</li>
+<li>S2 <code>/ready</code>: HTTP 200, Mongo/Redis healthy.</li>
+<li>S1 <code>/ready</code>: HTTP 200.</li>
+<li>Từ máy ngoài VPS: TCP <code>8083=false</code>, <code>9201=false</code>.</li>
+<li>Nginx chưa có <code>/ws-s2</code>; <code>/ws</code> S1 giữ nguyên.</li>
+<li>DB S2: 0 account, 0 player; chỉ một cấu hình server S2 <code>running=false/status=0</code>.</li>
+<li><code>lhs-s1001</code>, <code>lhs-real-bots</code>, <code>lhs-dist</code>, <code>lhs-admin</code> không bị restart trong bước dựng S2.</li>
+</ul>
+<h2 id="5-tr-ng-th-i-hi-n-t-i">5. Trạng thái hiện tại</h2>
+<p><strong>S2 đã được dựng nền và đang chạy private canary. Người chơi chưa thể thấy hoặc vào S2.</strong></p>
+<p>Không được coi process online là đã mở server.</p>
+<h2 id="6-gate-m-l-c-17-00-ng-y-04-09-2026">6. Gate mở lúc 17:00 ngày 04/09/2026</h2>
+<p>Lịch mới: <code>openTime=1788516000000</code>, tương ứng 17:00 ngày 04/09/2026 theo múi giờ Asia/Bangkok (UTC+7). Trước khi mở public cần hoàn thành: identity/auth dùng chung; route server list trả endpoint S2 riêng; Nginx <code>/ws-s2</code>; WebGM/admin theo server; native login → tạo nhân vật → vào thành chính; relog/restart; mail/Webshop/Donate/Giftcode; soak 30–60 phút. Chỉ sau đó mới đặt <code>running=true</code>, <code>status=1</code>.</p>
+<h2 id="7-rollback">7. Rollback</h2>
+<ol>
+<li>Đặt <code>running=false</code> (đang là false).</li>
+<li>Dừng riêng <code>lhs-s1002</code>.</li>
+<li>Gỡ route <code>/ws-s2</code> nếu đã thêm.</li>
+<li>Khôi phục source/config từ backup; giữ DB S2 để không mất dữ liệu.</li>
+</ol>
+<h2 id="8-evidence">8. Evidence</h2>
+<ul>
+<li><code>_ai_workbench/temp/server2_private_boot_20260903/evidence.json</code>.</li>
+</ul></main></body></html>

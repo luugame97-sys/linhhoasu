@@ -1,0 +1,106 @@
+{
+  "_table": "FlappyManMountConfig",
+  "_rows": 2,
+  "_type": "object",
+  "_firstKeys": "id,appearance,unlock,attrs,control,collider,speedMultiple,controlDec,name",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "appearance": 22111,
+        "unlock": -1,
+        "attrs": [
+          700,
+          1800
+        ],
+        "control": 1,
+        "collider": [
+          [
+            60,
+            110
+          ],
+          [
+            106,
+            20
+          ]
+        ],
+        "speedMultiple": 1,
+        "controlDec": 30080188,
+        "name": 30080191
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "appearance": 22112,
+        "unlock": 5000,
+        "attrs": [
+          4480,
+          2240
+        ],
+        "control": 2,
+        "collider": [
+          [
+            60,
+            110
+          ],
+          [
+            106,
+            36
+          ]
+        ],
+        "speedMultiple": 1.5,
+        "controlDec": 30080189,
+        "name": 30080192
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "appearance": 22111,
+      "unlock": -1,
+      "attrs": [
+        700,
+        1800
+      ],
+      "control": 1,
+      "collider": [
+        [
+          60,
+          110
+        ],
+        [
+          106,
+          20
+        ]
+      ],
+      "speedMultiple": 1,
+      "controlDec": 30080188,
+      "name": 30080191
+    },
+    "2": {
+      "id": 2,
+      "appearance": 22112,
+      "unlock": 5000,
+      "attrs": [
+        4480,
+        2240
+      ],
+      "control": 2,
+      "collider": [
+        [
+          60,
+          110
+        ],
+        [
+          106,
+          36
+        ]
+      ],
+      "speedMultiple": 1.5,
+      "controlDec": 30080189,
+      "name": 30080192
+    }
+  }
+}

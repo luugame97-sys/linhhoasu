@@ -1,0 +1,86 @@
+{
+  "_table": "PlantTiredConfig",
+  "_rows": 11,
+  "_type": "object",
+  "_firstKeys": "tired,addTired,timeValue",
+  "_sample": [
+    {
+      "0": {
+        "tired": 0,
+        "addTired": 1,
+        "timeValue": 0.2
+      }
+    },
+    {
+      "6": {
+        "tired": 6,
+        "addTired": 1,
+        "timeValue": 0.4
+      }
+    },
+    {
+      "11": {
+        "tired": 11,
+        "addTired": 2,
+        "timeValue": 0.8
+      }
+    }
+  ],
+  "data": {
+    "0": {
+      "tired": 0,
+      "addTired": 1,
+      "timeValue": 0.2
+    },
+    "6": {
+      "tired": 6,
+      "addTired": 1,
+      "timeValue": 0.4
+    },
+    "11": {
+      "tired": 11,
+      "addTired": 2,
+      "timeValue": 0.8
+    },
+    "21": {
+      "tired": 21,
+      "addTired": 2,
+      "timeValue": 1.2
+    },
+    "31": {
+      "tired": 31,
+      "addTired": 3,
+      "timeValue": 1.6
+    },
+    "46": {
+      "tired": 46,
+      "addTired": 4,
+      "timeValue": 2
+    },
+    "66": {
+      "tired": 66,
+      "addTired": 5,
+      "timeValue": 4
+    },
+    "91": {
+      "tired": 91,
+      "addTired": 6,
+      "timeValue": 8
+    },
+    "121": {
+      "tired": 121,
+      "addTired": 8,
+      "timeValue": 12
+    },
+    "161": {
+      "tired": 161,
+      "addTired": 10,
+      "timeValue": 24
+    },
+    "200": {
+      "tired": 200,
+      "addTired": 10,
+      "timeValue": 48
+    }
+  }
+}

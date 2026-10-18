@@ -1,0 +1,14 @@
+'use strict';
+const fs=require('fs'),path=require('path'),zlib=require('zlib'),assert=require('assert');
+const {BinJsonUtil,ByteArray}=require('../../linhhoasu/lhs/newServer/src/protocol/BinJsonUtil');
+const ROOT=path.resolve(__dirname,'../..');
+const FILES=['linhhoasu/webgame/game/update/resource/assets/excel/config_fashion_20260909.bin','linhhoasu/lhs/update/resource/assets/excel/config_fashion_20260909.bin','linhhoasu/webgame/game/update/resource/assets/excel/config_e5ac72c2.bin','linhhoasu/lhs/update/resource/assets/excel/config_e5ac72c2.bin'].map(p=>path.join(ROOT,p));
+function decode(b){const t=[];let o=0;while(o<b.length){const s=o,n=b[o++],name=b.toString('utf8',o,o+n);o+=n;const len=b.readUInt32BE(o);o+=4;const raw=b.subarray(o,o+len);o+=len;let x;try{x=zlib.inflateSync(raw);}catch(e){console.error('BAD_CHUNK',name,'start',s,'len',len,'head',raw.subarray(0,8).toString('hex'));throw e;}t.push({name,raw:b.subarray(s,o),value:BinJsonUtil.readFullJson(new ByteArray(x.buffer.slice(x.byteOffset,x.byteOffset+x.byteLength)))});}assert.equal(o,b.length);return t;}
+function chunk(name,v){const n=Buffer.from(name),o=new ByteArray(undefined,1024*1024);BinJsonUtil.json2bin(v,o);const c=zlib.deflateSync(Buffer.from(o.buffer),{level:6}),h=Buffer.alloc(1+n.length+4);h.writeUInt8(n.length);n.copy(h,1);h.writeUInt32BE(c.length,1+n.length);return Buffer.concat([h,c]);}
+function transform(name,v){const div=name==='ArenaDayRankRewardConfig'?10:2;return Object.fromEntries(Object.entries(v).map(([k,row])=>[k,{...row,rewards:row.rewards.map(r=>r.id===100097?{...r,count:r.count/div}:{...r})}]));}
+function verify(d,w){assert.equal(d[1].rewards.find(r=>r.id===100097).count,10);assert.equal(w[1].rewards.find(r=>r.id===100097).count,30);}
+let first; const pending=[];
+for(const f of FILES){const ts=decode(fs.readFileSync(f));let d,w;const out=ts.map(t=>{if(t.name==='ArenaDayRankRewardConfig'){d=transform(t.name,t.value);return chunk(t.name,d);}if(t.name==='ArenaWeeklyRankRewardConfig'){w=transform(t.name,t.value);return chunk(t.name,w);}return t.raw;});verify(d,w);const candidate=Buffer.concat(out);try{decode(candidate);}catch(e){console.error('CANDIDATE_INVALID',f,e.message);throw e;}verify(decode(candidate).find(t=>t.name==='ArenaDayRankRewardConfig').value,decode(candidate).find(t=>t.name==='ArenaWeeklyRankRewardConfig').value);pending.push([f,candidate]);if(!first)first={d,w};}
+for(const [f,candidate] of pending){fs.writeFileSync(f,candidate);console.log('patched',f);}
+for(const [file,data] of [['ArenaDayRankRewardConfig.json',first.d],['ArenaWeeklyRankRewardConfig.json',first.w]]){const p=path.join(ROOT,'linhhoasu/lhs/newServer/scripts/_tables_dump',file),j=JSON.parse(fs.readFileSync(p,'utf8'));j.data=data;fs.writeFileSync(p,JSON.stringify(j,null,2)+'\n');}
+console.log('ARENA_GEM10_COUNTS_PATCH_PASS');

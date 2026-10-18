@@ -1,0 +1,549 @@
+{
+  "_table": "ItemWayConfig",
+  "_rows": 76,
+  "_type": "object",
+  "_firstKeys": "id,systemId,name,sceneId,isClose",
+  "_sample": [
+    {
+      "1": {
+        "id": 1,
+        "systemId": 305,
+        "name": 30000030,
+        "sceneId": 401,
+        "isClose": 1
+      }
+    },
+    {
+      "2": {
+        "id": 2,
+        "systemId": 306,
+        "name": 30000031,
+        "sceneId": 402,
+        "isClose": 1
+      }
+    },
+    {
+      "3": {
+        "id": 3,
+        "systemId": 307,
+        "name": 30000032,
+        "sceneId": 403,
+        "isClose": 1
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "id": 1,
+      "systemId": 305,
+      "name": 30000030,
+      "sceneId": 401,
+      "isClose": 1
+    },
+    "2": {
+      "id": 2,
+      "systemId": 306,
+      "name": 30000031,
+      "sceneId": 402,
+      "isClose": 1
+    },
+    "3": {
+      "id": 3,
+      "systemId": 307,
+      "name": 30000032,
+      "sceneId": 403,
+      "isClose": 1
+    },
+    "4": {
+      "id": 4,
+      "systemId": 301,
+      "name": 30000033,
+      "sceneId": 301,
+      "isClose": 1
+    },
+    "5": {
+      "id": 5,
+      "systemId": 303,
+      "name": 30000034,
+      "sceneId": 201,
+      "isClose": 1
+    },
+    "6": {
+      "id": 6,
+      "systemId": 304,
+      "name": 30000035,
+      "sceneId": 2021,
+      "isClose": 1
+    },
+    "7": {
+      "id": 7,
+      "systemId": 108,
+      "name": 30000036,
+      "sceneId": 13,
+      "value": 0,
+      "isClose": 1
+    },
+    "8": {
+      "id": 8,
+      "systemId": 108,
+      "name": 30000036,
+      "sceneId": 13,
+      "value": 1,
+      "isClose": 1
+    },
+    "9": {
+      "id": 9,
+      "systemId": 108,
+      "name": 30000036,
+      "sceneId": 13,
+      "value": 2,
+      "isClose": 1
+    },
+    "10": {
+      "id": 10,
+      "name": 30000037,
+      "isClose": 0
+    },
+    "11": {
+      "id": 11,
+      "name": 30000038,
+      "isClose": 0
+    },
+    "12": {
+      "id": 12,
+      "name": 30000039,
+      "isClose": 0
+    },
+    "13": {
+      "id": 13,
+      "systemId": 311,
+      "name": 30000084,
+      "sceneId": 204,
+      "isClose": 1
+    },
+    "14": {
+      "id": 14,
+      "name": 30000041,
+      "sceneId": 14,
+      "value": 3,
+      "isClose": 0
+    },
+    "15": {
+      "id": 15,
+      "systemId": 311,
+      "name": 30000040,
+      "sceneId": 2041,
+      "isClose": 0
+    },
+    "16": {
+      "id": 16,
+      "systemId": 108,
+      "name": 30000036,
+      "sceneId": 13,
+      "value": 3,
+      "isClose": 1
+    },
+    "17": {
+      "id": 17,
+      "systemId": 312,
+      "name": 30000042,
+      "sceneId": 404,
+      "isClose": 1
+    },
+    "18": {
+      "id": 18,
+      "systemId": 215,
+      "name": 30000043,
+      "sceneId": 508,
+      "isClose": 1
+    },
+    "19": {
+      "id": 19,
+      "systemId": 317,
+      "name": 30000044,
+      "sceneId": 408,
+      "isClose": 1
+    },
+    "20": {
+      "id": 20,
+      "systemId": 316,
+      "name": 30000045,
+      "sceneId": 407,
+      "isClose": 1
+    },
+    "21": {
+      "id": 21,
+      "systemId": 303,
+      "name": 30000046,
+      "sceneId": 2015,
+      "isClose": 1
+    },
+    "22": {
+      "id": 22,
+      "systemId": 304,
+      "name": 30000048,
+      "sceneId": 2021,
+      "isClose": 1
+    },
+    "23": {
+      "id": 23,
+      "name": 30000049,
+      "isClose": 0
+    },
+    "24": {
+      "id": 24,
+      "systemId": 313,
+      "name": 30000064,
+      "sceneId": 405,
+      "isClose": 1
+    },
+    "25": {
+      "id": 25,
+      "systemId": 321,
+      "name": 30000065,
+      "sceneId": 410,
+      "isClose": 1
+    },
+    "26": {
+      "id": 26,
+      "name": 30000081,
+      "isClose": 0
+    },
+    "27": {
+      "id": 27,
+      "name": 30000082,
+      "isClose": 0
+    },
+    "28": {
+      "id": 28,
+      "name": 30000083,
+      "isClose": 1
+    },
+    "29": {
+      "id": 29,
+      "systemId": 228,
+      "name": 30000129,
+      "sceneId": 51164,
+      "isClose": 0
+    },
+    "30": {
+      "id": 30,
+      "name": 30000132,
+      "isClose": 0
+    },
+    "31": {
+      "id": 31,
+      "name": 30000135,
+      "isClose": 0
+    },
+    "32": {
+      "id": 32,
+      "systemId": 231,
+      "name": 30000136,
+      "sceneId": 20652,
+      "value": 1,
+      "isClose": 0
+    },
+    "33": {
+      "id": 33,
+      "systemId": 231,
+      "name": 30000137,
+      "sceneId": 20652,
+      "value": 2,
+      "isClose": 0
+    },
+    "34": {
+      "id": 34,
+      "systemId": 232,
+      "name": 30000152,
+      "sceneId": 2064,
+      "isClose": 0
+    },
+    "35": {
+      "id": 35,
+      "name": 30000153,
+      "isClose": 0
+    },
+    "36": {
+      "id": 36,
+      "name": 30000154,
+      "isClose": 0
+    },
+    "37": {
+      "id": 37,
+      "systemId": 122,
+      "name": 30000155,
+      "sceneId": 14,
+      "value": 0,
+      "isClose": 0
+    },
+    "100": {
+      "id": 100,
+      "name": 30000068,
+      "isClose": 0
+    },
+    "101": {
+      "id": 101,
+      "name": 30000069,
+      "isClose": 0
+    },
+    "102": {
+      "id": 102,
+      "name": 30000070,
+      "isClose": 0
+    },
+    "103": {
+      "id": 103,
+      "name": 30000076,
+      "isClose": 0
+    },
+    "104": {
+      "id": 104,
+      "systemId": 323,
+      "name": 30000088,
+      "sceneId": 41212,
+      "isClose": 0
+    },
+    "105": {
+      "id": 105,
+      "systemId": 323,
+      "name": 30000087,
+      "sceneId": 4125,
+      "isClose": 0
+    },
+    "106": {
+      "id": 106,
+      "systemId": 104,
+      "name": 30000118,
+      "sceneId": 5,
+      "isClose": 0
+    },
+    "107": {
+      "id": 107,
+      "name": 30000119,
+      "isClose": 0
+    },
+    "108": {
+      "id": 108,
+      "name": 30000120,
+      "isClose": 0
+    },
+    "109": {
+      "id": 109,
+      "name": 30000121,
+      "isClose": 0
+    },
+    "110": {
+      "id": 110,
+      "name": 30000122,
+      "isClose": 0
+    },
+    "111": {
+      "id": 111,
+      "name": 30000124,
+      "isClose": 0
+    },
+    "112": {
+      "id": 112,
+      "systemId": 230,
+      "name": 30000125,
+      "sceneId": 2054,
+      "isClose": 0
+    },
+    "113": {
+      "id": 113,
+      "systemId": 230,
+      "name": 30000126,
+      "sceneId": 2056,
+      "isClose": 1
+    },
+    "114": {
+      "id": 114,
+      "name": 30000128,
+      "isClose": 0
+    },
+    "115": {
+      "id": 115,
+      "name": 30000130,
+      "isClose": 0
+    },
+    "116": {
+      "id": 116,
+      "systemId": 231,
+      "name": 30000138,
+      "sceneId": 2065,
+      "isClose": 1
+    },
+    "117": {
+      "id": 117,
+      "systemId": 316,
+      "name": 30000139,
+      "sceneId": 407,
+      "isClose": 1
+    },
+    "118": {
+      "id": 118,
+      "name": 30000144,
+      "isClose": 0
+    },
+    "119": {
+      "id": 119,
+      "name": 30000146,
+      "isClose": 0
+    },
+    "120": {
+      "id": 120,
+      "name": 30000147,
+      "isClose": 0
+    },
+    "121": {
+      "id": 121,
+      "name": 30000148,
+      "isClose": 0
+    },
+    "122": {
+      "id": 122,
+      "name": 30000149,
+      "isClose": 0
+    },
+    "901901": {
+      "id": 901901,
+      "systemId": -100,
+      "name": 30000123,
+      "sceneId": 901901,
+      "value": 19,
+      "isClose": 0
+    },
+    "902701": {
+      "id": 902701,
+      "systemId": -100,
+      "name": 30000086,
+      "sceneId": 902701,
+      "value": 27,
+      "isClose": 0
+    },
+    "903301": {
+      "id": 903301,
+      "systemId": -100,
+      "name": 30000085,
+      "sceneId": 903301,
+      "value": 33,
+      "isClose": 0
+    },
+    "904101": {
+      "id": 904101,
+      "systemId": -100,
+      "name": 30000098,
+      "sceneId": 904101,
+      "value": 41,
+      "isClose": 0
+    },
+    "904901": {
+      "id": 904901,
+      "systemId": -100,
+      "name": 30000099,
+      "sceneId": 904901,
+      "value": 49,
+      "isClose": 0
+    },
+    "3000001": {
+      "id": 3000001,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000001,
+      "isClose": 1
+    },
+    "3000002": {
+      "id": 3000002,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000002,
+      "isClose": 1
+    },
+    "3000003": {
+      "id": 3000003,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000003,
+      "isClose": 1
+    },
+    "3000004": {
+      "id": 3000004,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000004,
+      "isClose": 1
+    },
+    "3000005": {
+      "id": 3000005,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000005,
+      "isClose": 1
+    },
+    "3000006": {
+      "id": 3000006,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000006,
+      "isClose": 1
+    },
+    "3000007": {
+      "id": 3000007,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000007,
+      "isClose": 1
+    },
+    "3000008": {
+      "id": 3000008,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000008,
+      "isClose": 1
+    },
+    "3000009": {
+      "id": 3000009,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000009,
+      "isClose": 1
+    },
+    "3000010": {
+      "id": 3000010,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000010,
+      "isClose": 1
+    },
+    "3000011": {
+      "id": 3000011,
+      "systemId": 108,
+      "name": 30000131,
+      "sceneId": 13,
+      "value": 3,
+      "param": 3000011,
+      "isClose": 1
+    }
+  }
+}

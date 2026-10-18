@@ -1,0 +1,598 @@
+{
+  "_table": "ValhallaFormationConnectConfig",
+  "_rows": 10,
+  "_type": "object",
+  "_firstKeys": "0,1",
+  "_sample": [
+    {
+      "1": {
+        "0": {
+          "level": 1,
+          "dir": 0,
+          "costs": 2,
+          "exchangeOnce": [],
+          "exchangeSpecify": [],
+          "baseAttrs": {
+            "1": 200,
+            "6": 20
+          },
+          "extraAttrs": [],
+          "extraAttrsC": []
+        },
+        "1": {
+          "level": 1,
+          "dir": 1,
+          "costs": 2,
+          "exchangeOnce": [],
+          "exchangeSpecify": [],
+          "baseAttrs": {
+            "1": 200,
+            "5": 20
+          },
+          "extraAttrs": [],
+          "extraAttrsC": []
+        }
+      }
+    },
+    {
+      "2": {
+        "0": {
+          "level": 2,
+          "dir": 0,
+          "costs": 2,
+          "exchangeOnce": [],
+          "exchangeSpecify": [],
+          "baseAttrs": {
+            "1": 400,
+            "6": 40
+          },
+          "extraAttrs": [],
+          "extraAttrsC": []
+        },
+        "1": {
+          "level": 2,
+          "dir": 1,
+          "costs": 2,
+          "exchangeOnce": [],
+          "exchangeSpecify": [],
+          "baseAttrs": {
+            "1": 400,
+            "5": 40
+          },
+          "extraAttrs": [],
+          "extraAttrsC": []
+        }
+      }
+    },
+    {
+      "3": {
+        "0": {
+          "level": 3,
+          "dir": 0,
+          "costs": 3,
+          "extraCosts": 3,
+          "exchangeOnce": [],
+          "exchangeSpecify": [],
+          "baseAttrs": {
+            "1": 800,
+            "6": 80
+          },
+          "extraAttrs": [],
+          "extraAttrsC": []
+        },
+        "1": {
+          "level": 3,
+          "dir": 1,
+          "costs": 3,
+          "extraCosts": 3,
+          "exchangeOnce": [],
+          "exchangeSpecify": [],
+          "baseAttrs": {
+            "1": 800,
+            "5": 80
+          },
+          "extraAttrs": [],
+          "extraAttrsC": []
+        }
+      }
+    }
+  ],
+  "data": {
+    "1": {
+      "0": {
+        "level": 1,
+        "dir": 0,
+        "costs": 2,
+        "exchangeOnce": [],
+        "exchangeSpecify": [],
+        "baseAttrs": {
+          "1": 200,
+          "6": 20
+        },
+        "extraAttrs": [],
+        "extraAttrsC": []
+      },
+      "1": {
+        "level": 1,
+        "dir": 1,
+        "costs": 2,
+        "exchangeOnce": [],
+        "exchangeSpecify": [],
+        "baseAttrs": {
+          "1": 200,
+          "5": 20
+        },
+        "extraAttrs": [],
+        "extraAttrsC": []
+      }
+    },
+    "2": {
+      "0": {
+        "level": 2,
+        "dir": 0,
+        "costs": 2,
+        "exchangeOnce": [],
+        "exchangeSpecify": [],
+        "baseAttrs": {
+          "1": 400,
+          "6": 40
+        },
+        "extraAttrs": [],
+        "extraAttrsC": []
+      },
+      "1": {
+        "level": 2,
+        "dir": 1,
+        "costs": 2,
+        "exchangeOnce": [],
+        "exchangeSpecify": [],
+        "baseAttrs": {
+          "1": 400,
+          "5": 40
+        },
+        "extraAttrs": [],
+        "extraAttrsC": []
+      }
+    },
+    "3": {
+      "0": {
+        "level": 3,
+        "dir": 0,
+        "costs": 3,
+        "extraCosts": 3,
+        "exchangeOnce": [],
+        "exchangeSpecify": [],
+        "baseAttrs": {
+          "1": 800,
+          "6": 80
+        },
+        "extraAttrs": [],
+        "extraAttrsC": []
+      },
+      "1": {
+        "level": 3,
+        "dir": 1,
+        "costs": 3,
+        "extraCosts": 3,
+        "exchangeOnce": [],
+        "exchangeSpecify": [],
+        "baseAttrs": {
+          "1": 800,
+          "5": 80
+        },
+        "extraAttrs": [],
+        "extraAttrsC": []
+      }
+    },
+    "4": {
+      "0": {
+        "level": 4,
+        "dir": 0,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 1
+          }
+        ],
+        "baseAttrs": {
+          "1": 1600,
+          "6": 160
+        },
+        "extraAttrs": {
+          "260": 75
+        },
+        "extraAttrsC": [
+          260
+        ]
+      },
+      "1": {
+        "level": 4,
+        "dir": 1,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 100
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 1
+          }
+        ],
+        "baseAttrs": {
+          "1": 1600,
+          "5": 160
+        },
+        "extraAttrs": {
+          "259": 75
+        },
+        "extraAttrsC": [
+          259
+        ]
+      }
+    },
+    "5": {
+      "0": {
+        "level": 5,
+        "dir": 0,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 2
+          }
+        ],
+        "baseAttrs": {
+          "1": 3200,
+          "6": 320
+        },
+        "extraAttrs": {
+          "260": 100
+        },
+        "extraAttrsC": [
+          260
+        ]
+      },
+      "1": {
+        "level": 5,
+        "dir": 1,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 200
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 2
+          }
+        ],
+        "baseAttrs": {
+          "1": 3200,
+          "5": 320
+        },
+        "extraAttrs": {
+          "259": 100
+        },
+        "extraAttrsC": [
+          259
+        ]
+      }
+    },
+    "6": {
+      "0": {
+        "level": 6,
+        "dir": 0,
+        "costs": 3,
+        "extraCosts": 5,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 400
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 4
+          }
+        ],
+        "baseAttrs": {
+          "1": 6400,
+          "6": 640
+        },
+        "extraAttrs": {
+          "260": 125
+        },
+        "extraAttrsC": [
+          260
+        ]
+      },
+      "1": {
+        "level": 6,
+        "dir": 1,
+        "costs": 3,
+        "extraCosts": 5,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 400
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 4
+          }
+        ],
+        "baseAttrs": {
+          "1": 6400,
+          "5": 640
+        },
+        "extraAttrs": {
+          "259": 125
+        },
+        "extraAttrsC": [
+          259
+        ]
+      }
+    },
+    "7": {
+      "0": {
+        "level": 7,
+        "dir": 0,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 1200
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 12
+          }
+        ],
+        "baseAttrs": {
+          "1": 12800,
+          "6": 1280
+        },
+        "extraAttrs": {
+          "258": 150,
+          "260": 150
+        },
+        "extraAttrsC": [
+          260,
+          258
+        ]
+      },
+      "1": {
+        "level": 7,
+        "dir": 1,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 1200
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 12
+          }
+        ],
+        "baseAttrs": {
+          "1": 12800,
+          "5": 1280
+        },
+        "extraAttrs": {
+          "257": 150,
+          "259": 150
+        },
+        "extraAttrsC": [
+          259,
+          257
+        ]
+      }
+    },
+    "8": {
+      "0": {
+        "level": 8,
+        "dir": 0,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 2500
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 25
+          }
+        ],
+        "baseAttrs": {
+          "1": 25600,
+          "6": 2560
+        },
+        "extraAttrs": {
+          "258": 175,
+          "260": 175
+        },
+        "extraAttrsC": [
+          260,
+          258
+        ]
+      },
+      "1": {
+        "level": 8,
+        "dir": 1,
+        "costs": 2,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 2500
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 25
+          }
+        ],
+        "baseAttrs": {
+          "1": 25600,
+          "5": 2560
+        },
+        "extraAttrs": {
+          "257": 175,
+          "259": 175
+        },
+        "extraAttrsC": [
+          259,
+          257
+        ]
+      }
+    },
+    "9": {
+      "0": {
+        "level": 9,
+        "dir": 0,
+        "costs": 4,
+        "extraCosts": 10,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 5000
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 50
+          }
+        ],
+        "baseAttrs": {
+          "1": 51200,
+          "6": 5120
+        },
+        "extraAttrs": {
+          "258": 200,
+          "260": 200
+        },
+        "extraAttrsC": [
+          260,
+          258
+        ]
+      },
+      "1": {
+        "level": 9,
+        "dir": 1,
+        "costs": 4,
+        "extraCosts": 10,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 5000
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 50
+          }
+        ],
+        "baseAttrs": {
+          "1": 51200,
+          "5": 5120
+        },
+        "extraAttrs": {
+          "257": 200,
+          "259": 200
+        },
+        "extraAttrsC": [
+          259,
+          257
+        ]
+      }
+    },
+    "10": {
+      "0": {
+        "level": 10,
+        "dir": 0,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 20000
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 200
+          }
+        ],
+        "baseAttrs": {
+          "1": 102400,
+          "6": 10240
+        },
+        "extraAttrs": {
+          "258": 225,
+          "260": 225
+        },
+        "extraAttrsC": [
+          260,
+          258
+        ]
+      },
+      "1": {
+        "level": 10,
+        "dir": 1,
+        "exchangeOnce": [
+          {
+            "id": 1,
+            "count": 20000
+          }
+        ],
+        "exchangeSpecify": [
+          {
+            "id": 230,
+            "count": 200
+          }
+        ],
+        "baseAttrs": {
+          "1": 102400,
+          "5": 10240
+        },
+        "extraAttrs": {
+          "257": 225,
+          "259": 225
+        },
+        "extraAttrsC": [
+          259,
+          257
+        ]
+      }
+    }
+  }
+}

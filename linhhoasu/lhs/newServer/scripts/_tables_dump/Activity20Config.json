@@ -1,0 +1,928 @@
+{
+  "_table": "Activity20Config",
+  "_rows": 12,
+  "_type": "object",
+  "_firstKeys": "66101,66102,66103",
+  "_sample": [
+    {
+      "20001": {
+        "66101": {
+          "activityId": 20001,
+          "taskId": 66101,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 666
+            }
+          ],
+          "desc": 20066101,
+          "name": 30033739,
+          "icon": "jbp_bg1",
+          "spine": "sp_ui_facaishu1"
+        },
+        "66102": {
+          "activityId": 20001,
+          "taskId": 66102,
+          "rechargeId": 11000103,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 1666
+            }
+          ],
+          "desc": 20066102,
+          "showMultiple": 555,
+          "name": 30033740,
+          "icon": "jbp_bg1",
+          "spine": "sp_ui_facaishu2"
+        },
+        "66103": {
+          "activityId": 20001,
+          "taskId": 66103,
+          "rechargeId": 11000104,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 3999
+            }
+          ],
+          "desc": 20066103,
+          "showMultiple": 588,
+          "name": 30033741,
+          "icon": "jbp_bg3",
+          "spine": "sp_ui_facaishu3"
+        }
+      }
+    },
+    {
+      "20002": {
+        "66101": {
+          "activityId": 20002,
+          "taskId": 66101,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 666
+            }
+          ],
+          "desc": 20066101,
+          "name": 30033739,
+          "icon": "jbp_bg1",
+          "spine": "sp_ui_facaishu1"
+        },
+        "66102": {
+          "activityId": 20002,
+          "taskId": 66102,
+          "rechargeId": 11000103,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 1666
+            }
+          ],
+          "desc": 20066102,
+          "showMultiple": 555,
+          "name": 30033740,
+          "icon": "jbp_bg1",
+          "spine": "sp_ui_facaishu2"
+        },
+        "66103": {
+          "activityId": 20002,
+          "taskId": 66103,
+          "rechargeId": 11000104,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 3999
+            }
+          ],
+          "desc": 20066103,
+          "showMultiple": 588,
+          "name": 30033741,
+          "icon": "jbp_bg3",
+          "spine": "sp_ui_facaishu3"
+        },
+        "66104": {
+          "activityId": 20002,
+          "taskId": 66104,
+          "rechargeId": 11000105,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 7666
+            }
+          ],
+          "desc": 20066104,
+          "showMultiple": 599,
+          "name": 30033802,
+          "icon": "jbp_bg4",
+          "spine": "sp_ui_facaishu4"
+        }
+      }
+    },
+    {
+      "20003": {
+        "66101": {
+          "activityId": 20003,
+          "taskId": 66101,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 666
+            }
+          ],
+          "desc": 20066101,
+          "name": 30033739,
+          "icon": "jbp_bg1",
+          "spine": "sp_ui_facaishu1"
+        },
+        "66102": {
+          "activityId": 20003,
+          "taskId": 66102,
+          "rechargeId": 11000103,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 1666
+            }
+          ],
+          "desc": 20066102,
+          "showMultiple": 555,
+          "name": 30033740,
+          "icon": "jbp_bg1",
+          "spine": "sp_ui_facaishu2"
+        },
+        "66103": {
+          "activityId": 20003,
+          "taskId": 66103,
+          "rechargeId": 11000104,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 3999
+            }
+          ],
+          "desc": 20066103,
+          "showMultiple": 588,
+          "name": 30033741,
+          "icon": "jbp_bg3",
+          "spine": "sp_ui_facaishu3"
+        },
+        "66104": {
+          "activityId": 20003,
+          "taskId": 66104,
+          "rechargeId": 11000105,
+          "rewards": [
+            {
+              "id": 1,
+              "count": 7666
+            }
+          ],
+          "desc": 20066104,
+          "showMultiple": 599,
+          "name": 30033802,
+          "icon": "jbp_bg4",
+          "spine": "sp_ui_facaishu4"
+        }
+      }
+    }
+  ],
+  "data": {
+    "20001": {
+      "66101": {
+        "activityId": 20001,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20001,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20001,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      }
+    },
+    "20002": {
+      "66101": {
+        "activityId": 20002,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20002,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20002,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20002,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20003": {
+      "66101": {
+        "activityId": 20003,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20003,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20003,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20003,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20004": {
+      "66101": {
+        "activityId": 20004,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20004,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20004,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20004,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20051": {
+      "66101": {
+        "activityId": 20051,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20051,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20051,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      }
+    },
+    "20052": {
+      "66101": {
+        "activityId": 20052,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20052,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20052,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20052,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20053": {
+      "66101": {
+        "activityId": 20053,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20053,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20053,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20053,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20054": {
+      "66101": {
+        "activityId": 20054,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20054,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20054,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20054,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20103": {
+      "66101": {
+        "activityId": 20103,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20103,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20103,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20103,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20153": {
+      "66101": {
+        "activityId": 20153,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20153,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20153,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20153,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20951": {
+      "66101": {
+        "activityId": 20951,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20951,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20951,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20951,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    },
+    "20952": {
+      "66101": {
+        "activityId": 20952,
+        "taskId": 66101,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 666
+          }
+        ],
+        "desc": 20066101,
+        "name": 30033739,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu1"
+      },
+      "66102": {
+        "activityId": 20952,
+        "taskId": 66102,
+        "rechargeId": 11000103,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 1666
+          }
+        ],
+        "desc": 20066102,
+        "showMultiple": 555,
+        "name": 30033740,
+        "icon": "jbp_bg1",
+        "spine": "sp_ui_facaishu2"
+      },
+      "66103": {
+        "activityId": 20952,
+        "taskId": 66103,
+        "rechargeId": 11000104,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 3999
+          }
+        ],
+        "desc": 20066103,
+        "showMultiple": 588,
+        "name": 30033741,
+        "icon": "jbp_bg3",
+        "spine": "sp_ui_facaishu3"
+      },
+      "66104": {
+        "activityId": 20952,
+        "taskId": 66104,
+        "rechargeId": 11000105,
+        "rewards": [
+          {
+            "id": 1,
+            "count": 7666
+          }
+        ],
+        "desc": 20066104,
+        "showMultiple": 599,
+        "name": 30033802,
+        "icon": "jbp_bg4",
+        "spine": "sp_ui_facaishu4"
+      }
+    }
+  }
+}

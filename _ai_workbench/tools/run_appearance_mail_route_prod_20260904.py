@@ -1,0 +1,96 @@
+"""Chạy fixture đường nhận thư ngoại quan trên source production, không kết nối DB."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import shlex
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+import paramiko
+
+
+ROOT = Path(__file__).resolve().parents[1]
+APP = "/linhhoasu/lhs/newServer"
+SERVER_CONFIG = "/linhhoasu/lhs/update/resource/assets/excel/config_e5ac72c2.bin"
+
+
+def run(ssh: paramiko.SSHClient, command: str, timeout: int = 300) -> str:
+    _stdin, stdout, stderr = ssh.exec_command(command, timeout=timeout)
+    output = stdout.read().decode("utf-8", "replace")
+    error = stderr.read().decode("utf-8", "replace")
+    code = stdout.channel.recv_exit_status()
+    if code:
+        raise RuntimeError((error + output)[-24000:])
+    return output
+
+
+def main() -> None:
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except (AttributeError, OSError):
+        pass
+    credentials = Path(
+        os.environ.get("LHS_PROD_CREDENTIAL_FILE", ROOT / "VPS103.116.105.154.txt")
+    ).read_text(encoding="utf-8-sig").splitlines()
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    remote_tool = f"/linhhoasu/_ai_workbench/temp/appearance_mail_route_{stamp}.js"
+    remote_output = f"/linhhoasu/_ai_workbench/temp/appearance_mail_route_{stamp}.json"
+    local_output = ROOT / "temp" / f"appearance_mail_route_prod_{stamp}.json"
+    canonical = ROOT / "temp" / "appearance_mail_route_prod_20260904.json"
+    ssh = paramiko.SSHClient()
+    ssh.load_system_host_keys()
+    ssh.set_missing_host_key_policy(paramiko.RejectPolicy())
+    ssh.connect(
+        credentials[0].strip(), username="root", password=credentials[2],
+        look_for_keys=False, allow_agent=False, timeout=20,
+    )
+    try:
+        sftp = ssh.open_sftp()
+        try:
+            sftp.put(str(ROOT / "tools" / "audit_appearance_mail_route_20260904.js"), remote_tool)
+        finally:
+            sftp.close()
+        env = (
+            f"LHS_APP_ROOT={APP} LHS_CONFIG_PATH={SERVER_CONFIG} "
+            f"LHS_APPEARANCE_MAIL_OUTPUT={remote_output} "
+        )
+        output = run(ssh, f"cd {APP} && {env} node {shlex.quote(remote_tool)}", timeout=360)
+        summary = json.loads(output.strip().splitlines()[-1])
+        sftp = ssh.open_sftp()
+        try:
+            sftp.get(remote_output, str(local_output))
+        finally:
+            sftp.close()
+    finally:
+        try:
+            run(ssh, f"rm -f -- {shlex.quote(remote_tool)} {shlex.quote(remote_output)}")
+        except Exception:
+            pass
+        ssh.close()
+    payload = json.loads(local_output.read_text(encoding="utf-8"))
+    payload["productionEvidence"] = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "app": APP,
+        "config": SERVER_CONFIG,
+        "runnerSummary": summary,
+        "databaseConnected": False,
+    }
+    canonical.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({
+        "result": "PASS",
+        "evidence": str(local_output),
+        "canonical": str(canonical),
+        "sha256": {
+            "evidence": hashlib.sha256(local_output.read_bytes()).hexdigest(),
+            "canonical": hashlib.sha256(canonical.read_bytes()).hexdigest(),
+        },
+        "summary": payload["summary"],
+    }, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()

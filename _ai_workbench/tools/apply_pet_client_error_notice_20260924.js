@@ -1,0 +1,20 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.resolve(__dirname,'../..');
+const bundlePath=path.join(root,'linhhoasu/webgame/game/js/main.min_drop100.js');
+const indexPath=path.join(root,'linhhoasu/webgame/game/index.html');
+const beforeBundle='e16e7570257586a53bea2a26cc144723b5b0b00deef6977957c7e85cb0112106';
+const beforeIndex='b3ab93aede26c185f47b443b2a46f6f2cf0c0f5c511a6fc222b2265619dad0ab';
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+function one(s,o,n,l){if(s.split(o).length-1!==1)throw Error(l+'_ANCHOR_MISMATCH');return s.replace(o,n)}
+let b=fs.readFileSync(bundlePath,'utf8'),i=fs.readFileSync(indexPath,'utf8');
+if(sha(bundlePath)!==beforeBundle||sha(indexPath)!==beforeIndex)throw Error('BASELINE_DRIFT');
+b=one(b,'function(t){if(!t||t.result!==0||!Array.isArray(t.data))return void(l&&l(t));','function(t){if(!t||t.result!==0||!Array.isArray(t.data)){S.ins().showTips(t&&t.msg||"Mở trứng thất bại; trứng được giữ nguyên");return void(l&&l(t))}','egg_notice');
+b=one(b,'function(t){if(!t||t.result!==0||!t.data)return void(c&&c(t));','function(t){if(!t||t.result!==0||!t.data){S.ins().showTips(t&&t.msg||"Ghép thất bại; pet và vật liệu được giữ nguyên");return void(c&&c(t))}','compose_notice');
+b=one(b,'function(t){if(!t||t.result!==0||!t.data)return void(h&&h(t));','function(t){if(!t||t.result!==0||!t.data){S.ins().showTips(t&&t.msg||"Thao tác pet thất bại; dữ liệu được giữ nguyên");return void(h&&h(t))}','eat_notice');
+i=one(i,'js/main.min_drop100.js?v=20260924_pet_result_guard_v1','js/main.min_drop100.js?v=20260924_pet_result_guard_v2','cache_v2');
+fs.writeFileSync(bundlePath,b,'utf8');
+fs.writeFileSync(indexPath,i,'utf8');
+const out={status:'PATCHED_LOCAL_V2',bundle:{before:beforeBundle,after:sha(bundlePath),bytes:Buffer.byteLength(b)},index:{before:beforeIndex,after:sha(indexPath),cacheKey:'20260924_pet_result_guard_v2'},guards:['3300_notice','3302_notice','3311_notice']};
+fs.writeFileSync(path.join(root,'_ai_workbench/temp/pet_client_result_guard_20260924_v2.json'),JSON.stringify(out,null,2)+'\n');
+console.log(JSON.stringify(out,null,2));

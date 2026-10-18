@@ -1,0 +1,9 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs'),path=require('path'),Module=require('module');
+const servicePath=path.resolve(process.argv[2]),app=path.resolve(process.argv[3]),main=fs.readFileSync(process.argv[4],'utf8'),index=fs.readFileSync(process.argv[5],'utf8');
+const original=Module._load;Module._load=function(r,p,i){if(p&&path.resolve(p.filename)===servicePath){if(r==='./ConfigService')return require(path.join(app,'src/services/ConfigService'));if(r==='../logger')return {info(){},warn(){}}}return original.call(this,r,p,i)};const service=require(servicePath);Module._load=original;
+const slots=service.normalizeMonsterSlots([{id:11,x:100,y:100},{id:12,x:200,y:200}],{width:300,height:300});
+assert.equal(slots.length,4);assert.deepEqual(slots.map(x=>x.index),[0,1,2,3]);assert.deepEqual(slots[2],{index:2,id:11,x:164,y:100});assert.deepEqual(slots[3],{index:3,id:12,x:136,y:200});
+const instance=new service.MapMonsterService({resourceRoots:[path.join(app,'..','..','webgame','game','update','resource','assets','map')]});const stats=instance.getStats();assert.equal(stats.mapsLoaded,58);assert.equal(stats.mapsWithMonsters,58);assert.equal(stats.originalSlots,1233);assert.equal(stats.totalSlots,2466);assert.equal(stats.densityMultiplier,2);for(const id of [10001,10024,990008])assert.equal(instance.getSlots(id).length%2,0);
+assert.equal(main.split('cZe.initMapCreeps=function(){if(null!=Fq.animBorns&&!Fq.animBorns._lhsDensity2)').length-1,1);assert.ok(main.includes('Fq.animBorns._lhsDensity2=!0'));assert.equal(main.includes('this.animBorns=(t.animBorns||[]).slice()'),false);assert.ok(/20260904_(?:double_monsters1|task_guide_restore1|auto_equip_new_accounts1|auto_equip_fsm_v3|auto_delegate_clean_v4)/.test(index));assert.ok(main.includes('autoEquipUpgrade'));assert.ok(main.includes('_.onSilentMode=function(){U9.autoConfig.isSilentMode=!U9.autoConfig.isSilentMode}'));
+console.log(JSON.stringify({result:'PASS',checks:16,stats}));
