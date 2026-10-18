@@ -9,6 +9,7 @@ const battle = require('../services/BattleService');
 const playerService = require('../services/PlayerService');
 const rank = require('../services/RankService');
 const arenaReadModel = require('../services/ArenaReadModelService');
+const towerProgress = require('../services/TowerProgressService');
 const { addRewardToPlayer } = require('./raid');
 
 function toSafeInt(value, fallback = 0) {
@@ -187,6 +188,23 @@ function grantTowerSkillChoice(info, floor = 1) {
   info.slotlist = slotlist;
   info.skills = choices;
   info.skillCount = choices.length > 0 ? 1 : 0;
+  return info;
+}
+
+// Add pending bonus picks (one per 10 floors, many after a quick challenge).
+// Keeps the offer already on screen; a new offer is rolled only when none is shown.
+function addTowerSkillChoices(info, count, floor = 1) {
+  if (!info || typeof info !== 'object') return info;
+  const picks = Math.max(0, toSafeInt(count, 0));
+  if (picks <= 0) return info;
+  info.slotlist = normalizeTowerSlotlist(info.slotlist);
+  info.skills = normalizeTowerOptionalSkills(info.skills, info.slotlist);
+  info.skillCount = Math.max(0, toSafeInt(info.skillCount, 0)) + picks;
+  if (info.skills.length <= 0) {
+    const equipped = info.slotlist.map((slot) => normalizeTowerSkillId(slot)).filter((id) => id > 0);
+    info.skills = buildTowerSkillChoices(floor, equipped);
+  }
+  if (info.skills.length <= 0) info.skillCount = 0;
   return info;
 }
 
@@ -384,7 +402,8 @@ async function handleTowerSelectSkill(params, session, msgUid) {
       data: buildTowerInfoPayload(swordInfo, { result: -1, msg: 'invalid_tower_skill' }),
     };
   } else {
-    const limit = getTowerSlotLimit();
+    // Slots open by TowerBaseConfig.attrCond like the client lock icons.
+    const limit = Math.min(getTowerSlotLimit(), towerProgress.getUnlockedSlotCount(swordInfo));
     const targetIndex = replaceIndex >= 0 && replaceIndex < swordInfo.slotlist.length
       ? replaceIndex
       : swordInfo.slotlist.length;
@@ -396,12 +415,28 @@ async function handleTowerSelectSkill(params, session, msgUid) {
       };
     }
 
+    // A double tap on confirm resends the same {select, replace}; after the first pick it would
+    // overwrite that slot with an offer the player never saw and spend a second pick.
+    const lastPick = session && session.towerLastPick;
+    if (lastPick && lastPick.index === targetIndex && Date.now() - lastPick.at < 1500) {
+      return {
+        tag: 3700,
+        msgUid,
+        data: buildTowerInfoPayload(swordInfo, { result: -1, msg: 'tower_pick_repeat' }),
+      };
+    }
     const oldSlot = swordInfo.slotlist[targetIndex] || null;
     const nextLevel = oldSlot && oldSlot.id === selectedSkill ? toSafeInt(oldSlot.lv, 1) + 1 : 1;
     swordInfo.slotlist[targetIndex] = { id: selectedSkill, lv: nextLevel };
-    swordInfo.skills.splice(selectIndex, 1);
+    if (session) session.towerLastPick = { index: targetIndex, at: Date.now() };
     swordInfo.skillCount = Math.max(0, toSafeInt(swordInfo.skillCount, 0) - 1);
-    if (swordInfo.skillCount <= 0) swordInfo.skills = [];
+    swordInfo.skills = [];
+    if (swordInfo.skillCount > 0) {
+      // Every remaining pick gets a fresh offer; the client keeps the panel open while skills is non-empty.
+      const equipped = normalizeTowerSlotlist(swordInfo.slotlist).map((slot) => slot.id);
+      swordInfo.skills = buildTowerSkillChoices(Math.max(1, swordInfo.curlayer), equipped);
+      if (swordInfo.skills.length <= 0) swordInfo.skillCount = 0;
+    }
   }
 
   swordInfo.slotlist = normalizeTowerSlotlist(swordInfo.slotlist);
@@ -453,6 +488,7 @@ module.exports = {
   normalizeTowerSlotlist,
   buildTowerSkillChoices,
   grantTowerSkillChoice,
+  addTowerSkillChoices,
   handleTowerFight,
   handleSwordRankInfo,
   handleTowerSelectSkill,

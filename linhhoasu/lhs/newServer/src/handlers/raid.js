@@ -33,6 +33,7 @@ const {
 } = require('../services/RoleAppearanceService');
 const { addOpenEquip, createEquipFromTemplateId, isEquipTemplateItem } = require('../services/EquipService');
 const arenaReadModel = require('../services/ArenaReadModelService');
+const towerProgress = require('../services/TowerProgressService');
 
 function toSafeInt(value, fallback = 0) {
   const n = Number(value);
@@ -1203,11 +1204,16 @@ async function handleTowerStartFight(params, session, msgUid) {
   // eslint-disable-next-line global-require
   const tower = require('./tower');
   const towerInfo = tower.ensureTowerInfo(player);
+  // While curlayer is below the sweep floor the native client only offers quick challenge
+  // (getCurTowerState 3), so any type-9 request is the sweep; index 0 with nothing left is a resync.
+  const sweepPlan = towerProgress.buildSweepPlan(towerInfo);
+  if (sweepPlan) return handleTowerSweep(player, towerInfo, sweepPlan, session, msgUid);
+  if (towerProgress.isSweepRequest(params)) return buildTowerNoopReply(towerInfo, msgUid);
   const towerCfg = config.get('TowerConfig') || {};
   const requestedLevel = Math.max(0, toSafeInt(params && params.levelId, 0));
   const floor = requestedLevel > 0 ? requestedLevel : towerInfo.curlayer + 1;
   const row = towerCfg[floor] || towerCfg[String(floor)] || null;
-  if (!row) return { tag: 2300, msgUid, data: { result: -1, msg: 'invalid tower layer' } };
+  if (!row) return buildTowerNoopReply(towerInfo, msgUid, { result: -1, msg: 'invalid tower layer' });
 
   const monsterId = Math.max(1, toSafeInt(row.monsterId, 300001));
   const level = {
@@ -1216,13 +1222,15 @@ async function handleTowerStartFight(params, session, msgUid) {
     monsterId,
     reward: Array.isArray(row.rewards) ? row.rewards : [],
   };
-  const playerAttrs = battle.calcPlayerPower(player);
+  const playerAttrs = battle.calcPlayerPower(player, { extraAttrs: towerProgress.getTowerBattleAttrs(towerInfo) });
   const monsterAttrs = battle.getMonsterAttrs(monsterId);
   const simulatedResult = battle.simulateBattle(playerAttrs, monsterAttrs, { enforcePlayerMonsterMinDamage: true, player });
   const result = buildPveProgressFightResult(playerAttrs, monsterAttrs, simulatedResult, 9);
   const fightResult = buildChapterFightResult(player, level, playerAttrs, monsterAttrs, result, 9);
 
   const rewards = [];
+  const curlayerBefore = towerInfo.curlayer;
+  const maxlayerBefore = towerInfo.maxlayer;
   if (result.win) {
     towerInfo.curlayer = Math.max(towerInfo.curlayer, floor);
     if (floor > towerInfo.maxlayer) {
@@ -1232,9 +1240,8 @@ async function handleTowerStartFight(params, session, msgUid) {
     if (Array.isArray(row.rewards)) rewards.push(...row.rewards.map((reward) => ({ ...reward })));
     towerInfo.score = Math.max(0, toSafeInt(towerInfo.score, 0)) + floor * 10;
     towerInfo.dailyCount = Math.max(0, toSafeInt(towerInfo.dailyCount, 0)) + 1;
-    if (typeof tower.grantTowerSkillChoice === 'function') {
-      tower.grantTowerSkillChoice(towerInfo, floor);
-    }
+    // One bonus pick per 10 new floors (1, 11, 21, ...), not one per win.
+    tower.addTowerSkillChoices(towerInfo, towerProgress.countSkillPicks(curlayerBefore, towerInfo.curlayer), floor);
   }
 
   const { rewardInfo, syncRewards } = grantRewardInfo(player, rewards);
@@ -1248,6 +1255,7 @@ async function handleTowerStartFight(params, session, msgUid) {
   const taskChanged = result.win ? !!addTempleChallengeCount(player, 1) : false;
   session.lastBattle = null;
   if (session.userId) await playerService.savePlayer(session.userId, player, { returnSaved: false });
+  if (towerInfo.maxlayer > maxlayerBefore) await towerProgress.syncTowerRank(player);
 
   const packets = [];
   if (syncRewards.length > 0) {
@@ -1264,6 +1272,63 @@ async function handleTowerStartFight(params, session, msgUid) {
       rewardInfo,
       updateInfo,
       fightResult,
+    },
+  });
+  return packets;
+}
+
+function buildTowerUpdateInfo(towerInfo) {
+  return {
+    maxlayer: towerInfo.maxlayer,
+    curlayer: towerInfo.curlayer,
+    skills: towerInfo.skills,
+    skillCount: towerInfo.skillCount,
+    slotlist: towerInfo.slotlist,
+  };
+}
+
+// Type-9 reply without a battle: the client applies updateInfo and opens the reward
+// popup only for a non-empty list, so an empty list just resyncs its buttons.
+function buildTowerNoopReply(towerInfo, msgUid, extra = {}) {
+  return {
+    tag: 2300,
+    msgUid,
+    data: { result: 0, id: towerInfo.curlayer, rewards: [], updateInfo: buildTowerUpdateInfo(towerInfo), ...extra },
+  };
+}
+
+// Quick challenge (ClimbingTowerModel.onFighting(3) sends index 0): no battle, jump to
+// the sweep floor and pay its speed-clear tier. The client applies a type-9 reply
+// without fightResult as updateInfo + reward popup (RaidInfoModel case 9).
+async function handleTowerSweep(player, towerInfo, plan, session, msgUid) {
+  // eslint-disable-next-line global-require
+  const tower = require('./tower');
+  towerInfo.curlayer = plan.target;
+  towerInfo.score = Math.max(0, toSafeInt(towerInfo.score, 0)) + plan.score;
+  towerInfo.dailyCount = Math.max(0, toSafeInt(towerInfo.dailyCount, 0)) + plan.floors;
+  tower.addTowerSkillChoices(towerInfo, plan.picks, plan.target);
+
+  const { rewardInfo, syncRewards } = grantRewardInfo(player, plan.rewards);
+  const taskChanged = !!addTempleChallengeCount(player, 1);
+  session.lastBattle = null;
+  if (session.userId) await playerService.savePlayer(session.userId, player, { returnSaved: false });
+  logger.info(`[Tower] sweep user=${session.userId} ${plan.from}->${plan.target} picks=${plan.picks}`);
+
+  const packets = [];
+  if (syncRewards.length > 0) {
+    packets.push({ tag: 1202, msgUid: 0, data: buildRewardItemSync(player, syncRewards) });
+  }
+  if (taskChanged) packets.push(...buildTaskSyncPackets(player));
+  packets.push({
+    tag: 2300,
+    msgUid,
+    data: {
+      result: 0,
+      id: plan.target,
+      sweep: 1,
+      rewards: plan.rewards.map((reward) => ({ ...reward })),
+      rewardInfo,
+      updateInfo: buildTowerUpdateInfo(towerInfo),
     },
   });
   return packets;

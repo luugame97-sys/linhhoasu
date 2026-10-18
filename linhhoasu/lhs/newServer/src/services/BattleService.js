@@ -761,7 +761,7 @@ function addElfAttrs(base, player = {}) {
 /**
  * Calculate the player's effective attributes for battle and UI display.
  */
-function calcPlayerPower(player) {
+function calcPlayerPower(player, options = {}) {
   const formBase = config.get('FormationBaseConfig');
   const base = formBase && formBase.formationBasicAttribute
     ? { ...formBase.formationBasicAttribute }
@@ -836,6 +836,9 @@ function calcPlayerPower(player) {
   addPetAttrs(base, player || {});
   addPetSoulAttrs(base, player || {});
   addElfAttrs(base, player || {});
+  // Mode-only bonuses (Hư Thiên Bảo Điện picks) join before percent links so 51-54
+  // scale base HP/ATK/DEF/SPD like every other source.
+  if (options && options.extraAttrs) addAttrs(base, options.extraAttrs);
   applyPercentLinkedAttrs(base);
 
   Object.defineProperty(base, '_petCombatProfile', {
