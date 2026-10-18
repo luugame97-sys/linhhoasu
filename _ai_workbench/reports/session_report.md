@@ -4,7 +4,7 @@
 ode_modules/, .pytest_cache/.
 - Cấu hình remote origin trỏ về https://github.com/luugame97-sys/linhhoasu.git, branch main.
 - Đã commit toàn bộ 56.763 files (mã nguồn server, admin, script và trọn bộ tài nguyên webgame client 2.1GB) thành công: commit 631a969.
-- Bước tiếp theo: người dùng xác thực Git Credential Manager trên máy để hoàn tất push lên GitHub.
+- Kết quả: Đã đẩy thành công 1.95 GiB (51.589 objects) lên nhánh main của https://github.com/luugame97-sys/linhhoasu.git hoàn tất.
 
 ## 2026-10-18 — Pet UI: giá nâng nhanh, EXP help, promise (hoàn tất)
 
