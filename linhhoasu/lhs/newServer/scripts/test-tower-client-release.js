@@ -37,6 +37,13 @@ test('Stale sweep/fight clicks reopen choices without mutation RPC',()=>{
   vm.runInNewContext(fs.readFileSync(path.join(web,'js/lhs-tower-fix-v2.js'),'utf8'),{window:root});
   [1,2,3].forEach(n=>model.onFighting(n));root.LhsTowerFixV2.send();assert.equal(opened,4);assert.equal(sent,0);
 });
+test('Duplicate skill confirm is collapsed until the first RPC settles',()=>{
+  let sent=0,success=null,error=null;const model={towerInfo:{skills:[70],skillCount:1},onFighting(){},Rpc(){sent++;const args=arguments;success=args[2];error=args[3];}};
+  const root={GlobalManager:{ClimbingTowerModel:model,ActorModel:{actorID:'fixture'}},UserInfo:{ServerID:1001,UserID:'fixture'},setTimeout(){},clearTimeout(){}};
+  vm.runInNewContext(fs.readFileSync(path.join(web,'js/lhs-tower-fix-v2.js'),'utf8'),{window:root});
+  model.Rpc(3700,{select:0,replace:0},()=>{},()=>{});model.Rpc(3700,{select:0,replace:0},()=>{},()=>{});assert.equal(sent,1);
+  success({result:0});model.Rpc(3700,{select:0,replace:0},()=>{},()=>{});assert.equal(sent,2);
+});
 test('Late animation cannot use disposed or recycled battle entities',()=>{
   for(const variant of ['normal','disposed','newAI','newInfo','newEntity']){
     let cb,restored=0;const info={setAtt(){},getAtt:()=>100};
