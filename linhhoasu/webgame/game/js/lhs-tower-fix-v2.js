@@ -2,7 +2,7 @@
 (function(root) {
   'use strict';
   if (root.LhsTowerFixV2) return;
-  var api = root.LhsTowerFixV2 = { version: '20261018_tower_fix_v4' };
+  var api = root.LhsTowerFixV2 = { version: '20261018_tower_fix_v3' };
   var pending = false, request = null, actor = '', installed = false, attempt = 0;
   function manager() { return root.GlobalManager || root.GameGlobalYDXZ || root.W || {}; }
   function owner() { var m = manager(), u = root.UserInfo || {}; return m.ActorModel && m.ActorModel.actorID ? u.ServerID + ':' + u.UserID + ':' + m.ActorModel.actorID : ''; }
@@ -52,23 +52,8 @@
         return Number(state) === 3 ? send() : fight.apply(this, arguments);
       };
       m.Rpc = function(tag, data, ok, error) {
-        var numericTag = Number(tag), self = this;
-        if ([3700, 3702, 3703].indexOf(numericTag) < 0) return rpc.apply(this, arguments);
-        // The native panel can fire two confirm taps before the first Mongo/CAS
-        // response. The second request then uses the old choice index and the
-        // server correctly returns invalid_tower_skill. Collapse that duplicate
-        // at the client boundary; the next deliberate choice is allowed after ACK.
-        if (numericTag === 3700) {
-          if (self.__lhsTowerSkillPending) return;
-          self.__lhsTowerSkillPending = true;
-          var finishSkill = function() { self.__lhsTowerSkillPending = false; };
-          return rpc.call(this, tag, data, function(r) {
-            finishSkill();
-            if (owner() !== actor) return;
-            if (!r || r.result !== 0) { refresh(); if (typeof error === 'function') error.call(self, r); return; }
-            if (typeof ok === 'function') ok.call(self, r);
-          }, function(r) { finishSkill(); if (typeof error === 'function') error.call(self, r); });
-        }
+        if ([3700, 3702, 3703].indexOf(Number(tag)) < 0) return rpc.apply(this, arguments);
+        var self = this;
         return rpc.call(this, tag, data, function(r) {
           if (!r || r.result !== 0) { tips(r && r.msg || 'Chưa cập nhật được kỹ năng.'); refresh(); if (typeof error === 'function') error.call(self, r); return; }
           if (typeof ok === 'function') ok.call(self, r);
