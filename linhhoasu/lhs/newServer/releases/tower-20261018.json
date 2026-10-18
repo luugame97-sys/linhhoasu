@@ -1,0 +1,36 @@
+{
+  "version": "20261018_tower_followup_v2",
+  "scope": "Tower release and existing production companions referenced by shared loader/player service",
+  "source": "Verified production VPS snapshot; supersedes alternative tower branch e8bb372b",
+  "policy": {
+    "sweepRpc": 3705,
+    "pendingChoiceBeforeFight": true,
+    "rewards": "Preserve current production per-floor and crossed-milestone policy; no historical backpay",
+    "skillChoices": "Preserve current production policy; no economy migration in synchronization"
+  },
+  "files": {
+    "linhhoasu/lhs/newServer/src/handlers/tower.js": "782dbd76f597006ca9b71e94fd4355494c72c02a8ceb6096c4a165432800ecc1",
+    "linhhoasu/lhs/newServer/src/handlers/raid.js": "4265474b5dd08aab83541c76dce5fb09a7a998f71e2490bf5668ce64a01f934b",
+    "linhhoasu/lhs/newServer/src/handlers/index.js": "ff7333bac77cf08a39b23662628f93554b9890f1b555c47c334b64040e416729",
+    "linhhoasu/lhs/newServer/src/handlers/pet.js": "c7104f769ff3212aaac4eaa05a152b7a92bd7e15efe3fabae0ff5091d7f34f00",
+    "linhhoasu/lhs/newServer/src/handlers/mount.js": "985bdb8bbc7811ea41ab1546853ce9cc0041dd241318e9c31d5ddd556b53f011",
+    "linhhoasu/lhs/newServer/src/services/TowerProgressService.js": "22b9b1e68161c09ec6b754010dc3534f1c2481d46a33df2916b2ad558b7d2eca",
+    "linhhoasu/lhs/newServer/src/services/TowerDailyResetService.js": "a457f58bdb225cbb0c326fbb79e61ac0677aa8946ed697ff44d813dc8e075fb5",
+    "linhhoasu/lhs/newServer/src/services/PlayerService.js": "aafd448dcbc289ea9aec0caa907c6ec321331427679f02e0aef8bdbfe9968c18",
+    "linhhoasu/lhs/newServer/src/services/BattleService.js": "454549664e9bb0f8cef1c4b38fea454b7d039ba3f0ab9018e18439b5ad3eb0d0",
+    "linhhoasu/lhs/newServer/src/services/GameDayService.js": "01a5116a476a12097852666dd1a39dca541f85d67f09685372729de84720b5c6",
+    "linhhoasu/lhs/newServer/src/services/PlayerMutationService.js": "2a408d0bd1708c633f8b4f7ca410e53cc08dc6780ea7221642d5d5e84420bd78",
+    "linhhoasu/lhs/newServer/src/services/FeatureReceiptService.js": "bf3fed6cd0a3cfd8574b9ce01634768663c3e987d91414c57b541051e2346ca0",
+    "linhhoasu/lhs/newServer/src/net/WSServer.js": "211e17b92653d183242d8801aa1f90fabd7886272fa65deec6d05c17497d9b63",
+    "linhhoasu/webgame/game/index.html": "74516add2696327de4a75cfc7d2459baca615f483e164157283fddf9963f7497",
+    "linhhoasu/webgame/game/js/main.min_drop200.js": "ffb679c7be182f464ce663a9b16bdad173cc7cceb8ac8865c0e09589c8f48fb7",
+    "linhhoasu/webgame/game/js/lhs-tower-fix-v2.js": "9c93c60bf70e5f425d6abe0f3fc67e2f9d8314f1865667e57f17a3f68bb339ea",
+    "linhhoasu/webgame/game/js/lhs-tower-daily-v1.js": "d3dc95715f40335f56c11e5b055970eb0dcce6ab5ceb1b878738ed000485bf35",
+    "linhhoasu/lhs/newServer/src/services/MountStarProgressService.js": "7e98a89b65dd26ccee053586dfaac6e756e66fd156107f68c4332db9101c0b20",
+    "linhhoasu/webgame/game/js/lhs-pet-grid48-v1.js": "03c58f9f3dbb1c2967dc4db0407e19f5ad7ed1b1b3926a38bc6a7f0d00dbeac5",
+    "linhhoasu/webgame/game/js/lhs-pet-safety-v1.js": "b6eaf6c27847e9321d5d55b9b4865e81b5d72a841455ae5d75fb6e1dbd579df0",
+    "linhhoasu/webgame/game/js/lhs-item-quantity-v1.js": "785dcbba8542301c9bbbe16942c25af7622ff2127a25e672392d4ca6dbd985fc",
+    "linhhoasu/webgame/game/js/lhs-essence-buy-max-v1.js": "6eb217c42dbc73f13eb66fbd1fbfed6f5b5fb49f66876115b34c5a67ce735074",
+    "linhhoasu/webgame/game/js/lhs-mount-fix-v1.js": "11e53b1be3cf7404b72c8f4517ade719b503644225318e1014a98d9c05c3eb5e"
+  }
+}

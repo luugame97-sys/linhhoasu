@@ -295,7 +295,13 @@ function buildFreshPlayerData(userId, name, extra = {}, options = {}) {
  */
 async function loadPlayer(userId) {
   const player = await withRetry(() => Player.findOne({ userId }).maxTimeMS(DB_OPERATION_TIMEOUT_MS).lean());
-  return rememberFortuneBalances(player);
+  const mounted = await require('./MountStarProgressService').recoverLoaded(player, Player.collection);
+  return rememberFortuneBalances(await require('./TowerDailyResetService').recoverLoaded(mounted, Player.collection));
+}
+
+// Raw preimage for tower CAS; rollover is applied to a draft in the same commit.
+async function loadTowerPlayer(userId) {
+  return withRetry(() => Player.findOne({ userId }).maxTimeMS(DB_OPERATION_TIMEOUT_MS).lean());
 }
 
 /**
@@ -397,6 +403,32 @@ async function savePlayer(userId, data, options = {}) {
       if (!Array.isArray(fields) || !fields.length || fields.some(key => !allowed.includes(key))) {
         throw new Error('ARTIFACT_CAS_FIELDS_INVALID');
       }
+      filter.$and = (filter.$and || []).concat(fields.map(key => ({
+        [key]: Object.prototype.hasOwnProperty.call(expected, key) ? { $eq: expected[key] } : { $exists: false },
+      })));
+    }
+    if (options.crossRivalCAS) {
+      const { fields, expected } = options.crossRivalCAS;
+      const allowed = ['items', 'currencies', 'crossRivalWallet'];
+      if (!Array.isArray(fields) || fields.length !== allowed.length || allowed.some(key => !fields.includes(key))) {
+        throw new Error('CROSS_RIVAL_CAS_FIELDS_INVALID');
+      }
+      filter.$and = (filter.$and || []).concat(fields.map(key => ({
+        [key]: Object.prototype.hasOwnProperty.call(expected, key) ? { $eq: expected[key] } : { $exists: false },
+      })));
+    }
+    if (options.towerCAS) {
+      const { fields, expected } = options.towerCAS;
+      const allowed = ['swordInfo', 'items', 'currencies', 'other_attr_info', 'taskInfo'];
+      if (!Array.isArray(fields) || fields.length !== allowed.length || allowed.some(key => !fields.includes(key))) throw Error('TOWER_CAS_FIELDS_INVALID');
+      filter.$and = (filter.$and || []).concat(fields.map(key => ({
+        [key]: Object.prototype.hasOwnProperty.call(expected, key) ? { $eq: expected[key] } : { $exists: false },
+      })));
+    }
+    if (options.mountCAS) {
+      const { fields, expected } = options.mountCAS;
+      const allowed = ['swordInfo', 'items', 'currencies', 'other_attr_info'];
+      if (!Array.isArray(fields) || fields.length !== allowed.length || allowed.some(key => !fields.includes(key))) throw Error('MOUNT_CAS_FIELDS_INVALID');
       filter.$and = (filter.$and || []).concat(fields.map(key => ({
         [key]: Object.prototype.hasOwnProperty.call(expected, key) ? { $eq: expected[key] } : { $exists: false },
       })));
@@ -713,6 +745,7 @@ async function listPlayersBasic(filter = {}, limit = 20) {
 
 module.exports = {
   loadPlayer,
+  loadTowerPlayer,
   createPlayer,
   savePlayer,
   saveOldTrekScoped,

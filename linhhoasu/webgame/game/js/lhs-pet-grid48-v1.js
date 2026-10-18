@@ -1,7 +1,7 @@
 /* Native 6 x 8 pet board; server remains authoritative for slots and merges. */
 (function (root) {
   'use strict';
-  var VERSION = '20261005_pet_auto_continuous_v3';
+  var VERSION = '20261018_pet_auto_notice_v6';
   var TARGET_QUALITIES = [2, 3, 4, 5, 6, 7, 9, 10];
   if (root.LhsPetGrid48V1 && root.LhsPetGrid48V1.version === VERSION) return;
   var api = root.LhsPetGrid48V1 = { version: VERSION, installed: false, attempts: 0 };
@@ -15,8 +15,9 @@
     var text = summary.composeCount || summary.expMergeCount
       ? 'Đã ghép ' + summary.composeCount + ' lần, gộp EXP ' + summary.expMergeCount + ' lần.'
       : 'Không còn cặp phù hợp với mục tiêu đã chọn.';
+    if (summary.stopReason === 'BOARD_FULL') text += ' Bàn đã đầy.';
     if (Array.isArray(summary.blockedCostQualities) && summary.blockedCostQualities.length) text += ' Còn cặp thiếu nguyên liệu.';
-    if (summary.blockedExpCap) text += ' EXP còn lại vượt giới hạn cấp.';
+    if (summary.blockedExpCap) text += ' Đã giữ lại pet EXP vì ghép sẽ vượt giới hạn cấp. Bạn có thể kéo ghép thủ công nếu chấp nhận bỏ EXP dư.';
     return text;
   }
   function dispatch(name, arg) {
@@ -100,6 +101,14 @@
     var g = manager(), id = g && g.ActorModel && g.ActorModel.actorID;
     return id ? 'lhs:pet-grid48:pending:' + id : null;
   }
+  function needsReconnect(reply) {
+    return !!(reply && (reply.requiresReconnect === true
+      || /^(PET_(AUTO_)?SESSION_REQUIRED|PET_(AUTO_)?SAVE_(UNCONFIRMED|NOT_CONFIRMED))$/.test(reply.code || '')
+      || /^not logged in$/i.test(reply.msg || '')));
+  }
+  function reconnectNotice() {
+    notice('Đã dừng tự động. Hãy đăng nhập lại để đồng bộ kết quả ghép trước khi tiếp tục.');
+  }
   function pending(model) {
     var key = storageKey();
     if (model.__lhsPendingKey !== key) {
@@ -133,6 +142,11 @@
     model.sendAutoCompose = function (quality, onSuccess, onFailure, options) {
       options = options || {};
       if (!this._petInfo || this.__lhsMerging) return false;
+      if (this.__lhsAutoReconnectInfo === this._petInfo) {
+        if (onFailure) onFailure({ code: 'PET_AUTO_SESSION_REQUIRED', retryable: false, requiresReconnect: true });
+        if (!options.quiet) reconnectNotice();
+        return true;
+      }
       var self = this, request = pending(this);
       if (!request) {
         if (TARGET_QUALITIES.indexOf(quality) < 0) return false;
@@ -149,8 +163,13 @@
           if (options.quiet && onFailure) onFailure({ code: 'PET_AUTO_STALE_ACTOR', retryable: false });
           return;
         }
-        if (reply && reply.retryable === false) savePending(self, null);
-        if (!options.quiet) notice('Ghép chưa được xác nhận. Vui lòng thử lại để đồng bộ.');
+        // Keep the same requestId across re-login: its receipt may already be committed.
+        if (needsReconnect(reply)) self.__lhsAutoReconnectInfo = info;
+        else if (reply && reply.retryable === false) savePending(self, null);
+        if (!options.quiet) {
+          if (needsReconnect(reply)) reconnectNotice();
+          else notice('Ghép chưa được xác nhận. Vui lòng thử lại để đồng bộ.');
+        }
         if (onFailure) onFailure(reply);
       }
       var watchdog = root.setTimeout(fail, 15000);
@@ -212,12 +231,12 @@
         // for the next fresh cycle instead of trusting its old stop summary.
         if (reply.replayed || reply.summary && reply.summary.canContinue) return schedule(250);
         stopRunIfOwn();
-        var summary = reply.summary || {};
-        if (summary.stopReason === 'BOARD_FULL') notice('Đã dừng: bàn đầy, không còn cặp phù hợp.');
-        else notice(mergeNotice(reply));
+        notice(mergeNotice(reply));
       }, function (reply) {
         if (!current()) return stopRunIfOwn();
-        if (reply && reply.retryable === false) { stopRunIfOwn(); notice('Không thể tiếp tục tự động. Vui lòng mở lại.'); return; }
+        if (needsReconnect(reply)) { stopRunIfOwn(); reconnectNotice(); return; }
+        if (reply && reply.retryable === false) { stopRunIfOwn(); notice(reply.msg || 'Không thể tiếp tục tự động. Vui lòng mở lại.'); return; }
+        if (run.retries >= 3) { stopRunIfOwn(); notice('Đã dừng vì chưa xác nhận được kết quả. Hãy kiểm tra kết nối rồi mở lại để đồng bộ.'); return; }
         if (run.retries++ === 0) notice('Đang chờ kết nối để tiếp tục tự động.');
         schedule(Math.min(5000, 1000 * Math.pow(2, Math.min(run.retries - 1, 3))));
       }, { openEggs: run.openEggs, quiet: true });
@@ -279,11 +298,25 @@
     var panel = Panel.prototype, cancel = panel.onClickCancelBtn, close = panel.OnClose, updatePanel = panel.updateView;
     panel.updateView = function () {
       configure(); var result = updatePanel.apply(this, arguments);
+      var help = manager().Config.LanguageConfig && manager().Config.LanguageConfig[30032363];
+      if (help) help.cn = 'Ghép nhanh chỉ ghép Tinh Linh đang có, không mở trứng. Ghép pet thường vẫn tốn nguyên liệu. Ghép EXP tự động giữ lại cặp vượt trần; cho ăn thủ công bỏ EXP dư, không hoàn Quả Linh. Dừng sẽ ngừng các lượt tiếp theo; lượt đã gửi vẫn được xử lý.';
       this._indexToQuality = TARGET_QUALITIES.slice();
       var quality = manager().PetModel.autoComposeQuality, Quality = def('QualityUtil');
       if (Quality && this.qualityCheckBox && this.qualityCheckBox.labelDisplay) {
         this.qualityCheckBox.labelDisplay.textFlow = Quality.getPetAutoQualityNameTextFlow(quality);
       }
+      // EXP help is the third skin row (30032359), not the level/lock row label1.
+      function updateExpHelp(node) {
+        if (!node) return;
+        if (Number(node.textId) === 30032359 || /^Tinh linh kinh nghiệm sẽ hợp thành tự động/.test(node.text || '')) {
+          node.textFlow = null;
+          node.text = 'Tự động: giữ lại EXP vượt trần.\nCho ăn: bỏ EXP dư, không hoàn Quả Linh.';
+          node.width = 480; node.wordWrap = true;
+          return;
+        }
+        for (var i = 0; i < (node.numChildren || 0); i++) updateExpHelp(node.getChildAt(i));
+      }
+      updateExpHelp(this.baseGroup);
       this.label2.textFlow = null;
       this.label2.text = 'Ghép nhanh Tinh Linh đang có';
       return result;

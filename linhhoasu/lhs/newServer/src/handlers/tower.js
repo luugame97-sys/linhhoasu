@@ -74,12 +74,11 @@ function normalizeTowerSlotlist(list) {
 
 function normalizeTowerOptionalSkills(list, slotlist = []) {
   if (!Array.isArray(list)) return [];
-  const equipped = new Set(slotlist.map((row) => normalizeTowerSkillId(row)).filter((id) => id > 0));
   const used = new Set();
   const normalized = [];
   for (const row of list) {
     const id = normalizeTowerSkillId(row);
-    if (id <= 0 || equipped.has(id) || used.has(id)) continue;
+    if (id <= 0 || used.has(id)) continue;
     used.add(id);
     normalized.push(id);
   }
@@ -182,8 +181,7 @@ function buildTowerSkillChoices(floor = 1, exclude = []) {
 function grantTowerSkillChoice(info, floor = 1) {
   if (!info || typeof info !== 'object') return info;
   const slotlist = normalizeTowerSlotlist(info.slotlist);
-  const equipped = slotlist.map((slot) => normalizeTowerSkillId(slot)).filter((id) => id > 0);
-  const choices = buildTowerSkillChoices(floor, equipped);
+  const choices = buildTowerSkillChoices(floor);
   info.slotlist = slotlist;
   info.skills = choices;
   info.skillCount = choices.length > 0 ? 1 : 0;
@@ -242,6 +240,7 @@ async function handleTowerFight(_params, session, msgUid) {
   const floor = (swordInfo.curlayer || 0) + 1;
   const towerCfg = config.get('TowerConfig');
   const tower = towerCfg ? towerCfg[floor] : null;
+  if (!tower) return { tag: 2350, msgUid, data: { result: -1, code: 'TOWER_MAX_FLOOR', msg: 'Tower maximum reached' } };
 
   const monsterId = tower ? tower.monsterId : 300001;
   const playerAttrs = battle.calcPlayerPower(player);
@@ -370,6 +369,10 @@ async function handleTowerSelectSkill(params, session, msgUid) {
   }
 
   const swordInfo = ensureTowerInfo(player);
+  if (!Number.isInteger(params?.select) || !Number.isInteger(params?.replace)
+    || params.select < -1 || params.replace < -1) {
+    return { tag: 3700, msgUid, data: buildTowerInfoPayload(swordInfo, { result: -1, msg: 'invalid_tower_skill' }) };
+  }
   const selectIndex = toSafeInt(params && params.select, -1);
   const replaceIndex = toSafeInt(params && params.replace, -1);
   const selectedSkill = selectIndex >= 0 ? normalizeTowerSkillId(swordInfo.skills[selectIndex]) : 0;
@@ -384,11 +387,12 @@ async function handleTowerSelectSkill(params, session, msgUid) {
       data: buildTowerInfoPayload(swordInfo, { result: -1, msg: 'invalid_tower_skill' }),
     };
   } else {
-    const limit = getTowerSlotLimit();
-    const targetIndex = replaceIndex >= 0 && replaceIndex < swordInfo.slotlist.length
-      ? replaceIndex
-      : swordInfo.slotlist.length;
-    if (targetIndex >= limit) {
+    const limit = require('../services/TowerProgressService').slotLimit(swordInfo, config);
+    const existingIndex = swordInfo.slotlist.findIndex(row => row.id === selectedSkill);
+    const targetIndex = replaceIndex;
+    if (!Number.isInteger(params?.select) || !Number.isInteger(params?.replace)
+      || swordInfo.skillCount <= 0 || targetIndex < 0 || targetIndex > swordInfo.slotlist.length
+      || targetIndex >= limit || (existingIndex >= 0 && existingIndex !== targetIndex)) {
       return {
         tag: 3700,
         msgUid,
@@ -407,7 +411,7 @@ async function handleTowerSelectSkill(params, session, msgUid) {
   swordInfo.slotlist = normalizeTowerSlotlist(swordInfo.slotlist);
   swordInfo.skills = normalizeTowerOptionalSkills(swordInfo.skills, swordInfo.slotlist);
 
-  await playerService.savePlayer(session.userId, player, { returnSaved: false });
+  // Persisted by TowerProgressService after this draft returns success.
   return {
     tag: 3700,
     msgUid,
@@ -429,7 +433,7 @@ async function handleTowerSetAutoSelect(params, session, msgUid) {
   const swordInfo = ensureTowerInfo(player);
   swordInfo.autoSelect = toSafeInt(params && params.autoSelect, 0) > 0 ? 1 : 0;
 
-  await playerService.savePlayer(session.userId, player, { returnSaved: false });
+  // Persisted by TowerProgressService.
   return { tag: 3702, msgUid, data: buildTowerInfoPayload(swordInfo) };
 }
 
@@ -442,21 +446,24 @@ async function handleTowerSetAutoPriority(params, session, msgUid) {
   const priority = Array.isArray(params && params.priority) ? params.priority : [];
   swordInfo.autoPriority = normalizeTowerAutoPriority(priority);
 
-  await playerService.savePlayer(session.userId, player, { returnSaved: false });
+  // Persisted by TowerProgressService.
   return { tag: 3703, msgUid, data: buildTowerInfoPayload(swordInfo, { priority: swordInfo.autoPriority }) };
 }
 
 module.exports = {
+  buildTowerInfoPayload,
+  handleTowerSweep: (...args) => require('../services/TowerProgressService').get().sweep(...args),
+  handleTowerDailySnapshot: (...args) => require('../services/TowerDailyResetService').handleSnapshot(...args),
   ensureTowerInfo,
   normalizeTowerAutoPriority,
   normalizeTowerOptionalSkills,
   normalizeTowerSlotlist,
   buildTowerSkillChoices,
   grantTowerSkillChoice,
-  handleTowerFight,
-  handleSwordRankInfo,
-  handleTowerSelectSkill,
-  handleTowerRankInfoCompat,
-  handleTowerSetAutoSelect,
-  handleTowerSetAutoPriority,
+  handleTowerFight: (p, s, u) => require('../services/TowerDailyResetService').withReset(p, s, u, handleTowerFight),
+  handleSwordRankInfo: (p, s, u) => require('../services/TowerDailyResetService').withReset(p, s, u, handleSwordRankInfo),
+  handleTowerSelectSkill: (p, s, u) => require('../services/TowerProgressService').get().run(3700, p, s, u, handleTowerSelectSkill),
+  handleTowerRankInfoCompat: (p, s, u) => require('../services/TowerDailyResetService').withReset(p, s, u, handleTowerRankInfoCompat),
+  handleTowerSetAutoSelect: (p, s, u) => require('../services/TowerProgressService').get().run(3702, p, s, u, handleTowerSetAutoSelect),
+  handleTowerSetAutoPriority: (p, s, u) => require('../services/TowerProgressService').get().run(3703, p, s, u, handleTowerSetAutoPriority),
 };

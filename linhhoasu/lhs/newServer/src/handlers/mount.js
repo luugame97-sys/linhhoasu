@@ -787,49 +787,10 @@ async function handleMountUpgradeUnlocked(params, session, msgUid) {
 
 // 吞噬 (tag:3205)
 async function handleMountSwallow(params, session, msgUid) {
-  const player = session.player;
-  if (!player) return { tag: 3205, msgUid, data: { result: -1, data: {}, rewards: buildMountRewardPayload() } };
-
-  const info = ensureMountInfo(player);
-  const targetUid = toSafeInt(params && params.targetUid, 0);
-  const matUid = toSafeInt(params && params.matUid, 0);
-
-  const target = findMountByUid(info, targetUid) || getFallbackMount(info);
-  const mat = findMountByUid(info, matUid);
-  if (mat && toSafeInt(mat.uid, 0) !== toSafeInt(target.uid, 0)) {
-    const gainStar = Math.max(1, toSafeInt(mat.star, 0) + 1);
-    target.star = Math.min(40, Math.max(0, toSafeInt(target.star, 1)) + gainStar);
-    target.attrs = buildMountAttrs(target.id, target.quality, target.level, target.star, target.uid);
-    const maxSkillCount = Math.max(1, toSafeInt((config.get('SwordBaseConfig') || {}).passiveSkillMaxCount, 4));
-    const mergedSkills = normalizeMountSkills(target.skills);
-    const materialSkills = normalizeMountSkills(mat.skills);
-    for (const skill of materialSkills) {
-      if (mergedSkills.length >= maxSkillCount) break;
-      mergedSkills.push({ ...skill });
-    }
-    while (mergedSkills.length < Math.min(maxSkillCount, Math.max(mergedSkills.length, toSafeInt(target.star, 0) + 1))) {
-      const generated = buildMountPassiveSkills(target.id, target.quality);
-      const nextSkill = generated[mergedSkills.length] || generated[generated.length - 1];
-      if (!nextSkill) break;
-      mergedSkills.push({ ...nextSkill });
-    }
-    target.skills = mergedSkills;
-    target.passiveSkills = mergedSkills;
-    info.data = info.data.filter((row) => toSafeInt(row && row.uid, 0) !== mat.uid);
-    if (toSafeInt(info.equippedUid, 0) === mat.uid) info.equippedUid = target.uid;
-  }
-
-  const baseCfg = config.get('SwordBaseConfig') || {};
-  const rewardBase = toSafeInt(baseCfg.swallowReturn && baseCfg.swallowReturn[target.quality], 0);
-  const rewardCount = Math.max(0, Math.floor(rewardBase / 4));
-  const rewards = rewardCount > 0 ? [{ id: 20, count: rewardCount }] : [];
-  rewards.forEach((reward) => addRewardToPlayer(player, reward.id, reward.count));
-
-  await playerService.savePlayer(session.userId, player, { returnSaved: false });
-  const rewardInfo = buildMountRewardResponse(rewards);
-  const response = { tag: 3205, msgUid, data: { result: 0, data: target, rewards: rewardInfo, rewardInfo } };
-  const rewardSync = buildMountRewardSync(player, rewards);
-  return rewardSync ? [rewardSync, response] : response;
+  return require('../services/MountStarProgressService').swallow(params, session, msgUid, {
+    ensureMountInfo, normalizeMountSkills, buildMountAttrs, addRewardToPlayer,
+    buildMountRewardResponse, buildMountRewardSync, buildMountInfoUpdatePayload,
+  });
 }
 
 async function handleMountUpgrade(params, session, msgUid) {

@@ -4,7 +4,14 @@
  */
 
 const config = require('../services/ConfigService');
-const playerService = require('../services/PlayerService');
+const playerServiceRaw = require('../services/PlayerService');
+// Local facade: a rejected/non-matching database write is never a success ACK.
+const playerService = Object.create(playerServiceRaw);
+playerService.savePlayer = async (...args) => {
+  const saved = await playerServiceRaw.savePlayer(...args);
+  if (!saved) throw new Error('PET_SAVE_NOT_CONFIRMED');
+  return saved;
+};
 const logger = require('../logger');
 const petMutation = require('../services/PlayerMutationService');
 const petReceipts = require('../services/FeatureReceiptService');
@@ -718,7 +725,9 @@ function applyPetComposition(info, material, target, success) {
 function canPetEat(matPet, targetPet, player) {
   if (!matPet || !targetPet || matPet.uid === targetPet.uid) return false;
   if (toSafeInt(targetPet.id, 0) <= 0) return false;
-  if (isPetLockedOrEquipped(player, matPet) || isPetLockedOrEquipped(player, targetPet)) return false;
+  // Only the material is consumed. A soul-bound recipient keeps its identity and binding.
+  if (isPetLockedOrEquipped(player, matPet)) return false;
+  if (toSafeInt(targetPet.locked, toSafeInt(targetPet.lock, 0)) > 0) return false;
   return getPetTag(matPet.id) === 2;
 }
 
@@ -943,11 +952,8 @@ async function handlePetChangeSlot(params, session, msgUid) {
   pet.slot = slot;
 
   const taskChanged = !!refreshMainTaskProgress(player);
-  // Slot changes are state-only (no reward/currency transaction). Persist
-  // asynchronously so rapid pet-screen actions do not wait on a full write.
-  playerService.savePlayerDeferred(session.userId, player).catch((err) => {
-    logger.warn(`[Pet] async slot save failed user=${session.userId}: ${err.message}`);
-  });
+  // Publish a slot change only after its draft is durably saved.
+  await playerService.savePlayer(session.userId, player, { returnSaved: false });
   const changed = [pet];
   if (swapped) changed.push(swapped);
   const response = { tag: 3301, msgUid, data: { result: 0, data: changed } };
@@ -1392,13 +1398,9 @@ async function handlePetEat(params, session, msgUid) {
 
   const levelMax = getPetLevelMax(player, targetPet);
   const gainLevel = Math.max(1, Math.max(1, toSafeInt(matPet.level, 1)));
-  if (toSafeInt(targetPet.level, 1) + gainLevel > levelMax) {
-    // LanguageConfig 30032333 promises overflow conversion, but no verified
-    // EXP->item36 ratio exists in the shipped tables. Fail closed to avoid
-    // deleting material or minting an arbitrary amount.
-    return { tag: 3311, msgUid, data: { result: -1, data: targetPet, rewards: buildPetRewardPayload() } };
-  }
-  targetPet.level = Math.min(levelMax, Math.max(1, toSafeInt(targetPet.level, 1) + gainLevel));
+  // Explicit policy: consume the EXP pet and discard excess; do not mint refunds.
+  const currentLevel = Math.max(1, toSafeInt(targetPet.level, 1));
+  targetPet.level = currentLevel + Math.min(gainLevel, Math.max(0, levelMax - currentLevel));
 
   info.pets = info.pets.filter((row) => toSafeInt(row && row.uid, 0) !== matPet.uid);
   const rewards = [];
@@ -1657,7 +1659,8 @@ async function handlePetAutoCompose(params = {}, session, msgUid) {
   }
   return petMutation.run(session && session.userId, async () => {
     if (!session || !session.player || !session.userId) {
-      return { tag: 3314, msgUid, data: { result: -1, code: 'PET_AUTO_SESSION_REQUIRED', retryable: true } };
+      return { tag: 3314, msgUid, data: { result: -1, code: 'PET_AUTO_SESSION_REQUIRED',
+        requiresReconnect: true, msg: 'Phiên chơi đã hết hiệu lực. Hãy đăng nhập lại để đồng bộ kết quả ghép.' } };
     }
     const ws = petRuntime.getWsServer();
     const original = ws && ws.getPlayerForMutation ? ws.getPlayerForMutation(session.userId) || session.player : session.player;
@@ -1689,7 +1692,10 @@ async function handlePetAutoCompose(params = {}, session, msgUid) {
     } catch (error) {
       if (ws && ws.invalidatePlayerForMutation) ws.invalidatePlayerForMutation(session.userId);
       session.player = null;
-      throw error;
+      logger.warn(`[Pet] auto save unconfirmed user=${session.userId}: ${error.message}`);
+      // Legacy clients delete pending intent on retryable:false. Keep it for receipt reconciliation.
+      return { tag: 3314, msgUid, data: { result: -1, code: 'PET_AUTO_SAVE_UNCONFIRMED',
+        requiresReconnect: true, msg: 'Chưa xác nhận được kết quả ghép. Hãy đăng nhập lại trước khi tiếp tục.' } };
     }
     Object.assign(original, draft);
     session.player = original;
@@ -1786,24 +1792,56 @@ async function handlePetRelease(params, session, msgUid) {
 
   return costSyncPacket ? [response, costSyncPacket] : response;
 }
+function confirmedPetOperation(tag, handler) {
+  return function (params, session, msgUid) {
+    return petMutation.run(session && session.userId, async () => {
+      const fail = (code, msg) => ({ tag, msgUid, data: { result: -1, code, msg, data: null, retryable: false } });
+      if (!session || !session.player || !session.userId) {
+        return fail('PET_SESSION_REQUIRED', 'Vui lòng đăng nhập lại để đồng bộ linh thú.');
+      }
+      const ws = petRuntime.getWsServer();
+      const original = ws && ws.getPlayerForMutation ? ws.getPlayerForMutation(session.userId) || session.player : session.player;
+      try {
+        if (playerService.drainPendingSaves) await playerService.drainPendingSaves(session.userId);
+        const draft = JSON.parse(JSON.stringify(original));
+        const shadow = Object.assign(Object.create(Object.getPrototypeOf(session)), session, { player: draft });
+        const response = await handler(params, shadow, msgUid);
+        const ack = (Array.isArray(response) ? response : [response]).find(p => p && p.tag === tag && p.msgUid === msgUid);
+        if (ack && ack.data && ack.data.result === 0) {
+          Object.assign(original, draft);
+          session.player = original;
+          session._itemListCache = null;
+        }
+        return response;
+      } catch (error) {
+        // A timeout may have committed. Never reuse or retry the stale session.
+        if (ws && ws.invalidatePlayerForMutation) ws.invalidatePlayerForMutation(session.userId);
+        session.player = null;
+        logger.warn(`[Pet] operation unconfirmed tag=${tag} user=${session.userId}: ${error.message}`);
+        return fail('PET_SAVE_UNCONFIRMED', 'Chưa xác nhận được thao tác. Hãy đăng nhập lại để kiểm tra kết quả trước khi thử tiếp.');
+      }
+    });
+  };
+}
+
 module.exports = {
   ensurePetInfo,
   grantPetToPlayer,
   settleFreePetEgg,
   buildPetTimeRecordPayload,
-  handlePetUseEgg,
-  handlePetChangeSlot,
-  handlePetCompose,
-  handlePetUpgrade,
-  handlePetLockSkill,
-  handlePetWashSkill,
-  handlePetReset,
-  handlePetBuyField,
-  handlePetAtlasReward,
-  handlePetLock,
-  handlePetEat,
-  handlePetSwap,
-  handlePetSetWish,
+  handlePetUseEgg: confirmedPetOperation(3300, handlePetUseEgg),
+  handlePetChangeSlot: confirmedPetOperation(3301, handlePetChangeSlot),
+  handlePetCompose: confirmedPetOperation(3302, handlePetCompose),
+  handlePetUpgrade: confirmedPetOperation(3304, handlePetUpgrade),
+  handlePetLockSkill: confirmedPetOperation(3305, handlePetLockSkill),
+  handlePetWashSkill: confirmedPetOperation(3306, handlePetWashSkill),
+  handlePetReset: confirmedPetOperation(3307, handlePetReset),
+  handlePetBuyField: confirmedPetOperation(3308, handlePetBuyField),
+  handlePetAtlasReward: confirmedPetOperation(3309, handlePetAtlasReward),
+  handlePetLock: confirmedPetOperation(3310, handlePetLock),
+  handlePetEat: confirmedPetOperation(3311, handlePetEat),
+  handlePetSwap: confirmedPetOperation(3312, handlePetSwap),
+  handlePetSetWish: confirmedPetOperation(3313, handlePetSetWish),
   handlePetAutoCompose,
-  handlePetRelease,
+  handlePetRelease: confirmedPetOperation(3315, handlePetRelease),
 };

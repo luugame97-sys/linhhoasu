@@ -1,3 +1,35 @@
+/* Shared K/M/B/T number presentation. Never parses labels back into game values. */
+(function(root){
+  'use strict';
+  if(root.LhsNumberVi)return;
+  function parts(value){
+    if(value==null)return null;
+    if(typeof value==='number'&&!isFinite(value))return null;
+    var text=String(value).trim(),m=/^([+-]?)(\d+)(?:\.(\d*))?(?:[eE]([+-]?\d+))?$/.exec(text);
+    if(!m)return null;
+    var sign=m[1]==='-'?'-':'',whole=m[2],fraction=m[3]||'',exp=Number(m[4]||0),digits=whole+fraction,point=whole.length+exp;
+    if(Math.abs(exp)>1000)return null;
+    if(point<=0){fraction=new Array(1-point).join('0')+digits;whole='0';}
+    else if(point>=digits.length){whole=digits+new Array(point-digits.length+1).join('0');fraction='';}
+    else{whole=digits.slice(0,point);fraction=digits.slice(point);}
+    whole=whole.replace(/^0+(?=\d)/,'');fraction=fraction.replace(/0+$/,'');
+    if(whole==='0'&&!fraction)sign='';
+    return{sign:sign,whole:whole,fraction:fraction};
+  }
+  function grouped(s){return s.replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+  function format(value,decimals,english){
+    var p=parts(value);if(!p)return value==null?'':typeof value==='number'?'--':String(value);
+    decimals=decimals==null?2:Math.max(0,Math.min(6,Math.floor(Number(decimals)||0)));
+    var power=p.whole.length>12?12:p.whole.length>9?9:p.whole.length>6?6:p.whole.length>3?3:0;
+    var split=p.whole.length-power,whole=power?p.whole.slice(0,split):p.whole;
+    var fraction=power?(p.whole.slice(split)+p.fraction).slice(0,decimals).replace(/0+$/,''):p.fraction;
+    var unit=english?({3:'K',6:'M',9:'B',12:'T'})[power]:({3:'nghìn',6:'tr',9:'tỷ',12:'nghìn tỷ'})[power];
+    return p.sign+(english?whole:grouped(whole))+(fraction?(english?'.':',')+fraction:'')+(unit?(english?'':' ')+unit:'');
+  }
+  function full(value){var p=parts(value);return p?p.sign+grouped(p.whole)+(p.fraction?','+p.fraction:''):value==null?'':String(value);}
+  root.LhsNumberVi={version:'20261017_number_kmbt_v1',compact:function(n,d){return format(n,d,true);},english:function(n,d){return format(n,d,true);},full:full};
+}(window));
+
 /* Native item quantity presentation. No inventory, reward or network mutations. */
 (function (root) {
     'use strict';
@@ -12,15 +44,7 @@
         return value.replace(/^0+(?=\d)/, '');
     }
 
-    function compact(value) {
-        var text = digits(value);
-        if (text === null) return value == null ? '' : String(value);
-        if (text.length <= 5) return text;
-        var power = text.length > 12 ? 12 : text.length > 9 ? 9 : text.length > 6 ? 6 : 3;
-        var split = text.length - power;
-        var fraction = text.slice(split, split + 2).replace(/0+$/, '');
-        return text.slice(0, split) + (fraction ? '.' + fraction : '') + ({3:'K', 6:'M', 9:'B', 12:'T'})[power];
-    }
+    function compact(value) { return root.LhsNumberVi.compact(value); }
 
     function full(value) {
         var text = digits(value);
@@ -41,7 +65,7 @@
     }
 
     var api = root.LhsItemQuantity = {
-        version: '20260907_item_quantity_v2', compact: compact, full: full, normalize: normalize,
+        version: '20261017_item_quantity_kmbt_v5', compact: compact, full: full, normalize: normalize,
         patchedParts: [], installed: false
     };
     if (!root.eui || !root.egret || !root.JSONParseClass || !root.ItemIcon || !root.ItemTipsView) {
@@ -77,10 +101,30 @@
         Label.prototype.measure.call(this);
         var width = this.textWidth;
         var limit = this.quantityWidth || 118;
-        if (width > limit && this.size > 12) {
-            this.size = Math.max(12, Math.floor(this.size * limit / width));
+        if (width > limit && this.size > 10) {
+            this.size = Math.max(10, Math.floor(this.size * limit / width));
             Label.prototype.measure.call(this);
         }
+    };
+
+    function ViCurrencyLabel() {
+        var self = Label.call(this) || this;
+        self.wordWrap = false; self.multiline = false;
+        return self;
+    }
+    root.__extends(ViCurrencyLabel, Label);
+    root.LhsViCurrencyLabel = ViCurrencyLabel;
+    root.egret.registerClass(ViCurrencyLabel, 'LhsViCurrencyLabel', ['eui.UIComponent']);
+    ViCurrencyLabel.prototype.measure = function () {
+        if (this._lhsLastSize == null || this.size !== this._lhsLastSize) this._lhsBaseSize = this.size;
+        this.size = this._lhsBaseSize;
+        Label.prototype.measure.call(this);
+        var limit = this.viNumberWidth || 92;
+        if (this.textWidth > limit && this.size > 8) {
+            this.size = Math.max(8, Math.floor(this.size * limit / this.textWidth));
+            Label.prototype.measure.call(this);
+        }
+        this._lhsLastSize = this.size;
     };
 
     function patchSkins(skins) {
@@ -89,6 +133,12 @@
             if (!skin || typeof skin !== 'object') return;
             Object.keys(skin).forEach(function (part) {
                 var node = skin[part];
+                if (/^CurrencyItem[0-9]*Skin$/.test(name) && part === 'countLabel' && node && node.$t === '$eL') {
+                    node.$t = 'LhsViCurrencyLabel';
+                    node.viNumberWidth = skin._Group2 && skin._Group2.width || 92;
+                    api.patchedParts.push(name + '.' + part);
+                    return;
+                }
                 if (!/count|cnt/i.test(part) || !node || node.$t !== '$eBL' || node.font !== 'font_num_prop_fnt') return;
                 node.$t = 'LhsQuantityLabel';
                 delete node.font;

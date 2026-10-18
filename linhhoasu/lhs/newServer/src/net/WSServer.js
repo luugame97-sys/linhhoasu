@@ -53,7 +53,7 @@ function isPairLockedArenaFight(msg) {
 // Native clients can emit upgrade taps faster than Mongo-backed handlers can
 // settle them. Keep at most one queued/in-flight request for these idempotent
 // UI actions per socket so they cannot starve equipment sale and other RPCs.
-const SOCKET_SINGLE_FLIGHT_TAGS = new Set([3001, 3204, 3505, 3506, 3507]);
+const SOCKET_SINGLE_FLIGHT_TAGS = new Set([3001, 3204, 3501, 3505, 3506, 3507]);
 // Admission control for a noisy client must happen before a request is
 // appended to the promise chain.  Keep this list deliberately narrow: 1200
 // is read-only only when it has no purchase selector; 6198/6199 are state

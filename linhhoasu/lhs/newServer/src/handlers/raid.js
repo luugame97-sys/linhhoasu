@@ -1199,15 +1199,22 @@ async function handleDemonInvasionFight(params, session, msgUid) {
 }
 
 async function handleTowerStartFight(params, session, msgUid) {
+  return require('../services/TowerProgressService').get().run(2300, params, session, msgUid, handleTowerStartFightUnlocked);
+}
+
+async function handleTowerStartFightUnlocked(params, session, msgUid) {
   const player = session.player;
   // eslint-disable-next-line global-require
   const tower = require('./tower');
   const towerInfo = tower.ensureTowerInfo(player);
+  if (towerInfo.skillCount > 0 || towerInfo.skills.length > 0) {
+    return { tag: 2300, msgUid, data: { result: -1, code: 'TOWER_SKILL_PENDING', msg: 'Hãy chọn hoặc bỏ qua kỹ năng đang chờ trước khi đánh tiếp.', updateInfo: tower.buildTowerInfoPayload(towerInfo) } };
+  }
   const towerCfg = config.get('TowerConfig') || {};
   const requestedLevel = Math.max(0, toSafeInt(params && params.levelId, 0));
   const floor = requestedLevel > 0 ? requestedLevel : towerInfo.curlayer + 1;
   const row = towerCfg[floor] || towerCfg[String(floor)] || null;
-  if (!row) return { tag: 2300, msgUid, data: { result: -1, msg: 'invalid tower layer' } };
+  if (!row || floor !== towerInfo.curlayer + 1) return { tag: 2300, msgUid, data: { result: -1, code: 'TOWER_LAYER_STALE', msg: 'Tiến độ bảo điện đã thay đổi. Vui lòng mở lại.', updateInfo: tower.buildTowerInfoPayload(towerInfo) } };
 
   const monsterId = Math.max(1, toSafeInt(row.monsterId, 300001));
   const level = {
@@ -1216,7 +1223,7 @@ async function handleTowerStartFight(params, session, msgUid) {
     monsterId,
     reward: Array.isArray(row.rewards) ? row.rewards : [],
   };
-  const playerAttrs = battle.calcPlayerPower(player);
+  const playerAttrs = battle.calcPlayerPower(player, { tower: true });
   const monsterAttrs = battle.getMonsterAttrs(monsterId);
   const simulatedResult = battle.simulateBattle(playerAttrs, monsterAttrs, { enforcePlayerMonsterMinDamage: true, player });
   const result = buildPveProgressFightResult(playerAttrs, monsterAttrs, simulatedResult, 9);
@@ -1230,6 +1237,7 @@ async function handleTowerStartFight(params, session, msgUid) {
       if (Array.isArray(row.firstRewards)) rewards.push(...row.firstRewards.map((reward) => ({ ...reward })));
     }
     if (Array.isArray(row.rewards)) rewards.push(...row.rewards.map((reward) => ({ ...reward })));
+    rewards.push(...require('../services/TowerProgressService').milestoneRewards(floor, config));
     towerInfo.score = Math.max(0, toSafeInt(towerInfo.score, 0)) + floor * 10;
     towerInfo.dailyCount = Math.max(0, toSafeInt(towerInfo.dailyCount, 0)) + 1;
     if (typeof tower.grantTowerSkillChoice === 'function') {
@@ -1247,7 +1255,7 @@ async function handleTowerStartFight(params, session, msgUid) {
   };
   const taskChanged = result.win ? !!addTempleChallengeCount(player, 1) : false;
   session.lastBattle = null;
-  if (session.userId) await playerService.savePlayer(session.userId, player, { returnSaved: false });
+  // TowerProgressService confirms the draft and its rewards atomically.
 
   const packets = [];
   if (syncRewards.length > 0) {
@@ -1400,8 +1408,6 @@ function checkLevelUp(player) {
     if (level < maxLevel) {
       const curExp = toSafeInt(player.exp, 0);
       if (curExp < needExp) break;
-      // EXP is the progress already earned toward the current level. Keep
-      // the remainder so a large reward can advance more than one level.
       player.exp = curExp - needExp;
       player.level = level + 1;
       if (player.items && typeof player.items === 'object' && !Array.isArray(player.items)) {
@@ -1411,9 +1417,8 @@ function checkLevelUp(player) {
       continue;
     }
 
-    // Keep EXP above the stage cap. The client only needs at least needExp to
-    // enable RealmView's breakthrough button, and the surplus must survive
-    // until the breakthrough opens the next level range.
+    // Preserve EXP above the stage cap until the next breakthrough opens the
+    // following level range.
     break;
   }
 
@@ -1455,10 +1460,6 @@ function advanceLevel(player, clearedLevelId) {
     Math.max(0, toSafeInt(player.raidInfo.maxClearedLevel, 0)),
     cleared,
   );
-
-  // Generated stages do not have a finite ChapterConfig list. Move forward
-  // monotonically and derive their virtual chapter instead of wrapping back
-  // to the first stage of the last authored chapter.
   if (infiniteMainline.isInfiniteLevel(cleared) || cleared >= infiniteMainline.BASE_LEVEL) {
     const nextLevel = cleared + 1;
     infiniteMainline.ensure({
@@ -1474,7 +1475,6 @@ function advanceLevel(player, clearedLevelId) {
     refreshMainTaskProgress(player);
     return;
   }
-
   if (!chapterCfg) {
     player.raidInfo.level = cleared + 1;
     refreshMainTaskProgress(player);
@@ -1943,8 +1943,8 @@ async function handleClaimChapterReward(params, session, msgUid) {
   // Convert chapterId to integer to prevent string/number comparison bugs
   const chapterId = toSafeInt(params.chapterId || params.id || 1, 1);
   const chapterCfg = config.get('ChapterConfig');
-
   const chapter = infiniteMainline.resolveChapter(chapterId, chapterCfg);
+
   if (!player || !chapter) {
     return { tag: 2303, msgUid, data: { result: -1, rewardInfo: buildRewardInfo([]) } };
   }

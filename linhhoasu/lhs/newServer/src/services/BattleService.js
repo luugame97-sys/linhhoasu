@@ -481,6 +481,22 @@ function addArtifactAttrs(base, player = {}) {
       const levelDelta = Math.max(0, toSafeInt(attr.level, 0) - levelBase);
       addAttrs(base, attrs);
       if (levelDelta > 0) addAttrs(base, addAttrsCfg, levelDelta);
+      const skill = (config.get('ArtifactElementSkillConfig') || {})[artifact.eSkillGroup]?.[artifact.quenchLv];
+      if (skill && toSafeInt(skill.type, 0) === toSafeInt(artifactType, 1)) {
+        if (toSafeInt(skill.elementType, 0) === toSafeInt(artifact.element, 0)) {
+          addAttrs(base, (config.get('ArtifactBaseConfig') || {}).quenchMatchAttrs);
+        }
+        // These elemental skills are passive attribute effects in the native
+        // tables (behavior 4, effect 1). Do not approximate other effect types.
+        const skillRow = getConfigRow('SkillConfig', skill.skillId);
+        (skillRow?.actions || []).forEach(actionId => {
+          const behavior = getConfigRow('SkillBehaviorConfig', actionId);
+          const effect = getConfigRow('SkillEffectConfig', actionId);
+          if (behavior?.type === 4 && effect?.type === 1 && Array.isArray(effect.args)) {
+            addAttrs(base, { [effect.args[0]]: effect.args[1] });
+          }
+        });
+      }
     }
   });
 }
@@ -761,7 +777,7 @@ function addElfAttrs(base, player = {}) {
 /**
  * Calculate the player's effective attributes for battle and UI display.
  */
-function calcPlayerPower(player) {
+function calcPlayerPower(player, options = {}) {
   const formBase = config.get('FormationBaseConfig');
   const base = formBase && formBase.formationBasicAttribute
     ? { ...formBase.formationBasicAttribute }
@@ -836,6 +852,18 @@ function calcPlayerPower(player) {
   addPetAttrs(base, player || {});
   addPetSoulAttrs(base, player || {});
   addElfAttrs(base, player || {});
+  if (options.tower === true) {
+    const info = player?.swordInfo || {};
+    const limit = require('./TowerProgressService').slotLimit(info, config);
+    const seen = new Set();
+    (Array.isArray(info.slotlist) ? info.slotlist : []).slice(0, limit).forEach(slot => {
+      const id = toSafeInt(slot?.id, 0);
+      if (seen.has(id)) return;
+      seen.add(id);
+      const row = getConfigRow('TowerAttrConfig', id);
+      if (row) addAttrs(base, row.attrs, Math.max(1, toSafeInt(slot.lv, 1)));
+    });
+  }
   applyPercentLinkedAttrs(base);
 
   Object.defineProperty(base, '_petCombatProfile', {
@@ -1028,6 +1056,10 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
   const pMaxHP = pHP;
   let mHP = mAttrs[1] || 2400;
   const mMaxHP = mHP;
+  if (options.mode === 'crossRival' && options.initialHealth) {
+    pHP = Math.max(1, Math.min(pMaxHP, Math.floor(pMaxHP * options.initialHealth.player / 10000)));
+    mHP = Math.max(1, Math.min(mMaxHP, Math.floor(mMaxHP * options.initialHealth.monster / 10000)));
+  }
   
   const rounds = [];
   let round = 0;
@@ -1039,7 +1071,10 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
   let playerStunRounds = 0;
   let monsterStunRounds = 0;
 
-  const rollRate = (rate) => Math.random() < Math.max(0, rate) / 10000;
+  // Scoped deterministic replay for durable CrossRival fights. Existing callers
+  // keep Math.random; never replace the process-global random generator.
+  const rng = typeof options.rng === 'function' ? options.rng : Math.random;
+  const rollRate = (rate) => rng() < Math.max(0, rate) / 10000;
   const getProcRate = (atkAttrs, atkAttrId, defAttrs, resistAttrId) => Math.max(
     0,
     getAttr(atkAttrs, atkAttrId, 0) - getAttr(defAttrs, resistAttrId, 0),
@@ -1047,7 +1082,7 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
   const isPvp = !!(options && options.isPvp);
   const calcBaseDamage = (atk, def, attackerAttrs = {}, defenderAttrs = {}) => {
     let dmg = (Math.max(1, atk) * Math.max(1, atk)) / Math.max(1, Math.max(1, atk) + Math.max(0, def));
-    dmg *= 0.95 + Math.random() * 0.1;
+    dmg *= 0.95 + rng() * 0.1;
     dmg += calcElementDamage(attackerAttrs, defenderAttrs);
     return applyBattleDamageRates(Math.floor(dmg), attackerAttrs, defenderAttrs, isPvp);
   };

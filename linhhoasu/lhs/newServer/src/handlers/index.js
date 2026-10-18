@@ -496,6 +496,8 @@ function registerAll() {
   router.register(3701, tower.handleTowerRankInfoCompat);
   router.register(3702, tower.handleTowerSetAutoSelect);
   router.register(3703, tower.handleTowerSetAutoPriority);
+  router.register(3705, tower.handleTowerSweep);
+  router.register(3704, tower.handleTowerDailySnapshot);
   router.register(3800, fate.handleFateSwitchPlan);
   router.register(3802, fate.handleFateChooseSkill);
   router.register(3803, fate.handleFateResetPlan);
