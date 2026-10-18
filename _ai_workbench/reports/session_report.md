@@ -1,3 +1,13 @@
+## 2026-10-18 — Hư Thiên Bảo Điện: sửa quét nhanh, quà mốc, kỹ năng trong trận, xếp hạng (chưa deploy)
+
+- Quét nhanh: client gốc gửi `{type:9,index:0}`; server nhảy thẳng tới tầng quét `10×(floor(kỷ lục/10)−2)` (800→770), không đánh, cộng điểm/dailyCount, 1 lượt chọn kỹ năng mỗi 10 tầng (0→770 = 77 lượt). Gửi lại khi hết quét chỉ đồng bộ, không quà.
+- Quà mốc `TowerRewardConfig` phát khi quét: mặc định một mốc (770: 2.370 id60, 16 id6, 77.000 bạc); `TOWER_SWEEP_REWARD_MODE=cumulative` cộng các mốc vượt qua trong lần quét.
+- Kỹ năng tháp: `TowerAttrConfig.attrs×lv` của ô đã mở (attrCond 1/1/1/31/61/…) cộng vào trận tháp qua `calcPlayerPower(player,{extraAttrs})`; ô khoá bị chặn; lượt chọn theo khối 10 tầng thay vì mỗi trận thắng; chống bấm đúp 3700.
+- Xếp hạng tháp ghi ngay khi vượt kỷ lục (bỏ qua bot, lỗi Redis không làm hỏng trận).
+- Giao bằng script vá theo mốc `scripts/apply-tower-progress-20261018.js` (dry run/--stage/--apply/--rollback) vì VPS có bản reset ngày không có trong repo; không copy raid.js/tower.js/BattleService.js từ repo lên VPS.
+- Test hợp đồng mới 11/11 PASS; 52 script test: 37 PASS, 15 FAIL giống hệt trước khi sửa. Chưa chạy trên file thật VPS, chưa chơi thử trong game.
+- Báo cáo + hướng dẫn deploy: [tower_progress_fix_20261018.md](tower_progress_fix_20261018.md). Nhánh `claude/project-thread-wq4k1w`.
+
 ## 2026-10-18 — Đóng gói và chuẩn bị đẩy toàn bộ dự án lên GitHub
 
 - Đã tạo .gitignore loại trừ thư mục tạm _ai_workbench/temp (>10GB có file >100MB), ackups/, logs/, 
