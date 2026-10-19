@@ -1,8 +1,22 @@
 'use strict';
 
 const clone = value => JSON.parse(JSON.stringify(value));
+const crypto = require('crypto');
 const FIELDS = ['swordInfo', 'items', 'currencies', 'other_attr_info', 'taskInfo'];
 const int = value => Number.isSafeInteger(Number(value)) ? Math.max(0, Number(value)) : 0;
+
+function offerId(info = {}) {
+  if (!int(info.skillCount) || !info.skills?.length) return '';
+  return crypto.createHash('sha256').update(JSON.stringify([
+    info.towerDay, int(info.towerRevision), int(info.curlayer), int(info.skillCount), info.skills, info.slotlist || [],
+  ])).digest('hex').slice(0, 32);
+}
+
+// One offer for each block of addAttr floors, beginning at 1, 11, 21, ... .
+function countSkillPicks(from, to, config) {
+  const interval = int(config.get('TowerBaseConfig')?.addAttr) || 10;
+  return Math.max(0, Math.ceil(int(to) / interval) - Math.ceil(int(from) / interval));
+}
 
 function slotLimit(info, config) {
   const base = config.get('TowerBaseConfig') || {};
@@ -23,6 +37,11 @@ function milestoneRewards(floor, config) {
   return clone((config.get('TowerRewardConfig') || {})[floor]?.rewards || []);
 }
 
+function recordMilestone(info, floor, config) {
+  if (!milestoneRewards(floor, config).length) return;
+  info.claimedMilestones = [...new Set([...(info.claimedMilestones || []), floor])].sort((a, b) => a - b);
+}
+
 function create({ config, players, mutation, reset, receipts, rank, invalidate, logger, clock = Date.now }) {
   async function run(tag, params, session, uid, work) {
     return mutation.run(session?.userId, async () => {
@@ -36,35 +55,49 @@ function create({ config, players, mutation, reset, receipts, rank, invalidate, 
       for (const key of FIELDS) if (Object.hasOwn(fresh, key)) expected[key] = clone(fresh[key]);
       const draft = clone(fresh);
       reset.prepare(draft, clock());
+      const resetOnly = clone(draft);
       const draftSession = { ...session, player: draft, _towerTransaction: true };
-      if (tag === 3705) {
-        if (!/^[0-9]{13}-[a-zA-Z0-9_-]{8,64}$/.test(String(params?.requestId || ''))) return fail('TOWER_REQUEST_REQUIRED', 'Vui lòng tải lại game.');
-        const replay = receipts.read(draft, tag, params);
-        if (replay) {
-          session.player = fresh;
-          return { tag, msgUid: uid, data: { ...replay, replay: true, updateInfo: reset.snapshot(draft, clock()) } };
+      const receipted = tag === 3705 || tag === 3700;
+      let response, replay = null;
+      if (receipted) {
+        if (!/^[0-9]{13}-[a-zA-Z0-9_-]{8,64}$/.test(String(params?.requestId || ''))) {
+          response = fail('TOWER_CLIENT_UPDATE_REQUIRED', 'Vui lòng tải lại game để cập nhật tính năng tháp.');
+        } else {
+          try { replay = receipts.read(draft, tag, params); }
+          catch (error) { response = fail(error.message, 'Yêu cầu đã hết hạn. Vui lòng mở lại bảng kỹ năng.'); }
         }
       }
-      const response = await work(params, draftSession, uid);
+      if (replay) response = { tag, msgUid: uid, data: { ...replay, replay: true } };
+      if (!response) response = await work(params, draftSession, uid);
       const packets = Array.isArray(response) ? response : [response];
       const reply = packets.find(p => p.tag === tag && p.msgUid === uid);
-      if (!reply || reply.data?.result !== 0) return response;
-      if (tag === 3705) receipts.record(draft, tag, params, reply.data);
-      try {
-        const saved = await players.savePlayer(session.userId, draft, {
-          returnSaved: false, onlyFields: FIELDS, towerCAS: { fields: FIELDS, expected },
-        });
-        if (!saved) throw Error('TOWER_CAS_CONFLICT');
-      } catch (error) {
-        invalidate(session.userId);
-        session.player = null;
-        logger.warn('[Tower] save not confirmed: ' + error.message);
-        return fail('TOWER_SAVE_UNCONFIRMED', 'Chưa xác nhận được kết quả. Vui lòng đăng nhập lại trước khi tiếp tục.');
+      if (!reply) return response;
+      const success = reply.data?.result === 0;
+      const committed = success ? draft : resetOnly;
+      const changed = FIELDS.some(key => JSON.stringify(committed[key]) !== JSON.stringify(fresh[key]));
+      if (changed) committed.swordInfo.towerRevision = int(fresh.swordInfo?.towerRevision) + 1;
+      const snapshot = reset.snapshot(committed, clock());
+      reply.data = { ...reply.data, updateInfo: snapshot };
+      // Native skill callbacks read these fields from the top level as well.
+      if (tag !== 2300 && tag !== 3705) reply.data = { ...reply.data, ...snapshot, result: reply.data.result, updateInfo: snapshot };
+      if (receipted && success && !replay) receipts.record(committed, tag, params, reply.data);
+      if (changed || (receipted && success && !replay)) {
+        try {
+          const saved = await players.savePlayer(session.userId, committed, {
+            returnSaved: false, onlyFields: FIELDS, towerCAS: { fields: FIELDS, expected },
+          });
+          if (!saved) throw Error('TOWER_CAS_CONFLICT');
+        } catch (error) {
+          invalidate(session.userId);
+          session.player = null;
+          logger.warn('[Tower] save not confirmed: ' + error.message);
+          return fail('TOWER_SAVE_UNCONFIRMED', 'Chưa xác nhận được kết quả. Vui lòng đăng nhập lại trước khi tiếp tục.');
+        }
       }
-      session.player = draft;
-      session.lastBattle = draftSession.lastBattle;
+      session.player = committed;
+      if (success) session.lastBattle = draftSession.lastBattle;
       session._itemListCache = null;
-      try { await rank.updateScore('tower', draft.playerId, int(draft.swordInfo?.maxlayer)); }
+      try { if (changed) await rank.updateScore('tower', committed.playerId, int(committed.swordInfo?.maxlayer)); }
       catch (error) { logger.warn('[Tower] rank update failed: ' + error.message); }
       return response;
     });
@@ -85,6 +118,7 @@ function create({ config, players, mutation, reset, receipts, rank, invalidate, 
           if (!int(r.id) || !int(r.count)) throw Error('TOWER_REWARD_INVALID');
           rewards.set(r.id, (rewards.get(r.id) || 0) + int(r.count));
         }
+        recordMilestone(info, floor, config);
       }
       const count = Math.max(0, target - from + 1);
       const rows = [...rewards].map(([id, count]) => ({ id, count }));
@@ -93,13 +127,22 @@ function create({ config, players, mutation, reset, receipts, rank, invalidate, 
         info.curlayer = target;
         info.dailyCount = int(info.dailyCount) + count;
         info.score = int(info.score) + (from + target) * count * 5;
+        require('../handlers/tower').grantTowerSkillChoice(info, target, countSkillPicks(from - 1, target, config));
       }
       const data = { result: 0, sweepFrom: from, sweepTo: count ? target : int(info.curlayer), sweepCount: count, rewardInfo, updateInfo: reset.snapshot(player, clock()) };
       const packets = syncRewards.length ? [{ tag: 1202, msgUid: 0, data: require('./RewardSync').buildRewardItemSync(player, syncRewards) }] : [];
       return [...packets, { tag: 3705, msgUid: uid, data }];
     });
   }
-  return { run, sweep };
+  async function snapshot(session, uid) {
+    return run(3704, {}, session, uid, async (_params, current) => {
+      const tower = require('../handlers/tower');
+      const info = tower.ensureTowerInfo(current.player);
+      tower.applyTowerAutoChoices(info);
+      return { tag: 3704, msgUid: uid, data: { result: 0 } };
+    });
+  }
+  return { run, sweep, snapshot };
 }
 
 function get() {
@@ -107,4 +150,4 @@ function get() {
     reset: require('./TowerDailyResetService'), receipts: require('./FeatureReceiptService'), rank: require('./RankService'),
     invalidate: id => require('./RuntimeBus').getWsServer()?.invalidatePlayerForMutation(id), logger: require('../logger') });
 }
-module.exports = { slotLimit, sweepTarget, milestoneRewards, create, get };
+module.exports = { slotLimit, sweepTarget, milestoneRewards, recordMilestone, offerId, countSkillPicks, create, get };

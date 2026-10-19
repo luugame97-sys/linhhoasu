@@ -12,13 +12,15 @@ function prepare(player,now=Date.now()){
   const before={day:info.towerDay??null,curlayer:info.curlayer??0,dailyCount:info.dailyCount??0,skills:clone(info.skills||[]),slotlist:clone(info.slotlist||[]),skillCount:info.skillCount??0};
   info.maxlayer=Math.max(Number(info.maxlayer)||0,Number(info.curlayer)||0);
   info.curlayer=0;info.dailyCount=0;info.skills=[];info.slotlist=[];info.skillCount=0;info.towerDay=today;
+  info.claimedMilestones=[];info.towerRevision=(Number(info.towerRevision)||0)+1;
   info.towerResetV1={version:VERSION,at:now,legacy,before};
   return true;
 }
 function snapshot(player,now=Date.now()){
   const i=player?.swordInfo||{};return{result:0,version:VERSION,serverTime:now,dayKey:day.key(now),nextResetAt:day.end(now),
     maxlayer:Number(i.maxlayer)||0,curlayer:Number(i.curlayer)||0,dailyCount:Number(i.dailyCount)||0,skillCount:Number(i.skillCount)||0,
-    skills:clone(i.skills||[]),slotlist:clone(i.slotlist||[]),autoSelect:Number(i.autoSelect)||0,autoPriority:clone(i.autoPriority||[])};
+    skills:clone(i.skills||[]),slotlist:clone(i.slotlist||[]),autoSelect:Number(i.autoSelect)||0,autoPriority:clone(i.autoPriority||[]),
+    towerRevision:Number(i.towerRevision)||0,offerId:require('./TowerProgressService').offerId(i),claimedMilestones:clone(i.claimedMilestones||[])};
 }
 async function recoverLoaded(player,collection,now=Date.now()){
   if(!needsReset(player,now))return player;
@@ -40,5 +42,5 @@ async function synchronize(session,now=Date.now()){
   });
 }
 async function withReset(params,session,msgUid,handler){const packets=await synchronize(session),result=await handler(params,session,msgUid);return packets.length?[...packets,...(Array.isArray(result)?result:[result])]:result;}
-async function handleSnapshot(_params,session,msgUid){if(!session?.player)return{tag:3704,msgUid,data:{result:-1}};const packets=await synchronize(session);return[...packets,{tag:3704,msgUid,data:snapshot(session.player)}];}
+async function handleSnapshot(_params,session,msgUid){return require('./TowerProgressService').get().snapshot(session,msgUid);}
 module.exports={VERSION,needsReset,prepare,snapshot,recoverLoaded,synchronize,withReset,handleSnapshot};

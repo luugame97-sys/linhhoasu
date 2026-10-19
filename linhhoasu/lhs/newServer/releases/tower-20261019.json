@@ -1,0 +1,23 @@
+{
+  "version": "20261019_tower_complete_v7",
+  "scope": "Five Tower fixes and native midnight countdown/selection preservation",
+  "policy": {
+    "pickInterval": 10,
+    "firstPickFloor": 1,
+    "sweepTargetAt800": 770,
+    "selection": "offerId + skillId + requestId, atomic receipt and CAS",
+    "auto": "configured priorities; upgrade repeats; keep better slots; skip nonimproving offer",
+    "rewards": "existing ordinary and crossed-milestone amounts retained; claimedMilestones tracks new confirmed awards",
+    "legacy": "preserve pre-update pending choices and equipped skills; historical payout remains unverified; no backpay"
+  },
+  "files": {
+    "linhhoasu/lhs/newServer/src/handlers/tower.js": "131a25bf4a4e54aaaf28a957170c963614a28404f64629152e7970879bf2db85",
+    "linhhoasu/lhs/newServer/src/handlers/raid.js": "292bef3f1c11d58f45be35ca47ecb691a286ff21316e65656bb5354ff536b0d1",
+    "linhhoasu/lhs/newServer/src/services/TowerProgressService.js": "6caf871f8cdb7e89b9bb4e69245be525a1caabb6f50a61a8d042494f637177ee",
+    "linhhoasu/lhs/newServer/src/services/TowerDailyResetService.js": "01d9e85ed9d78178cacc7b03f6548024c012370b933e4040d3469be3c76d59e6",
+    "linhhoasu/lhs/newServer/src/services/BattleService.js": "76b88ef2df92822381027bab10c0749bdfed1e04084dfc0666b2f40cdf31324c",
+    "linhhoasu/webgame/game/js/lhs-tower-fix-v2.js": "cc2aa1a65e54f2ceae6d7ff0e0c07c643101da8140525138228fc39533420e61",
+    "linhhoasu/webgame/game/js/lhs-tower-daily-v1.js": "9f6c6b99ac41ba3485a8ce890ddb6a4f3657feb40af2f300d99254dcfeb822fa",
+    "linhhoasu/webgame/game/index.html": "2f0203d3c60e46655e3a1de0fc774780aa3196359277a288d34f93235aca2249"
+  }
+}

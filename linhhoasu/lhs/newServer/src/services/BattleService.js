@@ -856,13 +856,19 @@ function calcPlayerPower(player, options = {}) {
     const info = player?.swordInfo || {};
     const limit = require('./TowerProgressService').slotLimit(info, config);
     const seen = new Set();
+    const towerSkillAttrs = {};
     (Array.isArray(info.slotlist) ? info.slotlist : []).slice(0, limit).forEach(slot => {
       const id = toSafeInt(slot?.id, 0);
       if (seen.has(id)) return;
       seen.add(id);
       const row = getConfigRow('TowerAttrConfig', id);
-      if (row) addAttrs(base, row.attrs, Math.max(1, toSafeInt(slot.lv, 1)));
+      if (row) {
+        const level = Math.max(1, toSafeInt(slot.lv, 1));
+        addAttrs(base, row.attrs, level);
+        addAttrs(towerSkillAttrs, row.attrs, level);
+      }
     });
+    Object.defineProperty(base, '_towerSkillAttrs', { value: towerSkillAttrs, enumerable: false });
   }
   applyPercentLinkedAttrs(base);
 
@@ -1086,7 +1092,14 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
     dmg += calcElementDamage(attackerAttrs, defenderAttrs);
     return applyBattleDamageRates(Math.floor(dmg), attackerAttrs, defenderAttrs, isPvp);
   };
-  const calcCritDamageMultiplier = (attrs) => 1 + Math.max(0, getAttr(attrs, 205, 5000)) / 10000;
+  // Activate these effects only for Tower skills. Other sources/modes retain
+  // their existing combat rules. Values use the same basis points as the UI.
+  const towerSkills = options.tower === true ? (playerAttrs._towerSkillAttrs || {}) : {};
+  const towerBonus = (attrs, id) => attrs === pAttrs ? getAttr(towerSkills, id, 0) : 0;
+  const towerRate = (a, inc, d, dec) => Math.max(0.1, 1 + (towerBonus(a, inc) - towerBonus(d, dec)) / 10000);
+  const towerFinalDamage = (damage, a, d) => Math.max(1, Math.floor(damage * towerRate(a, 241, d, 242)));
+  const calcCritDamageMultiplier = (attrs, defender) => 1 + Math.max(0,
+    getAttr(attrs, 205, 5000) + towerBonus(attrs, 202) - towerBonus(defender, 222)) / 10000;
 
   let playerAtkStealBonus = [];
   let monsterAtkStealBonus = [];
@@ -1135,8 +1148,9 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
       const effectiveAtk = getEffectiveAtk(attackerAttrs, attackerKey === 'player');
       let damage = calcBaseDamage(effectiveAtk, getAttr(defenderAttrs, 3, 0), attackerAttrs, defenderAttrs);
       if (isCrit) {
-        damage = Math.max(1, Math.floor(damage * calcCritDamageMultiplier(attackerAttrs)));
+        damage = Math.max(1, Math.floor(damage * calcCritDamageMultiplier(attackerAttrs, defenderAttrs)));
       }
+      damage = towerFinalDamage(damage, attackerAttrs, defenderAttrs);
       if (attackerKey === 'player' && defenderKey === 'monster' && playerMonsterMinDamage > 0) {
         damage = Math.max(damage, playerMonsterMinDamage);
       }
@@ -1151,7 +1165,7 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
       }));
 
       if (rollRate(lifestealRate)) {
-        const heal = Math.max(1, Math.min(damage, attackerMaxHP - attackerHP));
+        const heal = Math.max(1, Math.min(Math.floor(damage * towerRate(attackerAttrs, 203, defenderAttrs, 223)), attackerMaxHP - attackerHP));
         if (heal > 0) {
           attackerHP = Math.min(attackerMaxHP, attackerHP + heal);
           actions.push(makeAction('heal', { caster: attackerKey, target: attackerKey, value: heal, targetHp: attackerHP }));
@@ -1170,8 +1184,9 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
         const effectiveCounterAtk = getEffectiveAtk(defenderAttrs, defenderKey === 'player');
         let counterDamage = calcBaseDamage(effectiveCounterAtk, getAttr(attackerAttrs, 3, 0), defenderAttrs, attackerAttrs);
         if (counterCrit) {
-          counterDamage = Math.max(1, Math.floor(counterDamage * calcCritDamageMultiplier(defenderAttrs)));
+          counterDamage = Math.max(1, Math.floor(counterDamage * calcCritDamageMultiplier(defenderAttrs, attackerAttrs)));
         }
+        counterDamage = towerFinalDamage(counterDamage, defenderAttrs, attackerAttrs);
         attackerHP = Math.max(0, attackerHP - counterDamage);
         actions.push(makeAction('counter', {
           caster: defenderKey,
@@ -1250,6 +1265,7 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
           const charAtk = getEffectiveAtk(pAttrs, true);
           const petEffectiveAtk = Math.max(1, Math.floor(charAtk * (playerPet.damageRatio / 10000)));
           let petDamage = calcBaseDamage(petEffectiveAtk, getAttr(mAttrs, 3, 0), pAttrs, mAttrs);
+          petDamage = towerFinalDamage(Math.floor(petDamage * towerRate(pAttrs, 204, mAttrs, 224)), pAttrs, mAttrs);
           if (playerMonsterMinDamage > 0) {
             petDamage = Math.max(petDamage, Math.floor(playerMonsterMinDamage * 0.5));
           }
@@ -1267,7 +1283,7 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
           }));
 
           if (playerPet.healRatio > 0 && petDamage > 0 && pHP < pMaxHP) {
-            const petHeal = Math.max(1, Math.min(Math.floor(petDamage * (playerPet.healRatio / 10000)), pMaxHP - pHP));
+            const petHeal = Math.max(1, Math.min(Math.floor(petDamage * (playerPet.healRatio / 10000) * towerRate(pAttrs, 203, mAttrs, 223)), pMaxHP - pHP));
             pHP = Math.min(pMaxHP, pHP + petHeal);
             playerHeal += petHeal;
             turnActions.push(makeAction('pet_heal', {
@@ -1339,6 +1355,7 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
           const charAtk = getEffectiveAtk(mAttrs, false);
           const petEffectiveAtk = Math.max(1, Math.floor(charAtk * (monsterPet.damageRatio / 10000)));
           let petDamage = calcBaseDamage(petEffectiveAtk, getAttr(pAttrs, 3, 0), mAttrs, pAttrs);
+          petDamage = towerFinalDamage(Math.floor(petDamage * towerRate(mAttrs, 204, pAttrs, 224)), mAttrs, pAttrs);
           pHP = Math.max(0, pHP - petDamage);
           mDmg += petDamage;
 
@@ -1353,7 +1370,7 @@ function simulateBattleLegacy(playerAttrs, monsterAttrs, options = {}) {
           }));
 
           if (monsterPet.healRatio > 0 && petDamage > 0 && mHP < mMaxHP) {
-            const petHeal = Math.max(1, Math.min(Math.floor(petDamage * (monsterPet.healRatio / 10000)), mMaxHP - mHP));
+            const petHeal = Math.max(1, Math.min(Math.floor(petDamage * (monsterPet.healRatio / 10000) * towerRate(mAttrs, 203, pAttrs, 223)), mMaxHP - mHP));
             mHP = Math.min(mMaxHP, mHP + petHeal);
             monsterHeal += petHeal;
             turnActions.push(makeAction('pet_heal', {

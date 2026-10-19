@@ -1225,11 +1225,12 @@ async function handleTowerStartFightUnlocked(params, session, msgUid) {
   };
   const playerAttrs = battle.calcPlayerPower(player, { tower: true });
   const monsterAttrs = battle.getMonsterAttrs(monsterId);
-  const simulatedResult = battle.simulateBattle(playerAttrs, monsterAttrs, { enforcePlayerMonsterMinDamage: true, player });
+  const simulatedResult = battle.simulateBattle(playerAttrs, monsterAttrs, { enforcePlayerMonsterMinDamage: true, player, tower: true });
   const result = buildPveProgressFightResult(playerAttrs, monsterAttrs, simulatedResult, 9);
   const fightResult = buildChapterFightResult(player, level, playerAttrs, monsterAttrs, result, 9);
 
   const rewards = [];
+  const towerLayerBefore = towerInfo.curlayer;
   if (result.win) {
     towerInfo.curlayer = Math.max(towerInfo.curlayer, floor);
     if (floor > towerInfo.maxlayer) {
@@ -1238,10 +1239,11 @@ async function handleTowerStartFightUnlocked(params, session, msgUid) {
     }
     if (Array.isArray(row.rewards)) rewards.push(...row.rewards.map((reward) => ({ ...reward })));
     rewards.push(...require('../services/TowerProgressService').milestoneRewards(floor, config));
+    require('../services/TowerProgressService').recordMilestone(towerInfo, floor, config);
     towerInfo.score = Math.max(0, toSafeInt(towerInfo.score, 0)) + floor * 10;
     towerInfo.dailyCount = Math.max(0, toSafeInt(towerInfo.dailyCount, 0)) + 1;
     if (typeof tower.grantTowerSkillChoice === 'function') {
-      tower.grantTowerSkillChoice(towerInfo, floor);
+      tower.grantTowerSkillChoice(towerInfo, floor, require('../services/TowerProgressService').countSkillPicks(towerLayerBefore, floor, config));
     }
   }
 

@@ -178,13 +178,60 @@ function buildTowerSkillChoices(floor = 1, exclude = []) {
   return choices;
 }
 
-function grantTowerSkillChoice(info, floor = 1) {
+function refreshTowerOffer(info, floor = Math.max(1, toSafeInt(info.curlayer, 1))) {
+  info.skills = info.skillCount > 0 ? buildTowerSkillChoices(floor) : [];
+  if (!info.skills.length) info.skillCount = 0;
+}
+
+function applyTowerAutoChoices(info) {
+  if (!info.autoSelect) return 0;
+  const limit = require('../services/TowerProgressService').slotLimit(info, config);
+  const baseOrder = getConfigTable('TowerBaseConfig').selectAttr || [];
+  const order = [...new Set([...(info.autoPriority || []), ...baseOrder].filter(id => id > 0))];
+  const describe = (id, lv = 1) => {
+    const row = getTowerAttrConfig()[id] || {};
+    const attrId = Number(Object.keys(row.attrs || {})[0]);
+    const priority = order.indexOf(attrId);
+    return { priority: priority < 0 ? order.length : priority, value: Number(row.attrs?.[attrId] || 0) * lv, quality: toSafeInt(row.quality, 0) };
+  };
+  const better = (a, b) => a.priority < b.priority || (a.priority === b.priority && a.value > b.value);
+  let consumed = 0;
+  while (info.skillCount > 0 && consumed < 800) {
+    if (!info.skills.length) refreshTowerOffer(info);
+    if (!info.skills.length) break;
+    const offers = info.skills.map((id, index) => {
+      const existing = info.slotlist.findIndex(slot => slot.id === id);
+      return { id, index, existing, ...describe(id, existing >= 0 ? info.slotlist[existing].lv + 1 : 1) };
+    }).sort((a, b) => a.priority - b.priority || b.value - a.value || b.quality - a.quality || a.index - b.index);
+    const selected = offers[0];
+    let target = selected.existing;
+    if (target < 0 && info.slotlist.length < limit) target = info.slotlist.length;
+    if (target < 0) {
+      let worst = -1;
+      for (let i = 0; i < Math.min(limit, info.slotlist.length); i++) {
+        if (worst < 0 || better(describe(info.slotlist[worst].id, info.slotlist[worst].lv), describe(info.slotlist[i].id, info.slotlist[i].lv))) worst = i;
+      }
+      if (worst >= 0 && better(selected, describe(info.slotlist[worst].id, info.slotlist[worst].lv))) target = worst;
+    }
+    if (target >= 0 && target < limit) {
+      const old = info.slotlist[target];
+      info.slotlist[target] = { id: selected.id, lv: old?.id === selected.id ? old.lv + 1 : 1 };
+    }
+    // If none improves the chosen priorities, keep equipped skills and skip this offer.
+    info.skillCount--;
+    consumed++;
+    refreshTowerOffer(info);
+  }
+  return consumed;
+}
+
+function grantTowerSkillChoice(info, floor = 1, count = 1) {
   if (!info || typeof info !== 'object') return info;
-  const slotlist = normalizeTowerSlotlist(info.slotlist);
-  const choices = buildTowerSkillChoices(floor);
-  info.slotlist = slotlist;
-  info.skills = choices;
-  info.skillCount = choices.length > 0 ? 1 : 0;
+  info.slotlist = normalizeTowerSlotlist(info.slotlist);
+  info.skills = normalizeTowerOptionalSkills(info.skills);
+  info.skillCount = Math.max(0, toSafeInt(info.skillCount, 0)) + Math.max(0, toSafeInt(count, 0));
+  if (info.skillCount > 0 && !info.skills.length) refreshTowerOffer(info, floor);
+  applyTowerAutoChoices(info);
   return info;
 }
 
@@ -196,6 +243,9 @@ function buildTowerInfoPayload(info, extra = {}) {
     skillCount: Math.max(0, toSafeInt(info.skillCount, 0)),
     skills: Array.isArray(info.skills) ? info.skills.slice() : [],
     slotlist: Array.isArray(info.slotlist) ? info.slotlist.map((row) => ({ ...row })) : [],
+    offerId: require('../services/TowerProgressService').offerId(info),
+    towerRevision: Math.max(0, toSafeInt(info.towerRevision, 0)),
+    dayKey: Math.max(0, toSafeInt(info.towerDay, 0)),
     autoSelect: toSafeInt(info.autoSelect, 0) > 0 ? 1 : 0,
     autoPriority: Array.isArray(info.autoPriority) ? info.autoPriority.slice() : [],
     ...extra,
@@ -369,6 +419,13 @@ async function handleTowerSelectSkill(params, session, msgUid) {
   }
 
   const swordInfo = ensureTowerInfo(player);
+  const offer = require('../services/TowerProgressService').offerId(swordInfo);
+  if (!params?.offerId) {
+    return { tag: 3700, msgUid, data: { result: -1, code: 'TOWER_CLIENT_UPDATE_REQUIRED', msg: 'Vui lòng tải lại game để cập nhật bảng kỹ năng.' } };
+  }
+  if (params.offerId !== offer || !offer) {
+    return { tag: 3700, msgUid, data: { result: -1, code: 'TOWER_OFFER_STALE', msg: 'Lựa chọn đã thay đổi. Bảng kỹ năng đã được làm mới.' } };
+  }
   if (!Number.isInteger(params?.select) || !Number.isInteger(params?.replace)
     || params.select < -1 || params.replace < -1) {
     return { tag: 3700, msgUid, data: buildTowerInfoPayload(swordInfo, { result: -1, msg: 'invalid_tower_skill' }) };
@@ -378,13 +435,14 @@ async function handleTowerSelectSkill(params, session, msgUid) {
   const selectedSkill = selectIndex >= 0 ? normalizeTowerSkillId(swordInfo.skills[selectIndex]) : 0;
 
   if (selectIndex < 0 && replaceIndex < 0) {
-    swordInfo.skills = [];
-    swordInfo.skillCount = 0;
-  } else if (selectedSkill <= 0) {
+    // Cancel skips this offer only; a sweep can leave many legitimate picks.
+    swordInfo.skillCount = Math.max(0, toSafeInt(swordInfo.skillCount, 0) - 1);
+    refreshTowerOffer(swordInfo);
+  } else if (selectedSkill <= 0 || params.skillId !== selectedSkill) {
     return {
       tag: 3700,
       msgUid,
-      data: buildTowerInfoPayload(swordInfo, { result: -1, msg: 'invalid_tower_skill' }),
+      data: buildTowerInfoPayload(swordInfo, { result: -1, code: 'TOWER_OFFER_STALE', msg: 'Lựa chọn đã thay đổi. Vui lòng chọn lại.' }),
     };
   } else {
     const limit = require('../services/TowerProgressService').slotLimit(swordInfo, config);
@@ -403,9 +461,8 @@ async function handleTowerSelectSkill(params, session, msgUid) {
     const oldSlot = swordInfo.slotlist[targetIndex] || null;
     const nextLevel = oldSlot && oldSlot.id === selectedSkill ? toSafeInt(oldSlot.lv, 1) + 1 : 1;
     swordInfo.slotlist[targetIndex] = { id: selectedSkill, lv: nextLevel };
-    swordInfo.skills.splice(selectIndex, 1);
     swordInfo.skillCount = Math.max(0, toSafeInt(swordInfo.skillCount, 0) - 1);
-    if (swordInfo.skillCount <= 0) swordInfo.skills = [];
+    refreshTowerOffer(swordInfo);
   }
 
   swordInfo.slotlist = normalizeTowerSlotlist(swordInfo.slotlist);
@@ -432,6 +489,7 @@ async function handleTowerSetAutoSelect(params, session, msgUid) {
 
   const swordInfo = ensureTowerInfo(player);
   swordInfo.autoSelect = toSafeInt(params && params.autoSelect, 0) > 0 ? 1 : 0;
+  applyTowerAutoChoices(swordInfo);
 
   // Persisted by TowerProgressService.
   return { tag: 3702, msgUid, data: buildTowerInfoPayload(swordInfo) };
@@ -445,12 +503,14 @@ async function handleTowerSetAutoPriority(params, session, msgUid) {
   const swordInfo = ensureTowerInfo(player);
   const priority = Array.isArray(params && params.priority) ? params.priority : [];
   swordInfo.autoPriority = normalizeTowerAutoPriority(priority);
+  applyTowerAutoChoices(swordInfo);
 
   // Persisted by TowerProgressService.
   return { tag: 3703, msgUid, data: buildTowerInfoPayload(swordInfo, { priority: swordInfo.autoPriority }) };
 }
 
 module.exports = {
+  applyTowerAutoChoices,
   buildTowerInfoPayload,
   handleTowerSweep: (...args) => require('../services/TowerProgressService').get().sweep(...args),
   handleTowerDailySnapshot: (...args) => require('../services/TowerDailyResetService').handleSnapshot(...args),
